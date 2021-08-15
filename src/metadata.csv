@@ -1,0 +1,980 @@
+,Workgroup,Work,Language,Words,URN,URL
+0,Anonymous,Anametresis Pontou,"grc,lat,deu",374,urn:cts:greekLit:ggm0001.ggm001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:ggm0001.ggm001.1st1K-grc1:1.1/
+1,,Isaias,"lat,eng",36226,urn:cts:hebrewlit:heb0001.heb010.1st1K-eng1,https://scaife.perseus.org/reader/urn:cts:hebrewlit:heb0001.heb010.1st1K-eng1:1.1/
+2,Pinytus,De Epistola Pinyti ad Dionysium,"grc,lat",162,urn:cts:greekLit:ogl0001.ogl001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:ogl0001.ogl001.1st1K-grc1:1/
+3,pseudo-Aristotle,De mundo,grc,6446,urn:cts:greekLit:stoa0033a.tlg028.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:stoa0033a.tlg028.1st1K-grc1:1-5/
+4,pseudo-Aristotle,De spiritu,grc,3460,urn:cts:greekLit:stoa0033a.tlg043.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:stoa0033a.tlg043.1st1K-grc1:1-5/
+5,Eutropius,Breviarium historiae romanae,grc,23886,urn:cts:greekLit:stoa0121.stoa001.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:stoa0121.stoa001.opp-grc1:1.1/
+6,Hegemonius,Acta Archelai,"lat,grc",4535,urn:cts:greekLit:stoa0146d.stoa001.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:stoa0146d.stoa001.opp-grc1:5-10/
+7,Hegemonius,Acta Archelai,lat,38162,urn:cts:greekLit:stoa0146d.stoa001.opp-lat1,https://scaife.perseus.org/reader/urn:cts:greekLit:stoa0146d.stoa001.opp-lat1:1-5/
+8,Theocritus,"Syrinx,an electronic transcription.",grc,77,urn:cts:greekLit:tlg0005.tlg003.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0005.tlg003.1st1K-grc1:1-20/
+9,Sophocles,"Ajax,Machine readable text","grc,lat",7971,urn:cts:greekLit:tlg0011.tlg003.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0011.tlg003.1st1K-grc1:1-30/
+10,Herodian,Ab excessu divi Marci,"lat,grc",46884,urn:cts:greekLit:tlg0015.tlg001.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0015.tlg001.opp-grc1:1.1.1-1.1.5/
+11,Philo Judaeus,De opificio mundi,"grc,lat",24061,urn:cts:greekLit:tlg0018.tlg001.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0018.tlg001.opp-grc1:1-5/
+12,Philo Judaeus,Legum allegoriarum libri i‑iii,"grc,lat",42468,urn:cts:greekLit:tlg0018.tlg002.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0018.tlg002.opp-grc1:1.1/
+13,Philo Judaeus,De Cherubim,"grc,lat",12224,urn:cts:greekLit:tlg0018.tlg003.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0018.tlg003.opp-grc1:1-5/
+14,Philo Judaeus,De sacrificiis Abelis et Caini,"grc,lat",22570,urn:cts:greekLit:tlg0018.tlg004.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0018.tlg004.opp-grc1:1-5/
+15,Philo Judaeus,Quod deterius potiori insidiari soleat,"grc,lat",15259,urn:cts:greekLit:tlg0018.tlg005.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0018.tlg005.opp-grc1:1-5/
+16,Philo Judaeus,De Posteritate Caini,"grc,lat",15274,urn:cts:greekLit:tlg0018.tlg006.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0018.tlg006.opp-grc1:1-5/
+17,Philo Judaeus,De gigantibus,"grc,lat",5285,urn:cts:greekLit:tlg0018.tlg007.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0018.tlg007.opp-grc1:1-5/
+18,Philo Judaeus,Quod deus sit immutabilis,"grc,lat",15294,urn:cts:greekLit:tlg0018.tlg008.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0018.tlg008.opp-grc1:1-5/
+19,Philo Judaeus,De agricultura,"grc,lat",14427,urn:cts:greekLit:tlg0018.tlg009.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0018.tlg009.opp-grc1:1-5/
+20,Philo Judaeus,De plantatione,"grc,lat",14378,urn:cts:greekLit:tlg0018.tlg010.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0018.tlg010.opp-grc1:1-5/
+21,Philo Judaeus,De ebrietate,"grc,lat",17104,urn:cts:greekLit:tlg0018.tlg011.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0018.tlg011.opp-grc1:1-5/
+22,Philo Judaeus,De sobrietate,"grc,lat",5462,urn:cts:greekLit:tlg0018.tlg012.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0018.tlg012.opp-grc1:1-5/
+23,Philo Judaeus,De confusione linguarum,"grc,lat",14933,urn:cts:greekLit:tlg0018.tlg013.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0018.tlg013.opp-grc1:1-5/
+24,Philo Judaeus,De migratione Abrahami,"grc,lat",17407,urn:cts:greekLit:tlg0018.tlg014.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0018.tlg014.opp-grc1:1-5/
+25,Philo Judaeus,Quis rerum divinarum heres sit,"grc,lat",27944,urn:cts:greekLit:tlg0018.tlg015.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0018.tlg015.opp-grc1:1-5/
+26,Philo Judaeus,De congressu eruditionis gratia,"grc,lat",14614,urn:cts:greekLit:tlg0018.tlg016.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0018.tlg016.opp-grc1:1-5/
+27,Philo Judaeus,De fuga et inventione,"grc,lat",17501,urn:cts:greekLit:tlg0018.tlg017.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0018.tlg017.opp-grc1:1-5/
+28,Philo Judaeus,De mutatione nominum,"grc,lat",17630,urn:cts:greekLit:tlg0018.tlg018.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0018.tlg018.opp-grc1:1-5/
+29,Philo Judaeus,De somniis (lib. i‑ii),"grc,lat",38533,urn:cts:greekLit:tlg0018.tlg019.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0018.tlg019.opp-grc1:1.1/
+30,Philo Judaeus,De Abrahamo,"grc,lat",24281,urn:cts:greekLit:tlg0018.tlg020.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0018.tlg020.opp-grc1:1-5/
+31,Philo Judaeus,De Josepho,"grc,lat",22273,urn:cts:greekLit:tlg0018.tlg021.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0018.tlg021.opp-grc1:1-5/
+32,Philo Judaeus,De vita Mosis (lib. i‑ii),"grc,lat",59449,urn:cts:greekLit:tlg0018.tlg022.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0018.tlg022.opp-grc1:1.1/
+33,Philo Judaeus,De decalogo,"grc,lat",15120,urn:cts:greekLit:tlg0018.tlg023.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0018.tlg023.opp-grc1:1-5/
+34,Philo Judaeus,De specialibus legibus (lib. i‑iv),"grc,lat",103137,urn:cts:greekLit:tlg0018.tlg024.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0018.tlg024.opp-grc1:1.1/
+35,Philo Judaeus,De virtutibus,"grc,lat",29681,urn:cts:greekLit:tlg0018.tlg025.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0018.tlg025.opp-grc1:1-5/
+36,Philo Judaeus,De praemiis et poenis et De exsecrationibus,"grc,lat",15487,urn:cts:greekLit:tlg0018.tlg026.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0018.tlg026.opp-grc1:1-5/
+37,Philo Judaeus,Quod omnis probus liber sit,"grc,lat",17875,urn:cts:greekLit:tlg0018.tlg027.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0018.tlg027.opp-grc1:1-5/
+38,Philo Judaeus,De vita contemplativa,"grc,lat",10308,urn:cts:greekLit:tlg0018.tlg028.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0018.tlg028.opp-grc1:1-5/
+39,Philo Judaeus,De aeternitate mundi,"grc,lat",19439,urn:cts:greekLit:tlg0018.tlg029.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0018.tlg029.opp-grc1:1-5/
+40,Philo Judaeus,In Flaccum,"grc,lat",14392,urn:cts:greekLit:tlg0018.tlg030.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0018.tlg030.opp-grc1:1-5/
+41,Philo Judaeus,Legatio Ad Gaium,"grc,lat",29003,urn:cts:greekLit:tlg0018.tlg031.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0018.tlg031.opp-grc1:1-5/
+42,,Mark Chapter 1,cop,0,urn:cts:greekLit:tlg0031.tlg002.1st1K-cop1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0031.tlg002.1st1K-cop1:1.1/
+43,,1,grc,827,urn:cts:greekLit:tlg0031.tlg002.INTF-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0031.tlg002.INTF-grc1:1.1/
+44,Galen,Adhortatio ad artes addiscendas,grc,5049,urn:cts:greekLit:tlg0057.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg001.1st1K-grc1:1-5/
+45,Galen,Protrepticus,"grc,lat",5092,urn:cts:greekLit:tlg0057.tlg001.1st1K-grc2,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg001.1st1K-grc2:1-5/
+46,Galen,De optima doctrina,"grc,lat",1830,urn:cts:greekLit:tlg0057.tlg002.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg002.1st1K-grc1:1-5/
+47,Galen,Quod optimus medicus sit quoque philosophus,"grc,lat",1388,urn:cts:greekLit:tlg0057.tlg003.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg003.1st1K-grc1:1-4/
+48,Galen,De sectis ad eos qui introducuntur,"grc,eng,lat",6225,urn:cts:greekLit:tlg0057.tlg004.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg004.1st1K-grc1:1-5/
+49,Galen,De constitutione artis medicae ad Patrophilum,"grc,lat,eng",11963,urn:cts:greekLit:tlg0057.tlg006.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg006.1st1K-grc1:prooemium-4/
+50,Galen,Ars Medica,"grc,lat,eng",16153,urn:cts:greekLit:tlg0057.tlg007.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg007.1st1K-grc1:preface-4/
+51,Galen,De elementis ex Hippocrate,"grc,eng,lat",13405,urn:cts:greekLit:tlg0057.tlg008.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg008.1st1K-grc1:1.1/
+52,Galen,De temperamentis,"grc,eng,lat",27694,urn:cts:greekLit:tlg0057.tlg009.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg009.1st1K-grc1:1.1/
+53,Galen,De temperamentis,"grc,eng,lat",27714,urn:cts:greekLit:tlg0057.tlg009.1st1K-grc2,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg009.1st1K-grc2:1.1/
+54,Galen,De naturalibus facultatibus,"grc,eng,grc",31893,urn:cts:greekLit:tlg0057.tlg010.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg010.1st1K-grc1:1.1/
+55,Galen,De anatomicis administrationibus,"grc,eng,lat",78402,urn:cts:greekLit:tlg0057.tlg011.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg011.1st1K-grc1:1.1/
+56,Galen,De ossibus ad tirones,"grc,eng,lat",6930,urn:cts:greekLit:tlg0057.tlg012.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg012.1st1K-grc1:prooemium-4/
+57,Galen,De venarum arteriarumque dissectione,"grc,eng,lat",7539,urn:cts:greekLit:tlg0057.tlg013.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg013.1st1K-grc1:1-5/
+58,Galen,De nervorum dissectione,"grc,eng,lat",3606,urn:cts:greekLit:tlg0057.tlg014.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg014.1st1K-grc1:1-5/
+59,Galen,De instrumento odoratus,"grc,eng,lat",4198,urn:cts:greekLit:tlg0057.tlg015.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg015.1st1K-grc1:1-5/
+60,Galen,De uteri dissectione,"grc,eng,lat",3261,urn:cts:greekLit:tlg0057.tlg016.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg016.1st1K-grc1:1-5/
+61,Galen,De usu partium corporis humani I-XI,"grc,eng,lat",194301,urn:cts:greekLit:tlg0057.tlg017.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg017.1st1K-grc1:1.1/
+62,Galen,De motu musculorum,"grc,eng,lat",14720,urn:cts:greekLit:tlg0057.tlg018.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg018.1st1K-grc1:1.1/
+63,Galen,De victu attenuante,"grc,eng,lat",6488,urn:cts:greekLit:tlg0057.tlg019.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg019.1st1K-grc1:1-5/
+64,Galen,De Victu Attenuante,"grc,lat,eng",8800,urn:cts:greekLit:tlg0057.tlg019.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg019.opp-grc1:1-5/
+65,Galen,De utilitate respirationis,"grc,eng,lat",6050,urn:cts:greekLit:tlg0057.tlg020.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg020.1st1K-grc1:1-5/
+66,Galen,De semine,"grc,lat,eng",20793,urn:cts:greekLit:tlg0057.tlg021.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg021.1st1K-grc1:1.1/
+67,Galen,De foetuum formatione,grc,7712,urn:cts:greekLit:tlg0057.tlg022.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg022.1st1K-grc1:1-5/
+68,Galen,An in arteriis sanguis contineatur,"grc,eng,lat",4713,urn:cts:greekLit:tlg0057.tlg023.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg023.1st1K-grc1:1-5/
+69,Galen,De optima corporis nostri constitutione,"grc,eng,lat",1766,urn:cts:greekLit:tlg0057.tlg024.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg024.1st1K-grc1:1-4/
+70,Galen,De bono habitu,"grc,eng,lat",821,urn:cts:greekLit:tlg0057.tlg025.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg025.1st1K-grc1:1/
+71,Galen,Quod animi mores corporis temperamenta sequantur,"grc,eng,lat",8377,urn:cts:greekLit:tlg0057.tlg027.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg027.1st1K-grc1:1-5/
+72,Galen,De propriorum animi cuiuslibet affectuum dignotione et curatione,"grc,eng,lat",8194,urn:cts:greekLit:tlg0057.tlg028.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg028.1st1K-grc1:1-5/
+73,Galen,De animi cuiuslibet peccatorum dignotione et curatione,"grc,eng,lat",6320,urn:cts:greekLit:tlg0057.tlg029.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg029.1st1K-grc1:1-5/
+74,Galen,De atra bile,"grc,lat",6257,urn:cts:greekLit:tlg0057.tlg030.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg030.1st1K-grc1:1-5/
+75,Galen,De usu pulsuum,"grc,lat",4468,urn:cts:greekLit:tlg0057.tlg031.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg031.1st1K-grc1:1-5/
+76,Galen,De placitis Hippocratis et Platonis,"grc,lat",94755,urn:cts:greekLit:tlg0057.tlg032.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg032.1st1K-grc1:1.5/
+77,Galen,De parvae pilae exercitio,"grc,lat",1700,urn:cts:greekLit:tlg0057.tlg034.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg034.1st1K-grc1:1-5/
+78,Galen,De parvae pilae exercitio,"grc,lat",1712,urn:cts:greekLit:tlg0057.tlg034.1st1K-grc2,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg034.1st1K-grc2:1-5/
+79,Galen,De venereis,"grc,lat",396,urn:cts:greekLit:tlg0057.tlg035.1st1K-grc2,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg035.1st1K-grc2:1/
+80,Galen,De venereis (ap. Oribasium),"grc,lat",849,urn:cts:greekLit:tlg0057.tlg035.1st1K-grc3,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg035.1st1K-grc3:1-3/
+81,Galen,De sanitate tuenda,"lat,grc",66881,urn:cts:greekLit:tlg0057.tlg036.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg036.1st1K-grc1:1.1/
+82,Galen,De rebus boni malique suci,"lat,grc",10187,urn:cts:greekLit:tlg0057.tlg038.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg038.1st1K-grc1:1-5/
+83,Galen,De ptisana,"grc,lat",2212,urn:cts:greekLit:tlg0057.tlg039.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg039.1st1K-grc1:1-5/
+84,Galen,De dignotione ex insomniis,"grc,lat",503,urn:cts:greekLit:tlg0057.tlg040.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg040.1st1K-grc1:1/
+85,Galen,De morborum differentiis,grc,6645,urn:cts:greekLit:tlg0057.tlg041.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg041.1st1K-grc1:1-5/
+86,Galen,De causis morborum,grc,6085,urn:cts:greekLit:tlg0057.tlg042.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg042.1st1K-grc1:1-5/
+87,Galen,De symptomatum differentiis,grc,6621,urn:cts:greekLit:tlg0057.tlg043.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg043.1st1K-grc1:1-5/
+88,Galen,De symptomatum causis,grc,29418,urn:cts:greekLit:tlg0057.tlg044.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg044.1st1K-grc1:1.1/
+89,Galen,De differentiis febrium,grc,20902,urn:cts:greekLit:tlg0057.tlg045.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg045.1st1K-grc1:1.1/
+90,Galen,De morborum temporibus,grc,5294,urn:cts:greekLit:tlg0057.tlg046.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg046.1st1K-grc1:1-5/
+91,Galen,De totius morbi temporibus,grc,3538,urn:cts:greekLit:tlg0057.tlg047.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg047.1st1K-grc1:1-5/
+92,Galen,De typis,grc,1581,urn:cts:greekLit:tlg0057.tlg048.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg048.1st1K-grc1:1-5/
+93,Galen,Adversus eos qui de typis scripserunt vel de circuitibus,grc,5606,urn:cts:greekLit:tlg0057.tlg049.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg049.1st1K-grc1:1-5/
+94,Galen,De plenitudine,grc,11076,urn:cts:greekLit:tlg0057.tlg050.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg050.1st1K-grc1:1-5/
+95,Galen,"De tremore, palpitatione, convulsione et rigore",grc,9114,urn:cts:greekLit:tlg0057.tlg051.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg051.1st1K-grc1:1-5/
+96,Galen,De comate secundum Hippocratem,grc,3251,urn:cts:greekLit:tlg0057.tlg052.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg052.1st1K-grc1:1-4/
+97,Galen,De marcore,grc,5803,urn:cts:greekLit:tlg0057.tlg053.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg053.1st1K-grc1:1-5/
+98,Galen,De tumoribus praeter naturam,grc,4221,urn:cts:greekLit:tlg0057.tlg054.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg054.1st1K-grc1:1-5/
+99,Galen,De inaequali intemperie,grc,3158,urn:cts:greekLit:tlg0057.tlg055.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg055.1st1K-grc1:1-5/
+100,Galen,De difficultate respirationis,grc,31842,urn:cts:greekLit:tlg0057.tlg056.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg056.1st1K-grc1:1.1/
+101,Galen,De locis affectis,grc,69856,urn:cts:greekLit:tlg0057.tlg057.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg057.1st1K-grc1:1.1/
+102,Galen,De pulsibus ad tirones,grc,5977,urn:cts:greekLit:tlg0057.tlg058.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg058.1st1K-grc1:1-5/
+103,Galen,De differentiis pulsuum,grc,42806,urn:cts:greekLit:tlg0057.tlg059.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg059.1st1K-grc1:1.1/
+104,Galen,De dignoscendis pulsibus,grc,31232,urn:cts:greekLit:tlg0057.tlg060.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg060.1st1K-grc1:1.1/
+105,Galen,De causis pulsuum,grc,32090,urn:cts:greekLit:tlg0057.tlg061.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg061.1st1K-grc1:1.1/
+106,Galen,De praesagitione ex pulsibus,grc,36318,urn:cts:greekLit:tlg0057.tlg062.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg062.1st1K-grc1:1.1/
+107,Galen,Synopsis librorum suorum de pulsibus,grc,15724,urn:cts:greekLit:tlg0057.tlg063.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg063.1st1K-grc1:1-5/
+108,Galen,De crisibus,grc,33858,urn:cts:greekLit:tlg0057.tlg064.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg064.1st1K-grc1:1.1/
+109,Galen,De diebus decretoriis,grc,27265,urn:cts:greekLit:tlg0057.tlg065.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg065.1st1K-grc1:1.1/
+110,Galen,De methodo medendi,grc,157549,urn:cts:greekLit:tlg0057.tlg066.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg066.1st1K-grc1:1.1/
+111,Galen,Ad Glauconem de methodo medendi,grc,22890,urn:cts:greekLit:tlg0057.tlg067.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg067.1st1K-grc1:1.1/
+112,Galen,De venae sectione adversus Erasistratum,grc,5971,urn:cts:greekLit:tlg0057.tlg068.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg068.1st1K-grc1:1-5/
+113,Galen,De venae sectione adversus Erasistrateos Romae degentes,grc,9042,urn:cts:greekLit:tlg0057.tlg069.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg069.1st1K-grc1:1-5/
+114,Galen,De curandi ratione per venae sectionem,grc,10057,urn:cts:greekLit:tlg0057.tlg070.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg070.1st1K-grc1:1-5/
+115,Galen,"De hirudinibus, revulsione, cucurbitula, incisione et scarificatione",grc,704,urn:cts:greekLit:tlg0057.tlg071.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg071.1st1K-grc1:1-4/
+116,Galen,De purgantium medicamentorum facultate,grc,2973,urn:cts:greekLit:tlg0057.tlg072.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg072.1st1K-grc1:1-5/
+117,Galen,Quos quibus catharticis medicamentis et quando purgare oporteat,grc,1996,urn:cts:greekLit:tlg0057.tlg073.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg073.1st1K-grc1:1/
+118,Galen,Quos quibus catharticis medicamentis et quando purgare oporteat (ap. Oribasium),"grc,lat,deu",2723,urn:cts:greekLit:tlg0057.tlg073.1st1K-grc2,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg073.1st1K-grc2:1.1-1.2/
+119,Galen,Pro puero epileptico consilium,grc,3219,urn:cts:greekLit:tlg0057.tlg074.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg074.1st1K-grc1:1-5/
+120,Galen,De simplicium medicamentorum temperamentis ac facultatibus I-VI,grc,66926,urn:cts:greekLit:tlg0057.tlg075.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg075.1st1K-grc1:6.1.1-6.1.5/
+121,Galen,De compositione medicamentorum secundum locos I-VI,grc,142969,urn:cts:greekLit:tlg0057.tlg076.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg076.1st1K-grc1:1.1/
+122,Galen,De compositione medicamentorum per genera,grc,104110,urn:cts:greekLit:tlg0057.tlg077.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg077.1st1K-grc1:1.1/
+123,Galen,De antidotis,grc,27902,urn:cts:greekLit:tlg0057.tlg078.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg078.1st1K-grc1:1.1/
+124,Galen,De theriaca ad Pisonem,grc,13019,urn:cts:greekLit:tlg0057.tlg079.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg079.1st1K-grc1:1-5/
+125,Galen,Institutio logica,grc,8557,urn:cts:greekLit:tlg0057.tlg081.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg081.1st1K-grc1:1-5/
+126,Galen,De sophismatis seu captionibus penes dictionem,grc,2530,urn:cts:greekLit:tlg0057.tlg082.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg082.1st1K-grc1:1-4/
+127,Galen,De praenotione ad Epigenem,grc,11019,urn:cts:greekLit:tlg0057.tlg083.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg083.1st1K-grc1:1-5/
+128,Galen,De substantia facultatum naturalium fragmentum,grc,1370,urn:cts:greekLit:tlg0057.tlg084.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg084.1st1K-grc1:1/
+129,Galen,In Hippocratis De natura hominis,grc,24377,urn:cts:greekLit:tlg0057.tlg085.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg085.1st1K-grc1:1.prooemium/
+130,Galen,In Hippocratis vel Polybi Opus de Salubri Victus Ratione Privatorum Commentarius,grc,6837,urn:cts:greekLit:tlg0057.tlg086.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg086.1st1K-grc1:1/
+131,Galen,In Hippocratis De victu acutorum,grc,67032,urn:cts:greekLit:tlg0057.tlg087.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg087.1st1K-grc1:1.1/
+132,Galen,In Hippocratis Epidemiarum I,grc,156385,urn:cts:greekLit:tlg0057.tlg089.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg089.1st1K-grc1:1.1.pr-1.1.4/
+133,Galen,In Hippocratis Aphorismos,grc,96004,urn:cts:greekLit:tlg0057.tlg092.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg092.1st1K-grc1:1.1/
+134,Galen,Adversus Lycum,grc,7436,urn:cts:greekLit:tlg0057.tlg093.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg093.1st1K-grc1:1-5/
+135,Galen,Adversus ea quae Juliano in Hippocratis Aphorismos enuntiata sunt,grc,7591,urn:cts:greekLit:tlg0057.tlg094.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg094.1st1K-grc1:1-5/
+136,Galen,In Hippocratis De articulis,grc,51618,urn:cts:greekLit:tlg0057.tlg095.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg095.1st1K-grc1:1.prooemium/
+137,Galen,De Humero iis Modis Prolapso quos Hippocrates non Vidit,grc,9831,urn:cts:greekLit:tlg0057.tlg096.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg096.1st1K-grc1:excursus-26/
+138,Galen,In Hippocratis Prognosticum,grc,42854,urn:cts:greekLit:tlg0057.tlg099.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg099.1st1K-grc1:1.1/
+139,Galen,In Hippocratis De fracturis,grc,41682,urn:cts:greekLit:tlg0057.tlg100.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg100.1st1K-grc1:1.prooemium/
+140,Galen,In Hippocratis De officina medici,grc,41054,urn:cts:greekLit:tlg0057.tlg101.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg101.1st1K-grc1:1.prooemium/
+141,Galen,De musculorum dissectione ad tirones,grc,14742,urn:cts:greekLit:tlg0057.tlg102.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg102.1st1K-grc1:1-5/
+142,Galen,De consuetudinibus,grc,4007,urn:cts:greekLit:tlg0057.tlg103.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg103.1st1K-grc1:1-5/
+143,Galen,De experientia medica,"grc,deu",1001,urn:cts:greekLit:tlg0057.tlg107.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg107.1st1K-grc1:1/
+144,Galen,De causis respirationis,grc,675,urn:cts:greekLit:tlg0057.tlg114.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0057.tlg114.1st1K-grc1:1/
+145,Plato,Definitiones,"grc,lat",2312,urn:cts:greekLit:tlg0059.tlg037.First1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0059.tlg037.First1K-grc1:1/
+146,Lucian of Samosata,Phalaris,"grc,lat",2954,urn:cts:greekLit:tlg0062.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0062.tlg001.1st1K-grc1:1.1-1.5/
+147,Lucian of Samosata,"Hippias, or the Bath","grc,lat",1044,urn:cts:greekLit:tlg0062.tlg002.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0062.tlg002.1st1K-grc1:1-5/
+148,Lucian of Samosata,Bacchus,"grc,lat",1079,urn:cts:greekLit:tlg0062.tlg003.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0062.tlg003.1st1K-grc1:1-5/
+149,Lucian of Samosata,Hercules,"grc,lat",807,urn:cts:greekLit:tlg0062.tlg004.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0062.tlg004.1st1K-grc1:1-5/
+150,Lucian of Samosata,"Electrum,Amber, or the Swans","grc,lat",605,urn:cts:greekLit:tlg0062.tlg005.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0062.tlg005.1st1K-grc1:1-5/
+151,Lucian of Samosata,"Muscae Encomium,The Fly","grc,lat",1267,urn:cts:greekLit:tlg0062.tlg006.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0062.tlg006.1st1K-grc1:1-5/
+152,Lucian of Samosata,Nigrinus,"grc,lat",4236,urn:cts:greekLit:tlg0062.tlg007.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0062.tlg007.1st1K-grc1:prologue-4/
+153,Lucian of Samosata,Demonax,"grc,lat",3166,urn:cts:greekLit:tlg0062.tlg008.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0062.tlg008.1st1K-grc1:1-5/
+154,Lucian of Samosata,"De Domo,The Hall","grc,lat",3287,urn:cts:greekLit:tlg0062.tlg009.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0062.tlg009.1st1K-grc1:1-5/
+155,Lucian of Samosata,"Patriae encomium,My Native Land","grc,lat",957,urn:cts:greekLit:tlg0062.tlg010.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0062.tlg010.1st1K-grc1:1-5/
+156,Lucian of Samosata,"Macrobii,Octogenarians","grc,lat",2212,urn:cts:greekLit:tlg0062.tlg011.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0062.tlg011.1st1K-grc1:1-5/
+157,Lucian of Samosata,"Verae historiae,A True Story","grc,lat",11348,urn:cts:greekLit:tlg0062.tlg012.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0062.tlg012.1st1K-grc1:1.1-1.5/
+158,Lucian of Samosata,"Calumniae non temere credendum,Slander","grc,lat",3274,urn:cts:greekLit:tlg0062.tlg013.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0062.tlg013.1st1K-grc1:1-5/
+159,Lucian of Samosata,"Lis consonantium (= Judicium vocalium),The Consonants at Law","grc,lat",1296,urn:cts:greekLit:tlg0062.tlg014.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0062.tlg014.1st1K-grc1:1-5/
+160,Lucian of Samosata,"Symposium,The Carousal, or The Lapiths","grc,lat",4932,urn:cts:greekLit:tlg0062.tlg015.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0062.tlg015.1st1K-grc1:1-5/
+161,Lucianus Samosatenus,Cataplus,grc,4153,urn:cts:greekLit:tlg0062.tlg016.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0062.tlg016.1st1K-grc1:1-5/
+162,Lucianus Samosatenus,Juppiter confutatus,grc,2406,urn:cts:greekLit:tlg0062.tlg017.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0062.tlg017.1st1K-grc1:1-5/
+163,Lucianus Samosatenus,Juppiter tragoedus,grc,6829,urn:cts:greekLit:tlg0062.tlg018.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0062.tlg018.1st1K-grc1:1-5/
+164,Lucianus Samosatenus,Gallus,grc,5908,urn:cts:greekLit:tlg0062.tlg019.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0062.tlg019.1st1K-grc1:1-5/
+165,Lucianus Samosatenus,Prometheus,grc,2448,urn:cts:greekLit:tlg0062.tlg020.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0062.tlg020.1st1K-grc1:1-5/
+166,Lucianus Samosatenus,Icaromenippus,"grc,lat",5483,urn:cts:greekLit:tlg0062.tlg021.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0062.tlg021.1st1K-grc1:1-5/
+167,Lucianus Samosatenus,Timon,"grc,lat",6235,urn:cts:greekLit:tlg0062.tlg022.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0062.tlg022.1st1K-grc1:1-5/
+168,Lucianus Samosatenus,Charon sive contemplantes,grc,4365,urn:cts:greekLit:tlg0062.tlg023.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0062.tlg023.1st1K-grc1:1-5/
+169,Lucianus Samosatenus,Vitarum auctio,grc,3912,urn:cts:greekLit:tlg0062.tlg024.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0062.tlg024.1st1K-grc1:1-5/
+170,Lucianus Samosatenus,Revivescentes sive piscator,grc,6793,urn:cts:greekLit:tlg0062.tlg025.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0062.tlg025.1st1K-grc1:1-5/
+171,Lucianus Samosatenus,Bis accusatus sive tribunalia,grc,5992,urn:cts:greekLit:tlg0062.tlg026.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0062.tlg026.1st1K-grc1:1-5/
+172,Lucianus Samosatenus,De sacrificiis,grc,1866,urn:cts:greekLit:tlg0062.tlg027.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0062.tlg027.1st1K-grc1:1-5/
+173,Lucianus Samosatenus,Adversus indoctum et libros multos ementem,grc,4048,urn:cts:greekLit:tlg0062.tlg028.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0062.tlg028.1st1K-grc1:1-5/
+174,Lucianus Samosatenus,Somnium sive vita Luciani,grc,1895,urn:cts:greekLit:tlg0062.tlg029.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0062.tlg029.1st1K-grc1:1-5/
+175,Lucianus Samosatenus,De parasito sive artem esse parasiticam,grc,7281,urn:cts:greekLit:tlg0062.tlg030.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0062.tlg030.1st1K-grc1:1-5/
+176,Lucianus Samosatenus,Philopseudes sive incredulus,grc,6588,urn:cts:greekLit:tlg0062.tlg031.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0062.tlg031.1st1K-grc1:1-5/
+177,Lucianus Samosatenus,Dearum judicium,grc,2177,urn:cts:greekLit:tlg0062.tlg032.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0062.tlg032.1st1K-grc1:1-5/
+178,Lucianus Samosatenus,De mercede conductis potentium familiaribus,grc,7313,urn:cts:greekLit:tlg0062.tlg033.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0062.tlg033.1st1K-grc1:1-5/
+179,Lucian of Samosata,Anacharsis,"grc,lat",6586,urn:cts:greekLit:tlg0062.tlg034.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0062.tlg034.1st1K-grc1:1-5/
+180,Lucian of Samosata,"Menippus sive necyomantia,Menippus, or the Descent into Hades","grc,lat",3450,urn:cts:greekLit:tlg0062.tlg035.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0062.tlg035.1st1K-grc1:1-5/
+181,Lucian of Samosata,"De luctu,On Funerals","grc,lat",1909,urn:cts:greekLit:tlg0062.tlg036.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0062.tlg036.1st1K-grc1:1-5/
+182,Lucian of Samosata,"Rhetorum praeceptor,A Professor of Public Speaking","grc,lat",3946,urn:cts:greekLit:tlg0062.tlg037.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0062.tlg037.1st1K-grc1:1-5/
+183,Lucian of Samosata,"Alexander,Alexander the False Prophet","grc,lat",7923,urn:cts:greekLit:tlg0062.tlg038.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0062.tlg038.1st1K-grc1:1-5/
+184,Lucian of Samosata,"Imagines,Essays in Portraiture","grc,lat",3664,urn:cts:greekLit:tlg0062.tlg039.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0062.tlg039.1st1K-grc1:1-5/
+185,Lucian of Samosata,"Pro imaginibus,Essays in Portraiture Defended","grc,lat",3813,urn:cts:greekLit:tlg0062.tlg040.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0062.tlg040.1st1K-grc1:1-5/
+186,Lucian of Samosata,"De Syria dea,The Goddesse of Surrye","grc,lat",8978,urn:cts:greekLit:tlg0062.tlg041.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0062.tlg041.1st1K-grc1:1-5/
+187,Lucianus Samosatenus,De morte Peregrini,"grc,lat",5171,urn:cts:greekLit:tlg0062.tlg042.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0062.tlg042.1st1K-grc1:1-5/
+188,Lucianus Samosatenus,Fugitivi,"grc,lat",3649,urn:cts:greekLit:tlg0062.tlg043.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0062.tlg043.1st1K-grc1:1-5/
+189,Lucianus Samosatenus,Toxaris vel amicitia,"grc,lat",10925,urn:cts:greekLit:tlg0062.tlg044.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0062.tlg044.1st1K-grc1:1-5/
+190,Lucianus Samosatenus,De saltatione,"grc,lat",8656,urn:cts:greekLit:tlg0062.tlg045.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0062.tlg045.1st1K-grc1:1-5/
+191,Lucianus Samosatenus,Lexiphanes,"grc,lat",3482,urn:cts:greekLit:tlg0062.tlg046.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0062.tlg046.1st1K-grc1:1-5/
+192,Lucianus Samosatenus,Eunuchus,"grc,lat",1442,urn:cts:greekLit:tlg0062.tlg047.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0062.tlg047.1st1K-grc1:1-5/
+193,Lucianus Samosatenus,De astrologia,"grc,lat",2349,urn:cts:greekLit:tlg0062.tlg048.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0062.tlg048.1st1K-grc1:1-5/
+194,Lucianus Samosatenus,Pseudologista,"grc,lat",4724,urn:cts:greekLit:tlg0062.tlg049.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0062.tlg049.1st1K-grc1:1-5/
+195,Lucianus Samosatenus,Deorum concilium,"grc,lat",2394,urn:cts:greekLit:tlg0062.tlg050.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0062.tlg050.1st1K-grc1:1-5/
+196,Lucianus Samosatenus,Tyrannicida,"grc,lat",3138,urn:cts:greekLit:tlg0062.tlg051.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0062.tlg051.1st1K-grc1:praef-4/
+197,Lucianus Samosatenus,Abdicatus,"grc,lat",5185,urn:cts:greekLit:tlg0062.tlg052.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0062.tlg052.1st1K-grc1:1-5/
+198,Hanno,Periplus Hannonis,"grc,lat",627,urn:cts:greekLit:tlg0064.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0064.tlg001.1st1K-grc1:1-5/
+199,Scylax,Periplus Scylacis,"grc,lat",8609,urn:cts:greekLit:tlg0065.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0065.tlg001.1st1K-grc1:1.1/
+200,Ps. Dicaearchus,"Dicaearchi, ut fertur, potius vero Athenaei Descriptionis Graeciae Fragmenta tria","grc,lat,deu",2708,urn:cts:greekLit:tlg0066.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0066.tlg001.1st1K-grc1:1.1-1.5/
+201,Agatharchides,Ex Agatharchidis De Maris Erythraeo Libri Excerpta,"grc,lat,deu",20308,urn:cts:greekLit:tlg0067.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0067.tlg001.1st1K-grc1:5.23.1-5.23.2/
+202,Pseudo-Scymnus,"Scymni Chii, ut fertur, Periegesis","grc,lat,deu",5587,urn:cts:greekLit:tlg0068.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0068.tlg001.1st1K-grc1:1.1-1.30/
+203,Dionysius Calliphontis,Dionysii Calliphontis filii Descriptio Graeciae,"grc,lat,deu",905,urn:cts:greekLit:tlg0069.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0069.tlg001.1st1K-grc1:1.1-1.30/
+204,Isidorus Characenus,Isidori Characeni Mansiones Parthicae,"grc,lat,deu",1164,urn:cts:greekLit:tlg0070.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0070.tlg001.1st1K-grc1:1.1-1.5/
+205,Pseudo Arrianus,"Anonymi (Arriani, ut fertur) periplus maris Erythraei","grc,lat,deu",6246,urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0071.tlg001.1st1K-grc1:2-6/
+206,Pseudo-Arrianus,"Anonymi (Arriani, ut fertur) periplus ponti Euxini","grc,lat,deu",5537,urn:cts:greekLit:tlg0075.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0075.tlg001.1st1K-grc1:1.1-1.2/
+207,Anonymous,Stadiasmus Magni Maris,"grc,lat,deu",5693,urn:cts:greekLit:tlg0077.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0077.tlg001.1st1K-grc1:1.1a/
+208,Dionysius Halicarnassensis,De Demosthenis dictione,"grc,lat",33568,urn:cts:greekLit:tlg0081.tlg006.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0081.tlg006.1st1K-grc1:1-5/
+209,Dionysius Halicarnassensis,Libri secundi de antiquis oratoribus reliquiae,"grc,lat",244,urn:cts:greekLit:tlg0081.tlg007.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0081.tlg007.1st1K-grc1:59/
+210,"Apollonius, Dyscolus",De pronominibus,"grc,lat",47260,urn:cts:greekLit:tlg0082.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0082.tlg001.1st1K-grc1:1-5/
+211,"Apollonius, Dyscolus",De adverbiis,"grc,lat",39983,urn:cts:greekLit:tlg0082.tlg002.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0082.tlg002.1st1K-grc1:1-5/
+212,"Apollonius, Dyscolus",De constructione,grc,256696,urn:cts:greekLit:tlg0082.tlg004.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0082.tlg004.1st1K-grc1:1.1-1.5/
+213,Dionysius of Byzantium,De Bospori Navigatione,"grc,lat,deu",210,urn:cts:greekLit:tlg0083.tlg003.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0083.tlg003.1st1K-grc1:1/
+214,Dionysius Periegetes,Orbis Descriptio,"grc,lat,deu",7636,urn:cts:greekLit:tlg0084.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0084.tlg001.1st1K-grc1:1-30/
+215,Aeschylus,Ἱκέτιδες,"grc,lat",7773,urn:cts:greekLit:tlg0085.tlg001.opp-grc3,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0085.tlg001.opp-grc3:1-30/
+216,Aeschylus,Περσαι,"grc,lat",6964,urn:cts:greekLit:tlg0085.tlg002.opp-grc3,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0085.tlg002.opp-grc3:1-30/
+217,Aeschylus,Προμηθευς δεσμωτης,"grc,lat",7298,urn:cts:greekLit:tlg0085.tlg003.opp-grc3,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0085.tlg003.opp-grc3:1-30/
+218,Aeschylus,Ἑπτὰ ἐπὶ Θήβας,"grc,lat",6950,urn:cts:greekLit:tlg0085.tlg004.opp-grc3,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0085.tlg004.opp-grc3:1-30/
+219,Aeschylus,Ἀγαμέμνων,"grc,lat",10334,urn:cts:greekLit:tlg0085.tlg005.opp-grc3,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0085.tlg005.opp-grc3:1-30/
+220,Aeschylus,Χοηφóρoι,"grc,lat",7667,urn:cts:greekLit:tlg0085.tlg006.opp-grc3,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0085.tlg006.opp-grc3:1-27/
+221,Aeschylus,Eumenides,"grc,lat",6984,urn:cts:greekLit:tlg0085.tlg007.opp-grc3,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0085.tlg007.opp-grc3:1-30/
+222,Aristotle,Analytica priora,"grc,lat",60253,urn:cts:greekLit:tlg0086.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg001.1st1K-grc1:priora.1.1-priora.1.5/
+223,Aristotle,Aristotelis Analytica Priora et Posteriora,"grc,lat",59935,urn:cts:greekLit:tlg0086.tlg001.1st1K-grc2,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg001.1st1K-grc2:1.1.1-1.1.5/
+224,Aristotle,De anima,"grc,lat",20881,urn:cts:greekLit:tlg0086.tlg002.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg002.1st1K-grc1:1.1/
+225,Aristotle,De anima,"grc,lat",21007,urn:cts:greekLit:tlg0086.tlg002.1st1K-grc2,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg002.1st1K-grc2:1.1/
+226,Aristotle,Res Publica Atheniensium,"grc,lat",41760,urn:cts:greekLit:tlg0086.tlg003.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg003.1st1K-grc1:1-5/
+227,Aristotle,Fragmenta Deperditae Partis Primae,"grc,lat",1249,urn:cts:greekLit:tlg0086.tlg003.1st1K-grc2,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg003.1st1K-grc2:1-4/
+228,Georgius Wentzei,Prefatio to Res Publica Atheniensium,lat,3044,urn:cts:greekLit:tlg0086.tlg003.1st1K-lat1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg003.1st1K-lat1:1-5/
+229,,Corrigenda to Res Publica Atheniensium,"lat,grc",127,urn:cts:greekLit:tlg0086.tlg003.1st1K-lat2,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg003.1st1K-lat2:1/
+230,,Addenda to Res Publica Atheniensium,"lat,grc",197,urn:cts:greekLit:tlg0086.tlg003.1st1K-lat3,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg003.1st1K-lat3:1/
+231,,Signorum Explicatio to Res Publica Atheniensium,lat,121,urn:cts:greekLit:tlg0086.tlg003.1st1K-lat4,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg003.1st1K-lat4:1/
+232,,Index Verborum to Res Publica Atheniensium,lat,25023,urn:cts:greekLit:tlg0086.tlg003.1st1K-mul1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg003.1st1K-mul1:1-5/
+233,,"Index Nominum to Aristotle, Res Publica Atheniensium",lat,746,urn:cts:greekLit:tlg0086.tlg003.1st1K-mul2,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg003.1st1K-mul2:1-5/
+234,Aristotle,De caelo,"grc,lat",31081,urn:cts:greekLit:tlg0086.tlg005.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg005.1st1K-grc1:1.1/
+235,Aristotle,Categoriae,"grc,lat",10316,urn:cts:greekLit:tlg0086.tlg006.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg006.1st1K-grc1:1-5/
+236,Aristotle,De divinatione per somnum,greek,1207,urn:cts:greekLit:tlg0086.tlg008.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg008.1st1K-grc1:1-2/
+237,Aristotle,De generatione et corruptione,"grc,lat",18021,urn:cts:greekLit:tlg0086.tlg013.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg013.1st1K-grc1:1.1/
+238,Aristotle,De generatione et corruptione,"grc,lat",17028,urn:cts:greekLit:tlg0086.tlg013.1st1K-grc2,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg013.1st1K-grc2:1.1/
+239,Aristotle,Historia animalium,greek,94069,urn:cts:greekLit:tlg0086.tlg014.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg014.1st1K-grc1:1.1/
+240,Aristoteles,De animalium motione,"grc,lat",5363,urn:cts:greekLit:tlg0086.tlg015.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg015.1st1K-grc1:1-5/
+241,Aristotle,De insomniis,greek,2436,urn:cts:greekLit:tlg0086.tlg016.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg016.1st1K-grc1:1-3/
+242,Aristotle,De interpretatione,grc,6245,urn:cts:greekLit:tlg0086.tlg017.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg017.1st1K-grc1:1-5/
+243,Aristotle,"De iuventute et senectute, De vita et morte",greek,1853,urn:cts:greekLit:tlg0086.tlg018.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg018.1st1K-grc1:1-5/
+244,Aristotle,De longitudine et brevitate vitae,greek,1793,urn:cts:greekLit:tlg0086.tlg020.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg020.1st1K-grc1:1-5/
+245,Aristoteles,De animalium incessu,"grc,lat",8680,urn:cts:greekLit:tlg0086.tlg021.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg021.1st1K-grc1:1-5/
+246,Aristotle,Magna Moralia,"grc,lat",33037,urn:cts:greekLit:tlg0086.tlg022.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg022.1st1K-grc1:1.1.1-1.1.5/
+247,Aristotle,De memoria et reminiscentia,greek,2519,urn:cts:greekLit:tlg0086.tlg024.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg024.1st1K-grc1:1-2/
+248,Aristotle,Meteorologica,greek,33789,urn:cts:greekLit:tlg0086.tlg026.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg026.1st1K-grc1:1.1/
+249,Aristotle,Meteorologica,"grc,lat",63493,urn:cts:greekLit:tlg0086.tlg026.1st1K-grc2,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg026.1st1K-grc2:1.1/
+250,Aristotle,De partibus animalium,"grc,lat",35306,urn:cts:greekLit:tlg0086.tlg030.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg030.1st1K-grc1:1.1.1-1.1.5/
+251,Aristotle,Physica,"grc,lat",55685,urn:cts:greekLit:tlg0086.tlg031.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg031.1st1K-grc1:1.1/
+252,Aristotle,Ars Poetica,greek,10228,urn:cts:greekLit:tlg0086.tlg034.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg034.1st1K-grc1:1-5/
+253,Aristotle,De respiratione,greek,6112,urn:cts:greekLit:tlg0086.tlg037.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg037.1st1K-grc1:1-5/
+254,Aristotle,De sophisticis elenchis,greek,14115,urn:cts:greekLit:tlg0086.tlg040.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg040.1st1K-grc1:1-5/
+255,Aristotle,De sensu et sensibilibus,"lat,grc",7868,urn:cts:greekLit:tlg0086.tlg041.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg041.1st1K-grc1:1.1-1.2/
+256,Aristotle,De somno et vigilia,greek,2993,urn:cts:greekLit:tlg0086.tlg042.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg042.1st1K-grc1:1-3/
+257,Aristoteles,De spiritu,"grc,lat",4600,urn:cts:greekLit:tlg0086.tlg043.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg043.1st1K-grc1:1-5/
+258,Aristotle,Topica,greek,44125,urn:cts:greekLit:tlg0086.tlg044.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg044.1st1K-grc1:1.1/
+259,Aristotle,De anima (codicis E fragmenta recensionis a vulgata diversae),"grc,lat",2480,urn:cts:greekLit:tlg0086.tlg052.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg052.1st1K-grc1:1-4/
+260,Aristotle,Physica (textus alter),"grc,lat",2366,urn:cts:greekLit:tlg0086.tlg054.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0086.tlg054.1st1K-grc1:1-3/
+261,Herodianus,Περὶ διχρόνων,"grc,lat",5667,urn:cts:greekLit:tlg0087.tlg004.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0087.tlg004.1st1K-grc1:1-5/
+262,Herodianus,Περὶ πνευμάτων,"grc,lat",86,urn:cts:greekLit:tlg0087.tlg005.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0087.tlg005.1st1K-grc1:1/
+263,Herodianus,Περὶ Ἀττικῆς προσῳδίας,"grc,lat",244,urn:cts:greekLit:tlg0087.tlg006.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0087.tlg006.1st1K-grc1:1/
+264,Herodianus,Περὶ Ἰλιακῆς προσῳδίας,"grc,lat",41562,urn:cts:greekLit:tlg0087.tlg007.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0087.tlg007.1st1K-grc1:1.8-1.53/
+265,Herodianus,Περὶ Ὀδυσσειακῆς προσῳδίας,"grc,lat",14434,urn:cts:greekLit:tlg0087.tlg008.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0087.tlg008.1st1K-grc1:1.1-1.30/
+266,Herodianus,Περὶ παθῶν,"grc,lat",91270,urn:cts:greekLit:tlg0087.tlg009.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0087.tlg009.1st1K-grc1:1-5/
+267,Herodianus,Ἐκ τῶν Ἡρωδιανοῦ ὑπομνημάτων τῶν περὶ παθῶν Διδύμου,"grc,lat",455,urn:cts:greekLit:tlg0087.tlg009a.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0087.tlg009a.1st1K-grc1:1-3/
+268,Herodianus,Περὶ συντάξεως τῶν στοιχείων,"grc,lat",7553,urn:cts:greekLit:tlg0087.tlg010.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0087.tlg010.1st1K-grc1:1-5/
+269,Herodianus,Περὶ ὀρθογραφίας,"grc,lat",84561,urn:cts:greekLit:tlg0087.tlg011.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0087.tlg011.1st1K-grc1:1.1.1.1/
+270,Herodianus,Περὶ ὀνομάτων,"grc,lat",8800,urn:cts:greekLit:tlg0087.tlg012.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0087.tlg012.1st1K-grc1:1-5/
+271,Herodianus,Περὶ κλίσεως ὀνομάτων,"grc,lat",59304,urn:cts:greekLit:tlg0087.tlg013.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0087.tlg013.1st1K-grc1:1.1-1.2/
+272,Herodianus,Εἰς τὸ περὶ γενῶν Ἀπολλωνίου ὑπόμνημα,"grc,lat",52,urn:cts:greekLit:tlg0087.tlg014.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0087.tlg014.1st1K-grc1:1/
+273,Herodianus,Μονόβιβλον περὶ τοῦ ὕδωρ,"grc,lat",131,urn:cts:greekLit:tlg0087.tlg015.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0087.tlg015.1st1K-grc1:1-2/
+274,Herodianus,Περὶ τοῦ ζώς,"grc,lat",96,urn:cts:greekLit:tlg0087.tlg016.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0087.tlg016.1st1K-grc1:1-2/
+275,Herodianus,Περὶ συζυγιῶν,"grc,lat",69,urn:cts:greekLit:tlg0087.tlg017.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0087.tlg017.1st1K-grc1:1-2/
+276,Herodianus,Μονόβιβλον περὶ τοῦ μὴ πάντα τὰ ῥήματα κλίνεσθαι εἰς πάντας τοὺς χρόνους,"grc,lat",1940,urn:cts:greekLit:tlg0087.tlg018.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0087.tlg018.1st1K-grc1:1-5/
+277,Herodianus,Περὶ μετοχῶν,"grc,lat",443,urn:cts:greekLit:tlg0087.tlg019.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0087.tlg019.1st1K-grc1:1-3/
+278,Herodianus,Μονόβιβλον περὶ τοῦ ἦν,"grc,lat",623,urn:cts:greekLit:tlg0087.tlg020.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0087.tlg020.1st1K-grc1:1/
+279,Herodianus,Περὶ ῥημάτων,"grc,lat",17682,urn:cts:greekLit:tlg0087.tlg021.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0087.tlg021.1st1K-grc1:1.1-1.5/
+280,Herodianus,Περὶ τῶν εἰς μι,"grc,lat",10514,urn:cts:greekLit:tlg0087.tlg022.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0087.tlg022.1st1K-grc1:pro.1-pro.3/
+281,Herodianus,Περὶ ἀντωνυμιῶν,"grc,lat",480,urn:cts:greekLit:tlg0087.tlg023.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0087.tlg023.1st1K-grc1:1-4/
+282,Herodianus,Περὶ ἐπιρρημάτων,"grc,lat",206,urn:cts:greekLit:tlg0087.tlg024.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0087.tlg024.1st1K-grc1:1-3/
+283,Herodianus,Περὶ σχημάτων,"grc,lat",885,urn:cts:greekLit:tlg0087.tlg025.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0087.tlg025.1st1K-grc1:1-5/
+284,Herodianus,Περὶ παρωνύμων,"grc,lat",15885,urn:cts:greekLit:tlg0087.tlg026.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0087.tlg026.1st1K-grc1:1.1-1.2/
+285,Herodianus,Περὶ ῥηματικῶν ὀνομάτων,"grc,lat",1918,urn:cts:greekLit:tlg0087.tlg027.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0087.tlg027.1st1K-grc1:1-5/
+286,Herodianus,Περὶ μονοσυλλάβων,"grc,lat",266,urn:cts:greekLit:tlg0087.tlg028.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0087.tlg028.1st1K-grc1:1-2/
+287,Herodianus,Περὶ γάμου καὶ συμβιώσεως,"grc,lat",59,urn:cts:greekLit:tlg0087.tlg029.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0087.tlg029.1st1K-grc1:1/
+288,Herodianus,Συμπόσιον,"grc,lat",908,urn:cts:greekLit:tlg0087.tlg030.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0087.tlg030.1st1K-grc1:1-5/
+289,Herodianus,Προτάσεις,"grc,lat",84,urn:cts:greekLit:tlg0087.tlg031.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0087.tlg031.1st1K-grc1:1-2/
+290,Herodianus,Εἰς τὴν Ἀπολλωνίου εἰσαγωγήν,"grc,lat",84,urn:cts:greekLit:tlg0087.tlg032.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0087.tlg032.1st1K-grc1:1/
+291,Herodianus,Περὶ μονήρους λέξεως,"grc,lat",19190,urn:cts:greekLit:tlg0087.tlg033.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0087.tlg033.1st1K-grc1:prologue.1/
+292,Aristoxenus,Elementa Harmonica,"grc,lat",23046,urn:cts:greekLit:tlg0088.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0088.tlg001.1st1K-grc1:1.1-1.5/
+293,Agathemerus,Geographiae Informatio,"eng,grc,lat",1974,urn:cts:greekLit:tlg0090.tlg001.opp-eng1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0090.tlg001.opp-eng1:1.1-1.2/
+294,Agathemerus,Geographiae Informatio,"lat,grc,deu",1981,urn:cts:greekLit:tlg0090.tlg001.opp-grc10,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0090.tlg001.opp-grc10:1.1-1.2/
+295,Agathemerus,Geographiae Informatio,"lat,grc,eng",1966,urn:cts:greekLit:tlg0090.tlg001.opp-grc3,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0090.tlg001.opp-grc3:1.1-1.2/
+296,Agathemerus,Geographiae Informatio,"eng,grc,lat",1996,urn:cts:greekLit:tlg0090.tlg001.opp-grc6,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0090.tlg001.opp-grc6:1.1-1.2/
+297,Agathemerus,Geographiae Informatio,"grc,lat,deu",1970,urn:cts:greekLit:tlg0090.tlg001.opp-grc7,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0090.tlg001.opp-grc7:1.1-1.2/
+298,Agathemerus,Geographiae Informatio,"lat,grc,dut",1971,urn:cts:greekLit:tlg0090.tlg001.opp-grc9,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0090.tlg001.opp-grc9:1.1-1.2/
+299,Agathemerus,Geographiae Informatio,"lat,grc,eng",1814,urn:cts:greekLit:tlg0090.tlg001.opp-lat10,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0090.tlg001.opp-lat10:1.1-1.2/
+300,Agathemerus,Geographiae Informatio,"lat,grc,dut",2172,urn:cts:greekLit:tlg0090.tlg001.opp-lat4,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0090.tlg001.opp-lat4:1.1-1.2/
+301,Agathemerus,Geographiae Informatio,"lat,grc,deu",1817,urn:cts:greekLit:tlg0090.tlg001.opp-lat9,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0090.tlg001.opp-lat9:1.1-1.2/
+302,Anonymous,Geographiae expositio compendiaria,"grc,lat,deu",4378,urn:cts:greekLit:tlg0092.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0092.tlg001.1st1K-grc1:1.1-1.2/
+303,Theophrastus,Concerning Odours,grc,6306,urn:cts:greekLit:tlg0093.ogl001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0093.ogl001.1st1K-grc1:1.1-1.2/
+304,Theophrastus,Enquiry into Plants,grc,4292,urn:cts:greekLit:tlg0093.ogl002.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0093.ogl002.1st1K-grc1:1.1-1.2/
+305,Theophrastus,"Enquiry into Plants,Historia plantarum","grc,eng,lat",84842,urn:cts:greekLit:tlg0093.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0093.tlg001.1st1K-grc1:1.1.1-1.1.5/
+306,Theophrastus,De sensu et sensibilibus,"grc,lat",9043,urn:cts:greekLit:tlg0093.tlg003.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0093.tlg003.1st1K-grc1:1.1-1.5/
+307,Theophrastus,De lapidibus,"grc,lat",4285,urn:cts:greekLit:tlg0093.tlg004.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0093.tlg004.1st1K-grc1:2.1-2.5/
+308,Pseudo-Plutarch,De Fluviis,"grc,lat,deu",6512,urn:cts:greekLit:tlg0094.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0094.tlg001.1st1K-grc1:1.1-1.2/
+309,Aesop,Fabulae,"grc,lat",42735,urn:cts:greekLit:tlg0096.tlg002.First1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0096.tlg002.First1K-grc1:1-4b/
+310,Strabo,"Strabonis Geographiae Chrestomathia, Geographia. Selections Chrestomathia","grc,lat,deu",36949,urn:cts:greekLit:tlg0099.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0099.tlg001.1st1K-grc1:1.1-1.5/
+311,Acta Joannis,Acta Joannis,"grc,lat",23584,urn:cts:greekLit:tlg0317.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0317.tlg001.1st1K-grc1:1-5/
+312,Acta Joannis,Acta Joannis (recenscio),"grc,lat",2490,urn:cts:greekLit:tlg0317.tlg002.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0317.tlg002.1st1K-grc1:2-7/
+313,Didymus Alexandrinus,Mensurae marmorum ac lignorum,"grc,lat",1955,urn:cts:greekLit:tlg0357.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0357.tlg001.1st1K-grc1:1-5/
+314,Didymus Alexandrinus,Mensuris marmorum,"grc,lat",88,urn:cts:greekLit:tlg0357.tlg001.1st1K-grc2,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0357.tlg001.1st1K-grc2:12-27/
+315,Nichomachus of Gerasa,Introductio arithmetica,"grc,lat",35744,urn:cts:greekLit:tlg0358.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0358.tlg001.1st1K-grc1:1.1-1.5/
+316,Nichomachus Gerasenus,Harmonicum enchiridion,"grc,lat",7096,urn:cts:greekLit:tlg0358.tlg002.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0358.tlg002.opp-grc1:toc-4/
+317,Nichomachus Gerasenus,Excerpta,"grc,lat",4293,urn:cts:greekLit:tlg0358.tlg004.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0358.tlg004.opp-grc1:1-5/
+318,Nicomachus Gerasenus,Problemata arithmetica,"grc,lat",1354,urn:cts:greekLit:tlg0358.tlg005.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0358.tlg005.1st1K-grc1:1-5/
+319,Cleonides,Introductio Harmonica,"grc,lat",7110,urn:cts:greekLit:tlg0361.tlg001.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0361.tlg001.opp-grc1:1-5/
+320,Carmina Delphis Inventa,Carmina Delphis Inventa,"grc,lat",1511,urn:cts:greekLit:tlg0362.tlg001.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0362.tlg001.opp-grc1:pr-4/
+321,Claudius Ptolemaeus,Syntaxis mathematica,"grc,lat",277377,urn:cts:greekLit:tlg0363.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0363.tlg001.1st1K-grc1:1.toc-1.4/
+322,Claudius Ptolemaeus,Apotelesmatica (= Tetrabiblos),"grc,lat",60893,urn:cts:greekLit:tlg0363.tlg007.opp-grc2,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0363.tlg007.opp-grc2:1.1.1-1.1.3/
+323,Claudius Ptolemaeus,Musica,"grc,lat,deu",2802,urn:cts:greekLit:tlg0363.tlg011.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0363.tlg011.opp-grc1:1-5/
+324,Septuaginta,Genesis,"grc,lat",45009,urn:cts:greekLit:tlg0527.tlg001.opp-grc2,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0527.tlg001.opp-grc2:1.1/
+325,Septuaginta,Exodus,"grc,lat",35599,urn:cts:greekLit:tlg0527.tlg002.opp-grc2,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0527.tlg002.opp-grc2:1.1/
+326,Septuaginta,Leviticus,"grc,lat",26136,urn:cts:greekLit:tlg0527.tlg003.opp-grc2,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0527.tlg003.opp-grc2:1.1/
+327,Septuaginta,Numeri,"grc,lat",34964,urn:cts:greekLit:tlg0527.tlg004.opp-grc2,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0527.tlg004.opp-grc2:1.1/
+328,Septuaginta,Deuteronomium,"grc,lat",33526,urn:cts:greekLit:tlg0527.tlg005.opp-grc2,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0527.tlg005.opp-grc2:1.1/
+329,Septuaginta,Josue (Cod. Vaticanus + Cod. Alexandrinus),"grc,lat",23452,urn:cts:greekLit:tlg0527.tlg006.opp-grc2,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0527.tlg006.opp-grc2:1.1/
+330,Septuaginta,Judices (Cod. Alexandrinus),"grc,lat",28012,urn:cts:greekLit:tlg0527.tlg008.opp-grc2,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0527.tlg008.opp-grc2:1.1/
+331,Septuaginta,Ruth,"grc,lat",2622,urn:cts:greekLit:tlg0527.tlg010.opp-grc2,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0527.tlg010.opp-grc2:1.1/
+332,Septuaginta,Regnorum I (Samuelis I in textu Masoretico),"grc,lat",27387,urn:cts:greekLit:tlg0527.tlg011.opp-grc2,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0527.tlg011.opp-grc2:1.1/
+333,Septuaginta,Regnorum II (Samuelis II In Textu Masoretico),"grc,lat",23010,urn:cts:greekLit:tlg0527.tlg012.opp-grc2,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0527.tlg012.opp-grc2:1.1/
+334,Septuaginta,Regnorum III (Regum I in textu Masoretico),"grc,lat",30410,urn:cts:greekLit:tlg0527.tlg013.opp-grc2,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0527.tlg013.opp-grc2:1.1/
+335,Septuaginta,Regnorum IV (Regum II in textu Masoretico),"grc,lat",25528,urn:cts:greekLit:tlg0527.tlg014.opp-grc2,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0527.tlg014.opp-grc2:1.1/
+336,Septuaginta,Paralipomenon I sive Chronicon I,"grc,lat",25187,urn:cts:greekLit:tlg0527.tlg015.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0527.tlg015.1st1K-grc1:1.1/
+337,Septuaginta,Paralipomenon II sive Chronicon II,"grc,lat",27214,urn:cts:greekLit:tlg0527.tlg016.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0527.tlg016.1st1K-grc1:1.1/
+338,Septuaginta,Esdras A,"grc,lat",12468,urn:cts:greekLit:tlg0527.tlg017.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0527.tlg017.1st1K-grc1:1.1/
+339,Septuaginta,Esdras B,"grc,lat",23117,urn:cts:greekLit:tlg0527.tlg018.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0527.tlg018.1st1K-grc1:1.1/
+340,Septuaginta,Esther,"grc,lat",12735,urn:cts:greekLit:tlg0527.tlg019.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0527.tlg019.1st1K-grc1:prologue.1/
+341,Septuaginta,Judith,"grc,lat",14547,urn:cts:greekLit:tlg0527.tlg020.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0527.tlg020.1st1K-grc1:1.1/
+342,Septuaginta,Tobias,"grc,lat",7394,urn:cts:greekLit:tlg0527.tlg021.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0527.tlg021.1st1K-grc1:1.1/
+343,Septuaginta,Machabaeorum i,"grc,lat",32008,urn:cts:greekLit:tlg0527.tlg023.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0527.tlg023.1st1K-grc1:1.1/
+344,Septuaginta,Machabaeorum ii,"grc,lat",16428,urn:cts:greekLit:tlg0527.tlg024.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0527.tlg024.1st1K-grc1:1.1/
+345,Septuaginta,Machabaeorum iii,"grc,lat",6936,urn:cts:greekLit:tlg0527.tlg025.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0527.tlg025.1st1K-grc1:1.1/
+346,Septuaginta,Machabaeorum iv,"grc,lat",14942,urn:cts:greekLit:tlg0527.tlg026.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0527.tlg026.1st1K-grc1:1.1/
+347,Septuaginta,Psalmi,"grc,lat",41339,urn:cts:greekLit:tlg0527.tlg027.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0527.tlg027.1st1K-grc1:1.1/
+348,Septuaginta,Odae,"grc,lat",4569,urn:cts:greekLit:tlg0527.tlg028.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0527.tlg028.1st1K-grc1:1.1/
+349,Septuaginta,Proverbia,"grc,lat",12957,urn:cts:greekLit:tlg0527.tlg029.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0527.tlg029.1st1K-grc1:1.1/
+350,Septuaginta,Canticum,"grc,lat",3052,urn:cts:greekLit:tlg0527.tlg031.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0527.tlg031.1st1K-grc1:1.1/
+351,Septuaginta,Job,"grc,lat",20537,urn:cts:greekLit:tlg0527.tlg032.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0527.tlg032.1st1K-grc1:1.1/
+352,Septuaginta,Sapientia Salomonis,"grc,lat",9742,urn:cts:greekLit:tlg0527.tlg033.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0527.tlg033.1st1K-grc1:1.1/
+353,,Ecclesiasticus,"grc,lat",19832,urn:cts:greekLit:tlg0527.tlg034.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0527.tlg034.1st1K-grc1:1.1/
+354,Septuaginta,Ecclesiasticus,"grc,lat",25693,urn:cts:greekLit:tlg0527.tlg034.opp-grc2,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0527.tlg034.opp-grc2:1.1/
+355,Septuaginta,Psalmi Salomonis,"grc,lat",5036,urn:cts:greekLit:tlg0527.tlg035.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0527.tlg035.1st1K-grc1:1.1/
+356,Septuaginta,Osee,"grc,lat",5509,urn:cts:greekLit:tlg0527.tlg036.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0527.tlg036.1st1K-grc1:1.1/
+357,Septuaginta,Amos,"grc,lat",4402,urn:cts:greekLit:tlg0527.tlg037.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0527.tlg037.1st1K-grc1:1.1/
+358,Septuaginta,Michaeas,"grc,lat",3301,urn:cts:greekLit:tlg0527.tlg038.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0527.tlg038.1st1K-grc1:1.1/
+359,Septuaginta,Joel,"grc,lat",2813,urn:cts:greekLit:tlg0527.tlg039.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0527.tlg039.1st1K-grc1:1.1/
+360,Septuaginta,Abdias,"grc,lat",960,urn:cts:greekLit:tlg0527.tlg040.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0527.tlg040.1st1K-grc1:1.1/
+361,Septuaginta,Jonas,"grc,lat",1882,urn:cts:greekLit:tlg0527.tlg041.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0527.tlg041.1st1K-grc1:1.1/
+362,Septuaginta,Nahum,"grc,lat",1989,urn:cts:greekLit:tlg0527.tlg042.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0527.tlg042.1st1K-grc1:1.1/
+363,Septuaginta,Habacuc,"grc,lat",2053,urn:cts:greekLit:tlg0527.tlg043.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0527.tlg043.1st1K-grc1:1.1/
+364,Septuaginta,Sophonias,"grc,lat",1682,urn:cts:greekLit:tlg0527.tlg044.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0527.tlg044.1st1K-grc1:1.1/
+365,Septuaginta,Aggaeus,"grc,lat",1544,urn:cts:greekLit:tlg0527.tlg045.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0527.tlg045.1st1K-grc1:1.1/
+366,Septuaginta,Zacharias,"grc,lat",9271,urn:cts:greekLit:tlg0527.tlg046.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0527.tlg046.1st1K-grc1:1.1/
+367,Septuaginta,Malachias,"grc,lat",2823,urn:cts:greekLit:tlg0527.tlg047.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0527.tlg047.1st1K-grc1:1.1/
+368,,Notes on Isaias,lat,111556,urn:cts:greekLit:tlg0527.tlg048.1st1K-eng1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0527.tlg048.1st1K-eng1:1-5/
+369,,Appendix to Isaias,lat,4866,urn:cts:greekLit:tlg0527.tlg048.1st1K-eng2,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0527.tlg048.1st1K-eng2:1-5/
+370,,Index II to Isaias,lat,1500,urn:cts:greekLit:tlg0527.tlg048.1st1K-eng3,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0527.tlg048.1st1K-eng3:1-5/
+371,Septuaginta,Isaias,"grc,lat",61037,urn:cts:greekLit:tlg0527.tlg048.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0527.tlg048.1st1K-grc1:1.1/
+372,,Index I to Isaias,lat,876,urn:cts:greekLit:tlg0527.tlg048.1st1K-mul1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0527.tlg048.1st1K-mul1:1-5/
+373,,Isaias,lat,39578,urn:cts:greekLit:tlg0527.tlg048.opp-eng2,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0527.tlg048.opp-eng2:1.1/
+374,,Isaias,"grc,lat",36780,urn:cts:greekLit:tlg0527.tlg048.opp-grc2,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0527.tlg048.opp-grc2:1.1/
+375,Septuaginta,Jeremias,"grc,lat",59476,urn:cts:greekLit:tlg0527.tlg049.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0527.tlg049.1st1K-grc1:1.1/
+376,Septuaginta,Baruch,"grc,lat",3432,urn:cts:greekLit:tlg0527.tlg050.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0527.tlg050.1st1K-grc1:1.1/
+377,Septuaginta,Threni seu Lamentationes,"grc,lat",3442,urn:cts:greekLit:tlg0527.tlg051.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0527.tlg051.1st1K-grc1:1.1/
+378,Septuaginta,Epistula Jeremiae,"grc,lat",1708,urn:cts:greekLit:tlg0527.tlg052.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0527.tlg052.1st1K-grc1:1-5/
+379,Septuaginta,Ezechiel,"grc,lat",49399,urn:cts:greekLit:tlg0527.tlg053.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0527.tlg053.1st1K-grc1:1.1/
+380,Septuaginta,Susanna (translatio Graeca),"grc,lat",1022,urn:cts:greekLit:tlg0527.tlg054.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0527.tlg054.1st1K-grc1:1.1/
+381,Septuaginta,Susanna (Theodotionis versio),"grc,lat",1508,urn:cts:greekLit:tlg0527.tlg055.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0527.tlg055.1st1K-grc1:1.1/
+382,Septuaginta,Daniel (translatio Graeca),"grc,lat",13675,urn:cts:greekLit:tlg0527.tlg056.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0527.tlg056.1st1K-grc1:1.1/
+383,Septuaginta,Daniel (Theodotionis versio),"grc,lat",14107,urn:cts:greekLit:tlg0527.tlg057.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0527.tlg057.1st1K-grc1:1.1/
+384,Septuaginta,Bel et Draco (translatio Graeca),"grc,lat",942,urn:cts:greekLit:tlg0527.tlg058.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0527.tlg058.1st1K-grc1:1.1/
+385,Septuaginta,Bel et Draco (Theodotionis versio),"grc,lat",853,urn:cts:greekLit:tlg0527.tlg059.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0527.tlg059.1st1K-grc1:1.1/
+386,pseudo-Galen,De fasciis,grc,8061,urn:cts:greekLit:tlg0530.tlg005.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0530.tlg005.1st1K-grc1:1-5/
+387,pseudo-Galen,Ad Gaurum quomodo animetur fetus,grc,10106,urn:cts:greekLit:tlg0530.tlg006.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0530.tlg006.1st1K-grc1:1-5/
+388,pseudo-Galen,Introductio seu medicus,grc,18820,urn:cts:greekLit:tlg0530.tlg012.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0530.tlg012.1st1K-grc1:1-5/
+389,pseudo-Galen,De remediis parabilibus,grc,35370,urn:cts:greekLit:tlg0530.tlg029.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0530.tlg029.1st1K-grc1:1.preface/
+390,pseudo-Galen,De theriaca ad Pamphilianum,grc,2148,urn:cts:greekLit:tlg0530.tlg032.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0530.tlg032.1st1K-grc1:1/
+391,pseudo-Galen,De optima secta ad Thrasybulum,grc,17431,urn:cts:greekLit:tlg0530.tlg043.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0530.tlg043.1st1K-grc1:1-5/
+392,pseudo-Menander,Sententiae (corresponds to version Men Ar I) (Greek),grc,2760,urn:cts:greekLit:tlg0541.tlg042.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0541.tlg042.1st1K-grc1:1.1-1.5/
+393,pseudo-Menander,Sententiae (corresponds to version Men ar II) (Greek),grc,566,urn:cts:greekLit:tlg0541.tlg042.1st1K-grc2,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0541.tlg042.1st1K-grc2:1-5/
+394,pseudo-Menander,"Sententiae (corresponds to quotes from Gregory Nazianzen, Carmen morale XXX) (Greek)",grc,144,urn:cts:greekLit:tlg0541.tlg042.1st1K-grc3,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0541.tlg042.1st1K-grc3:1-5/
+395,Julius Pollux,Onomasticon,"grc,lat",117,urn:cts:greekLit:tlg0542.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0542.tlg001.1st1K-grc1:2.157-2.158/
+396,Sextus Empiricus,Pyrrhoniae hypotyposes,grc,62200,urn:cts:greekLit:tlg0544.tlg001.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0544.tlg001.opp-grc1:1.toc-1.4/
+397,Sextus Empiricus,Pyrrhoniae hypotyposes,lat,383,urn:cts:greekLit:tlg0544.tlg001.opp-lat1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0544.tlg001.opp-lat1:3.30/
+398,Sextus Empiricus,Adversus mathematicos,"grc,lat",184162,urn:cts:greekLit:tlg0544.tlg002.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0544.tlg002.opp-grc1:1.1-1.5/
+399,Archimède,De sphaera et cylindro,"grc,lat,fre",25767,urn:cts:greekLit:tlg0552.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0552.tlg001.1st1K-grc1:1.pr/
+400,Archimède,Dimensio circuli,"grc,lat,fre",1100,urn:cts:greekLit:tlg0552.tlg002.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0552.tlg002.1st1K-grc1:1-3/
+401,Archimède,De conoidibus et sphaeroidibus,"grc,lat,fre",22759,urn:cts:greekLit:tlg0552.tlg003.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0552.tlg003.1st1K-grc1:pr-4/
+402,Archimède,De lineis spiralibus,"grc,lat,fre",14391,urn:cts:greekLit:tlg0552.tlg004.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0552.tlg004.1st1K-grc1:pr-4/
+403,Archimède,De planorum aequilibriis,"grc,lat,fre",9053,urn:cts:greekLit:tlg0552.tlg005.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0552.tlg005.1st1K-grc1:1.pr/
+404,Archimède,Arenarius,"grc,lat,fre",5038,urn:cts:greekLit:tlg0552.tlg006.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0552.tlg006.1st1K-grc1:1-4/
+405,Archimède,Quadratura parabolae,"grc,lat,fre",5865,urn:cts:greekLit:tlg0552.tlg007.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0552.tlg007.1st1K-grc1:pr-4/
+406,Archimède,De corporibus fluitantibus,"grc,lat,fre",11601,urn:cts:greekLit:tlg0552.tlg008.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0552.tlg008.1st1K-grc1:1.pr/
+407,Archimède,Stomachion,"grc,lat,fre",439,urn:cts:greekLit:tlg0552.tlg009.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0552.tlg009.1st1K-grc1:1/
+408,Archimède,Ad Eratosthenem methodus,"grc,lat,fre",9799,urn:cts:greekLit:tlg0552.tlg010.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0552.tlg010.1st1K-grc1:pr1-3/
+409,Archimède,Liber assumptorum,"grc,lat,fre",3703,urn:cts:greekLit:tlg0552.tlg011.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0552.tlg011.1st1K-grc1:1-5/
+410,Archimède,Liber assumptorum,"lat,fre",2862,urn:cts:greekLit:tlg0552.tlg011.1st1K-lat1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0552.tlg011.1st1K-lat1:1-5/
+411,Archimède,Problema bovinum,"grc,lat,fre",699,urn:cts:greekLit:tlg0552.tlg012.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0552.tlg012.1st1K-grc1:1-2/
+412,Archimedes,Fragmenta,"grc,lat,lat",1236,urn:cts:greekLit:tlg0552.tlg013.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0552.tlg013.1st1K-grc1:1.1-1.2/
+413,Artemidorus,Onirocriticon,"grc,lat,deu,fre",64558,urn:cts:greekLit:tlg0553.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0553.tlg001.1st1K-grc1:1.prooimion-1.4/
+414,Clement of Alexandria,Protrepticus,"lat,grc",23338,urn:cts:greekLit:tlg0555.tlg001.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0555.tlg001.opp-grc1:1-5/
+415,Clement of Alexandria,Paedagogus,grc,57258,urn:cts:greekLit:tlg0555.tlg002.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0555.tlg002.opp-grc1:1.argument/
+416,Clement of Alexandria,Stromata,grc,28570,urn:cts:greekLit:tlg0555.tlg004b.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0555.tlg004b.opp-grc1:7.1/
+417,Clement of Alexandria,Eclogae propheticae,"grc,lat",4978,urn:cts:greekLit:tlg0555.tlg005.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0555.tlg005.opp-grc1:1-5/
+418,Clement of Alexandria,Quis dives salvetur,"grc,lat",9189,urn:cts:greekLit:tlg0555.tlg006.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0555.tlg006.opp-grc1:1-5/
+419,Clement of Alexandria,Excerpta ex Theodoto,"grc,lat",7534,urn:cts:greekLit:tlg0555.tlg007.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0555.tlg007.opp-grc1:1-5/
+420,Hero of Alexandria,Pneumatica,"grc,lat,deu",37897,urn:cts:greekLit:tlg0559.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0559.tlg001.1st1K-grc1:1.pr/
+421,Hero of Alexandria,De automatis,"grc,lat,deu",12858,urn:cts:greekLit:tlg0559.tlg002.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0559.tlg002.1st1K-grc1:1.1/
+422,Hero of Alexandria,Mechanicorum fragmenta,"grc,lat,deu",4772,urn:cts:greekLit:tlg0559.tlg004.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0559.tlg004.1st1K-grc1:1.1/
+423,Hero of Alexandria,Catoptrica,"grc,lat,deu",615,urn:cts:greekLit:tlg0559.tlg005.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0559.tlg005.1st1K-grc1:1/
+424,Hero of Alexandria,Metrica,"grc,lat,deu",21252,urn:cts:greekLit:tlg0559.tlg006.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0559.tlg006.1st1K-grc1:1.pr/
+425,Hero of Alexandria,Dioptra,"grc,lat,deu",14658,urn:cts:greekLit:tlg0559.tlg007.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0559.tlg007.1st1K-grc1:1-5/
+426,Hero of Alexandria,Stereometrica,"grc,lat",21355,urn:cts:greekLit:tlg0559.tlg010.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0559.tlg010.1st1K-grc1:1.1.1-1.1.2/
+427,Hero of Alexandria,De mensuris,"grc,lat",6567,urn:cts:greekLit:tlg0559.tlg011.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0559.tlg011.1st1K-grc1:1.1/
+428,Hero of Alexandria,Belopoeica,"grc,lat",5554,urn:cts:greekLit:tlg0559.tlg012.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0559.tlg012.1st1K-grc1:71-75/
+429,Hero of Alexandria,Fragmenta Heroniana,"grc,lat",4290,urn:cts:greekLit:tlg0559.tlg014.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0559.tlg014.1st1K-grc1:4.1-4.2/
+430,Hero of Alexandria,Geodaesia [Sp.],"grc,lat",7283,urn:cts:greekLit:tlg0559.tlg015.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0559.tlg015.1st1K-grc1:1.1-1.2/
+431,Heronis Alexandrini,Liber geeponicus [Sp.],"grc,lat",7294,urn:cts:greekLit:tlg0559.tlg016.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0559.tlg016.1st1K-grc1:1-5/
+432,Maximus of Tyre,Dialexeis,"grc,lat",133526,urn:cts:greekLit:tlg0563.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0563.tlg001.1st1K-grc1:1.1.a-1.1.d/
+433,Soranus,Gynaeciorum Libri IV,grc,66367,urn:cts:greekLit:tlg0565.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0565.tlg001.1st1K-grc1:1.pref/
+434,Soranus,De signis Fracturarum,grc,1469,urn:cts:greekLit:tlg0565.tlg002.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0565.tlg002.1st1K-grc1:1-5/
+435,Soranus,De Fasciis,grc,4322,urn:cts:greekLit:tlg0565.tlg003.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0565.tlg003.1st1K-grc1:1-5/
+436,Soranus,Vita Hippocratis Secundum Soranum,grc,1556,urn:cts:greekLit:tlg0565.tlg004.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0565.tlg004.1st1K-grc1:1/
+437,Paradoxographus Florentinus,"Mirabilia de aquis,an electronic transcription.",grc,1213,urn:cts:greekLit:tlg0580.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0580.tlg001.1st1K-grc1:1-5/
+438,Antisthenes,"Ajax,Αιας","grc,lat",502,urn:cts:greekLit:tlg0591.1st1K001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0591.1st1K001.1st1K-grc1:1-5/
+439,Antisthenes,"Odysseus,ΟΔΥΣΣΕΥΣ","grc,lat",924,urn:cts:greekLit:tlg0591.1st1K002.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0591.1st1K002.1st1K-grc1:1-5/
+440,Hermogenes,Progymnasmata [Dub.],"grc,lat",7519,urn:cts:greekLit:tlg0592.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0592.tlg001.1st1K-grc1:1-5/
+441,Hermogenes,Περὶ τῶν στάσεων,"grc,lat",19426,urn:cts:greekLit:tlg0592.tlg002.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0592.tlg002.1st1K-grc1:1.1-1.5/
+442,Hermogenes,Περὶ εὑρέσεως,"grc,lat",32314,urn:cts:greekLit:tlg0592.tlg003.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0592.tlg003.1st1K-grc1:1.1-1.2/
+443,Hermogenes,Περὶ ἰδεῶν λόγου,"grc,lat",53864,urn:cts:greekLit:tlg0592.tlg004.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0592.tlg004.1st1K-grc1:1.1.1-1.1.5/
+444,Hermogenes,Περὶ μεθόδου δεινότητος,"grc,lat",10793,urn:cts:greekLit:tlg0592.tlg005.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0592.tlg005.1st1K-grc1:1-5/
+445,Gorgias of Leontini,"Encomium of Helen,ΕΛΕΝΗΣ ΕΓΚΩΜΙΟΝ","grc,lat",1328,urn:cts:greekLit:tlg0593.1st1K001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0593.1st1K001.1st1K-grc1:1-5/
+446,Gorgias of Leontini,"Defense of Palamedes,ΥΠΕΡ ΠΑΛΑΜΗΔΟΥΣ ΑΠΟΛΟΓΙΑ","grc,lat",2426,urn:cts:greekLit:tlg0593.1st1K002.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0593.1st1K002.1st1K-grc1:1-5/
+447,Rufus Soph.,Ars rhetorica,"grc,lat",1454,urn:cts:greekLit:tlg0606.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0606.tlg001.1st1K-grc1:pr.1-pr.2/
+448,Aelius Theon,Progymnasmata,"grc,lat",11512,urn:cts:greekLit:tlg0607.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0607.tlg001.1st1K-grc1:1-5/
+449,Alcidamas,Peri Sophiston,grc,2174,urn:cts:greekLit:tlg0610.perseus002.perseus-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0610.perseus002.perseus-grc1:1-5/
+450,Alcidamas,Odysseus,grc,3800,urn:cts:greekLit:tlg0610.tlg001.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0610.tlg001.opp-grc1:1.1-1.5/
+451,Babrius,Fabulae Aesopeae,"grc,lat",11365,urn:cts:greekLit:tlg0614.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0614.tlg001.1st1K-grc1:1.2.pr-1.2.4/
+452,Babrius,Fabulae Aesopeae,"grc,lat",67749,urn:cts:greekLit:tlg0614.tlg001.1st1K-grc2,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0614.tlg001.1st1K-grc2:1.1.1-1.1.5/
+453,Aspasius,In Ethica Nicomachea paraphrasis,"grc,lat,deu",91168,urn:cts:greekLit:tlg0615.tlg001.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0615.tlg001.opp-grc1:1-5/
+454,Polyaenus,Strategemata,grc,88954,urn:cts:greekLit:tlg0616.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0616.tlg001.1st1K-grc1:1.pref-1.4/
+455,Polyaenus,Excerpta Polyaeni,grc,17201,urn:cts:greekLit:tlg0616.tlg002.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0616.tlg002.1st1K-grc1:toc-4/
+456,Hippocrates,De prisca medicina,"grc,lat,fre,lat,fre",5529,urn:cts:greekLit:tlg0627.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0627.tlg001.1st1K-grc1:1-5/
+457,Hippocrates,"De aere, aquis, locis","grc,lat,fre,lat,fre",7456,urn:cts:greekLit:tlg0627.tlg002.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0627.tlg002.1st1K-grc1:1-5/
+458,Hippocrates,Prognosticon,"grc,lat,fre",5221,urn:cts:greekLit:tlg0627.tlg003.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0627.tlg003.1st1K-grc1:1-5/
+459,Hippocrates,De diaeta in morbis acutis,"grc,lat,fre",6136,urn:cts:greekLit:tlg0627.tlg004.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0627.tlg004.1st1K-grc1:1-5/
+460,Hippocrates,De diaeta acutorum (spurium),"grc,lat,fre",5335,urn:cts:greekLit:tlg0627.tlg005.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0627.tlg005.1st1K-grc1:1-5/
+461,Hippocrates,Epidemiarum,"grc,lat,fre",16264,urn:cts:greekLit:tlg0627.tlg006.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0627.tlg006.1st1K-grc1:1.13.1-1.13.5/
+462,Hippocrates,De capitis vulneribus,"grc,lat,fre",5000,urn:cts:greekLit:tlg0627.tlg007.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0627.tlg007.1st1K-grc1:1-5/
+463,Hippocrates,De officina medici,"grc,lat,fre",2145,urn:cts:greekLit:tlg0627.tlg008.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0627.tlg008.1st1K-grc1:1-5/
+464,Hippocrates,De fracturis,"grc,lat,fre",11242,urn:cts:greekLit:tlg0627.tlg009.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0627.tlg009.1st1K-grc1:1-5/
+465,Hippocrates,De articulis,"grc,lat,fre",21339,urn:cts:greekLit:tlg0627.tlg010.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0627.tlg010.1st1K-grc1:1-5/
+466,Hippocrates,Vectiarius,"grc,lat,fre",4956,urn:cts:greekLit:tlg0627.tlg011.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0627.tlg011.1st1K-grc1:1-5/
+467,Hippocrates,Aphorismi,"grc,lat,fre",7098,urn:cts:greekLit:tlg0627.tlg012.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0627.tlg012.1st1K-grc1:1.1-1.5/
+468,Hippocrates,Iusiurandum,"grc,lat,fre",251,urn:cts:greekLit:tlg0627.tlg013.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0627.tlg013.1st1K-grc1:1/
+469,Hippocrates,Lex,"grc,lat,fre",326,urn:cts:greekLit:tlg0627.tlg014.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0627.tlg014.1st1K-grc1:1-5/
+470,Hippocrates,De humoribus,"grc,lat,fre",2252,urn:cts:greekLit:tlg0627.tlg015.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0627.tlg015.1st1K-grc1:1-4b/
+471,Hippocrates,Prorrheticon I,"grc,lat,fre",10087,urn:cts:greekLit:tlg0627.tlg016.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0627.tlg016.1st1K-grc1:1.1/
+472,Hippocrates,Coa praesagia,"grc,lat,fre",12128,urn:cts:greekLit:tlg0627.tlg017.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0627.tlg017.1st1K-grc1:1-5/
+473,Hippocrates,De arte,"grc,lat,fre",2702,urn:cts:greekLit:tlg0627.tlg018.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0627.tlg018.1st1K-grc1:1-5/
+474,Hippocrates,De natura hominis,"grc,lat,fre",3900,urn:cts:greekLit:tlg0627.tlg019.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0627.tlg019.1st1K-grc1:1-5/
+475,Hippocrates,De salubri diaeta,"grc,lat,fre",1458,urn:cts:greekLit:tlg0627.tlg020.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0627.tlg020.1st1K-grc1:1-5/
+476,Hippocrates,De flatibus,"grc,lat,fre",2842,urn:cts:greekLit:tlg0627.tlg021.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0627.tlg021.1st1K-grc1:1-5/
+477,Hippocrates,De liquidorum usu,"grc,lat,fre",1478,urn:cts:greekLit:tlg0627.tlg022.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0627.tlg022.1st1K-grc1:1-5/
+478,Hippocrates,De morbis I,"grc,lat,fre",35155,urn:cts:greekLit:tlg0627.tlg023.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0627.tlg023.1st1K-grc1:1-4/
+479,Hippocrates,De genitura,"grc,lat,fre",1951,urn:cts:greekLit:tlg0627.tlg024a.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0627.tlg024a.1st1K-grc1:1-5/
+480,Hippocrates,De natura pueri,"grc,lat,fre",7299,urn:cts:greekLit:tlg0627.tlg024b.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0627.tlg024b.1st1K-grc1:12-16/
+481,Hippocrates,De affectionibus,"grc,lat,fre",7411,urn:cts:greekLit:tlg0627.tlg025.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0627.tlg025.1st1K-grc1:1-5/
+482,Hippocrates,De locis in homine,"grc,lat,fre",8474,urn:cts:greekLit:tlg0627.tlg026.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0627.tlg026.1st1K-grc1:1-5/
+483,Hippocrates,De morbo sacro,"grc,lat,fre",4719,urn:cts:greekLit:tlg0627.tlg027.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0627.tlg027.1st1K-grc1:1-5/
+484,Hippocrates,De ulceribus,"grc,lat,fre",3323,urn:cts:greekLit:tlg0627.tlg028.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0627.tlg028.1st1K-grc1:1-5/
+485,Hippocrates,De haemorrhoidibus,"grc,lat,fre",899,urn:cts:greekLit:tlg0627.tlg029.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0627.tlg029.1st1K-grc1:1-5/
+486,Hippocrates,De fistulis,"grc,lat,fre",1549,urn:cts:greekLit:tlg0627.tlg030.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0627.tlg030.1st1K-grc1:1-5/
+487,Hippocrates,De diaeta,"grc,lat,fre",19899,urn:cts:greekLit:tlg0627.tlg031.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0627.tlg031.1st1K-grc1:1.1/
+488,Hippocrates,De affectionibus interioribus,"grc,lat,fre",16117,urn:cts:greekLit:tlg0627.tlg032.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0627.tlg032.1st1K-grc1:1-5/
+489,Hippocrates,De natura muliebri,"grc,lat,fre",11829,urn:cts:greekLit:tlg0627.tlg033.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0627.tlg033.1st1K-grc1:1-5/
+490,Hippocrates,De octimestri partu,"grc,lat,fre",783,urn:cts:greekLit:tlg0627.tlg035.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0627.tlg035.1st1K-grc1:10-13/
+491,Hippocrates,De muliebribus,"grc,lat,fre",48660,urn:cts:greekLit:tlg0627.tlg036.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0627.tlg036.1st1K-grc1:1.1/
+492,Hippocrates,De virginum morbis,"grc,lat,fre",454,urn:cts:greekLit:tlg0627.tlg037.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0627.tlg037.1st1K-grc1:1/
+493,Hippocrates,De superfoetatione,"grc,lat,fre",3403,urn:cts:greekLit:tlg0627.tlg038.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0627.tlg038.1st1K-grc1:1-5/
+494,Hippocrates,De exsectione foetus,"grc,lat,fre",476,urn:cts:greekLit:tlg0627.tlg039.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0627.tlg039.1st1K-grc1:1-5/
+495,Hippocrates,De anatomia,"grc,lat,fre",246,urn:cts:greekLit:tlg0627.tlg040.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0627.tlg040.1st1K-grc1:1/
+496,Hippocrates,De dentitione,"grc,lat,fre",383,urn:cts:greekLit:tlg0627.tlg041.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0627.tlg041.1st1K-grc1:1-5/
+497,Hippocrates,De glandulis,"grc,fre,lat",1769,urn:cts:greekLit:tlg0627.tlg042.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0627.tlg042.1st1K-grc1:1-5/
+498,Hippocrates,De carnibus,"grc,lat,fre",3383,urn:cts:greekLit:tlg0627.tlg043.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0627.tlg043.1st1K-grc1:1-5/
+499,Hippocrates,De corde,"grc,lat,fre",1034,urn:cts:greekLit:tlg0627.tlg045.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0627.tlg045.1st1K-grc1:1-5/
+500,Hippocrates,De alimento,"grc,lat,fre",1315,urn:cts:greekLit:tlg0627.tlg046.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0627.tlg046.1st1K-grc1:1-5/
+501,Hippocrates,De visu,"grc,lat,fre",785,urn:cts:greekLit:tlg0627.tlg047.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0627.tlg047.1st1K-grc1:1-5/
+502,Hippocrates,De natura ossium,"grc,lat,fre",3326,urn:cts:greekLit:tlg0627.tlg048.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0627.tlg048.1st1K-grc1:1-5/
+503,Hippocrates,De medico,"grc,lat,fre",1515,urn:cts:greekLit:tlg0627.tlg049.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0627.tlg049.1st1K-grc1:1-5/
+504,Hippocrates,De habitu decenti,"grc,lat,fre",1502,urn:cts:greekLit:tlg0627.tlg050.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0627.tlg050.1st1K-grc1:1-5/
+505,Hippocrates,Praeceptiones,"grc,lat,fre",1345,urn:cts:greekLit:tlg0627.tlg051.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0627.tlg051.1st1K-grc1:1-5/
+506,Hippocrates,De crisibus,"grc,lat,fre",1973,urn:cts:greekLit:tlg0627.tlg052.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0627.tlg052.1st1K-grc1:1-5/
+507,Hippocrates,De diebus criticis,"grc,lat,fre",1286,urn:cts:greekLit:tlg0627.tlg053.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0627.tlg053.1st1K-grc1:1-5/
+508,Hippocrates,"Epistulae, Decretum, Orationes","grc,lat,fre",11789,urn:cts:greekLit:tlg0627.tlg055.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0627.tlg055.1st1K-grc1:1-5/
+509,Alciphron,Epistulae,"grc,lat",39531,urn:cts:greekLit:tlg0640.tlg001.First1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0640.tlg001.First1K-grc1:1.1-1.5/
+510,Hermannus Diels,Preface to Anonymi Londinensis ex Aristotelis iatricis Menoniis et aliis medicis eclogae,lat,4512,urn:cts:greekLit:tlg0643.opp001.1st1K-lat1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0643.opp001.1st1K-lat1:1-5/
+511,Hermannus Diels,Epimetrum to Anonymi Londinensis ex Aristotelis iatricis Menoniis et aliis medicis eclogae,lat,272,urn:cts:greekLit:tlg0643.opp002.1st1K-lat1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0643.opp002.1st1K-lat1:1/
+512,,Supplementum Aristotelicum,"grc,lat",582,urn:cts:greekLit:tlg0643.opp003.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0643.opp003.1st1K-grc1:1/
+513,Anonymus Londinensis,Iatrica,"grc,lat",15166,urn:cts:greekLit:tlg0643.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0643.tlg001.1st1K-grc1:1.1-1.30/
+514,Hermannus Diels,Sigla to Anonymus Londinensis Iatrica,"grc,lat",104,urn:cts:greekLit:tlg0643.tlg001.1st1K-grc2,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0643.tlg001.1st1K-grc2:1/
+515,K. F. G. Kenyon,Signorum Explicatio to Iatrica,lat,105,urn:cts:greekLit:tlg0643.tlg001.1st1K-lat1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0643.tlg001.1st1K-lat1:1-5/
+516,,Index Verborum to Iatrica,"grc,lat,mul",11477,urn:cts:greekLit:tlg0643.tlg001.1st1K-mul1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0643.tlg001.1st1K-mul1:verborum.1-verborum.5/
+517,,Supplementum Aristotelicum,"grc,lat",1853,urn:cts:greekLit:tlg0643.tlg001.1st1K-mul2,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0643.tlg001.1st1K-mul2:nominum.1-nominum.5/
+518,,Anonymus Londinensis Fragmenta,"grc,lat",346,urn:cts:greekLit:tlg0643.tlg002.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0643.tlg002.1st1K-grc1:1/
+519,Aristophanes of Byzantium,Historiae Animalium Epitome,"grc,lat",77569,urn:cts:greekLit:tlg0644.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0644.tlg001.1st1K-grc1:1.1-1.2/
+520,Justinus Martyr,Apologia,grc,14440,urn:cts:greekLit:tlg0645.tlg001.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0645.tlg001.opp-grc1:1/
+521,Justinus Martyr,Apologia Secunda,grc,3293,urn:cts:greekLit:tlg0645.tlg002.opp-grc1,https://scaife.perseus.org/library/urn:cts:greekLit:tlg0645.tlg002.opp-grc1/redirect/
+522,Justin Martyr,Apology II,grc,3293,urn:cts:greekLit:tlg0645.tlg002.perseus-grc2,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0645.tlg002.perseus-grc2:1-5/
+523,Justinus Martyr,Dialogus cum Tryphone,grc,54736,urn:cts:greekLit:tlg0645.tlg003.perseus-grc2,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0645.tlg003.perseus-grc2:1.1-1.2/
+524,Pseudo-Justinus Martyr,Epistula ad Diognetum,"lat,grc",2673,urn:cts:greekLit:tlg0646.tlg004.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0646.tlg004.1st1K-grc1:1.1/
+525,Dioscurides Pedianus,De materia medica,"grc,lat",217655,urn:cts:greekLit:tlg0656.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0656.tlg001.1st1K-grc1:1.preface.1-1.preface.5/
+526,Crateuas,Fragmenta,"grc,lat",685,urn:cts:greekLit:tlg0657.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0657.tlg001.1st1K-grc1:1.1-1.2/
+527,Heliodorus of Emesa,Aethiopica,"grc,lat",76378,urn:cts:greekLit:tlg0658.tlg001.perseus-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0658.tlg001.perseus-grc1:1.1/
+528,Philumenus,De venenatis animalibus eorumque remediis,"grc,lat",13619,urn:cts:greekLit:tlg0671.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0671.tlg001.1st1K-grc1:1.1-1.2/
+529,Ammonius Grammaticus,"De adfinium vocabulorum differentia,ΠΕΡΙ ΟΜΟΙΩΝ ΚΑΙ ΔΙΑΦΟΡΩΝ ΛΕΞΕΩΝ","grc,lat",17164,urn:cts:greekLit:tlg0708.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0708.tlg001.1st1K-grc1:1.1-1.2/
+530,Adamantius Judaeus,Physiognomonica,"grc,lat",13169,urn:cts:greekLit:tlg0731.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0731.tlg001.1st1K-grc1:1.1-1.5/
+531,Adamantius,Physiognomonica (epitome Matritensis),"grc,lat",5517,urn:cts:greekLit:tlg0731.tlg003.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0731.tlg003.1st1K-grc1:1.1-1.5/
+532,Alexander of Aphrodisias,De mixtione,"grc,lat",12897,urn:cts:greekLit:tlg0732.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0732.tlg001.1st1K-grc1:1-5/
+533,Alexander of Aphrodisias,"Περὶ Πυρετῶν,an electronic transcription.",grc,8124,urn:cts:greekLit:tlg0732.tlg003.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0732.tlg003.1st1K-grc1:1.1-1.2/
+534,Alexander of Aphrodisias,In Aristotelis metaphysica commentaria,grc,410570,urn:cts:greekLit:tlg0732.tlg004.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0732.tlg004.opp-grc1:1-5/
+535,Alexander of Aphrodisias,In Aristotelis analyticorum priorum librum I commentarium,grc,201778,urn:cts:greekLit:tlg0732.tlg005.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0732.tlg005.opp-grc1:introduction-24a22/
+536,Alexander of Aphrodisias,In Aristotelis topicorum libros octo commentaria,"grc,lat",288297,urn:cts:greekLit:tlg0732.tlg006.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0732.tlg006.opp-grc1:1-5/
+537,Alexander of Aphrodisias,In Librum De Sensu Commentarium,"grc,lat",92619,urn:cts:greekLit:tlg0732.tlg007.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0732.tlg007.opp-grc1:1-2/
+538,Alexander of Aphrodisias,In Aristotelis Meteorologicorum Libros Commentaria,"grc,lat",110128,urn:cts:greekLit:tlg0732.tlg008.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0732.tlg008.opp-grc1:1-4/
+539,Alexander of Aphrodisias,De anima,"grc,lat",52870,urn:cts:greekLit:tlg0732.tlg010.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0732.tlg010.1st1K-grc1:1.1-1.5/
+540,Alexander of Aphrodisias,De anima libri mantissa,"grc,lat",44530,urn:cts:greekLit:tlg0732.tlg011.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0732.tlg011.1st1K-grc1:praef.1-praef.6/
+541,Alexander of Aphrodisias,Ἀπορίαι καὶ λύσεις [Sp.],"grc,lat",55517,urn:cts:greekLit:tlg0732.tlg012.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0732.tlg012.1st1K-grc1:1.1.1/
+542,Alexander of Aphrodisias,Quaestiones,grc,3617,urn:cts:greekLit:tlg0732.tlg012.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0732.tlg012.opp-grc1:1.2-1.11a/
+543,Alexander of Aphrodisias,Ἠθικὰ προβλήματα [Sp.],"grc,lat",23524,urn:cts:greekLit:tlg0732.tlg013.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0732.tlg013.1st1K-grc1:TOC-4/
+544,Alexander of Aphrodisias,De fato,"grc,lat",25053,urn:cts:greekLit:tlg0732.tlg014.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0732.tlg014.1st1K-grc1:1-5/
+545,Alexander of Aphrodisias,In Aristotelis Sophisticos Elenchos Commentarius [Sp.],grc,93998,urn:cts:greekLit:tlg0732.tlgX01.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0732.tlgX01.opp-grc1:introduction-165a24a/
+546,Cassius Iatrosophista,"Ἰατρικαὶ Ἀπορίαι καὶ Προβλήματα Φυσικά,an electronic transcription.",grc,6933,urn:cts:greekLit:tlg0733.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0733.tlg001.1st1K-grc1:1-5/
+547,pseudo-Hippocrates,De septimestri partu,grc,1673,urn:cts:greekLit:tlg0751.tlg034.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0751.tlg034.1st1K-grc1:1-5/
+548,Anubion,Fragmenta,"grc,lat",84,urn:cts:greekLit:tlg1126.tlg003.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg1126.tlg003.1st1K-grc1:1/
+549,Aristarchus of Samos,De magnitudinibus et distantiis solis et lunae,"grc,lat",8414,urn:cts:greekLit:tlg1181.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg1181.tlg001.1st1K-grc1:pr-4/
+550,Athenagoras,Legatio sive Supplicatio pro Christianis,grc,11308,urn:cts:greekLit:tlg1205.tlg001.perseus-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg1205.tlg001.perseus-grc1:opener-4/
+551,Athenagoras,Supplication pro Christianis,grc,11308,urn:cts:greekLit:tlg1205.tlg001.perseus-grc2,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg1205.tlg001.perseus-grc2:opener-4/
+552,Athenagoras,De Resurrectione,"grc,lat",8818,urn:cts:greekLit:tlg1205.tlg002.perseus-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg1205.tlg002.perseus-grc1:1-5/
+553,Athenagoras,De resurrectione,"grc,lat",8915,urn:cts:greekLit:tlg1205.tlg002.perseus-grc2,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg1205.tlg002.perseus-grc2:1.1-1.2/
+554,Autolycus,De Sphaera Quae Movetur,"grc,lat",5561,urn:cts:greekLit:tlg1210.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg1210.tlg001.1st1K-grc1:definitiones.1-definitiones.2/
+555,Autolycus,De Ortibus et Occasibus,"grc,lat",14811,urn:cts:greekLit:tlg1210.tlg002.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg1210.tlg002.1st1K-grc1:1.definitiones.1-1.definitiones.5/
+556,Barnabas,Barnabae epistula,"grc,lat",7534,urn:cts:greekLit:tlg1216.tlg001.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg1216.tlg001.opp-grc1:1.1-1.2/
+557,,Batrachomyomachia,"grc,lat",2149,urn:cts:greekLit:tlg1220.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg1220.tlg001.1st1K-grc1:1-30/
+558,,Certamen Homeri et Hesiodi,"grc,lat",3549,urn:cts:greekLit:tlg1252.tlg002.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg1252.tlg002.1st1K-grc1:1/
+559,Clemens Romanus,Epistula I ad Corinthios,"grc,lat",11101,urn:cts:greekLit:tlg1271.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg1271.tlg001.1st1K-grc1:preface.1/
+560,Clemens Romanus,Epistula II ad Corinthios,"grc,lat",3316,urn:cts:greekLit:tlg1271.tlg002.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg1271.tlg002.1st1K-grc1:1.1-1.2/
+561,Cleomedes,De motu circulari corporum caelestium,"grc,lat",27661,urn:cts:greekLit:tlg1272.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg1272.tlg001.1st1K-grc1:1.1.1-1.1.5/
+562,Anonymus,Didache XII Apostolorum,"grc,lat",2363,urn:cts:greekLit:tlg1311.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg1311.tlg001.1st1K-grc1:1.1-1.2/
+563,Dionysius Corinthius,Fragmenta,"grc,lat",1181,urn:cts:greekLit:tlg1329.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg1329.tlg001.1st1K-grc1:1-5/
+564,Dorotheus of Sidon,Fragmenta alia antiqua,"grc,lat",690,urn:cts:greekLit:tlg1337.tlg003.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg1337.tlg003.1st1K-grc1:1-5/
+565,Heraclides Ponticus,Res Publica Atheniensium,"grc,lat",517,urn:cts:greekLit:tlg1409.opp003.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg1409.opp003.1st1K-grc1:preface-4/
+566,"Hermas, 2nd cent.",The Shepherd of Hermas,grc,31569,urn:cts:greekLit:tlg1419.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg1419.tlg001.1st1K-grc1:1.1.1-1.1.5/
+567,Hipparchus,In Arati et Eudoxi phaenomena commentariorum libri iii,"grc,lat",33769,urn:cts:greekLit:tlg1431.tlg003.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg1431.tlg003.1st1K-grc1:1.1.1-1.1.5/
+568,Ignatius Antiochenus,Ad Ephesios (epist. 1),"grc,lat",2122,urn:cts:greekLit:tlg1443.tlg004.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg1443.tlg004.1st1K-grc1:praef.1/
+569,Ignatius Antiochenus,Ad Magnesios (epist. 2),"grc,lat",1306,urn:cts:greekLit:tlg1443.tlg005.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg1443.tlg005.1st1K-grc1:praef.1/
+570,Ignatius Antiochenus,Ad Trallianos (epist. 3),grc,1163,urn:cts:greekLit:tlg1443.tlg006.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg1443.tlg006.1st1K-grc1:praef.1/
+571,Ignatius Antiochenus,Ad Romanos (epist. 4),"grc,lat",1163,urn:cts:greekLit:tlg1443.tlg007.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg1443.tlg007.1st1K-grc1:praef.1/
+572,Ignatius Antiochenus,Ad Philadelphios (epist. 5),"grc,lat",1101,urn:cts:greekLit:tlg1443.tlg008.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg1443.tlg008.1st1K-grc1:praef.1/
+573,Ignatius Antiochenus,Ad Smyrnaeos (epist. 6),"grc,lat",1407,urn:cts:greekLit:tlg1443.tlg009.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg1443.tlg009.1st1K-grc1:praef.1/
+574,Ignatius Antiochenus,Ad Polycarpum (epist. 7),"grc,lat",889,urn:cts:greekLit:tlg1443.tlg010.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg1443.tlg010.1st1K-grc1:praef.1/
+575,Irenaeus,Libros quinque adversus haereses,"grc,lat",21659,urn:cts:greekLit:tlg1447.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg1447.tlg001.1st1K-grc1:1.1-1.2/
+576,Liber Enoch,Apocalypsis Enochi,"grc,lat",7846,urn:cts:greekLit:tlg1463.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg1463.tlg001.1st1K-grc1:1.1/
+577,Liber Enoch,Apocalypsis Enochi,"deu,lat",223,urn:cts:greekLit:tlg1463.tlg001.1st1K-lat1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg1463.tlg001.1st1K-lat1:106.1/
+578,Liber Enoch,Apocalypsis Enochi,"deu,lat",34606,urn:cts:greekLit:tlg1463.tlg001.opp-ger1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg1463.tlg001.opp-ger1:33.1/
+579,Liber Enoch,Apocalypsis Enochi,"grc,lat,deu",18471,urn:cts:greekLit:tlg1463.tlg001.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg1463.tlg001.opp-grc1:1.1-1.2/
+580,Anonymous,Martyrium Polycarpi,"grc,eng",2900,urn:cts:greekLit:tlg1484.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg1484.tlg001.1st1K-grc1:1.1-1.2/
+581,"Maximus, Astrologus",Περὶ καταρχῶν,"grc,lat",13092,urn:cts:greekLit:tlg1487.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg1487.tlg001.1st1K-grc1:praef-4/
+582,"Maximus, Astrologus",Περὶ καταρχῶν (epitome),"grc,lat",3521,urn:cts:greekLit:tlg1487.tlg002.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg1487.tlg002.1st1K-grc1:praef-4/
+583,Oracula Sibyllina,Oracula,"grc,lat,deu",82022,urn:cts:greekLit:tlg1551.tlg001.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg1551.tlg001.opp-grc1:praef/
+584,Oracula Sibyllina,Fragmenta,"grc,lat,deu",2360,urn:cts:greekLit:tlg1551.tlg002.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg1551.tlg002.opp-grc1:1-5/
+585,Philodemus,De Musica Librorum Quae Exstant,"grc,lat",18813,urn:cts:greekLit:tlg1595.tlg221.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg1595.tlg221.1st1K-grc1:1.1-1.5/
+586,Philodemus,Volumina Rhetorica,"grc,lat",9794,urn:cts:greekLit:tlg1595.tlg370.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg1595.tlg370.1st1K-grc1:1.4a-1.2b/
+587,Polycarp,Epistula ad Philippenses,"grc,lat",1817,urn:cts:greekLit:tlg1622.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg1622.tlg001.1st1K-grc1:praef.sal/
+588,Seniores Apud Irenaeum,Reliquiae plurium anonymorum,"grc,lat",1564,urn:cts:greekLit:tlg1665.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg1665.tlg001.1st1K-grc1:Monitum-6/
+589,Testamentum Abrahamae,The Testament of Abraham Recension A,"grc,lat",9838,urn:cts:greekLit:tlg1701.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg1701.tlg001.1st1K-grc1:1-5/
+590,Testamentum Abrahamae,The Testament of Abraham Recension B,"grc,lat",5230,urn:cts:greekLit:tlg1701.tlg002.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg1701.tlg002.1st1K-grc1:1-5/
+591,Theon Smyrnaeus,De utilitate mathematicae,"grc,lat",53233,urn:cts:greekLit:tlg1724.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg1724.tlg001.1st1K-grc1:1-5/
+592,Theophilus Antiochenus,Ad Autolycum,"grc,lat",21605,urn:cts:greekLit:tlg1725.tlg001.perseus-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg1725.tlg001.perseus-grc1:1.1-1.5/
+593,Theophilus Antiochenus,Ad Autolycum,"grc,lat",21591,urn:cts:greekLit:tlg1725.tlg001.perseus-grc2,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg1725.tlg001.perseus-grc2:1.1/
+594,Vettius Valens,Anthologiarum libri ix,"grc,lat",119282,urn:cts:greekLit:tlg1764.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg1764.tlg001.1st1K-grc1:1.1.1-1.1.5/
+595,Vitae Aesopi,Vita Aesopi Pl vel Accursiana (sub auctore Maximo Planude)(recensio 1),"grc,lat",26013,urn:cts:greekLit:tlg1765.tlg003.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg1765.tlg003.1st1K-grc1:prologue-4/
+596,Vitae Aesopi,Vita Aesopi (fort. auctore Aphthonio),"grc,lat",677,urn:cts:greekLit:tlg1765.tlg004.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg1765.tlg004.1st1K-grc1:1/
+597,Vitae Aesopi,Βιβλίον μυθικὸν τοῦ Αἰσώπου,"grc,lat",338,urn:cts:greekLit:tlg1765.tlg005.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg1765.tlg005.1st1K-grc1:5/
+598,Tatianus,Oratio ad Graecos,"grc,lat",10227,urn:cts:greekLit:tlg1766.tlg001.perseus-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg1766.tlg001.perseus-grc1:1-5/
+599,Euclid,Data,"grc,lat",25893,urn:cts:greekLit:tlg1799.tlg007.First1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg1799.tlg007.First1K-grc1:toc-4/
+600,Euclid,Data (demonstrationes alterae),"grc,lat",647,urn:cts:greekLit:tlg1799.tlg008.First1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg1799.tlg008.First1K-grc1:18.1-18.2/
+601,Euclides,Optica,"grc,lat",13985,urn:cts:greekLit:tlg1799.tlg009.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg1799.tlg009.1st1K-grc1:pr-4/
+602,Euclides,Opticorum recensio Theonis,"grc,lat",12765,urn:cts:greekLit:tlg1799.tlg010.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg1799.tlg010.1st1K-grc1:pr_1-3/
+603,Euclides,Catoptrica (recensio Theonis?),"grc,lat",7788,urn:cts:greekLit:tlg1799.tlg011.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg1799.tlg011.1st1K-grc1:pr-4/
+604,Euclid,Phaenomena,"grc,lat",14945,urn:cts:greekLit:tlg1799.tlg012.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg1799.tlg012.1st1K-grc1:pr-4/
+605,Euclid,Phaenomena (recensio b),"grc,lat",811,urn:cts:greekLit:tlg1799.tlg013.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg1799.tlg013.1st1K-grc1:1/
+606,Euclid,Phaenomena (demonstrationes alterae recensionis b),"grc,lat",2746,urn:cts:greekLit:tlg1799.tlg014.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg1799.tlg014.1st1K-grc1:1-4/
+607,Euclid,Sectio canonis [Sp.],"grc,lat",3147,urn:cts:greekLit:tlg1799.tlg015.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg1799.tlg015.1st1K-grc1:pr/
+608,Euclid,Sectio canonis [Sp.],"grc,lat",4803,urn:cts:greekLit:tlg1799.tlg015.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg1799.tlg015.opp-grc1:pr-4/
+609,Euclid,Fragmenta,"grc,lat",11650,urn:cts:greekLit:tlg1799.tlg016.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg1799.tlg016.1st1K-grc1:1.1/
+610,Euclid,Epigramma,"grc,lat",218,urn:cts:greekLit:tlg1799.tlg017.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg1799.tlg017.1st1K-grc1:1/
+611,Plotinus,Enneades,"grc,lat",213707,urn:cts:greekLit:tlg2000.tlg001.opp-grc2,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2000.tlg001.opp-grc2:1.1.1-1.1.5/
+612,Themistius,Analyticorum Posteriorum Paraphrasis,"grc,lat",39018,urn:cts:greekLit:tlg2001.tlg038.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2001.tlg038.opp-grc1:1-loci/
+613,Themistius,In Aristotelis Physica Paraphrasis,"grc,lat",121248,urn:cts:greekLit:tlg2001.tlg039.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2001.tlg039.opp-grc1:1-5/
+614,Themistius,In libros Aristotelis de Anima paraphrasis,"grc,lat",62533,urn:cts:greekLit:tlg2001.tlg040.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2001.tlg040.opp-grc1:1-2/
+615,Themistius,(Sophoniae) In Parva Naturalia Commentarium,"grc,lat",20108,urn:cts:greekLit:tlg2001.tlg041.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2001.tlg041.opp-grc1:1-4/
+616,Themistius,Quae Fertur In Aristotelis Analyticorum Priorum Librum I,"grc,lat",82852,urn:cts:greekLit:tlg2001.tlg042.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2001.tlg042.opp-grc1:3-8/
+617,Themistius,In Libros Aristotelis De Caelo Paraphrasis,"grc,lat",98274,urn:cts:greekLit:tlg2001.tlg043.opp-lat1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2001.tlg043.opp-lat1:1.1-1.5/
+618,Themistius,In Aristotelis Metaphysicorum,lat,15876,urn:cts:greekLit:tlg2001.tlg044.opp-lat1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2001.tlg044.opp-lat1:1-5/
+619,Eusebius,Praeperatio Evangelica,"grc,lat",231874,urn:cts:greekLit:tlg2018.tlg001.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2018.tlg001.opp-grc1:1.1.1-1.1.5/
+620,Kirsopp Lake,Preface to Historia Ecclesiastica,"grc,lat",169,urn:cts:greekLit:tlg2018.tlg002.1st1K-eng1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2018.tlg002.1st1K-eng1:1-3/
+621,Kirsopp Lake,Table of Contents of Historia Ecclesiastica,lat,13,urn:cts:greekLit:tlg2018.tlg002.1st1K-eng2,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2018.tlg002.1st1K-eng2:1/
+622,Kirsopp Lake,Introduction to Historia Ecclesiastica,"grc,lat",13714,urn:cts:greekLit:tlg2018.tlg002.1st1K-eng3,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2018.tlg002.1st1K-eng3:1-5/
+623,Kirsopp Lake,Index to Historia Ecclesiastica,"grc,lat",2597,urn:cts:greekLit:tlg2018.tlg002.1st1K-eng4,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2018.tlg002.1st1K-eng4:1-5/
+624,Eusebius,Historia Ecclesiastica,"eng,lat",142783,urn:cts:greekLit:tlg2018.tlg002.opp-eng1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2018.tlg002.opp-eng1:1.toc/
+625,Eusebius,Historia Ecclesiastica,"grc,lat",101967,urn:cts:greekLit:tlg2018.tlg002.opp-grc2,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2018.tlg002.opp-grc2:1.1.1-1.1.5/
+626,Eusebius,Historia Ecclesiastica,"grc,lat",107607,urn:cts:greekLit:tlg2018.tlg002.opp-grc3,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2018.tlg002.opp-grc3:1/
+627,Eusebius,De Martyribus Palaestinae (Recensio Brevior),"grc,lat",7901,urn:cts:greekLit:tlg2018.tlg003.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2018.tlg003.opp-grc1:praef.1-praef.2/
+628,Eusebius,Demonstratio Evangelica,grc,158009,urn:cts:greekLit:tlg2018.tlg005.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2018.tlg005.opp-grc1:1.praef.1-1.praef.4/
+629,Eusebius,De Ecclesiastica Theologia,"grc,lat,deu",17305,urn:cts:greekLit:tlg2018.tlg009.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2018.tlg009.opp-grc1:3.1.1-3.1.5/
+630,Eusebius,Die Theophanie,deu,83950,urn:cts:greekLit:tlg2018.tlg010.opp-ger1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2018.tlg010.opp-ger1:1.1/
+631,Eusebius,De Theophania (Fragmenta),"grc,deu,lat",12482,urn:cts:greekLit:tlg2018.tlg010.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2018.tlg010.opp-grc1:1-5/
+632,Eusebius,Onomasticon,"grc,lat,deu",24599,urn:cts:greekLit:tlg2018.tlg011.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2018.tlg011.opp-grc1:pr-4/
+633,Eusebius,Onomasticon,"lat,deu",21342,urn:cts:greekLit:tlg2018.tlg011.opp-lat1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2018.tlg011.opp-lat1:pr-4/
+634,Eusebius,Vita Constantini,"grc,lat",55385,urn:cts:greekLit:tlg2018.tlg020.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2018.tlg020.opp-grc1:1.TOC.1-1.TOC.4/
+635,Eusebius,Constantini imperatoris oratio ad coetum sanctorum,grc,14979,urn:cts:greekLit:tlg2018.tlg021.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2018.tlg021.opp-grc1:1.1-1.2/
+636,Eusebius,De laudibus Constantini,"grc,lat,deu",25826,urn:cts:greekLit:tlg2018.tlg022.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2018.tlg022.opp-grc1:pr.1-pr.2/
+637,Epiphanius,Ancoratus,"grc,lat,deu",844,urn:cts:greekLit:tlg2021.tlg001.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2021.tlg001.opp-grc1:letters.1.1-letters.1.4/
+638,Epiphanius,Panarion (Adversus haereses),"grc,lat,deu",310157,urn:cts:greekLit:tlg2021.tlg002.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2021.tlg002.opp-grc1:praef1a.1.1-praef1a.1.5/
+639,Epiphanius,Anacephalaeosis [Sp.],"grc,lat",5646,urn:cts:greekLit:tlg2021.tlg003.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2021.tlg003.opp-grc1:1.1-1.2/
+640,Gregorius Nazianzenus,Christus patiens [Dub.] (fort. auctore Constantino Manasse),"grc,lat",15665,urn:cts:greekLit:tlg2022.tlg003.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2022.tlg003.opp-grc1:pr.1-pr.30/
+641,Gregorius Nazianzenus,Adversus Eunomianos (orat. 27),"grc,lat,eng",8750,urn:cts:greekLit:tlg2022.tlg007.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2022.tlg007.opp-grc1:1-5/
+642,Gregorius Nazianzenus,De Theologia (Orat. 28),"grc,lat,eng",20289,urn:cts:greekLit:tlg2022.tlg008.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2022.tlg008.opp-grc1:1-5/
+643,Gregorius Nazianzenus,De Filio (Orat. 29),"grc,lat,eng",14552,urn:cts:greekLit:tlg2022.tlg009.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2022.tlg009.opp-grc1:1-5/
+644,Gregorius Nazianzenus,De Filio (Orat. 30),"grc,lat,eng",15358,urn:cts:greekLit:tlg2022.tlg010.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2022.tlg010.opp-grc1:1-5/
+645,Gregorius Nazianzenus,De Spiritu Sancto (Orat. 31),"grc,lat,eng",18787,urn:cts:greekLit:tlg2022.tlg011.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2022.tlg011.opp-grc1:1-5/
+646,"pseudo-Menander,Gregory Nazianzus",Sententiae = (Carmen morale XXX),"grc,deu",144,urn:cts:greekLit:tlg2022.tlg060.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2022.tlg060.1st1K-grc1:1-5/
+647,Iamblichus,Protrepticus,"grc,lat",4897,urn:cts:greekLit:tlg2023.tlg002.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2023.tlg002.1st1K-grc1:21.praef-21.toc/
+648,Valerius Apsines,Ars rhetorica,"grc,lat",18424,urn:cts:greekLit:tlg2027.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2027.tlg001.1st1K-grc1:1.1-1.5/
+649,Valerius Apsines,Περὶ τῶν ἐσχηματισμένων προβλημάτων,"grc,lat",1827,urn:cts:greekLit:tlg2027.tlg002.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2027.tlg002.1st1K-grc1:1-5/
+650,Anonymous,Anonymi summaria ratio geographiae in sphaera intelligendae,"grc,lat,deu",1951,urn:cts:greekLit:tlg2029.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2029.tlg001.1st1K-grc1:1.1-1.2/
+651,Pappus Alexandrinus,Synagoge,"grc,lat",73818,urn:cts:greekLit:tlg2032.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2032.tlg001.1st1K-grc1:1.1/
+652,Porphyrius,Vita Pythagorae,"grc,lat",6145,urn:cts:greekLit:tlg2034.tlg002.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2034.tlg002.1st1K-grc1:1-5/
+653,Porphyrius,De abstinentia,"grc,lat",36079,urn:cts:greekLit:tlg2034.tlg003.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2034.tlg003.1st1K-grc1:1.1-1.5/
+654,Porphyrius,Ad Marcellam,"grc,lat",4787,urn:cts:greekLit:tlg2034.tlg005.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2034.tlg005.1st1K-grc1:1-5/
+655,Porphyrius,Isagoge sive quinque voces,"grc,lat,deu,fre",11414,urn:cts:greekLit:tlg2034.tlg006.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2034.tlg006.opp-grc1:1/
+656,Porphyrius,Isagoge sive quinque voces,"grc,lat,deu,fre",12785,urn:cts:greekLit:tlg2034.tlg006.opp-lat1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2034.tlg006.opp-lat1:1/
+657,Porphyrius,In Aristotelis categorias expositio per interrogationem et responsionem,"grc,lat",40311,urn:cts:greekLit:tlg2034.tlg007.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2034.tlg007.opp-grc1:3/
+658,Porphyry,Quaestionum Homericanum ad Iliadem pertinentium reliquiae,"grc,lat",128627,urn:cts:greekLit:tlg2034.tlg014.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2034.tlg014.1st1K-grc1:1.1-1.2/
+659,Porphyry,Zetemata codicis Vaticani,"grc,lat",24416,urn:cts:greekLit:tlg2034.tlg015.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2034.tlg015.1st1K-grc1:1.1-1.2/
+660,Porphyrius,Historia philosophiae (fragmenta),"grc,lat",2199,urn:cts:greekLit:tlg2034.tlg027.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2034.tlg027.1st1K-grc1:praef.1/
+661,Athanasius of Alexandria,De decretis Nicaenae synodi (Chapters 41 and 42),"grc,lat,deu",2151,urn:cts:greekLit:tlg2035.tlg003.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2035.tlg003.opp-grc1:1.1-1.2/
+662,Athanasius of Alexandria,De decretis Nicaenae synodi (Chapters 41 and 42),lat,1104,urn:cts:greekLit:tlg2035.tlg003.opp-lat1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2035.tlg003.opp-lat1:1.1-1.2/
+663,Athanasius,Oratio quarta contra Arianos [Sp.],"grc,lat",11557,urn:cts:greekLit:tlg2035.tlg117.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2035.tlg117.1st1K-grc1:1-5/
+664,Athanasius,Oratio I contra Arianos,"grc,lat",24323,urn:cts:greekLit:tlg2035.tlg130.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2035.tlg130.1st1K-grc1:1-5/
+665,Athanasius,Oratio II contra Arianos,"grc,lat",31056,urn:cts:greekLit:tlg2035.tlg131.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2035.tlg131.1st1K-grc1:1-5/
+666,Athanasius,Oratio III contra Arianos,"grc,lat",25245,urn:cts:greekLit:tlg2035.tlg132.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2035.tlg132.1st1K-grc1:1-5/
+667,Dexippus,In Aristotelis categorias commentarium,"grc,lat",33838,urn:cts:greekLit:tlg2036.tlg001.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2036.tlg001.opp-grc1:1-3/
+668,Diophantus Alexandrinus,"Fragmentum [Sp.] (e cod. Paris. suppl. gr. 387, fol. 181r)","grc,lat",91,urn:cts:greekLit:tlg2039.tlg003.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2039.tlg003.1st1K-grc1:1-2/
+669,Diophantus Alexandrinus,Fragmentum [Sp.] (e cod. Paris. 453),"grc,lat",2653,urn:cts:greekLit:tlg2039.tlg004.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2039.tlg004.1st1K-grc1:1-5/
+670,Diophantus Alexandrinus,Fragmentum [Sp.] (e cod. Paris. gr. 2448),"grc,lat",3694,urn:cts:greekLit:tlg2039.tlg005.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2039.tlg005.1st1K-grc1:1-5/
+671,Marcellus,Fragmenta,"grc,lat,deu",13530,urn:cts:greekLit:tlg2041.tlg001.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2041.tlg001.opp-grc1:1-5/
+672,Origenes,Contra Celsum,"grc,lat",164884,urn:cts:greekLit:tlg2042.tlg001.perseus-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2042.tlg001.perseus-grc1:praef.1/
+673,Origenes,Commentarii in Evangelium Joannis,"grc,lat,deu",184213,urn:cts:greekLit:tlg2042.tlg005.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2042.tlg005.opp-grc1:1.1-1.5/
+674,Origenes,Fragmenta In Evangelium Joannis (In Catenis),"grc,lat,deu",30535,urn:cts:greekLit:tlg2042.tlg006.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2042.tlg006.opp-grc1:1-5/
+675,Origenes,Exhortatio ad martyrium,"grc,lat,deu",12324,urn:cts:greekLit:tlg2042.tlg007.perseus-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2042.tlg007.perseus-grc1:1-5/
+676,Origenes,De oratione,"grc,lat,deu",27951,urn:cts:greekLit:tlg2042.tlg008.perseus-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2042.tlg008.perseus-grc1:1.1/
+677,Origenes,In Jeremiam (Homiliae 1-11),"grc,lat,deu",33640,urn:cts:greekLit:tlg2042.tlg009.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2042.tlg009.opp-grc1:1.1-1.5/
+678,Origenes,Fragmenta In Jeremiam (in Catenis),"grc,deu,lat",11447,urn:cts:greekLit:tlg2042.tlg010.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2042.tlg010.opp-grc1:1-5/
+679,Origenes,Fragmenta In Lamentationes (In Catenis de Prophetis),"grc,deu,lat",13765,urn:cts:greekLit:tlg2042.tlg011.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2042.tlg011.opp-grc1:1-5/
+680,Origenes,Fragmentum in Lamentationes (In Catenis de Octateucho),"grc,deu,lat",248,urn:cts:greekLit:tlg2042.tlg012.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2042.tlg012.opp-grc1:1/
+681,Origenes,De Engastrimytho,"grc,deu,lat",4791,urn:cts:greekLit:tlg2042.tlg013.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2042.tlg013.opp-grc1:1-5/
+682,Origenes,Fragmenta in Librum Primum Regnorum (In Catenis de Samuelis et Regnorum),"grc,deu,lat",2652,urn:cts:greekLit:tlg2042.tlg014.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2042.tlg014.opp-grc1:1-5/
+683,Origenes,Fragmentum In Librum Primum Regnorum (In Catenis de Cantico Canticorum),"grc,deu,lat",112,urn:cts:greekLit:tlg2042.tlg015.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2042.tlg015.opp-grc1:1/
+684,Origenes,Homiliae In Lucam,"grc,lat,deu",90710,urn:cts:greekLit:tlg2042.tlg016.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2042.tlg016.opp-grc1:praef-4/
+685,Origenes,Fragmenta in Lucam (in catenis),"grc,deu,lat",22746,urn:cts:greekLit:tlg2042.tlg017.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2042.tlg017.opp-grc1:1-5/
+686,Origen,The Philocalia of Origen,grc,74670,urn:cts:greekLit:tlg2042.tlg019.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2042.tlg019.1st1K-grc1:pr.pr.pr-pr.pr.toc/
+687,Origenes,In Jeremiam (Homiliae 12-20),"grc,deu,lat",43778,urn:cts:greekLit:tlg2042.tlg021.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2042.tlg021.opp-grc1:12.1-12.5/
+688,Origenes,Commentariorum Series In Evangelium Matthaei,"grc,lat,deu",105586,urn:cts:greekLit:tlg2042.tlg028.1st1K-lat1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2042.tlg028.1st1K-lat1:1-5/
+689,Origenes,Commentarium In Evangelium Matthaei (Lib. 10-11),"grc,lat,deu",27243,urn:cts:greekLit:tlg2042.tlg029.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2042.tlg029.opp-grc1:10.1/
+690,Origen,Commentarium In Evangelium Matthaei (Lib. 12-17),"grc,lat,deu",129488,urn:cts:greekLit:tlg2042.tlg030.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2042.tlg030.opp-grc1:12.1/
+691,Origen,Commentarium In Evangelium Matthaei (Lib. 12-17),"lat,deu",100603,urn:cts:greekLit:tlg2042.tlg030.opp-lat1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2042.tlg030.opp-lat1:12.9/
+692,Origenes,Epistula ad Africanum,"grc,lat",7293,urn:cts:greekLit:tlg2042.tlg045.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2042.tlg045.1st1K-grc1:1.1-1.5/
+693,Origenes,Selecta in Genesim,"grc,lat",11179,urn:cts:greekLit:tlg2042.tlg048.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2042.tlg048.1st1K-grc1:praef.1/
+694,Origenes,Selecta in Exodum,"grc,lat",3298,urn:cts:greekLit:tlg2042.tlg050.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2042.tlg050.1st1K-grc1:1-5/
+695,Origenes,Selecta in Leviticum,"grc,lat",1517,urn:cts:greekLit:tlg2042.tlg051.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2042.tlg051.1st1K-grc1:1-5/
+696,Origenes,Selecta in Numeros,"grc,lat",1765,urn:cts:greekLit:tlg2042.tlg052.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2042.tlg052.1st1K-grc1:1-5/
+697,Origenes,Selecta in Deuteronomium,"grc,lat",2485,urn:cts:greekLit:tlg2042.tlg053.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2042.tlg053.1st1K-grc1:1-5/
+698,Origenes,Selecta in Jesum Nave,"grc,lat",962,urn:cts:greekLit:tlg2042.tlg054.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2042.tlg054.1st1K-grc1:1-5/
+699,Origenes,Selecta in Judices,"grc,lat",279,urn:cts:greekLit:tlg2042.tlg055.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2042.tlg055.1st1K-grc1:1-5/
+700,Origenes,Selecta in Job,"grc,lat",3068,urn:cts:greekLit:tlg2042.tlg057.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2042.tlg057.1st1K-grc1:1-22/
+701,Origen,Selecta in Psalmos [Dub.],"fre,grc,lat",105109,urn:cts:greekLit:tlg2042.tlg058.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2042.tlg058.1st1K-grc1:pr1.1-pr1.5/
+702,Origen,Fragmenta in Ezechielem,"fre,grc,lat",344,urn:cts:greekLit:tlg2042.tlg061.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2042.tlg061.1st1K-grc1:30.25/
+703,Origen,Adnotationes in Genesim,"fre,grc,lat",660,urn:cts:greekLit:tlg2042.tlg066.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2042.tlg066.1st1K-grc1:7.4/
+704,Origen,Adnotationes in Exodum,"fre,grc,lat",254,urn:cts:greekLit:tlg2042.tlg067.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2042.tlg067.1st1K-grc1:15.25/
+705,Origen,Adnotationes in Leviticum (fragmenta e catenis),"fre,grc,lat",631,urn:cts:greekLit:tlg2042.tlg068.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2042.tlg068.1st1K-grc1:4.27/
+706,Origen,Adnotationes in Numeros,"fre,grc,lat",394,urn:cts:greekLit:tlg2042.tlg069.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2042.tlg069.1st1K-grc1:11.7/
+707,Origen,Adnotationes in Deuteronomium (fragmenta e catenis),"fre,grc,lat",1908,urn:cts:greekLit:tlg2042.tlg070.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2042.tlg070.1st1K-grc1:1.7/
+708,Origen,Adnotationes in Jesu filium Nave (fragmenta e catenis),"fre,grc,lat",198,urn:cts:greekLit:tlg2042.tlg071.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2042.tlg071.1st1K-grc1:3.14/
+709,Origen,Adnotationes in Judices,"fre,grc,lat",160,urn:cts:greekLit:tlg2042.tlg072.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2042.tlg072.1st1K-grc1:15.19/
+710,Origen,"Homiliae in Job (fragmenta in catenis, typus II)","fre,grc,lat",8928,urn:cts:greekLit:tlg2042.tlg073.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2042.tlg073.1st1K-grc1:1.10/
+711,Origen,Excerpta in Psalmos [Dub.],"fre,grc,lat",8846,urn:cts:greekLit:tlg2042.tlg074.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2042.tlg074.1st1K-grc1:9.8/
+712,Origen,Expositio in Proverbia (fragmenta e catenis),"fre,grc,lat",18055,urn:cts:greekLit:tlg2042.tlg075.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2042.tlg075.1st1K-grc1:1.1-1.5/
+713,Origen,Scholia in Canticum canticorum,"fre,grc,lat",7090,urn:cts:greekLit:tlg2042.tlg076.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2042.tlg076.1st1K-grc1:pr.1/
+714,Origen,Scholia in Matthaeum,"fre,grc,lat",4434,urn:cts:greekLit:tlg2042.tlg077.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2042.tlg077.1st1K-grc1:1.18/
+715,Origen,Scholia in Lucam (fragmenta e cod. Venet. 28),"fre,grc,lat",11096,urn:cts:greekLit:tlg2042.tlg078.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2042.tlg078.1st1K-grc1:1.1.1-1.1.6/
+716,Origenes,Fragmenta In Jeremiam (E Philocalia),"grc,deu",944,urn:cts:greekLit:tlg2042.tlg084.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2042.tlg084.opp-grc1:1.1/
+717,"Sozomenus, Salaminius Hermias",Historia Ecclesiastica,"grc,lat",107657,urn:cts:greekLit:tlg2048.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2048.tlg001.1st1K-grc1:1.praef.1-1.praef.5/
+718,Eunapius,Vitae Sophistarum,"lat,grc,deu",1468,urn:cts:greekLit:tlg2050.tlg001.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2050.tlg001.opp-grc1:1-5/
+719,"Socrates, Scholasticus",Historia Ecclesiastica,"grc,lat",103796,urn:cts:greekLit:tlg2057.tlg002.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2057.tlg002.1st1K-grc1:1.1/
+720,Philostorgius,Historia ecclesiastica (fragmenta ap. Photium),grc,49927,urn:cts:greekLit:tlg2058.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2058.tlg001.1st1K-grc1:1.1-1.5/
+721,Hippolytus,Refutatio Omnium Haeresium,"grc,lat,deu",112251,urn:cts:greekLit:tlg2115.tlg060.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2115.tlg060.opp-grc1:1.summary.1-1.summary.5/
+722,Hippolytus,Refutatio Omnium Haeresium,"grc,lat,deu",69621,urn:cts:greekLit:tlg2115.tlg060.perseus-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2115.tlg060.perseus-grc1:1.argument/
+723,Alypius,Isagoge musica,"grc,lat",5827,urn:cts:greekLit:tlg2135.tlg001.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2135.tlg001.opp-grc1:1.1-1.4/
+724,Bacchius Geron,Isagoge,"grc,lat",5525,urn:cts:greekLit:tlg2136.tlg001.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2136.tlg001.opp-grc1:1-5/
+725,Gaudentius,Harmonica introductio,"grc,lat",6661,urn:cts:greekLit:tlg2137.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2137.tlg001.1st1K-grc1:pr-4/
+726,Canticum Euripidis,Ex Orestis Stasimo I,"grc,lat",182,urn:cts:greekLit:tlg2138.tlg001.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2138.tlg001.opp-grc1:1/
+727,Epitaphium Sicili,Sicili Epitaphium,"grc,lat",129,urn:cts:greekLit:tlg2139.tlg001.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2139.tlg001.opp-grc1:1/
+728,Cassius Longinus,Ars rhetorica,"grc,lat",5452,urn:cts:greekLit:tlg2178.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2178.tlg001.1st1K-grc1:1.1-1.5/
+729,Cassius Longinus,Excerpta,"grc,lat",648,urn:cts:greekLit:tlg2178.tlg002.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2178.tlg002.1st1K-grc1:1-5/
+730,Libanius,Epistulae 1-839,lat,214194,urn:cts:greekLit:tlg2200.tlg001.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg001.opp-grc1:1.1-1.2/
+731,Libanius,Oratio I,"lat,grc,deu",35927,urn:cts:greekLit:tlg2200.tlg00401.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00401.opp-grc1:1-6/
+732,Libanius,Oratio 2,"lat,grc,deu",6298,urn:cts:greekLit:tlg2200.tlg00402.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00402.opp-grc1:1-7/
+733,Libanius,Oratio 3,"lat,grc,deu",2865,urn:cts:greekLit:tlg2200.tlg00403.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00403.opp-grc1:1-7/
+734,Libanius,Oratio 4,"lat,grc,deu",3699,urn:cts:greekLit:tlg2200.tlg00404.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00404.opp-grc1:1-5/
+735,Libanius,Oratio V,"lat,grc,deu",4542,urn:cts:greekLit:tlg2200.tlg00405.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00405.opp-grc1:1-7/
+736,Libanius,Oratio VI,"lat,grc,deu",1892,urn:cts:greekLit:tlg2200.tlg00406.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00406.opp-grc1:1-5/
+737,Libanius,Oratio 7,"lat,grc,deu",1004,urn:cts:greekLit:tlg2200.tlg00407.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00407.opp-grc1:1-5/
+738,Libanius,Oratio VIII,"lat,grc,deu",1660,urn:cts:greekLit:tlg2200.tlg00408.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00408.opp-grc1:1-6/
+739,Libanius,Oratio 9,"lat,grc,deu",1386,urn:cts:greekLit:tlg2200.tlg00409.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00409.opp-grc1:1-6/
+740,Libanius,Oratio 10,"lat,grc,deu",2901,urn:cts:greekLit:tlg2200.tlg00410.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00410.opp-grc1:1-6/
+741,Libanius,Oratio 11,"lat,grc,deu",27708,urn:cts:greekLit:tlg2200.tlg00411.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00411.opp-grc1:1-7/
+742,Libanius,Oratio 26,"lat,grc,deu",4267,urn:cts:greekLit:tlg2200.tlg00426.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00426.opp-grc1:1-6/
+743,Libanius,Oratio 27,"lat,grc,deu",5599,urn:cts:greekLit:tlg2200.tlg00427.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00427.opp-grc1:1-7/
+744,Libanius,Oratio 28,"lat,grc,deu",3162,urn:cts:greekLit:tlg2200.tlg00428.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00428.opp-grc1:1-7/
+745,Libanius,Oratio 29,"lat,grc,deu",4624,urn:cts:greekLit:tlg2200.tlg00429.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00429.opp-grc1:1-7/
+746,Libanius,Oratio 30,"lat,grc,deu",8797,urn:cts:greekLit:tlg2200.tlg00430.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00430.opp-grc1:1-8/
+747,Libanius,Oratio 31,"lat,grc,deu",6172,urn:cts:greekLit:tlg2200.tlg00431.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00431.opp-grc1:1-11/
+748,Libanius,Oratio 32,"lat,grc,deu",3409,urn:cts:greekLit:tlg2200.tlg00432.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00432.opp-grc1:1-6/
+749,Libanius,Oratio 33,"lat,grc,deu",6105,urn:cts:greekLit:tlg2200.tlg00433.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00433.opp-grc1:1-5/
+750,Libanius,Oratio 34,"lat,grc,deu",4096,urn:cts:greekLit:tlg2200.tlg00434.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00434.opp-grc1:1-7/
+751,Libanius,Oratio 35,"lat,grc,deu",3853,urn:cts:greekLit:tlg2200.tlg00435.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00435.opp-grc1:1-7/
+752,Libanius,Oratio 36,"lat,grc,deu",2125,urn:cts:greekLit:tlg2200.tlg00436.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00436.opp-grc1:1-6/
+753,Libanius,Oratio 37,"lat,grc,deu",2987,urn:cts:greekLit:tlg2200.tlg00437.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00437.opp-grc1:1-6/
+754,Libanius,Oratio 38,"lat,grc,deu",2922,urn:cts:greekLit:tlg2200.tlg00438.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00438.opp-grc1:1-9/
+755,Libanius,Oratio 39,"lat,grc,deu",2733,urn:cts:greekLit:tlg2200.tlg00439.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00439.opp-grc1:1-6/
+756,Libanius,Oratio 40,"lat,grc,deu",3638,urn:cts:greekLit:tlg2200.tlg00440.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00440.opp-grc1:1-8/
+757,Libanius,Oratio 41,"lat,grc,deu",2477,urn:cts:greekLit:tlg2200.tlg00441.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00441.opp-grc1:1-7/
+758,Libanius,Oratio 42,"lat,deu,grc",6809,urn:cts:greekLit:tlg2200.tlg00442.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00442.opp-grc1:1-6/
+759,Libanius,Oratio 43,"lat,grc,deu",3092,urn:cts:greekLit:tlg2200.tlg00443.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00443.opp-grc1:1-7/
+760,Libanius,Oratio 44,"lat,grc,deu",659,urn:cts:greekLit:tlg2200.tlg00444.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00444.opp-grc1:1-4/
+761,Libanius,Oratio 45,"lat,grc,deu",4768,urn:cts:greekLit:tlg2200.tlg00445.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00445.opp-grc1:1-6/
+762,Libanius,Oratio 46,"lat,grc,deu",5869,urn:cts:greekLit:tlg2200.tlg00446.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00446.opp-grc1:1-6/
+763,Libanius,Oratio 47,"lat,grc,deu",5159,urn:cts:greekLit:tlg2200.tlg00447.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00447.opp-grc1:1-8/
+764,Libanius,Oratio 48,"lat,grc,deu",5695,urn:cts:greekLit:tlg2200.tlg00448.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00448.opp-grc1:1-7/
+765,Libanius,Oratio 49,"lat,grc,deu",4369,urn:cts:greekLit:tlg2200.tlg00449.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00449.opp-grc1:1-7/
+766,Libanius,Orationes L,"lat,grc,deu",3992,urn:cts:greekLit:tlg2200.tlg00450.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00450.opp-grc1:1-6/
+767,Libanius,Oratio 51,"lat,deu,grc",4394,urn:cts:greekLit:tlg2200.tlg00451.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00451.opp-grc1:1-14/
+768,Libanius,Oratio 52,"lat,deu,grc",6998,urn:cts:greekLit:tlg2200.tlg00452.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00452.opp-grc1:1-7/
+769,Libanius,Oratio 53,"lat,deu,grc",4699,urn:cts:greekLit:tlg2200.tlg00453.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00453.opp-grc1:1-6/
+770,Libanius,Oratio 54,"lat,deu,grc",9526,urn:cts:greekLit:tlg2200.tlg00454.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00454.opp-grc1:1-6/
+771,Libanius,Oratio 55,"lat,deu,grc",5270,urn:cts:greekLit:tlg2200.tlg00455.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00455.opp-grc1:1-9/
+772,Libanius,Oratio 56,"lat,deu,grc",4278,urn:cts:greekLit:tlg2200.tlg00456.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00456.opp-grc1:1-8/
+773,Libanius,Oratio 57,"lat,deu,grc",6846,urn:cts:greekLit:tlg2200.tlg00457.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00457.opp-grc1:1-7/
+774,Libanius,Oratio 58,"lat,deu,grc",5551,urn:cts:greekLit:tlg2200.tlg00458.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00458.opp-grc1:1-6/
+775,Libanius,Oratio 59,"lat,deu,grc",25567,urn:cts:greekLit:tlg2200.tlg00459.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00459.opp-grc1:praef-6/
+776,Libanius,Oratio 60,"lat,deu,grc",3515,urn:cts:greekLit:tlg2200.tlg00460.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00460.opp-grc1:1-13/
+777,Libanius,Oratio 61,"lat,deu,grc",3977,urn:cts:greekLit:tlg2200.tlg00461.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00461.opp-grc1:1-6/
+778,Libanius,Oratio 62,"lat,deu,grc",10879,urn:cts:greekLit:tlg2200.tlg00462.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00462.opp-grc1:1-6/
+779,Libanius,Oratio 63,"lat,deu,grc",4554,urn:cts:greekLit:tlg2200.tlg00463.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00463.opp-grc1:1-8/
+780,Libanius,Oratio 64,"lat,deu,grc",23470,urn:cts:greekLit:tlg2200.tlg00464.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00464.opp-grc1:1-7/
+781,Libanius,Declamatio I,"lat,grc,deu",32216,urn:cts:greekLit:tlg2200.tlg00501.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00501.opp-grc1:1-7/
+782,Libanius,Declamatio 2,"lat,deu,grc",5712,urn:cts:greekLit:tlg2200.tlg00502.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00502.opp-grc1:1-6/
+783,Libanius,Declamatio 3,"lat,deu,grc",7123,urn:cts:greekLit:tlg2200.tlg00503.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00503.opp-grc1:1.1-1.2/
+784,Libanius,Declamatio 4,"lat,deu,grc",18469,urn:cts:greekLit:tlg2200.tlg00504.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00504.opp-grc1:praef-8/
+785,Libanius,Declamatio 5,"lat,deu,grc",17868,urn:cts:greekLit:tlg2200.tlg00505.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00505.opp-grc1:1-5/
+786,Libanius,Declamatio 6,"deu,lat,grc",12322,urn:cts:greekLit:tlg2200.tlg00506.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00506.opp-grc1:1.1-1.2/
+787,Libanius,Declamatio 7,"lat,deu,grc",4182,urn:cts:greekLit:tlg2200.tlg00507.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00507.opp-grc1:praef-9/
+788,Libanius,Declamatio 8,"lat,deu,grc",4963,urn:cts:greekLit:tlg2200.tlg00508.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00508.opp-grc1:1-8/
+789,Libanius,Declamatio 9,"lat,deu,grc",7281,urn:cts:greekLit:tlg2200.tlg00509.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00509.opp-grc1:1-8/
+790,Libanius,Declamatio 10,"lat,deu,grc",6760,urn:cts:greekLit:tlg2200.tlg00510.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00510.opp-grc1:1-8/
+791,Libanius,Declamatio 11,"lat,deu,grc",5224,urn:cts:greekLit:tlg2200.tlg00511.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00511.opp-grc1:1-7/
+792,Libanius,Declamatio 12,"lat,deu,grc",8745,urn:cts:greekLit:tlg2200.tlg00512.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00512.opp-grc1:1-7/
+793,Libanius,Declamatio 13,"lat,deu,grc",12403,urn:cts:greekLit:tlg2200.tlg00513.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00513.opp-grc1:1-8/
+794,Libanius,Declamatio 14,"grc,deu,lat",6490,urn:cts:greekLit:tlg2200.tlg00514.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00514.opp-grc1:1-5/
+795,Libanius,Declamatio 15,"lat,deu,grc",8273,urn:cts:greekLit:tlg2200.tlg00515.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00515.opp-grc1:1-6/
+796,Libanius,Declamatio 16,"lat,deu,grc",10188,urn:cts:greekLit:tlg2200.tlg00516.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00516.opp-grc1:1-9/
+797,Libanius,Declamatio 17,"lat,deu,grc",14052,urn:cts:greekLit:tlg2200.tlg00517.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00517.opp-grc1:1-8/
+798,Libanius,Declamatio 18,"lat,deu,grc",4956,urn:cts:greekLit:tlg2200.tlg00518.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00518.opp-grc1:1-5/
+799,"Libanius,Libanius",Declamatio 19,"lat,deu,grc",6258,urn:cts:greekLit:tlg2200.tlg00519.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00519.opp-grc1:1-8/
+800,Libanius,Declamatio 20,"lat,deu,grc",5213,urn:cts:greekLit:tlg2200.tlg00520.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00520.opp-grc1:1-9/
+801,Libanius,Declamatio 21,"lat,deu,grc",5923,urn:cts:greekLit:tlg2200.tlg00521.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00521.opp-grc1:1-7/
+802,Libanius,Declamatio 22,"lat,deu,grc",7137,urn:cts:greekLit:tlg2200.tlg00522.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00522.opp-grc1:1-7/
+803,Libanius,Declamatio 23,"lat,deu,grc",17615,urn:cts:greekLit:tlg2200.tlg00523.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00523.opp-grc1:1-6/
+804,Libanius,Declamatio 24,"grc,deu,grc",4949,urn:cts:greekLit:tlg2200.tlg00524.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00524.opp-grc1:1.1-1.2/
+805,Libanius,Declamatio 25,"grc,deu,lat",7395,urn:cts:greekLit:tlg2200.tlg00525.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00525.opp-grc1:1.1-1.2/
+806,Libanius,Declamatio 26,"grc,deu,lat",10600,urn:cts:greekLit:tlg2200.tlg00526.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00526.opp-grc1:1-5/
+807,Libanius,Declamatio 27,"lat,deu,grc",4108,urn:cts:greekLit:tlg2200.tlg00527.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00527.opp-grc1:29-5/
+808,Libanius,Declamatio 28,"lat,deu,grc",4940,urn:cts:greekLit:tlg2200.tlg00528.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00528.opp-grc1:1-8/
+809,Libanius,Declamatio 29,"lat,deu,grc",5661,urn:cts:greekLit:tlg2200.tlg00529.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00529.opp-grc1:1-6/
+810,Libanius,Declamatio 30,"lat,deu,grc",12639,urn:cts:greekLit:tlg2200.tlg00530.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00530.opp-grc1:1-7/
+811,Libanius,Declamatio 31,"lat,deu,grc",9929,urn:cts:greekLit:tlg2200.tlg00531.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00531.opp-grc1:1-7/
+812,Libanius,Declamatio 32,"lat,deu,grc",9627,urn:cts:greekLit:tlg2200.tlg00532.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00532.opp-grc1:1-8/
+813,Libanius,Declamatio 33,"lat,deu,grc",9578,urn:cts:greekLit:tlg2200.tlg00533.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00533.opp-grc1:1-5/
+814,Libanius,Declamatio 34,"grc,deu,lat",16463,urn:cts:greekLit:tlg2200.tlg00534.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00534.opp-grc1:1.1-1.2/
+815,Libanius,Declamatio 35,"grc,deu,lat",4803,urn:cts:greekLit:tlg2200.tlg00535.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00535.opp-grc1:1-5/
+816,Libanius,Declamatio 36,"grc,deu,lat",8213,urn:cts:greekLit:tlg2200.tlg00536.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00536.opp-grc1:1-5/
+817,Libanius,Declamatio 37,"lat,deu,grc",5441,urn:cts:greekLit:tlg2200.tlg00537.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00537.opp-grc1:1-10/
+818,Libanius,Declamatio 38,"lat,deu,grc",8096,urn:cts:greekLit:tlg2200.tlg00538.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00538.opp-grc1:1-8/
+819,Libanius,Declamatio 39,"lat,deu,grc",6338,urn:cts:greekLit:tlg2200.tlg00539.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00539.opp-grc1:1-7/
+820,Libanius,Declamatio 40,"lat,deu,grc",12023,urn:cts:greekLit:tlg2200.tlg00540.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00540.opp-grc1:1.1-1.2/
+821,Libanius,Declamatio 41,"lat,deu,grc",6728,urn:cts:greekLit:tlg2200.tlg00541.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00541.opp-grc1:1-7/
+822,Libanius,Declamatio 42,"lat,deu,grc",9043,urn:cts:greekLit:tlg2200.tlg00542.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00542.opp-grc1:1-7/
+823,Libanius,Declamatio 43,"lat,deu,grc",10402,urn:cts:greekLit:tlg2200.tlg00543.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00543.opp-grc1:1.1-1.2/
+824,Libanius,Declamatio 44,"lat,deu,grc",12868,urn:cts:greekLit:tlg2200.tlg00544.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00544.opp-grc1:pr-4/
+825,Libanius,Declamatio 45,"grc,deu,lat",4745,urn:cts:greekLit:tlg2200.tlg00545.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00545.opp-grc1:1.1-1.2/
+826,Libanius,Declamatio 46,"grc,lat,deu",7980,urn:cts:greekLit:tlg2200.tlg00546.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00546.opp-grc1:1.1-1.2/
+827,Libanius,Declamatio 47,"lat,deu,grc",7209,urn:cts:greekLit:tlg2200.tlg00547.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00547.opp-grc1:1-9/
+828,Libanius,Declamatio 48,"lat,deu,grc",7125,urn:cts:greekLit:tlg2200.tlg00548.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00548.opp-grc1:1-6/
+829,Libanius,Declamatio 49,"grc,deu,lat",14568,urn:cts:greekLit:tlg2200.tlg00549.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00549.opp-grc1:1.1-1.2/
+830,Libanius,Declamatio 50,"lat,deu,grc",6765,urn:cts:greekLit:tlg2200.tlg00550.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00550.opp-grc1:1-5/
+831,Libanius,Declamatio 51,"lat,deu,grc",1724,urn:cts:greekLit:tlg2200.tlg00551.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg00551.opp-grc1:1-5/
+832,Libanius,Characteres Epistolici,"lat,deu,grc",6935,urn:cts:greekLit:tlg2200.tlg008.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2200.tlg008.opp-grc1:1-12/
+833,Pseudo-Polemon,Physiognomonica (Epitome Adamantiana),"grc,lat",14607,urn:cts:greekLit:tlg2233.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2233.tlg001.1st1K-grc1:1.1/
+834,Pseudo-Polemon,Physiognomonica,"grc,lat",1481,urn:cts:greekLit:tlg2233.tlg002.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2233.tlg002.1st1K-grc1:70-74/
+835,Chronicon Paschale,Chronicon Paschale,"grc,lat",257221,urn:cts:greekLit:tlg2371.tlg001.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2371.tlg001.opp-grc1:1-2/
+836,"Manetho Astrologus, 4th. century CE",Apotelesmatica,"grc,lat",19730,urn:cts:greekLit:tlg2583.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2583.tlg001.1st1K-grc1:2.1.1-2.1.30/
+837,Menander,Διαίρεσις τῶν ἐπιδεικτικῶν (olim sub auctore Genethlio),"grc,lat",9021,urn:cts:greekLit:tlg2586.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2586.tlg001.1st1K-grc1:1.1/
+838,Menander,Περὶ ἐπιδεικτικῶν,"grc,lat",19433,urn:cts:greekLit:tlg2586.tlg002.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2586.tlg002.1st1K-grc1:1.1-1.2/
+839,Annae Comnenae,Alexias,"grc,lat",155219,urn:cts:greekLit:tlg2703.tlg001.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2703.tlg001.opp-grc1:praef.1/
+840,Anna Comnena,Alexias,"grc,lat",177572,urn:cts:greekLit:tlg2703.tlg001.opp-grc2,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2703.tlg001.opp-grc2:praef.1/
+841,Anna Comnena,Alexias,"grc,lat",147155,urn:cts:greekLit:tlg2703.tlg001.opp-lat1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2703.tlg001.opp-lat1:praef.1/
+842,"Evagrius, Scholasticus",Historia Ecclesiastica,"grc,lat",55826,urn:cts:greekLit:tlg2733.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2733.tlg001.1st1K-grc1:1.praef/
+843,Gelasius,Historia Ecclesiastica,"grc,lat,deu",67713,urn:cts:greekLit:tlg2768.tlg001.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2768.tlg001.opp-grc1:1.praef.1-1.praef.5/
+844,Marcus Diaconus,Vita Porphyrii episcopi Gazensis,"grc,lat",27091,urn:cts:greekLit:tlg2806.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2806.tlg001.1st1K-grc1:1.1-1.5/
+845,Methodius,Symposium Sive Convivium Decem Virginum,"grc,lat,deu",51418,urn:cts:greekLit:tlg2959.tlg001.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2959.tlg001.opp-grc1:1.1/
+846,Methodius,De libero arbitrio,"grc,lat,deu",2978,urn:cts:greekLit:tlg2959.tlg002.opp-ger1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2959.tlg002.opp-ger1:1.1-1.2/
+847,Methodius,De Libero Arbitrio,"grc,lat,deu",26938,urn:cts:greekLit:tlg2959.tlg002.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2959.tlg002.opp-grc1:1.1-1.2/
+848,Methodius,De Resurrectione,"grc,lat,deu",82920,urn:cts:greekLit:tlg2959.tlg003.opp-ger1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2959.tlg003.opp-ger1:1.1.1-1.1.5/
+849,Methodius,De lepra ad Sistelium,"grc,lat,deu",8945,urn:cts:greekLit:tlg2959.tlg004.opp-ger1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2959.tlg004.opp-ger1:1.1-1.2/
+850,Methodius,"De Creatis (Fragmenta Ap. Photium, Bibl. Cod. 235)","grc,lat,deu",2294,urn:cts:greekLit:tlg2959.tlg005.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2959.tlg005.opp-grc1:1.1-1.2/
+851,Methodius,Adversus Porphyrium (Fragmenta),"grc,lat,deu",1705,urn:cts:greekLit:tlg2959.tlg006.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2959.tlg006.opp-grc1:1.1-1.2/
+852,Methodius,Fragmenta In Job (In Catenis),"grc,lat,deu",3145,urn:cts:greekLit:tlg2959.tlg007.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2959.tlg007.opp-grc1:1-5/
+853,Methodius,De Martyribus (Fragmenta),"grc,lat,deu",57,urn:cts:greekLit:tlg2959.tlg008.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2959.tlg008.opp-grc1:1-2/
+854,Methodius,Fragmenta Incerta [Sp.],"grc,lat,deu",348,urn:cts:greekLit:tlg2959.tlg010.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2959.tlg010.opp-grc1:1-4/
+855,Methodius,In Genesim (In Catenis),"deu,lat,grc",7662,urn:cts:greekLit:tlg2959.tlg011.opp-ger1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2959.tlg011.opp-ger1:1.1-1.2/
+856,Methodius,Sermo De Simeone Et Anna [Sp.],"grc,deu,lat",4305,urn:cts:greekLit:tlg2959.tlg012.opp-ger1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg2959.tlg012.opp-ger1:1.1-1.2/
+857,Syntipas,Ιστορικον Συντιπα του Φιλοσοφου Ωραιοτατον Πανυ,"grc,lat",37975,urn:cts:greekLit:tlg3118.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg3118.tlg001.1st1K-grc1:1.1-1.5/
+858,Syntipas,Narrationes de Syntipa,"grc,lat",15445,urn:cts:greekLit:tlg3118.tlg002.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg3118.tlg002.1st1K-grc1:praef-4/
+859,Theophylactus,In Cyrilli In XII Prophetas,"grc,lat",1517,urn:cts:greekLit:tlg3129.ogl001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg3129.ogl001.1st1K-grc1:1/
+860,Joannes Zonaras,Epitome historiarum (lib. 1‑18),"grc,lat",356474,urn:cts:greekLit:tlg3135.tlg001.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg3135.tlg001.opp-grc1:praef.1/
+861,Joannes Zonaras,Argumenta,"grc,lat",25833,urn:cts:greekLit:tlg3135.tlg004.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg3135.tlg004.opp-grc1:praef.1/
+862,Joannes Zonaras,Chronologia,"grc,lat",1033,urn:cts:greekLit:tlg3135.tlg005.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg3135.tlg005.opp-grc1:1/
+863,Anonymi Exegesis in Hesiodi Theogoniam,Exegesis in Hesiodi theogoniam,"grc,lat,deu",13184,urn:cts:greekLit:tlg3156.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg3156.tlg001.1st1K-grc1:praef-36/
+864,Marcianus of Heraclea,Periplus Maris Exteri,"grc,lat,deu",11098,urn:cts:greekLit:tlg4003.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4003.tlg001.1st1K-grc1:1.1.1-1.1.5/
+865,Marcianus of Heraclea,Menippi periplus maris interni (epitome Marciani),"grc,lat,deu",2304,urn:cts:greekLit:tlg4003.tlg002.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4003.tlg002.1st1K-grc1:1.1.1-1.1.5/
+866,Marcianus of Heraclea,Artemidori Geographia (Epitome Marciani),"grc,lat,deu",455,urn:cts:greekLit:tlg4003.tlg003.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4003.tlg003.1st1K-grc1:1.1.1-1.1.5/
+867,Simplicius,In Aristotelis quattuor libros de caelo commentaria,"grc,lat",354839,urn:cts:greekLit:tlg4013.tlg001.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4013.tlg001.opp-grc1:1-4/
+868,Simplicius,In Aristotelis Categorias Commentarium,"grc,lat",224520,urn:cts:greekLit:tlg4013.tlg003.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4013.tlg003.opp-grc1:1-3/
+869,Simplicius,In Aristotelis physicorum libros commentaria,"grc,lat",559473,urn:cts:greekLit:tlg4013.tlg004.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4013.tlg004.opp-grc1:1-5/
+870,Simplicius,In Aristotelis libros de anima commentaria [Sp.?] (fort. auctore Prisciano Lydo),"grc,lat",146659,urn:cts:greekLit:tlg4013.tlg005.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4013.tlg005.opp-grc1:1-3/
+871,Joannes Philoponus,In Aristotelis Categorias Commentarium,"grc,lat",97326,urn:cts:greekLit:tlg4015.tlg001.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4015.tlg001.opp-grc1:1/
+872,Joannes Philoponus,in Aristotelis Analytica Priora commentaria,"grc,lat",220500,urn:cts:greekLit:tlg4015.tlg002.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4015.tlg002.opp-grc1:1-5/
+873,Joannes Philoponus,In Aristotelis Analytica Posteriora Commentaria,"grc,lat",198660,urn:cts:greekLit:tlg4015.tlg004.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4015.tlg004.opp-grc1:1-2/
+874,Joannes Philoponus,in Aristotelis Meteorologicorum librum primum commentarium,"grc,lat",59565,urn:cts:greekLit:tlg4015.tlg005.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4015.tlg005.opp-grc1:1.introduction-1.4/
+875,Joannes Philoponus,In Aristotelis Libros De Generatione Et Corruptione Commentaria,"grc,lat,ita",140793,urn:cts:greekLit:tlg4015.tlg006.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4015.tlg006.opp-grc1:1-2/
+876,Joannes Philoponus,In Libros De Generatione Animalium Commentaria,"grc,lat",119932,urn:cts:greekLit:tlg4015.tlg007.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4015.tlg007.opp-grc1:1-5/
+877,Joannes Philoponus,in Aristotelis de Anima libros commentaria,"grc,lat",281183,urn:cts:greekLit:tlg4015.tlg008.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4015.tlg008.opp-grc1:1-3/
+878,Joannes Philoponus,In Aristotelis Physicorum Libros Commentaria,"grc,lat",426859,urn:cts:greekLit:tlg4015.tlg009.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4015.tlg009.opp-grc1:1-5/
+879,Ammonius,In Porphyrii Isagogen Sive Quinque Voces,"grc,lat,deu",63707,urn:cts:greekLit:tlg4016.tlg001.opp-grc2,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4016.tlg001.opp-grc2:2.introduction-2.4/
+880,Ammonius,In Aristotelis Categorias Commentarius,"grc,lat,deu",48164,urn:cts:greekLit:tlg4016.tlg002.opp-grc2,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4016.tlg002.opp-grc2:1.1.introduction-1.1.4/
+881,Ammonius,In Aristotelis Librum De Interpretatione Commentarius,"grc,lat",140471,urn:cts:greekLit:tlg4016.tlg003.opp-grc2,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4016.tlg003.opp-grc2:1/
+882,Ammonius,In Aristotelis Analyticorum Priorum Librum I Commentarium,"grc,lat",45416,urn:cts:greekLit:tlg4016.tlg004.opp-grc2,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4016.tlg004.opp-grc2:1-5/
+883,Syrianus,In Aristotelis Metaphysica Commentaria,"grc,lat",87203,urn:cts:greekLit:tlg4017.tlg001.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4017.tlg001.opp-grc1:1-3/
+884,Asclepius,In Aristotelis Metaphysicorum Libros A-Z Commentaria,"grc,lat",206246,urn:cts:greekLit:tlg4018.tlg001.opp-grc2,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4018.tlg001.opp-grc2:1-5/
+885,Olympiodorus,Prolegomena,"grc,lat",11085,urn:cts:greekLit:tlg4019.tlg001.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4019.tlg001.opp-grc1:1/
+886,Olympiodorus,In Categorias Commentarium,"grc,lat",55321,urn:cts:greekLit:tlg4019.tlg002.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4019.tlg002.opp-grc1:1/
+887,Olympiodorus,In Aristotelis meteora commentaria,"grc,lat",138691,urn:cts:greekLit:tlg4019.tlg003.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4019.tlg003.opp-grc1:1-4/
+888,Elias,In Porphyrii isagogen,"grc,lat",47124,urn:cts:greekLit:tlg4020.tlg001.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4020.tlg001.opp-grc1:1-3/
+889,Elias,Eliae (olim Davidis) in Aristotelis categorias commentarium,"grc,lat",70337,urn:cts:greekLit:tlg4020.tlg002.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4020.tlg002.opp-grc1:1-2/
+890,David the Invincible,Prolegomena philosophiae,"grc,lat",38884,urn:cts:greekLit:tlg4021.tlg001.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4021.tlg001.opp-grc1:1/
+891,David the Invincible,In Porphyrii isagogen commentarium,"grc,lat",63062,urn:cts:greekLit:tlg4021.tlg002.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4021.tlg002.opp-grc1:1-3/
+892,Agathias Scholasticus,Historiae,"grc,lat",75008,urn:cts:greekLit:tlg4024.tlg001.opp-grc2,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4024.tlg001.opp-grc2:1.praef/
+893,Agathias Scholasticus,Historiae,lat,54267,urn:cts:greekLit:tlg4024.tlg001.opp-lat1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4024.tlg001.opp-lat1:1.praef/
+894,Agathias Scholasticus,Epigrammata,"grc,lat",6632,urn:cts:greekLit:tlg4024.tlg002.opp-grc12,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4024.tlg002.opp-grc12:pr-4/
+895,Anonymi in Aristotelis Categorias,Paraphrasis categoriarum,"grc,lat",41877,urn:cts:greekLit:tlg4027.tlg001.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4027.tlg001.opp-grc1:preface-4/
+896,Sophonias,In Aristotelis Libros De Anima Paraphrasis,"grc,lat",76805,urn:cts:greekLit:tlg4030.tlg001.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4030.tlg001.opp-grc1:1.1-1.2/
+897,Eustratius,In Aristotelis Ethica Nicomachea I Commentaria,"grc,lat",284195,urn:cts:greekLit:tlg4031.tlg002.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4031.tlg002.opp-grc1:1-5/
+898,Anonymi In Aristotelis Ethica Nicomachea,In ethica Nicomachea paraphrasis,"grc,lat",103435,urn:cts:greekLit:tlg4033.tlg003.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4033.tlg003.opp-grc1:1-5/
+899,Michael Ephesius,In parva naturalia commentaria,"grc,lat",69351,urn:cts:greekLit:tlg4034.tlg002.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4034.tlg002.opp-grc1:1-5/
+900,Michaelis Ephesius,In libros de partibus animalium,"grc,lat,deu,fre",47085,urn:cts:greekLit:tlg4034.tlg003.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4034.tlg003.opp-grc1:1-4/
+901,Michaelis Ephesius,In Librum De Animalium Motione Commentarium,"grc,lat,deu,French",13147,urn:cts:greekLit:tlg4034.tlg004.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4034.tlg004.opp-grc1:1/
+902,Michaelis Ephesius,In Librum De Animalium Incessu Commentarium,"grc,lat,deu,French",17338,urn:cts:greekLit:tlg4034.tlg005.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4034.tlg005.opp-grc1:1/
+903,Michael Ephesius,In Librum Quintum Ethicorum Nicomacheorum Commentarium,"grc,lat,deu",34622,urn:cts:greekLit:tlg4034.tlg006.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4034.tlg006.opp-grc1:1/
+904,Proclus Diadochus,In Platonis Rem Publicam Commentarii,"grc,lat,deu",201506,urn:cts:greekLit:tlg4036.tlg001.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4036.tlg001.opp-grc1:1-5/
+905,Eutocius,Commentarii in libros de sphaera et cylindro,"grc,lat,fre",29747,urn:cts:greekLit:tlg4072.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4072.tlg001.1st1K-grc1:1-5/
+906,Eutocius,Commentarius in dimensionem circuli,"grc,lat,fre",3986,urn:cts:greekLit:tlg4072.tlg002.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4072.tlg002.1st1K-grc1:1.1/
+907,Eutocius,Commentarius in libros de planorum aequilibriis,"grc,lat,fre",7275,urn:cts:greekLit:tlg4072.tlg003.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4072.tlg003.1st1K-grc1:1.1-1.2/
+908,Marinus,Commentarium in Euclidis data,"grc,lat",2939,urn:cts:greekLit:tlg4075.tlg002.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4075.tlg002.1st1K-grc1:1/
+909,Zosimus,Historia Nova,"grc,lat",62232,urn:cts:greekLit:tlg4084.tlg001.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4084.tlg001.opp-grc1:1.1.1-1.1.2/
+910,"Theodoret, Bishop of Cyrus",Historia Ecclesiastica,"grc,lat",68026,urn:cts:greekLit:tlg4089.tlg003.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4089.tlg003.1st1K-grc1:1.praef/
+911,Theodoretus,Historia ecclesiastica,"grc,lat,deu,fre",130592,urn:cts:greekLit:tlg4089.tlg003.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4089.tlg003.opp-grc1:1.1.1-1.1.4/
+912,"Theodoret, Bishop of Cyrus",Historia Religiosa,"grc,lat",44608,urn:cts:greekLit:tlg4089.tlg004.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4089.tlg004.1st1K-grc1:prologos-4/
+913,Cyrillus Alexandrinus,In XII Prophetas,"grc,lat",424307,urn:cts:greekLit:tlg4090.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4090.tlg001.1st1K-grc1:hosea.praefatio.1-hosea.praefatio.5/
+914,Cyrillus Archiepiscopus Alexandrinus,Preface In XII Prophetas,"grc,lat",3154,urn:cts:greekLit:tlg4090.tlg001.1st1K-lat1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4090.tlg001.1st1K-lat1:1-5/
+915,Philip Edward Pusey,Citatorum In Cyrilli In XII Prophetas,"grc,lat",126,urn:cts:greekLit:tlg4090.tlg001.1st1K-lat2,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4090.tlg001.1st1K-lat2:1-5/
+916,Philip Edward Pusey,Index In Cyrilli In XII Prophetas,lat,20052,urn:cts:greekLit:tlg4090.tlg001.1st1K-lat3,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4090.tlg001.1st1K-lat3:1-5/
+917,Catenae (Novum Testamentum),Catena In Matthaeum,"grc,lat",78153,urn:cts:greekLit:tlg4102.tlg001.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4102.tlg001.opp-grc1:toc-2/
+918,Catenae (Novum Testamentum),Catena In Marcum,"grc,lat",57578,urn:cts:greekLit:tlg4102.tlg002.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4102.tlg002.opp-grc1:toc-2/
+919,Catenae (Novum Testamentum),Supplementum et varietas lectionis ad commentarium Chrysostomi in evangelium sancti Matthaei,"grc,lat",12058,urn:cts:greekLit:tlg4102.tlg003.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4102.tlg003.opp-grc1:3.5.13-3.5.18/
+920,Catenae (Novum Testamentum),Catena In Lucam,"grc,lat",50565,urn:cts:greekLit:tlg4102.tlg004.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4102.tlg004.opp-grc1:toc-3/
+921,Catenae (Novum Testamentum),Catena In Joannem,"grc,lat",74705,urn:cts:greekLit:tlg4102.tlg005.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4102.tlg005.opp-grc1:toc-3/
+922,Catenae (Novum Testamentum),Supplementum Et Varietas Lectionis Ad Catenam In Evangelium sancti Lucae,"grc,lat",3106,urn:cts:greekLit:tlg4102.tlg006.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4102.tlg006.opp-grc1:2.6.1/
+923,Catenae (Novum Testamentum),Supplementum Et Varietas Lectionis Ad Catenam In Evangelium,"grc,lat",3653,urn:cts:greekLit:tlg4102.tlg007.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4102.tlg007.opp-grc1:1.178.9-1.178.31/
+924,Catenae (Novum Testamentum),Catena In Acta,"grc,lat",120230,urn:cts:greekLit:tlg4102.tlg008.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4102.tlg008.opp-grc1:praef-4/
+925,Catenae (Novum Testamentum),Catena In Epistulam Ad Romanos (typus Vaticanus),"grc,lat",49578,urn:cts:greekLit:tlg4102.tlg010.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4102.tlg010.opp-grc1:praef-3/
+926,Catenae (Novum Testamentum),Catena In Epistulam Ad Romanos (typus Monacensis),"grc,lat",114936,urn:cts:greekLit:tlg4102.tlg011.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4102.tlg011.opp-grc1:7.7.verse-7.7.4/
+927,Catenae (Novum Testamentum),Catena In Epistulam I Ad Corinthios,"grc,grc",105825,urn:cts:greekLit:tlg4102.tlg012.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4102.tlg012.opp-grc1:hyp-2/
+928,Catenae (Novum Testamentum),Catena In Epistulam II Ad Corinthios,"grc,lat",34412,urn:cts:greekLit:tlg4102.tlg013.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4102.tlg013.opp-grc1:praef-3/
+929,Catenae (Novum Testamentum),Catena In Epistulam Ad Galatas,"grc,lat",27259,urn:cts:greekLit:tlg4102.tlg019.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4102.tlg019.opp-grc1:hyp-2/
+930,Catenae (Novum Testamentum),Catena In Epistulam Ad Ephesios,"grc,lat",38779,urn:cts:greekLit:tlg4102.tlg020.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4102.tlg020.opp-grc1:hyp-3/
+931,Catenae (Novum Testamentum),Catena In Epistulam Ad Philippenses,"grc,lat",18635,urn:cts:greekLit:tlg4102.tlg021.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4102.tlg021.opp-grc1:hyp-2/
+932,Catenae (Novum Testamentum),Catena In Epistulam Ad Colossenses,"grc,lat",13775,urn:cts:greekLit:tlg4102.tlg022.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4102.tlg022.opp-grc1:hyp-2/
+933,Catenae (Novum Testamentum),Catena In Epistulam I Ad Thessalonicenses,"grc,lat",9699,urn:cts:greekLit:tlg4102.tlg023.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4102.tlg023.opp-grc1:hyp-3/
+934,Catenae (Novum Testamentum),Catena In Epistulam II Ad Thessalonicenses,"grc,lat",9616,urn:cts:greekLit:tlg4102.tlg024.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4102.tlg024.opp-grc1:hyp-2/
+935,>Catenae (Novum Testamentum),Catena In Epistulam I Ad Timotheum,"grc,lat",13958,urn:cts:greekLit:tlg4102.tlg034.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4102.tlg034.opp-grc1:pr-3/
+936,Catenae (Novum Testamentum),Catena In Epistulam II Ad Timotheum,"grc,lat",7952,urn:cts:greekLit:tlg4102.tlg035.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4102.tlg035.opp-grc1:hyp-2/
+937,Catenae (Novum Testamentum),Catena In Epistulam Ad Titum,"grc,lat",4544,urn:cts:greekLit:tlg4102.tlg036.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4102.tlg036.opp-grc1:hyp-2/
+938,Catenae (Novum Testamentum),Catena In Epistulam Ad Philemonem,"grc,lat",2186,urn:cts:greekLit:tlg4102.tlg037.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4102.tlg037.opp-grc1:hyp-2/
+939,Catenae (Novum Testamentum),Catena In Epistulam Ad Hebraeos,"grc,lat",153670,urn:cts:greekLit:tlg4102.tlg038.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4102.tlg038.opp-grc1:hyp-3/
+940,Catenae (Novum Testamentum),Catena In Epistulam Jacobi,grc,10937,urn:cts:greekLit:tlg4102.tlg040.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4102.tlg040.opp-grc1:hyp-4/
+941,Catenae (Novum Testamentum),Catena In Epistulam Petri I,"grc,lat",11631,urn:cts:greekLit:tlg4102.tlg041.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4102.tlg041.opp-grc1:praef-4/
+942,Catenae (Novum Testamentum),Catena In Epistulam Petri II,"grc,lat",5284,urn:cts:greekLit:tlg4102.tlg042.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4102.tlg042.opp-grc1:hyp-4/
+943,Catenae (Novum Testamentum),Catena In Epistulam Joannis I,"grc,lat",11683,urn:cts:greekLit:tlg4102.tlg043.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4102.tlg043.opp-grc1:hyp-4/
+944,Catenae (Novum Testamentum),Catena In Epistulam Joannis II,"grc,lat",658,urn:cts:greekLit:tlg4102.tlg044.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4102.tlg044.opp-grc1:hyp-2/
+945,Catenae (Novum Testamentum),Catena In Epistulam Joannis III,"grc,lat",926,urn:cts:greekLit:tlg4102.tlg045.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4102.tlg045.opp-grc1:hyp-3/
+946,Catenae (Novum Testamentum),Catena In Epistulam Juda,"grc,lat",4915,urn:cts:greekLit:tlg4102.tlg046.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4102.tlg046.opp-grc1:1.1/
+947,Catenae (Novum Testamentum),Prooemium Pseudo-Oecumenii In Apocalypsin Commentarii,grc,876,urn:cts:greekLit:tlg4102.tlgX01.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4102.tlgX01.opp-grc1:1/
+948,Catenae (Novum Testamentum),Commentarius In Apocalypsin,grc,97087,urn:cts:greekLit:tlg4102.tlgX02.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4102.tlgX02.opp-grc1:toc-4/
+949,Catenae (Novum Testamentum),Commentarius In Apocalypsin,grc,23735,urn:cts:greekLit:tlg4102.tlgX03.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4102.tlgX03.opp-grc1:1.1/
+950,Vitae Pindari et varia de Pindaro,Vita Ambrosiana,"grc,lat",537,urn:cts:greekLit:tlg4170.tlg001a.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4170.tlg001a.1st1K-grc1:1-2/
+951,Vitae Pindari et varia de Pindaro,Vita Thomana et hypothesis Olympiorum,"grc,lat",539,urn:cts:greekLit:tlg4170.tlg001b.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4170.tlg001b.1st1K-grc1:1/
+952,Vitae Pindari et varia de Pindaro,Vita metrica,"grc,lat",205,urn:cts:greekLit:tlg4170.tlg001c.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4170.tlg001c.1st1K-grc1:1/
+953,Vitae Pindari et varia de Pindaro,Pentathlon et de novem lyricis,"grc,lat",188,urn:cts:greekLit:tlg4170.tlg001d.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4170.tlg001d.1st1K-grc1:1-2/
+954,Anonymous,In Dionysii periegetae orbis descriptionem,"grc,lat,deu",13141,urn:cts:greekLit:tlg4174.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4174.tlg001.1st1K-grc1:1-5/
+955,Anonymi in Aristotelis Sophisticos Elenchos,In Aristotelis sophisticos elenchos paraphrasis,"grc,lat",33087,urn:cts:greekLit:tlg4193.tlg012.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg4193.tlg012.opp-grc1:pr-4/
+956,Anonymous,Scholia in Dionysium Periegetam,"grc,lat,deu",16620,urn:cts:greekLit:tlg5019.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg5019.tlg001.1st1K-grc1:vita-7/
+957,Scholia in Euclidem,Scholia in Euclidis Data,"grc,lat",17698,urn:cts:greekLit:tlg5022.tlg002.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg5022.tlg002.1st1K-grc1:scholia.1-scholia.5/
+958,Scholia in Euclidem,Scholia in Euclidis optica (scholia vetera),"grc,lat",3826,urn:cts:greekLit:tlg5022.tlg003.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg5022.tlg003.1st1K-grc1:1-5/
+959,Scholia in Euclidem,Scholia in opticorum recensionem Theonis (scholia vetera),"grc,lat",7899,urn:cts:greekLit:tlg5022.tlg004.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg5022.tlg004.1st1K-grc1:1-5/
+960,Scholia in Euclidem,Scholia in Euclidis catoptrica (scholia vetera),"grc,lat",3546,urn:cts:greekLit:tlg5022.tlg005.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg5022.tlg005.1st1K-grc1:1-5/
+961,Scholia in Euclidem,Scholia in Euclidis phaenomena (scholia vetera),"grc,lat",5495,urn:cts:greekLit:tlg5022.tlg006.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg5022.tlg006.1st1K-grc1:pr.1-pr.2/
+962,Scholia in Euclidem,Scholia in Euclidis data et catoptrica (scholia vetera),"grc,lat",583,urn:cts:greekLit:tlg5022.tlg007.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg5022.tlg007.1st1K-grc1:1/
+963,Scholia Euripidem,Vitae Euripidis,"grc,lat",4653,urn:cts:greekLit:tlg5023.tlg010.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg5023.tlg010.1st1K-grc1:1-5/
+964,Scholia Euripidem,Scholia in Euripidis Rhesum,"grc,lat",7574,urn:cts:greekLit:tlg5023.tlg011.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg5023.tlg011.1st1K-grc1:1.1-1.2/
+965,Scholia Euripidem,Scholia in Euripidis Troiades,"grc,lat",8266,urn:cts:greekLit:tlg5023.tlg012.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg5023.tlg012.1st1K-grc1:1.1/
+966,Scholia Euripidem,Scholia in Euripidis Hippolytum,"grc,lat",43802,urn:cts:greekLit:tlg5023.tlg013.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg5023.tlg013.1st1K-grc1:1.1/
+967,Scholia Euripidem,"Scholia in Euripidis Hecubam (scholia vetera et scholia recentiora Thomae Magistri, Triclinii, Moschopuli et anonyma)","grc,lat",101695,urn:cts:greekLit:tlg5023.tlg014.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg5023.tlg014.1st1K-grc1:1.1-1.2/
+968,Scholia in Homerum,Scholia in Iliadum,"grc,lat",809510,urn:cts:greekLit:tlg5026.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg5026.tlg001.1st1K-grc1:1.1.1-1.1.5/
+969,Scholia in Homerum,Scholia in Odysseam,"grc,lat",247533,urn:cts:greekLit:tlg5026.tlg007.First1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg5026.tlg007.First1K-grc1:1.epigraph.pr-1.epigraph.2/
+970,Pindar Scholia,Scholia in Pindarum Olympian Odes,"grc,lat",67420,urn:cts:greekLit:tlg5034.tlg001a.perseus-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg5034.tlg001a.perseus-grc1:1.1-1.44/
+971,Pindar Scholia,Scholia in Pindarum Pythian Odes,"grc,lat",45611,urn:cts:greekLit:tlg5034.tlg001b.perseus-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg5034.tlg001b.perseus-grc1:1.1-1.56/
+972,Pindar Scholia,Scholia in Pindarum Nemean Odes,"grc,lat",35219,urn:cts:greekLit:tlg5034.tlg001c.perseus-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg5034.tlg001c.perseus-grc1:1.1-1.42/
+973,Pindar Scholia,Scholia in Pindarum Isthmian Odes,"grc,lat",15885,urn:cts:greekLit:tlg5034.tlg001d.perseus-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg5034.tlg001d.perseus-grc1:1.1-1.54/
+974,Scholia in Sophoclem,Scholia in Sophoclem (scholia vetera),"grc,lat",89341,urn:cts:greekLit:tlg5037.tlg004.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg5037.tlg004.1st1K-grc1:1.1-1.11/
+975,Anonymi In Aristotelis Librum Alterum Analyticorum Posteriorum,Anonymi in analyticorum posteriorum librum alterum commentarium,"grc,lat",25619,urn:cts:greekLit:tlg9004.tlg001.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg9004.tlg001.opp-grc1:1-5/
+976,,Libanius Opera,lat,7534,urn:cts:greekLit:tlg9006.tlg011.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg9006.tlg011.opp-grc1:1-5/
+977,Suda,Suidae lexicon,"grc,lat",821723,urn:cts:greekLit:tlg9010.tlg001.1st1K-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg9010.tlg001.1st1K-grc1:1.A.1a-1.A.4/
+978,Stephanus of Alexandria,In Aristotelis librum de interpretatione commentarium,"grc,lat",31310,urn:cts:greekLit:tlg9019.tlg001.opp-grc1,https://scaife.perseus.org/reader/urn:cts:greekLit:tlg9019.tlg001.opp-grc1:1-2/
