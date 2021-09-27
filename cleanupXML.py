@@ -61,5 +61,5 @@ def cleanup_XML(urn: str, save_raw_path: str = None, save_clean_path: str = None
 
 if __name__ == '__main__':
     urn = 'urn:cts:greekLit:ggm0001.ggm001.1st1K-grc1'
-    xml_text = cleanup_XML(urn=urn, save_dir_path='.')
+    xml_text = cleanup_XML(urn=urn, save_raw_path='.', save_clean_path='.')
     pprint(xml_text)
