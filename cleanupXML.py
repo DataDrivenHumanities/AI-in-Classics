@@ -39,7 +39,7 @@ def cleanup_XML(urn: str, save_raw_path: str = None, save_clean_path: str = None
         author = xml_text.substring(start,end)  
     if (xml_text.find("<title") != -1):
         start = xml_text.find("<title")
-        end = xml_text.find("</titl>") + 9 
+        end = xml_text.find("</title>") + 9 
         title = xml_text.substring(start,end)  
     if (xml_text.find("<text") != -1):
         start = xml_text.find("<text")
@@ -47,6 +47,7 @@ def cleanup_XML(urn: str, save_raw_path: str = None, save_clean_path: str = None
         text = xml_text.substring(start,end)  
     #make the new file 
     xml_new_text = "<?xml version=\"1.0\" encoding=\"UTF-8\"?> \n "
+    #need to add TEI formatting to the file still
     xml_new_text += "\t" + title + "\n \t" + author + "\n \t"  + text
     #works if code has things saved as <title> <author> and <text>
     """
