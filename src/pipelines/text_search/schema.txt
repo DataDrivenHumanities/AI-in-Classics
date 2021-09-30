@@ -1,0 +1,1 @@
+{"index": "NUMERIC(bits=64, numtype= \"int\", signed=False, sortable=True, stored=True, unique=True)", "content": "TEXT(chars=True, phrase=True, sortable=False, stored=False, analyzer=analyzer)"}
