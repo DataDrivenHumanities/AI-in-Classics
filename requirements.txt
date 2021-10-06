@@ -6,4 +6,5 @@ numpy
 pandas
 spacy
 scikit-learn
+streamlit
 termcolor
