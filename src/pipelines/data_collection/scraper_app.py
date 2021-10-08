@@ -6,8 +6,16 @@ from pprint import pprint
 import scraper
 
 # loading paths and metadata
-load_dotenv()
-METADATA_DF_PATH = os.getenv(key='METADATA_DF_PATH')
+METADATA_DF_PATH = None
+try:
+    load_dotenv()
+    METADATA_DF_PATH = os.getenv(key='METADATA_DF_PATH')
+    if METADATA_DF_PATH is None:
+        raise ValueError('METADATA_DF_PATH cannot be loaded from .env file.')
+except Exception:
+    pprint('.env exception caught.')
+    METADATA_DF_PATH = os.path.abspath(path='../text_search/metadata_df.pkl')
+
 metadata_df = pickle.load(file=open(file=METADATA_DF_PATH, mode='rb'))['metadata_df']
 
 # setting up folder to save original XML files
