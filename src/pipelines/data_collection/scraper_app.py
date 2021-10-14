@@ -1,21 +1,8 @@
-
 import numpy as np, os, pickle, streamlit as st
-from dotenv import load_dotenv
-from pprint import pprint
-
 import scraper
 
 # loading paths and metadata
-METADATA_DF_PATH = None
-try:
-    load_dotenv()
-    METADATA_DF_PATH = os.getenv(key='METADATA_DF_PATH')
-    if METADATA_DF_PATH is None:
-        raise ValueError('METADATA_DF_PATH cannot be loaded from .env file.')
-except Exception:
-    pprint('.env exception caught.')
-    METADATA_DF_PATH = os.path.abspath(path='../text_search/metadata_df.pkl')
-
+METADATA_DF_PATH = 'metadata_df.pkl'
 metadata_df = pickle.load(file=open(file=METADATA_DF_PATH, mode='rb'))['metadata_df']
 
 # setting up folder to save original XML files
@@ -35,8 +22,8 @@ st.write(metadata_df)
 index_range = st.slider(
     label='Index Range',
     min_value=0,
-    max_value=1000,
-    value=(0, 1000)
+    max_value=len(metadata_df.index) - 1,
+    value=(0, len(metadata_df.index) - 1)
 )
 
 if st.button(label='Scrape'):
