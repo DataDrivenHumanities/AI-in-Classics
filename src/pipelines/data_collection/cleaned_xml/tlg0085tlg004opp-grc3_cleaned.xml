@@ -1,0 +1,69 @@
+
+    <teiheader xml:lang="eng">
+        <title xml:lang="">\xe1\xbc\x99\xcf\x80\xcf\x84\xe1\xbd\xb0 \xe1\xbc\x90\xcf\x80\xe1\xbd\xb6 \xce\x98\xce\xae\xce\xb2\xce\xb1\xcf\x82</title>
+        <author>Aeschylus</author>
+    </teiheader>
+    <text>
+        
+         
+    
+<div type="textpart" subtype="anapests" n="1">
+
+          <sp>
+            <speaker>Χορος</speaker>
+            <l n="822">ὦ μεγάλε Ζεῦ καὶ πολιοῦχοι<note place="unspecified"><foreign xml:lang="grc">πολιοῦχοι</foreign> Pauw: <foreign xml:lang="grc">πολισσοῦχοι</foreign> codd.</note></l>
+            <l n="823">δαίμονες, οἳ δὴ Κάδμου πύργους<note place="unspecified"><foreign xml:lang="grc">δαίμονες οἳ δὴ</foreign> | <foreign xml:lang="grc">Κάδμου πύργους ἐρύεσθε</foreign> (<foreign xml:lang="grc">τούσδε</foreign> secluso) Heimsoeth</note></l>
+            <l n="824">τούσδε ῥύεσθε,</l>
+            <l n="825">πότερον χαίρω κἀπολολύξω</l>
+            <l n="826">πόλεως ἀσινεῖ †σωτῆρι . .,<note place="unspecified">deest x_</note></l>
+            <l n="827">ἢ τοὺς μογεροὺς καὶ δυσδαίμονας</l>
+            <l n="828">ἀτέκνους κλαύσω πολεμάρχους;</l>
+            <l n="829">οἳ δῆτ᾽ ὀρθῶς κατ᾽ ἐπωνυμίαν</l>
+            <l n="830">καὶ<note place="unspecified">lacunam ante <foreign xml:lang="grc">καὶ</foreign> suspicantur edd. fortasse iniuria</note> πολυνεικεῖς</l>
+            <l n="831">ὤλοντ᾽ ἀσεβεῖ διανοίᾳ.</l>
+            <milestone ed="p" n="832" unit="card"/>
+          </sp>
+        
+</div>
+
+<div type="textpart" subtype="anapests" n="2">
+
+          <sp>
+            <speaker>Χορος</speaker>
+            <l part="Y">φεῦ φεῦ.</l>
+            <l n="1059">ὦ μεγάλαυχοι καὶ φθερσιγενεῖς</l>
+            <l n="1060">Κῆρες Ἐρινύες, αἵτ᾽ Οἰδιπόδα</l>
+            <l n="1061">γένος ὠλέσατε πρυμνόθεν οὕτως,</l>
+            <l n="1062">τί πάθω; τί δὲ δρῶ;<note place="unspecified"><foreign xml:lang="grc">δὲ δρῶ</foreign>; recc.: <foreign xml:lang="grc">δ᾽ ἐρῶ</foreign> M</note> τί δὲ μήσωμαι;</l>
+            <l n="1063">πῶς τολμήσω μήτε σὲ κλαίειν</l>
+            <l n="1064">μήτε προπέμπειν ἐπὶ τύμβον;<note place="unspecified"><foreign xml:lang="grc">τύμβον</foreign> recc. aliquot: <foreign xml:lang="grc">τύμβῳ</foreign> M codd. cett.</note></l>
+            <l n="1065">ἀλλὰ φοβοῦμαι κἀποτρέπομαι</l>
+            <l n="1066">δεῖμα πολιτῶν.</l>
+            <l n="1067">σύ γε μὴν πολλῶν πενθητήρων</l>
+            <l n="1068">τεύξει: κεῖνος δ᾽ ὁ τάλας ἄγοος</l>
+            <l n="1069">μονόκλαυτον ἔχων θρῆνον<note place="unspecified"><foreign xml:lang="grc">θρῆνον</foreign> recc.: <foreign xml:lang="grc">θρῆνος</foreign> M</note> ἀδελφῆς</l>
+            <l n="1070">εἶσιν: τίς ἂν οὖν τὰ πίθοιτο;<note place="unspecified"><foreign xml:lang="grc">πίθοιτο</foreign> recc. pauci: <foreign xml:lang="grc">πείθοιτο</foreign> M cett.</note></l>
+          </sp>
+          <sp>
+            <speaker>Ημιχοριον</speaker>
+            <l n="1071">δράτω &lt;τι&gt;<note place="unspecified"><foreign xml:lang="grc">τι</foreign> add. anon.: <foreign xml:lang="grc">τε</foreign> add. Canter</note> πόλις καὶ μὴ δράτω<note place="unspecified">post 1084 in M subscriptum: <foreign xml:lang="grc">αἰσχύλου ζ ἐπιθήβας τέλος</foreign></note></l>
+            <l n="1072">τοὺς κλαίοντας Πολυνείκη.</l>
+            <l n="1073">ἡμεῖς μὲν ἴμεν καὶ συνθάψομεν</l>
+            <l n="1074">αἵδε προπομποί.</l>
+            <l n="1075">καὶ γὰρ γενεᾷ κοινὸν τόδ᾽ ἄχος,</l>
+            <l n="1076">καὶ πόλις ἄλλως</l>
+            <l n="1077">ἄλλοτ᾽ ἐπαινεῖ τὰ δίκαια.</l>
+          </sp>
+          <sp>
+            <speaker>Ημιχοριον</speaker>
+            <l n="1078">ἡμεῖς δ᾽ ἅμα τῷδ᾽, ὥσπερ τε πόλις</l>
+            <l n="1079">καὶ τὸ δίκαιον ξυνεπαινεῖ.</l>
+            <l n="1080">μετὰ γὰρ μάκαρας καὶ Διὸς ἰσχὺν</l>
+            <l n="1081">ὅδε Καδμείων ἤρυξε πόλιν</l>
+            <l n="1082">μὴ ʼνατραπῆναι μηδ᾽ ἀλλοδαπῶν</l>
+            <l n="1083">κύματι φωτῶν</l>
+            <l n="1084">κατακλυσθῆναι τὰ μάλιστα.</l>
+          </sp>
+        
+</div>
+</text>
