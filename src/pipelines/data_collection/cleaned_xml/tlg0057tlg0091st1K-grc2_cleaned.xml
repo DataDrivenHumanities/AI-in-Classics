@@ -10,7 +10,6 @@
 <div type="textpart" subtype="book" n="1">
 
                     <div type="textpart" subtype="chapter" n="1">
-                        <milestone unit="ed1page" n="509"/>
                         ΓΑΛΗΝΟΥ ΠΕΡΙ ΚΡΑΣΕΩΝ <lb/>ΒΙΒΛΙΟΝ ΠΡΩΤΟΝ
                         
 <p>
@@ -272,7 +271,7 @@
 
                     </div>
                     <div type="textpart" subtype="chapter" n="4">
-                        <milestone unit="ed1page" n="524"/>
+                       
                         
 <p>
 Τὸ δέ γε νῦν ἔχον πειράσομαι πρῶτον ἐνδείξασθαι
@@ -532,7 +531,7 @@
 
                     </div>
                     <div type="textpart" subtype="chapter" n="6">
-                        <milestone unit="lineno" n="10"/>
+                        
                         
 <p>
 Λέλεκται μὲν οὖν ἐπὶ πλεῖστον ἡμῖν ὑπὲρ
@@ -900,7 +899,7 @@
 
                     </div>
                     <div type="textpart" subtype="chapter" n="9">
-                        <milestone unit="lineno" n="5"/>
+                      
                         
 <p>
 Ἐν ἑκάστῃ δὲ τῶν εἰρημένων κράσεων τὸ
@@ -1110,8 +1109,7 @@
 <div type="textpart" subtype="book" n="2">
 
                     <div type="textpart" subtype="chapter" n="1">
-                        ΓΑΛΗΝΟΥ ΠΕΡΙ ΚΡΑΣΕΩΝ <lb/>ΒΙΒΛΙΟΝ ΔΕΥΤΕΡΟΝ
-                        <lb/>
+                        ΓΑΛΗΝΟΥ ΠΕΡΙ ΚΡΑΣΕΩΝ 
                         
 <p>
 Ὅτι μὲν δὴ τῶν πολλαχῶς λεγομένων ἐστὶν ὑγρόν
@@ -1200,7 +1198,7 @@
 
                     </div>
                     <div type="textpart" subtype="chapter" n="2">
-                        <milestone unit="lineno" n="10"/>
+                        
                         
 <p>
 Ἐπεὶ δὲ καὶ τῆς κατὰ τὰς ἡλικίας αὐτοῦ διαφορᾶς
@@ -1987,7 +1985,6 @@
                     <pb n="71"/>
 
                     <div type="textpart" subtype="chapter" n="6">
-                        <milestone unit="ed1page" n="622"/>
                         
 <p>
 Ἀκριβῶς δὲ χρὴ προσέχειν τῷ λεγομένῳ τὸν
@@ -2402,9 +2399,7 @@
 <div type="textpart" subtype="book" n="3">
 
                     <div type="textpart" subtype="chapter" n="1">
-                        ΓΑΛΗΝΟΥ ΠΕΡΙ ΚΡΑΣΕΩΝ <lb/>ΒΙΒΛΙΟΝ ΤΡΙΤΟΝ
-                        <lb/>
-                        <milestone unit="ed1page" n="646"/>
+                        ΓΑΛΗΝΟΥ ΠΕΡΙ ΚΡΑΣΕΩΝ 
                         
 <p>
 Ὅτι μὲν οὖν ἕκαστον τῶν ἐνεργείᾳ θερμῶν καὶ
