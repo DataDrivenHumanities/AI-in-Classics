@@ -1,7 +1,7 @@
 
     <teiheader xml:lang="eng">
         <title xml:lang="">De anatomicis administrationibus</title>
-        <author>Galen</author>
+        <author>Galen</author>f
     </teiheader>
     <text>
         
@@ -10,8 +10,8 @@
 <div type="textpart" subtype="book" n="1">
 
                     <div type="textpart" subtype="chapter" n="1">
-                        ΓΑΛΗΝΟΥ ΠΕΡΙ ΑΝΑΤΟΜΙΚΩΝ ΕΓΧΕΙΡΗΣΕΩΝ <lb/>ΤΩΝ ΣΩΖΟΜΕΝΩΝ ΒΙΒΛΙΑ
-                            <lb/>ΕΝΝΕΑ. <lb/>ΒΙΒΛΙΟΝ Α.
+                        ΓΑΛΗΝΟΥ ΠΕΡΙ ΑΝΑΤΟΜΙΚΩΝ ΕΓΧΕΙΡΗΣΕΩΝ ΤΩΝ ΣΩΖΟΜΕΝΩΝ ΒΙΒΛΙΑ
+                            ΕΝΝΕΑ. ΙΒΛΙΟΝ Α.
                         
 <p>
 Ἀνατομικὰς ἐγχειρήσεις ἔγραψα μὲν καὶ
@@ -804,7 +804,6 @@
 </p>
 
                     </div>
-                    <pb n="257"/>
 
                     <div type="textpart" subtype="chapter" n="7">
                         
@@ -1250,7 +1249,7 @@
 <div type="textpart" subtype="book" n="2">
 
                     <div type="textpart" subtype="chapter" n="1">
-                        ΓΑΛΗΝΟΥ ΠΕΡΙ ΑΝΑΤΟΜΙΚΩΝ <lb/>ΕΓΧΕΙΡΗΣΕΩΝ <lb/>ΒΙΒΛΙΟΝ Β.
+                        ΓΑΛΗΝΟΥ ΠΕΡΙ ΑΝΑΤΟΜΙΚΩΝ ΕΓΧΕΙΡΗΣΕΩΝ ΒΙΒΛΙΟΝ Β.
                         
 <p>
 Οὔτε τοῖς παλαιοῖς μέμφομαι μὴ γράψασιν
@@ -1472,8 +1471,7 @@
 </p>
 
                     </div>
-                    <pb n="292"/>
-
+               
                     <div type="textpart" subtype="chapter" n="4">
                         
 <p>
@@ -1669,7 +1667,7 @@
 </p>
 
                     </div>
-                    <pb n="302"/>
+              
 
                     <div type="textpart" subtype="chapter" n="5">
                         
@@ -1749,7 +1747,7 @@
 </p>
 
                     </div>
-                    <pb n="306"/>
+                  
 
                     <div type="textpart" subtype="chapter" n="6">
                         
@@ -2056,7 +2054,7 @@
 </p>
 
                     </div>
-                    <pb n="322"/>
+                  
 
                     <div type="textpart" subtype="chapter" n="8">
                         
@@ -2406,7 +2404,7 @@
 <div type="textpart" subtype="book" n="3">
 
                     <div type="textpart" subtype="chapter" n="1">
-                        ΓΑΛΗΝΟΥ ΠΕΡΙ ΑΝΑΤΟΜΙΚΩΝ <lb/>ΕΓΧΕΙΡΗΣΕΩΝ <lb/>ΒΙΒΛΙΟΝ Γ.
+                        ΓΑΛΗΝΟΥ ΠΕΡΙ ΑΝΑΤΟΜΙΚΩΝ ΕΓΧΕΙΡΗΣΕΩΝ ΒΙΒΛΙΟΝ Γ.
                         
 <p>
 Ὅσοι μὲν οὖν ἀμελοῦντες τῶν ἔργων τῆς
@@ -3366,7 +3364,7 @@
 </p>
 
                     </div>
-                    <pb n="391"/>
+              
 
                     <div type="textpart" subtype="chapter" n="8">
                         
@@ -3842,7 +3840,7 @@
 <div type="textpart" subtype="book" n="4">
 
                     <div type="textpart" subtype="chapter" n="1">
-                        ΓΑΛΗΝΟΥ ΠΕΡΙ ΑΝΑΤΟΜΙΚΩΝ <lb/>ΕΓΧΕΙΡΗΣΕΩΝ <lb/>ΒΙΒΛΙΟΝ Δ.
+                        ΓΑΛΗΝΟΥ ΠΕΡΙ ΑΝΑΤΟΜΙΚΩΝΕΓΧΕΙΡΗΣΕΩΝ ΒΙΒΛΙΟΝ Δ.
                         
 <p>
 Ἐν μὲν τῇ περὶ χρείας μορίων πραγματείᾳ
@@ -4215,7 +4213,7 @@
 </p>
 
                     </div>
-                    <pb n="435"/>
+                   
 
                     <div type="textpart" subtype="chapter" n="4">
                         
@@ -4932,7 +4930,7 @@
 </p>
 
                     </div>
-                    <pb n="472"/>
+      
 
                     <div type="textpart" subtype="chapter" n="11">
                         
@@ -4986,7 +4984,7 @@
 <div type="textpart" subtype="book" n="5">
 
                     <div type="textpart" subtype="chapter" n="1">
-                        ΓΑΛΗΝΟΥ ΠΕΡΙ ΑΝΑΤΟΜΙΚΩΝ <lb/>ΕΓΧΕΙΡΗΣΕΩΝ <lb/>ΒΙΒΛΙΟΝ Ε.
+                        ΓΑΛΗΝΟΥ ΠΕΡΙ ΑΝΑΤΟΜΙΚΩΝ ΕΓΧΕΙΡΗΣΕΩΝ ΒΙΒΛΙΟΝ Ε.
                         
 <p>
 Ἐφεξῆς δ’ ἂν εἴη τοῖς εἰρημένοις τὰς
@@ -5278,7 +5276,7 @@
 </p>
 
                     </div>
-                    <pb n="491"/>
+                
 
                     <div type="textpart" subtype="chapter" n="3">
                         
@@ -6072,7 +6070,7 @@
 <div type="textpart" subtype="book" n="6">
 
                     <div type="textpart" subtype="chapter" n="1">
-                        ΓΑΛΗΝΟΥ ΠΕΡΙ ΑΝΑΤΟΜΙΚΩΝ <lb/>ΕΓΧΕΙΡΗΣΕΩΝ <lb/>ΒΙΒΛΙΟΝ Ζ.
+                        ΓΑΛΗΝΟΥ ΠΕΡΙ ΑΝΑΤΟΜΙΚΩΝ ΕΓΧΕΙΡΗΣΕΩΝ ΒΙΒΛΙΟΝ Ζ.
                         
 <p>
 Ἐπειδὴ κατὰ τὴν αὐτὴν τάξιν ἔδοξεν ἄμεινον
@@ -6519,7 +6517,7 @@
 </p>
 
                     </div>
-                    <pb n="556"/>
+                
 
                     <div type="textpart" subtype="chapter" n="5">
                         
@@ -7183,7 +7181,7 @@
 <div type="textpart" subtype="book" n="7">
 
                     <div type="textpart" subtype="chapter" n="1">
-                        ΓΑΛΗΝΟΥ ΠΕΡΙ ΑΝΑΤΟΜΙΚΩΝ <lb/>ΕΓΧΕΙΡΗΣΕΩΝ <lb/>ΒΙΒΛΙΟΝ Η.
+                        ΓΑΛΗΝΟΥ ΠΕΡΙ ΑΝΑΤΟΜΙΚΩΝ ΕΓΧΕΙΡΗΣΕΩΝ ΒΙΒΛΙΟΝ Η.
                         
 <p>
 Πρόκειται μὲν ἐν τῷδε τῷ γράμματι διελθεῖν,
@@ -8394,7 +8392,7 @@
 <div type="textpart" subtype="book" n="8">
 
                     <div type="textpart" subtype="chapter" n="1">
-                        ΓΑΛΗΝΟΥ ΠΕΡΙ ΑΝΑΤΟΜΙΚΩΝ <lb/>ΕΓΧΕΙΡΗΣΕΩΝ <lb/>ΒΙΒΛΙΟΝ Θ.
+                        ΓΑΛΗΝΟΥ ΠΕΡΙ ΑΝΑΤΟΜΙΚΩΝ ΕΓΧΕΙΡΗΣΕΩΝ ΒΙΒΛΙΟΝ Θ.
                         
 <p>
 Ἔστι μὲν ἔτι καὶ τοῦτο τὸ βιβλίον ἀνατομικὰς
@@ -8580,7 +8578,7 @@
 </p>
 
                     </div>
-                    <pb n="661"/>
+              
 
                     <div type="textpart" subtype="chapter" n="3">
                         
@@ -8698,7 +8696,7 @@
 </p>
 
                     </div>
-                    <pb n="667"/>
+          
 
                     <div type="textpart" subtype="chapter" n="4">
                         
