@@ -10,7 +10,7 @@
 <div type="textpart" subtype="book" n="1">
 
 					<div type="textpart" subtype="chapter" n="1">
-						ΓΑΛΗΝΟΥ ΠΕΡΙ ΣΠΕΡΜΑΤΟΣ <lb/>ΒΙΒΛΙΟΝ Α.
+						ΓΑΛΗΝΟΥ ΠΕΡΙ ΣΠΕΡΜΑΤΟΣ ΒΙΒΛΙΟΝ Α.
 						
 <p>
 Τίς ἡ χρεία καὶ τίς ἡ δύναμίς ἐστι τοῦ
@@ -162,7 +162,6 @@
 </p>
 
 					</div>
-					<pb n="520"/>
 
 					<div type="textpart" subtype="chapter" n="4">
 						
@@ -1337,7 +1336,6 @@
 </p>
 
 					</div>
-					<pb n="582"/>
 
 					<div type="textpart" subtype="chapter" n="16">
 						
@@ -1529,11 +1527,11 @@
 
 				
 </div>
-
+	    </div>
 <div type="textpart" subtype="book" n="2">
 
 					<div type="textpart" subtype="chapter" n="1">
-						ΓΑΛΗΝΟΥ ΠΕΡΙ ΣΠΕΡΜΑΤΟΣ <lb/>ΒΙΒΛΙΟΝ Β.
+						ΓΑΛΗΝΟΥ ΠΕΡΙ ΣΠΕΡΜΑΤΟΣ ΒΙΒΛΙΟΝ Β.
 						
 <p>
 Ἑξῆς δ’ ἂν εἴη λεκτέον ὑπὲρ τοῦ τῆς θηλείας
@@ -2025,7 +2023,6 @@
 </p>
 
 					</div>
-					<pb n="620"/>
 
 					<div type="textpart" subtype="chapter" n="4">
 						
@@ -2139,7 +2136,6 @@
 </p>
 
 					</div>
-					<pb n="626"/>
 
 					<div type="textpart" subtype="chapter" n="5">
 						
@@ -2597,4 +2593,5 @@
 
 				
 </div>
+	    </div>
 </text>
