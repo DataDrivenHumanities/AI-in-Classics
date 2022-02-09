@@ -10,7 +10,7 @@
 <div type="textpart" subtype="book" n="1">
 
                     <div type="textpart" subtype="chapter" n="1">
-                        ΓΑΛΗΝΟΥ ΠΕΡΙ ΔΙΑΦΟΡΑΣ ΠΥΡΕΤΩΝ <lb/>ΒΙΒΛΙΟΝ ΠΡΩΤΟΝ.
+                        ΓΑΛΗΝΟΥ ΠΕΡΙ ΔΙΑΦΟΡΑΣ ΠΥΡΕΤΩΝ ΒΙΒΛΙΟΝ ΠΡΩΤΟΝ.
                         
 <p>
 Αἱ διαφοραὶ τῶν πυρετῶν αἱ μὲν οἰκειόταται
@@ -555,8 +555,6 @@
 </p>
 
                     </div>
-                    <pb n="301"/>
-
                     <div type="textpart" subtype="chapter" n="8">
                         
 <p>
@@ -1192,7 +1190,6 @@
 
                     </div>
                 
-</div>
 
 <div type="textpart" subtype="book" n="2">
 
@@ -2565,8 +2562,6 @@
 </p>
 
                     </div>
-                    <pb n="401"/>
-
                     <div type="textpart" subtype="chapter" n="18">
                         
 <p>
@@ -2655,7 +2650,6 @@
 πάθωσιν.
 </p>
 
-                    </div>
                 
 </div>
 </text>
