@@ -20,8 +20,10 @@ def findDiv (templatePath: str, temWritePath: str, filePath: str):
 
 def findElements(root: ET.Element, tTree: ET.ElementTree, index: list, isBody: bool = False):
     # do whatever you want with root here
-    if (isBody & (root.text is not None) & (root.text != "\n\t\t")):
-        writePath(tTree, index, root.text)
+    if (isBody & (root.text is not None)):
+        if (len(set(root.text) - {" ", "\n","\t"}) > 0): # if text contains letters other than tab or space
+            writePath(tTree, index, root.text)
+    
     if (root.tag == '{http://www.tei-c.org/ns/1.0}body'):
         isBody = True
     # recurse
@@ -88,4 +90,4 @@ def writeFile(tTree: ET.ElementTree, temWritePath: str):
         f.seek(0, 0)
         f.write(line.rstrip('\r\n') + '\n' + content)
 
-findDiv(templatePath= "template.xml", temWritePath= "TestTemplate1.xml", filePath= "Test2.xml")
+findDiv(templatePath= "template.xml", temWritePath= "C://Users//morga//source//repos//Research//TestTemplate1.xml", filePath= "C:\\Users\\morga\\source\\repos\\Research\\Test2.xml")
