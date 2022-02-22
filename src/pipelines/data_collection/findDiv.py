@@ -14,7 +14,7 @@ def findDiv (templatePath: str, temWritePath: str, filePath: str):
     addDescrip(root, tTree)
     # find each div tag here
     findElements(root, tTree, [], False)
-    #do this last to save changes
+    #do this last to save changes\
     writeFile(tTree, temWritePath)
 
 
@@ -46,19 +46,18 @@ def writePath (tTree: ET.ElementTree, index: list, bodyText: str):
     child = ET.Element('div', {'n': strIndex}) # create new div element
     # tRoot[1][0] is location of <body> in file
     tRoot[1][0].append(child)
-    child.text = '\n\t\t' + bodyText + '\n\t\t'
+    child.text = '\n\t\t\t' + bodyText + '\n\t\t'
     child.tail = "\n\t\t"
 
 
 def addDescrip(root: ET.Element, tTree: ET.ElementTree):
     #author
-    author = "error: no author"
+    author = []
     for authors in root.iter('{http://www.tei-c.org/ns/1.0}author'):
-        author = authors.text
-        break  # gets first author only
-    if (author == "error: no author"):
-        print("author:",author)
-        return 1
+        author.append(authors.text)
+    if (len(author) == 0):
+        print("no author")
+        author = ["Unknown Author"]
     # title
     title = "error: no title"
     titleTag = "error: no lang"
@@ -72,12 +71,22 @@ def addDescrip(root: ET.Element, tTree: ET.ElementTree):
     # save variables into tree
     writeDescrip(tTree, author, title, titleTag)
 
-def writeDescrip(tTree: ET.ElementTree, t_author: str = "Unnamed", t_title: str = "Unknown", titleTag: str = ""):
+def writeDescrip(tTree: ET.ElementTree, t_author: list = ["Unknown Author"], t_title: str = "Unknown", titleTag: str = ""):
     # add author title
     tRoot = tTree.getroot()
     tRoot[0][0].text = t_title
     tRoot[0][0].attrib = titleTag
-    tRoot[0][1].text = t_author
+    i = 0
+    for author in t_author:
+        if (i == 0):
+            prevauthor = author
+        elif (prevauthor == author):
+            break
+        child = ET.Element('author', {'n': str(i)})
+        tRoot[0].append(child)
+        child.text = author
+        child.tail = "\n\t"
+        i += 1
 
 
 def writeFile(tTree: ET.ElementTree, temWritePath: str):
@@ -90,4 +99,4 @@ def writeFile(tTree: ET.ElementTree, temWritePath: str):
         f.seek(0, 0)
         f.write(line.rstrip('\r\n') + '\n' + content)
 
-findDiv(templatePath= "template.xml", temWritePath= "C://Users//morga//source//repos//Research//TestTemplate1.xml", filePath= "C:\\Users\\morga\\source\\repos\\Research\\Test2.xml")
+#findDiv(templatePath= "template.xml", temWritePath= "C://Users//morga//source//repos//Research//TestTemplate1.xml", filePath= "C:\\Users\\morga\\source\\repos\\Research\\Test2.xml")

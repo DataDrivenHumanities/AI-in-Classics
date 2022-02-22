@@ -23,4 +23,4 @@ def runDiv(templatePath: str, cleanFolder: str, ogFolder: str, limit: unsignedin
                 i += 1
 
 
-runDiv(templatePath="template.xml", cleanFolder="C:/Users/morga/source/repos/Research/cleaned_XML", ogFolder="C:/Users/morga/source/repos/Research/original_xml/Part1", limit=3)
+runDiv(templatePath="template.xml", cleanFolder="C:/Users/morga/source/repos/Research/cleaned_XML", ogFolder="C:/Users/morga/source/repos/Research/original_xml/Part1", limit=10)
