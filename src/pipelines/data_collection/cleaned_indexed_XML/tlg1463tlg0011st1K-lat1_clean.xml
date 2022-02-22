@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader xml:lang="eng">
+        <title>Apocalypsis Enochi</title>
+    <author n="0">Liber Enoch</author>
+	</teiHeader>
+    <text>
+        <body>
+        <div n="100010">
+			Factum est autem cum esset Lamech annorum tricentorum
+              quinquagenta, natus est ei filius,
+		</div>
+		<div n="100020">
+			cui oculi sunt sicut radi solis, capilli
+                autem eius candidiores in septies nive, corpori autem eius nemo homi-num 
+                potest intueri.
+		</div>
+		<div n="100030">
+			et surrexit inter manus obstetricis suae et adoravit
+                  
+		</div>
+		<div n="100040">
+			et timuit Lamech,
+		</div>
+		<div n="100050">
+			ne
+                    uon ex eo natus esset nisi nontius dei, et venit ad patrem suum Mathu-salem
+                    et narravit illi omnia.
+		</div>
+		<div n="100060">
+			dixit Mathusalem: Ego autem non possum
+                      scire nisi eamus ad patrem nostrum Enoc.
+		</div>
+		<div n="100070">
+			quum autem vidit Enoc filium 
+                        suum Mathusalem venientem ad se, et ait: Quid est quod venisti ad
+                        
+		</div>
+		<div n="100080">
+			Dixit, quod natus est &lt;filius&gt;filio suo nomine Lamech,
+                          cui oculi sunt sicut radi solis, capilli eius candidiores septies nive, corpori
+                          autem eius nemo hominum potest intueri,
+		</div>
+		<div n="100090">
+			et surrexit inter manus
+                            obstetricis suae eadem hora, qua procidit de utero matris suae, oravit
+                            
+		</div>
+		<div n="1000900">
+			2 film | 3 candiores | 5 et + James | 10 + filius | 11 capillis | 13 et adoravit
+                              James.
+		</div>
+		<div n="1000100">
+			et tirauit Lamech.
+		</div>
+		<div n="1000110">
+			et
+            dixit Enoc: Nontiatum est mihi, fili, quia post quingentos annos mittet 
+            deus cataclismum aquae, ut deleat omnem creaturam quadraginta &lt;diebus
+            sicut&gt; ostendit oculis nostris.
+		</div>
+		<div n="1000120">
+			et erunt illi tres filii, et erunt nomina 
+              
+		</div>
+		<div n="1000130">
+			et ipse vocabitur Noe, qui inter-pretatur 
+                requies, quia requiem prestabit in archam.
+		</div>
+		<div n="1000131">
+			3/4 diebus sicut + James.
+		</div>
+		</body>
+    </text>
+</TEI>

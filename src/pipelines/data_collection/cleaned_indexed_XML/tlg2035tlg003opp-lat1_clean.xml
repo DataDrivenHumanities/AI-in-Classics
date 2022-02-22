@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader xml:lang="eng">
+        <title xml:lang="lat">De decretis Nicaenae synodi (Chapters 41 and 42)</title>
+    <author n="0">Athanasius of Alexandria</author>
+	</teiHeader>
+    <text>
+        <body>
+        <div n="100000">
+			cod. Paris. Lat. 1682 (ed. Ed. Schwartz: Acta Conc. oec. IV 2 p. 102)
+Constantinus Augustus catholicae ecclesiae Nicomedensium.
+Dominum deum scilicet et salvatorem Christum suptiliter omnes cognoscitis,
+dilecti fratres, patrem et filium esse, patrem dico sine principio sine fine 
+
+		</div>
+		<div n="100010">
+			Sed enim 
+		</div>
+		<div n="100020">
+			Quid igitur? est aliquid int er deum patrem et 
+		</div>
+		<div n="100030">
+			Igiturne patitur numen, cum venerabilis corporis 
+		</div>
+		<div n="1000301">
+			9 qua HS corr. Schw. Gelasius
+		</div>
+		<div n="1000302">
+			14 nomen HS corr. G. L.
+		</div>
+		<div n="100040">
+			Quid igitur hic inlaesa et sincera fides dignum dubitatione occupavit: an 
+		</div>
+		<div n="100050">
+			Sed vos 
+		</div>
+		<div n="100071">
+			2 1. bonis = &#7936;&#947;&#945;&#952;&#959;&#8150;&#962; Klosterm. (?) 6 cristiani HS
+		</div>
+		<div n="100090">
+			nihil 
+		</div>
+		<div n="1000100">
+			Nec me quidam 
+		</div>
+		<div n="10001001">
+			4 Am Rand von sp&#228;terer Hd. Tho. 1. 20. (= Theodoret I, 20) HS
+HS corr. Schw. 10 armatas (-tas unterstrichen [vom Corrector?]) HS
+		</div>
+		<div n="1000110">
+			Sed est non tardum remedium, si episcopum fidelem et integrum
+vel nunc accipientes ad deum respiciatis, quod in praesenti in vobis est, et iam 
+		</div>
+		<div n="1000120">
+			Sed quoniam de ipso Eusebio ad vestram caritatem pauca oportet dicere,
+meminit vestra patientia in Nicaena civitate factum esse concilium, cui et ipse 
+		</div>
+		<div n="10001201">
+			2 comprensos Schw. compressos HS 3 confusione HS &#921; prolata Schw.
+probata HS 5 varietate HS corr. nach d. Griech. 8 pondere HS s. &#7968;&#961;&#964;&#8134;&#963;&#952;&#945;&#953;
+L &#252;bersetzt etwa &lt;&#963;&#8058;&#957;&gt; &#948;&#8055;&#957;&#945; &lt;&#964;&#8182;&#957;&gt; &#964;&#8057;&#964;&#949; &#963;&#965;&#957;&#945;&#947;&#959;&#956;&#8051;&#957;&#969;&#957; Ltz.
+		</div>
+		<div n="1000130">
+			Sed iste
+
+		</div>
+		<div n="1000140">
+			Sed pridem, ut cetera eins pravitatis praetermittam, quid maxime cum
+            
+
+		</div>
+		<div n="10001400">
+			3 coeperat HS corr. Schw. 5 Eusebii HS 8 f&#252;r quatenus &#228;gt quominus
+vor Klosterm. 1) &lt;non&gt; corr. Schw. 10 Am Rand: nota (in Abk&#252;rzung)
+11 cognoscitis HS corr. n. d. Griech. Schw.
+		</div>
+		<div n="1000150">
+			Sed isti boni et benigni episcopi, quos 
+		</div>
+		<div n="1000160">
+			Nunc vestrum est ad deum fide illa respicere, qua 
+		</div>
+		<div n="1000161">
+			4 servabit HS, aber am Rand Korrekturzeichen 7 qua] quam Schw. 1 1 mei
+Schw. me HS 15 d. h. 28. Mai 547 &#921; viro HS ro vom Korrektor beanstandet
+		</div>
+		</body>
+    </text>
+</TEI>

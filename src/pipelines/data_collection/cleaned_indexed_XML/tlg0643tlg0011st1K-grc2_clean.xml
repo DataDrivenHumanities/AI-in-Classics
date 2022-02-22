@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader xml:lang="eng">
+        <title xml:lang="lat">Sigla to Anonymus Londinensis Iatrica</title>
+    <author n="0">Hermannus Diels</author>
+	<author n="1">Anonymus Londinensis</author>
+	</teiHeader>
+    <text>
+        <body>
+        <div n="1001">
+			ANONYMI LONDINENSIS IATRICA
+		</div>
+		<div n="10021">
+			SIGLA  
+		</div>
+		<div n="100210">
+			See https://archive.org/stream/p1anonymilondine03diel#page/n139/mode/2up to view the actual sigla, which are represented here only as "ABBREV".
+		</div>
+		<div n="10022">
+			ABBREV = &#945;&#7988;&#964;&#953;&#959;&#962;, &#945;&#7984;&#964;&#943;&#945; cet.
+		</div>
+		<div n="10023">
+			ABBREV = &#7936;&#955;&#955;&#940;(&#7940;&#955;&#955;&#951;&#962;(IX 40)
+		</div>
+		<div n="10024">
+			ABBREV = &#947;&#945;&#961;
+		</div>
+		<div n="10025">
+			ABBREV = &#947;&#953;&#957;&#949;&#964;&#945;&#953;, &#947;&#953;&#957;&#959;&#957;&#964;&#945;&#953;, &#947;&#953;&#957;&#959;&#956;&#949;&#957;&#959;&#962;,
+&#947;&#941;&#957;&#951;&#964;&#945;&#953; cet.
+		</div>
+		<div n="10026">
+			ABBREV = &#947;&#943;&#957;&#949;&#963;&#952;&#945;&#953;
+		</div>
+		<div n="10027">
+			ABBREV = &#948;&#973;&#957;&#945;&#956;&#953;&#962; cet.
+		</div>
+		<div n="10028">
+			ABBREV = &#949;&#953;&#963;&#953;&#957;
+		</div>
+		<div n="10029">
+			ABBREV = &#949;&#7990;&#957;&#945;&#953;
+		</div>
+		<div n="100210">
+			ABBREV = &#949;&#963;&#964;&#953;&#957;
+		</div>
+		<div n="100211">
+			ABBREV = &#954;&#945;&#964;&#940;, &#954;&#945;&#964;&#8127;, &#954;&#945;&#952;&#8127;
+		</div>
+		<div n="100212">
+			ABBREV = &#955;&#972;&#947;&#959;&#962;, &#955;&#972;&#947;&#8179; cet.
+		</div>
+		<div n="100213">
+			ABBREV = &#956;&#949;&#957;, &#956;&#949;&#957;
+		</div>
+		<div n="100214">
+			ABBREV = &#956;&#949;&#952;&#945;
+		</div>
+		<div n="100215">
+			ABBREV = vov
+		</div>
+		<div n="100216">
+			ABBREV = &#957;&#951;&#962;
+		</div>
+		<div n="100217">
+			ABBREV = &#957;&#969;&#957;
+		</div>
+		<div n="100218">
+			ABBREV = &#959;&#8021;&#964;&#969;&#962;
+		</div>
+		<div n="100219">
+			ABBREV = &#960;&#945;&#961;&#940;
+		</div>
+		<div n="100220">
+			ABBREV = &#960;&#961;&#972;&#962;
+		</div>
+		<div n="100221">
+			ABBREV = &#960;&#961;&#972;&#964;&#949;&#961;&#959;&#957;
+		</div>
+		<div n="100222">
+			ABBREV vel ABBREV = &#964;&#969;&#957;
+		</div>
+		<div n="100223">
+			ABBREV =  &#8017;&#960;&#940;&#961;&#967;&#969;&#957;, &#8017;&#960;&#940;&#961;&#967;&#949;&#953;
+cet.
+		</div>
+		<div n="100224">
+			ABBREV = &#966;&#951;&#963;&#943;&#957;, &#966;&#945;&#963;&#943;&#957;, &#966;&#945;&#956;&#941;&#957;
+		</div>
+		<div n="100225">
+			ABBREV = &#968;&#965;&#967;&#942;&#957; (XXXVIII 5)
+		</div>
+		<div n="100226">
+			Sectarum nomina
+		</div>
+		<div n="100227">
+			ABBREV = &#7960;&#956;&#960;&#949;&#953;&#961;&#953;&#954;&#959;&#943; XXXI 26
+		</div>
+		<div n="100228">
+			ABBREV = &#7960;&#961;&#953;&#963;&#964;&#961;&#940;&#964;&#949;&#953;&#959;&#953; XXXVI 18
+		</div>
+		<div n="100229">
+			ABBREV = &#957;&#949;&#8061;&#964;&#949;&#961;&#959;&#953; II 30
+		</div>
+		</body>
+    </text>
+</TEI>

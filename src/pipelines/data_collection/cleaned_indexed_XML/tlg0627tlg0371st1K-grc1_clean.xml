@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader xml:lang="eng">
+        <title xml:lang="lat">De virginum morbis</title>
+    <author n="0">Hippocrates</author>
+	</teiHeader>
+    <text>
+        <body>
+        <div n="10001">
+			&#928;&#917;&#929;&#921; &#928;&#913;&#929;&#920;&#917;&#925;&#921;&#937;&#925;.
+		</div>
+		<div n="10002">
+			1. &#7944;&#961;&#967;&#8053; &#956;&#959;&#953; &#964;&#8134;&#962; &#958;&#965;&#957;&#952;&#8051;&#963;&#953;&#959;&#962; &#964;&#8182;&#957; &#945;&#7984;&#949;&#953;&#947;&#949;&#957;&#8051;&#969;&#957; &#7984;&#951;&#964;&#961;&#8055;&#954;&#8134;&#962;&#903; &#959;&#8016; &#947;&#8048;&#961; &#948;&#965;&#957;&#945;&#964;&#8056;&#957;
+
+		</div>
+		</body>
+    </text>
+</TEI>

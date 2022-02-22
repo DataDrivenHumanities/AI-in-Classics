@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader xml:lang="eng">
+        <title xml:lang="lat">Pyrrhoniae hypotyposes</title>
+    <author n="0">Sextus Empiricus</author>
+	</teiHeader>
+    <text>
+        <body>
+        <div n="100001">
+			Specimen Translationis latinae.
+		</div>
+		<div n="100002">
+			(III 30&#8212;36. p. 141&#8212;143 huiusce editionis.)
+		</div>
+		<div n="100004">
+			De agenti quidem igitur causa tot &#183; Nunc faciat dici
+couipendiose autem et de principiis que materialia
+vocantur dicendum est quod enim ipsa sunt inconprehensibilia
+facile est considerare ex dissonantia facta de hiis
+  
+		</div>
+		<div n="100005">
+			1 concediemus &#932; 24 epimonibus &#932;
+		</div>
+		</body>
+    </text>
+</TEI>

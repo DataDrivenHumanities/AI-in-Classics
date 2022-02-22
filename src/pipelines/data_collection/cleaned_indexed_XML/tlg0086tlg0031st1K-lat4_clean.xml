@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader xml:lang="eng">
+        <title xml:lang="mul">Signorum Explicatio to Res Publica Atheniensium</title>
+    <author n="0">Aristotle</author>
+	</teiHeader>
+    <text>
+        <body>
+        <div n="10001">
+			SIGNORUM EXPLICATIO
+		</div>
+		<div n="10002">
+			IN TEXTU
+		</div>
+		<div n="10003">
+			[&#945;&#945;&#945;] litterae coniectura restitue pro oblitteratis aut lacuna haustis 
+		</div>
+		<div n="10004">
+			[&#945;&#945;&#945;] litterae delendae
+		</div>
+		<div n="10005">
+			&lt;&#945;&#945;&#945;&gt; litterae ab editore contra papyrum additae
+		</div>
+		<div n="10006">
+			[....] ... puncta intra uncos singula singulas litteras lacuna haustas, extra uncos posita
+oblitteratas litteras significant
+		</div>
+		<div n="10007">
+			&#945;&#945;&#945; litterae noncerto lectae
+		</div>
+		<div n="10008">
+			IN ADNOTATIONE
+		</div>
+		<div n="10009">
+			(&#945;&#945;&#945;) litterae in papyro compendiis significatae
+		</div>
+		<div n="100010">
+			B Papyrus Berolinensis
+		</div>
+		<div n="100011">
+			L papyrus Londinensis
+		</div>
+		<div n="100012">
+			L* scriptura pap. Lond. ante correctionem
+		</div>
+		<div n="100013">
+			L1 scriba primus pap. Lond. (cf. praef.)
+		</div>
+		<div n="100014">
+			L2 scriba alter -	-
+		</div>
+		<div n="100015">
+			L3 scriba tertius -	-
+		</div>
+		<div n="100016">
+			L4 scriba quartus -	-
+		</div>
+		<div n="100017">
+			Bl editio Blassii Teubneriana (Bl1 1892, Bl2 Bl3 1898)
+		</div>
+		<div n="100018">
+			H-L edtio Herwerdeni et Leeuweni, Lugd. Bat. 1891
+		</div>
+		<div n="100019">
+			K-W editio kaibelii et Wilamowitz-moellendorfii, Berolinis (K-W1 et K-W2 1891,
+K-W3 1898)
+		</div>
+		<div n="100020">
+			S editio Sandysii, Cantabrigiae 1893
+		</div>
+		<div n="100021">
+			Wn lectiones Wilckenii (in K-W3)
+		</div>
+		</body>
+    </text>
+</TEI>

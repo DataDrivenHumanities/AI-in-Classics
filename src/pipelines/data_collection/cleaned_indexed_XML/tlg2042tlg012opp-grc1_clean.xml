@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader xml:lang="eng">
+        <title xml:lang="lat">Fragmentum in Lamentationes (In Catenis de Octateucho)</title>
+    <author n="0">Origenes</author>
+	</teiHeader>
+    <text>
+        <body>
+        <div n="10001">
+			Das Fragment aus der Oktateuchkatene.
+		</div>
+		<div n="10002">
+			&#8040;&#961;&#953;&#947;&#941;&#957;&#959;&#965;&#962; &#949;&#7984;&#962; &#964;&#959; &#945;&#8016;&#964;&#8056; &#7952;&#954; &#964;&#8182;&#957; &#949;&#7984;&#962; &#964;&#959;&#8058;&#962; &#920;&#961;&#942;&#957;&#959;&#965;&#962;.
+		</div>
+		<div n="10003">
+			&#932;&#8055;&#962; &#947;&#8048;&#961; &#964;&#8056; &gt;&#948;&#8055;&#954;&#945;&#953;&#959;&#957; &#959;&#8016; &#948;&#953;&#954;&#945;&#8055;&#969;&#962; ; &#948;&#953;&#945;&#955;&#945;&#946;&#972;&#957;&#964;&#949;&#962; &#948;&#8050; &#7952;&#954;&#949;&#8150;&#957;&#959;, 
+		</div>
+		<div n="10004">
+			3 Vgl. Deut. 16, 20. &#8212; 12 Matth. 6, 2. - 17 Vgl. Act. 8, 3.
+		</div>
+		<div n="10005">
+			2 &#220;berschrift z. B. im cod. Ven. Marc. gr. 534 saec. XI fol. 221v u. im Coisl. VI
+(Montfaucon Bibl. Coisl. p. 42). In der Oktateuchkatene wird das Fragment zu
+Deut. 16, 20 angef&#252;hrt. Es ist zuf&#228;llig dieselbe Stelle, auf welche
+Confessor zum 8. Brief des Dionysius Areopagita (ed. Cord. II, 316 D MPG 4, 549 B)
+anspielt, vgl. Einleitung | 10 &#960;&#945;&#961;&#8048; &#7936;&#957;&#952;&#961;&#974;&#960;&#969;&#957; Ru | 11 &#954;&#959;&#953;&#957;&#969;&#957;&#8053;&#963;&#945;&#953; Blass Koetschau
+vgl. Z. 7 &#954;&#959;&#953;&#957;&#969;&#957;&#8053;&#963;&#949;&#953; Ni | &#8005;&#960;&#949;&#961;] &#7941;&#960;&#949;&#961; Ru | 17 &#960;&#945;&#961;&#945;&#948;&#953;&#948;&#959;&#8058;&#962; Blass doch vgl. S. 14, 30 |
+&#949;&#8016;&#963;&#949;&#946;&#949;&#8055;&#945;&#962; Ni.
+		</div>
+		</body>
+    </text>
+</TEI>

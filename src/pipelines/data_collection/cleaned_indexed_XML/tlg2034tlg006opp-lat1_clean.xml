@@ -1,0 +1,1076 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader xml:lang="eng">
+        <title xml:lang="lat">Isagoge sive quinque voces</title>
+    <author n="0">Porphyrius</author>
+	</teiHeader>
+    <text>
+        <body>
+        <div n="10000">
+			PORPHYRII ISAGOGE ET
+                    IN ARISTOTELIS CATEGORIAS
+                    COMMEiNTARIUM
+		</div>
+		<div n="10002">
+			PORPHYRII
+INTRODUCTIO
+IN ARISTOTELIS CATEGORIAS
+A BOETHIO TRANSLATA
+		</div>
+		<div n="10004">
+			SIGLA
+		</div>
+		<div n="10005">
+			A = Parisinus 11129
+		</div>
+		<div n="10006">
+			B = Monacenis 4621
+		</div>
+		<div n="10007">
+			C = Monacensis 6403
+		</div>
+		<div n="10008">
+			L = Laurentianus 89,80
+		</div>
+		<div n="10009">
+			P = Laurentianus 11,5
+		</div>
+		<div n="100010">
+			Q = Laurentianus 89,76
+		</div>
+		<div n="100012">
+			INCIPIT ISAGOGE PORPHYRII.
+		</div>
+		<div n="100013">
+			ed. gr. P. l,1
+		</div>
+		<div n="100014">
+			Cum sit necessarium, Chrysaori, et ad eam quae est apud Aristotelem
+praedicamentorum doctrinam nosse, quid genus sit ct quid
+difterentia quidque species et quid proprium et quid accideus. et ad
+
+		</div>
+		<div n="100015">
+			1 Titulum praemittit Incipit Hysagoga Porfirii L: Incipiunt ysagoge por ad cathegorias
+ar P: Incipiunt ysagoge por . . . (ceter. absciss.) Q: om. ABC 2 chrisaori A:
+crisaori B: chrissaori C: Chrysaori L: gris P: grisaori Q ante et add. te B: om.
+ACLPQ 3 genus sit colloc. ACLQ: sit genus BP 4 anie differentia add.
+sit P post species om. et P 5. 6 in divisione vel demonstratione sunt BCL:
+ad divisionem et ad demonstrationem sunt A : iu divisione sunt vel demonstatione P: in
+div. vel in demonstr. sunt Q 6 utili scripsi: utilia codd. hac A: banc BCLPQ
+specuiatione ACLPQ: speculationem B 6. 7 compendiosa (litt. m eras.) B
+7 traditione B temtabo BP 7. 8 modo introductionis colloc. Q 10 post
+mox add. inquit AC: om. BLPQ ac ACL: et BPQ bubsistunt BCLQ1: subsistant
+APQ 2 11 solis nudisque AC: puris nudisque L: nudis purisciue BPQ
+sunt ABCL: siut PQ 2 12 sunt an incorporalia om. Q: sunt ABCL: sint P
+12: 13 an in sensilibus posita om. AB (nisi quod an in lit. B) 13 et om. B dicere]
+ducere P 13. 14 enim est huiusmodi negotium colloc. AP: est enim huiusm. neg.
+BQ: enim neg. est huiusm. LC 16 temtabo P
+		</div>
+		<div n="100017">
+			De genere.
+		</div>
+		<div n="100018">
+			Videtur autem neque genus neque species simpliciter dici. genus 
+		</div>
+		<div n="1000180">
+			1, 18
+		</div>
+		<div n="100019">
+			Tripliciter igitur cum genus dicatur, de tertio apud philosophos 
+		</div>
+		<div n="1000190">
+			2, 14
+		</div>
+		<div n="1000192">
+			1 titulum exhibent De genere ALP: De geuere primo Q: om. BC 2 dici simpliciter
+colloc. P 3 enim ABCLQ: autem P 3. 4 aliquid BC 1LP: aliquod A: aliquem
+C 2 4. 5 Romanorum om. P: Romanum C 1 (corr. m. 2) 6 aliquo modo ABCLQ:
+quodammodo P se ow. codd. omnes * 7. 8 dictae BLPQ: dictam AC: dictae
+comment. 8 uniuscuiusque] utriusque P 9 generationis om. B a loco
+ABPQ: ab eo loco CL .10 euim in litura m. 2 C 11 Hyllum] illum ABCL: filium
+P: ylum (y m lit.) Q 12 est enim patria principium P 13 uniuscuiuscumque Q
+ante pater add. et Q: om. ABCLP 14 autem ABCLQ: enim P promptissima
+ante videtur transp. Q sunt ACPQ: om. BL 15 a Cecrope AC: ex genere descendunt
+Cecropis BLPQ (nisi quod dissedunt P): a Cecrope probare videtur comment.
+horum ACP: eorum BLQ 16 uniuscuiuscumque Q 16. 17 generationis BLPQ
+et in litura m. 2C generis A 17 eorum] horum P 18 quam AB : namque CLPQ:
+nam supcrscr. m.1 B 19 esse collectionem colloc. A: collationem L rursus post genus
+transpos. B 20 genus post dicitur transp. Q subponuntur B ad horum fort.
+similitudiuem ACPQ: ab eorum fort. similitudine BL 22 ipso ACP: se BLQ
+videtur codd. etiam ACLP: autem B: quoque Q 23 omnem quae sub eo est
+BL: omnium earum quae sunt eo sub specierum A: omnium quae sunt sub eo specierum C
+mrg. L: omnium quae sub eo sunt specierum P : omnem quae sub se sunt specierum Q
+24 igitur ABCLP : ergo Q 25 esse genus colloc. A
+		</div>
+		<div n="1000198">
+			1 quod quid BCLPQ: quodquod A 2 ut animal om. BQ: exhib. ACLT 2 enim
+om. Q quidem om. Q 3 dicuntur solo ABCLP: praedicantur Q
+individuum C ut &#8212; hoc om. AC et hic et hoc B: et hic et haec L: et hic et hic
+et hoc PQ 4 vero om. A 4. 7 quem admodum &#8212; risibile om. AC 5 et propria
+BLP: proprie Q sedj et B proprie Q: propria BLP 6 quidem om.
+L (supra scr. quiddam): ante genus transpos. P vero om. Q 7 post proprium
+om. ut Q (add. m. 2) ante accidens udd. ut C ut album LBPQ : id est album
+AC 8 ab om. A ergo ACPQ in litura B: igitur L quod] qui C
+9 praedicantur APQ: praedicentur BCL 9. p. 28,6 ab his &#8212; accidens om. AC
+posi autem add. speciebus P 9 posi pluribus add. praedicantur differt quidem genus
+P 10 a (ante speciebus) om. L: exhib. BPQ post quidem add. primiim L:
+om. BPQ etsi BPQ: si L praedicatur B (corr. m. 1) Q II sed non L: non
+B: tamen non P: non tamen Q: an sed tamen non? (cf. 44,20) 12 post Platone
+add. et ceteris L: om. BPQ: exstat in comment. 12 et 14 a se BLQ: ad
+se P 13 post invicem add. ex comment. sicut homo atque equus L: om. BPQ
+sit genus colloc. Q 13. 14 equo et bove colloc. Q 14 post equo add. et
+asino B ante differunt add. omnes Q et {ante specie) om. PQ quoque
+BLP: quidem Q 16 sola post specic transp. Q 17 his BLQ: iis P
+18 de (post et) om. L post hominibus add. praedicatur P 19 praedicatur
+supra non scr. Q post una add. sola P : supra scr. Q et differentibus
+specie om. L: add. BPQ specie in comm. repudiatur, itaque inducendum est
+20 accidontibus BLP: accidentia Q etsi BP: etiamsi L- si Q et specie
+differentibus om. Q: exhib. BLP: tuetur comment. 22 sed B: tamen LPQ: an
+sed tamen?
+		</div>
+		<div n="100021">
+			De specie.
+		</div>
+		<div n="100022">
+			3,21
+		</div>
+		<div n="100023">
+			Species autem dicitur quidem et de uniuscuiusque forma, secundum
+dum quam dictum est: &#8222;Priami quidem species digna est imperio";
+dicitur autem species et ea, quae est sub adsignato genere, secundum
+quam solemus dicere hominem quidem speciem animalis, cum sit
+
+		</div>
+		<div n="1000231">
+			1 praedicantur om L: exhib. BPQ sed in eo qiiod quale quid sit om. comm. (recte)
+quid om. LQ: add. BF sit om. Q 2 nobis L: nos BP: om. Q praedicantur haec
+BLP: ista praedicantur Q 2. 3 dicimus ante non transp. Q dicimus praedicari
+BLP: praedicari om. Q 3 quid om.B: exhib. LPQ interroganti BP: interrogati L :
+interrogantibus Q 4 est BLQ: sit P in eo quod om Q: exhib. BLP 5 dicimus
+P: om. Q: dicitur BL comm. quidem ante ration. transp. P 6 interrogamus A
+7 respondetur Q erat B: erit ACL: est PQ genus ante hominis transp. Q 8 praedicari
+ex preditur (sic) corr. A soloque B 8. 11 eorum &#8212; accidentibus om. AC 8. 9 eorum
+quae sunt individua LP: sicut individua BQ 9 ante differentibus add. de Q: om BLP
+post separat add. genus Q: om. BLP 10 autem om. Q: exhib BLP 11 post dividit
+add. genus P: supra scr. Q: s. genus ab his glossa interlin. 12 ante quae add. et AC:
+om. BLPQ quale sit P: quale est ABCLQ quomodo L 1PQ: quemadmodum AL2:
+quod admodum C: quodammodo B 13 habens ABC: habent LPQ de quibus praedicantur
+BL (nisi quod ante quibus add. his B): om. ACPQ nil A post igitur add.
+neque AC: om. LBPQ 15 tit. om. C: exhib. ABLPQ 17 priami codd.: secundum quam
+dicimus, quemlibet illum imperio esse aptum propter formae eximiam dignitatem comm.
+quidem om. Q est om. C 20 autem ABCL: vero Q: om. P 21 Quodsi L-PQ:
+quod C: sic BL1: quid sit A post dicentes add. illud esse genus Q: om. ABCLPQ
+22 ante differ. add. de P 21 et (post quouiam) om. PQ: exhib. ABCL
+		</div>
+		<div n="100024">
+			Sit autem in uno praedicamento manifestum quod dicitur. substantia 
+		</div>
+		<div n="1000240">
+			4,21
+		</div>
+		<div n="1000244">
+			1 et (post est) om. BPQ: exhib. ACL 2 ergo BCLPQ: vero A quod AL1:
+quae BCL 2PQ ponitur post genere trdnsp. P sub om. LQ: exhib. ABCP
+supra genere add. assignato Q 2 3 de quo AL: de qua BCPQ genus post sit
+transp. V autem om. L 4 quoque post est transp. Q ot ABCPQ: ac L
+5 post praedicatur add. ut hoino, equus, bos et asimis et cetera C: om. ABLPQ
+post adsignatio ddd. speciei Q: om. ABCLP spccialissimae scripsi: specialissime P:
+specialissima ABCLQ 6 et om. A: exhib. BCLPQ etiam ABCP: et Q: om. L
+7. p. 30,1 in unoquoque &#8212; solum species on. AC 8 alia post specialissima transp. Q
+9 specialissima et generalissima colloc. Q autem BPQ : enim L 10 super
+BLP: supra Q nullum ultra aliud sit superv. BLP: nullum supcrv. est Q
+11 autem om. P post autem add. est BP: om. LQ 12 inter speciaiissimum autem
+et seneralissimum colloc. Q 13 alterum ad ow. BQ: exhib. LP 14 uno uno
+quidem P: unoquoque Q 13 quidem] quiddam codd. post ipsa add. est Q : om.
+BLP est (post autem) om. LQ: exhib. BP 17 post homine add. vero PQ:
+om. BL et (ante Plato) om. Q: exhib. BLP . 18 generalissima B 19. 20 species
+post sit transp. Q 21 ante corporis add. est Q: om. BLP est quidem
+colloc. B 22 animalis BQ: animatum L (corr. m. 2): animablis P (sed punctiws suppos.
+corr.) autem BLP : vero Q 23 vero animalis om. &#914; ratioualis animalis
+colloc. PQ 24 autem (post genus) BPQ: vero L 25 autem om. Q
+etiam om. P: post genus transp. L
+		</div>
+		<div n="100025">
+			Determinant ergo generalissimum ita, quod cum genus sit non 
+		</div>
+		<div n="1000250">
+			5,17
+		</div>
+		<div n="1000251">
+			1 et BLPQ: ad A : om. C omne om. Q quod BCLPQ: quac A individuum
+P cst ABLPQ: crit C 2 erit ABLPQ: est C 3 anle cum add.
+quae ABCLP: om. Q nihil sit supra eam ACQ: supra eam nibil sit P: nibil
+supra eam est BL est (post geuus) BCLPQ: sit A 5. 18 sic &#8212; habet om.
+AC 4 quam L2PQ: quod L1B sit (ante alia) LPQ: erit B 5 post aliquid
+add. sit L: om. BPQ post dividi add. .1. (sic) in partes subjectivas P: nescio an in
+species uddendum sit, quod comnieniario postulari videtur 5. 6 sola individua Q
+5 post solum add. aliqifid P 6 enim om. P 7 et om. PQ: exhib. BL post
+ut add. vero Q 8 species ante erunt transp. L d ipsa B: ipsam LPQ
+habent ante duas iransp. L 11. 12 et eam &#8212; dicuntur om. Q (suppl. in mrg.)
+12 extrema PQ: extiemae BL vero supra scr. Q 13 nam et generalissimum BL:
+nam generalissimum P: nam id quod generalissimum quod Q 14 geuus sit BP:
+sit. genus LQ est post supremum transp. Q 15 cum summum sit primum Q
+(corr. m. 2) 16 et om. B: exhib. LPQ autem BLQ: vera P 18 posteriora
+BLQ: inferiora P post sed add. dicitur L2Q: post quidem C: om. ABLP
+ly veluti P 19. 20 post superiorum add. est P: dicitur Q: om. ABCL 20 vehit
+BCLPQ: ut A coutinetur Q 21 ergo om. C ante generalis. add. philosophi
+C ita om. A 22 est post species transp. L 22. p. 31,6 et rursus &#8212;
+genera om. AC 22 erit L: est BPQ genus unte aliud transp. Q superveniens
+BL: supravenies PQ 23 quod (post et) om. Q: supru scr. P 23. 24 cum sit
+species nunquam dividitur in species et quod om. BL: exhibent L 2PQ 24 et (post
+pluribus) om. Q
+		</div>
+		<div n="1000257">
+			2 (ante extremorum add. ef Q: om. BLP species post esse transp. Q 3 ponunt
+scripsi possunt BLP: potest Q quidem] quidam Q 4 post sumpta rasura II feve
+litt. L 5 et geuera dicuntur et species BLP: et species dicuntur Q et (ante
+subalt.) LPQ: vel B 6 ut BLPQ: ad A: om. C Agamemomnon C ante
+Atrides add. et Q et (ante Pelopides) om. CQ : add. ABLP et (ante Tantalides)
+ABPQ: ut L: om. C 7. 8 sed &#8212; lovem om. AC 7 ad unum post reducuntur
+transp. Q reducuntur] an reducunt? post reducuntur add. omnes L: om. BPQ
+9 se post sic trausp. Q 9. 15 neque &#8212; dicerentur om. AC 9 omnium om. L: exhib.
+BPQ post ens add. generalissimum P: om. BLQ 10 supreinum LPQ : summum
+B 12 post praedicamentis add. dictum est PQ: om. BL quasi LP: sic B:
+sient Q 13 aequivoce BLQ: aequoce P post inquit add. Aristoteles L: om.
+BPQ 14 commune post genus transp. P: post omnium B genus om. Q (post ens
+suppl. m. 2) 15 ante entia add. omnia Q: om. BLP vero AC: enim BLPQ
+sint ABCPQ: sunt L post prima actd. geuera A: principia LPQ: om. BC
+1() non etiam ABCLP : et non (corr. ea: et nomina) Q ante rationem add. delinitionis
+BLPQ: om. AC 17 ante nomen add. entis C: om. ABLPQ quidem supra ser. Q
+post sunt adil. scilicet substantia qualitas quantitas relatio ubi quando situm habere agere
+etpati; nam quicquid est, his decem generalissimis continetur P 18 quidem om. Q
+quodam BCLPQ: quaedam A tamen ABLPQ: tam C infinito B: indefinito
+ALPQ: indefinitio C (corr. m. 2) 18.19 individua quiescere om. AC 19 infinita
+sunt colloc. BQ 20 a generaiissimis om. Q (suppl. in mrg.) descendentem LPQ:
+descendentes B 21 ante descendere add. ad id AC: om. BLPQ supra autem
+add. oportet Q 22 enim om. Q eorum ACLQ: et horum B: horum P esse
+posse secundum (?) disciplinam Q 22. p. 31, 1 disciplina C (corr. m. 2)
+		</div>
+		<div n="100026">
+			Adsignato autem genere et specie quod est utrumque et genere 
+		</div>
+		<div n="1000260">
+			6, 24
+		</div>
+		<div n="1000265">
+			2. 7 ascendentibus &#8212; plures om. AC 3 post multitudinem requiritur commentario in unum
+4 est (post genus) supra scr. Q 5 posi contrario add. modo Q ante quod add. id BQ:
+om. LP 6 post homines supra scr. sunt P 2Q 2 7 autem om. B: exhib. LPQ enim
+om. CL: exhib. ABPQ est post semper transp. P 8 autem ABCLP: enim Q et
+om. L post adunativum add. est P 9 assignato ex assignati corr. A 2: an adsignatis?
+quod ABL: quid L 2PQ: quidem C est AB: sit PQ: om. CL et (ante genere) om. &#929;
+(suppl. m. 2) 9. 10 et genere &#8212; pluribus] quodque sit genus unum, species vero plurimae L
+10 vero supra scr. Q 11 divisio post generis transp. Q 11. p. 33,1 genus &#8212; individuis
+om. AC 11 semper om. Q; exhib. BLP 12 de (ante inferior.) supra scr. Q autem
+LPQ: enim &#914; sibi supra scr. Q 13 post autem add. aut Q: om. BLP 14 ut BLQ:
+sicut P 17 autem LP: vero Q: om. B 18. 19 generalissimum P: generalissima BLQ
+19 dicpre ante Socratem transp. Q post Socratem add. esse Q autem BLP: vero Q
+20 et Socratem animal P: Socratem animal Q: hominem et animal L: Socratem hominem
+animal B 21 igitur L: enim BPQ superioribus B: superiori (hitt bus eras.) L: superiora
+PQ 21. 22 praedicatis B: praedicat (hitt. is eras.) L: praedicantur PQ
+22 ante species add. et LQ: om. BP individuo Q: individuis BLP praedicabitur
+BL: praedicatur PQ 23 speciebus P et (post autem) om. Q 24 sint LQ: sunt
+BP et de specie om. P exhib. BLQ 25 enim BL: autem PQ post se add. positis
+PQL 2: om BL 1 20 speciebusque BL : speciebus PQ 26. p. 33,1 genus &#8212; de individuis
+om. L (suppl. in mrg. m. 2) 26 post autem add. quidem om. BL 2Q
+		</div>
+		<div n="100028">
+			De genere quidem et specie, et quid generalissimum et quid
+specialissimum et quae geuera eadem et species sunt, quae etiam individua
+et quot modis genus et species dicitur, sufficienter dictum est.
+		</div>
+		<div n="100029">
+			De differentia.
+		</div>
+		<div n="100030">
+			8,8
+		</div>
+		<div n="100031">
+			Differentia vero communiter et proprie et magis proprie dicitur.
+
+		</div>
+		<div n="1000311">
+			2. supra species add. praedicatur L 2 aiitem (alterum) ABCLQ: vero P solo
+ABCL: supra scr. P 2: om. Q 3 autem ACL: enim BPQ 4 ut ACL: et BPQ
+Sophronici PQ supra solus add. unicus L2 ei ABCPQ: eius L sit
+ante Socrates Iransp. BP : ante ei Q 5 ergo ABCLQ: igitur (ut videtur) P
+6. 9 quarum &#8212; pluribus om. AC 6 quarum PQ: quorum BL in alio post
+eadem transp. B erit BPQ: est L 6. 7 Socrates B (sed man 1. corr.)
+7 nunquam BPQ: non L 8 haec m. 2 L sunt post hominis transp. Q
+post hominis supra scr. specics L2 est om. L: exhib. BPQ 8. 9 proprietates
+inducit Q 9 erunt oui. L: exhib. BPQ post autem add. et B 9. 10 particularibus
+BCLPQ: partibus A 10 post sunt add. continentur L continetur
+igitur ABCLP : continentur Q (jorr. continetur) 11. 16 totum &#8212; individua
+om. AC 12 post totum add. est BQ: om. LP 13 pars post quidem
+transp. Q 14 enim BL: etenim P: om. Q 15 et (ante quid general.) om. P
+echib. BLQ quid (utrobique) LPQ: quod B 16 ante species add. quae B
+om. LPQ sunt LPQ: sint B: ante genera transp. Q 17 quot BCLPQ
+tot A dicitur A: dicatur BLPQ: dicuntur C 18 tit. om. AC: exhib. BLPQ
+19 et magis proprie om. C (sed in mrg. man 1. suppl.) 20. p. 34, 6 communiter
+&#8212; distiterit om. AC 20 ab om. B : exhib. LPQ ante alteritate add.
+ab Q: om. BLP 22 post alteritate add. quadam Q: om. BLP post ipse
+add. plato L: om. BPQ post se add. ipso PQ: om. BL ante puero add. a B:
+om. LPQ
+		</div>
+		<div n="100033">
+			A superioribus ergo rursus inchoanti dicendum est, differentiarum 
+		</div>
+		<div n="1000330">
+			9,7
+		</div>
+		<div n="1000331">
+			1 et (ante faciente) BLP: vel Q ante habendi add. se Q: post habendi P: om. BL
+2 alteritate P (ut videtur) ab om. B: exhib. LPQ quando LPQ: quoniam B
+3 accidente P post accidenti supra scr. alterum L 2 ab altero om. P: exhib. BLQ,
+vero om. BP: exhib. LQ 4 caecitas oculorum eras. P ante cicatrix supra scr.
+et Q cum om. L2: exhib. BL2PQ 4. 5 occaluerit LQ 5 post magis add. autem
+P: om. BLQ ab om. B: exhib. LPQ quando LPQ: quoniam B 6 diiferentia
+distiterit om. Q (suppl. man 2.) distiterit P: destiterit BL 7 differt om. Q: exhib.
+ABCLP post differt add. id est C: rasura IV litfer. L: om. ABPQ rationali BPQ:
+rationabili ACL ante qualitate add. scilicet Q ergo ABL2PQ: vero C: om. L1
+8 et 10 alteratum ex alterum corr. Q 8. 14 sed &#8212; fecit om. AC 8 posi quae add.
+facit aliud Universaliter ergo Q (sed punci. suppos. del.) 9 propria utrobique P
+alterum B post facit add. solum Q: om BLP 10 enim BL1: ergo L2PQ
+11 specificae vocantur] specificantur L 1 {corr. m. 2) vero supra scr. Q 12 alteratum
+BLP: faciunt alteratutn in rasura Q ante simpliciter add. vocantur Q: om. BLP
+enim om. L: exhib. BPQ 13 fecit (utrobique) BL: facit PQ et spec. anim. fecit
+delenda sunt (cf. p. 9,1) 13. 14 illa &#8212; quiescente fecit om. Q (suppl. in mrg.) 14 fecit
+B: facit LPQ 15 illa ABCLQ: alia P vero ABCP: si L: om. Q ante alteratum
+transpos. in rasura solum Q post solum add. modo A fecit B: facit CLPQ:
+om. A post facientes add. differentias L 2 16. 18 quae sunt &#8212; faciunt om. AC
+17 et BLQ: ex P post differentiis add. et punct. suppos. del. illa vero quae est movendi
+alteratum solum a quiescente facit Q secundum autem iter. Q 18 ante alteratio add.
+at C sola om. L et om. CQ in aliquo m. se hab. permutationibus C 19 supra
+permutationes scr. fiunt L 2 20 rursus om. L 1 (suppl. m. 2) incoantes P differendarum
+A (corr. m. 2) 21 alias post quidem transp. Q 21. p. 35,5 alias vero &#8212; perceptibile
+om. C 21 vero om. BLQ: exhib. AP 21. p. 35,5 moveri &#8212; perceptibile om. A
+21 enim BLQ: vero P
+		</div>
+		<div n="100034">
+			Cum igitur tres species differentiae considerentur et cum hae 
+		</div>
+		<div n="1000340">
+			9,24
+		</div>
+		<div n="1000342">
+			1 (ante quaecunque add. omnia Q: om. BLP his BLP: eis Q his post proxima
+transp. B 2 aquilum BPQ: acylum L: os tortum supra scr. L 2 4 sunt om. L:
+exhib BPQ 5 aquilum ABPQ: acylum CL 6 simum BCLPQ: simium A
+et om. BQ 1 post se add est A: om. BCLPQ illae post igitur transp. C
+quae supra scr. Q 7 in substantia rationali (??) Q 7. 15 illae vero &#8212; est om.
+AC 7 vevo BLP: igitur Q 8 nec BLP : uon Q 9 quidem om. B: exhib. LPQ
+10 et BL: neque PQ per BLP: secundum Q vel si BP: vel L: et Q 11 sunt
+LPQ: sint B recipiunt BLP : suscipiunt Q 11. 12 neque post genus transp. P
+12 aut BLP: et Q post eo add. id est de specie B : om. LPQ 13 sunt post quae
+transp. L 14 uniuscuiusque rationem complent B: uniuscuiusque rationem definitionemque
+complent L: definitionem uniusc. et rationem compl. P: uniusc. rationem compl.
+et definitionem Q 15 ante intentionem add. enim B: om. LPQ neque (ante remissionem)
+om. L: exhib. BPQ aquilum ABPQ: acylum CL K; autem BCPQ: vero
+L: om. A esse post coloratum transp. B: om. P 18 considerentur ACLP: considerantur
+BQ BQ sint ABCLQ: sunt P: post separabiles transp. B post sint add.
+quod sit Q 19. 20 separabiles &#8212; sint om. L 19. p. 36,4 illae vero &#8212; sensibilis
+om. C 19 vero om. B: exhib. APQ 19. p. 36,4 et rursus &#8212; sensibilis om. A
+20 cum om. Q: exhib. BP sint BP: sunt (pest se transpos.) Q 21 sunt post
+se transp. Q quidem PL2: vero Q: om. BL1 21. 22 secundum &#8212; vero om. Q
+(suppl. m. 1 in mrg.) 22 post quas add. nos P: om. BL mrg.Q speciem P vero
+om. L (suppl. m. 2) post vero add. sunt L 2 mrg. Q haec BL: hae Q: ea P
+23 divisa BLP: divisivae Q specificatur Q 23. P. 26, 1 differ. omnes huiusmodi
+BL: huiusmodi omnes differ. P: differ. huiusmodi omnes Q
+		</div>
+		<div n="100036">
+			Quas etiam determinantes dicunt: differentia est qua abundat 
+		</div>
+		<div n="1000360">
+			10,22
+		</div>
+		<div n="1000361">
+			3 insensibilis P (sed in del.) 3. 4 animalis &#8212; animal in ras. Q 4 et om.
+PQ: exhib. BL 5 differentia om. AC: exhib. BLPQ et (ante rationalis) om.
+BCL: exhib. AP racionabilis et irracionabilis A divisae A 1P 6 animalis
+post differentiae transp. P eas BCLPQ: has A genera in Q: genus in L:
+animal in P: om. ABC dividimus post enim transp. L 7 hae ABLQ:
+haec CP divise PQ 8. 14 divitur &#8212; insensibilis om. AC 8 ante
+animal add. genus L: om. BPQ 9 et rursus om. BL: exhib. PQ 10 fiunt Q:
+sunt P: definiunt BL 10. 11 hominis PQ: hominem BL 11 vero (post
+ration.) om. PQ: exhib. dei BPQ: deum L 11. 12 inrationales P1: intrarationalis
+Q 1 12 post mortalis add. et P inrationalium Q 1 (corr. m. 2)
+post animalium add. sunt L: om. BPQ et (post etiam) om. Q: exhib. BLP
+suprema BLP: generalissima Q 13 divisa P 14 animata BCL: adanimata
+A: animati PQ 1.5 animal post perfecerunt transp. P perfecerunt] perfecte
+Q (m. 2 corr.) post perfecerunt add. animata vero et insensibilis perfecerunt plantam
+P: om. ABCLQ et repudiat comment. unte quoniam add. et Q ergo BCLQ:
+igitur AP anle eaedem add. liae B quidem om. AC: exhib. BLPQ
+16 fiunt ABCL: fuerunt P: sunt Q 16. 18 aliquo modo autem &#8212; inseparibiles sunt
+om. AC 16 modo post autem transp. Q divisae P 16. 17 omnes post vocantur
+transp. Q 17 maxime BLQ: magis P divisiones BLP: divisionem Q
+post definitiones add. specienim L: specierum quia constitutivae sunt supra scr. B:
+om. PQ 20 quas &#8212; dicunt] quae &#8212; dicuntur supra scr. L2 determinationes L1
+22. p. 37,3 homo &#8212; nullam om. AC 21 ab animali post habet transp. B plus
+supra scr. Q 22 enim LP: autem P: om. Q post ipsum add. per se L: om.
+BPQ habebunt BPQ: habebit L
+		</div>
+		<div n="100037">
+			Diffiniunt autem eam et hoc modo: differentia est, quod de pluribus 
+		</div>
+		<div n="1000370">
+			11,7
+		</div>
+		<div n="100038">
+			Describunt autem huiusmodi difterentias et hoc modo: differentia 
+		</div>
+		<div n="1000380">
+			11,18
+		</div>
+		<div n="1000382">
+			1 post differentias add. autem P: om. BLQ enim BPQ: om. L: an vero? habet]
+habent codd. nam BPQ: num (interrog. signo post opposita add.) L 1. 2 in
+eodem BL: genus in eodem Q: in eodem genere P 2 habebunt BL: habebit PQ
+supra opposita add. genera L 2 3 habet] habent codd.: post sub se transp. Q
+nullam BLP: ullam Q 4 sic ABCLP : sicut Q fit om. P: exhib. ABCLQ
+6 autem ABLPQ: enim Q et BLP : om. ACQ quod BC: quae ALPQ de
+om. C 7 et om. CLQ: exhib. ABF ante quale add. quid L: post quale P: om.
+ABCQ praedicatur post specie transp. Q 7. 10 rationale &#8212; animal om. AC
+8 praedicatum BL: praedicantur PQ 8. 9 quiddam om. Q: exhib. BLP 9 est
+(post quid) om. Q enim anle est transp. L 10 homo om. BP: exhib. LQ
+post interrogatis add. autem P nobis om. P post nobis signum interrog. pon. L
+est om. P 11 post animal add. sit C: om. ABLPQ et om. CL: exhib. ABPQ
+est om. CL: exhib. ABPQ 12 constancibus ex constancia corr. A post vel add.
+si B: om. ACLPQ 12. 13 post similitudinem add. proportionemque BLPQ: om.
+AC comment. 13 et formae PQ: et speciei AC: specieique BL 13. 16 qvicm-
+admodum &#8212; differentia om. AC 14 post statua add. Achillis L: om. BPQ est
+post statua transp. P ex (ante forma) om. Q: exhib. BLP post figura add.
+proportionale autem dicitur, quod proportiouem omnium specierum tencat (tenet P),
+i. e. communionem omnium partium vel specierum, quae dividi ex ea (eo L) contingunt
+per differentiam BLP : om. Q 15 quidem in ras. Q post similiter add. proportionaliter
+BL: (post consistit) consistit) proportionabiliterque P : proportionabiliter Q 15. 16
+genere add. in L1: ex L 2Q: om. BP 16 hoc om. Q: exhib. BLP posl hoc add.
+scilicet (?) P 17 ante mortalo add. et ACQ: om. BLP 18 differentias AB:
+differentiam CLPQ et ante huiusmodi transp. L: om. C 19 quod ABLPQ:
+qua C natum om. AC: exhib. BLPQ ante quae add. ea CQ sunt post
+genere transp. LQ 20. 38,1 rationale &#8212; genere om. Q (suppl. in mrg. m. 2)
+20 et equum ABLPQ: equumque Q
+		</div>
+		<div n="100039">
+			Et de differentiis quidem ista sufficiunt.
+		</div>
+		<div n="100040">
+			Be proprio.
+		</div>
+		<div n="100041">
+			12,12
+		</div>
+		<div n="100042">
+			Proprium vero quadrifariam dividunt; nam et id quod soli alicui
+
+		</div>
+		<div n="1000421">
+			1 sunt post genere transp. Q autem om. B: exhib. ACLPQ etiam om. Q
+(superscr. m. 2) 2 est om. B: exhib. ACLPQ qua] an quo? 2. 4 nam &#8212;
+illis om. AC 2 unte secundum ex comment. suppleas homo atque equus 3 et
+(post nos) om. B: exhib. LP: supra scr. Q 4 aditum Q rationabile BL: rationale
+PQ separavit BLQ: separat P ab illis BPQ: ab aliis L 4. 5 et
+rationales &#8212; illis om. Q (suppl. in mrg. m. 2) et om. BLP: exhib. AC rationabiles
+BL: rationales PQ2: rationale AC 5 sumus om. AC: exhib. BLPQ 2
+disiunxit ABC: disiungit P: divisit LQ 2 6 post perscrutantes add. et speculantes
+BCLQ: (ante perscr.) speculantes et P: om. A differentiam ABLPQ: de differentia
+C quodlibet ACPQ: quod babet BL 7 ante quae add. ea Q: supra
+scr. L dividentium esse differentiam AC: divideutium esse om. BL (divid. posreorum
+supra scr. L 2): esse dividentium (differentiam om.) P: differentiam esse (dividentium post
+eorum colloc.) Q 7. 14 sed quod &#8212; differentiae om. AC 8 rei orn. B: exhib.
+LPQ 9 natum post est transp. L navigare BLP: ad navigandum Q
+etsi B 1L 1PQ: etiamsi B 2: quamvis L 2 10 animalium LP: animalia B: animalium
+haec om. Q (suppl. in mrg. m. 1) vero om. BP: exhib. LQ aliis LPQ: illis B
+12 natum om. Q: exhib. BLP esse eras. L erat BL 1P: erit QL 2 13 est
+om. PQ 1: add. BLQ2 quoniam &#925;&#965;. LQ: exhib. BP 14. 15 quaecunque ante
+errunt transp. P 15 igitur BLQ: ergo P 15. 17 alteram &#8212; differentiis iterat.
+del. P post quale add. quid Q: om. ABCLP est om. P: exhib. ABCLQ
+16 et om. AC: exhib. BLPQ 17 quidem om. Q: exhib. ABCLP sufficiunt
+ABL: sufficiant CPQ 18 tit. om. BQ: exhib. ACLP 10 et om. P: exhib.
+ABCLQ post id add. proprium esse dicunt B: om. ACLPQ 20 speciei pot
+accidit transp. P post omni add. proprium dicitur P: om. ABCLQ ut ras. L
+homini ACLPQ: hominem (in ras.) B medicum ABCLP : musicum Q esse
+om. Q: exhib. ABCLP
+		</div>
+		<div n="100044">
+			De accidenti.
+		</div>
+		<div n="100045">
+			12,23
+		</div>
+		<div n="100046">
+			Accidens vero est, quod adest et abest praeter subiecti corruptionem.
+dividitur autem in duo, in separabile et in inseparabile.
+nam dormire separabile accidens est, nigrum vero esse inseparabiliter
+corvo et Aethiopi accidit, potest autem subintellegi et corvus albus
+
+		</div>
+		<div n="100047">
+			Omnibus igitur determinatis quae proposita sunt, dico autem genere,
+
+		</div>
+		<div n="100048">
+			1. 7 et quod &#8212; perhiberit om. AC 1 homini BLP: hominem Q 2 eses om. Q:
+exhib. BLP et (ante aliquando) BP: sed Q: om. L an homini omni? 3 in
+quo concurrit et om. Q: exhib. BLP concurrit B: occurrit L et in ras. P P omni
+et soli colloc. Q 4 semper L: om. BQ: supra scr. M. 2 P 5 rideat BL: ridet
+PQ quod jam BLP: quoniam Q anfe rideat add. non L: semper Q: om.
+.BP 6 post sit add. ad ridendum PQ: om. BL autem BLP: enim Q ei om.
+LQ: exhib. BP est &#8212; equo om. Q (suppl. m. 2 in mrg.) post est add. homini
+Q 2: om. BLP ut B: om. BLQ 2 7 hinnibile BLP: ignibile Q (sic etiam 8 utrobique)
+7 proprie BQ: supra er. P 2: propria L: vere P 1 propria post perhibent
+transp. PQ perhibent L: perhibentur B: dicuntur PQ: dicunt L2 esse L:
+om. BPQ 8 post equus prius add. est et LPQ: est B: om. AC post quicquid
+alterum add. est PQ: om. ABCL 10 tit. om. BQ: exhib. ACLP 11 vero om. BPQ:
+exhib. ACL 12. 18 dividitur &#8212; subsistens om. AC in duo BPQ: in duobus L
+in utrobique om. Q: exhib. BP: in alterum om. L in insepar. et in separ. colloc. P
+13 nam BLP: namque Q vero BPQ: autem L esse om. Q: exhib. BLP
+14 et (ante corvus) BLP: om. Q 15 subiecti post corrupt. transp. L diffinitur
+BLQ: diffiniunt P 16 autem om. B: exhil. LPQ esse (prius) BLP: inesse Q
+(sed m. 2 corr.) 17 vel BLP: ct Q differentia neque species colloc. L 18 post
+protrium add. sit L: est P: om. BQ ante sempor add. scd Q: om. BLP
+subsistens LPQ: consistens B 20 ante accidenti add. et BLPQ : om. AC accidente
+P his AC : eis BLPQ 21 adsint AC: sunt BLPQ
+		</div>
+		<div n="100050">
+			De communibus generis, speciei, differentiae, proprii et accidentis.
+		</div>
+		<div n="100051">
+			13,9
+		</div>
+		<div n="100052">
+			Commune quidem omuibus est de pluribus praedicavi , sed genus
+quidem de speciebus et de individius, et differentia similiter,
+species autem de his quae sub ipsa sunt individiis, at vero proprium
+
+		</div>
+		<div n="100053">
+			De communibus generis et differentiae.
+		</div>
+		<div n="100054">
+			13,22
+		</div>
+		<div n="100055">
+			Commune autem generi et differentiae continentia specierum.
+continet enim et differentia species, etsi non omnes quot geuera. rationale
+
+		</div>
+		<div n="1000551">
+			1 inscripsi ex L: de communitate sq. P: tit. om. ABCQ 2 omnibus post est transp. P:
+post praedicari Q 2. 14 sed &#8212; separabile om. A 3 post similiter add. praedicatur
+P: om. BCLQ 4. 14 at vero &#8212; separabile om. C 5 est post proprium transp.Q
+specie (alterum) BLP: ipso Q sunt om. Q: exhib. BLP 6 namque BLP: nam Q
+7 de (ante bubus) om. BLQ (cf. &#929;. 9) 7. 9 bubus BL 1: bobus L 2PQ et canibus
+deleas, repudiat comment. 8 hoc (utrobique) om. Q: exhib. BLP de (ante hoc
+bove) om. L: exhib. BPQ 9 de (ante bubus) om. P: exhib. BLQ praedicatur
+post particulares transp. BQ qui BQ: quae LP 10. 11 species &#8212; praedicatur
+post particulares (12) transp. Q 10 autem BLQ: vero P qui BLQ: quae P
+10. 11 particulares homines BLQ : particularia P : homines inducendum est 11 post proprium
+add. quod P: om. BLQ autem LPQ: vero B post homine add. hoc P: om. BLQ
+13 insepar. occidens colloc. P post moveri add. enim P: om. BLQ 15 secundum
+posteriorem vero rat. A: secundum vero posteriorem rat. CL: secundo vero (om. rat.) B:
+secundario vero (om. rat.) P: secundo vero loco Q 17 in tit. communibus ABCL:
+communitate P: tit. om. Q 18 post commune add. est AC: post autem LP: om. BQ
+19. p. 41,10 continet &#8212; sunt om. AC 19 et supra scr. Q omnes BLQ: tot et P
+20 etiamsi BL: etsi PQ continet BLP: contineat Q inrationabilia BLQ: inrationalia
+P 20. 21 ut genus inducendum est 21 post sed add. tamen P: supra scr. Q:
+om. BL ante deum add. angelum et L: om. BPQ ut genus] ut genera oomment.
+(cf. p. 41,4)
+		</div>
+		<div n="100056">
+			De proiyriis generis et diferentiae.
+		</div>
+		<div n="100057">
+			14,13
+		</div>
+		<div n="100058">
+			Proprium autem generis est de pluribus praedicari, quam differentia
+
+		</div>
+		<div n="1000582">
+			1 quaecunque B2PQ: quaeque B1L 1. 2 de differentia B2PQ: differentiae B1L
+2 praedicantur pobt differentia transp. B differentiae BL, tuetur comment.: differentia
+PQ ea BLQ: his P ex BL: sub PQ est BLQ: sunt P specie BLQ:
+speciebus P 2. 3 specie post praedicabuntur transp. Q 3 genus post sit
+transp. L 4 genera LP: genus BQ et supra scr. Q 5 praedicantur haec
+BL: praedicatur hoc genus P: om. Q 6 differ. post rationale transp. Q rationale
+LPQ: rationalis B de eo scribendum est 7. 9 non solum&#8212;uti om. L (suppl.
+in mrg. L 2) 7 autem om. BL2Q: exhib P 7. 8 rationale BP: ratione
+8 ante rationali add. animali Q (sed punctis suppos. del.) rationali BL2Q: ipsis P
+8. 9 praedicabitur BL2Q: praedicatur P 9 id quod est Q: id quod potest B: hoc
+est P: om. L2 est et BL: est illis ut P: est Q ante perempto add. hoc B: om.
+LPQ perempto LP: peremo B: percepto Q 10 ante quae add. ea P: om.
+BLQ 11 enim om. codd.: tuetur commentarius sit BLPQ: est AC est in ras.
+m.2 P ita ACPQ: ac BL 13 tit. om. Q: De propriis generis et differentiae L:
+De propriis eorum A: De propriis generibus et differentiae B: De proprio generis et differentiae
+C: Temperamentum philosophicum de .... generis et . . . . . (post de atque et
+ras.) P 14 est supra scr. B ante quam add. magis L: om. ABCPQ
+14. 15 differentiae A (corr. m.2) 15. p. 42,3 et species &#8212; differentia om.
+15 de homine et equo LP: de equo et de homine BQ 16 ante et ave add. et bove Q:
+om BLP serpente BLQ: serpentibus P post seipente add. praedicatur P: om.
+BLQ post vero add. videtur L: om. BPQ 17 ignibile Q de (post et) om.
+L: exhib. BPQ 18 et accidens post similiter transp. P post paucioribus add.
+praedicatur quam diffcrentia P: om. BLQ 20 differentiam BLP: differentias Q
+20. p. 42,1 potestate BLP: potante enim Q
+		</div>
+		<div n="100060">
+			De communibus generis et speciei.
+		</div>
+		<div n="100061">
+			15,9
+		</div>
+		<div n="100062">
+			Genus autem et species commune quldem habeut de pluribus,
+quemadmodum dictum est, praedicari, sumatur autem species ut species
+et non etiam ut genus, si fuerit idem species et genus. commune
+autem his est et priora esse eorum de quibus praedicantur, et
+
+		</div>
+		<div n="100063">
+			De propriis generis et speciei.
+		</div>
+		<div n="100064">
+			15,14
+		</div>
+		<div n="100065">
+			Differt autem eo quod genus quidem continet species sub se,
+
+		</div>
+		<div n="1000650">
+			1 animalis BLQ: animalium P enim om. BL: exhib. PQ rationale post est
+transp.P 2 genera quidem priora sunt BL: quidem genus prius est P: genera quidem
+ampliora sunt Q sunt (alterum) om. Q: exhib. BLP 2. 3 positae BPQ: positis L
+3 quidem om. L: exhib BPQ eas supra scr. P: post auferunt transp. Q auferunt]
+aufert codd. 4 auferuntur LPQ: aufertur B 5 non auferunt post genus
+transp. P post omnes add. differentiae P: om. BLQ 5. 6 interminantur ante
+corr. L 6 tamen om. L: exhib. BPQ sensibilis BLP: sensibus Q quod LP:
+quae Q: ex quod corr. B1 7 post est add. praedicatur P: supru ser. m.2 Q: om. BL
+8 quiddam om. Q: exhib. BLP est (post quiddam) om. BL: exhib. PQ est post
+dictum transp. PQ 9 genus post quidem transp. B unum post est transp. P
+10 post hominis add. rationalis Q: om. BLP id om. Q: exhib. BLP 11 sunt
+om. PQ: exhib. BL 12 post aliis add. speciebus P: om. BLQ post differt add.
+homo P: om. BLQ ante formae add. et Q: om. BLP 12. 13 differentia vero formae
+colloc. P 13 autem ex hac corr. C et (ante alia) om. PQ: exhib. ABCL propria
+BCLPQ: proprii A et (post generis) BCLPQ: ac A 14 nunc&#8212;sufficiant in ras. L
+15 tit. om. PQ: exhib. ABCL et speciei ABL: specieique C 16 habent supra scr. P
+17. 19 sumatur&#8212;praedicantur om. AC 17 autem PQ: et L: autem et B 18 et
+BL: sed P: om. Q ut supra scr. B species et genus BPQ: et genus et species L
+19 est om. Q: exhib. BLP et (ante priora) BL: etiam Q: om. P esse post eorum
+transp. B 21 tit. om. PQ: exhib. ABCL De propriis ABL: De differentiis
+22 post autem add. genus a specie P: om. ABCLQ eo om. BL: exhib. ABPQ
+sub se continet species colloc P: species continet sub se Q
+		</div>
+		<div n="100066">
+			De communibus generis et proprii.
+		</div>
+		<div n="100067">
+			16,1
+		</div>
+		<div n="100068">
+			Generis autem et proprii commune quidem est sequi species;
+nam si homo est, animal est, et si homo est, risibile est. et aequaliter
+praedicari genus de speciebus et proprium de his quae illo participant;
+
+		</div>
+		<div n="100069">
+			De propriis generis et proprii.
+		</div>
+		<div n="100070">
+			16,8
+		</div>
+		<div n="100071">
+			Differt autem, quoniam genus quidem prius est, posterius vero
+
+		</div>
+		<div n="1000711">
+			1 vero ABCLP: autem Q coutinentur L: continetur ABCPQ post continentur
+add. a genere P: om. ABCLQ continent ALP: continet BCQ L 9 pluribus&#8212;differentiis
+om. AC 2 est post genus transp. P 2. 3 et post differentiis
+transp. BL 3 et om. BL: exhib. PQ 4 ante quae add. genera L: om. BPQ
+quae post non transp. P et (post interim.) om. Q: exhib. BLP 5 et om. LQ:
+exhib. BP vero BPQ: enim L non post omnino tiansp.B 6 post species
+add. nam si homo est, animal est, et si animal est, non omnino homo estQ: om. BLP
+genere primitus L quidem post univoce irqnsp. B 7 post minime add. praedicantur
+P: om. BLQ quidem post genera transp. P: post abundant Q
+8. 10 eanxm &#8212; specialissimum om Q 8 sunt om. L: exhib. BP specierum BL:
+species P 9 a om. B: exhib. LP abundant post differentiis transp. P
+10 post genus add. unquam L: fiet unquam BP: unquam fiet C: om. A 11 tit. om.
+Q: exhib. ABCLP De communibus ABCL: De communitate P 12. 16 generis
+&#8212;risibile om. Q 12 sequi BCLP: consequi A sequi post species transp. P
+13. 16 nam&#8212;risibile om. AC 14 illo BP: illa L (corr. m.1) 15. 16 post
+et post risibile add. est P: om. BL 16 post autem add. est his P: de his Q: om.
+ABCL et om. ACP: exhib. BLQ propriis om. Q 17 post speciebus add. et
+individuis Q et proprium ABCLQ: proprium vero P post proprium add: de illis
+L: de his PQ: om. ABC 18 tit. om. PQ: exhib. ABCL generis ct proprii BCL:
+eorum A 19 post autem add. genus et proprium LQ: om. ABCP postorius om. Q:
+exhib. ABCLP 20. p. 44,9 oportet&#8212;interimunt genera om. AC 20 ante esse add
+prius Q: om. BLP et om. Q
+		</div>
+		<div n="100072">
+			De communibus generis et accidentis.
+		</div>
+		<div n="100073">
+			16,18
+		</div>
+		<div n="100074">
+			Generis vero et accidentis commune est de pluribus, quemadmodum
+dictum est, praedicari, sive separabilium sit sive inseparabilium;
+
+		</div>
+		<div n="100075">
+			De propriis generis et accidentis.
+		</div>
+		<div n="100076">
+			17,3
+		</div>
+		<div n="100077">
+			Differt autem genus ab accidenti, quoniam genus ante species
+est, accidentia vcro speciebus posteriora sunt; nam si etiam inseparabile
+
+		</div>
+		<div n="1000771">
+			1 praedicari BLP: praedicatur Q 2. 4 conversim (utrobique) BLQ: conversum P
+3 de eo BLP: in eo Q 5 sin BL: si PQ post homo add. est PQ: om: BL
+econverso B: converso LPQ 6 post omni add. semper Q: om. BLP speciei om.
+Q: exhib. BLP 6. 7 et uni et semper B: et uni et soli et semper LP: et omni soli
+semper Q 7 quidem om. Q: exhib. BLP inest om. B: exhib. LPQ 9 interimunt
+(prius) BPQ: interimantur L post genera add. quorum sunt species BP: om. LQ
+propria] corrigas genera vero ABCLQ: autem P 9. 10 interempta &#8212; propria, et
+om. P 9 interimunt (alter.) BCQ: interimuntur AL 10 et his &#8212; propria om. Q
+interemptis ante et his transp. AC et (post interemptis) om. Q 11 simul post
+interimuntur transp. CL 12 tit. om. PQ: exhib. ABCL 13 generi (ex genus
+corr.) Q vero ABCQ: quidem L: om.P 14 dictum est om. Q: exhib. ABCLP
+14. 15 sive &#8212; pluribus om. AC 14 post sit add. accidens P: om. BLQ 15 etenim
+BLQ: est enim P 15. 16 de hominibus ACL: omnibus BQ hominibus et
+P: fortasse delendum est Aethiopis Q aliquibus ABCPQ: aliquid L
+inanimatis ABCLQ: animatis P post inanim. add. naturis C: om. ABLPQ
+17 tit. om. PQ: exhib. ABCL De propriis ABL: de differentia C 18 autem
+ACLPQ: etiam B accidente codd. 19 posteriora AC: inferiora BLPQ
+19. p. 45,7 nam&#8212;unumquodque om. AC 20 sed BP: eras. L: om. Q 21. p. 45,1 genere
+et accidenti correxi: genera et accidentia codd. 21 post aequaliter add. de his
+quae Q: om. BLP
+		</div>
+		<div n="100079">
+			Geuus vero quo ab aliis quattuor differat dictum est. contingit 
+		</div>
+		<div n="1000790">
+			17,14
+		</div>
+		<div n="1000793">
+			2 post suscipit add. et P: om. BLQ generum post vero transp. Q
+et om. Q: exhib. BLP 3 posf individuis add. substantiis Q: om. BLP
+principaliter post subsistunt transp. Q 4 post naturaliter add. non principaliter
+BL: principaliter P: om. Q 5 quidem om. P: exhib. BLQ in eo BLQ
+de eo P sit BLQ: est P 6 sit Q: est BLP 7 habeat BL
+habet PQ 7. 8 unumquodque &#8212; habeat om. Q 7 qualis cst enim AC
+qualis enim est BP om. enim om. L 8 habeat ante Socrates transp. B dicis
+ACPQ: dices B: om. L 10 vero LPQ: ex venus corr. A: enim B: ergo C
+quo BCL: quod A: quomodo P: in quo Q ab aliis BP: aliis AC: ab his L:
+om. Q 10. p. 46,8 contingit &#8212; accidens om. AC 11 autem om. P: exhib. BLQ
+unum quod aliorum L cum om. P: exhib. BLQ 12 post quinque add. quidem
+P: om. BLQ sint BLQ: sunt P post sint add. res L: om. BPQ unumquodque
+autem scripsi: una autem BL: una quaeque P: et unum autem Q quater
+BLP: quattuor Q post quater add. vero L: om. BPQ 13 fiant BL: fiunt P:
+fient Q 15 iam om. L: exhib. BPQ vero BPQ: autem L duabus BLQ:
+duobus P 16 differentiae om. BQ: exhib. LP 17 enim BLQ: vero P
+18 igitur post sunt transp. P sunt post omnes transp. Q post differentiae add.
+generis PQ: om. BL vero om. P: exhib. BLQ 19 differat L: differt BPQ
+quid BLQ: quo P differret scripsi: differt B: differre L: differet PQ 20 post
+quo add. differentia Q: om. BLP a om. P: exhib. BLQ et proprio] proprio
+BL: et a proprio Q: om. P accidente B 21 differentiae om. Q: post rursus
+transp. L post species add. vero (om. quo) L quidcm om. Q: exhib. BLP
+differat LPQ: differt B 22 quid BL: quo PQ differret BL: differet PQ differet
+post quando transp. Q a specie differentia BQ: species a differentia LP
+		</div>
+		<div n="100081">
+			De communibus differentiae et speciei.
+		</div>
+		<div n="100082">
+			18,10
+		</div>
+		<div n="100083">
+			Commune ergo differentiae et speciei est aequaliter participari; homine enim aequaliter participant particulares homines et rationali
+differentia. commune vero est et semper adesse his quae participant;
+semper enim Socrates rationabilis et semper Socrates homo.
+		</div>
+		<div n="100085">
+			De propriis differentiae et speciei.
+		</div>
+		<div n="100086">
+			18,15
+		</div>
+		<div n="100087">
+			Proprium autem differentiae quidem est in eo quod quale sit
+praedicari, speciei autem in eo quod quid est; nam et si homo velut
+qualitas accipiatur, non hic simpliciter erit qualitas sed secundum
+id quod generi advenientes differentiae eam constituerunt. amplius
+
+		</div>
+		<div n="1000870">
+			1. 2 quo&#8212;dicebatur om. Q l differat L: differt B: differet P 2 quando ex
+quoniam m.2 corr. B differret BL: differet P quo BLQ: quid P
+3 post differat add species Q: supra scr. L2 a om. P : exhib. BLQ (itite accidenti
+add. ab Q: om. BLP accidente codd. duae istae igitur diff. sunt (om.
+etiam) colloc. P: duae igitur sunt diff istae (om. etiam Q 4.5 proprium.&#8212; est
+om. P 4 accidenti Q: accidente BL relinquitur BL: relinquatur Q
+5 post quo add. accidens Q: om. BLP a Q: om. BL differat L: differret
+B: differt Q 6 differentia BLP: differentiis Q quattor Q sumptis
+om. L: exhib. BPQ 7 autem (post duabus) BQ: vero P: om. L 8 ad om. L:
+exhib. BPQ erunt post omnes transp. B reliqua Q: reliquas ABCLP
+demonstravimus ABCL: demostravimus P: demostratum est Q 10 tit. om.PQ:exhib.
+ABCL 11 ergo ABCLP: igitur Q ante differ. add. et Q: om. ABCLP
+11. 12 homine &#8212; participant om. AC 12 homine et rationali differentia PQ: bominem
+et rationalem differentiam BL 13 adesse post his transp. L post quae
+add. eorum PQ: om. BL 14 rationabilis AC: rationalis BLPQ ante ration.
+add. est B: post ration. ACP: om. LQ post homo add. est PQ: om. ABCL
+15 tit. om. PQ: exhib. ABCL differ. et speciei BCL: eorum A 16 autem ABLPQ:
+vero C differentiae post est transp. P est om. Q 16. 17 eo (utrohique)
+supra scr.B 16 quod ex quid corr. C 17 speciei BCLP: species AQ est
+ABCLP: sit Q post est add. praedicari Q: om. ABCLP 12. p. 47, 10 nam &#8212;
+generationem om. AC 17 et B : om. LPQ 18 ante non add. hic L: post non
+BP: om Q erit post qualitas transp. L
+		</div>
+		<div n="100088">
+			De communibus differentiae et proprii.
+		</div>
+		<div n="100089">
+			19,4
+		</div>
+		<div n="100090">
+			Differentia vero et proprium commune quidem habent aequaliter
+participari ab his quae eorum participant; aequaliter enim rationabilia
+
+		</div>
+		<div n="100091">
+			1 saepe BLP: sese Q 1. 2 quemadmodum BLP: velut Q 2 quadrupes B:
+quadrupedes LPQ post animalibus add. et punct. supp. del. diflferentia Q 3 in &#8212;
+sub om. P 3 ante specie add. una BP: ipsa Q: om. L est om PQ: exhib. BL
+4 post differ. add. quidem Q: om. BLP differ. post prima transp. B ante prima
+add. in Q: om. BLP ab ea BLP: et ab ipsa Q post ipsam add. differentiam B:
+om. LPQ 5 interimit hom. BLP: hom. intendit (?) Q vero BLP: enim Q
+interemptus BLP: intentus Q 6 deus BPQ: angelus L differ. post quidem
+transp. BP 7. 8 compositum est BLP: appositum (om. est) Q 9 gignat BL:
+gignet P: generet Q aliam post aliquam transp. BQ 9. 10 quaedam et equa
+(utrobique) P asinae (utrpbique) Q 10 asinae ex asino m.2 corr. A 11 perficiet
+ABCLQ: perficeret P mulum ABCLQ: nullum P 12 tit. om. PQ: exbib.
+ABCL 13 vero ABCLQ: quidem P quidem om. Q: exhib. ABCLP
+14 participari ABCPQ: praedicari L 14. 17 ab his &#8212; dicitur om. AC ab om. BP:
+exhib. LQ. 14 participant BLQ: participat P post enim add. et Q: om. BLP
+14. 15 rationabilia rationabilia sunt] rationabilia sunt L (in mrg. rationalia): rationalia sunt
+B: rationabilia P: rationalia sunt inrationalia Q 15 risibilia risibilia] risibilia L (alterum
+risibilia supra scr.): risibilia risibilia sunt BP: risibilia sunt risibilia Q et (ante omni) om. P:
+exhib. BLQ 16 curtetur BL: contetur P: currentium Q qui est LPQ: quidem B
+16. 17 non subst. perimit deleas secundum comment.: non om. Q: exhib. BLP: substantiam
+perimit L: substantia perimit B: substantia perimitur Q: om. P 17 ante quod add. id
+Q: om. BLP post est add. habet et id quod est LP: om. BQ: fortasse id quod est recipiendum
+post semper add. esse Q: om. BLP 17. 18 nam &#8212; semper om. Q in
+eo B: eo L: id A: ad CP 18 id quod est BL: supra scr. m.1 C: id quod quod est
+P: om. A post semper add. m.2 dicitur L in om. C: exhib. ABLPQ
+		</div>
+		<div n="100093">
+			De propriis differentiae et proprii.
+		</div>
+		<div n="100094">
+			19,10
+		</div>
+		<div n="100095">
+			Proprium autem differentiae est, quoniam haec quidem de pluribus
+speciebus dicitur saepe. ut rationale de homine et de deo, proprium
+vero de una sola specie, cuius est proprium. et ditferentia
+
+		</div>
+		<div n="100096">
+			De comimmibus differentiae et accidentis.
+		</div>
+		<div n="100097">
+			19,16
+		</div>
+		<div n="100098">
+			Differentiae autem et accidenti commune quidem est de pluribus
+
+		</div>
+		<div n="100099">
+			De propriis differentiae et accidentis.
+		</div>
+		<div n="1000100">
+			19,20
+		</div>
+		<div n="1000101">
+			Differunt autem quoniam differentia quidem continet et non continetur,
+
+		</div>
+		<div n="1000102">
+			1 tit. om. PQ: exhib. ABCL 3 saepe dicitur colloc. Q 3. 5 saepe&#8212;conveititur om. AC
+3 saepe supra scr. L2 de (ante deo) om. L: exhib. BPQ post deo add. et angelo L:
+om. BPQ 4 de una LQ: in una BP post specie add. est P: om. BLQ 5 illis post
+est transp. PQ inter est et di differentia ras. L 6 conversim ABCLQ: conversum P
+ante quorum add. de his Q: om. ABCLP 6. 7 idcirco &#8212; convertuntur om. Q
+7 quoniam supra scr. B 8 tit. om. PQ: exhib ABCL et BCL: vel A 9 accidenti
+ABLPQ: accidentis C quidem om. Q: exhib. ABCLP 10 vero est ABC:
+est vero Q: est om. LP 10. 11 posi semper add. in eodem genere A: om. BCLPQ
+11 enim BCLPQ: etenim A post omnibus add. hominibus LPQ: om. ABC
+11. 12 corvis et nigrum similiter ABC: corvis et nigr. esse sim. P: et corvis nigredo
+sim. L: nigrum vero sim. corvis Q 13 tit. om. PQ: exhib. ABCL differ. et
+accid. ABL: earundem C 14 Differunt A: ea; different corr. C: differt BLPQ
+et om. A 14. 15 post continetur add. ab eo quod continet Q: om. ABCLP
+14. p. 49,2 continet &#8212; sunt om. AC 1.5 enim BPQ: autem L rationabilitas BLQ:
+rationalitas P vero om Q: exhib. BLP quodam quidem modo L: quidem quodammodo
+BQ: quodammodo P 16 in supra scr. L sunt LP: sint BQ
+17 subiecta BLP: subsistentia Q 18 et BPQ: sed L intentibilis BL: intensibilis
+PQ est om. P: exhib. BLQ 18. 19 post in remissibilis add. est LP: om. BQ
+19 recipiunt BLQ: suscipiunt P 19. 20 quidem om.Q: exhib. BhP 20 post vero
+add. sunt B: post accid. supra scr. L: om. PQ contraria post accid. transp. Q
+		</div>
+		<div n="1000104">
+			Huiusmodi quidem communiones et proprietates difterentiae et
+ceterorum sunt. species vero quo quidem differat a genere et differentia,
+dictum est in eo quod dicebamus, quo genus differret a ceteris
+et quo differentia differret a ceteris.
+		</div>
+		<div n="1000106">
+			De communibus speciei et proprii.
+		</div>
+		<div n="1000107">
+			20,11
+		</div>
+		<div n="1000108">
+			Speciei autem et proprii commune est de se invicem praedicari:
+nam si homo, risibile est, et si risibile, homo est; risibile vero quoniam
+et secundum id quod natum est sumi oportet, saepe iam dictum
+est; aequaliter enim sunt species his quae eorum participant
+
+		</div>
+		<div n="1000109">
+			De propriis speciei et proprii.
+		</div>
+		<div n="1000110">
+			20,16
+		</div>
+		<div n="1000111">
+			Differt autem species a proprio, quoniam species quidem potest
+et aliis genus csse, proprium vero et aliarum specierum esse inpossibile
+est. et species quidem ante subsistit quam proprium, proprium
+
+		</div>
+		<div n="10001112">
+			1 quidem om. Q: exhib. BLP et (post differ.) om. P: exhib BLQ 3 est
+om. C: exhib. ABLPQ differret BL: differt ACPQ differret post ceteris
+colloc. Q a om. A 4 et qno differentia iter. A differret C: differt AP:
+differat BLQ 5 tit. exhib. codd. omnes Ci speciei ABCLP: speciem Q se om.
+Q; exhib. ABCLP 7. 8 nam &#8212; dictum est om. AC 7 posi homo (prius) add. est
+P: supra scr. B: om. LQ si (ante risib.) om. BLQ: exhib. P post risibile add.
+est P: om. BLQ 8 et om. Q: exhib. BLP sumi oportet L: dicitur BPQ
+9 sunt post species transp. A eorum ABCLQ: horum P 10 et propria ABCLP:
+propria vero Q 11 tit. om. PQ: exhib. ABCL De propriis ABL: De differentia C
+12 a supru scr. AL species post quidem transp. Q 13. p. 50,1 proprium&#8212;praedicari
+om. A: proprium&#8212;huiusmodi om. C 13 ante proprium add. subalternum ante specialissima
+Q: om. BLP 14 post est add. esse nisi illarum quarum est proprium Q: om.
+BLP et om. Q 15 ante hominem acW. prius Q: om. BLP 16 post amplius
+add. autem Q: om. BLP adest post subiecto transp. Q ante subiecto add. in P:
+om. BLQ 17 post aliquando add actu PQ : supra scr. &#8217;-: om. &#8217; post poteslate
+add. vero semper P: autem semper Q: om. BL homo enim BLP: Socrates vero Q
+Socrates BLP: homo Q uon vero semper ridet, quamvis BPQ: semper autem non
+ridet, quamquam L 18 sit nalus semper LP: sit natura semper B: natura semper
+sit Q 19 termini BPQ: diffinitiones L ante differentes add. sunt Q: post diff. P:
+om. BL post autem add proprium Q: om. BLP post speciei add. esse L: diffinitio
+BP: om. Q semper] an quidem? 20 et post semper) om. PQ: exhib. BL sub
+genere esse BLP: adesse subalterne Q et (ante different.) om. Q: exhib. BLP
+		</div>
+		<div n="1000112">
+			De communibus speciei et accidentis.
+		</div>
+		<div n="1000113">
+			21,4
+		</div>
+		<div n="1000114">
+			Speciei vero et accidentis commune quidem est de pluribus pracdicari;
+
+		</div>
+		<div n="1000115">
+			De propriis speciei et accidentis.
+		</div>
+		<div n="1000116">
+			21,8
+		</div>
+		<div n="1000117">
+			Propria vero utriusque sunt, speciei quidem in eo quod quid est
+praedicari de his quorum est, accidentis autem in eo quod
+
+		</div>
+		<div n="1000118">
+			Restat igitur de proprio ot accidenti dicere: quo enim proprium
+
+		</div>
+		<div n="1000119">
+			1 quid in ras. L est BLP: sit Q proprii ABCPQ: proprium L quod
+est om. BPQ: exhib. ACL 2 post est add. et P: om. ABCLQ 2 soli et seinper
+et omni AC: soli et omui et semper B: soli et omni (om. et semper) LP: semper et
+omni et soli Q adesse mutatum in adest L 3 tit. om. Q: exhib. ABCLP
+communiVjus ABCL: communitate et differentia P 4 accidentis ACLPQ: accidenti B
+quidem post est transp.C 5 aliae sunt colloc. P quoniara om. L: eahib. ABCPQ
+a se post distant transp. BPQ 6 distant ABCQ: distat LP id om. A: supra
+scr. &#8217; accidit BCLPQ: accidunt A 7 tit. om. PQ: exhib. ABCL 8 ante speciei
+add. et P: om. ABCLQ post quidem add. est Q: om. ABCLP in eo ABLPQ: et
+60 C quid om. P 9 praedicare A 10 quiddam ABLQ: quid (corr. ex quiddam)
+P: quidem C quiddam est quale colloc. Q 10. 18 vel &#8212; nigredinera
+om.C 10 habens ABLP: liabet Q 10. 18 et&#8212; nigredinem om. A 10. 11 unamq.
+speciem quidem substantiam specie Q 11 participare PQ : participari BL 12 et
+(ante separab.) om. P: exhib. BLQ sane BLP: autem Q 13 ante subintel-
+legi add. potest Q: om. BLP 14 enim in ras. P illi aliquid accidat BLP: ei
+accidat aliquid Q 1.5 generis post sunt iransp. P Ifi aequaliter LPQ: aequa-
+bilis B arcidentis BPQ: accidens L vel si Q: vel B: si LP 17 et int.
+ampl. et rem. &#8217; intentum BL: iutensum PQ 18 nigredinem BP: nigritudi-
+nem LQ 11) dicere et accidente P enim om. P: exhib. BLQ 20 a om.
+ABCLP: exhib. Q et (ante differ.) om. AP: eras. C: exhib. BLQ
+		</div>
+		<div n="1000121">
+			De communibus proprii et accidentis.
+		</div>
+		<div n="1000122">
+			21,20
+		</div>
+		<div n="1000123">
+			Commune autem proprii et inseparabilis accidentis est, quod
+praeter ea nunquam constant illa, in quibus considerantur; quemadmodum
+enim praeter risibile non subsistit homo, ita nec praeter nigredinem
+
+		</div>
+		<div n="1000124">
+			De propnis proprii et accidentis.
+		</div>
+		<div n="1000125">
+			22,4
+		</div>
+		<div n="1000126">
+			Differt autem quoniam proprium uni soli speciei adest, quemadmodum
+risibile. homini; inseparabile vero accidens, ut nigrum, non
+
+		</div>
+		<div n="1000128">
+			Sunt quidem etiam aliae communitates vel proprietates eorum
+quae dicta sunt, sed sufficiunt etiam haec ad discretionem eorum
+conimunitatisque traditionem.
+		</div>
+		<div n="1000129">
+			1 tit. om. Q: exhib. ABCLP communibus ABCL: communitate et differentia P post
+accidentis add. inseparabilis P: om ABCL 2 inseparab. post accidentis transp. BQ
+est ante autem transp. L: ante accid. P 3 ea] ipsa P1 (ea supra scr. m.2)
+constant C: consistant ABL: exstant P: consistunt Q (cf. p. 25, 13) illa ABCLP:
+ea Q consideratur P 3. 5 quemadmodum &#8212; Aethiops om. AC 4 subsistit
+(utrobique) BL: consistit PQ nec om. Q: exhib. BLP 4. 5 post nigred. add.
+non BQ: om. LP 6 sic BLPQ: sicut C: om. A post accidens add. nigrum
+omni Aethiopi adest P: om. ABCLQ 7 tit. om. PQ: exhib. ABCL proprii et
+accidentis colloc. L 8 differt ABL2P: differtur L1: differunt CQ 9. 14 inseparabile&#8212;minus
+om. AC 9. 12 ut nigrum &#8212; accidens om. L (suppl. m.2) 9 ut nigrum
+om. Q: exhib. BL2P 10 solum PQ: soli BL 2 corvo om. Q: exhib. L2BP adest
+post carboni transp. P ebeno BL2: ebano PQ 12 ct BPQ: cuius est L conversim
+post non transp. L 13 ante et iterat. del. quare proprium conversim praedicatur P
+propriorum LP: proprii BQ aequalis] an aequaliter? (cf. p. 50,16) 13. 14
+BLP: accidentis Q 15 etiam ABCLP: et Q aliae om. P: exhib. ABCLQ
+vel ACLQ: et BP earum quae dictae C 16 etiam haec ABCLP: haec et Q
+post eorum add. quae dicta sunt Q: om. ABCLP 17 tradiditionem B
+		</div>
+		</body>
+    </text>
+</TEI>

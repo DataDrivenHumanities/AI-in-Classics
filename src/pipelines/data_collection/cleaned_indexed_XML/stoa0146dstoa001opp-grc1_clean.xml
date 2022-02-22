@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader xml:lang="eng">
+        <title xml:lang="lat">Acta Archelai</title>
+    <author n="0">Hegemonius</author>
+	</teiHeader>
+    <text>
+        <body>
+        <div n="10001">
+			&#924;&#945;&#957;&#953;&#967;&#945;&#8150;&#959;&#962; &#7936;&#960;&#972;&#963;&#964;&#959;&#955;&#959;&#962; &#7992;&#951;&#963;&#959;&#8166; &#935;&#961;&#953;&#963;&#964;&#959;&#8166; &#954;&#945;&#8054; &#959;&#7985; &#963;&#8058;&#957; &#7952;&#956;&#959;&#8054; &#960;&#940;&#957;&#964;&#949;&#962;
+&#7941;&#947;&#953;&#959;&#953; &#954;&#959;&#8054; &#960;&#945;&#961;&#952;&#941;&#957;&#959;&#953;, &#924;&#945;&#961;&#954;&#941;&#955;&#955;&#8179; &#964;&#941;&#954;&#957;&#8179; &#7936;&#947;&#945;&#960;&#951;&#964;&#8183;. &#967;&#940;&#961;&#953;&#962;, &#7956;&#955;&#949;&#959;&#962;,
+&#949;&#7984;&#961;&#942;&#957;&#951; &#7936;&#960;&#8056; &#952;&#949;&#959;&#8166; &#960;&#945;&#964;&#961;&#8056;&#962; &#954;&#945;&#8054; &#954;&#965;&#961;&#943;&#959;&#965; &#7969;&#956;&#8182;&#957; &#7992;&#951;&#963;&#959;&#8166; &#935;&#961;&#953;&#963;&#964;&#959;&#8166;. &#954;&#945;&#8054; &#7969;
+
+		</div>
+		<div n="100010">
+			&#913;CM und Epiph. (= 25&#8211;27)
+		</div>
+		<div n="100011">
+			1 animus] animose M | stuabat &#913; | utramnam C | ad eum pergeret] ex
+se ad eum pergeret C per se ageret ad eum &#924; p. s. ad eum ageret M2 | 3 ingressum
+A | aliquid M | 4 versutioribus] es folgt in &#913; eine Ras. von drei Buchst.
+5 adda &lt; C | qui . . . instructus] vielleicht eine Glosse zu adda | &#932;&#973;&#961;&#946;&#969;&#957;
+Epiphanius | addam] adda &#913; | 6 acceptam eam die beiden m&#8212;Zeichen durchstrichen
+C2 | 7 manen &#913; manne C | praeceptum fuerat ~ C | 8 curso &#913; |
+9 et &lt;&#913; |10 ad &lt; M | 11 intruxerat &#913; | 12 esset] nach quis in M | 14
+ad wie immer &#913; | ignoratum &#913; | 15 ipsi &#913; | adhibendum C | 16 singula
+cum M ~ M2 | cotidiae &#913; | adqne wie immer &#913; | 17 perferre &#913; | hosptiis
+&#913; | 18 indicasse &#913; | 20 vero] igitur C | marcellus litteras ~ M | legit
+C | 21 est hoc ~ C | 25 apostolus] s aus m w. e. seh. corr. &#913; | ihm &#913; |
+26 narh misericordia + et M | 27 dnm nm ihm xpm A
+		</div>
+		<div n="10002">
+			&#932;&#8052;&#957; &#956;&#8050;&#957; &#960;&#949;&#961;&#8054; &#963;&#8050; &#7936;&#947;&#940;&#960;&#951;&#957; &#956;&#949;&#947;&#943;&#963;&#964;&#951;&#957; &#959;&#8022;&#963;&#945;&#957; &#945;&#7984;&#963;&#952;&#951;&#952;&#949;&#943;&#962;, &#955;&#943;&#945;&#957; &#7952;&#967;&#940;&#961;&#951;&#957;&#183; 
+		</div>
+		<div n="100026">
+			ACM und Epiph.
+		</div>
+		<div n="100027">
+			1 &#948;&#953;&#945;&#964;&#951;&#961;&#942;&#963;&#949;&#953;&#949;] Dindorf, &#948;&#953;&#945;&#964;&#951;&#961;&#942;&#963;&#949;&#953; J | 9 &#956;&#8052;] von Cornarius und Pelavius
+eingef&#252;gt | 17 te a] te de &#913; et a C | ruina C | de laqueis malignis &#913; a
+laqueis maligni C labiis malignis M | 18 amen &lt; C | 20 fidem M | iuxta te
+recta ratione C iuxta recta ratione M | 21 nach missus + sum &#913; C | et &lt; &#913;
+| 22 scribta wie immer &#913; | 28 primum M | salate &#913; | 24 animos] &#955;&#959;&#947;&#953;&#963;&#956;&#8056;&#957;
+&#917;piphanius | 25 docent dicentes] docentes C | 26 auctorem A | quiquam A
+| 26/27 ungenaue &#220;bersetzung | &#954;&#945;&#8054; &#966;&#945;&#973;&#955;&#959;&#965; des Epiphanius nicht &#252;bersetzt:
+29 o fili &lt; &#924; | 30 indiscraetae &#913; indiscreta C
+		</div>
+		<div n="1000214">
+			2 = 17 Hebr.6.8 &#8212; 4 = 18 Matth.7,18. Luk.6,43 &#8212; 9 = 28 Joh.1,18
+&#8212; 15 = 29 I Kor. 7, 35
+		</div>
+		<div n="1000215">
+			AMC und Epiph.
+		</div>
+		<div n="1000216">
+			3 &#7952;&#957;] nach den Acta corr. Zacagni | 10 nach &#965;&#7985;&#8056;&#957; + &#954;&#945;&#8054; Oehler | 11 &#947;&#949;&#947;&#949;&#957;-
+&#957;&#8134;&#963;&#952;&#945;&#953;] &#947;&#949;&#947;&#949;&#957;&#957;&#951;&#956;&#941;&#957;&#959;&#957; Routh | 16 freie &#220;bersetzung | dei &#913; | enim &lt; C | 17
+fidem &#913; | patrum &#924; | est] fehlt im Griechischen | 18 in (nach enim) &lt; &#913; | 19 et
+domini &lt; &#924; | ihm &#913; | 19/20 umgekehrte Reihenfolge der S&#228;tze des Citates |
+20 fructus bonos M ~ M2 | malus &#913; | 21 deum] aus corr. A dominum C |
+actum &#913; | factorum C | et &lt; C | 23 qui de] aus quidem corr. C2 | de
+&lt; &#913; | 24 nach filium + et &#924; | 25 at] tu &#913; | plura &#924; | 26 atque] quae &#924;
+| 27 non &lt; C | sufficiant M | 28 cognoscis &#913; | aput &#913; wie immer | 29
+parcere. . festinas] sehr freie &#220;bersetzung
+		</div>
+		<div n="10010">
+			(VII), M&#940;&#961;&#954;&#949;&#955;&#955;&#959;&#962;, &#7936;&#957;&#8052;&#961; &#7952;&#960;&#943;&#963;&#951;&#956;&#959;&#962;, &#924;&#945;&#957;&#953;&#967;&#945;&#943;&#8179; &#964;&#8183; &#948;&#953;&#8048; &#964;&#8134;&#962; &#7952;&#960;&#953;&#963;&#964;&#959;&#955;&#8134;&#962;
+&#948;&#951;&#955;&#959;&#965;&#956;&#941;&#957;&#8179;, &#967;&#945;&#943;&#961;&#949;&#953;&#957;. &#964;&#8052;&#957; &#964;&#8052;&#957; &#956;&#8050;&#957; &#8017;&#960;&#8056; &#963;&#959;&#8166; &#947;&#961;&#945;&#966;&#949;&#8150;&#963;&#945;&#957; &#7952;&#960;&#953;&#963;&#964;&#959;&#955;&#8052;&#957;
+&#960;&#961;&#959;&#963;&#951;&#954;&#940;&#956;&#951;&#957;, &#964;&#8056;&#957; &#948;&#8050; &#932;&#973;&#961;&#946;&#969;&#957;&#945; &#960;&#961;&#959;&#963;&#949;&#948;&#949;&#958;&#940;&#956;&#951;&#957; &#954;&#945;&#964;&#8048; &#966;&#953;&#955;&#959;&#966;&#961;&#959;&#963;&#973;&#957;&#951;&#957;
+&#7952;&#956;&#942;&#957;, &#964;&#8182;&#957; &#948;&#8050; &#947;&#961;&#945;&#956;&#940;&#964;&#969;&#957; &#964;&#8056;&#957; &#957;&#959;&#8166;&#957; &#959;&#8017;&#948;&#945;&#956;&#8182;&#962; &#7956;&#947;&#957;&#969;&#957;, &#949;&#7984; &#956;&#8052; &#963;&#8058; &#960;&#945;&#961;&#945;&#947;&#949;&#957;&#972;&#956;&#949;&#957;&#959;&#962;
+
+		</div>
+		<div n="10011">
+			ACM und Epiph. (= 3&#8211;4 und 17-21)
+		</div>
+		<div n="10012">
+			3 initio C | 4 nach honorabilis + uale &#913; | 5 haec ACM | obsequen-
+tissimo] das erste e vielleicht a. Ras. C | 6 quae] q, &#913; | 7 nach conclusus +
+os M | 8 sibi desiderans dari] uidere desiderans M; vgl. Epiphanius, haer, 66,7
+&#8056; &#948;&#8050; &#7944;&#961;&#967;&#941;&#955;&#945;&#959;&#962; &#947;&#957;&#959;&#8058;&#962; &#964;&#8052;&#957; &#945;&#7984;&#964;&#943;&#945;&#957; &#954;&#945;&#8054; &#964;&#8052;&#957; &#7952;&#960;&#953;&#963;&#964;&#959;&#955;&#8052;&#957; &#7936;&#957;&#945;&#947;&#957;&#959;&#8058;&#962; &#7956;&#946;&#961;&#965;&#967;&#949; &#964;&#959;&#8058;&#962; &#8001;&#948;&#972;&#957;&#964;&#945;&#962;
+&#8037;&#963;&#960;&#949;&#961; &#955;&#941;&#969;&#957; &#8033;&#961;&#965;&#972;&#956;&#949;&#957;&#959;&#962; &#954;&#945;&#8054; &#958;&#8134;&#955;&#959;&#957; &#952;&#949;&#959;&#8166; &#7936;&#957;&#945;&#955;&#945;&#946;&#8060;&#957; &#7952;&#960;&#949;&#953;&#961;&#8118;&#964;&#959; &#8001;&#961;&#956;&#8134;&#963;&#945;&#953; &#956;&#8118;&#955;&#955;&#959;&#957; &#7957;&#969;&#962;
+&#945;&#8016;&#964;&#959;&#8166; &#954;&#945;&#8054; &#967;&#949;&#953;&#961;&#974;&#963;&#945;&#963;&#952;&#945;&#953; &#964;&#8056;&#957; &#964;&#959;&#953;&#959;&#8166;&#964;&#959;&#957; usw. | 9 procuratum &#913; procuraturam &#924; |
+18 a te &lt; &#913;&#924; | 19 vero] uerum &#913; &lt; &#924; | 21 per epistulam &lt; C
+| promisti C | 22 scriptam atque &lt; C | tradit M | referendam C | 23 ad
+eum] illi &#924; | 24 nach itineris + ac M | 25 ad illum reuersurum A ad eum 
+reditum C
+		</div>
+		<div n="10021">
+			(XXV). &#917;&#7984; &#964;&#8052;&#957; &#964;&#959;&#8166; &#924;&#940;&#957;&#951; &#960;&#943;&#963;&#964;&#953;&#957; &#952;&#941;&#955;&#949;&#964;&#949; &#956;&#945;&#952;&#949;&#8150;&#957;, &#960;&#945;&#961;&#8127; &#7952;&#956;&#959;&#8166;
+  &#7936;&#954;&#959;&#973;&#963;&#945;&#964;&#949; &#963;&#965;&#957;&#964;&#972;&#956;&#969;&#962;. &#959;&#8023;&#964;&#959;&#962; &#948;&#973;&#959; &#963;&#941;&#946;&#949;&#953; &#952;&#949;&#959;&#8058;&#962; &#7936;&#947;&#949;&#957;&#957;&#942;&#964;&#959;&#965;&#962;, &#945;&#8016;&#964;&#959;&#966;&#965;&#949;&#8150;&#962;,
+  &#7936;&#7989;&#948;&#943;&#959;&#965;&#962;, &#7988;&#957;&#945; &#964;&#8183; &#7953;&#957;&#8054; &#7936;&#957;&#964;&#953;&#954;&#949;&#943;&#956;&#949;&#957;&#959;&#957;. &#954;&#945;&#8054; &#964;&#8056;&#957; &#956;&#8050;&#957; &#7936;&#947;&#945;&#952;&#972;&#957;, &#964;&#8056;&#957; &#948;&#8050; &#960;&#959;&#957;&#951;&#961;&#8056;&#957;
+  &#949;&#7984;&#963;&#951;&#947;&#949;&#8150;&#964;&#945;&#953;, &#966;&#8182;&#962; &#964;&#8183; &#7952;&#957;&#8054; &#8005;&#957;&#959;&#956;&#945; &#952;&#941;&#956;&#949;&#957;&#959;&#962; &#954;&#945;&#8054; &#964;&#8183; &#7952;&#964;&#941;&#961;&#8179; &#963;&#954;&#972;&#964;&#959;&#962;&#183;
+  
+		</div>
+		<div n="100212">
+			ACM und Epiph.l (= 18&#8211;24)
+		</div>
+		<div n="100213">
+			1 fore] futuram C | unum A | calisto M | 2 praecepit &#924; | ilico &lt; M
+| postridum &#913; | 3 manem C | repperit] das erste p durchstrichen C | 4 tradit
+&#924; | 5 esse zweimal geschrieben A inuitatum se esse C | 5/6 remorationem
+non prosperam C vielleicht richtig, vgl. Epiphanius a. a. &#927;. Cap. 8 &#964;&#945;&#8166;&#964;&#945; &#947;&#957;&#959;&#8058;&#962;
+&#8001; &#924;&#940;&#957;&#951;&#962; &#7952;&#963;&#954;&#941;&#960;&#964;&#949;&#964;&#959; &#959;&#8016;&#954; &#7936;&#947;&#945;&#952;&#8052;&#957; &#949;&#7990;&#957;&#945;&#953; &#964;&#8052;&#957; &#964;&#959;&#8166; &#932;&#973;&#961;&#946;&#969;&#957;&#959;&#962; &#7952;&#957; &#954;&#945;&#952;&#941;&#958;&#949;&#953; &#947;&#949;&#957;&#959;&#956;&#941;&#957;&#951;&#957;
+&#960;&#945;&#961;&#959;&#965;&#963;&#943;&#945;&#957; . . . &#8005;&#956;&#969;&#962; &#948;&#953;&#8048; &#964;&#8134;&#962; &#7952;&#960;&#953;&#963;&#964;&#959;&#955;&#8134;&#962; &#955;&#945;&#946;&#972;&#956;&#949;&#957;&#959;&#962; &#964;&#8052;&#957; &#960;&#961;&#972;&#966;&#945;&#963;&#953;&#957; &#948;&#961;&#959;&#956;&#945;&#943;&#969;&#962; &#7974;&#954;&#949;
+&#960;&#961;&#8056;&#962; &#964;&#8056;&#957; &#924;&#940;&#961;&#954;&#949;&#955;&#955;&#959;&#957; | 6 praesagus &#913;  | 7 prorsus &lt; M | descedebat &#913; descendebat
+&#924; | 8 nach archelai + episcopi C | manis] manen AM mannichei C
+der Genetiv dieses Wortes kommt nur hier und Z 18 unten vor | 9 studiis]
+studis &#913; is a. Ras. &#924; | quis et] qui sit &#913; | 11 &#960;&#945;&#961;&#8127; &#7952;&#956;&#959;&#8166;] Routh interpungiert
+nach &#7952;&#956;&#959;&#8166;, so auch der &#220;bersetzer der Acta | 17 &#964;&#959;&#8166;&#964;&#959;&#957;] Zacagni, &#964;&#959;&#973;&#964;&#969;&#957; J,
+&#964;&#959;&#973;&#964;&#969;&#957; &#964;&#959;&#8166;&#964;&#959;&#957; Gataker | 18 de fide manitis (rot) M, s. Einleitung | manis)
+mani &#913; maunichei C | 19 exemet A | aeteruns &#913; | 20 et alterum zweimal
+gesehrieben A | nach bonuml + et A | autem &lt; C | introducit] intruducit
+&#913; aus introducim corr. C2, das m-Zeichen ist durchstrichen und t &#252;bergesch.
+| 21 nomen] lumen &#913; | alter &#913; | 22 q, &#913; | est tenebrarum zweimal
+gesch. &#913; | 28 conditio aus condicio corr. A | 24 modo] aus modum corr. &#913;
+		</div>
+		<div n="1002111">
+			5 &#960;&#961;&#959;&#946;&#940;&#955;&#955;&#949;&#953;&#957;] Petavius, &#960;&#961;&#959;&#963;&#946;&#940;&#955;&#955;&#949;&#953;&#957; J | 6 &#960;&#961;&#959;&#946;&#949;&#946;&#955;&#951;&#954;&#941;&#957;&#945;&#953;] &#960;&#949;&#961;&#953;&#946;&#949;&#946;&#955;&#951;&#954;&#941;&#957;&#945;&#953;
+nach den Acta corr. Oehler, aber vgl. Epiphanius Cap. 45 &#954;&#945;&#8054; &#945;&#8021;&#964;&#951; &#948;&#941;,
+&#966;&#951;&#963;&#943;, &#7969; &#952;&#942;&#955;&#949;&#953;&#945; &#960;&#961;&#959;&#949;&#946;&#940;&#955;&#949;&#964;&#959; &#964;&#8056;&#957; &#960;&#961;&#8182;&#964;&#959;&#957; &#7940;&#957;&#952;&#961;&#969;&#960;&#959;&#957; | 13 &#950;&#969;&#8052;&#957; J | 16 aduersus
+M | 17 singuli] zu singulis corr. &#913; | suas] singulas &#913; | accederit A | ut] at
+C getilgt und ut &#252;bergesch C2 | 19 agnouisset C | ad] a A | superuenire
+&#924; | 20 produxit . . . virtutem] produxit ex uirtute A produxerit et esse uirtutem
+z&#965; produxit ex se uirtutem ohne Ras. corr. C produxerit ex se uirtutem M |
+nach qua + uirtute C | 21 ventus &lt; A | 22 materia] maria &#913; | inductus C
+| paratum A C | 23 pugnaturus &#924; | aduersus A | at] aus ad corr. C2 | 23/24
+principes . . . ei] princeps repugnantese &#924; | 24 animam A &#924; | 26 orante &#913; |
+27 se] ae &#913; ea M | 28 duxisset M | 29 deorsum animam ~ C | relinquit A
+		</div>
+		<div n="10022">
+			VIII. &#932;&#972;&#964;&#949; &lt;&#964;&#8056;&gt; &#950;&#8182;&#957; &#960;&#957;&#949;&#8166;&#956;&#945; &#7956;&#954;&#964;&#953;&#963;&#949; &#964;&#8056;&#957; &#954;&#972;&#963;&#956;&#959;&#957;, &#954;&#945;&#8054; &#945;&#8016;&#964;&#8056;
+
+		</div>
+		<div n="100223">
+			ACM und Epiph.
+		</div>
+		<div n="100224">
+			4 &#964;&#8056;] Dindorf | 9 &#949;&#7984;&#962; &#949;&#7988;&#948;&#951;] Zacagni vermutet &#949;&#7984;&#963;&#8054; &#948;&#8050; &lt;&#8052;&gt; als die
+Lesart des &#220;bersetzers | 18 &#954;&#945;&#964;&#974;&#964;&#945;&#964;&#945;] Dindorf vermutet &#954;&#945;&#964;&#974;&#964;&#949;&#961;&#945; als die Lesart des
+&#220;bersetzers und verbessert interiores zu inferiores | 14 dextras &#924; | 15/16 
+omnis . . . dicitur] omnes hereses esse dicunt C; vielleicht liegt eine Doppelversion vom
+&#220;bersetzer selbst vor | 18 et crucifixit] in A hat eine sp&#228;tere Hand die zeimlich
+verblichenen Buchst. ausradiert und in groben Buchst. et crucixit (das letzte t &#220;bergesch.)
+geschrieben. Derselbe Schreiber ist auch sonst t&#228;tig, wo die Tinte blass wurde,
+aber ohne auszuradieren, so dass es immer m&#246;glich ist, das Urspr&#252;ngliche
+festzustellen | firmamentum A | 19 eius] richtig &#945;&#8016;&#964;&#8182;&#957; (sc. &#7936;&#961;&#967;&#972;&#957;&#964;&#969;&#957;) Epiphanius
+| spera A fera &#924; | rursus A | 20 reliquae A | eam A | circumire C | 21 
+		</div>
+		<div n="1002212">
+			ACM und Epiph.
+		</div>
+		<div n="1002213">
+			6/7 &#945;&#8020;&#964;&#951; . . &#8017;&#960;&#972;&#952;&#949;&#963;&#953;&#962;] fehlt in Acta | 16|17 freie &#220;bersetzung | humero A |
+17 et &lt; A | 18 ex sese] ex se A esse se C | vel germina] findet sich nicht bei Epiphanius
+| furata M | 18/19 a quibusdam principibus &lt; C | 19 principes &lt; M | 21
+vinxit] uixit &#913; iunxit M | eum A | 22 quia] qui A | 23 dilectum &lt; C | salute  A
+| haec A | 24 humoforum C homoforum &#924; das erste o getilgt und u &#252;bergesch.
+von M2 | transformavit] aus transformabit ohne Ras. corr. C | 25 adparebat]
+parebat A C M nach Epiphanius von Zacagni verbessert | 26 putauerunt C | 
+natum] naturam C | venisset] uidisset &#924; | 27 concinnauit C | rotam] &#956;&#951;&#967;&#945;&#957;&#8052;&#957;
+Epiphanius | statuit] status &#924; | 28 urceos] os aus Corr. A urchios M | quae]
+q a. Ras. A | nach quae + rota C | 29 morientum M | quas] quam M | id
+est sol] eine Erkl&#228;rung des &#220;bersetzers w. e. sch. | adimens] &#955;&#945;&#946;&#8060;&#957; Epiphanius
+		</div>
+		<div n="10030">
+			(XXVII). &#7977; &#948;&#8050; &#964;&#959;&#8166; &#7936;&#960;&#959;&#952;&#945;&#957;&#949;&#8150;&#957; &#964;&#959;&#8058;&#962; &#7936;&#957;&#952;&#961;&#974;&#960;&#959;&#965;&#962; &#7952;&#963;&#964;&#8054; &#960;&#940;&#955;&#953;&#957;
+
+		</div>
+		<div n="100301">
+			ACM und Epiph.
+		</div>
+		<div n="100302">
+			1 &#964;&#945;&#973;&#964;&#945;&#962;] &#964;&#945;&#973;&#964;&#945;&#953;&#962; Oehler | 6 &#959;&#8021;&#964;&#969;] w. e sch. las der &#220;bersetzer &#960;&#940;&#955;&#953;&#957;
+(&#945;&#8022;&#952;&#953;&#962; Oehler) | 14 &#964;&#959;&#8166;] Petavius, &#964;&#8056; J | 16 tradet A | discus] discursus A | 
+nobis] nauis M | 17 cambas] a. Ras., cymbas &#252;bergesch. M2 | 18 luminaria]
+das erste i aus a corr. &#913; | impleta &#924; | lunam A | transfetare &#913; | ad] d
+aus Corr., vielleicht aus b corr. A | 19 apocrisin C apocrysim &#924; | facere] patitur
+C | onere] honore A | reuelata A leuata &#924; | 20 cumbas] cumbam C
+cymbas M das y zu u corr. und y &#252;bergesch. M2 | rursum A | urceos] das &#959; aus
+u corr. A | 21 animarum] &#964;&#8134;&#962; &#968;&#965;&#967;&#8134;&#962; Epiphanius | substantiam &#913; | 23 quod
+gerit] fehlt bei Epiphanius | 24 permanet M | illa] bezieht sich auf saecula, vielleicht
+ein Irrtum des &#220;bersetzers; illae Zacagni | 25 vir] der &#220;bersetezer hat &#7936;&#942;&#961;
+und &#7936;&#957;&#942;&#961; verwechselt | 26 animarum mundarum ~ C M | 27 mortis . . . causa]
+a. Ras. w. e. sch. M | hominibus est ~ A | ista] &#960;&#940;&#955;&#953;&#957; &#945;&#8021;&#964;&#951; Epiphanius | 28
+et] aus Corr. A | furto. . . . principes] freie &#220;bersetzung | appetit C appetiit M
+		</div>
+		<div n="1003010">
+			ACM und Fpiph.
+		</div>
+		<div n="1003011">
+			10 &#952;&#949;&#961;&#953;&#963;&#956;&#959;&#8166; Zacagni, vielleicht mit Recht, &#952;&#949;&#961;&#953;&#963;&#964;&#8052;&#962; Petavius, alter princeps
+messor appellatus Cornarius | 15 vivente] aus uiuentes corr. M1 | spirito A | educti]
+seducit zu seducti corr. M2 | 15/17 eine Paraphrase | 15 masculis A | 16 nach
+adulescentem + se M | 19|20 freie &#220;bersetzung | 19 amoris] amoriis A | excitati]
+escitati A excecati &#924; | 20 calore] amoris calorem &#913; | ergo] enim C | eis &lt; C |
+post eam] postea M, fehlt bei Epiphanius | nach eam + anxii effecti fuissent C
+| 21 subito] fehlt bei Epiphanius | conparuerit] comparuit (uit a. Ras. A) AC |
+22 ut M | universum] omnem C | 22|24 wieder eine Paraphrase | 24 princeps]
+das e aus i corr. &#913; | nach sudat + ei &#913; | 25 effundet A | famem] famam A;
+der &#220;bersetzer hat w. e. sch. &#955;&#959;&#953;&#956;&#972;&#962; und &#955;&#953;&#956;&#972;&#962; verwechselt | 26 omnem &lt; &#913; C |
+mortem A | hoc enim M ~ M2 | 27 magni] imaginis &#924; | 28 rursum AC
+		</div>
+		<div n="10040">
+			(XXVIII). &#7960;&#961;&#8182; &#948;&#8050; &#8017;&#956;&#8150;&#957; &#954;&#945;&#8054; &#964;&#959;&#8166;&#964;&#959;, &#960;&#8182;&#962; &#956;&#949;&#964;&#945;&#947;&#947;&#943;&#950;&#949;&#964;&#945;&#953; &#7969; &#968;&#965;&#967;&#8052;
+&#949;&#7984;&#962; &#960;&#941;&#957;&#964;&#949; &#963;&#974;&#956;&#945;&#964;&#945;. &#960;&#961;&#8182;&#964;&#959;&#957; &#954;&#945;&#952;&#945;&#961;&#943;&#950;&#949;&#964;&#945;&#953; &#956;&#953;&#954;&#961;&#972;&#957; &#964;&#953; &#7936;&#960;&#8127; &#945;&#8016;&#964;&#8134;&#962;, &#949;&#7990;&#964;&#945;
+&#956;&#949;&#964;&#945;&#947;&#947;&#943;&#950;&#949;&#964;&#945;&#953; &#949;&#7984;&#962; &#954;&#965;&#957;&#8056;&#962; &#7970; &#949;&#7984;&#962; &#954;&#945;&#956;&#942;&#955;&#959;&#965; &#7970; &#949;&#7984;&#962; &#7953;&#964;&#941;&#961;&#959;&#965; &#950;&#974;&#959;&#965; &#963;&#8182;&#956;&#945;. &#7952;&#8048;&#957;
+&#948;&#8050; &#8080; &#960;&#949;&#966;&#959;&#957;&#949;&#965;&#954;&#965;&#8150;&#945; &#968;&#965;&#967;&#942;, &#949;&#7984;&#962; &#954;&#949;&#955;&#949;&#966;&#8182;&#957; &#963;&#974;&#956;&#945;&#964;&#945; &#956;&#949;&#964;&#945;&#966;&#941;&#961;&#949;&#964;&#945;&#953;&#183; &#7952;&#8048;&#957; &#948;&#8050;
+
+		</div>
+		<div n="100403">
+			ACM und Epiph.
+		</div>
+		<div n="100404">
+			3 &#964;&#972;&#957;&#8179;] &#960;&#972;&#957;&#8179; Petavius | 6 &#964;&#959;&#8166;&#964;&#959;] fehlt in den Acta | 14 &#949;&#7984;&#962; &#966;&#945;&#963;&#942;&#955;&#953;&#945;]
+&#963;&#966;&#945;&#963;&#942;&#955;&#953;&#945; J, &#966;&#940;&#963;&#951;&#955;&#959;&#957; oder &#966;&#945;&#963;&#943;&#959;&#955;&#959;&#957; Dindorf | 16 uirginem A | incipiet &#913;
+excipit M | excidere . . . cum &lt; C | 17 pestilentia] das erste e aus i corr. A
+| si &lt; C | 18 radicis] radices &#913; radicum CM | 18/19 ungenaue &#220;bersetzung
+| 19 humofori C homofori zu humofori corr. M2 | 20 alia quoqne] &#960;&#941;&#957;&#964;&#949; Epiphanius
+| 21 transferuntur A | purgantur A | parum ex ea M | 23 commisit C ammisit
+M | elephantiacorum] elefantorum &#913; elefantia corum C elefantiacorum et
+cephalorum M; wahrscheinlich liegt eine Doppelversion des &#220;bersetzers zu Grunde
+| 24 transfunduntur AC | 26 ex materia] &#7936;&#960;&#8127; &#7936;&#961;&#967;&#8134;&#962; Epiphanius; die &#220;bersetzung
+hier ist &#252;brigens nicht genau | 28 eos transfundi ~ &#913; | fasellum &#913; fasolum M
+| 29 aut in spicas &lt; C | dementiatur C
+		</div>
+		<div n="1004013">
+			ACM und Epiph.
+		</div>
+		<div n="1004014">
+			10 Routh und Oehler interpungieren nach &#8021;&#948;&#969;&#961; | Zacagni vermutet &#960;&#955;&#942;&#963;&#963;&#949;&#953;
+als die Lesart des &#220;bersetzers | 11 &#947;&#949;&#941;&#957;&#957;&#945;&#962;] Dindorf, &#947;&#949;&#957;&#949;&#940;&#962; J,vgl. 18, 11
+| 14 &#7956;&#963;&#952;&#953;&#949;&#957; am Rande J | 16 manducant C | est &lt; M | nach est + ut
+C | 16/17 ipsum . . effectum] ipsi manducentur pane effecti C; vielleicht eine Doppelversion
+des &#220;bersetzers | 17 qui (nach effectum)] quod A | murem] mnre &#913; | 18
+nach etiam + et A | si &lt; A | 21 eum] enim C | perseam] per se eam &#913; persa
+C | 22 persea illa] per se a illa zu per se ad illam corr. C2 | quam plantaverat] 
+fehlt bei Epiphanius | 23 dispergitur M | 24 aquam M; vielleicht hat der
+&#220;bersetzer buchst&#228;blich &#252;bersetzt ohne die Construction zu treffen | non &lt; &#924; |
+25 elementa A &#949;&#8016;&#963;&#941;&#946;&#949;&#953;&#945;&#957; Epiphanius | poenis] w. e. seh. aus paenis corr. A |
+subditar AM | 26 catecumenorum &#913; cathecuminorum M | facias C | miseri-
+cordias] &#949;&#8016;&#963;&#941;&#946;&#949;&#953;&#945;&#962; Epiphanius | 27 est] fehlt bei Epiphanius | illis &lt; C | 28
+oratio manicheorum super cibos (rot) &#924; | ad panem &lt; &#924;
+		</div>
+		<div n="1005">
+			ACM und Epiph.
+		</div>
+		<div n="1006">
+			1 &#963;&#949;] fehlt in den Acta | vielleicht ist &#963;&#949; nach den Acta vor &#7956;&#946;&#945;&#955;&#959;&#957; zu erg&#228;nzen
+| 2 nach &#7936;&#957;&#945;&#953;&#964;&#943;&#969;&#962; + &#963;&#949; Oehler | 12 &#964;&#953;&#962;] &#964;&#953; Routh und Oehler | 14 neque
+tribulaui C nec te tribulaui &#924; | 15 te fecit] &#7952;&#960;&#959;&#943;&#951;&#963;&#949; &#964;&#945;&#8166;&#964;&#945; Epiphanius | te (nach
+detulit)] fehlt bei Epiphanius | nach mandnco + et soluo C | 16 respondit AM |
+illum qui] eum qui ei C | 17 et ita . . paulo ante &lt; &#913; | et &lt; M | 18 mola
+&#913; | 19 mola &#913; in molam fehlt bei Epiphanius | aut &lt; &#913; | 20 ant si] ita et
+si quis &#913; aut qui M | nach eos + hoc M | 21 dicunt] fehlt bei Epiphanius |
+quosdam &lt; A | 21/22 praeter . . mundos] fehlt bei Epiphanius, | 22 nach quibus
++ in M | occiderit M | 23 obriuntur &#913; moriuntur M | et illi dicunt] fehlt bei
+Epiphanius; w. e. sch. ist es ein Zusatz des &#220;bersetzers | illi] ibi &#913; hi M | 24
+movet] leuat AM, vielleicht liegt hier eine Doppelversion des &#220;bersetzers vor | aerem]
+das erste e &#252;bergesch. &#913; | 25 et volatilium &lt; M | 26/26 et . . mundo] den Zusammenhang
+hat der &#220;bersetzer verkannt; die &#220;bersetzung ist hier &#252;brigens nicht
+genau | 26 materia M | 27 ideo] fehlt bei Epiphanius | necesse est illut C
+		</div>
+		<div n="10080">
+			(XXIX). &#960;&#949;&#961;&#8054; &#948;&#8050; &#964;&#959;&#8166; &#960;&#945;&#961;&#945;&#948;&#949;&#943;&#963;&#959;&#965; &#8005;&#962; &#954;&#945;&#955;&#949;&#8150;&#964;&#945;&#953; &#954;&#972;&#963;&#956;&#959;&#962;. &#7956;&#963;&#964;&#953;
+&#948;&#8050; &#964;&#8048; &#966;&#965;&#964;&#8048; &#964;&#8048; &#7952;&#957; &#945;&#8016;&#964;&#8183;, &#7952;&#960;&#953;&#952;&#965;&#956;&#943;&#945;&#953; &#954;&#959;&#8054; &#7940;&#955;&#955;&#945;&#953; &#7936;&#960;&#940;&#964;&#945;&#953; &#948;&#953;&#945;&#966;&#952;&#949;&#943;&#961;&#959;&#965;&#963;&#945;&#953;
+&#964;&#959;&#8058;&#962; &#955;&#959;&#947;&#953;&#963;&#956;&#959;&#8058;&#962; &#964;&#8182;&#957; &#7936;&#957;&#952;&#961;&#974;&#960;&#969;&#957; &#7952;&#954;&#949;&#943;&#957;&#969;&#957;. &#964;&#8056; &#948;&#8050; &#7952;&#957; &#954;&#960;&#945;&#961;&#945;&#948;&#949;&#943;&#963;&#8179; &#966;&#965;&#964;&#8056;&#957;
+&#7952;&#958; &#959;&#8023; &#947;&#957;&#969;&#961;&#943;&#950;&#959;&#965;&#963;&#953; &#964;&#8056; &#954;&#945;&#955;&#972;&#957;, &#945;&#8016;&#964;&#972;&#962; &#7952;&#963;&#964;&#953; &#8001; &#7992;&#951;&#963;&#959;&#8166;&#962;, &#7969; &#947;&#957;&#8182;&#957;&#963;&#953;&#962; &#945;&#8016;&#964;&#959;&#8166;, &#7969;
+
+		</div>
+		<div n="100804">
+			ACM und Epiph.
+		</div>
+		<div n="100805">
+			1 &#948;&#962;] Zacagni, &#959;&#8016; J, Dindorf nimmt mit Unrecht eine L&#252;cke an; vgl. Epiphanius
+Cap. 54 | 3 &#7952;&#954;&#949;&#943;&#957;&#969;&#957;] &#7952;&#954;&#949;&#8150;&#957;&#959; (mit &#966;&#965;&#964;&#8056;&#957; zu verbinden) Oehler, w&#959;hl mit
+Reeht | 4 &#945;&#8016;&#964;&#972;&#962;] Oehler, &#945;&#8016;&#964;&#972; J; vgl. Epiphanius a. a. &#927;. | nach &#7992;&#951;&#963;&#959;&#8166;&#962; +
+&#954;&#945;&#8054; Zacagni, Oehler und Dindorf, ober vgl. Epiphanius a. a. &#927;. | 13 &#8017;&#956;&#8150;&#957;]
+&#965; aus &#951; hergestellt J &#7969;&#956;&#8150;&#957; Petavius; vgl. 19, 9, | 14 &#960;&#957;&#949;&#8166;&#956;&#945;] &#960;&#957;&#949;&#973;&#956;&#945;&#964;&#945; Oehler,
+wohl mit Recht; viellcicht liegt eine Verwechselung der Abk&#252;rzungen vor |
+15/16 ungenaue &#220;bersetzung | paradisi &#924; | nach mnndus + et C | 16 concupiscentia
+M | agitationes C | 17/18 qua agnoscitur] quo cognoscitur &#913; | 18 est
+Iesus] estis C. Der Schreiber hat dic Abk&#252;rxung IS = Iesus verlesen | eius] illius
+C | 19 bono A | 20 dei] deus aus dei corr. M2 | parte] r &#252;bergesch. &#913; &lt; C
+| materia C | plasmatur &#924; | 21 hominem A | ipsut A ipsum &#924; | 22 luna
+C | animam &#913; | 38 tradetur &#913; | gehenna] das erste e &#252;bergesch. &#913; gehennam
+CM | 24 postquam &#913; | correpta] correptam &#913; correcta &#924; | transfundetur M
+| alia] fehlt bei Epiphanius | 26 illud &#924; | 27 qui &#913;&#924;
+		</div>
+		<div n="10090">
+			&#928;&#949;&#961;&#8054; &#948;&#8050; &#964;&#959;&#8166; &#7944;&#948;&#8048;&#956; &#960;&#8182;&#962; &#7952;&#954;&#964;&#943;&#963;&#952;&#951;, &#955;&#941;&#947;&#949;&#953; &#959;&#8021;&#964;&#969;&#962;&#183; &#8005;&#964;&#953; &#8000; &#949;&#7984;&#960;&#974;&#957;,
+&#948;&#949;&#8166;&#964;&#949;, &#954;&#945;&#8054; &#960;&#959;&#953;&#942;&#963;&#969;&#956;&#949;&#957; &#7956;&#957;&#952;&#961;&#969;&#960;&#959;&#957; &#954;&#945;&#964;' &#949;&#7984;&#954;&#972;&#957;&#945; &#7969;&#956;&#949;&#964;&#941;&#961;&#945;&#957; &#954;&#945;&#8054; &#954;&#945;&#952;'
+
+		</div>
+		<div n="100900">
+			14 &#8212; 27 Gen. 1, 26
+		</div>
+		<div n="100901">
+			ACM und Epiph.
+		</div>
+		<div n="100902">
+			1 &#964;&#959;&#8150;&#964;&#959;] der &#220;bersetxer hat &#964;&#959;&#973;&#964;&#969;&#957; gelesen | 2 nach &#7952;&#955;&#940;&#955;&#951;&#963;&#945;&#957; + &#7952;&#957; &#7936;&#955;&#951;&#952;&#949;&#943;&#8115;
+Zacagni mit Recht | 9 &#8017;&#956;&#8150;&#957;] Cornarius und Zacagni, vgl. 18, 13; &#7969;&#956;&#8150;&#957; J
+| 14 &#954;&#945;&#8054; (nach &#948;&#949;&#8166;&#964;&#949;)] fehlt in den Acta und bei Epiphanius Cap. 56 | 15 a #x003C; &#913;
+| deceptio &#913; | in] i &#252;bergeseh. &#913; | 16 mentes C | illorum &#913; | et si . . . ipsorum
+#x003C; M | 17 morientur &#924; | seculo M | deuictus &#913; | non #x003C; &#924; | 18 paraclyti &#913; wie
+immer, paracliti M wie immer | non #x003C; A | 19 desinerint &#913; | orarent et] orantes
+M | 20 oleum super caput CM | extorcidiatum &#913; exorcizatorum suorum M |
+21 horum C | mihi] hi &#252;bergesch. &#913; | 22 enim] autem C | nominibus] fehlt
+bei Epiphanius | hoc #x003C; &#913; | 23 magnum . . nomen] magnum esset honorabilem
+nomen &#913; | ille dicit] fehlt bei Epiphanius | natura &#913; | esse] aus esset gleich
+corr; &#913; | 24 partam M | inquid &#913; wie immer; fehlt bei Epiphanius | 25 concupiscentia
+&#913; | 26 quia qui dicit #x003C; &#913; | 27 et (nach nostram) #x003C; CM
+		</div>
+		<div n="1009011">
+			ACM und Epiph.
+		</div>
+		<div n="1009012">
+			1 &#7972;] et dic Acta | 3 nach &#956;&#959;&#961;&#966;&#8052;&#957; + &#954;&#945;&#8054; Routh | 4 &#7956;&#954;&#964;&#953;&#963;&#949;] &#969;. e. sch. zu
+&#7956;&#954;&#964;&#953;&#963;&#945;&#957; zu corr., so Cornarius | 18 uidemus &#913; | qui] quia A | 18/20 nicht wortlich
+&#252;bersetzt | 20 accipimus &#913; | 21 uidemus &#913; | 22 creaverunt] fecerunt &#924;
+| nach creaverunt + qui &#913; | euuam &#913; | 23 per haec] &#948;&#953;&#8048; &#964;&#959;&#973;&#964;&#969;&#957; Epiphanius,
+per hos Cornarius | esse &#913; | 24 mundum C | conditionis M | nach vero +
+dicit M | patrem &#913; | 25 eo C | in*itio Ras. von einem Buchst. &#913; | 26 aborta
+A | haec &#913; | 27 mittet C | 27/28 id est] fehlt bei Epiphanius | 28 nach est
++ per C | omnes &#913; | rapatur &#913; aptatur &#924; | 29 moysen &#913; | 31 gentes C
+		</div>
+		<div n="100100">
+			&#924;&#949;&#964;&#8048; &#948;&#8050; &#960;&#940;&#957;&#964;&#945; &#964;&#945;&#8166;&#964;&#945; &#7952;&#960;&#8054; &#964;&#941;&#955;&#949;&#953; &#955;&#941;&#947;&#949;&#953; &#954;&#945;&#952;&#8060;&#962; &#945;&#8016;&#964;&#8056;&#962; &#7956;&#947;&#961;&#945;&#968;&#949;&#957;
+
+		</div>
+		<div n="1001005">
+			ACM und Epiph.
+		</div>
+		<div n="1001006">
+			17 moysen &#913; | 18 quoniam &#924; | 21 feceris AM | humoforus C bomoforus
+M | 22 derelinquet &#913; reliquid M | 28 consummat A | dimittur anima
+&#913; | statt animam &#946;&#8182;&#955;&#959;&#957; Epiphanius | 23/24 quae obicitur] fehlt bei Epiphanius
+| 24 uincantur AM | 25 fiet A | statua venerit] Beausobre, ista tota uenerit &#913;
+statuta uenerit dies C statuta uenerit probatio &#924; | prolationes] probationes AM |
+26/80 eine ziemlich ungenaue Paraphrase | 26 modica] od a. Ras. C | uita C
+27/28 maiori in navi] maior in naui &#913; maiori naui CM | 28 navi vivens] a. Ras.
+M | ignis illius &#8766; C | 29 et aquae] ea quae C | et #x003C; &#913; | ignis vivi quae]
+ignis uiuensque &#913; uiui quae C | 30 habitabant &#924; | obsumat &#913; | quod AC
+		</div>
+		</body>
+    </text>
+</TEI>

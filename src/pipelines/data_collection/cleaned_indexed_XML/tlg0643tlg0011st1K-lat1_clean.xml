@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader xml:lang="eng">
+        <title xml:lang="lat">Signorum Explicatio to Iatrica</title>
+    <author n="0">K. F. G. Kenyon</author>
+	<author n="1">Anonymus Londinensis</author>
+	</teiHeader>
+    <text>
+        <body>
+        <div n="1000">
+			SIGNORUM EXPLICATIO
+		</div>
+		<div n="10010">
+			EDITIONIS
+		</div>
+		<div n="10020">
+			* spatiuro unius litterae relictum a librario
+		</div>
+		<div n="10030">
+			* * spatium binarum litterarum relictum a librario
+		</div>
+		<div n="10040">
+			&#8212;&#8212; paragraphus ad sioistram subter versus clausulam
+          continentis initium posita a librario
+		</div>
+		<div n="10050">
+			&#8212;&#8212; capitis clausula eodem moclo notata a librario
+		</div>
+		<div n="10060">
+			litterae expunctae a librario
+		</div>
+		<div n="10070">
+			litterae deletae a librario
+		</div>
+		<div n="10080">
+			vestigia litterarum oblitarum a librario
+		</div>
+		<div n="10090">
+			[&#945;&#945;&#945;]litterae additae aut super versura aut iu margine  a librario
+		</div>
+		<div n="100100">
+			(&#945;&#945;&#945;) litterae siglis significatae
+		</div>
+		<div n="100110">
+			[&#945;&#945;&#945;] litterae coniectura aut pro oblitteratis aut pro falso scriptis positae ab editore
+		</div>
+		<div n="100120">
+			[&#945;&#945;&#945;] litterae deletae ab editore
+		</div>
+		<div n="100130">
+			&lt;&#945;&#945;&#945;&gt; litterae additae ab editore
+		</div>
+		<div n="100140">
+			&#945;&#945;&#945; litterae ambiguae aut non cert lectae ab editore
+		</div>
+		<div n="100150">
+			NOTARUM
+		</div>
+		<div n="100160">
+			&#929; papyri Londiuensis CXXXVII scriptor idemque corrector
+		</div>
+		<div n="100170">
+			K F. G. Kenyon
+		</div>
+		</body>
+    </text>
+</TEI>

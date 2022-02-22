@@ -1,0 +1,4884 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader xml:lang="eng">
+        <title xml:lang="lat">In Libros Aristotelis De Caelo Paraphrasis</title>
+    <author n="0">Themistius</author>
+	</teiHeader>
+    <text>
+        <body>
+        <div n="10000">
+			THEMISTII IN LIBROS ARISTOTELIS DE CAELO PARAPHRASIS
+		</div>
+		<div n="10002">
+			ARISTOTELIS DE CAELO &#917;&#932; MUNDO
+LIBER PRIMUS
+CUM THEMISTII COMMENTARIO A ZARAHIA ISACI FILIO HISPA
+&#917;&#935; ARABICO IN HEBRAICUM TRANSLATUS.
+		</div>
+		<div n="10003">
+			Versio Alatini f. 1r
+		</div>
+		<div n="100050">
+			Tria veteres caeli nomine appellare cousuevere; etenim inerrantium
+stellarum orbem tantum, insuper corpus quintum, ac demum
+mundum ipsum caeli nomine usurparunt. iuxta vero tertium hunc
+dicendi modum invenimus Aristotelem hic de eo disseruisse. cum
+itaque de mundo in praesenti libro tractare instituisset ac huiuscemodi
+
+		</div>
+		<div n="1000505">
+			14 Al. add. deque earum motibus, cf. infra.
+		</div>
+		<div n="1000507">
+			f. 1r
+		</div>
+		<div n="100060">
+			Continuum est quod dividuum est in ea, quae semper
+dividi possunt; idque sane de loco, motu, tempore, superficie
+et linea dicitur; etenim haec omnia secantur in id, quod semper
+
+		</div>
+		<div n="1000602">
+			f. 1v
+		</div>
+		<div n="100070">
+			Perspicuum autem est totum, omnia et perfectum unum et
+
+		</div>
+		<div n="1000700">
+			4 quamvis . . . et si] fort, emend, utnim . . an, deinde: et&lt;quae&gt; 5 ante]
+9 natura] materia Al., cf. supra 3 12 cf. Averr. p. 1
+		</div>
+		<div n="1000702">
+			f. 1v
+		</div>
+		<div n="100080">
+			Magnitudinum, quae dividuae sunt, omnino etiam
+continuae sunt, nondum tamen constat, num hic sermo retro
+commeet, ut magnitudines continuae dividuae quoque existant.
+dividuas namque magnitudines ea ratione continuas statuit, qua
+
+		</div>
+		<div n="1000800">
+			1 subiectum scripsi: locum codd.: rerum discrimine Al: cf. Simpl. p. 9,6 &#954;&#7938;&#957; &#7984;&#945;&#964;&#8048; to &#8017;&#960;&#959;&#954;&#949;&#8055;&#956;&#949;&#957;&#8057;&#957;
+&#960;&#959;&#964;&#949; &#948;&#953;&#945;&#966;&#8051;&#961;&#8131; 2 Arist. addit supplevi 3 si et sq.] iisdem fere verbis
+usus est Aver. p. 3 E 9 proprie: finitur (&#8037;&#961;&#953;&#963;&#964;&#945;&#953;) hoc est terminatur, sine dubio
+glossa interpretis cuiusdam. 18 cum&#8212;non est (19)] locus difficilis: cum maius eo,
+quod perfectum est, inveniri non possit Al
+		</div>
+		<div n="1000802">
+			f. 1v
+		</div>
+		<div n="100090">
+			Illud autem, inquit, manifestum est, corpus nullo modo
+posse in aliud genus progredi, veluti ex linea in superficiem.
+dicimus namque lineam, quae unam in se tantum dimensionem
+
+		</div>
+		<div n="1000901">
+			f. 2r
+		</div>
+		<div n="1000100">
+			Neque totum mundusve hac dumtaxat ratione perfectus existit,
+
+		</div>
+		<div n="10001003">
+			9 Physicis] &#918; 1 31. 32 secundum formam Al: necessario codd. 37 a superiore
+elemento Al: ab ipso codd.
+		</div>
+		<div n="10001005">
+			f. 2r
+		</div>
+		<div n="1000110">
+			Itaque cum declaratum sit, totum esse perfectum, quatenus nil
+aliud extra ipsum invenitur, a quo claudi possit, quinimmo ab eo
+omnia clauduntur: rationi consentaneum fuit, ut diceret, quonam
+modo nil aliud extra ipsum inveniatur, num quia infinitum sit,
+post infinitum aliud quidpiam inveniri minime possit. atqui disquisitionem
+
+		</div>
+		<div n="1000120">
+			Quare a motus perscrutatione exorditur: motus inquit,
+
+		</div>
+		<div n="10001203">
+			18 terminatum omnes: 1. indeterminatum 19 infinitum Al: finitum codd.
+27 unumquodque existit] unicuique inest Al 33. 34 non&#8212;quam] Al: om.
+38 cf. Simpl. &#929;. 1315
+		</div>
+		<div n="10001206">
+			f. 2v
+		</div>
+		<div n="1000130">
+			Cum autem corpora quaedam simplicia sint et quaedam
+ex simplicibus composita, fiet necessario, ut motuum quoque
+nonnulli simplices sint aliique ex simplicibus compositi. ac
+nonnulli ex iis quodammodo compositi inveniantur. Aristoteles
+antem dicit simplicia sunt corpora, quae motus principium
+
+		</div>
+		<div n="10001301">
+			1 [plures&#8212;inveniri] supplevi 10 cum autem et sq.] Simpl. 15,1 20 aliqua
+ex parte] interpretatio verborum &#954;&#945;&#964;&#8048; &#955;&#8057;&#947;&#959;&#957; esse videtur 23 eadem&#8212;insequitur (24)]
+locus suspectus; fort, vertendum est, corporibus eandem perfectionem et complementum comparat
+32 aliique&#8212;compositi (pr.) fort, dittographia, cf. paulo inferius
+35 ad differentiam et seq.] cf. Simpl. 16, 12 &#940;&#961;&#967;&#8052;&#957; &#956;&#8050;&#957; &#947;&#8048;&#961; &#954;&#953;&#957;&#8053;&#963;&#949;&#969;&#962; &#7954;&#967;&#949;&#953; &#954;&#945;&#8054; &#964;&#8048; &#950;&#8183;&#945;
+&#964;&#8048; &#966;&#965;&#8049;, &#7936;&#955;&#955;&#8127; &#959;&#8016; &#964;&#8134;&#962; &#954;&#945;&#964;&#8048; &#964;&#8052;&#957; &#966;&#8059;&#963;&#953;&#957;, &#954;&#945;&#952;&#8056; &#964;&#959;&#953;&#945;&#8166;&#964;&#945;, &#7936;&#955;&#955;&#8048; &#964;&#8052;&#962; &#954;&#945;&#8048; &#964;&#8052;&#957; &#968;&#965;&#967;&#8053;&#957;.
+		</div>
+		<div n="10001303">
+			f. 2v
+		</div>
+		<div n="1000140">
+			Si motum aliquem simplicem esse contingat, et is, qui
+secundum circulum fit, simplex existat, in simplici corpore erit.
+etenim si quispiam dixerit, corpus, quod in orbem movetur, esse compositum,
+
+		</div>
+		<div n="10001403">
+			f. 3r
+		</div>
+		<div n="10001404">
+			15 &#8212; praevalet] ut si ignita trabs . . proiiciatur, quoniam in ea terra praevalet, deorsum
+feretur Al
+		</div>
+		<div n="10001406">
+			f. 3r
+		</div>
+		<div n="1000150">
+			His igitur ita indicatis, aliam deinceps orationem prosequitur,
+quae est eiusmodi. motus praeter naturam contrariatur
+motui, qui secundum naturam existit, et motus, qui
+naturali motui adversatur, unus est (unum enim uni contrariatur),
+motus igitur praeter naturam unus existit. dum vero aliquod
+
+		</div>
+		<div n="1000160">
+			Idem praeterea, hoc est in mundo quintum corpus inveuiri,
+alia quoque ratione hunc in modum explicatur. conversio ea latione
+perfectior est, quae recto ordine fit, ilia siquidem inter perfectas
+lationes connumeratur, rectae lineae vero motus minime perfectus
+existit. cireulus euim figurarum omnium perfectissimus est, siquidem
+
+		</div>
+		<div n="10001605">
+			25 Alexander apud Simpl. p. 39,11 39 eiusmodi Al; om. codd.; fort, suppl. aliud
+40 primiun et (p. 10, 1) deinde scripsi: vel primorum, vel secundorum codd. Al
+		</div>
+		<div n="10001607">
+			f. 3v
+		</div>
+		<div n="1000170">
+			Quod non modo iis, quae dicta sunt, verum alia ratioue hunc
+in modum ostenditur. motus enim aut naturalis, aut praeter
+naturam est, qui alicui corporum praeter naturam inest,
+
+		</div>
+		<div n="1000180">
+			Practerca vero conversio aut naturalis aut praeter naturam
+erit. si naturalis, perspicuum est, quod quinto corpori inerit
+secundum naturam. non enim fierit potest, ut alicui elementorum
+accommodetur, haec namque alios praeter hunc naturales motus
+
+		</div>
+		<div n="1000190">
+			Cum autem pro hypothesi statuisset, quod contrario caret, ac
+insuper adduxisset nonnulla tanquam supposita, alia vero
+
+		</div>
+		<div n="10001900">
+			3 corpora &#8212; extiterit (4)] proprium corporum compositorum motum conversionem non
+esse Al 33 non &#8212; deorsum] sic Al, in codd. excidit aliquid per homoeoteleuton
+		</div>
+		<div n="10001902">
+			f. 3v
+		</div>
+		<div n="1000200">
+			Eorum autem quae dicta suut, haec supposita fuere, nempe
+motum, quo aliquid per locum movetur, esse de numero eorum,
+quae uaturalibiis coporibus per se iusuut, ac simplices motus inveniri
+
+		</div>
+		<div n="10002003">
+			f. 4r
+		</div>
+		<div n="1000210">
+			Haec sunt quae in praecedeutibus supposita fuere, quae vero
+conqorobavit haec sunt: nempe iu mundo corpus simplex quintum
+inveuiri, quod secundum naturam in circulum movetur, quodque elementis
+quatuor perfectius atque antiquius existit.
+		</div>
+		<div n="1000220">
+			Deinceps ait: ex hoc autem sequitur, quintum corpus non
+
+		</div>
+		<div n="1000221">
+			5 Quarto] IV, 1 &#8212; 4 21 contrarium esse] erit Al 22 habeat] illi existat Al
+41 fort, post conferatur excidit: levis autem, si ad terrain conferatur [comparatione igiur]
+		</div>
+		<div n="1000230">
+			Quippe cum gravis ac levis definitionem retulisset, dixissetque
+grave esse id, quod natura sua fertur deorsum, leve autem, quod 
+		</div>
+		<div n="10002300">
+			f. 4r
+		</div>
+		<div n="10002307">
+			3 convcrti] cf. Simpl 61,29 &#954;&#945;&#8054; &#7936;&#957;&#964;&#953;&#963;&#964;&#961;&#8051;&#966;&#949;&#953; &#7936;&#957;&#945;&#947;&#954;&#945;&#8055;&#969;&#962;; cum dcfinilo Al, om. codd.
+11&#8212;17 Simpl. 63, 19 &#8001; &#956;&#8051;&#957;&#964;&#959;&#953; &#952;&#949;&#956;&#8055;&#963;&#964;&#953;&#959;&#962; &#959;&#8016;&#967; &#959;&#8021;&#964;&#969;&#962; &#963;&#965;&#955;&#955;&#959;&#947;&#8055;&#950;&#949;&#963;&#952;&#945;&#953; &#957;&#959;&#956;&#8055;&#950;&#949;&#953;, &#7936;&#955;&#955;&#8127; &#8005;&#964;&#953;,
+&#954;&#8049;&#964;&#969; &#960;&#945;&#961;&#8048; &#966;&#8059;&#963;&#953;&#957; &#954;&#953;&#957;&#951;&#952;&#949;&#8055;&#951;, &#7956;&#963;&#964;&#945;&#953; &#945;&#8016;&#964;&#8183; &#954;&#945;&#964;&#8048; &#966;&#8059;&#963;&#953;&#957; &#7969; &#7952;&#957;&#945;&#957;&#964;&#8055;&#945; &#964;&#945;&#8059;&#964;&#8131; &#7969; &#7940;&#957;&#969;&#903; &#7974;&#957; &#948;&#8050; &#954;&#945;&#8054;
+&#954;&#8059;&#954;&#955;&#8179; &#954;&#945;&#964;&#8048; &#966;&#8059;&#963;&#953;&#957; &#964;&#8183; &#954;&#965;&#954;&#955;&#959;&#966;&#959;&#961;&#951;&#964;&#953;&#954;&#8183;&#903; &#948;&#8059;&#959; &#7940;&#961;&#945; &#7940;&#961;&#945; &#7953;&#957;&#8054; &#7952;&#957;&#945;&#957;&#964;&#8055;&#945;&#903; &#954;&#7938;&#957; &#964;&#8052;&#957;
+&#954;&#953;&#957;&#951;&#952;&#949;&#8055;&#951;, &#960;&#8049;&#955;&#953;&#957; &#7969; &#954;&#8049;&#964;&#969; &#954;&#945;&#964;&#8048; &#966;&#8059;&#963;&#953;&#957;, &#954;&#945;&#8054; &#964;&#8056; &#945;&#8016;&#964;&#8056; &#7940;&#964;&#959;&#960;&#959;&#957; &#7936;&#954;&#959;&#955;&#959;&#965;&#952;&#8053;&#963;&#949;&#953; &#964;&#8056; &#948;&#8059;&#959; &#7953;&#957;&#8054;
+&#949;&#7990;&#957;&#945;&#953;. 27 excidit aliquid per homoioteleuton. suppl.: ergo corpus circulare neque levitatem
+neque gravitatem sortitur. ad rem cf. Simpl. 62, 11, &#948;&#949;&#8055;&#954;&#957;&#952;&#963;&#953; &#948;&#8050; &#959;&#8021;&#964;&#969;&#962;, &#8033;&#962; &#7944;&#955;&#8055;&#958;&#945;&#957;&#948;&#961;&#959;&#962;
+&#920;&#949;&#956;&#8055;&#963;&#964;&#953;&#8057;&#962; &#966;&#945;&#963;&#953;&#903; &#964;&#8056; &#954;&#8059;&#954;&#955;&#8179; &#954;&#953;&#957;&#959;&#8059;&#956;&#949;&#957;&#959;&#957; &#959;&#8020;&#964;&#949; &#7940;&#957;&#969; &#959;&#8020;&#964;&#949; &#954;&#8049;&#964;&#969; &#954;&#953;&#957;&#949;&#8150;&#964;&#945;&#953; &#954;&#945;&#964;&#8048;
+&#7940;&#957;&#969; &#956;&#8053;&#964;&#949; &#954;&#8049;&#964;&#969; &#954;&#953;&#957;&#959;&#8059;&#956;&#949;&#957;&#959;&#957; &#954;&#945;&#964;&#8048; &#966;&#8059;&#963;&#953;&#957; &#959;&#8020;&#964;&#949; &#954;&#959;&#8166;&#966;&#959;&#957; &#959;&#8020;&#964;&#949; &#946;&#945;&#961;&#8059; &#7952;&#963;&#964;&#953;&#957;&#903; &#959;&#8016;&#954;
+&#7969; &#7952;&#955;&#8049;&#964;&#964;&#969;&#957;. . . , &#7936;&#955;&#955;&#8127; &#7936;&#8057;&#961;&#953;&#963;&#964;&#959;&#957; &#7956;&#967;&#949;&#953; &#964;&#8056; &#954;&#945;&#964;&#951;&#947;&#959;&#961;&#959;&#8059;&#956;&#949;&#957;&#959;&#957;
+		</div>
+		<div n="100023013">
+			f. 4v
+		</div>
+		<div n="100023018">
+			8 arbitratur] fort, levi emendatione vert, est: arbitramur eius . . . probasse, sed cf. Av.
+p. 14 D 16. 23 undequaque sustentatum] fort. &#7984;&#963;&#959;&#960;&#945;&#955;&#8051;&#962;
+		</div>
+		<div n="100023020">
+			f. 4v
+		</div>
+		<div n="1000240">
+			Cum itaque satis hoc in loco demonstratum sit, inveniri in
+mundo corpus quintum simplex, elementis quatuor antiquius ac
+
+		</div>
+		<div n="1000250">
+			Quicquid oritur, ex coutrario et subiecto aliquo oritur,
+
+		</div>
+		<div n="1000260">
+			Post haec ostendit quintum corpus neque augmentum neque
+additionem admittere. crescit namque augeturque corpus, quando
+
+		</div>
+		<div n="10002600">
+			10 corrumpitur Al: om. codd. 11 Physicis] 1,7 23 cf. Simpl. 131,24 &#954;&#945;&#8055;&#964;&#959;&#953; &#947;&#949;
+&#8001; &#920;&#949;&#956;&#8055;&#963;&#964;&#953;&#959;&#962; . . . &#949;&#7990;&#960;&#949;&#957;, &#8005;&#964;&#953; &#954;&#945;&#952;&#8057;&#955;&#959;&#965; &#955;&#945;&#956;&#946;&#8049;&#957;&#949;&#953; &#8001; &#7944;&#961;&#953;&#963;&#964;&#959;&#8051;&#955;&#951;&#962; &#964;&#8056; &#7952;&#958; &#7952;&#957;&#945;&#957;&#964;&#8055;&#959;&#965; &#954;&#945;&#8054; &#949;&#7984;&#962; &#7952;&#957;&#945;&#957;&#964;&#8055;&#959;&#957;
+&#947;&#949;&#957;&#953;&#954;&#969;&#8049;&#964;&#951;&#957; &#955;&#945;&#956;&#946;&#8049;&#957;&#969;&#957; &#7952;&#957;&#945;&#957;&#964;&#8055;&#969;&#957;&#963;&#953;&#957; &#949;&#7988;&#948;&#959;&#965;&#962; &#954;&#945;&#8054; &#963;&#964;&#949;&#961;&#8053;&#963;&#949;&#969;&#962; 30 contrariorum &#8212;
+contrarii motus etiam pari modo contrarii dicentur Al 35 invenimus] locus corruptus,
+intenditur Ar. 270a20
+		</div>
+		<div n="10002602">
+			f. 4v
+		</div>
+		<div n="10002605">
+			f. 5r
+		</div>
+		<div n="1000270">
+			Atqui ea tantum alteratio, quae ad quartam hanc qualitatis
+speciem fit, cum perpessione minime evenit. idque facile videre
+
+		</div>
+		<div n="10002704">
+			13 Alexander] Simpl. p. 110,11 16 Categoriis] c. 8
+		</div>
+		<div n="10002706">
+			f. 5r
+		</div>
+		<div n="1000280">
+			Colligendo deinceps ea,quae dixerat, ait: et mundus neque ortum
+neque interitum admittit, et reliqua, quae deinde sequuntur. hoc
+autem manifestum erit, ut Aristoteles iuquit, si quis hisce fidem adhiburit,
+ac demonstrationis loco ea statuerit, quae in praecedentibus
+
+		</div>
+		<div n="1000290">
+			Videtur autem et nostra sententia iis, quae apparent,
+
+		</div>
+		<div n="10002905">
+			3 Categoriis] 15a22
+		</div>
+		<div n="10002907">
+			f. 5r
+		</div>
+		<div n="10002908">
+			f. 5v
+		</div>
+		<div n="1000300">
+			Quinimmo et ipsum caeli nomeu, quod ceteris dignius est,
+eodem modo semper ad baec usque tempora traditum est, quod
+probat veteres in eadem, qua posteriores sunt, de caelo seutentia
+
+		</div>
+		<div n="1000310">
+			Palam est itaque ex dictis, fieri non posse, ut praeter
+haec quinque simplicia corpora, simplex aliud corpus inveuiatur.
+cuius sane Veritas certitudoque ex motione desumitur, siquidem
+simplicis corporis motus, congruum est, ut sim
+plex existat. atqui simplices motus recti ac circularis tantum
+
+		</div>
+		<div n="10003101">
+			2 . . potesQ emeudavi: hoc est . . posse codd. Al (paraphr. est verborum &#8035;&#962;
+&#947;&#949; . . &#960;&#8055;&#963;&#964;&#953;&#957;) 32.33 [ ] supplevi 40 motus&#8212;simplicium scrips!: duae lineae simplices
+codd.: quandoquidem hue duae tantum diametri simplices, hoc est duae simplices lineae
+existunt Al.
+		</div>
+		<div n="10003103">
+			p. 5v
+		</div>
+		<div n="1000320">
+			Caeli autem volubilitati nullum contrariari motum, hunc in
+modum osteiidi potest, si ea illi motio miuime adversatur, quae
+
+		</div>
+		<div n="1000330">
+			Consonum igitur est, ut quod antea ostendimus, nempe quod
+nullum invenitur contrarium corpori, quod in orbem convertitur, ab
+
+		</div>
+		<div n="10003301">
+			35 locorum contrarietatem et nempe om. codd.
+		</div>
+		<div n="1000340">
+			Cum autem dixerit, huius | veritatem certitudinemque
+ex rebus stabiliri posse, nempe non esse aliquem motum conversioni
+
+		</div>
+		<div n="1000350">
+			Si quis existimet eandem(??)esse ratiouem in recto etc.
+nempe si curva super recta linea circumducatur, quae sit linea AB,
+non erit eadem ratio, ut quemadmodum
+motus, qui est ab A
+
+		</div>
+		<div n="1000360">
+			In dimidiato quoque circulo eadem ratio est etc. etenim
+
+		</div>
+		<div n="1000370">
+			Similiter sese res habet et in circulo. si duas quoque
+res per unum eundemque circulum a duabus diametri extreimtatibus ita
+
+		</div>
+		<div n="10003700">
+			3 multis ex rebus] &#960;&#955;&#949;&#959;&#957;&#945;&#967;&#972;&#952;&#949;&#957; Ar. p. 270b33 17 omnes quae sequuntur, figurae
+Averrois commentario petitae videntur. 25. 26 conicio curvas lineas infinitas ..
+		</div>
+		<div n="10003702">
+			f. 6r
+		</div>
+		<div n="1000380">
+			Hunc vero motum illi minime contrariari, ex contrariorum
+motuum definitione perspicuum evadit, quae
+est, ut ex contrario in contrarium fiant,
+sicuti motus, qui ex inferis ad supera quique
+
+		</div>
+		<div n="1000390">
+			Aristoteles insuper iis de rebus aliam
+rationem adstruit, quae demoustrativo ordine
+hunc in modum ab eo deducitur. si siconversio
+esset conversioni contraria, vanam
+quaudam actionem natura operaretur, quae nullum finem respiceret,
+sicuti mox declarabimus. at non invenimus otiosam indeterminatamque
+actionem naturam operari; consonum est igitur, ut conversio
+
+		</div>
+		<div n="1000391">
+			f. 6v
+		</div>
+		<div n="1000400">
+			Qua autem ratione eiusmodi conversiones destruant sese, hac
+indagine declaratur. si imaginemur quippiam positum esse super
+
+		</div>
+		<div n="10004000">
+			4 idem continget&#8212;dicebamus] Simpl. p. 188,6 &#949;&#7990;&#964;&#945; &#956;&#8051;&#956;&#966;&#949;&#964;&#945;&#953; &#964;&#8183; &#920;&#949;&#956;&#953;&#963;&#964;&#8055;&#8179; &#949;&#7984;&#960;&#972;&#957;&#964;&#953;, &#8005;&#964;&#953;
+&#945;&#8016;&#964;&#8048; &#955;&#949;&#954;&#964;&#8051;&#959;&#957; &#964;&#959;&#8150;&#962; &#7952;&#960;&#8054; &#964;&#959;&#8166; &#955;&#972;&#947;&#959;&#965; &#964;&#959;&#8166; &#960;&#961;&#8056; &#964;&#959;&#973;&#964;&#959;&#965; &#964;&#959;&#8150;&#962; &#960;&#949;&#961;&#8054; &#964;&#8182;&#957; &#7952;&#960;&#8054; &#956;&#972;&#957;&#959;&#965; &#964;&#959;&#8166; &#7969;&#956;&#953;&#954;&#965;&#954;&#955;&#943;&#959;&#965;
+&#954;&#953;&#957;&#959;&#965;&#956;&#8051;&#957;&#969;&#957; 7 sed&#8212;dividatur] Simpl. p. 189,2 &#954;&#7938;&#957; &#963;&#965;&#947;&#967;&#969;&#961;&#8053;&#963;&#8131; &#964;&#953;&#962;, &#966;&#951;&#963;&#8055;, &#964;&#945;&#8150;&#962; &#7952;&#960;&#8054;
+&#7969;&#956;&#953;&#954;&#965;&#954;&#955;&#943;&#969;&#957; &#966;&#959;&#961;&#945;&#8150;&#962; &#7952;&#957;&#945;&#957;&#964;&#943;&#945;&#953;&#962; &#949;&#7990;&#957;&#945;&#953;, &#7936;&#955;&#955;&#8127; &#959;&#8016; &#964;&#8052;&#957; &#7952;&#960;&#8054; &#964;&#959;&#8166; &#8005;&#955;&#959;&#965; &#954;&#973;&#954;&#955;&#959;&#965;, &#960;&#949;&#961;&#8054; &#7974;&#962; &#8000; &#955;&#972;&#947;&#959;&#962;, &#963;&#965;&#947;&#967;&#969;&#961;&#8053;&#963;&#949;&#953;&#949;&#957;
+&#7940;&#957; &#964;&#953;&#962; &#956;&#949;&#961;&#8055;&#950;&#949;&#963;&#952;&#945;&#953; &#8033;&#962; &#949;&#7984;&#962; &#7952;&#957;&#945;&#957;&#964;&#943;&#945;&#962;. 14 alteri&#8212;revertitur om. codd.: quae
+ab Al non satis apte expleta esse videtur.
+		</div>
+		<div n="10004002">
+			f. 6v
+		</div>
+		<div n="1000410">
+			Et haec sunt ea, circa quae potissimum (ni fallor) huius rationis
+intellectus versatur, sed verba quodammodo corrupta sunt et
+ideo obscura et salebrosa huius sermonis sententia existit. quamobrem
+diverso modo ab Alexandro explicatur.
+		</div>
+		<div n="1000420">
+			Illud delude exploratu dignissimum dicit, utrum videlicet infinitum
+
+		</div>
+		<div n="1000430">
+			Cum autem de partibus eius praecipuis, hoc est de quinto
+corpore, disseruisset, ad eum regreditur sermonem, quern antea
+
+		</div>
+		<div n="10004300">
+			1 regulam&#8212;staiuamus] centrum unius diametri duorum circ. et centrum dictum
+&#913; Al 5 perpendiculi] diametri Al 10 parum vitiosum 14 aequales
+supplevi 18 distantiis coniungerentur] diametris opponerentur Al 28 Alexandro]
+cf. Av. p. 22 I 32 initio] p. 268b11
+		</div>
+		<div n="10004302">
+			f. 6v
+		</div>
+		<div n="1000440">
+			Etenim ablatis principiis nonne ea omnia de medio tolluntur,
+quae eisdem principiis nitebantur? omnis autem huius rei causa
+est, quoniam principium fundamentumque maximam vim habent,
+omnia enim potestate quodammodo continent, ut lumen(?). atque
+hic error, ut Aristoteles inquit, causa fuit, ut veteres inter se dissentientes
+
+		</div>
+		<div n="1000450">
+			Quamobrem rationi consouum est, ut de eo disseramus.
+cuius profecto indagatio hoc ordine procedet. cum omne
+corpus aut simplex sit aut compositum, infinitum igitur
+aut simplex erit aut compositum. cum autem declaratum
+
+		</div>
+		<div n="10004501">
+			f. 7v
+		</div>
+		<div n="10004502">
+			14 ab eo scopo. quem&#8212;intendebamus] fort, vertendum &#7952;&#957; &#964;&#959;&#8150;&#962; &#7936;&#960;&#8056; &#964;&#8134;&#962; &#7936;&#961;&#967;&#8134;&#962; 38
+finitum&#8212;compositum] ita Al: om. codd. per homoeoteleuton
+		</div>
+		<div n="10004504">
+			f. 7r
+		</div>
+		<div n="1000460">
+			Amplius dicit: distantiam autem linearum a centro productarum
+dicimus, extra quam nulla sumi(?) potest (magnitudo)
+
+		</div>
+		<div n="1000470">
+			Altera vero ratio ab eo deducta, hoc sequitur ordine. subiciamus
+quidpiam moveri: si tempus, in quo movetur, erit fiuitum,
+igitur motus etiam, qui eo tempore fit, fiuitus extiterit. sic itaque
+motus comitatur tempus, ac tempus motu metimur. deinceps si motus
+
+		</div>
+		<div n="10004700">
+			3 verum&#8212;infinitum] ita Al: om. codd.: fort, legendum: probandum nobis erit de eo
+quod in orbem torquetur 18 poterunt&#8212;nunquam] codd. corrupti: conicio semper
+magnitudinem in hac distantia accipere poies 21 post moveatur deest aliquid, cf. Ar,
+p. 272a4
+		</div>
+		<div n="10004702">
+			f. 7r
+		</div>
+		<div n="1000480">
+			Statuamus autem eiusmodi tempus esse praeseus, a quo eam
+portionem auferamus, quae usque ad meridiem est, succedit tempus
+
+		</div>
+		<div n="10004805">
+			f. 7v
+		</div>
+		<div n="1000481">
+			4 Physicis] IV, 12 sq. 40 adsumpta&#8212;videtur om. Al: locus non admodum
+		</div>
+		<div n="1000490">
+			Quocirca, inquit, cum eiusmodi rationem praemiseriraus 
+		</div>
+		<div n="10004900">
+			f. 7v
+		</div>
+		<div n="1000500">
+			Aristoteles autem antea dixit, si a finito tempore finitum
+tempus auferatur, et reliqua, quae sequuntur. atque hoc
+etiam sermone statuit tempus absolutae circuitionis esse finitum
+ex eoque demit tempus, quod est ante duarum linearum coniunctionem.
+
+		</div>
+		<div n="1000510">
+			Praeterea hac etiam ratione perspicuum evadit, fieri
+
+		</div>
+		<div n="10005100">
+			6 BB] &#914; codd. Al 9 et 13 A] C codd. &#914;&#914;] CB codd. semper 22 contrarium]
+suspectum 31 antea] p. 272a7
+		</div>
+		<div n="10005102">
+			f. 7v
+		</div>
+		<div n="10005107">
+			f. 8r
+		</div>
+		<div n="1000520">
+			Quamobrem rationi omnino consentaneum est, cum magnitude,
+quantumis minima sit, movebitur, ut infinitam magnitudinem
+intersecet ac separet, congruum est, inquam, ut tempus, quo eam
+intersecabit, indefinitum existat. nihil autem interest utrum hae duae
+magnitudines, quarum altera alteram pertrausit intersecatque, per
+
+		</div>
+		<div n="10005201">
+			4 post moveatur supple: aut si utrumque eorum moveatur 6 simulque] lege: aut simul
+21 hoc est et sq.] cf. Simpl. p. 212,26 . . &#7940;&#960;&#949;&#953;&#961;&#959;&#962; &#7956;&#963;&#964;&#945;&#953; &#8001; &#967;&#961;&#972;&#957;&#959;&#962;, &#7952;&#957; &#8103; &#7936;&#960;&#959;&#955;&#965;&#952;&#8053;&#963;&#959;&#957;&#964;&#945;&#953;
+&#7936;&#955;&#955;&#8053;&#955;&#969;&#957;, &#964;&#959;&#965;&#964;&#8051;&#963;&#964;&#953;&#957; &#959;&#8016;&#948;&#8051;&#960;&#959;&#964;&#949; &#7936;&#960;&#959;&#955;&#965;&#952;&#8053;&#963;&#959;&#957;&#964;&#945;&#953;&#903; 31 Physicis] VI, 7
+		</div>
+		<div n="10005203">
+			f. 8r
+		</div>
+		<div n="1000530">
+			Deinceps cum dicit figuram eius sphaericam, ex hoc illius motum
+infinitum non esse deduxit. eius enim perennitas ex eo provenit, quod
+non movetur ad eum locum, quern iam transivit, siquidem ex hac
+
+		</div>
+		<div n="10005304">
+			3 spatium unius gradus] &#956;&#959;&#953;&#961;&#953;&#945;&#8150;&#959;&#957; &#948;&#953;&#8049;&#963;&#964;&#951;&#956;&#945; (cf. infra p. 36.9) 14 insuper] p. 272a21
+23 non supplevi 24 et sqq.] cf. Simpl. 213,12 &#8005;&#964;&#953; &#7969; &#954;&#973;&#954;&#955;&#8179; &#954;&#943;&#957;&#951;&#963;&#953;&#962; &#959;&#8016;&#954; &#7956;&#963;&#964;&#953;&#957;
+&#7940;&#960;&#949;&#953;&#961;&#959;&#962; &#959;&#8021;&#964;&#969;&#962;, &#8033;&#962; &#7936;&#949;&#8054; &#956;&#8050;&#957; &#947;&#943;&#957;&#949;&#963;&#952;&#945;&#953; . . . &#7936;&#955;&#955;&#8048; &#964;&#8056; &#7940;&#960;&#949;&#953;&#961;&#959;&#957; &#7956;&#967;&#949;&#953; &#964;&#8183; &#960;&#8049;&#955;&#953;&#957; &#954;&#945;&#8054; &#960;&#8049;&#955;&#953;&#957;.
+37.38 Simpl. 213,21 &#948;&#953;&#8057;&#964;&#953; &#963;&#967;&#8134;&#956;&#8049; &#7952;&#963;&#964;&#953; &#964;&#8056; &#8017;&#960;&#972; &#964;&#953;&#957;&#959;&#962; &#7973; &#964;&#953;&#957;&#969;&#957; &#959;&#961;&#969;&#957; &#960;&#949;&#961;&#953;&#949;&#967;&#959;&#956;&#949;&#957;&#959;&#957;
+		</div>
+		<div n="10005306">
+			f. 8r
+		</div>
+		<div n="1000540">
+			Dicimus autem hoc in loco motus infinitus, vel quia id, quod
+
+		</div>
+		<div n="1000550">
+			Atqui Aristotelis sermo hoc in loco quasi obiter dictus deprehenditur,
+siquidem mens eius non erat demonstrare rotundum
+corpus non esse infinitum, verum figuram infinitam non inveniri.
+perspicuum est autem, fieri etiam non posse, ut infinitus motus simpliciter
+inveniatur, quemadmodum non invenitur conversio infinita. |
+		</div>
+		<div n="1000551">
+			f. 8v
+		</div>
+		<div n="1000560">
+			Praeterea hypothetico quoque syllogismo probavit, corpus, quod
+vertitur in orbem, non esse infinitum et tamen in circulum moveri.
+statuamus dari conversionem infinitam, siquidem in Physicis demonstratum
+fuit motum infiniti corporis esse infinitum; quodsi
+conversio infinita invenitur, suppouamus infinitum circulum inveniri,
+
+		</div>
+		<div n="1000570">
+			Infinito centrum statuamus, sitque punctus C, ac transeat per
+centrum C linea recta ab utroque latere infinita, quae sit linea AB,
+dueatur autem linea et non per centrum, secans rectis angulis lineam
+AB in puncto, scilicet E, quam ponamus esse ex utraque
+parte simul infinitam, et sit linea egrediens a centro C infinita sitque
+
+		</div>
+		<div n="10005701">
+			16 non erat . . . verum suspectinn. 22 Physicis] Ill p. 205a13 quodsi&#8212;invenitur om.
+31 Alexander] ita Al: codd. corrupti 40 &#917; scripsi: &#913;&#918; Al: &#917;&#918; codd. 41 E] &#917;&#918; Al codd.
+		</div>
+		<div n="10005703">
+			f. 8v
+		</div>
+		<div n="1000580">
+			Idem praeterea, corpus nempe, quod in circulum vertitur, non
+esse infinitum, hunc in modum ordine commutato comprobatur. imagnemur
+punctum veluti proprium sphaerae finem, ad quem sphaera
+
+		</div>
+		<div n="1000590">
+			Cum autem perspicuum fecerimus, corpus, quod in orbem vertitur,
+interminatum miuime inveniri, simul cum hoc etiam explicabitur,
+non iuveuiri aliquod ex quatuor elemeutis, quae recto ordine
+
+		</div>
+		<div n="10005901">
+			2 E] &#917;&#918; Al codd. 3 &#918;] scripsi: &#913; Al: AC codd.
+22 Physicis] &#918; 2. 233 a 31
+4 continget] vitiose (?)
+		</div>
+		<div n="10005903">
+			f. 8v
+		</div>
+		<div n="1000600">
+			Elementa vero quatuor non esse infinita hunc in modum declaratur.
+motus, qui est a medio, eontraiiatur motui, qui est ad
+medium, et motus coutraiius est coutiarii: igitur moved a medio
+est in eum locum feni, qui loco, ad quem motus ad medium instituitur,
+&#921; contra riatur, ab eoque loco exorditur, qui ei loco, a quo 
+		</div>
+		<div n="10006000">
+			f. 9r
+		</div>
+		<div n="1000610">
+			Quamobrem ubi intellegit quispiam alterum contrariorum, ut
+tale est, et reliquum etiam ipse cognoscet. et omne id, de quo
+scientia est, termiuatum est; quare convenit, ut si alterum contrariorum
+sit fiuitum, reliquum etiam finitum existat. atqui definivit
+medium, prout ipsi sursum contrariatur, medium namque ac deorsum
+
+		</div>
+		<div n="1000620">
+			Cum igitur eiusmodi locus fuerit finitus, consentaneum quoque
+erit, ut corpora, quae eo in loco consistunt, sint finita.
+		</div>
+		<div n="1000630">
+			Eaec sit prima demonstratio; quae vero ex ea colliguntur, haec
+sint. si ea nempe quae veluti extrema ac priucipia sunt, fuerint
+terminata, qui fieri potest, ut quae inter ea sunt, iudefinita existant?
+
+
+		</div>
+		<div n="10006301">
+			f.9r
+		</div>
+		<div n="1000640">
+			Hoc autem iufinito non existente corpus quoque, quod in eo
+consistit, non erit infinitum, eaemque ratio est de eo, quod nunc
+non invenitur, sed fieri potest, ut in eo inveniatur. consonum est
+igitur, ut quauor etiam elementa infinita non siut, siquidem eorum
+nonnulla inveuiuutur in eo, nonuulla vero, cum trausmutantur, in
+
+		</div>
+		<div n="1000650">
+			Quod etiam manifesto apparet, si gravitas non est infinita
+neque levitas; etenim eiusmodi motus (juatuor elemeutorum sunt
+proprii. et impossibile est, ut gravitas vel levitas infinita inveniatur.
+
+		</div>
+		<div n="1000660">
+			Haec igitur fueruut ad invicem relata, nempe quod mains
+quodque gravius est, fuitque prima gravitas, boc est gravitas E, ad
+minorem relata magnitudinem, quae est BD: igitur consentaneum
+est, ut maior gravitas sit maioris magnitudinis, boc est gravitas C
+
+		</div>
+		<div n="10006601">
+			f. 9v
+		</div>
+		<div n="10006602">
+			8 et sqq. motus] concio &#8165;&#959;&#960;&#945;&#943; 34 BD] BC omnes falso
+		</div>
+		<div n="1000670">
+			Etenim gravitas E est pars gravitatis C, eademque proportio
+
+		</div>
+		<div n="1000680">
+			Quare fieri nou poterit, ut infiniti corporis gravitas sit iinita,
+quod et in levitate perabsurdum est. cum igitur non inveuiatur
+
+		</div>
+		<div n="1000690">
+			Primum igitur praemisit, ut dixi, atqtie posuit, quod si taut a
+gravitas per tautum spatium tanto tempore movetur,
+tauta et amplius per idem spatium minore tempore movebitur.
+manifestum namque est quod maius est, esse etiam gravius, quodque
+
+		</div>
+		<div n="1000700">
+			Secundum est, quod proportio duorum temporum ad duas gra-
+vitates est proportio permutata, vel (ut ipse ait) conversa. tertium
+
+		</div>
+		<div n="10007002">
+			2 BD ad . . &#914;&#918;] scripsi: &#914;&#918; ad . . BC Al: &#914;&#918; ad . . &#914;&#918; codd. 26 Primum]
+coniectura: postquam igitur praemisimus codd.: siquidem ex praemissis Al (omisso atque)
+		</div>
+		<div n="10007004">
+			f.9v
+		</div>
+		<div n="1000710">
+			Verum si quispiam dixerit, inveniri tempus minimum, in quo
+infinitum movetur, nihil etiam vetat, quin osteudamus, ubi quispiam
+
+		</div>
+		<div n="1000711">
+			f. 10r
+		</div>
+		<div n="1000720">
+			Hoc autem fundamentum, quod praemisit, uempe finitum omne
+tempore fiuito finitum spatium iutersecare, legitimum est, quia
+verum existit; et hoc inde fit, quia statuit tempus, quo infinita
+gravitas movetur, esse finitum. atqui ex hoc ordine non invenitur
+
+		</div>
+		<div n="1000730">
+			Atqui verba: ex eadem comparatione, in qua infinitum
+esset, ostendunt, hunc ordinem eum velle eandemque explicationem,
+quae in iufmito est. quod etiam ait: at necesse est, si in
+
+		</div>
+		<div n="10007300">
+			2 deinde, quare suspectum 5. 6 movebitur &#8212; quia om. codd., et iure quidem, cum haec
+verba ab Al suppleta esse videantur ut locum corruptum sanaret 22 &#8217;] quod
+sequitur corruptum videtur 33 &#8217;] fiaita codd. 34 atqui et sq.] ita Al:
+codd. corrupti 35 tempus&#8212;infinitum (36) om. codd. 37 verba] a 11 39 at] a 13
+		</div>
+		<div n="10007302">
+			f. 10r
+		</div>
+		<div n="1000740">
+			Nee id te praetereat, decet, his verbis non esse declaratum uon
+
+		</div>
+		<div n="1000750">
+			Quocirca in hunc finem declaratum fuit, nullum ex quinque
+simplicibus corporibus esse infinitum, quod autem in universum
+infinitum uon inveniatur, Tertio Physicorum Libro declaratum fuit;
+etenim eius sententia eo in loco de priucipiis est. Aristoteles etiam
+
+		</div>
+		<div n="1000760">
+			Necesse est igitur corpus omne etc. haec eius ratio
+partium divisione nititur numeratisque eius divisionis speciebus ac
+modis singulorum investigatis demonstrat fieri non posse, ut in
+aliquo eorum declaretur immensum infiuitumque corpus inveniri:
+quare fcdsum est, esse in mundo quicquam iufinitum. quamobrem
+
+		</div>
+		<div n="10007600">
+			40 ait: corpus omue, aut immensum est, aut determinatum ; spreta
+itaque finiti mentione (nostra enim ratio eo non vergit) circa
+16 hoc est] 273a22 28 tevtio] cap. 4 sqq. oQ praemissuni] cap. 8 35 Simpl,
+227, 27 &#7952;&#954; &#948;&#953;&#945;&#953;&#961;&#941;&#963;&#949;&#969;&#962; &#960;&#961;&#959;&#940;&#947;&#949;&#953; &#964;&#8056;&#957; &#955;&#972;&#947;&#959;&#957; 38 &#8217;] sic omnes testes
+		</div>
+		<div n="10007602">
+			f. 10v
+		</div>
+		<div n="1000770">
+			Itaque fieri non potest, ut modo aliquo infinitae magnitudiues
+constituantur. atquein &#921; nniversum si eiusmodi partes magnitudine f.10v
+essent infinitae, necesse etiam erit earum loca interminata esse,
+quibus infinitis existentibus, motus quoque eorum esse infinitos,
+
+		</div>
+		<div n="1000780">
+			Atqui deprebendimus unum elementum in alterius locum reverti
+
+		</div>
+		<div n="10007802">
+			2.3 dissimiliuni] iure supplevit Al 22 praeterea scripsi: at Al ZO fieri enim non
+potest] cf. Av. p. 41 G 38 octavo] cap. 9 41 nunquam&#8212;movebitur (p. 36, 1) om. codd.
+		</div>
+		<div n="10007804">
+			f.10v
+		</div>
+		<div n="100078012">
+			3 in Aegyptum emendavi: ad medium codd.: infinitum ad medium praecipitetur Al
+5 gryps correxi ABBREV in ABBREV); meridiana aquila insignis magniludinis Al
+9 &#8212;incipiat] translationis terminus ascensus terminus sit . . ut sursum versus moveatur
+Al (cf. supra p. 27,3 &#956;&#959;&#953;&#961;&#953;&#945;&#8150;&#959;&#957; &#948;&#953;&#940;&#963;&#964;&#951;&#956;&#945;) 19 non suiit coniuncta sqq.] Al legit: deiunctas
+dividuasque sorliunlur partes, numero infinitas existentes. verunlamen idem dissidium
+sequitur, eademque plaga recipitur. quamvis enim diffusae dissipataeque sint eiusmodi partes,
+invicem tamen connecti atque in unum coire possuiit, ac ita eorum motus erunt infiniti.
+20 sin emendavi: quamvis omues testes
+		</div>
+		<div n="100078014">
+			f.10v
+		</div>
+		<div n="100078018">
+			f. 11r
+		</div>
+		<div n="1000790">
+			Is tandem motus relinquitur, qui in orbem incitatur. impossibile
+
+		</div>
+		<div n="10007903">
+			f. 11r
+		</div>
+		<div n="1000800">
+			Fieri autem prorsus non posse, ut quod immensa sit
+magnitudine, ab eo, quod definitum sit, aliquid patiatur
+aut faciat &lt;in&gt; id, quod finitum est etc. Alexander vero
+ait, eiusmodi sermones ita invicem coniungi: quonia (inquit) (mqmt) onme
+sensile corpus vel efficiendi naturalem vim habet vel patiendi vel
+
+		</div>
+		<div n="10008005">
+			3 primus emendavi: alius codd. verum &#8212; infinitus] cui sane altero &#237;nfinito loco opus
+erit Al 4 illo] eodem Al 5 animadversione &#8212; Aristoteleni] ita Al: codd. vitiosi;
+at haec quoque iulerpretatio suspecta mihi videtur; lege ratione non impugnet
+8 hac &#8212; posse om. codd. 13 ita Simpl. p. 231,23 et Av. 43 H nomine Alexandri
+suppiesso 16.17 ac interitus Al: om. codd. 18.19 si &#8212; est quo ablato qui fieri
+poterit, ut sensile esse dicatur? Al 34 agentis et sq.] ita emendavi : agentis ad idem
+tempus proportio qualem agens et passum habent inter se Al,
+		</div>
+		<div n="10008007">
+			f. 11r
+		</div>
+		<div n="1000810">
+			Huius vero particulae sensus uou admodum perspicuus existit.
+etenim per agens tum B tum D constitutura fuit, quod vero actionem
+recipit, per A, quod infinitum esse dicebat, ac etiam per F positum
+fuit, talemque proportionem dixit D habere ad B, qualem E habet
+ad id, 1 quod finitum existit, F. deinde ea fundameuta iecit, 
+		</div>
+		<div n="10008100">
+			f. 11v
+		</div>
+		<div n="1000820">
+			Postquam demonstratum est, quod finitum sit, in infinitum nullo modo
+operari, dicit: [nec vero id, quod immensa est magnitudiue
+
+		</div>
+		<div n="10008204">
+			23 infinitum] emendavi: palam itaque est finitum non posse nisi in rem finitam operari
+Al vitiose 24&#8212;26 nec&#8212; affert om. codd. 32. 33 quare&#8212;habet ova.
+37 superius] p. 32,20 38 movere] decurrere Al
+		</div>
+		<div n="10008206">
+			f. 11v
+		</div>
+		<div n="1000830">
+			Porro cum dixisset, fieri id non posse, quod ex huiuscemodi
+
+		</div>
+		<div n="10008304">
+			1 BF scripsi: &#914; codd. Al 7 &#913; scripsi: &#913;&#914; codd. Al 9 praeter om. Al
+14 magnitudines &#8217;] fort, magnitudo quam 21 sed &#8217;] p. 275 a 21
+24 seu moveatur om. codd. 28. 29. 30 moveatur] fort, emend, moveat
+29 moveatw] motum afferat moveaturque Al 32 post movere add. Al aut moveri
+posse secundum Arist. p. 275a23; ib. superius ab Al additum est; lege declarabimus
+(scilicet &#921;. 36)
+		</div>
+		<div n="10008306">
+			f. 11v
+		</div>
+		<div n="1000840">
+			Ceterum cum deiode declarasset, infinitum uon agere in infinitum
+nee ab eo perpeti posse, ex hoc necessario colligitur, re veraesse,
+
+		</div>
+		<div n="10008401">
+			f. 12r
+		</div>
+		<div n="1000850">
+			Intellego autem per id, quod iiuidquam patitur vel operatur,
+quod iam quicquam vel egit vel perpessum est; hac etenim de
+causa dixit Aristoteles id autem cui motus allatus est et reliqua
+quae sequuntur.
+		</div>
+		<div n="1000851">
+			3 motu Al: quiete codd. 14 litteras quae sequuntur, oraues fere mutavi
+22 &#914; addidi 28 insuper &#8212; ait (31)] Al vertit: ex his insiqjer reversus, cum ea retu-
+lisset, quae maiori brevioriquc tempore ab eodem aeque patiuntur: etenim non potest quicquam
+in universum inveniri, quod proportione temporis divisum sit 38 id autem] p. 275b4
+		</div>
+		<div n="1000860">
+			Cetcium lit (juodaiuniodo colligeret, quod ex iis, quae inter 
+		</div>
+		<div n="10008600">
+			f. 12
+		</div>
+		<div n="1000870">
+			Hac itaque ratione mathematicis demonstrationibus ostenditur,
+infinitum inveniri non posse, rationibus autem logicis idem sane
+comprobari potest, mos autem Aristotelis est veras demonstrationes
+eiusmodi nomine appellare, eas tamen, quae coramuniores ac ceteris
+
+		</div>
+		<div n="10008702">
+			5 Simpl. p. 235,36 6&#8212;10 cfr. Av. 48 CD, qui hunc locum laudat.
+sed non iisdera verbis, re vera Tiiemistius noster argumeutationeiu Alexandri secutus
+est cfr. Simpl. 236,26 11. 12 verum&#8212;finitum] verum&#8212; finitum] om codd. 16 et
+omnes testes mutare nolui, quamvis Them, ita scripsisse mihi videatur: verum si
+quis diceret, cum deduxit et prohavit extra caelum corpus sensibile non esse, nihil eum
+deduxisse siquidem . . . quis igitur prohibet intellegibile . . . 26 mathematicis] Simpl.
+238,5 &#960;&#961;&#945;&#947;&#956;&#945;&#964;&#945;&#953;&#954;&#8182;&#957; 30 et 35 accidentibus] conieio &#7936;&#961;&#967;&#8182;&#957;, nisi praeferas &#964;&#972;&#960;&#969;&#957;
+33 logicae vero dialecticaerjue] dialecticae vero mathemativueque Al semper
+		</div>
+		<div n="10008704">
+			f. 12r
+		</div>
+		<div n="1000880">
+			Logico itaque more probare iutendit consimilium partium corpus
+irameusum esse nullum. plane cle consimilium partium corpore
+
+		</div>
+		<div n="10008801">
+			f. 12v
+		</div>
+		<div n="1000890">
+			Praeterea, sive natura sive contra naturam moveatur, [utroque
+modo] duo iufiuita corpora necessario esse oportebit. etenim in
+Fhijsica Auscultatione conclusum est infinitam vim immenso tantum
+corpori inesse corpusque infinitum vim babere infinitam. cuius igitur
+motus. si natura cieatur, ab immensa vi proficiscitur, &lt;eius vis&gt; corpus
+
+		</div>
+		<div n="1000900">
+			Praeterea, cum omne, quod movetur, motum accipiat ab alio,
+
+		</div>
+		<div n="1000901">
+			22 Physica Auscultatione] VIII,10 39 proportionalibus] Simpl. 241,12 &#7952;&#957; &#963;&#965;&#956;&#956;&#949;&#964;&#961;&#943;&#8115;
+		</div>
+		<div n="1000910">
+			At qunuiam de coiitimio eonsimilitiin partiiiiii disseniit, ait 
+		</div>
+		<div n="10009100">
+			f. 12v
+		</div>
+		<div n="1000920">
+			Quo uamque contra naturam aliquid fertur, is locus
+alicuius alterius naturae accomodatus sit, necesse est.
+Ex hoc itaque cousonum est, ut corpora ad propria loca moveantur;
+
+		</div>
+		<div n="1000921">
+			14 &#8212; 16 &#8212; eandem esse] laudatiir ab Av. p. 50D 27 quibus&#8212; instituitur
+ita Al: codd. leg.: naturalis enim motus corporum levium ille est, qui superiora peti
+praeter naturam vero, qui ad infera invadit, et e converso est ratio corporum ponderc
+sorum. 39 praecedentibus] p. 274a24
+		</div>
+		<div n="1000930">
+			Etenim osteuso extra muiulum iiulluin esse corpus, perspicuum
+evadet, pluves | esse muudos non posse. hoc autem qiiamvis 
+		</div>
+		<div n="10009300">
+			f. 13r
+		</div>
+		<div n="1000940">
+			Convenit autem, ut per sermouem Aristotelis &lt;&#956;&#941;&#957;&#949;&#953;&gt; universalis dispositionisactio
+intellegatur, quae tum quieti, tum alteri a quiete communis
+existit, et non quieti tantum, ac si ita pronuutiasset, si in proprio
+loco circumferatur, etenim congruum est, ut ignis in proprio loco
+moveatur; quamobrem dixit: in quo manet et movetur, et in
+
+		</div>
+		<div n="1000950">
+			Cum haec autem praemisisset, coepit declarare, ex elementis
+quatuor miuime extra mundum posse quippiam inveniri, quo extra
+mundum non existente, nullum igitur corpus, quod in circulum
+vertatur, extra eum erit. corpus etenim quod in orbem fertur,
+
+		</div>
+		<div n="1000960">
+			Cum igitur eis, quae in superioribus accepta sunt, utamur, absurda
+
+		</div>
+		<div n="10009601">
+			I mundum] mundos codd. vitiose 4 si quis&#8212; fuisse (5) scripsi: ne quispiam puter
+n universum minime fuisse Al codd. 7 non de iis] Simpl. p. 247,12 &#954;&#945;&#8054; &#964;&#8056; &#7936;&#959;&#961;&#943;&#963;&#964;&#969;&#962; &#948;&#8050;
+&#953;&#949;&#953;&#956;&#941;&#957;&#969;&#957; &#960;&#961;&#8056;&#962; &#7936;&#957;&#964;&#953;&#948;&#953;&#945;&#963;&#964;&#959;&#955;&#8052;&#957; &#949;&#7984;&#961;&#8134;&#963;&#952;&#945;&#953; &#957;&#959;&#956;&#943;&#950;&#969; &#964;&#8182;&#957; &#963;&#965;&#957;&#964;&#949;&#955;&#959;&#973;&#957;&#964;&#969;&#957; &#960;&#961;&#8056;&#962; &#964;&#8052;&#957; &#964;&#959;&#8166; &#954;&#972;&#963;&#956;&#959;&#965;
+&#948;&#953;&#940;&#952;&#949;&#963;&#953;&#957;. 14 in quem . . . mittitur] conicio in quo manet ABBREV? cf. infra (24)
+22 si&#8212;circumferatur] fort, vertendum si proprium locum circumplectatur 25 naturalis(??)ue
+locus fort. del. 31 haec vero nihil est] eum &#928;&#959;&#965; erit Al codd. vitiose
+56 hare nostra] ad verb, huius mundi: conicio illius
+		</div>
+		<div n="10009603">
+			f.13v
+		</div>
+		<div n="100096010">
+			f.13(??)
+		</div>
+		<div n="100096013">
+			5 secundum&#8212;sed (6) deest in codd.; in hoc] conicio in illo 12 medio] imo Al
+13&#8211;15 quamquam&#8212; simpl.] quamquam&#8212;simpl.] est interpretatio verborum &#956;&#8055;&#945; &#948;'&#7969; &#954;&#945;&#964;&#8048;
+&#8212; existant codd.: sed plures mundos huic connimiles esse non posse monstrabimus Al
+		</div>
+		<div n="100096015">
+			f. 13v
+		</div>
+		<div n="1000970">
+			Hoc autem sermoue absolute nouuullae dubitationes diluendae
+
+		</div>
+		<div n="1000980">
+			Si quis ideo putet necessarium non esse, ut terra illius muudi
+ad huius mundi medium feratur, sed ad medium illius, quoniam terra
+illius muudi medio eiusdem propinquior existit, ac ignis illius muudi
+
+		</div>
+		<div n="1000990">
+			Post haec ad aliam dubitatiouem progreditur, quae est eiusmodi.
+
+		</div>
+		<div n="10009902">
+			9 illius] istius codd. contra] circa codd. (&#960;&#961;&#8056;&#962; &#964;&#972;&#948;&#949; &#964;&#8056; &#7957;&#963;&#967;&#945;&#964;&#959;&#957; Ar. 276b13)
+15 aut&#8212;habere] esse omnino statuenduin vel utriusque mundi simplicia corpora eandem
+naturam non habere Al falso 17 tortasse post nut plura exeideruut.
+		</div>
+		<div n="10009904">
+			f. 13v
+		</div>
+		<div n="10001000">
+			Ceterum aliam de medio dubitationem tollamus, quae talis est.
+		</div>
+		<div n="10001010">
+			Congruum est (inquiunt nonuuUi) ut cum ignis, turn ceterorum
+elementorum species unius formae sint, numero vero plures existant;
+quare loca etiam (medium nempe atque extrema) unius speciei
+profecto sunt, numero vero plura dicuntur. et quoniam terra alterius
+
+		</div>
+		<div n="100010101">
+			f: 14r
+		</div>
+		<div n="10001020">
+			Dum nos elementorum partes specie miuime ditferre affirmamus,
+id non ita intellegi debet, ut uni scilicet mundo conveniat,
+alteri vero minime, sed aeque omnibus mundis, quorum partes inter
+se numero tantum differunt, conveniet, hoc est, ut partes terrae,
+quae hie apud nos est, sive ad invicem comparentur, sive alterius
+
+		</div>
+		<div n="10001030">
+			Si vero nos quispiam redargueret inquiens propriam proportionem,
+quam ad alterum locum habent, in causa esse, ut ad
+eum locum proficiscautur : ea igitur principia fundamentaque
+
+
+		</div>
+		<div n="100010301">
+			f. 14r
+		</div>
+		<div n="10001040">
+			Esse autem horum corporum loca terminata, ex aliis etiam
+explicavit dicendo terminatum locum inveniri, quo suapte natura
+terra, alterumque, quo natura sua ignis feratur. hoc vero expojiit,
+sicuti modo declarabimus. in universum, omne quod aliquo
+motu cietur, ex alio ad aliud movetur. atque baec,
+
+		</div>
+		<div n="100010405">
+			12 invenirentur Al 19 post cietur codd. Al male repetunt: [ABBREV ABBREV ABBREV
+ABBREV ABBREV] in universum omnino aliquo motu cientur, quibus verbis Al. vim, quam
+non habent, subiecit, cum vertit: omnino quidem, id eo moveri motu contingit.
+		</div>
+		<div n="100010407">
+			f. 14r
+		</div>
+		<div n="10001050">
+			At quia dixerit quis, cum motus omuis ex aliquo ad aliud sit,
+
+		</div>
+		<div n="10001060">
+			In hac etiam quodammodo ex aliquo iu aliud transitus invenitur.
+etenim etsi toti &#921; couversioui uou iusit, esse tameu iu ea iuve- 
+		</div>
+		<div n="100010600">
+			f. 14v
+		</div>
+		<div n="10001070">
+			Et quouiam ea omnia, quae dixerat, ut plurimum ex motione
+desumuntur, deinceps ohiectionem quandam adinxit, quae est
+eiusmodi:
+		</div>
+		<div n="10001080">
+			Non est iucougruum, ut quispiam existimaret, elementorum
+motus minime illis secundum naturam iuesse, ut ex hoc deduceret,
+
+		</div>
+		<div n="100010801">
+			21 gravitatis Al, procul dubio per emendationem: translationis codd. corrupte
+38 terra supplevi duce Al; post coercetur codd. add. sursum At vero is cum
+naturae ordinem minime insequatur, physice non loquitur legit Al post deorsum non bene
+39 &#8217;] Stoter codd.: om. Al; cfr, Simpl. p. 267,30.
+		</div>
+		<div n="100010803">
+			f. 14v
+		</div>
+		<div n="10001090">
+			Quin etiam rationibus et iis quidem, quae ex prima pliilosophia
+(metaphysica dicta) petuutur, doceri potest mundum unum esse, haec
+autem explicatio iuxta hunc ordinem procedit. etenim invenimus
+corpus, quod in orbem fertur, motu sempiterno moveri; quod autem
+sempiterno motu movetur, eius motus ab infiuita vi proficiscitur,
+
+		</div>
+		<div n="10001100">
+			Verum aliis etiam modis considerantibus perspicuum erit, mundum
+unum esse, cum enim tria genere sint elementa corporata (siquidem
+
+		</div>
+		<div n="100011002">
+			f. 15r
+		</div>
+		<div n="10001110">
+			Ac de corporeis quidem elementis deque eorum locis, quot
+numero absoluto sint, ex lis, quae diximus, perspicere possumus;
+
+		</div>
+		<div n="100011104">
+			5 quod superfertur emendavi 11 &#8217;] leve Al 21 Quarto] c. 4
+26 primo suspectum 31 defectus aliquis Al: alienum aliquid codd.
+		</div>
+		<div n="100011106">
+			f. 15r
+		</div>
+		<div n="10001120">
+			Haec pi-oposita dubitatio est. quocirca ad aefpiilibrium rationis
+duceuda ei-it, ac videudum nobis deiude, quid borum recte,
+quidve perperam dictum sit, quorum utrumque perspicuura ac
+manifestum existit. buius eteuim dubitationis solutio boc ordine
+procedet.
+		</div>
+		<div n="10001130">
+			Quod ex omui materia constat, vel dissipatum vel concretum
+sit, omnino quidem multa esse non potest, quaudoquidem nihil
+penitus materiae reliuquitur. eteiiim materia non existente, fieri
+non poterit, ut vel ullo uuquam tempore quippiam inveniatur, cui
+omnino materia debeat permisceri. muudus autem ex omni materia
+
+		</div>
+		<div n="10001140">
+			Praeterea Aristoteles inteudit declarare mundum de omni
+materia omnino dici, non secundum quod caelum sub aliqua significatione
+
+		</div>
+		<div n="100011403">
+			f. 15v
+		</div>
+		<div n="100011404">
+			1 aedijicia corruptum; iiomen regionis fabulosae exspectes 2 Phoenix] Simpl. 2751
+&#8001; &#966;&#959;&#8150;&#957;&#953;&#958; &#964;&#8056; &#8005;&#961;&#957;&#949;&#959;&#957; 24.25 non secundum&#8212;comprehenditur] text, corruptus; conicio Praeterea
+cum Ar. iniendit . . dici, anlea commemorat, quot modis caelum dicatur. 35 docninius]
+p. 269b 30 et sq.
+		</div>
+		<div n="100011406">
+			f. 15v
+		</div>
+		<div n="10001150">
+			Ex bis itaque quae dicta sunt, perspicuum fit, nullum extra
+caelum ueque simplex nee concretum corpus esse, quin ne fieri
+quidem posse, ex eisdem intellegi potest, nam aut simplex est, aut
+concretum; et si simplex, vel quod in orbem fertur, vel quae
+per rectam lineam moventur, omnino eruut. sed quod in circulum
+
+		</div>
+		<div n="10001160">
+			Postquam ostendit, universum unum tantum esse, quoniam ex
+omni constat materia, cum nullum omniuo corpus extra mundum
+uec sit nee fieri possit, ad alia deinde progreditur inquiens:
+		</div>
+		<div n="10001161">
+			2 et aqua] fort, suppl. et ignis. 23 per rectam lineam scripsi: in circulum
+Al. 25 &#8217;] caelorum codd. Al 28 extra &#8212; potest (29) ita Al: om.
+codd.: fort, scrib. corpus simplex
+		</div>
+		<div n="10001170">
+			Simul etiam perspicuum est, uec locum nee inane 
+		</div>
+		<div n="100011700">
+			f. 15v
+		</div>
+		<div n="10001180">
+			Horum autem singulorum causa est eiusmotli. locus quideni
+fieri uou potest ut extra caelum sit, locus enim est id, in (pio corpus
+
+		</div>
+		<div n="10001190">
+			Alexander autem existimavit una cum harum rerum explicatione
+
+		</div>
+		<div n="10001200">
+			Huic autem sermoni proximum banc in modum delude connectit.
+itaque ea, quae ibi sunt, non sunt in loco, nee
+etiam fieri potest, ut tempus ipsa facial senescere.
+		</div>
+		<div n="10001210">
+			Haec autem omnia, illi corpori necessario contiuguut, quod in
+
+		</div>
+		<div n="10001220">
+			In loco autem non est, quoniam locus (iuxta eius sententiam)
+continentis corporis terminus est, cuius ambitu corpus contentum
+continetur; corpus autem, quod in orbem torquetur, a nulla
+quidem re circumscribitur. porro dixit: neque tempus ipsa facit
+
+		</div>
+		<div n="100012202">
+			f. 16r
+		</div>
+		<div n="100012203">
+			7 verba quoque et (licit (8) addirii 14 Alexander et sq.] laudatur ab Av., sed non
+eisdem verbis, p. 67 L 17. 18 sed &#8212; existant] pro his verbis conicio nee generalionem: nee
+aeque exist, codd. 35 vel cm. Al. cf. Simpl. &#929;. 287, 21 &#7972;&#964;&#959;&#953; &#960;&#949;&#961;&#8054; &#964;&#959;&#8166; &#960;&#961;&#974;&#964;&#959;&#965; &#954;&#953;&#957;&#959;&#8166;&#957;&#964;&#959;&#962; . . .
+&#7970; &#960;&#949;&#961;&#8054; &#964;&#8134;&#962; &#964;&#8182;&#957; &#7936;&#960;&#955;&#945;&#957;&#8182;&#957; &#963;&#966;&#945;&#943;&#961;&#945;&#962;; cfr. Av. &#929;. 67 J 39 ideo om. codd.: locus nou
+admodum integer si eniiti] Simp. p. 288, 1 &#8017;&#960;&#8050;&#961; &#948;&#8050; &#964;&#8052;&#957; &#7952;&#958;&#969;&#964;&#940;&#964;&#969; &#966;&#959;&#961;&#8048;&#957; &#949;&#7984; &#956;&#8050;&#957;
+&#955;&#941;&#947;&#959;&#953;, &#966;&#951;&#963;&#943;, &#960;&#949;&#961;&#8054;, &#964;&#959;&#8166; &#960;&#961;&#974;&#964;&#959;&#965; &#945;&#7984;&#964;&#943;&#959;&#965;, &#949;&#7989;&#951; &#7938;&#957; &#955;&#941;&#947;&#969;&#957; &#964;&#8056; &#8017;&#960;&#8050;&#961; &#964;&#8052;&#957; &#960;&#949;&#961;&#953;&#966;&#959;&#961;&#8048;&#957; &#964;&#8134;&#962;
+&#963;&#966;&#945;&#943;&#961;&#945;&#963;. 5 quoniam et sq.] cf. Simpl. p. 290,5 et sq. 15 minime addidi 16 deinde] 279b 1
+24 poetarum] Simpl. p. 288, 14 laudat Homerum 31 ab&#8212;pendet emendavi: ex quo
+etiam ceteris rebus, quae in yeneratione consistunt, communicalae sunt status et vita Al
+ficticie 39 alioquin et sq.] cf. Simpl. p. 289, 5 et sq.
+		</div>
+		<div n="100012205">
+			f. 16r
+		</div>
+		<div n="1000122014">
+			f. 16r
+		</div>
+		<div n="10001230">
+			His autem explicatis ad disputatiouem de mundo progreditur,
+utrum genitus sit an ingenitus, et ntrum corruptibilis an incorruptibilis.
+
+		</div>
+		<div n="100012303">
+			f. 16v
+		</div>
+		<div n="10001240">
+			Deinde ponit opiniones aliorum. omnes quidem pbilosopbi
+muudum generatum esse dicunt, sed non omnes uno atque eodem
+modo. nonuulli enim dicunt ea ratione esse generatum, ut possit
+etiam aeternus remanere. quidam vero generatum quidem muudum
+faciuut, sed quemadmodum quidvis aliud eorum, quae geuerata
+
+		</div>
+		<div n="10001250">
+			His itaque ita positis de mundi ortu senteutiis, prima hoc modo
+de medio tollitur. dicit, fieri non potest, ut aliquid sit generatum et
+
+		</div>
+		<div n="100012501">
+			10 fort. del. 36 hoc modo COiTUpta: 1. vicissim, quod ab Al ante nempe
+inseritur.
+		</div>
+		<div n="100012503">
+			f. 16v
+		</div>
+		<div n="10001260">
+			Convenit autem, ut id boc ordiue disquiramus. quod non
+babet piincipium uec causam, ut sic se babeat, sicuti fuit aliquaudo,
+sed veluti quaedam eius perfectio est, ea disposilione praeditum esse,
+
+		</div>
+		<div n="10001270">
+			Verum quod intendit, id profecto est. asserentes si mundus
+principium et causam non babuerit, ut ita se babeat, omnino mucum
+
+		</div>
+		<div n="100012700">
+			11 cum&#8212; consistat (13)] ita AI: codd. corrupti 18 si prius et seq.] interpretatio
+25 commutari addidi: causam habet, necessario sic se habere oporiere Al
+36 asserentes et sq. codd., quae vitiis scatent; fort, vertenda sunt: asserentibus miindum
+principium et causam minime habuisse, ut ita se habeat, necessario dicendum est, eum
+esse immutabilem. quamvis vero ea, ex quibus mundus est conflatus, prius ita non se
+habuisse non dicant, si postremo in ipsa generatione id fiet, hoc perfectionis in eo
+statueris.
+		</div>
+		<div n="100012702">
+			f. 16v
+		</div>
+		<div n="100012707">
+			f. 17r
+		</div>
+		<div n="10001280">
+			Cum haec autem Aristoteles dixisset, possent nounuUi illorum
+
+		</div>
+		<div n="100012804">
+			4 post sunt add. codd. Al: vel sunt futura
+		</div>
+		<div n="100012806">
+			f. 17r
+		</div>
+		<div n="10001290">
+			Etenim id omne, quod in potentia est, non potest ex se ad
+actum devenire; convenit autem, ut ad actum deducat id, quod hac
+ratione in potentia est, altera duarum potentiarum, vel creator, vel
+
+		</div>
+		<div n="100012902">
+			1 omnino&#8212;evenit] id taniuin nobis nee. evenit codd. 3 ea dispositione&#8212;postest] ex [bus] esse
+genitum, quae hoc pacto se habere possunt codd. 4&#8212;11 ita Al commenticie: lectio
+codd. est corrupta 18 sed&#8212;contingit] ita Al: om. codd. 22 ferrum
+suspectum 35 cupreum enim idolum] scripsi, cuprum codd.
+		</div>
+		<div n="100012904">
+			f. 17r
+		</div>
+		<div n="10001300">
+			Haec autem omnia convenirent, si a tempore determinato
+
+		</div>
+		<div n="10001301">
+			f. 17v
+		</div>
+		<div n="10001310">
+			Atque in universum, cum generatio diversis modis dicatur, consonum
+
+		</div>
+		<div n="10001320">
+			Praeterea Aristoteles deinceps commemoratos hos sermones
+refellit illorumque absurditatem apertissime demonstrat. etenim,
+
+		</div>
+		<div n="100013204">
+			7 secundum esse] specie Al. 21.22 unum&#8212;recipit] ita b: ia a per homoeoteleuton
+aliquid excidit: unus concretio compositiotie existit Al.
+		</div>
+		<div n="100013206">
+			f. 17v
+		</div>
+		<div n="10001330">
+			Itaque nos de corporibus quoque dicimus, quod ex nuda atque
+a qualitatibus seiuncta materia innovantur, quamvis eiusmodi
+materia simul cum illis inveniatur nee earn esse antiquiorem
+dicimus.
+		</div>
+		<div n="10001340">
+			Praeterea Aristoteles deinde adversus secundae sententiae
+
+		</div>
+		<div n="100013401">
+			1 ut ad&#8212; sequatur] fort, vert.: priore generatione, quae cubi generationem
+4 recte om. codd. 25 luce fort, emend.: ex aere qui non perlucet: ex eo quod
+perlucet et ah ipsa luce Al 26 praecedat scripsi: codd. corrupti: quod ea de causa
+aer perluceat, quoniam propria eius natura hoc ei inerat, ut ipse non sit lux neque Al.
+27 illuminari potest . . . illuminatum, sed quod illuminari potest scripsi: lux, illuminans, sed
+lux Al.
+		</div>
+		<div n="100013403">
+			f. 17v
+		</div>
+		<div n="100013407">
+			f.18r
+		</div>
+		<div n="10001350">
+			Deinceps adversus tertiae positionis auctores regreditur, qui
+rauudum esse genitum uuo tempore, altero vero ita interiturum adstruunt,
+ut miuime amplius renascatur, quemadmodum reliqua
+omnia, quae ortum interitumque perpetiuntur.
+		</div>
+		<div n="10001360">
+			Deinde ait, si itaque mundi infiniti extitissent, tametsi non vera,
+
+		</div>
+		<div n="10001370">
+			Nos autem dicemus, quanam ratione eveniat. etenim si unum
+mundum esse statuerimus, cui interitus contingat, id profecto ei
+
+		</div>
+		<div n="100013701">
+			14 non supplevi 15 praesertim emendavi: nempe codd
+		</div>
+		<div n="100013703">
+			f. 18r
+		</div>
+		<div n="10001380">
+			Et quouiam Aristoteles nonnullos commemoravit, quibus videtur
+posse aliquid, quod ortum uon habuerit, interire, et non interire
+
+		</div>
+		<div n="10001390">
+			Hanc disqimitionem cum sihi proposuerit, prwium significata
+nominis &#947;&#949;&#957;&#951;&#964;&#8057;&#957; ceterorumque nominum divisit. non generatum nam-
+que (exempli gratia) tribus modis dicitur, ac tertius modus in duos
+secatur, ita ut significata huius nominis, nempe non generatum, sint
+quatuor. uno quidem modo dicitur, quod in universum sive [nunc]
+
+		</div>
+		<div n="100013900">
+			14 post procedat add. omnes testes minime sicuti &#8217;] quando erit Al
+24 aliquid, quod&#8212; originem (25)] aliquid esse incorruptibile, quod habuit originem
+28 non solum addldi 29. 30 verum quoniam abs. codd. Al 39 sive . . sive] cf. Aver.
+p. 75 M Themistius autem dixit quod dicitur in ambobus, scilicet apud esse, et non esse.
+		</div>
+		<div n="100013902">
+			f. 18r
+		</div>
+		<div n="10001400">
+			Nee uou etiam uou generatum dicitur veluti circum mille
+stadia murum erigere ac ex torreutis fuudo percipere souum vel
+aliquid simile, de quibus dicitur uou esse, quia uou sunt, sed esse
+possunt; etenim per id, quod dixerat omnino, non iutellexit ea,
+quae uou sunt, sed quae esse possunt ut uavis, domus, filius. et
+
+		</div>
+		<div n="10001401">
+			f. 18v
+		</div>
+		<div n="10001410">
+			Tertio vero modo non generatum dicitur, veluti quod bis duo
+tria constituaut, uec non diametrou lateri commeusurabilem esse.
+liaec etenim non generata dicuntur, cum nullo tempore siut uec
+
+		</div>
+		<div n="100014104">
+			11 Aver. Paraplir. p. 288 B utpote decent mille leucaruin spatium circumvallare niuro
+18 sic omnes testes; sed ad oXcu? (Ar. p. 280b 11) minime referri potest, fort, emend,
+est: quod dix., non intell. ea, quae omnino non sunt, ad sensum cfr. Av. p. 76 B Them.
+autem dixit, quod non dixit possibile in eo, nisi ad distinguendum inter ipsum, et impossibde.
+et intendit per possibile gravem possibilitatem. 14 filius suspectum
+15 Alexandruni] quo spectant verba Av. (ib. E): et Jingit, quod Alexander explanabat hunc
+sermonem secundum inlentionem, qua nos explanavimus, id est res generabiles, antequam
+generentur 26 secundus emendavi: tertius omnes : cfr. Av. ib. D
+		</div>
+		<div n="100014106">
+			f.18v
+		</div>
+		<div n="10001420">
+			Eadem ratione quod generatum est tribus modis dicitur, ad
+differentiam eius, quod est non generatum. imo quidem modo de
+eo dicitur, quod non fuit ct postea generatur, veluti tactus qui
+
+		</div>
+		<div n="10001421">
+			3 secundo] tertio omnes testes ut supra 9 quod et sq. emendavi: codd. et Al exhibent:
+quod non est (generatur Al) nee postea generabitur . . . qui non est quandoque (cum gene-
+ratione Al.) et quandoque non. 11 non facile] codd. om. non, at infra omnes legunt
+nec cito ... 14 in secundum] cf. Av. p. 77 B et Themist. intellexit ex hac inteentione
+illud, quod est difficilis generationis , et dixit , quod haec intentio secunda , quam dixit
+ex hoc nomine geiierabile, eadem est cum opposita secundae intentionis, quam dixit ex
+eis, de quibus dicitur non generahile . . 17 secundum modum tertium scripsi: horuin
+duorum secundum omnes testes; fort, deest aliquid. cf. Av. p. 77C et Them, dixit quod
+intendebat per hoc, illud, quod necessario generatur. 19 vel nunc est] hoc
+&#8217; convenire videtur, minima prima. 22 atqui et seq.] ad rem cf. Av. p. 77 0
+et existimatur 24 ait] &#961;. 280b 15 28 post at omnes leg. quoniam
+		</div>
+		<div n="10001430">
+			Atqui eadem qiioque ratioue (luod corruptibile est 
+		</div>
+		<div n="100014300">
+			f. 18v
+		</div>
+		<div n="10001440">
+			tadem est etiam ratio eius, quod incorruptibile est,
+
+		</div>
+		<div n="10001450">
+			Tu autem [nunc] es et tactus exempli loco ab Aristotele
+dictum fuit, eoque inquirit, qua ratioue de aliquo incorruptibile dici
+
+		</div>
+		<div n="100014501">
+			3 vel Al : quia codd. 8 de loco et sq.] magno flumini (ex. gr.) corruptio aliqua
+superi-eniat codd. (corr.). quam difficilis sit huius loci interpretalio, apparet ex verbis
+Av. p. 77 G et Them., secundum quod repulo, ntellegit ex pronunciadone huius cor-
+ruptionis, cum corvumpilur sine alleratione, et sine corruptione, sicut corruptio fluvii
+nutgni cum transmutatur de loco ad locum. cf. etiam Paraphr. p. 288 D et infra ad
+incorruptibile. 9. 10 quemadmodum] fort, corrig. est: aliud ac, sed cf. Paraphr. 1. c.
+14 flamma ignis et sq.] cf. Paraphr. 1. c. 21 &lt;&gt; supplevi; ib. etenim vel est vel postea
+&#8004;&#951; est, ac deinde sine interitu desinit esse omnes testes; at verba ac deinde des. esse altera
+eiusdem sententiae interpretatio esse videntur 31 minime vitiose ; exspectes: ut
+aliquando non corrumpatur, verum hoc praes. temp, existit.
+		</div>
+		<div n="100014503">
+			f. 19r
+		</div>
+		<div n="10001460">
+			Et dixit id quoque, quod uou facile corrumpitur,
+incorruptihile dici, veluti petra dura, si solito ordine procedet.
+atqui iuvenimus eum posuisse divisionem in quatuor illis
+
+		</div>
+		<div n="10001470">
+			Tactus autem est ingenerabilis, quoniam eius innovatio nou fit
+ordine eius, quod generatur, et generahilk, ipse enim non fuit prius
+et postea innovatus est; est autem corruptibilis, quoniam desiuit
+esse, postquam fuit, est etiam incorruptibilis, quandoquidem sine
+
+		</div>
+		<div n="10001480">
+			His itaque modis, quibus baec nomina dicuntur, ita explicatis,
+ad propositum scopum regreditur, qui est eiusmodi: num fieri
+possit, ut quod innovatum est, non intereat? sed quoniam bac in
+
+		</div>
+		<div n="100014804">
+			6 conicio &#928;&#959;&#953; admittit 9 atqui et sq.] cf. Av. Paraphr. p. 288F 24 non ad-
+didi, contra ante intereat (25) non delevi. 35 perspicuum&#8212;conficere &#8217;] per-
+spicuum est, hoc ipsum partes facilius quam totum ipsum movere et attollere posse
+		</div>
+		<div n="100014806">
+			f. 19r
+		</div>
+		<div n="10001490">
+			His autem terminatis, de eo, &#921; quod deinceps sequitur, 
+		</div>
+		<div n="100014900">
+			f. 19v
+		</div>
+		<div n="100014903">
+			7 impossibilitas et sq.] duplum (7. 9) fort. &#8017;&#960;&#949;&#961;&#946;&#959;&#955;&#942;. Inmc locum obscurum Al circuuiiie videtur
+verbis: nihil autem nos conturbet finis et quasi summa eorum, quae quisque potest, constituatur
+enim ex eo quod maximum potest, uel non potest, finis ac terminus eius, quod quisque proprie posse
+vel non posse dicitur. 14&#8212;16 sed&#8212; percepturum om. Al.: &lt;&gt; supplevi
+&#8212;potest (26)] ita Al: fort, levi emendatione vertendum est: optimo iure in rebus, quarum
+actio possibilis est, &gt; id quod plurimum est: cf. adnotat. seq. 29 optimo et sq.] hoc
+loco ne ipse quidem Al. interpretationem conatus est, superiori similem veluti: in visibili
+ex ultimo fine, in rebus, quarum actio possibilis est, ex eo . .
+		</div>
+		<div n="100014905">
+			f. 19v
+		</div>
+		<div n="10001500">
+			Id autem apertius dilucebit, si ea, quibus id, quod fieri nou
+potest, et falsum ditferunt inter se, ante explicuerimus, cum unum
+idemque ea uon sint. quare cum earn, quam intendebat, demou-
+strationem Aristoteles praemisisset, siquidem unumquodque eorum
+duobus dicitur modis, ait, (anteqnam shnjulas partes prosequatur):
+
+		</div>
+		<div n="10001510">
+			Falsum quoque, aut ex suppositimie aut absolute erit. ex suppositione
+quidem, ut si, ambulaute aliquo, se ambulare dixerit, alter
+deiude supeiveniens ei dlcat: falsum profers; hoc etenim verum
+
+		</div>
+		<div n="100015102">
+			6 sit &#8212; minus] ita Al duee Aristot.: codd. corrupti 21 adsumphmi exemplum vix
+probares; fort, tertio deiendum et pro fieri non potest (22) legeiidum non est impossibile
+27 rectis aecjuales om. codd.
+		</div>
+		<div n="100015104">
+			f. 19v
+		</div>
+		<div n="10001520">
+			His praeterea alium modum adiunxit, qui scopo ab eo pro-
+posito suffragatur, aitcpie: accidit autem impossibile ex impossibili,
+
+		</div>
+		<div n="100015203">
+			f.20r
+		</div>
+		<div n="10001530">
+			At cum ipse hoc absolute asseruisset, propterea conclusionem
+
+		</div>
+		<div n="100015301">
+			40 toto euim eo tempore, quo altera duarum potentiarum iu eo existit.
+13 Primo] Anal. Prior, I, cap. 15 18 post etiam add. oirmes non 28 dixit
+cm. Al.
+		</div>
+		<div n="100015303">
+			f.20r
+		</div>
+		<div n="10001540">
+			Altera vero enuutiatio falsa tantum existit, hoc est, ponere actionem
+eius, quod non est; haec etenim locutio si fieri non posset,
+ex ea utique remeatio fieri posset: cum fieri non possit, ut muudus
+
+		</div>
+		<div n="10001550">
+			Atqui sermoui locum reliquit, alteram divisionem fieri non
+posse, uempe dicentem, omne, quod semper est tempore infiuito,
+omnino fit, ut id semper non sit. etenim haec enuntiatio semper
+&lt;existens&gt; non solum interitum nou admittit, quoniam propriam corruptionem
+
+		</div>
+		<div n="10001560">
+			Si vero id, quod semper est, absolute interitum non admittit,
+necessario fit, ut non generatum quoque existat. si euim generatum
+est, omnino idem gignitur atque efficitur ahsurdum; etenim
+
+		</div>
+		<div n="100015602">
+			2 non codd. Al; at coll. 281b21 &#7957;&#963;&#964;&#969; &#8017;&#960;&#940;&#961;&#967;&#959;&#957; fort. del. 10 atque &#8212; posita scripsi:
+atqui falsum positum libri 11 alterius siisp. ex adiunct. non sit Al (ens addidi): huius
+sermonis sit, videlicet non esse (?) codd. 14 falsa] falsum oniDes 16 falsum Al.
+24 crisiens supplevi: ad rem cf. Simpl. 327, 17 non scripsi: si codd. Al 34 aliquo
+einendavi: verum quoniam semper non est, statuamus ipsum esse in tempore, quo nullum
+finitum existit Al.
+		</div>
+		<div n="100015604">
+			f. 20r
+		</div>
+		<div n="100015609">
+			f. 20v
+		</div>
+		<div n="10001570">
+			Perspicuum est igitur in hoc sermone id duobus modis simul omnino
+fieri non posse, si id, quod est, positum fuit, posse non semper
+
+		</div>
+		<div n="100015700">
+			35 esse, et si pouatur, quod potest semper esse, nou fieri posse, ut
+semper sit. hoc autem apertissime declaravit; eteuim huic propositioni,
+potest semper esse, ilia opponitur, nou potest semper esse,
+oppositioue coutradictionis, siquidem negativa propositio est, in
+qua praedicatum tantum negatur. iusuper eodem moda, quo conharum
+19 et sq.] &#8217; emend. : hae vero duae contrariue sunt atqiie oppositae
+22 plurimae &#8212; lU puta] ita Al: fort, vert.: plurimum enim simul falsae existunt, queinadmoduni
+si dicus 25&#8212;27 nec ullo&#8212;ut non sit excicl. in cocld.; vel (pr.) suspectiun mihi
+videtur. 28 er] fort, vel 39 insuper et sq.] cf. Simpl. 329, 19 et sq.
+		</div>
+		<div n="100015702">
+			f. 20v
+		</div>
+		<div n="10001580">
+			Praeterea deinceps, hunc sermonem cum altero ei proximo
+prosequitur eumque omuiuo deducit, dum inquit, fieri non potest,
+ut aliquid sit semper ac simul generatum existat. eius autem
+
+		</div>
+		<div n="10001590">
+			Qua autem rati one id omnino contingat, hoc in loco retulit,
+dum ait:
+		</div>
+		<div n="10001600">
+			Duorum (enim) terminorum, si posterior sine priore in-
+esse non potest, et reliqua, quae sequuntur. Aristoteles autem
+
+		</div>
+		<div n="100016004">
+			3 &#928;&#949;&#961;&#8054; &#7953;&#961;&#956;&#951;&#969;&#949;&#943;&#945;&#962;] cap. 12 18 nonnulli et sq.] p. 280a28.
+		</div>
+		<div n="100016006">
+			f. 20v
+		</div>
+		<div n="10001610">
+			Hie autem noster sernio, qui id excludit, quod ex adiunctione
+fiuitum dixit, syllogismo locum reliquit, qui non causam ut causam
+
+		</div>
+		<div n="100016101">
+			f. 21r
+		</div>
+		<div n="10001620">
+			Quoniam autem negatio huius, semper posse esse, et
+
+		</div>
+		<div n="10001630">
+			Atqui in hac enarratione inteudit alio quidem modo declarare,
+id, quod semper est, non habere potentiam, ut possit non esse.
+cum autem, qui contendit aliquid alicui alteri rei non inesse, ad
+confirmandum suum dictum declarare oporteat, quouam modo illud
+
+		</div>
+		<div n="100016303">
+			1 siquidem et sqq.] locus non integer 13 aliquando&#8212;esse (14)] ita Al: aliquo ter.
+pore interndnato coiiliiujit, eo contirujere codd. 14 est] ejjicit codd,
+37 utriusque&#8212;participi oin. codd.
+		</div>
+		<div n="100016305">
+			f. 21r
+		</div>
+		<div n="10001640">
+			At quoniam demonstratione non probacerat, utrorumcpie coutra-
+riorum uegationem eidem couveuire, de hoc etiam verba facit ac
+huius rei demonstrationem in litteris posuit. duo igitur contraria,
+
+		</div>
+		<div n="100016403">
+			6 &#8212; 8 hanc&#8212; contrarietatis] huic negationi non semper est, illam affirmationem . . oppositione
+(inquam) contradictionis Al. 8 non atldidi 10 &lt;&gt; supplevi 11 ei scripsi, si codd.
+et Al 11. 12 quod&#8212;est fort. del. 15 si addidi: nisi sit Al. 29 &#917; (pr.)
+supplevi: aut ipsi inest, aut B: at A Al male 37.38 esse debet emendavit Al: est
+codd.: medium &#8212; debet fort. del.
+		</div>
+		<div n="100016405">
+			f. 21r
+		</div>
+		<div n="10001641">
+			f. 21v
+		</div>
+		<div n="10001650">
+			Praeterea inquit: [quod fieri non posse] supra ostensum est,
+siquidem in idem revertitur. cum autem boc in loco dixisset,
+principia non converti neque ad media reverti, sempiternum namque
+fieri non potest, ut oriri [vel iuterire possit, ac id, quod oritur
+vel interit, sempiternum esse non potest, ex inductione boc deduxit,
+
+		</div>
+		<div n="10001660">
+			Hoc autem Aristoteles in proprio sermone explicavit se quod
+origiuem non babet et quod interitum non seutit, proprie
+
+		</div>
+		<div n="10001670">
+			At quoniam posuimus baec mutuo sese cousequi ac unum cum
+altero recurrere, defiuitio igitur cuiuscunque eorum de singulo quo-
+que vere dicitur. quare si bae duae definitioues invicem coniungantur,
+utique ex illis sempiternum innovabitur; igitur consentaneum
+est, ut sempiterni defiuitio unicuique eorum conveniat.
+
+		</div>
+		<div n="100016701">
+			18 &#8212;ingenitum (20) om. codd. 21 generationi] exspectes toj &#7936;&#925;&#8053;&#964;&#8179; . . &#964;&#8183;
+&#7936;&#966;&#952;&#940;&#961;&#8179; esse] &#8005;&#957; &#948;&#941; (a 25) 32 definitio eius, quod interitum non habet, excidisse
+videtur. fort, ante neque (32) addend.: incorruptibile vero est, quod nunc est
+		</div>
+		<div n="100016703">
+			f. 21v
+		</div>
+		<div n="1000167011">
+			11 facile &#8212; poterit om. codd. 13.14 si fieri &#8212; terminis] vitiose; conicio itemque duos
+alios, si fieri poterit, ut prior terminus primae combinationis converlalur cum priore secundae
+combinationis , poterit etc. 16 post natum est supplendum et quod originem non habet
+21 &#8005; &#956;&#951;&#948;&#949;&#964;&#941;&#961;&#8179; &#7936;&#954;&#959;&#955;&#959;&#965;&#952;&#949;&#8150; vix probandum
+		</div>
+		<div n="1000167013">
+			f. 21v
+		</div>
+		<div n="10001680">
+			Tempus autem, in quo est, quod semper est, ex utraque extremitate
+simul indefinitiim est, ita etiain et tempus, in quo uon est,
+
+		</div>
+		<div n="10001690">
+			Deinde id ipsuni litteris explanavit posuitquc genitum et mortale
+inter A, quod semper est, et B, quod semper non est, medium esse.
+etenim quoniam tempus, in quo A non est, non datur neque tempus
+etiam, in (pio B invenitur &#8212; A etenim semjjer est et B semper
+non est &#8212; &#921; tempus autem, in quo genitum et mortale est, actu 
+		</div>
+		<div n="100016900">
+			f. 22r
+		</div>
+		<div n="10001700">
+			Deinde hanc sententiam prosequitur dicitque, sequuntur igitur
+
+		</div>
+		<div n="100017005">
+			1 potentia fort. del. et scribend. actu quidem (loco vel actu) 5 interitum sentiet
+Al 21 de Logica] Analyt. priora, B, cap. 22 36 ante necessario duo versus
+desunt
+		</div>
+		<div n="100017007">
+			f.22r
+		</div>
+		<div n="10001710">
+			Dicere autem nihil esse impedimento, quominus ali-
+quid, quod sit uatum, uou intereat et, quod natum uon
+sit, intereat, [semel] existente primi ortu et secundi interitu,
+
+		</div>
+		<div n="10001720">
+			Quoniam vero dixit &#7956;&#964;&#953;, aliam in hoc rationem deduci existi-
+mamus. eorum enim, quae hoc modo origiuem habent et interitum
+
+		</div>
+		<div n="100017200">
+			16 praeterea] fundamentum huius demonstratiouis laudat Av. 91 L 19 &#8212; potest]
+eius quod petjici potest codd. (cf. supra Ar. p. 281 a7) 26 quo addidi.
+40 &#7956;&#964;&#953;] p. 283a11
+		</div>
+		<div n="100017202">
+			f. 22r
+		</div>
+		<div n="100017204">
+			f. 22v
+		</div>
+		<div n="10001730">
+			Si autem quispiam assereret habere potentiam posse et non
+aliquo termiuato tempore, siquidem puncta &#964;&#959;&#8166; &#957;&#8166;&#957; quae ante generationem
+praefuerunt, sunt infinita, et tempus, in quo est mortale,
+et tempus, quod inter momenta cousistit, sunt infinita: hinc colligi
+potest, quod utrumque eorum habet, immenso infinitoque tempore
+
+		</div>
+		<div n="100017305">
+			4 incipiet scripi; (nec generabile) quod incipit omnes testes 6 post postea omnes
+addunt non 22 eo] videlicet tempore 30 id vero] hinc apodosis incipere
+videtur.
+		</div>
+		<div n="100017307">
+			f. 22v
+		</div>
+		<div n="10001740">
+			Prius autemde eo disseramus, quod interitum sentit. dicimusitaque,
+si superioribus temporibus id semper fuerit, eritigitur inliuitumaliquod,
+sed suum esse erit secundum sirailitudinem eius, quod interitum
+sentit. quod vero habet poteutiani, ut iutereat, palam est toto eo
+
+		</div>
+		<div n="100017405">
+			f. 23r
+		</div>
+		<div n="100017407">
+			3 posse omues 29 ea] observa plur. : couicio puncta (27) . . . admiitant, ut iin-
+mensa infinitague existant; quibus . . .
+		</div>
+		<div n="100017409">
+			f. 23r
+		</div>
+		<div n="10001750">
+			Eademque ratio est eius, quod omni praeterito tempore uon
+est, veluti geueratum, quod in designato puncto esse potest, si
+enim iu omni puncto nou esset, puuctum, cui couveuit, ut in eo
+sit, termiuatum extitisset ae eius terminus erit comparatione ad
+
+		</div>
+		<div n="10001760">
+			Hie autem sermo non couveuit, ut de genito dicatur, quod in-
+finito tempore generatur, tametsi tempus, in quo est, iufiuitum
+existat. etenim etsi fieri possit, ut sit omui tempore, quo non est,
+
+		</div>
+		<div n="10001770">
+			Ceterum cum dixisset, poteutiam, uf non sit et sit, iuxta
+ordinem sermouis praemisit, ut non sit, deiuceps vero addidit
+ut sit.
+		</div>
+		<div n="10001780">
+			Frius quidem, videlicet ut uon sit, si corruiitibile est, si-
+quidem tametsi omni praeterito tempore sit, eodem tameu tempore
+poteutiam habet, cuius causa non sit.
+		</div>
+		<div n="10001790">
+			Posterius vero, videlicet ut sit, si generabile est; etenim
+quamvis omui elapso tempare non fuerit, in omni tameu eius potentia
+
+		</div>
+		<div n="10001800">
+			Et hoc ordine utrumque eorum has potentias habere de-
+prehenditur nee opus erit, ut a puncto quodam ex punctis temaliquid
+
+		</div>
+		<div n="100018000">
+			1 aliquid &#8212; qua (2)] ita Al: quidpiam semper existens poteutiam habet, eius gratia potest
+codd. 8. 9 iis . . eo . . poterint] eo . . illis . . poterit omnes testes. 15 enim . . .
+erit (16)] exspectes autem . . erunt 18. 20 poteutiam. habeat . . qua sit] potentia in
+iltis sit . . ut sit in illis omnes testes 27 dixisset] 283 a 15 potentiam] si pot.
+omnes 30 Prius quidem emendavi: primo enim magis convenit, ut codd. Al
+31.32 eodem tamen tempore potentiam habet emendavi: praesenti t. t. ei inest omnes
+36 hoc ordine] 283a18
+		</div>
+		<div n="100018002">
+			f. 23r
+		</div>
+		<div n="10001810">
+			Ex bis itaque iutellegi potest, in omni eo, quod de nou esse
+ad esse comniutatur, vis ae potestas esseudi actum pvaecedit. potentia
+
+		</div>
+		<div n="10001820">
+			Deinceps alia etiam indagine, quae antea praefata sunt,
+Aristoteles prosequitur, in his autem longo verborum progressu
+minime utitur; etenim eius opinio hoc in loco non est indicare, si
+interitum admittit, semjjer antea non fuisse, nee si interitum sentiet,
+
+		</div>
+		<div n="100018202">
+			f. 23v
+		</div>
+		<div n="100018204">
+			3 Ex his] 283a20 21 genitum . . sit (22)] conicio ingenitum . . non sit
+		</div>
+		<div n="100018206">
+			f. 23v
+		</div>
+		<div n="10001830">
+			Couveuit erg-o, ut id iutereat, quod iuterire potest, haec
+
+		</div>
+		<div n="10001840">
+			Hoc autem ex ea positione omnino deducitur, videlicet quod
+
+		</div>
+		<div n="10001850">
+			Idem praeterea hoc etiam modo doceri potest, nullum in-
+genitum invenitur, (juod vel casu vel fortuna innovari
+p OS sit. ea enim, quae casu vel fortuna eveniunt, raro fiunt et aunt
+pmeter id, quod est semper aut plerumque; quod autem ingenitum
+est et immortale, aut semper est aut plerumque; semper, si ex
+
+		</div>
+		<div n="100018500">
+			12 sed scripsi: nunquam otnnes 29 convenit] p. 283 a 29 &#954;&#945;&#8054; &#956;&#8052; &#7936;&#949;&#8054; &#7940;&#961;&#945; &#949;&#7990;&#957;&#945;&#953;
+30 siquideni] &#948;&#965;&#957;&#945;&#964;&#8056;&#957; &#947;&#8048;&#961; &#947;&#949;&#947;&#959;&#957;&#8051;&#957;&#945;&#953; 37 raro emendavi: plerumque codd.
+39 semper supplevi
+		</div>
+		<div n="100018502">
+			f. 23v
+		</div>
+		<div n="10001851">
+			f. 24r
+		</div>
+		<div n="10001860">
+			Impossibile enim est, ut dicatur genitum proprias potentias
+(exempli causa) custodire ac acternum incorruptibile permanere una
+cum ea potentia, quae iiuitationis causa sit, videlicet mutationis in
+praeterito. quare actionem potentiae, quae ei interitum adsciscat, cum
+statuerimus, id nos statuisse cam iam praeterisse atque tunc non fuisse.
+
+		</div>
+		<div n="100018601">
+			5 non Al: om. codd. 10 vel natura vel b Al 11 vel emendavi: atque omnes
+13 mutabuntur] ita Al: codd. corrupti 16 interitum] fort, excidit aliquid 17 id
+quod et sqq.] fort, emend. : has duas disposiliones, quae naturae et materiae subiectac accidunt,
+videlicet generationem . . prinationemque . . mutaniur 30 &#8212; 35 locum obscurum Al sic
+vertlt: Etenim fieri non potest, ut genitum . . custodiat ac una cum en potentia immortale
+quoque permaneat, quae ut monino mutetur, causa est: ipsa enim mutata est, abiiique ut
+illius potentiae acrion, quae . . asciscit, si facile inventiri poterit, facile quidem erit, quoniam
+iam abii praeteriitque, et tunc profecto non erit. 34 statuerimus . . statuisse
+emandavi: (cum) eius esse facile putemus, ita facile putare codd.
+		</div>
+		<div n="100018603">
+			f. 24r
+		</div>
+		<div n="10001870">
+			Praeterea post has geuerales novas etiam rationes adducit.
+naturliter etiam, etiam, si consideremus, consideremus, videlicet rationem
+
+		</div>
+		<div n="10001880">
+			Finis
+Primi Libri de Caelo et Mundo.
+		</div>
+		<div n="10001881">
+			7 originem habet . . non sentitu] ita omoes testes; seel leg. videtur: &#928;&#959;&#953; habet, sed interimum
+sentit cf. p. 283b14 18 ante allerantur aliquid excidisse videtur 23 et] vel omnes
+testes: locus ininime sanus. et quod corruptum: fort. leg. non aliter est ac id; Al
+exhibet: Ita quod genitum est, vel us semper sit, et quod generatum non est, ut interire possit . .
+falsum existit procul dubio ex emendatione.
+		</div>
+		<div n="10011">
+			DE CAELO &#917;&#932; MUNDO
+LIBER SECUNDUS
+CUM THEMISTII PHILOSOPHI COMMENTARIO
+MO YSE ALATINO MEDICO HEBRAEO INTERPRETE.
+		</div>
+		<div n="100130">
+			Quoniam autem in Octavo Physicorum Libro declaratum fuit
+ratioui consonum esse, ut corpus, quod in circulum fertur, sempiternun
+inveniatur &#8212; eteuini aequum est, ut motus ac motor sempiternus
+sit, et hie motus ei tantum inesse potet, quod in orbem
+fertur &#8212; cumque in eo, qui proxime huuc pracedit, Libro dictum
+
+		</div>
+		<div n="1001304">
+			5 Octavo] cap. 9 18 statum] lege finem 27 dicenda] exspectes
+ex sententia] propvie: tum ex eo, quod iis maiorem vim attribuimus quam sententiis
+		</div>
+		<div n="1001306">
+			f. 24v
+		</div>
+		<div n="100140">
+			Itaque praeclare uobiscum agetur, si hoc sibi quisque nostrum
+
+		</div>
+		<div n="1001404">
+			f. 25r
+		</div>
+		<div n="100150">
+			Caelum autem summumque locum (etc.). haec est una ratio
+
+		</div>
+		<div n="100160">
+			Quae vero nos de eo diximus, assertionis illorum vim conlirinant;
+ostensum enim est corpus, quod in circiduni torquetur, interitus et
+
+		</div>
+		<div n="1001601">
+			1 non&#8212;sit] affirmare quis non poteril Al 11 cf. Ar. 270 bG 19 in postulati
+modum Al: fort, per abusionem 21 illud einendavi: illi codd. Al 39 corpus] exspectes
+caelum; fort, taiueii suppleuduin (corpus) quod in eirculum torquetur
+		</div>
+		<div n="1001603">
+			f. 25r
+		</div>
+		<div n="100170">
+			Aristoteles inquit: et quoniam caelum lab oris et defatigationis
+expers est. &#8212; per caelum autem hoc in loco praestantius
+intellegit &#8212; propterea quod ad motua eius perpetuitatem petuitateni, vim uon
+rcquirit, quae, ut hac motus specie omnino moveatm; cogat, at, cum
+
+		</div>
+		<div n="100180">
+			Neque vero hoc est secundum fabulam antiquorum, videlicet poetarum ,
+quemadmodum inquit Homerus ac id genus alii poetarum nonnuUi,
+caelum 003C;Atlant 003E; sustentari ipsumque ad se tuendum indigere
+tali necessitate, videutur enim ii etiam, qui banc fabulam commenti
+sunt, in eadem esse sententia, qua posteriores nonnuUi physici, qui
+
+		</div>
+		<div n="1001804">
+			1 in postulati modurii Al: fort, per abusionem (ut supra) suimnum locum] p. 284a11;
+6 verba et quoniam caelum falso addita esse patet 7.8 per &#8212; intellegit] fort, emend.:
+scilicet caelum et locus, qui sursum est . . 24 animam &#8212; tenere] anima namque salvum et
+incolume permanet Al 28.29 suslineatur &#8212; praecipitetur] ita Al: permanenter inclinetur
+codd. 30 jiro ut convenit conicio contra naturam 34 voluptate pro &#7956;&#956;&#966;&#961;&#959;&#957;&#959;&#962; (284a32)
+35 sine et sq.] fort, propter defatigationem pigritiemque
+		</div>
+		<div n="1001806">
+			f. 25r
+		</div>
+		<div n="100190">
+			Aristoteles inquit; quodsi corpus, quod in orbem movetur,
+eo modo, qui expositus est, esse potest, uempe quintum
+
+		</div>
+		<div n="1001100">
+			Quoniam autem nouuulli sunt, qui caelo dextram et
+laevam partem esse dicunt, utrum habeat dextram et laevam
+eo modo, ut illi tradunt, an aliter, videndum est, quemadmodum
+
+		</div>
+		<div n="10011001">
+			f. 25v
+		</div>
+		<div n="10011005">
+			1.2 moventur, essent, agerent codd. Al 2 otiosam] ita Al codd.: lege sine otio
+2 &#8212; 7 &#8212; datum est] Alatini interpretationem omnino omuino commenticiam retinui, cum
+locum vitiis scatentem emeudare conatus non sim: conicio cum semper moveatur, quemadmodum
+poelue dicunt de eo, qui in continua celeritate sit ob eius vitam &#8212; quam sententiam
+aut poeta quibusdam locis memorasse videtur aut aliquis eorum, qui caelum ab anima animalium
+moveri existimahant . . .
+		</div>
+		<div n="10011007">
+			f. 25v
+		</div>
+		<div n="1001110">
+			Principia autem haec dico, unde primum motus eorum,
+quae moventur, proficiscuntur.
+		</div>
+		<div n="1001120">
+			Per principia autem hoc in loco, unde motus proficiscuntur,
+
+		</div>
+		<div n="10011205">
+			14. 15 eo &#8212; praecedit] fort. vert, eiuendatis emendand.: de principiis moluum supra
+memoratis, quae in eisdem partibus sunt. 23 his uddidi 34 principiuni]
+284b27
+		</div>
+		<div n="10011207">
+			f. 25v
+		</div>
+		<div n="100112012">
+			f. 26r
+		</div>
+		<div n="100112016">
+			5 a qua] unde omnes, sed cf. 285a24; fort, linea excidit, in qua anterior pars tractatir/
+7 de Animalibus] cf. de anim. incessu cap. 4 9 ea et sq.] locus non in-
+teger 15 pro in quo sensus insunt fort, vertendum (loco quodam) sensuum 20 moventur
+&#8212; praedictos (21) scripsi, cum leni mutatione: mov. alla quidem, sed non quae aeque
+uno modo se habent Al.
+		</div>
+		<div n="100112018">
+			f. 26r
+		</div>
+		<div n="100112026">
+			6 volvamur] fort, convertamus 19. 20 eorum vero quae, sunt, pone quidem om. Al
+21 ut &#8212; differat (22)] ita Al, dubio procul ex einendatione: quapropter invenitur pone
+(tergum) inter anteriorcm thoracis partem, et scapulas interque venas et nervos codd. prorsus
+corrupti 29 fort, emeudandum: nec quavis ratione prior existit, sed tempore.
+31 cf. Simpl. 385, 9 &#7970; &#964;&#8135; &#966;&#8059;&#963;&#949;&#953; &#8033;&#962; &#964;&#8056; &#963;&#965;&#957;&#945;&#953;&#961;&#959;&#8166;&#957; &#956;&#8050;&#957; &#956;&#8052; &#963;&#965;&#957;&#945;&#957;&#945;&#953;&#961;&#959;&#8059;&#956;&#949;&#957;&#959;&#957; &#948;&#8051;
+		</div>
+		<div n="100112028">
+			f. 26r
+		</div>
+		<div n="1001130">
+			Quoniam auteni nos ante explicavimus liaec principia
+iis inesse, (piae auima praedita sunt, iuanimis vero baec tribui
+comparatione | ad nos tantum et caelum quoque animatum esse 
+		</div>
+		<div n="10011300">
+			f. 26v
+		</div>
+		<div n="10011301">
+			si &#8212; est etoendavi: si locus est sup. pars codd.: tametsi (pro praeterea) locus sit sup.
+rs Al male 6 licet emendavi: et elicit codd.: cum autem sens, autem sens. non
+let Al 27 cuius &#8212; sint] ita Al : undigue aecjualem codd.; excidit aliquid.
+		</div>
+		<div n="10011303">
+			f. 26v
+		</div>
+		<div n="100113010">
+			12 s eptentrionalem] meridionalem codd. 17 cf. Aver. p. 105 E 22 contendebant]
+hie (Ar, p. 285b27) antiquitus scheda una vel duae perierunt 23 si] Ar. p. 286a8
+31 ac] fort, vertendum cum et in iis del.
+		</div>
+		<div n="100113012">
+			f. 26v
+		</div>
+		<div n="1001140">
+			Quoniam autem supremura tantum caelum tale est,
+corpus enim [quoddam] divinum est, quod in orbem movetur,
+atque eiusmodi couversio veluti eius vita est, ob earn causam inter
+cetera haec ipsum tantum &#921; est, quoniam motus veluti vita quaedam 
+		</div>
+		<div n="10011400">
+			f. 27r
+		</div>
+		<div n="10011407">
+			4 si &#8212; vivens est (p) Al: vitae sempiteruae gratia est codd. 20 de Animalium motu]
+cap. 2 25 non addidi coll. p. 286a 17 &#959;&#8016; &#947;&#8048;&#961; &#7940;&#957; &#7974;&#957; &#7936;&#8055;&#948;&#953;&#959;&#962; &#7969; &#954;&#8055;&#957;&#951;&#963;&#953;&#962;. 34 non addidi
+		</div>
+		<div n="10011409">
+			f. 27r
+		</div>
+		<div n="1001150">
+			His ita positis, omnino quidem ortum interitumque
+esse oportere perspicuum est. quod enim contrarium habet,
+sempiternum unquam esse non potest; aeternitas enim affici non
+
+		</div>
+		<div n="1001151">
+			15 calido &#8212; maior (16)] magis namque vitalis est codd. 20 in Phys.] 226b15 15 25 fort,
+post invenitur siipplendum: videlicet ignis 30 dc Ortu] TI 1 sq. 38 Octano] cap. 7
+		</div>
+		<div n="1001160">
+			Omuino itaque convenit, ut ortus, interitus eorumque innovatio 
+		</div>
+		<div n="10011600">
+			f. 27r
+		</div>
+		<div n="10011602">
+			f. 27v
+		</div>
+		<div n="1001170">
+			Deinde inverso ordine solutionem faciemus, omnino consentaneum
+est, ut divina corpora plura eorumque conversiones plures sint,
+
+		</div>
+		<div n="1001180">
+			Post baec de caeli ligura disserit, quam prima animi apprehensione
+
+		</div>
+		<div n="1001190">
+			Porro uum circulus ceteris omnibus planis figuris prior sit, alia
+ratione deincepsexplicavit. equidem assumpsit circulum esse perfectum,
+sicuti etiam dictum est, et quod perfectum est, prius est. et quemadmodum
+
+		</div>
+		<div n="10011903">
+			3 exspectes autem 23 Plato] cf. Tim. 83 B 41 exlremildtes Al: codd.
+cormpti 41 &#8212;formas (p. 100, 4) locus difticilis. Al exhibet: cum dirisin
+in consimiles partes non fiat, hac igitur ratione evenit, ut rotundae figurae minime
+dividantur . . . linearum, sed in eas, quae specie differunt 30 id &#8212; elementa emendavi: haec
+enim vagantium . . . contingunt, et quatuor elementa in humiliore . . . sede constituuntur Al
+		</div>
+		<div n="10011905">
+			f. 27v
+		</div>
+		<div n="1001200">
+			Atque alia quoque indagine. si unmeralem ordinera contemplemur,
+profecto iuveniemus cirulum ceteris planis figuris priorem
+esse, et ideo sphaeram primas in solidis figuris tenere. etenim
+&#8217;uli fignra duobus formatur, qui duo primus numerorum existit,
+cum cousentaueum sit, ut trianguli species non lateribus, sed angulis
+
+		</div>
+		<div n="1001210">
+			Corpora autem, quae ei conivncta sunt, errantium stellarum
+orbes sunt, ita et ea corpora, quae penes medium, hoc est
+versus medium consistunt, quae quidem corpora quatuor elementa
+sunt, similiter etiam globosa existunt, quandocpiidem divini corporis,
+quod globosum est, concavam extremitatem contingunt; quod autem
+
+		</div>
+		<div n="10012102">
+			f. 28r
+		</div>
+		<div n="1001220">
+			Quod etiam alia ratione intellegi potest, superius enim do-
+cuimus, num divinum corpus in orbem circumque moveri possit,
+
+		</div>
+		<div n="10012202">
+			f. 28r
+		</div>
+		<div n="1001230">
+			Atqui consentaneum est, ut bunc sermonem iuxta communem
+sententiam prosequamur; eum enim non ita, ac si indefinitus esset,
+
+		</div>
+		<div n="1001240">
+			Prae terea, si caeli motus, videlicet tempus caeli motus,
+quo caelum una circumvolutione movetur, ceterorum motuum
+mensura est, quemadmodum in Quarto Physicorum, cum de tempore
+ageret, explicatum fuit, quia hie motus est regularis 003E;
+in quoque autem quantitatum genera mensura est earum
+
+		</div>
+		<div n="10012402">
+			10 propter angulorum vicissitudinem scripsi ex coniectura. codd. hic et infra (14) vocabulum
+peregrinum x003E; mutilatum exhibent. Al omnino ficta praebet: atqui
+divina corpora rectilinea non sunt IS Atqui et sq.] cf. Aver. p. 113 CD
+27 Quarto] cap. 11 34 idque est fort, deleudura et loco ac magnitudine aequale est scribendum:
+ac celerrime movetur, cum magnit. aequale sit 36 aequaliwii] caelestium codd. Al
+		</div>
+		<div n="10012404">
+			f. 28
+		</div>
+		<div n="1001250">
+			Et possit aliquis credere figuram eaeli esse rotmidam, ex iis corporibus,
+
+		</div>
+		<div n="10012504">
+			f. 28v
+		</div>
+		<div n="10012507">
+			2 &#8212; si (3) om codd. 5 quae] Ar. a 27 8 ex eo quod aequalem terminum
+acquirit] fort, haec verba ex linea praecedente repetita suut 13 terminentur] plur. scripsi
+coutra omues testes. 31 quia nempe &#8212; dicuntur (33)] autiquam versionein, licet prorsus
+falsam, retinui, cum certiorem praebere non possiin. fort, verteudum : videlicet quod dicitur per
+analogiam privationis de ratione corporum, prima corpora subsequeniium, est ratio prinatorum
+penes principes [prima corpora?] 34 id scil. caelum 37 ipsum &#8212; esse emendavi:
+tametsi . . sit codd. Al
+		</div>
+		<div n="10012509">
+			f. 28v
+		</div>
+		<div n="1001260">
+			Sequitur, ut de boc etiam disquiramus, si nihil jvustra et for-
+tuna in iis sit, quae circulo feruntur, cur in unam partem, non
+
+		</div>
+		<div n="1001270">
+			Et quoniam Aristoteles iu hoc iuxta doctriuae indagationem
+procedit ac medium sumit, ab eo errore tuetur sese, qui ex nimia
+indagine eiusque stultitia coutingit; qui cam terminum validiorem
+
+		</div>
+		<div n="10012703">
+			11 praecedente] cap. 4. 14 et seq. cur . . addidisse . . vel (16) . . vel ut (17) adieci
+24 qui &#8212; videntur (26)] qui terminum non invenit, ut de ea disserere possit. nunc autem ea
+tantum dicenda ac ponenda sunt, quae humanae mentis capacitatem minime egrediuntur Al
+imitans verba Aristotelis (p. 288, 1) &#957;&#8166;&#957; &#948;&#8050; &#964;&#8056; &#966;&#945;&#953;&#957;&#8057;&#956;&#949;&#957;&#959;&#957; &#8165;&#951;&#964;&#8051;&#957;&#959;&#957; 30 cum siipplevi
+antel cap. 2.
+		</div>
+		<div n="10012705">
+			f. 28 v
+		</div>
+		<div n="1001280">
+			Deinceps vero demoustrationem indagemus, eur caeli primi
+motus, nempe motus inerrantium stellarum, aequabilis sit. in corporibus
+enim, quae subter sunt, videlicet in iis stellis, quae
+vegantes sunt, plures iam motus in unum convenerunt; unaquaeque
+
+		</div>
+		<div n="10012803">
+			f. 29r
+		</div>
+		<div n="10012806">
+			2 vertitur] vertuntur codd. Al : quia ex sui ipsius partibiis, quae in ipsum vertuntur, priores,
+ceteris praestantiores existunt Al ex coniectura. 11 primi emendavi: nobilior
+codd. Al 23 ista &#8212; habebit emendavi: si ita se habeat Al 24 m motus &#8212; fit] exspectes:
+nee in principio motus nee in medio est, sed in fine; sed coll. 1. 29 et p. 105, 4 fort, corrig.
+vel fine 35 medium (alt.) Al: veritatem codd. &#964;&#8052;&#957; &#959;&#7984;&#954;&#949;&#8055;&#945;&#957;?)
+		</div>
+		<div n="10012808">
+			f. 29r
+		</div>
+		<div n="1001290">
+			Nee non demonstrative ordine aliam super hoc rationem adstruit
+
+		</div>
+		<div n="1001300">
+			In hoc autem sermo perspicuus est. ceterum ad huius vertatem
+persuadendam tertia quoque ratio hoc ordine disponitur. si
+
+		</div>
+		<div n="10013000">
+			1 ad nos &#8212; se habet Al: minime vero e contrario codd. 8.9 erit &#8212; existat] fort, verteudum:
+x003E; erit x003E; potius, quando momento existit. 9 inquit] a 22 &#964;&#959;&#8150;&#962; &#948;&#8050; &#8165;&#953;&#960;&#960;&#959;&#965;&#956;&#8051;&#957;&#959;&#953;&#962;
+12.13 &#8212; petuntur conieci : quae autem pulsionis aut proiectionis pulsu
+agitantur Al male 18 &#8212;fuerimus (19)] ita Al commenticie: conicio quein cum
+perceperimus, in his nobilior ineril vis. 28 Physicis VIII 4 32 laboriosus
+suspectum.
+		</div>
+		<div n="10013002">
+			f. 29r
+		</div>
+		<div n="10013007">
+			f. 29v
+		</div>
+		<div n="100130011">
+			5 vel [itaque] fort, emend, dico totum] sc. caelum; Al hie et in seq. totus
+8 comparatis ex coniectura 10 parleni] exspectes &#948;&#953;&#8049;&#963;&#964;&#945;&#963;&#953;&#957; 13 totuni] omnes
+Al 14 duplicitate] conicio debilitate 20 &#8212; exoreretiir (21) emendavi:
+quod quidem. si commune univcrsaleque ficerit, cum transmiUatione eveniet, quae ex imbecillitate
+ac virium lapsu exoritur Al 22 porro dixi Al ex coniectura falsa: codd. corrupti
+33 si igitur emendavi: etsi codd. Al
+		</div>
+		<div n="100130013">
+			f. 29v
+		</div>
+		<div n="1001310">
+			Idem praeterea alia etiam ratione doceri potest, [non enim
+est hoc consentaneum] id, quod motum affert, infinito tempore
+potuisse et non potuisse contra naturam et alio infinito tempore
+secundum naturam et, at dicatur in universum, potuisse et non
+
+		</div>
+		<div n="10013107">
+			6 non &#8212; consentaneum (7)] ita Al duce Aristot.: om. codd. 8 ante contra aliquid excidisse
+videtur 20 antea] lib. I, cap. 12 24 &#8212;docat emendavi: quemadmodum si
+dixerimus hominem . . semper intendi Al 38 compertum &#8212; sint (40)] ita Al: codd. corrupti
+40 sed . . deprehenditur emendavi: tametsi . deprehendatur codd. Al
+		</div>
+		<div n="10013109">
+			f. 29v
+		</div>
+		<div n="1001320">
+			Secunda vero, quae ponit ipsum | semper tantum intendi, 
+		</div>
+		<div n="10013200">
+			f. 30r
+		</div>
+		<div n="1001330">
+			Id vero, quod quovis motu terminate ac minimo tempore ac
+maximo tempore movetur, eius motus terminabitur, si hac continuitate 
+moveatur. exempli gratia inveniatur tempus aliquod (maximum),
+
+		</div>
+		<div n="1001340">
+			 Nec non etiam alia ratione. remissio est veluti dissolutio
+quaedam, quae omni intensioni contrariatur; similiter enim ambo
+et alterum, si modo eadem horum utrorumque intensio
+erit, vel maior [et] immenso tempore, rationi autem consentaneum 
+est, ut hoc modo ipsum eadem mensura vel maiore intendi
+
+		</div>
+		<div n="10013401">
+			3 lum . potius (4) emendavi: curriculum (3) vel amplius codd. Al 5 cum codd.:
+ut Al 16 hinc corruptum: lege huiusmodi non esse 18 terminabitur] sic emendavit Al:
+fort, legendum: id vero, quod quovis motu movetur, tempus terminatum habebit, sive minimum sive
+maximum . . 22.23 quis . . accipiat scripsi: si caeli status [motus Al] minima quovis
+tempore intendatur codd. Al
+		</div>
+		<div n="10013403">
+			f. 30r
+		</div>
+		<div n="1001350">
+			Deinde tertiae positionis fundamentura funditus pervertit, videlicet
+licet caeli motum variis temporibus vicissim semper intendi et remitti,
+quandoquidem id sub sensum non cadit, tametsi consonum esset
+(si id aliquo fundamento niteretur) ut seusui abscouditura non sit,
+cum partes invicem altera alteri comparantur; neque in eo ulla
+
+		</div>
+		<div n="1001360">
+			Post haec tria de astris perscrutari conatur, nempe ex quibus
+constent et quas figuras admittant (juique sint eorum motus. atque
+
+		</div>
+		<div n="1001370">
+			Numquid autem consentaneum sit, ut stellae ex eo corpore
+constent, in quo coUocatae sunt, haec plane communis omnium
+sententia est. an vero eiusmodi corpus quintum non sit ignis, hoc
+nobis dicendum relinquitur. non enim convenit, ut id. ea ratione
+
+
+		</div>
+		<div n="10013701">
+			f. 30r
+		</div>
+		<div n="10013702">
+			f. 30v
+		</div>
+		<div n="1001380">
+			Atque in universum, si aliquo modo afficitur, quainobrem igitur
+non incalescit? et inquit Alexander ipsum vocare hie locum
+
+		</div>
+		<div n="10013800">
+			3 calor ac etiam sic Al: om. codd. 4 non, propterea quod emendavi: om. Al 5 fort,
+post acquirunt excidit aliquid 6 et ea quae diximus suspectum 10 aeremque &#8212; excalefaciunt
+(11)] ita Al: aerqice iis vicinus incalescit codd. 17 qui &#8212; redditur emendavi:
+vel . . ignea redduntur codd. Al. 21 ipsum scripsi: astra Al: ea codd. fort, vertendum:
+existit et inter . . medium tenet, non calefiat 23 &#8217;] cf. Simplic. p. 440,27 et 3736
+et Averr. p. 125 DE 25 &#8212; facit (26) emendavi. forr. insuper per homoioteleuton
+excidit aliquid. 33 negari &#8212; calescere] torpere, propter quintum corpus, quod calefacit Al.
+		</div>
+		<div n="1001390">
+			Quod tertio loco de astris quaerebat, motus eorum erant, de
+
+		</div>
+		<div n="1001400">
+			Primum quidem buius divisionis membrum, nempe utraque
+quiescere, nulla alia ratione esse posset, nisi quia terra non quiesceret ;
+at terra quiescit, quemadmodum suo loco declarabitur, utraque
+
+		</div>
+		<div n="10014001">
+			f. 31r
+		</div>
+		<div n="10014002">
+			caelum] caelo codd.; locus corruptus 2 et sq. pluralis numerus in verbis intellexere,
+orum, ipsi aiunt suspectiis mihi videtur 8 ipsi] Simpl. p. 440,6 et sq. 11 lumen]
+ine dubio ante lumen lacuna existit 12 de Sensu] cap. 3 (?) 13 de Anima] II cap. 7
+5 existimatur et sq.] cf. Averr. p. 127G 34 declarabitur scripsi, cf. cap. 14: de-
+laratum fuit codd. Al.
+		</div>
+		<div n="10014004">
+			f. 31r
+		</div>
+		<div n="100140012">
+			2 cuius &#8212; stellis (4) om. codd. per homoioteleuton 7 errantes et sqq.] illae err. . . declinat
+(8) . . moveatur (9) codd. fort, legendum illa errans quoque sensationis ordine . . non
+declinat . . ipsa moveatur 14 stellarum scripsi: motus codd. Al 30 et quo quaeque
+maior sit, eo velocius scripsi: quaeque velocior est, semper codd. Al
+		</div>
+		<div n="100140014">
+			f. 31r
+		</div>
+		<div n="1001410">
+			Quoniam ergo uec utraque moveri consentaneum est, nee utraque
+quiescere, neque cum alterum movetur et alterum quiescit,
+astrum id, quod movetur, esse potest, relinquitur orbes moveri
+et astra quiescere atque orbibus suis affixa alligataque
+
+		</div>
+		<div n="10014102">
+			f. 31v
+		</div>
+		<div n="10014104">
+			331 ipsi . . volvuntur (32) scripsi: ipse . . dtvolvitur codd. Al 38 maior emendavi ;
+iis, quae ex supplevi: rnagnitudines, quae a centra ducuntur, maioris orbis esse Al
+		</div>
+		<div n="10014106">
+			f. 31v
+		</div>
+		<div n="1001420">
+			Aristoteles autem idem alia ratione aggreditur, quae est
+eiusmodi.
+		</div>
+		<div n="1001430">
+			Quoniam rotunda sunt sidera, quemadmodum et alii
+dicunt et ex nostro sermone elucescit, qui quidem quintum corpus
+poni iubet, ac eius corporis, quod rotundum est, duo per se
+motus sunt, volutatio et conversio, perspicuum est igitur, si
+astra moventur, horum altero ciebuntur; at neutro eorum ciebuntur,
+
+		</div>
+		<div n="10014305">
+			1 circulis scripsi: portionibus codd. polos] exspectes polum 9 Alexander] cf. Simplic.
+p. 451, 9 10 scindi codd. 11 fixis scripsi: vagantibus codd. Al 16 &#8212; iubet (17)
+codd.: ea ex quinto corpore gignimus Al duce Arist. 40 dicimus] conicio videmus
+		</div>
+		<div n="10014307">
+			f. 31v
+		</div>
+		<div n="1001440">
+			Praeterea neque motu volutationis stellae moventur, hoc siquidem
+erat ultimum membrum partium divisionis superius allatae, assumitque
+volutationis motum ex eorum numero esse, qui rotundis
+
+		</div>
+		<div n="1001450">
+			Quare, si stellae nioverentur, cousonum esset, ut proprio motu
+
+		</div>
+		<div n="10014502">
+			f. 32r
+		</div>
+		<div n="10014505">
+			2 inhaerentes] cf. Simpl. p, 454, 15 et Averr. p. 131 B. 4 &#8212; ipse emendavi: quae
+illis adiungitur, quam tamen ab ipso sole minime adipiscuntur Al 8 post membrum repetunt
+codd. Al &#8212;videtur (p. 114, &#8211;40) 18 &#8212;dicet scripsi ex coniectura; ad
+p. 457, 15 23 Eudoxus] ita codd.: Hipparchus Al, procul dubio ex coniectura; cf. Simpl.
+p. 462, 15. 34 inquit scripsi, fort, locus sanus non est. Al plane perverse vertit: ut cum omnium
+caelestium corporum instrumenta quodammodo in cor et intestina nalura redegisset etc.
+		</div>
+		<div n="10014507">
+			f. 32r
+		</div>
+		<div n="1001460">
+			Alexander hoc in loco de orbe in universum deque singulo
+quoque orbe credidit Aristotelem disseruisse. et tametsi ita res se
+haberet, quemadmodum Alexander opinatur, tamen qui hoc de orbe
+universe sigillatimque disserit rationemque deducit, non convenit,
+ut de quodam orbe non dicat; quod enim absoluto nomine de animalibus
+
+		</div>
+		<div n="10014603">
+			7 superius] II, cap. 4 9 ea &#8212; concluditur Al: codd. mutilati 16 &#8212; fertur om. codd.
+17 stellae Al: om. codd. 18 dixit] Phys. IV,5 et in hoc libro I,9; ad rem of. Simpl.
+p. 459, 26 et 460,4. 21. 23 verba deque singulo quoque orbe et sigillatimque suspecta
+mihi videntur 24 non scripsi 33 neque veluti animata] Arist. p. 291 a 23
+		</div>
+		<div n="10014605">
+			f. 32r
+		</div>
+		<div n="100146010">
+			f. 32v
+		</div>
+		<div n="100146014">
+			10 sonus&#8212; exislit emendavi: nee a pr. assueti sumus codd. 14 Alexander] cf. Simpl.
+p. 465, 21 19 quia idem spatium] laudatur in Averr. commentario p. 134 F et in
+eiusdem paraphr. p. 304 E. ad seq. cf. ibid. p. 136 A et 304 G 26 sic et sq.
+locus corruptus; cf. Arist. p. 291 a 11, 12 29 sonum edunt scripsi: quae non moventur
+codd. Al; fort. legendum: qui non movetur 35 inquil] p. 291a24
+		</div>
+		<div n="100146016">
+			f. 32v
+		</div>
+		<div n="1001470">
+			Ait insuper: de ordine autem vagantium stellarum deque intervallo
+earum sufficiens cognitio, ex iis, quae a Mathematicis traduutur,
+peteuda erit. ii namque asseruut ex caelestihus sphaeris non-
+nullas esse celeriores, eas nempe, quae terrae propiores sunt,
+
+		</div>
+		<div n="1001480">
+			Stellarum autem figuram globosam esse et autea a nobis
+dictum est et non sine ratione quispiam ita esse existimabit, si
+inde rationem desumat. quoniam determinatum est astra
+per se motu aliquo non moveri, cum motu proprio non moveantur,
+nec instrumenta habeant motui accommodata &#8212; natura enim
+
+		</div>
+		<div n="10014803">
+			12 partes &#8212; citissimas (14) corruptum: fort, emend. circulationem sphaerae fixae, quae con
+posita non est, minimam, hoc est citissimam 15 e regione contr. Al: codd, corrupti
+		</div>
+		<div n="10014805">
+			f. 32v
+		</div>
+		<div n="1001490">
+			Nunc vero alium ipse addidit syllogismum, qui a simili desumitur,
+et inquit: cum eadem unius et omnium stellarum ratio sit,
+
+		</div>
+		<div n="1001500">
+			Post baec, duas proposuit dubitationes, quas philosophico more
+
+		</div>
+		<div n="1001510">
+			Secundum est, ut investigemus, quanam ratione in primo
+
+		</div>
+		<div n="1001520">
+			Reliqua autem, quae ab eo deducuntur, perspicua sunt, quare
+(inquit) praeclarum est quaerere de his et consentaneum est
+non ignorare id, quod ceteris rebus seu partibus praestantius est;
+quamvis vero parva adiumenta ac principia nobis suppetant, tantisque
+locorum iutervallis haec quoque principia absint ab iis, quae subsequuntur,
+
+		</div>
+		<div n="1001530">
+			Nos enim in universum de eis ut de corporibus et rebus,
+
+		</div>
+		<div n="1001540">
+			Videtur enim in universum ei naturae, quae praestantissima
+est, perfectio ac bonum cum quiete ac sine actione et labore convenire,
+
+		</div>
+		<div n="10015401">
+			26 inquil] 292a 14 et &#8212; est (27)] ita Al male: fort. vertendum est: et intellegentia
+rerum singularum ceterarum praestantior requiritur. 33 sunt et inveniantur scripsi: est et
+inveniatur codd. Al 34 corporibus et] ita Al.: om. oodd. 35 modo vero supplevi
+animata] inanimata codd. Al. 37 habeant et sunt] habeat et est codd. Al
+		</div>
+		<div n="10015403">
+			f. 33r
+		</div>
+		<div n="100154011">
+			5 sine labore emendavi: modico labore codd.: brevi ambulatione Al 9 &#8212;motu
+(12) sic etuendavi: praestantissimum bonum possideat, consentaneum videretur,
+ut obsolute pulchr. habere diceretur: sed quoniam . . ordine pulchritudinem admittunt . .
+dicuntur Al 15. 16 pluribus quidem motibus Al: permultis mot. codd.: suspectum 16 deinde]
+quamobrem codd. Al. fort. deest aliquid. 26 qualis hominis est om. codd.
+		</div>
+		<div n="100154013">
+			f. 33r
+		</div>
+		<div n="100154015">
+			f. 33v
+		</div>
+		<div n="1001550">
+			Et quemadmodum in his, ita etiam in caelestibus corporibus
+
+		</div>
+		<div n="1001560">
+			Etenim prima causa optimum est ac sui ipsius causa existit,
+quamobrem nulla omnino actione indiget. actio autem semper in
+
+		</div>
+		<div n="1001570">
+			Hic autem sermo unus existit et convenit, ut propositio praeillud
+
+		</div>
+		<div n="10015700">
+			9 autem . . omnino non assequitur scripsi leni emendatione: partim . . vel habent vel Al
+14 cum cucurrit et currendi gratia scripsi: tempore quo est et in gratiam eius quod fit codd.
+Al 16 plurimi om. codd. 20 cum scripsi: vel codd. Al 22 semperque &#8212; accedunt
+(23)] ita Al ex coniectura: codd. corrupti
+		</div>
+		<div n="10015702">
+			f. 33v
+		</div>
+		<div n="1001580">
+			Deinde ad secundam quaestiouem dissolveudam progreditur.
+ea autem talis erat, cur primus orbis inhaerentes omnes stellas
+moveat, unusquisque vero ceterorum orbium non moveat multas
+stellas, sed plures orbes unam tantum vagantium stellarum moveant?
+
+		</div>
+		<div n="10015803">
+			1 difficile] 292a28; cf. Averr. 141 M et Simpl. 485,8. rede facere enoendavi: ut
+tanquam primi sermonis pars subsequatur, siquidem aegre admodum praecedere potest AI
+male 9 plantae] conicio homo 18 id&#8212;sunt (19) Al duce Arist.: codd.
+24 moveant scripsi: moveat codd. Al 32 unicam &#8212; movent (33) om. codd.
+		</div>
+		<div n="1001590">
+			Quod autem rationi consonum sit, ut ita res se habeat, hinc
+profecto osteuditur, nempe cum dicitur primum orbem plura
+divina corpora movere, nec non plures orbes unam vagantium
+&#921; stellarum ciere. hac igitur de causa unus orbis 
+		</div>
+		<div n="10015900">
+			f. 34r
+		</div>
+		<div n="1001600">
+			Quod vero ait Aristoteles: sic igitur uatura exaequat
+
+		</div>
+		<div n="1001610">
+			Post haec ad terrae speculationem regreditur, quam in medio
+locatam ac rotundam esse, monstrat. primo autem aliorum sententias
+affert, qui in media muudi sede terram locatam dicunt;
+Pythagorei autem in medio ignem esse pronuntiant,
+
+		</div>
+		<div n="10016101">
+			18 motus &#8212; sphaerarum scripsi: motum huius orbis codd. 20.21 ipsa . . sufficit; ipsa . .
+adipiscitur] sic emendavi: ipsi (orbes) . . sufficiunt; ipsi . . adipiscuntur codd. Al
+24 ail] p. 293a2 36 circum] ifa Al; cf. Arist: a medio codd. in comparationem
+ad solem] cf. Simpl. p. 511,32 &#954;&#945;&#964;&#8048; &#964;&#8052;&#957; &#960;&#961;&#8056;&#962; &#964;&#8056;&#957; &#7973;&#955;&#953;&#959;&#957; &#963;&#967;&#8051;&#963;&#953;&#957;
+		</div>
+		<div n="10016103">
+			f. 34r
+		</div>
+		<div n="1001620">
+			Ignis namque, inquiunt, ceteris elementis nobilior est; quare
+locus etiam ceteris praestantior ei debetur, qui medium existit;
+
+		</div>
+		<div n="1001630">
+			Haec igitur, inquit, proprietas erit Pythagoreae sectae admodum
+
+		</div>
+		<div n="1001640">
+			Quasi vero unum et idem sit medium ipsius rei et magnitudinis,
+vel substantiae et potentiae. enimvero vel ex animautibus
+facile intellegere poterant unum et idem non esse, medium enim
+magnitudinis in his est hepar; quod autem proprie medium dicitur,
+
+		</div>
+		<div n="1001650">
+			Sic etiam de caelo iudicandum erit. non est igitur consentaneum,
+ut id, quale centrum existit, pro vero medio statuatur
+nec similiter etiam perturbari debemus, si quod honorificentissimum
+
+		</div>
+		<div n="10016503">
+			1.2 causas &#8212; videntur om. codd. per homoioteleuton 30 consonum &#8212; ut] fort. emendandum
+videndum est, quid
+		</div>
+		<div n="10016505">
+			f. 34r
+		</div>
+		<div n="10016506">
+			f. 34v
+		</div>
+		<div n="1001660">
+			Numquid autem terra quiescat an moveatur, non eadem
+
+		</div>
+		<div n="1001670">
+			Sunt qui eam, cum in medio sita sit, circum verticem
+eius volvi et onoveri asserunt, quemadmodum in Timaeo
+scriptum est, terram nempe circum huius universi verticem
+semper volvi. dixit autem volvi, non mooeri, siquidem consentaneum
+
+		</div>
+		<div n="1001680">
+			Hinc autem ad eos sermones explicandos sese Aristoteles convertit,
+
+		</div>
+		<div n="10016801">
+			9 plura addidi 19 quiescimus scripsi: quiescit codd. Al 20 et hoc
+&#8212;intercipiet (23)] emendatis emendandis sic interpretatus sum; Al vertit: siquidem
+universam eius rotunditatem oslendet, si ipsa . . egrediatur, idque similiter si non ostendet rotunditatem
+eius, quatenus . . egreditur, sed omnia lumen interciperent; cf. textum 293b27
+&#8001;&#956;&#959;&#8055;&#969;&#962; 32 aliis de rebus] fort. alibi
+		</div>
+		<div n="10016803">
+			f. 34v
+		</div>
+		<div n="1001690">
+			Sed hoc, inquit, addere volunt, si terra natura sua quiescit,
+tympani figura esse oportere. deinde dicit, cum ad id, quod &lt;terra&gt;
+movetur, figura quaedam propria in ea invenitur, tum &lt;ad id, quod
+quiescit&gt; habet certam formam convenientem. quare consentaneum
+
+		</div>
+		<div n="1001700">
+			Atqui dubitare ac modis omnibus, quantum fieri potest, ea
+pervestigare, quae iis de rebus admirati sunt, id certe non erit ab
+re, quin immo ratione quadam necessarium. siquidem aliorura
+est, non philosophorum, qui formarum cognitionem diligunt, &lt;non &#917;;
+
+		</div>
+		<div n="10017003">
+			f. 35r
+		</div>
+		<div n="10017004">
+			17 deinde dicii] dicunt codd. Al: cf. Arist. p. 294 a 10 &#954;&#945;&#8054; &#947;&#8048;&#961; &#948;&#8053; 18 ad id quod
+quiescit addidi; Al vertit: siquidem (aiunt) in eo, quod movetur, secundum proprietatis ordinem
+similitudinis quippiam in eo inveniri, iuxta proportionem ad formam 24 non
+admirari (25) addidi 31 dubitare &#8212; convenit (32)] locum corr. sic emendavi: verumenimvero
+non iniuria etiam mirari quispiam potest, quod naturales philosophi non adverterint . . Al
+		</div>
+		<div n="10017006">
+			f. 35r
+		</div>
+		<div n="1001710">
+			Praeterea eadem totius et partis ratio esse debet, si itaque
+tota terra in aqua nata, consentaneum est, ut etiam eius
+partes in aqua natent; nunc cum partes ipsae in aqua non natent,
+
+		</div>
+		<div n="1001720">
+			Hoc autem illis evenit, quoniam eatenus non perscrutantur,
+quoad veritatem veramque dubitationis solutionem attingant, sed
+quoad contrarios sermones refellant, idque, inquit, nobis
+
+		</div>
+		<div n="1001730">
+			Anaximenes autem, Anaxagoras, atque Democritus
+latitudinem causam esse dicunt, cur terra man eat et
+
+		</div>
+		<div n="10017302">
+			7 suspema Al sec. Arist.: parata codd. falso sed] exspectes praeleren (cf. Arist.
+p. 294 b I) 35 aliorum sententiam] p. 293b34
+		</div>
+		<div n="10017304">
+			f. 35
+		</div>
+		<div n="1001740">
+			Sed illud primo huic rationi obici potest: si terra lata extitisset,
+latttudo causa esse, cur terra maneat, non potest, multo
+
+		</div>
+		<div n="1001750">
+			Atqui si terra plana esset, latitudinem quietis eius causam
+&lt;non&gt; esse consonum foret, ut ex iis, quae afferunt,
+aiunt enim, quod aer propter coarctationem non inveniens
+
+		</div>
+		<div n="1001760">
+			Quaestio de motu quieteque, cuius causa compulsionem extensionemque
+fieri super aerem et aquam statuerant, non de terra tantum,
+quae naturalis corporis pars quaedam existit, ponenda est, sed de
+
+		</div>
+		<div n="10017601">
+			5 manet emeudavi: nec permittit terram per ipsum transire Al 12 multis supplevi
+18 non addidi 27 magnitudinem addidi 32&#8211;37 locum difficilem non sine
+hunc in modum emendavi. Al plane perverse interpret. est: si a potentia vim
+inferente (motus enim et quies eodem modo dicuntur) efficiente videlicet, compulsionem extensionemque
+super a. e. a., id incipit, terrae ipsi convenire aimus, quae . . existit, sed motum
+et quietem omnium . . universum sustulerimus. 37 natura an vi corruptum
+		</div>
+		<div n="10017603">
+			f. 35v
+		</div>
+		<div n="1001770">
+			Si igitur non natura, sed vi terra in medio quiesceret,
+sicuti physici nonnulli asseruerunt, violentus igitur eius motus ad
+hunc locum videretur. siquidem aiunt conversionis causa ipsam
+
+		</div>
+		<div n="10017704">
+			2 Physicis] V 6 Libro] cap. 2 12 aera versus suspectum 15 aliud] exspectes
+&#7936;&#957;&#964;&#953;&#954;&#949;&#953;&#956;&#941;&#957;&#951; 17 nec motum fort, delendum
+		</div>
+		<div n="10017706">
+			f. 35v
+		</div>
+		<div n="1001780">
+			Praeterea magis proprie adversus Empedoclem illud etiam
+dici potest.
+		</div>
+		<div n="1001790">
+			Siquidem ab Empedocle quispiam quaerere posset: si terra
+ob conversionem tantum in medio nunc quiescit, antequam conversio
+igitur et mundus extitisset, cum elementa ab amicitia ad mundi
+constitutionem non essent congregata, sed mundus per discordiam
+separatus esset, quae tandem causa erat, cur terra tunc quiesceret?
+
+		</div>
+		<div n="10017906">
+			20 suspectum; fort, supplendum elementa 26 cf. Averr. p. 155C
+		</div>
+		<div n="10017908">
+			f. 36r
+		</div>
+		<div n="1001800">
+			Illuc modo regreditur, ut illorum sententiam disquirat,
+propter similitudinem, quam habet cum caelo, quod vertitur
+circa ipsam, terram in medio caeli stare affirmant &#8212; haec sententia
+in Timaeo quoque invenitur, tametsi ipsi Anaxagorae eam
+ascribat &#8212; huius etenim sententiae auctores dicunt terram,
+
+		</div>
+		<div n="1001810">
+			Verum enim vero facile quidem haec dubitatio de medio tollitur,
+si dicatur [Platonem] hunc sermonem in universum non attu-
+
+		</div>
+		<div n="10018100">
+			5. 6 hoc-minime codd.: ea in infinitum Al 13 Timaeo] exspectes Phaedone (cf.Simpl. p. 531, 34)
+13 Anaxagorae] l. Anaximandro 20 aut scripsi: et omnes 25 medio . . eo
+emendavi: terra . . ea codd. Al 30 Timaeo] cf. supra et Phaed. 109 a &#7984;&#963;&#972;&#961;&#961;&#959;&#960;&#959;&#957; &#947;&#8048;&#961;
+&#960;&#961;&#8118;&#947;&#956;&#945; &#8001;&#956;&#959;&#943;&#959;&#965; &#964;&#953;&#957;&#8056;&#962; &#7952;&#957; &#956;&#941;&#963;&#8179; &#964;&#949;&#952;&#8050;&#957; &#959;&#8016;&#967; &#7957;&#958;&#949;&#953; &#956;&#8118;&#955;&#955;&#959;&#957; &#959;&#8016;&#948;&#8050; &#7974;&#964;&#964;&#959;&#957; &#959;&#8016;&#948;&#945;&#956;&#972;&#963;&#949; &#954;&#955;&#953;&#952;&#8134;&#957;&#945;&#953; et Averr.
+p. 157 I et sq. et 310 G et sq. 34 commoratur emendavi: succenditur inflammaturve
+terra ipsa Al
+		</div>
+		<div n="10018102">
+			f. 36r
+		</div>
+		<div n="1001820">
+			Sed hoc (inquit) non est necessarium; &lt;terra&gt; enim
+solum in medio quiescere, sed in medium [etiam] ferri videtur,
+
+		</div>
+		<div n="10018202">
+			f. 36v
+		</div>
+		<div n="10018205">
+			2 inclinationis codd.: similitudinis Al 7 propter hominem qui et scripsi: veluti homo,
+ipse enim omnes 31 inclinatio aequatur Al: commutatur codd.: exspectes erit inclinationis
+aequalitas; ad seq. cf. Averr. p. 158 G et reliqua 36 quod scripsi: tametsi
+codd. Al non Al: om. codd.
+		</div>
+		<div n="10018207">
+			f. 36v
+		</div>
+		<div n="100182016">
+			17 primo&#8212;tunc Al: om. codd. 30 Aristoteles] hic commentum ipsius Themistii
+locum supra laudatum (Ar. p. 295b19) incipere videtur; quare loco verborum medium
+relinquat exspectes in medio maneat. 37 in&#8212;propria Al: fort, scribendum
+iisdem in rebus diversa
+		</div>
+		<div n="100182018">
+			f. 36v
+		</div>
+		<div n="1001830">
+			Illud etiam absurdum est, quae tandem sit causa, cur
+in medio terra stet, quaerere et non quaerere, cur in extremo
+loco ignis locetur. si enim superior locus naturae ignis
+aptus non erit, convenit, ut disquiramus, qua nam necessitate cogatur,
+
+		</div>
+		<div n="10018301">
+			f. 37v
+		</div>
+		<div n="10018306">
+			2 ante ibique fort, lacuna 7 quiescat et (10) non susp. 27 non addidi, neque
+scripsi: ac codd.: quod Al exhibet, plane commenticium est 36 non omnes, sed
+delendum
+		</div>
+		<div n="10018308">
+			f. 37r
+		</div>
+		<div n="1001840">
+			Sed [illud quoque] mirum est eos motuum eorum causas
+non quaerere, recte siquidem fecissent, si percepissent eorum
+aliud alio natura moveri, in tantum ut iutellexissent, aliud alium
+locum natura possidere, adiuncta vero causa, quae est praeter naturam.
+
+		</div>
+		<div n="1001850">
+			Atqui ut quaestioni satisfactum sit, ait adversus eos, qui fatentur
+terram in medio natura manere, sed secundas causas huic addunt:
+
+		</div>
+		<div n="10018503">
+			1 inquit] inquiunt omnes 3.4 separatio&#8212;ubi] diruptio non est causa, qua Al
+4 deinde capillo quoque non] non emim AI; ad seq. cf. Averr. p. 160 A 9
+&#8212;apparere] sane, verus esset supplevi; consentaneum igitur videretur, ut sermo verus sit, cum
+. . poneremus Al male 19 non natura Al 21 huic causae emendavi: et aliam
+(sive propriam) mundi causam omnes 39 ante quiescat fort, addend, non
+		</div>
+		<div n="10018505">
+			f. 37r
+		</div>
+		<div n="10018509">
+			f. 37v
+		</div>
+		<div n="1001860">
+			Alius autem sermo est sermo sophisticus, tametsi prima fronte
+persuasibilis videatur. ait enim: ut autem aliquid, si densius
+
+		</div>
+		<div n="10018602">
+			4 quoque scripsi: igne dicatur. Praeterea si omnes 16 non addidi 18 cf.
+Averr. p. 160E 30 cur hoc emendavi: hoc si omnes 33 est sermo scripsi. cf.
+Averr. p. 161 F, cuius lectio cum nostra plane discrepat.
+		</div>
+		<div n="10018604">
+			f. 37v
+		</div>
+		<div n="1001870">
+			Nos autem primum dicamus, moveaturne, an quiescat?
+
+		</div>
+		<div n="1001880">
+			Praeterea corpora, quae in orbem feruntur, sicuti vagantes
+stellae sunt, [duplici motu moventur.] etenim si inhaerentium stellarum
+orbis non moveretur et terra moveretur (testantur id sidera,
+quae nobis perspicua sunt), vagantes igitur praeter primum motum,
+
+		</div>
+		<div n="10018802">
+			11 etsi suspectum 27 duplici&#8212;moventur] ita Al: ora. codd, 31 ah occasu ad
+ortum] codd. Al ponunt haec verba ante sit 34 &#7936;&#960;&#959;&#954;&#945;&#964;&#940;&#963;&#964;&#945;&#963;&#953;&#957; scripsi: Apostasim
+Al, apoptasim codd. 35 accidenti] fort, leni emendatione (ABBREV pro ABBREV) hic et
+infra legendum latitudine
+		</div>
+		<div n="10018804">
+			f. 37v
+		</div>
+		<div n="1001890">
+			Praeterea motus uaturalis partium terrae et eius
+totius in medium fertur, cumque ad medium instituatur, erit
+rectus, motus vero rectus finem habet; atqui | cum fiuis motus 
+		</div>
+		<div n="10018900">
+			f. 38r
+		</div>
+		<div n="10018907">
+			1 occasus&#8212;diversi] sic emendavi duce Simpl. p. 537, 14 &#959;&#8016;&#954;&#941;&#964;&#953; &#964;&#8048; &#7936;&#960;&#955;&#945;&#957;&#8134; &#7940;&#963;&#964;&#961;&#945; &#954;&#945;&#964;&#8048;
+&#964;&#8048; &#7936;&#964;&#8048; &#963;&#951;&#956;&#949;&#8150;&#945; &#964;&#959;&#8166; &#959;&#961;&#943;&#950;&#959;&#957;&#964;&#959;&#962; &#7936;&#957;&#945;&#964;&#941;&#955;&#955;&#959;&#957;&#964;&#945; &#954;&#945;&#8054; &#948;&#973;&#957;&#959;&#957;&#964;&#945; &#966;&#945;&#957;&#942;&#963;&#949;&#964;&#945;&#953; &#7969;&#956;&#8150;&#957;: loca ad occasum et
+ortum sita necnon etiam inerrantes stellae in diversorum locorum finitore existerent
+3 hoc et sq.] ita Al; textum corruptum sauare non possum 6 et seq.] of. Averr.
+p. 162M 15 ad utrum Al: codd. corrupti 16. 17 an&#8212;locum] ita Al: om.
+codd. 30. 31 qui&#8212;afficientur] afficientur susp.; Al vertit: et quod ipsamet secundum
+se, super quam similes circuli protrahentur, afficitur: et si non . .
+		</div>
+		<div n="10018909">
+			f. 38r
+		</div>
+		<div n="1001900">
+			Si enim terrae partes undique ad medium ferantur,
+ac unicuique natura praedito unus insit naturalis motus, fieri
+igitur non poterit, ut quaevis terrae pars sine vi a medio
+
+		</div>
+		<div n="1001910">
+			Haec etiam res mathematicae confirmant, cum hac
+tantum ratione salvantur, ea quae videntur, dum figurae mutantur,
+quae secundum astrorum ordinem innovantur, si terra quiescat. per
+haec autem dicere vidt: dum figurae stellarum earumque ad invicem
+
+		</div>
+		<div n="1001920">
+			Deinceps de eius figura, quod sit rotunda, disserit. in hoc autem
+primo texitur demonstratio ex eo, quia unaquaeque eius pars
+
+		</div>
+		<div n="10019201">
+			4 cf. Averr. p. 165 C 12 cf. Averr. p. 1641 28 quae&#8212;innonantur] quibus
+astrorum ordo innovatur Al, ex coniect.
+		</div>
+		<div n="10019203">
+			f. 38r
+		</div>
+		<div n="10019205">
+			f. 38v
+		</div>
+		<div n="100192013">
+			13 cf. Averr. p. 166 M 19 cum] p. 297a17 39 sphaerae emendavi: multitudinis
+codd, Al non supplevi
+		</div>
+		<div n="100192015">
+			f. 38v
+		</div>
+		<div n="1001930">
+			Quod enim quispiam quaerere potest, [eandem] habet explicationem.
+si enim terra medium mundi locum teneat et multo
+
+		</div>
+		<div n="1001940">
+			Istam quaestionem dissolvit, cum dicit: consonum est autem, ut
+consideremus, quemadmodnm censeamus, dum dicimus omnem magnitudinem
+ad medium ferri. hoc siquidem non dicimus, quasi
+omnis magnitudinis fini conveniat, ut centro huius totius aequalis
+
+		</div>
+		<div n="10019403">
+			f. 39r
+		</div>
+		<div n="10019404">
+			5 ordinataeque] ordinatumque omnes 6 inclinant emendavi: exordiuntur codd. Al
+7 ac prohibentem Al: om. codd.; fort, mendis sublatis vertendum est: hoc autem minorem
+partem cadentem sustinet . . tangat moveatque 18 non maneat codd. Al
+in medio] exspectes sic maneret nunc etiam donec (19) emendavi: ac lapis (!) etiam extitisset
+in tantum ut Al falso 19 donec] conicio antequam 25 sed&#8212;deducitur (29)] locus
+difficilis neque integer, omne (27) scripsi: ad codd. Al. versio antiqua exhibet: hoc autem
+foret necesse, siquidem terra . . extitisset vel esset . . per etenim si maius . . quoniam ipsum
+non fuit, quoad ad illud pondus feratur, quoad fuit . . adiunctum, et quo ad medium descendit
+
+		</div>
+		<div n="10019406">
+			f. 39r
+		</div>
+		<div n="1001950">
+			Sive [ergo] orta est, hoc modo orta est; sive aeterna
+semper invenitur, eodem modo se habet, quo si orta [principio]
+orta esset. hac itaque ratione terrae figura globosa
+est et quoniam id, cuius ambitu continetur, globosum est idemque
+
+		</div>
+		<div n="1001960">
+			Nec quod supra in aere est, quod lumen recipit, semper idem
+non est. atqui ipsa luminosa est. in defectionibus autem rotundam
+
+		</div>
+		<div n="10019600">
+			22 ita Al: polestate codd. male 24 et Al, ex emend. 30 curva scripsi: terminata
+omnes 34 aut emendavi: et codd.; cf. Averr. p, 170H et Simpl. p. 546,34 et sq.
+35 non supplevi; Al vertit: sat est ut hiemali tempore sit rotunda in iis defectionibus, quae
+lunae figuris contingunt; non aliter ac ipsi lunae sectiones omnes male 37 post partes
+deest aliquid 38 Nec] conicio sed id
+		</div>
+		<div n="10019602">
+			f. 39r
+		</div>
+		<div n="1001970">
+			Praeterea ex astrorum contemplatione non solum
+
+		</div>
+		<div n="10019705">
+			f. 39v
+		</div>
+		<div n="10019708">
+			1 &#954;&#965;&#961;&#964;&#942;&#957; scripsi: Iridis AI 20 alter addidi 22 motuum corruptum: fort, sphaerarum
+27 mare emendavi: unus terminus omnes 30 elephantorum scripsi: meridionale codd.:
+septentrionale Al
+		</div>
+		<div n="100197010">
+			f. 39v
+		</div>
+		<div n="1001980">
+			Finis
+Libri Secundi de Caelo et Mundo.
+		</div>
+		<div n="1001981">
+			3 molus] exspectes quies
+		</div>
+		<div n="10021">
+			DE CAELO &#917;&#932; MUNDO 
+		</div>
+		<div n="100210">
+			f. 40r
+		</div>
+		<div n="100230">
+			Cum huius libri, qui de Caelo et mundo inscribitur, tractationem
+Aristoteles incepisset, statim declaravit ideo sermonem de
+caelo in hanc ingredi speculationem, quoniam de eo pertractare
+intendebat, cuius ordinis naturalis contemplatio existit. cumque
+praecedentibus duobus libris tractationem de Caelo absolvisset ac
+
+		</div>
+		<div n="100240">
+			Quoniam de primo quidem caelo, nempe praestantiore, et eius partibus,
+
+		</div>
+		<div n="1002405">
+			f. 40r
+		</div>
+		<div n="100250">
+			Cum autem in eo, quod proximo hunc praecedit, libro de
+
+		</div>
+		<div n="1002502">
+			f. 40v
+		</div>
+		<div n="100260">
+			Philosophi quidem anteriores, qui de veritate disseruerunt, inter se
+
+		</div>
+		<div n="1002602">
+			1 affectiones . . opera Al: affectio . . opus codd. 4 sunt Al: non sunt codd. male
+11 omnes Al: om. codd. 15 Physicis] II 1 31 substantia duorum corporum
+emendavi: per se enim non nisi in duobus corporibus Al.
+		</div>
+		<div n="1002604">
+			f. 40v
+		</div>
+		<div n="100270">
+			Philosophi itaque, qui antea (?) de veritate disseruerunt,
+et huic nostrae, quam hoc tempore afferimus, sententiae
+
+		</div>
+		<div n="1002707">
+			3 antea Al male: codd. corrupti; cf. p. 146, 34 9 et interitum Al: om. codd.
+22 illae&#8212;attulerunt (23) emendavi: cum res ipsae incorporeae corpora sublimiora sint: quippe
+incorporeae, quoniam ortum non admittunt, perinde quasi earum corpus supra res sensatns
+constituitur Al male 30 non supplevi 32 illa causa scripsi: causae omnes
+33 incorporeis] corporibus codd. Al
+		</div>
+		<div n="1002709">
+			f. 40v
+		</div>
+		<div n="100280">
+			Illi igitur, inquit, res omnes esse ingenitas existimabant. alii
+vero nonnulli in alia, quae huic contraria est, fuerunt
+
+		</div>
+		<div n="1002803">
+			f. 41r
+		</div>
+		<div n="100290">
+			Deinde dicit: sunt et alii nonnulli, per quos Platonem intellegit,
+ob ea quae in Timaeo retulit.
+		</div>
+		<div n="1002100">
+			Modo autem intendit contra hos sermones disputare; aliorum
+enirii impugnatio &lt;aliis in locis&gt; apparebit. facile autem est videre,
+quae contraria probatis mathematicorum artibus iis dicere et disputare
+
+		</div>
+		<div n="10021002">
+			8 inquit correxi: inquiunt codd. Al 11 omnia Al: secundum se codd. 19 quod
+&#8212;videtur (20)] ita Al secundum textum Arist. lectio codd. mendosa 23 a&#8212;deviarint
+(24) incerta 26 Timaeo] cap. 20 33 nihil scripsi; quippiam codd. Al
+		</div>
+		<div n="10021004">
+			f. 41r
+		</div>
+		<div n="1002110">
+			Perspicuum est autem, inquit, ad eum sermonem, in
+
+		</div>
+		<div n="1002120">
+			Cum autem, inquit, mathematica ex detractione, naturalia vero
+ex additione dicantur, [multa] igitur inveniuntur, quae iis,
+quae ex detractione dicuntur, &lt;non conveniunt,&gt; iis vero, quae ex
+additione, omnino conveniunt. punctum enim (exempli gratia) individuum
+est; ei igitur nullo modo quippiam inesse potest, quod
+
+		</div>
+		<div n="10021200">
+			1 de insectilibus lineis] cf. Simpl. p. 566, 25 15 divisione: auscultatione Al. male
+26 e converso scripsi: sed contrario modo codd. AI; omnia] exspectes negationem
+29 inquit] p. 299a6 32 Naturali Auscult.] VI 1 36 multa Al secundum textum
+Aristot, 37 non conveniunt scripsi: om. Al codd.
+		</div>
+		<div n="10021202">
+			f. 41r
+		</div>
+		<div n="1002130">
+			| Praeterea in iis est, quae fieri non possunt, ut, cum duae 
+		</div>
+		<div n="10021300">
+			f. 41v
+		</div>
+		<div n="1002140">
+			Atque in punctis nullam gravitatem inesse perspicuum
+
+		</div>
+		<div n="10021401">
+			16 naturalia] &#964;&#959;&#953;&#959;&#8059;&#964;&#959;&#953;&#962; p. 299a24: naturulem considerationem Al 19 scite&#8212;diceremus
+(20) om. codd.: cf. Averr. p. 178H, qui Alexandrum laudat, et Simp], p. 573, 12
+22 totum Al: om. codd. 27 gravitatem om. codd. 33 post inesset excidisse videtur: lineae
+etiam, ex quibus illae superficies constant, graves quoque extitissent, sique iis gravitas inesset
+		</div>
+		<div n="10021403">
+			f. 41v
+		</div>
+		<div n="100214012">
+			3 gravius scripsi: gravitas codd. 6 quod&#8212;fugiendum supplevi 14 et seq.] cf.
+Simpl. 570,7 &#959;&#8016;&#948;&#8050; &#964;&#8056; &#945;&#7985;&#961;&#949;&#964;&#8061;&#964;&#949;&#961;&#945; &#954;&#945;&#8054; &#7936;&#960;&#955;&#8182;&#962; &#945;&#7985;&#961;&#949;&#964;&#972;&#957;&#903; &#954;&#945;&#8054; &#947;&#8048;&#961; &#945;&#7985;&#961;&#949;&#964;&#974;&#964;&#949;&#961;&#959;&#957; &#957;&#972;&#963;&#959;&#962; &#954;&#945;&#954;&#943;&#945;&#962; . .
+18. 19 gravius&#8212;esse emendavi: grave quoddam est, necessario gravius codd. Al male 24 cf.
+Averr. paraphrasin p. 315 F 35 illi, ei assentirent emendavi: illis, eis assentiret codd. Al.
+		</div>
+		<div n="100214014">
+			f. 41v
+		</div>
+		<div n="1002150">
+			Si itaque, quod grave est, idem est gravius, tunc ad id sane
+
+		</div>
+		<div n="10021501">
+			f. 42r
+		</div>
+		<div n="1002160">
+			Verum neque etiam comparatio, quam retulit, recto ordine fuit
+disposita; ea enim, in quae cadit comparatio et proportio, convenit,
+ut sub eodem ordine comprehendantur, quemadmodum victor et
+victus sub eodem genere continentur. quod vero absolute dicitur,
+fieri potest ut comparatione ad aliud dicatur, et quod comparatione
+
+		</div>
+		<div n="10021603">
+			19 quatenus et sq.] ita Al: codd. corrupti 28.29 et quae&#8212;recta scripsi: relinquitur
+ut absolute recta sit codd. Al 30 in dignitatibus] fort, &#7952;&#957; &#964;&#959;&#8150;&#962; &#954;&#945;&#952;&#8127; &#8017;&#960;&#949;&#961;&#959;&#967;&#8052;&#957;.
+mendis scatent; loco eligibilis semper effectus legitur
+		</div>
+		<div n="10021605">
+			f. 42r
+		</div>
+		<div n="100216013">
+			f. 42v
+		</div>
+		<div n="100216015">
+			1 Plato] Gorg. 473 D 2 praeterea] nescio ubi? 10 Categoriis] p. 5b19 41 secundario
+perpetuum Al, sed suspectum: codd. corrupti; conicio quod absolute perpetuum est, aliter se habeat?
+		</div>
+		<div n="100216017">
+			f. 42r
+		</div>
+		<div n="1002170">
+			Sed consentaneum erit, ut hinc ad proximum sermonem progrediamur,
+
+		</div>
+		<div n="1002180">
+			Conclusio autem horum sermonum vera existit, punctum nempe
+nee gravitatem habere nee partes, ea autem propositio, ex qua
+
+		</div>
+		<div n="10021800">
+			1 regiones suspectum: fort, sphaerae 3&#8212;6 cum&#8212;dicetur] cum de eo quod maius
+non magis finitum quam infinitum dicatur, nec erit hoc modo infinitum multitudo, et erit mensuratum.
+praeterea de eo quod maius est, non magis finitum quam infinitum dicetur Al
+10 gravius scripsi: grave codd. Al 13 haec autem] Al addit propositio recta]
+exspectes: &#948;&#953;&#945;&#953;&#961;&#949;&#964;&#972;&#957;. 31 et leve fort, delendum, nam codd. legunt: habet, debet
+34 partium] dimensionum Al
+		</div>
+		<div n="10021802">
+			f. 42v
+		</div>
+		<div n="1002190">
+			Illud deinceps perspicuum fiet nec id omnino verum esse, quod
+
+		</div>
+		<div n="1002200">
+			Sed hoc perspicuum est, nempe id, quod gravi aliquo gravius
+est, omnino quidem gravitate mains et gravius esse et si id, quod
+gravius est, tale quidem sit, quia quatuor habet puncta, cum id,
+quod est minus grave, tribus punctis praeditum sit, perspicuum est
+et manifestum, ipsum grave esse, quia gravi gravius absolute grave
+
+		</div>
+		<div n="10022001">
+			f. 43r
+		</div>
+		<div n="10022003">
+			2 si&#8212;est] grave durum esse aut molle Al 4 densior] mollior Al 21 contingant
+scripsi: contingat codd. Al 23 quatenus&#8212;gravis (24) Al ex emendatione: codd.
+corrupti 29.30 grave est scripsi: gravius non est codd.: non est (omisso grave),
+sed gravius quidem est Al 33 non&#8212;est (34) scripsi, levi emendatione: non quod
+absolute dignum est, sed cum erit aliquid, quod digno dignius est Al male 34. 35 quod,
+igitur et constitutum est supplevi: (fuit) de quatuor punctis penes id, quod gravius est eo,
+quod tribus punctis praeditum est; etenim in eo maior gravitas inest 
+		</div>
+		<div n="10022005">
+			f. 43r
+		</div>
+		<div n="1002210">
+			Praeterea non convenit, nisi ut, quemadmodum linea cum linea
+componitur, et secundum longitudinem et secundum latitudinem, ita
+superficies etiam cum superficie componatur. linea autem componitur
+duobus modis . . . si [ad latitudinem] superficies componantur, erit
+
+		</div>
+		<div n="10022103">
+			1.2 et ideo&#8212;auferatur emendavi: gravitate igitur id grave maius erit, quod tribus [l.
+. . est, quare gravitas Al 11 refellere student] sic conieci duce Al: codd. corrupti
+15.16 punctis scripsi: superficiebus codd. Al (ut supra) 22.23 et secundum&#8212;latitudinem
+scripsi: et longitudo et superficies codd. Al 24 lacunae signum post modis posui;
+ad latitudinem Al: om. codd. componatur codd. Al. 30 &#960;&#965;&#961;&#945;&#956;&#943;&#962; excidit
+36 cum linea Al: om. codd.
+		</div>
+		<div n="10022105">
+			f. 43r
+		</div>
+		<div n="1002220">
+			Praeterea, inquit, ex eorum sententia unum corpus altero gravius
+est, vel quoniam substantia eius ex maiore superficierum multitudine
+constat, quemadmodum &lt;Platonem&gt; in Timaeo dixisse existimat
+et hoc quemadmodum de igne asserebat ipsum talem esse, quoniam
+
+		</div>
+		<div n="1002230">
+			Omnino quidem, inquit, iuxta horum sententiam accidit
+
+		</div>
+		<div n="10022303">
+			f. 43v
+		</div>
+		<div n="10022304">
+			4 coniunguntur scripsi: coniungitur codd. Al 18 multitudine supplevi
+26 non add. Al: om. codd.: res incerta 29 non addidi: corpora &#8212; superficies
+scripsi: codd. Al exhibent: (cum vero ipsemet praemisissel posuissetque) extremitates in puncta
+corpora (sic) dissoloere . . . et hae in puncta dissolvuntur. 36 et sq. cf. Averr. p.
+183 L et sq. et p. 316 EF 37 duabus iure om. Averr.
+		</div>
+		<div n="10022306">
+			f. 43v
+		</div>
+		<div n="1002240">
+			Sed contra hoc Plato obicit, quod in Timaeo scripsif, quasi
+Protagoras (?) dixisset Socrati: sit tua conclusio iuxta mei sermonis
+intellectum esset, vere quidem &lt;concluderet&gt;; cum autem agendi vis
+
+		</div>
+		<div n="10022405">
+			2 Anaxagorae corruptum: &#8037;&#963;&#960;&#949;&#961; &#964;&#8182;&#957; &#928;&#965;&#952;&#945;&#947;&#959;&#961;&#949;&#943;&#969;&#957; &#964;&#953;&#957;&#941;&#962; Arist. p. 300a16 3 pronuntiabant
+codd. (cf. adnotationem praecedentem) 7&#8212;11 hic quoque locus in
+scriptis Plat, non invenitur. Protagoras scripsi: Anaxagoram Al Averr.: codd. incerti;
+conclusio . . concluderet ita Averr., quern Al sequitur: codd. corrupti. fort., ut vult vir cl. Ed.
+Zeller, Theaetetus 166 A&#8212;C intellegitur. Al vertit: Quod autem in Thimaeo circa hunc
+sermonem inquit Plato, id profecto est. sed Anaxagoras dixit Socrati: si tua conclusio iuxta
+mei sermonis intellectum mihi adversaretur, vere quidem concluderel: cum autem mei sermonis
+sensum non percipias, eam mihi adversari non puto. 15 et sq.] cf. Simpl. p. 5758
+et sq. 17 iniectionemque Al: et superpositionem Averr. (recte) 183 &#924; et sq.; cf. supra
+p. 156,34 26 quam emendavi: quae religuas naturas nempe caliditatem . . . Al
+29 dico -ut scripsi duce Averr.: donec codd. Al.
+		</div>
+		<div n="10022407">
+			f. 43v
+		</div>
+		<div n="1002250">
+			His autem sermonibus explicatis, qui ideo dicuntur, quoniam
+multum interest dicere, corpora ex extremitatibus constare, cum in
+eis assumpsisset corpora gravitatem et levitatem habere, id illis inesse
+
+		</div>
+		<div n="10022505">
+			1 praecedit et ea codd. Al 6 inter extremitates Averr. Al: inter lineas codd.
+12. 13 qui&#8212;dicere suspecta: conicio qui refutarunt 23 moventur supplevi
+25 superius] I 2 et 295a2 Physicis] IV 8 27 ac Al: om. codd.; fort, supplendum:
+et si naturaliter non movetur 29 codd. Al addunt non ante habet
+quocum et sqq.] Al vertit: verum si ei cetera ilia comparentur, vel leviora vel confusu ac
+sine ordine depehenduntur, vel eo quia parvo tempore sint . . fieri non potest, ut aliquo dictorum
+modorum motus hic contra naturam existat 34 quamvis&#8212;est (36) om. Al
+		</div>
+		<div n="10022507">
+			f. 43v
+		</div>
+		<div n="1002251">
+			f. 44r
+		</div>
+		<div n="1002260">
+			Quod etiam ex quiete perspici licet, etenim omne, quod quiescit,
+vel vi vel natura [quiescit]; natura ibi quiescit, quo suapte natura
+fertur [vel eo in loco, ad quem inclinationem habet], vi autem ibi
+
+		</div>
+		<div n="10022607">
+			9 vel&#8212;habet habet Al: om. codd. 25 Empedocles emendavi: quemadmodum diximus, seuetur
+maximam caeli conversionem Al 34 campi supplevi secundum Averr. p. 186H;
+codd. habent signum lacunae: quod enim homo longitudine esse non potest Al
+		</div>
+		<div n="10022609">
+			f. 44r
+		</div>
+		<div n="1002270">
+			Quare, inquit, nec Leucippus neque Democritus confessionem
+subterfugere possunt, quin motus quidam natura inveniatur,
+siquidem insectilia, quae prima corpora ab eis dicuntur, vi in
+inanitate infinita adinvicem moveri dicunt. Omnino enim
+
+		</div>
+		<div n="10022706">
+			f. 44v
+		</div>
+		<div n="10022707">
+			6 confessionem] pelitionem Al 10 cietur] fort, movet 13 ait] 30 A
+18 movet] cf. supra 31 ardine ordine&#8212;prius (32) Al: om. codd. 34
+emendavi: (illi etiam) videbant Al COdd. 37 vero addidi
+		</div>
+		<div n="10022709">
+			f. 44v
+		</div>
+		<div n="1002280">
+			Idem praeterea alia ratione explicavit, quatenus de eo ad
+certum quendam terminum uberius disseruit, reliquum vevo sermonis
+
+		</div>
+		<div n="1002290">
+			Eorum autem sententiam, qui ante mundum in inanitate ac
+
+		</div>
+		<div n="10022903">
+			3 et sq.] Averr. p. 189 D&#8212;F iisdem fere verbis utitur 19 iidem et sq.] quia
+impossibile est, ut transferantur ab eo, secundum quod sunt Averr. 26 Leucippus]
+Democritus secundum Simpl. 588, 10 (cf. supra)
+		</div>
+		<div n="10022905">
+			f. 44v
+		</div>
+		<div n="1002300">
+			Alexander vero postremum hunc sermonem hoc quidem
+modo minime explicavit, sed diminutum esse ilium affirmavit; dicere
+
+		</div>
+		<div n="1002310">
+			Praeterea illud inordinate nihil est aliud nisi contra
+uaturam, siquidem proprius atque cognatus ordo eorum,
+quae sub sensum cadunt, natura est. ad unum enim contrarium
+aliud sequitur, quando per se, non autem ex accidente | f. 45r
+
+		</div>
+		<div n="10023101">
+			1 eodem&#8212;ratione] ita Al: ad eundem locum codd. 3 Alexander] cf. Averr. p. 189 &#924;
+et sq. 9. 12 non om. Averr. lo nos Al: non codd. 21 profecto&#8212;alas om.
+codd. 36 eorum&#8212;status emendavi: nonnulla igitur ordine praeter naturam in
+onocederent Al 39 sanus Al: verus codd. male
+		</div>
+		<div n="10023103">
+			f. 45r
+		</div>
+		<div n="1002320">
+			Quare Anaxagoras bene fecit, qui praedicta absurda declinavit.
+non enim ponit mundum ex iis coustare, quae antea inordinate
+movebantur, sed ex iis, quae non moventur. quare etiam
+alii, cum mundum quodammodo ab initio colligunt (quemadmodum
+Empedocles), ad hunc modum ponunt, ex iis videlicet, quae quiescunt.
+
+		</div>
+		<div n="1002330">
+			Atque in universum haec verba et quae paulo ante retulit
+hunc sensum habent. &lt;nos vero dicimus:&gt; quod contra naturam
+et quod natura est, non posuere tamquam esse et non esse,
+sed ambo esse ponuntur, quatenus motu aliquo sunt, quod enim
+
+		</div>
+		<div n="10023303">
+			2. 3 amplius&#8212;tempore] ita codd. (recte): praeter naturam est, ac in maiore parte et diutius
+Al e coniectura 3 inordinatum scripsi: ordinatum codd. Al 12 nihil&#8212;
+naturam (14) om. Al 19 non ponunt codd. Al 22 nos&#8212;dicimus addidi
+27 movere] moveri Al (hic et infra) 34 sed addidi 35. 36 desinentiam . . .
+intermissionemve] codd. hic ef infra unam tantum vocem habent
+		</div>
+		<div n="10023305">
+			f. 45r
+		</div>
+		<div n="100233012">
+			f. 45v
+		</div>
+		<div n="100233014">
+			7 sed&#8212;quandam] sed eius dispositio est quam Al 13 non, item (15. 16) quod&#8212;est,
+item (19) et motum addidi 26 loco&#8212;ponere locus incertus; fort, quod contra nat. est,
+quodammodo ponere tamquam 28 hic] videlicet Anaxagoras: hoc Al 30 ille]
+scil. Empedocles: id Al certe Al 30.31 dicit et minime supplevi: quoniam ex iis, quae
+segregata erant, constabat. at dicere non potest, . . fuisse Al 35 generatum esse]
+extitisse Al 36 vincente] fort, victa (locus difficilis) 37 tentant] Arist. p. 301a13
+		</div>
+		<div n="100233016">
+			f. 45v
+		</div>
+		<div n="1002340">
+			Potest autem his sermonibus aliquis occurrere: praeter id, quod
+non recte dispositi inveniuntur, Platonis sententiam, mundum
+et ordinem ex inordinatis rebus constare, non satis intellexit; id
+namque ex eius verbis elici non potest, sed id, quod nos modo
+narrabimus: videlicet non ex ordine et mundo ordo &lt;et mundus&gt;
+
+		</div>
+		<div n="10023406">
+			2. 3 qui vero&#8212;efficitur (167,3) Averr. p. 192 L iisdem fere verbis 9 et mundus supplev
+secundum Averr. 31 et sq.] verba ipsa reperire non possum, de locis similis
+argumenti, quales sunt Theaet. 176A, Phaedr. 247 A et Rep. 381 A, Eduardi Zelle
+litteris edoctus sum. 37 non Al Averr.: om. codd.
+		</div>
+		<div n="10023408">
+			f. 45v
+		</div>
+		<div n="1002350">
+			Cum autem his argumentis demonstrationem in hoc absolvisset,
+
+		</div>
+		<div n="10023507">
+			f. 46r
+		</div>
+		<div n="10023508">
+			1.2 ordine aliquo et prior om. codd. 2.3 et&#8212;efficitur] fort, cum Averr. legendum: et
+universaliter omnis ordinalio est prior inordinatione, ita ut &#964;&#8048; &#954;&#945;&#952;&#8127; &#7957;&#954;&#945;&#963;&#964;&#945; et &#7937;&#960;&#955;&#8182;&#962; &#948;&#8050;
+se opponantur. 21 non om. codd. fort, scribendum: ut eodem modo, quo id, quod grave
+est, moveretur, id quoque, quod grave non est, deorsum inclinaret 22 CD et sq.] litteras,
+prorsus depravatas, omnes mutavi 23 spatium CE addidi 27 eius pars
+supplevi 36 minus&#8212;quod addidi
+		</div>
+		<div n="100235010">
+			f. 46r
+		</div>
+		<div n="1002360">
+			Cum autem in hoc sermone explicuisset tieri non posse, ut
+aliquid cieatur, quatenus non inclinat, hoc ex eo declaravit, quod
+iis in rebus deprehenditur, quae natura moventur. cum vero non
+modo motus natura inveniantur, sed etiam vi, idem de hoc etiam
+motu explicat: nempe si, quod sine pondere est, vi moveretur, ex
+
+		</div>
+		<div n="10023605">
+			12 cum vero et inveniantur emendavi: inquit . . inveniuntur codd. Al 15 ut infinitum&#8212;habet
+(18) om. codd. (fort, iure) 25 CD&#8212;et (26) supplevi: Al male supplevit
+ipsius corporis &#914; se habet ad aliquam sui partem 35 eodem&#8212;secabit supplevi;
+contra codd. Al legunt post ac intersecare: siquidem eodem tempore corpus A, quod
+caret pondere, idem C spatium secabit.
+		</div>
+		<div n="10023607">
+			f. 46r
+		</div>
+		<div n="1002370">
+			Quod autem praedictae omnes opiniones et sententiae omnino
+verisimiles et necessariae sint, id sane facile credi potest, quoniam
+
+		</div>
+		<div n="10023701">
+			f. 46v
+		</div>
+		<div n="10023702">
+			1.2 spatium&#8212;tempore scripsi: tempus codd. Al 3 non addidi 6 cum et
+conficiat sctipsi leni mutatione: Al arbitrario scripsit: cum autem his in &#914; parte uaus est,
+eodem (inquit) tempore maius spatium conficiet 8 &#913; addidi 15 pondus] exspectes
+inclinationem 21&#8212;32 Alexander] cf. Simpl. p. 594,16 sq. 23 vel] sed codd.
+Al (errore pervulgato) 27 non&#8212;est emendavi, duce Simpl.: tamen actu corpus non
+est codd. Al 28 corpus&#8212;est emendavi: non procul a corpore distat Al
+		</div>
+		<div n="10023704">
+			f. 46v
+		</div>
+		<div n="100237012">
+			2 in eo . . inveniri emendavi: ab eo . . impediri codd. Al 3 intellege emendavi:
+novit codd. Al 3.4 omne&#8212;habet scripsi: quoniam autem eius, qoud movetur, principium
+motus est natura, sed Al secundum Arist.; codd. corrupti 29 quemadmodum
+&#8212;augealur (30)] ac vi etiam non comitante, id ulterius exercuerit ac Al
+		</div>
+		<div n="100237014">
+			f. 46v
+		</div>
+		<div n="1002380">
+			Ex iis autem, quae dicta sunt, intellegi potest nec omnium
+corporum ortum esse nec nullius omnino. fieri enim
+
+		</div>
+		<div n="10023806">
+			f. 47r
+		</div>
+		<div n="10023808">
+			1 terminatus Al, sed corruptum (&#963;&#965;&#957;&#949;&#960;&#959;&#965;&#961;&#943;&#950;&#949;&#953; b29): cf. Simplic. p. 597, 1 11 superious]
+p. 147 21 et fort, delendum 27 non concvenit codd Al 28 cum
+scripti: vel quod Al 31 impossibile et ex hoc enim supplevi
+		</div>
+		<div n="100238010">
+			f. 47r
+		</div>
+		<div n="1002390">
+			Cum autem omnium corporum ortus non sit, restat, ut, quorum
+corporum ortus sit, et cur sit, dicamus. quoniam igitur
+
+		</div>
+		<div n="10023905">
+			2 Alexnder] cf. Simpl. 598, 26 sqq. 3 corpus quoddant] &#7936;&#963;&#974;&#956;&#945;&#964;&#959;&#962; Simpl.
+10 hoc est et sq. locus vix sanus 21 post quadam est lacuna hiave videtur
+24 hoc&#8212;adhuc (25) Al secundum Atist.: codd. corrupti 25 si&#8212;extiterit (28)] cf.
+Simpl. 601, 6&#8212;9 31 prima] &#960;&#961;&#8182;&#964;&#945; &#948;&#8050; &#964;&#8182;&#957; &#7952;&#957;&#965;&#960;&#945;&#961;&#967;&#972;&#957;&#964;&#969;&#957; 302a12
+		</div>
+		<div n="10023907">
+			f. 47r
+		</div>
+		<div n="1002400">
+			Quodsi hoc naturae ordine elementum se habeat, omniuo
+
+		</div>
+		<div n="10024006">
+			f. 47v
+		</div>
+		<div n="10024008">
+			3 primas scripsi: primorum codd. Al 9 trabe] fort, pro trabe semper lignum &#958;&#973;&#955;&#959;&#957;)
+ponendum 25 alterum . . existit emendavi: alter ex altero oritur codd. Al
+28 et ignis hi] si conferas illis et sq. fort, emendandum et terra et 32 unum et hac (33)
+scripsi: haec et his codd. Al 37 non suspectum: conicio sed 38 itaque&#8212;
+congregatione (174,2) om. Al
+		</div>
+		<div n="100240010">
+			f. 47r
+		</div>
+		<div n="1002410">
+			Cum autem ex his rebus perspicuum evadat elementa et prima
+inveniri ac ipsa initia et elementa qualia sint, et cetenis tantum res
+
+		</div>
+		<div n="1002420">
+			At simplicia inveniri hoc sermone ostenditur. omnis motus
+eius, quod movetur, motus est; motus autem rei concretae concretus,
+simplicis vero simplex existit. sique motus simplex inveniatur,
+simplex mobile itidem inveuitur: igitur elementa etiam inveniuntur.
+
+		</div>
+		<div n="10024201">
+			8. 9 ossibus] fort, scribendum ossa 9 plane (&#8004;&#957;&#964;&#969;&#962;): ortum hie significavit Al
+10 elemends suspectum 27 indistinctae ementlavi: inordinatae codd. Al (Arist. &#7936;&#959;&#961;&#8049;&#964;&#969;&#957;)
+28 quae&#8212;sunt scripsi: quae elementa appellantur, qualia sunt Al
+		</div>
+		<div n="10024203">
+			f. 47v
+		</div>
+		<div n="1002430">
+			Quoniam vero retulit elementa in corporibus inveniri, statim
+deinceps ex eorum actione videndum erit, utrura finita sint,
+
+		</div>
+		<div n="10024304">
+			f. 48r
+		</div>
+		<div n="1002440">
+			Atqui eius refutatio corpora cousimilium partium non esse elementa,
+quoniam non omne, quod sui simile est, elementum existit,
+vera non est. Anaxagoras namque non ait omne, quod sui simile
+est, esse elementum, neque etiam eius, quod sui simile est, atque
+
+		</div>
+		<div n="10024401">
+			7 verum emendavi: unum codd. AI 10 Primo] cap. 2 14 ex&#8212;actione suspectum
+33 remanent] cf. supra p. 173
+		</div>
+		<div n="10024403">
+			f. 48r
+		</div>
+		<div n="1002450">
+			Cumque dixisset se primo velle eorum sententiam refellere,
+qui innumerabilia elementa posuere, praesenti quidem sermone
+banc sententiam non refellit, sed nou omne, (luod sui simile est,
+esse elementum explivavit. quamobrem revertitur ad ostendendum,
+
+		</div>
+		<div n="10024507">
+			15 quamvis et sq.] cf. Averr. p. 202 K 19 conicio non est 25 si&#8212;modo (26)
+corruptum videtur: conicio vultus ex non vultu fit 31 post etenim addunt codd. Al
+ex linea subsequente eiusmodi operatic longe praestantior erit
+		</div>
+		<div n="10024509">
+			f. 48r
+		</div>
+		<div n="1002460">
+			Numqiiid autem elementa specie siut defiuita, ex argumento
+perspicuum evadet, quod deinceps inducit, ita inquieus: si corpora
+
+		</div>
+		<div n="10024605">
+			f. 48v
+		</div>
+		<div n="1002470">
+			Cum autem Anaxagorae sententiam reprobasset et contra
+
+		</div>
+		<div n="10024702">
+			6 corpus] cf. Averr. 203 G 7 de Sensu] Simpl. p. 608,1 citat Phys. VII 2. 244a28
+10 de Sensu] cap. 6. 445b23 (Averr. l. c. laudat de Anima) 19 per&#8212;ubi (20) om.
+codd. 20 de Ortu] Averr. scribit in Primo Phys. (cap. 4) ut Simpl. 608, 12
+37 aqua corruptum: 1. inane 39 divisibile . . in quae] continuum . . quae Al
+segregantur ac dein Al
+		</div>
+		<div n="10024704">
+			f. 48v
+		</div>
+		<div n="1002480">
+			Deinde elicit: ambo quodammodo omnia, quae sunt,
+numeros faciunt et ex uumeris. et in hoc aliqua ex parte
+
+		</div>
+		<div n="1002490">
+			Et cum hoc etiam dicunt eorum omnium individuorum figuras
+infinitas esse, siquidem in hoc ditferunt inter se. nou enim
+
+		</div>
+		<div n="10024903">
+			3 sed concursu et (4) Al: sed non codd. corrupti 10 non addidi 27 post
+infinita supplendum: haec el ipsa sunt infinita 28 neque et sq.] cf. Averr. 204 I
+34 immergitur] &#948;&#953;&#945;&#948;&#973;&#949;&#963;&#952;&#945;&#953; Simpl. 610, 20
+		</div>
+		<div n="10024905">
+			f. 48r
+		</div>
+		<div n="1002500">
+			Primum quidem in eodem etiam isti atque Anaxagorae sectatores
+
+		</div>
+		<div n="10025005">
+			f. 49r
+		</div>
+		<div n="1002510">
+			Simul autem et ea, quibus pugnant ipsi secum, dicant necesse
+est. siquidem aiunt terram, aquam, aera et ignem alia ex
+aliis oriri, dum individua magna a parvis segregantur, distinguuntur
+
+		</div>
+		<div n="10025101">
+			4 Anaxagorae sectatores (5)] Pythagoraei Al 16 ante] Arist. 299a5
+33 Natura] VI 1 37 cf. Averr. 205 M
+		</div>
+		<div n="10025103">
+			f. 49r
+		</div>
+		<div n="1002511">
+			23 individua&#8212;oriri] locus vix integer 25 (ratione,) quod scripsi: non quod
+non ex eo quod Al 26 adiungendum&#8212;inquirimus emendavi: adiunxit atque
+Al 31 iuxta et sqq.] cf. Averr. 206 &#913; et eius Paraphr. 321 C
+		</div>
+		<div n="1002520">
+			Praeterea neque secundum eorum sententiam, qui Leucippi et 
+		</div>
+		<div n="10025200">
+			f. 49r
+		</div>
+		<div n="10025204">
+			f. 49v
+		</div>
+		<div n="1002530">
+			Aristoteles autem deinceps ex simplicium corporum motu
+rationem inducit, qua quidem perspicuum fit ea infinita non esse.
+
+		</div>
+		<div n="10025300">
+			3 infinita scripsi: finita codd. Al 6 supra] 303 a 3 &#7936;&#955;&#955;&#8048; &#956;&#8052;&#957; . . 7 eius
+scripsi: horum codd. Al 11 hac scripsi: horum duorum codd. Al 22 verum
+et sqq.] sublatis mendis locum difficilem ita interpretandum esse censeo. Al exhibet:
+verum ad id figura ascendit, quatenus ei, quod finitum est, illius ascensus addunt.
+cum vero antea de primis figuris mentionem non fecissel, sed retulit hanc . . . partem praesenti
+sermone id prosecutum esse invenimus, siquidem ait 27 sit . . principium scripsi:
+sint . . principia codd. Al 29 perspicuum &#8212; opponatur (34)] cf. Averr. 206 L et eiusdem
+		</div>
+		<div n="10025302">
+			f. 49v
+		</div>
+		<div n="1002540">
+			[Quoniam autem finita sint oportet, restat, ut videamus] utrum
+unum an plura existaut? cum enim nonnulli elementum, ex (pio
+
+		</div>
+		<div n="10025404">
+			8 igitur &#8212; constabunt (10) om. codd. 12 circa medium scripsi: media inter haecl
+codd. Al cum de . . itaque cum scripsi: cum autem de . . ac codd. Al 16 quibus
+&#8212; sunt infinita emendavi: ac forma eorum provenit, quaeque elementa non sunt, infinita non
+sunt Al codd. 18 Quoniam &#8212; videamus om. codd. 25 ignem faciunt vel .
+Al: codd. corrupti. cf. p. 188,1 27 se ipsi fallunt Al arbitrario: codd. corrupti
+		</div>
+		<div n="10025406">
+			f. 49v
+		</div>
+		<div n="100254010">
+			f. 50r
+		</div>
+		<div n="1002550">
+			Praeterea ex hoc uno tali modo, hoc est raritate et densitate,
+reliqua generari aliud non est quara tenuitate et crassitudine;
+nam quod rarum est, id tenue, et quod densum [crassum est].
+rursus autem tenuitate et crassitudine idem est, quod
+
+		</div>
+		<div n="10025502">
+			4 sed &#8212; existere scripsi levi mutatione: siquidem ea, quae raritatis ordine fiunt, tenuiora
+existunt Al male 6 cf. Averr. 207 M 208 A et eiusdem paraphr. p. 322 A, qui
+dictum Themistii laudat, quod nusquam reperimus 9 depravatio &#8212; constaret (12)]
+loc. difficilem sic verti: quare in eiusmodi sermonibus duplicata fuit vera conversio, siquidem
+hoc eos ponere, est, id quod rarum et densum intercedit, nec primum nee elementum
+esse affirmare, ut convertalur et infringatur sermonibus eorum, quod ex his duohus constet
+Al 17 clamosae &#8212; tempore addidit Al, cui ego non assentior
+19 contexit ac] ita Al procul dabio falso: codd. corrupti; coll. p. 187,40 vertendum est:
+ratio autem sermonis, quern modo attulimus, perspicua est. 23 crassum est Supplevi
+29 relativis scripsi: duobus additamentis codd.: quae, tametsi additamenta sini, speciem innovant
+Al ficticie
+		</div>
+		<div n="10025504">
+			f. 50v
+		</div>
+		<div n="100255013">
+			4 ad&#8212;terram] conicio velut ignis et terra (fort, lacuna hiat) 5 post paranete
+codd. Al graece 37 terrain scripsi: ignem codd. Al 40 minime . . nec scripsi:
+pulchritudine (185, 1) corruptum; locum difficilem Al vertit: (36) nec quatenus eo tenuius tota
+		</div>
+		<div n="100255015">
+			f. 50r
+		</div>
+		<div n="1002560">
+			Deinde dicit: qui ignem prius et antiquius ponunt, tametsi
+hoc quidem incommodum vitant, alia tamen absurda suscipere coguntur.
+
+		</div>
+		<div n="10025602">
+			f. 50v
+		</div>
+		<div n="10025605">
+			mensura exuherantia quadam existit, igne tenuius eril: cum . . possit, ut in ignis . . tenuitatem
+transeat: posset namque, si ei . . . inesset: at ignis et aer est, remanetque in . . .
+existit 2 talemque emendavi: nec is est Al 4 haec&#8212;infringat (5)
+fort, scribendum: si haec vero dubitatio . . sat sit, ut in horum suffragium convertalur, nec
+hoc sermones eorum infringet. ad rem cf. supra p. 183 6 elementum scripsi: dubitatio
+(media)codd. Al 19 eo&#8212;ideoque (21) om. codd. 24 ignis&#8212;videtur
+primum existit, videlicet ignis Al 28 ostentationis suspectum: iocandi more Averr. p.
+intellegitur &#954;&#959;&#956;&#968;&#959;&#964;&#941;&#961;&#969;&#962; 304 a 13 23 primo emendavi (cf. Averr. p. 210 EF et eiusdem
+paraphr. p. 322 HI): superioribus Libris Al 30 inquit] Arist. p. 269 a 2, sed mutilatum
+32 convenit &#8212; existat (33) Al (sed vix probandum): om. codd.: fort, inter est et id lacuna
+statuenda
+		</div>
+		<div n="10025607">
+			f. 50v
+		</div>
+		<div n="1002570">
+			li enim, qui ignem primum corpus corpus partim (quemadmodum
+praefatus est) ei figuram adhibent, partim banc quidem
+non adhibent, sed plane et absolute eum ceterorum omnium corporum
+
+		</div>
+		<div n="1002571">
+			9 eum&#8212;partibus (10)] ita AI, fort, ex coniectura falsa: codd. corrupti 21
+Al: quantitas codd. 23 siquidem&#8212;ac (24) om. codd. 28 et sqq.]
+Averr. p. 211 LM! 31 eis scripsi: eo codd. Al 32 hoc in pauciora]
+corrupta; conicio haec actu (cf. infra) 37 divisibile (Ar. 304 b 2) scripsi: rectum
+codd. Al
+		</div>
+		<div n="1002580">
+			Atque dicit, quae eos sequantur, qui ignem describunt, 
+		</div>
+		<div n="10025800">
+			f. 50v
+		</div>
+		<div n="10025805">
+			f. 51r
+		</div>
+		<div n="1002590">
+			At iis, qui magnitudine illud determinant &#8212; tenuitatis
+autem loco maguitudinem sumit &#8212; omnino continget, ut aliud elementum
+sit, quod eiusmodi elemento antiquius existat;
+atque eo aliud prius, et sic in infinitum; semper enim minus eo,
+quod assumptum est, assumere possumus, idque ob divisionem in
+
+		</div>
+		<div n="1002600">
+			Deinde dicit: praeterea iis etiam idem accidit atque illis,
+
+		</div>
+		<div n="10026002">
+			7 non est ignis codd. Al 15 elementis (hic et infra) Al: elemento codd.
+23 non ante est addidi 36 elementa einendavi: inane codd.
+		</div>
+		<div n="10026004">
+			f. 51r
+		</div>
+		<div n="1002610">
+			Quoniam autem, inquit, nee innumerabilia sunt elementa
+nec unum tantum, relinquitur, ut [pluar ac] finita sint.
+at cum dicendum ei relinqueretur, quot ipsa numero sint, ait: sed
+primum videndum est, utrum aeterua sint vel innovata;
+
+		</div>
+		<div n="10026103">
+			1 aquam scripsi: nec codd. Al 7 si] etiam si codd. Al 18. 19 motus quidam
+simplex et (19) eo motu] plur. numerum praetulerim 21 quoniam] praecedit lemma
+mutilatum 22 plura ac Al secundum textum: om. codd. 31 etenim scripsi:
+non enim codd. Al 34 tempus&#8212;ut (35) om. codd. 35 non erit Al:
+existit codd.
+		</div>
+		<div n="1002620">
+			Elementa vero si ad certum quendam terminum devenerint,
+non insistere nec cessare in id, quod dissolvi ac corrumpi nequit,
+
+		</div>
+		<div n="10026204">
+			f. 51v
+		</div>
+		<div n="10026208">
+			7 id&#8212;elementa (10) supplevi 12 communem] cf. Simpl. p. 628
+constet] fort, emendandum: ex qua constent 14 alia generata supplevi
+15 cf. Simpl. p. 628, 12 18 et 22.23 nunquam (corrumpuntur) einendavi: alio
+lempore (incorruptibilia sunt) codd. Al 18 si emeadavi: non itaque codd. Al
+25 fort, aute ex eo supplendum: itnque quod minus est hoc pati magis est rationabile
+27 cum extinguitur] fort, delendum 28 extinguitur] lege interit
+		</div>
+		<div n="100262010">
+			f. 51v
+		</div>
+		<div n="1002630">
+			Cum itaque coporum elementa ortum habeant, autex
+corpore aut ex incorporeo eorum erit origo; si ex corpore,
+aut ex alio corpore extra, hoc est aliud ab iis, aut ex eo, quod
+aliud ab ipsis non est. cumque banc divisionem posuisset, a prima
+
+		</div>
+		<div n="1002640">
+			Ac eorum quidem sententiae, qui ilia ex corporibus generari
+volunt, continget dicere inane existere; cum autem explicatum sit id
+fieri non posse (quemadmodum alibi docuit) fit, ut eiusmodi sermo
+
+		</div>
+		<div n="10026405">
+			14 alibi] Phys. IV 8 16 cf. Averr. p. 216M 19 possibile scripsi: impediens
+codd. Al 26 cf. Averr. p. 217 BC 27 cum&#8212;subiecerit
+et quasi transpositio in verbis Averr.: et magna verborum contrarietas Al 31 nec&#8212;
+corpora] mutilata senteutia 33 cf. Averr. ib. D 37 non addidi
+		</div>
+		<div n="10026407">
+			f. 51v
+		</div>
+		<div n="1002650">
+			Quare primum divisionis membrum hoc ordiue indagavit; secundum
+
+		</div>
+		<div n="1002660">
+			Si elementa ex alio (?) corpore orirentur, necessario efficeretur,
+ut aliud corpus sit elementis prius. hoc autem
+si gravitate aut levitate sit praeditum, omnino quidera
+elementum quoddam erit, non autem elementis antiquius, nec ex
+
+		</div>
+		<div n="10026603">
+			52r
+		</div>
+		<div n="1002670">
+			[Rursus] ergo videndum est, num ortus ceterorum omnium
+corporum ab elementis sit, quemadmodum Empedocli placet &#8212; congregatione
+videlicet corpora ex his oriri, quateuus ipsa actu in
+illis inveniuntur, corrumpi vero, secundum quod ab invicem segregantur
+&#8212; an ut ii, qui ex extremitatibus corpora conflant &#8212; siquidem
+
+		</div>
+		<div n="10026700">
+			2 cum emendavi: vel quod codd. Al 16 fort, ante si lacuna hiat (Ar. p. 305 a 28/9); cf.
+infra 21 haec supplevi 22 ac&#8212;elementum (23) Al secund. text.: et ubi
+elementorum necessario existat codd. corrupti 26 &#7952;&#957; &#964;&#972;&#960;&#8179; et &#960;&#959;&#965; scripsi (cf. Arist.
+p. 304a19): (sermoni) locum Al 31 cum&#8212;dubitetur incerta.
+		</div>
+		<div n="10026702">
+			f. 52r
+		</div>
+		<div n="1002680">
+			Praeterea, inquit, corporum, quae inter se permixta
+sunt, fieri non potest, alterum cum secretum separatumque
+fuerit, ut maiorem locum obtineat, maiorem (inquam)
+quam is locus sit. quern aute possidebat, dum cum altero permixtum
+
+		</div>
+		<div n="10026801">
+			2 non&#8212;eo corrupta 6 de Ortu] II cap. 7. 8
+(10) Al secundum textum: fieri posse ut inveniatur codd. 10 quando&#8212;
+atque (12)] Al exhibet: quemadmodum apparet, dum ex aere oritur, in eoque sensatio per se
+quidem inest male 13 eo emendavi: iis (illis) codd. Al 15 ex&#8212;generantur]
+fort, emendandum quae ab eo (videlicet sensu) segregata sunt 23 evitare scripsi:
+codd. corrupti: Al exhibet: hoc quidem modo confiteri illis non poterit, quin absurda sint ea,
+quae 28 infusa] &#954;&#949;&#967;&#965;&#956;&#941;&#957;&#959;&#957; Simpl. p. 632, 33
+		</div>
+		<div n="10026803">
+			f. 52r
+		</div>
+		<div n="10026807">
+			f, 52v
+		</div>
+		<div n="1002690">
+			Ipse autem deinceps aliquid deducit, quod ad illorum senaliud
+
+		</div>
+		<div n="10026900">
+			4 . . alio . . alius (5) scripsi: unus . . aqua . . aliorum codd. Al 27 ne-
+&#8212;dividat (29)] fort, mendis sublatis vertendum: eius tantum esse, qui eiusmodi solutionem
+conirariam perhibet, rursus causam acquirit, cur proprius sermo non tollatur (?)
+29 alteri A]: om. codd. 32 irrationale est supplevi; cf. Averr. p. 220 H
+		</div>
+		<div n="10026902">
+			f. 52v
+		</div>
+		<div n="1002700">
+			Cum itaque elementa segregatione separationeque alia in
+
+		</div>
+		<div n="1002710">
+			Quodsi figurae mutatione elementa alia ex aliis minime oriantur,
+
+		</div>
+		<div n="10027102">
+			5 terminata om. codd. 35 relinquitur&#8212;fieri (36) supplevi 36 etenim&#8212;
+emendavi et transposui: in codd. Al haec verba post non sunt (38) leguntur.
+		</div>
+		<div n="10027104">
+			f. 52v
+		</div>
+		<div n="10027107">
+			f. 53r
+		</div>
+		<div n="100271014">
+			19 post intereunt atldit Al: interitui opportuna et 23 generis Al: corporis codd.
+&#8001;&#956;&#959;&#947;&#949;&#957;&#949;&#8150;&#962; &#964;&#959;&#8150;; &#8016;&#960;&#959;&#954;&#949;&#953;&#956;&#941;&#957;&#959;&#953;&#962; Arist. 306 a 11)
+		</div>
+		<div n="100271016">
+			f. 35r
+		</div>
+		<div n="1002720">
+			Sed iis et aliud quippiam contiugit, nempe ut fateantur tevrara
+tantum elementum esse, vel maxime inter elenieuta, earn que
+solam incorruptibilem, siquidem incorruptibile est, quod
+indissolubile est, terra autem (iuxta eorum scntentiam) dissolvi
+
+		</div>
+		<div n="1002730">
+			Praeterea necesse est eos, qui corpora ex extremitatibus
+conflant, ponere corpus ex non corpore oriri; at ex non corpore
+minime oritur, cum explicatum sit banc positionem necessario consequi,
+ut vacuum existat, quod a corpore posterius innovato occupatur,
+
+		</div>
+		<div n="10027301">
+			20 duo supplevi 22 separatim&#8212;contemnit (23) corrupta: conicio separates . .
+ut verba . . contemnat
+		</div>
+		<div n="10027303">
+			f. 53v
+		</div>
+		<div n="1002740">
+			In universum autem irrationabile est figuram ad
+corpus simplex adhibere, nec quisquam hoc proponet. primum
+quidem, quia sic accidet universum [non repleri]; deinde
+quia simplicia corpora [loco], qui continet, describi videntur,
+
+		</div>
+		<div n="1002750">
+			Per hoc autem, quod dixit: universum non compleri, id
+
+		</div>
+		<div n="10027501">
+			6 superficiebus scripsi: ambobus codd. Al 9 dividentur codd. Al 11 verba
+it individua&#8212; sint (12) in codd. Al ante itaque leguntur et insuper ante individua
+(??)mnio itaque convenit 14 tametsi] conicio praeterea 1,5 prius quam forma
+scripsi: propter formam codd. Al 23 non repleri om. codd. 32 in vase
+Al: om. codd. forman] conicio essentiam
+		</div>
+		<div n="10027503">
+			f. 53v
+		</div>
+		<div n="1002760">
+			Ita etiam de solidis intellegendum erit, cum per se positus,
+
+		</div>
+		<div n="10027601">
+			f. 54r
+		</div>
+		<div n="10027603">
+			1 vel&#8212;tres (4) om. codd. hi vel scripsi: hic Al 2 (angulus) erit et
+(loco vel) A1 Al 3 quae] vel Al 4 tres] sex Al 6 sex scripsi: tres
+codd. Al 8 quatuor scripsi: duobus codd. Al 9 at emendavi: vel
+codd. Al. 11 ei tertia recti et ex tribus quartis (12) addidi 23 ac
+reliquo numero Al: prioris numeri (ut supra) codd., qua cum lectione numerus septimo
+discrepat
+		</div>
+		<div n="10027605">
+			f. 54r
+		</div>
+		<div n="1002770">
+			35 Hoc vero sermone existimatur refellere quod innuit (Plato), sed id
+
+		</div>
+		<div n="10027700">
+			10 axis emendavi: pyramis codd.; Al. vertit: quasi super extremitate, quam ex latere
+pyramidis sumpsit 11 cubos addidi 22 sex&#8212;angulis (23) scripsi: codd.
+habent: alios duodecim hoc quidem modo imaginemur, inquantum implent totum locum; et hoc
+super lateribus trium angulorum . . erit ex illis unus angulus 25 duodecim pyramides
+addidi 29 quod&#8212;exstruitur emendavi: de quo existimatur codd. Al. 32 ceteris
+scripsi: tertia codd; loco verborum &#8212;ceteris exhibet Al: ex eo namque quod triplici
+extremitate implet, erit in corpore solido, quatenus vero duabus, locum implebunt; ex eo autem
+quod tribus, tertium 35.200,1 Plato, non, reiecit scripsi; Al vertit locum corruptum:
+		</div>
+		<div n="10027702">
+			f. 54r
+		</div>
+		<div n="1002780">
+			Sententiam igitur confutavit esse in elementis figuras, atque contrariam
+protulit, siquidem ait: videtur hoc nobis natura ipsa significare,
+elementa secundum propriam eorum essentiam figuram non
+habere, hoc autem natura significatur, quandoquidem posuit ea
+quasi materiam comparata ad animantia et plantas, quae ex illis generatur.
+
+		</div>
+		<div n="10027801">
+			f. 54v
+		</div>
+		<div n="1002781">
+			(innuit), dixit autem, et quodvis, quatenus nempe in suo sermone innovat, se intellexisse ab
+initio sicuti . . . 5 praecedentibus] p. 158,29 10 figura emendavi: dimensiones
+. . erunt Al ex falsa coniectura ac penes et sqq.] locus difficilis
+20 evadet] conicio non invadit 25 non confutavit (ut sint) et figurae, quae contrario
+modo proveniant codd. Al falso
+		</div>
+		<div n="1002790">
+			Praeterea qui potest iuxta horum sententiam, qui formas 
+		</div>
+		<div n="10027900">
+			f. 54v
+		</div>
+		<div n="1002800">
+			Quin etiam quantum ad passiones, potentias [et motus] attinet,
+non cousonae sunt elementis reliquae figurae; quorum tamen cum
+rationem haberent, proprias eorum figuras distribuerunt. per motus
+autem locales motus intellegimus, per passiones vero frigiditatera,
+
+		</div>
+		<div n="10028001">
+			1 formas om. Al 2 elementis scripsi: formis codd. Al (cf. infra 1. 20) 5 dictum est
+supplevi 9 elementa scripsi: corpora codd. Al 10 ex formis emendavi: inter formas
+codd. Al 14 non addidi 20 linearum&#8212;elementis emendavi: lineis seu formis
+A1 (cf. supra 1. 2)
+		</div>
+		<div n="10028003">
+			f. 54v
+		</div>
+		<div n="1002810">
+			Maximam vero calefaciendi et incendendi vim habent,
+quia &lt;angulis&gt; incendunt (quemadmodum dicunt) et calefaciunt
+
+		</div>
+		<div n="10028103">
+			f. 55r
+		</div>
+		<div n="10028105">
+			11 Timaeo] 5GB 19 angulis addidi 23 angulorum Al: linearum codd.
+acutissimi sunt emeudavi: desumuntar codd. Al male 28 utrique Al secundum
+textum: de ulraque codd. 32 motus&#8212;plaustri] cf. Arist. 851 b 18 &#8037;&#963;&#960;&#949;&#961; &#8001; &#964;&#961;&#959;&#967;&#8056;&#962;
+&#964;&#8134;&#962; &#7936;&#956;&#940;&#958;&#951;&#962; &#954;&#965;&#955;&#943;&#949;&#964;&#945;&#953; 35 terra scripsi: ignis codd. Al 38 et 203,4 alieno emendavi:
+proximo codd. Al
+		</div>
+		<div n="10028107">
+			f. 55r
+		</div>
+		<div n="1002820">
+			Praeterea si iguis angulis suis comburit, nee non reliquae
+omnes figurae, viginti basis praeditae ac cubus et quae octo sedes
+
+		</div>
+		<div n="1002830">
+			Deinde elicit, quod nee lignum, quod coraburitur, nec pannus
+vel aliquod simile in ignem vertatur; si enim figura ignis vel
+spbaera est vel pyramis, necessario fiet, ut id etiam, quod comburitur,
+barum duarum figurarum alteram recipiat. ac si dixeris
+
+		</div>
+		<div n="1002840">
+			In universum autem non percipiet quis, quoniam ignis contrahere
+magis videtur quam secernere, idque hebetis atque incuriosi
+bominis est. aiunt enim: ex eo, quod ignis separat ac dividit,
+ideo baec figura necessario ei convenit; quasi id tantum sit
+
+		</div>
+		<div n="10028401">
+			36 post quis lacuna hiat.
+		</div>
+		<div n="10028403">
+			f. 55
+		</div>
+		<div n="1002850">
+			Praeterea calidum frigido contrariatur. si igitur calidi forma
+aliqua figura proveniat ac ex eiusmodi figura caliditas in igne inveniatur:
+ex hoc igitur consonum erit, ut frigidi forma contraria
+figura procedat ac perficiatur; contrariorum namque et causae et
+
+		</div>
+		<div n="10028503">
+			f. 55v
+		</div>
+		<div n="1002860">
+			Nonnulli autem, inquit, cum de frigidi vi conati
+sunt dicere &#8212; per hoc autem innuit, quod in Timaeo dictum
+
+		</div>
+		<div n="10028601">
+			5 et segregat quod alienum emendavi: (separat) ilia ac id in eis relinquit, quod proximum.
+codd. Al 8 format corruptum 13 &#928;&#959;&#965; adhiberent cod. Al
+13 unam tantum emendavi: unamquamque codd. Al 21 frigido scripsi: igni codd. Al
+27 calido] frigido codd. Al 33 Nonnulli et dicere (34) Al: codd. corrupti
+34 Timaeo] 62 a et sqq.
+		</div>
+		<div n="10028603">
+			f. 55v
+		</div>
+		<div n="1002870">
+			Elementa igitur non distingui figuris ex his, quae
+dicta sunt, perspicuum est. sique figura non distiuguantur,
+
+		</div>
+		<div n="10028703">
+			2 igitur&#8212;parvitatem (4) altera interpretatio ipsorum verborura qua autem ratione (204, 35)
+&#8212; retulerunt (205,1) esse videtur 19 similis scripsi: genita codd. Al 37 motus]
+fort, emendandum &#964;&#8048;&#962; &#7952;&#957;&#949;&#961;&#947;&#949;&#943;&#945;&#962;
+		</div>
+		<div n="10028705">
+			f. 55v
+		</div>
+		<div n="1002880">
+			Finis
+		</div>
+		<div n="1002890">
+			Libri Tertii de Caelo et Mundo.
+		</div>
+		<div n="1002891">
+			2 uniens] universalis Al
+		</div>
+		<div n="10031">
+			DE CAELO ET MUNDO 
+		</div>
+		<div n="100310">
+			f. 56r
+		</div>
+		<div n="100330">
+			Quidniam Aristotelis propositum ac id, quod sibi iu hoc opere
+instituit, iiaturalis speculatio fuit, statim in Primi Libri initio de-
+claravit, suum propositum esse, natuvalem speculationem explicave;
+speculationis vero initium ab ea parte sumit, quae naturalium
+omnium verissima ac praestantissima existit, et haec nobilissimi
+
+		</div>
+		<div n="1003304">
+			17 nec elementa&#8212;finita Al: elementa infinita non codd.
+		</div>
+		<div n="1003306">
+			f. 56r
+		</div>
+		<div n="100340">
+			Dicitur quid em horum duorum uuumquodque, hoe est
+grave et leve, duobus modis; uno nempe absolute et per | se, 
+		</div>
+		<div n="1003400">
+			f. 56v
+		</div>
+		<div n="1003403">
+			1 operibus] conicio affectionibus 9 (jravitax et levitas scripsi: grave et leve codd.
+Al 14 rhetorica fort, delendura 19 fomentnm emendavi: pondus codd. Al
+29 nobile] fort, quod gravitate praeditum est
+		</div>
+		<div n="1003405">
+			f. 56v
+		</div>
+		<div n="10034013">
+			7 sed terminarunt quod grave emendavi: nee terminarunt quod absolute grave codd. Al
+8 terra&#8212;ignem (9) om. codd. 12 ante ex corporibus fort, lacuna 2 linearum
+20 levius scripsi; sed fort, legendum gravius: grave codd. Al. Al arbitrario addidit post
+quod (19); tardiori motu cieiur, comparatioue ad id, quod (cf. Simpl. p. 678, 25)
+35 Timaeo] of. 63A
+		</div>
+		<div n="10034015">
+			f. 56v
+		</div>
+		<div n="100350">
+			Quoniam autem, ait, in caelo ultimus finis et medius
+invenitur, perspicuum est igitur superum et inferum
+quoque in eo inveniri. post haec parati sumus, ut opem a vulgi
+
+		</div>
+		<div n="1003502">
+			f. 57r
+		</div>
+		<div n="100360">
+			&lt;Dicit&gt; cum sursum &lt;natura&gt; movetur, levis est;
+fieri potest, ut aliquo modo sursum feratur, sed vi talis motus erit;
+
+		</div>
+		<div n="1003601">
+			18 post extitit codd. Al ex linea antecedente iterant: ac hemisphaerium, quod circum eos
+est. fort, supplendum &#954;&#945;&#8054; &#954;&#973;&#954;&#955;&#8179; &#964;&#959;&#953;&#959;&#8166;&#964;&#959;&#957;: sed cf. adnotationem seq. 19 post inferum
+codd. Al tamqiram alteram interpretationem, parum diversam, inserunt verba: tametsi huic
+quispiam occurrere (?) potuisset, inquiens, ea de causa vulgus superiorem et inferiorem locum (I.
+minim e) posuisse, quoniam existimarunt id, quod est, esse quidem hemisphaerium, quod suhter
+terram existit: sique agnovissent caelum undique simile esse, dixissent hoc superiorem,
+illud inferiorem locum esse. 20 socundum] non autem secundum codd. Al
+33 natura supplevi
+		</div>
+		<div n="1003603">
+			f. 57r
+		</div>
+		<div n="100370">
+			Cum itaque leve et grave coraparatione ad aliud ita definivisset,
+
+		</div>
+		<div n="1003707">
+			1 et&#8212;adiunctione corrupta: fort, (facile erit;) quid adiungitur (si dicamus et
+14.15 partium&#8212;existit] sic emendavit Al locum corruptum; fort, legendum secundum
+ex pluribus partibus, levius autem, quod ex. paucioribus constat 37 tamen&#8212; effugit (39)]
+ita seripsi; Al exhibet: non proplerea id sermone eorum signijicatur, qui leve . . definiverunt
+39 multitudo scripsi: eonstitutio codd. Al
+		</div>
+		<div n="1003709">
+			f. 57r
+		</div>
+		<div n="100380">
+			Hos autem sermoues retulit ad eius impugnatiouem, quod in
+Timaeo scriptum est, uempe ignem levissimum esse, quoniam ex
+paucissimis partibus coustet. at ipse non reete Platonis sententiam
+intellexisse videtur. non enim ullo modo Plato fatetur leve vel grave
+
+		</div>
+		<div n="1003804">
+			f. 57v
+		</div>
+		<div n="1003808">
+			16 ait] Tim. 63 B 17 et] vel codd. Al 27 diciturque&#8212;dicatur (30)
+conicio dkitque . . duorum elementoruin . . sed inspparahileiii ab eis 35 spd gravia codd.
+AI 41 hominem] mundum Al
+		</div>
+		<div n="10038010">
+			f. 57v
+		</div>
+		<div n="100381">
+			15 qui scripsi: ct dicit codcl: dixit Al 25 levitatis scripsi: horum codd. Al
+sed et Jormae causa (26) emendavi. Al vertit lineas 25. 26 hoc modo: sed primaria ratione
+eausa huius non est, quippe triangulorum parvitas horum causa ullo modo ad omnem formam
+existit, quemadmodum haec quantitus in his triangulis causa est; sed levitas forma eius
+existit. 31 ratio supplevi: Al habet i. in. hic nonnulla desunt 36 etenim]
+fort, delendura et emendandum ut . . fateatur
+		</div>
+		<div n="100390">
+			Ut autem ad id, unde nostra haec oratio digressa fiievat, revertamur, 
+		</div>
+		<div n="1003900">
+			f. 57v
+		</div>
+		<div n="1003906">
+			f. 58r
+		</div>
+		<div n="1003909">
+			7 errori&#8212;obnoxios] minus peccanles Al male 9.10 de his duobus Ah duabus
+codd. 14 gravioribus&#8212;partibus (15) Al (fort, ex falsa couiectura): om.
+conicio (14) partibus eisdem uequalibusque conslituatur? &lt;deinde (of. adnotat. ad 1. 9. 10) non
+intellegunt, cur&gt; (1. 16) quod ex pluribus primis partibus constat, gravius existat? 32 non
+supplevi 36 fierique&#8212;existere (37) om. codd., et iure quidem
+		</div>
+		<div n="10039011">
+			f. 58r
+		</div>
+		<div n="10039019">
+			2 fort, ante quatenus lacuna liiat 18 ignem emendavi: capillum codd. Al 22 solidum
+scripsi: trabem codd. Al (locus corruptus) 29 maius codd.: inanitas maior Al
+30 pleno, quod scripsi: aqua, quae codd. Al 35 ac&#8212;haec (36)] &#964;&#8134;&#962; &#964;&#959;&#953;&#945;&#973;&#964;&#951;&#962;
+(Arist. 809 a 14)?
+		</div>
+		<div n="10039021">
+			f. 58r
+		</div>
+		<div n="1003100">
+			Post haec in hac oratione afifert consentaneum non esse id,
+quod [hoc quidem pacto quidam deduxere]; nonnulli enim
+eorum, qui inane non esse posuere (quemadmodum Anaxagoras
+et Empedocles) leve et grave minime terminarunt.
+nonnulli vero terminarunt quidem termino quodam,
+
+		</div>
+		<div n="10031002">
+			f. 58v
+		</div>
+		<div n="1003110">
+			Praeterea etiam ex disputatione, qua ad istos respondit, ad
+sententiae illorum inpugnationem regreditur, qui levitatis ignis
+causam in magna vi inanitatis, quam habeat, ponunt, et hi sunt,
+
+		</div>
+		<div n="10031101">
+			1 vel&#8212;solidum corrupta videntur; couicio maior existat, quod ei vontrariuin est, nempc
+solidum 4 adaequatam emeiidavi: huius rectitudinis codd. Al 10 completoque
+Al: conicio (maior sit) et absolute quidem 12 intellegimus emendavi: intellegitur Al:
+intellegit codd. 13 neque&#8212; percipitur] et status permanentiave in sensu tactus
+16 hoc&#8212;deduxere] sic explevit Al lacunatn codd. 36 illo emendavi: illis codd. Al
+		</div>
+		<div n="10031103">
+			f. 58v
+		</div>
+		<div n="100311012">
+			3 in levi] fort. corr.: conicio plurimam.
+		</div>
+		<div n="100311014">
+			f. 58v
+		</div>
+		<div n="1003120">
+			Ex hoc autem ad alium modum se transfert, quo id refellat.
+hic vero est eiusmodi.
+		</div>
+		<div n="1003130">
+			Sin autem dicamus leve et grave, unumquodque eornm,
+terminari secundum proportionem, quam inane ad plenum in uno
+eodemqne corpore habet, quemadmodum si quispiam dixerit, leve
+id est, in quo inanitatis duplum quam pleuitndinis inest, grave
+autem, quod contra se habet: neque etiam hoc modo dubitationem
+
+		</div>
+		<div n="10031301">
+			f. 59r
+		</div>
+		<div n="1003140">
+			Hoc etiam absurdum est dicere corpora, inauitate eis implexa,
+
+		</div>
+		<div n="10031402">
+			6 sit emendavi: leves (sive levia) non sint codcl. Al 38 ut quasi&#8212;feratir
+om codd.: fort, haec quoque verba temere addita sunt ab Al, cum mea quidem
+opinione verba perinde (39) &#8212; faciat (40) nihil nisi alteram interpretationem contineant
+verborum consentaneum est (37), quae per neglegentiam librarii in textum irrepsit.
+		</div>
+		<div n="10031404">
+			f. 59r
+		</div>
+		<div n="1003150">
+			Ad hunc autem locum Aristoteles sermonem suum reposuit, ut
+ad eos responderet, qui multitudine et parvitate extremitatum corporumque insectilium leve et grave terrainarunt. respondendo autem
+
+		</div>
+		<div n="10031502">
+			37 posuere scripsi: erunt codd, Al exhibet verum quaedam eorum extremitates erunt,
+quaedam vera
+		</div>
+		<div n="10031504">
+			f. 59r
+		</div>
+		<div n="10031507">
+			f. 59v
+		</div>
+		<div n="1003160">
+			Multitudine autem et parvitate, hoc est partium crassitie
+et tenuitate vel mollitie et duritie, leve et grave termiuare
+
+		</div>
+		<div n="10031602">
+			3 ex&#8212;graviore suspecta 12 unum suhicLtum emeiidavi: unus locus codd. Al
+15 vel si disserant AI 16 non supplevi 20 quae&#8212;non (21) om.
+21 quemadmodum&#8212;conflant (22) addidit Al: om. codd.
+		</div>
+		<div n="10031604">
+			f. 59v
+		</div>
+		<div n="1003170">
+			Cum autem hoc iu loco aliorum senteutias de levitate et
+gravitate retulisset et qua ratione impugnari possent, iuxta propriam
+
+		</div>
+		<div n="1003180">
+			Nos autem, ait, primum id explicemus ac distinguamus,
+de quo reliqui quaerunt ac dubitant, cur alia corpora uatura
+in sublime, alia deorsum, quaedam et in sublime et deorsum
+ferantur, quod utrumque declarabit; deinceps de gravi
+
+		</div>
+		<div n="10031801">
+			5 at emendavi: tunc codd. Al 6 signura lacunae posui; una fere linea excidisse
+Videtur 10. 11 gravitatis eius, manent et moveantur scripsi: levitatis, imtnet et moveatur
+codd. Al 20 ob rjualitatem plurimam] conicio quantitatis plurimae
+22 minoris scripsi: multarum codd. Al
+		</div>
+		<div n="10031803">
+			f. 59v
+		</div>
+		<div n="10031806">
+			f. 60r
+		</div>
+		<div n="100318012">
+			10 formam Al (ex emendatione): speciem codd. 20 post mutantur codd. Al iterant:
+cum autem in id mutentur, quod maxime distat, cjuodque finitimum existit 24 movet et
+mutat scripsi: movetur et mutatur codd. Al 25 quidvis&#8212;movet] in quidvis ex
+re mutatur Al 27 id, quod auget et (28) movet ac mutat scripsi: auctum et movetur ac
+mutatur codd. Al 30 auget, calefacit] augetur, incnlesvit Al
+		</div>
+		<div n="100318014">
+			f. 60r
+		</div>
+		<div n="1003190">
+			At quonam modo conveniunt eiusmodi sermones huic rei, de
+qua uos pertractaraus? dicemus: quaudo movebuntur corpora, quae
+natura supra infracpie ad eoruni perfectionem moveutur, non convenit,
+ut quicquani hac in re inquiramus, hoc est in motu eorum
+ad haec duo loca, nisi inclinationem eius, quod potestate est, ad
+
+		</div>
+		<div n="10031906">
+			14 post non (id codd. Al legunt caliditatem 15 eodem &#8212; quo emendavi: enim
+transmutari . . finem, eo iure se habent, quo id quod augelur; quod enim . . Al
+18 etenim supplevi: et quod transmutatur Al 28 febricitat et alitur fort, transponenda
+sunt 36 signum&#8212;quod (37) emendavi: ac illi, quod in ea invenitur;
+eiusmodi Al
+		</div>
+		<div n="10031908">
+			f. 60r
+		</div>
+		<div n="100319010">
+			f. 60v
+		</div>
+		<div n="1003200">
+			Perspicuum est, inquit, id, quod est potevAia ens, ita ut
+in locum revertatur, in locum reverti, et si in hoc quantum
+et in boc quale, ad hoc ferri, iu quantum perfectionem acquiret;
+hoc autem totum eo feretur, quo actus potentiae invenitur.
+		</div>
+		<div n="1003201">
+			19 hunc . . pi-aesiandorem emendavi: haec (illa Al) esse praestantiora codd. Al
+21 hunc&#8212;et scripsi: motuum omnium partes esse alia ratione ac in codd.
+29 quoniam&#8212;sunt addidi 30 ad&#8212;est (32) ex liueis 34 et 35
+32 nos&#8212;dicimus scripsi: et dicit codd.
+		</div>
+		<div n="1003210">
+			Eadem autem causa est, quamobrem corpora ad propriam 
+		</div>
+		<div n="10032100">
+			f. 60v
+		</div>
+		<div n="1003220">
+			Incliuatio igitur ac versus propriam perfectionem praeparatio,
+motus in propria loca causa existit; unumquodque enim ad simile
+
+		</div>
+		<div n="10032203">
+			1.2 et moveantur] exordiantur Al 2.3 non&#8212;est] ita Al: codd.
+8 non addidi 12 ait emendavi: utpote codd. Al nee et perveniunt siipplevi:
+(utpote) ex iis, quae sunt Al 15 Octavo] cap. 4 16. 17 quemadmodum&#8212;atqui
+ita codd.: turn quod impedimenlum detraxit, tum Al 17 prima . . dispositio] ad primam
+. . dispositionem omnes testes 25 et 31 movetur] exorditur A1 (ut supra)
+29 id&#8212;tradiderunt] ita Al secundum Aristot.: veteres iudicasse codd.
+		</div>
+		<div n="10032205">
+			f. 60v
+		</div>
+		<div n="10032207">
+			f. 61r
+		</div>
+		<div n="100322011">
+			e
+		</div>
+		<div n="1003230">
+			Convenit igitur ut intellegatur, ferri aliquid in suum locum,
+ad simile esse ferri. dicetido autem ad simile quodammodo ad totum
+dicit; atqui ambientis extremum forma totius existit; id igitur est etiam
+
+		</div>
+		<div n="10032301">
+			3 necesse est om. codd. 7 partes emendavi: reliqua Al codd. 27 fort, post
+fiat lacuna hiat (locus non integer).
+		</div>
+		<div n="10032303">
+			f. 61r
+		</div>
+		<div n="1003240">
+			Si auteni convictus, vim verborum eius meditatus fueris, ea
+sane demonstrare ac perfectam intellegentiam praestare invenies,
+
+		</div>
+		<div n="1003250">
+			Causam autem, quam ad naturalis corporis motum affert, sufficientem
+esse nemo fatebitur; licet enim ad proprium eorum locum,
+quasi ad propriam perfectionem moveantur &#8212; consentaneum est enim
+boc fateri &#8212; tamen quaerere convenit, quomodo eorum transitus ad
+
+		</div>
+		<div n="10032501">
+			f. 61v
+		</div>
+		<div n="10032502">
+			2 in aliud suspectum: conicio cuiusque (cf. Arist. 31 la 13) 6 secundum se et minime
+om. codd. 9 non addidi 15 ut om. Al 16 scilicet&#8212;qui] quando
+novebitur, ut Al 20 idque&#8212;perficiunt (22) corrupta: fort, emeudanda sunt idque
+cum ad propria loca pervenerint 28 mutarentur] mularetur codd. Al
+29 nec et sq. fort, delenda.
+		</div>
+		<div n="10032504">
+			f. 61v
+		</div>
+		<div n="100325013">
+			1 vel&#8212;levitas corrupta: ad gmvitatem et levitatem codd. 7 etenim&#8212;oportet (7)]
+enim convenit, ut cum . . inspexerimus, sufficiat nobis quod retulit ut causa Al 39 incrementa
+quaedam] menses A1 (sic) et ante circumspectae codd. Al
+		</div>
+		<div n="100325015">
+			f. 61v
+		</div>
+		<div n="1003260">
+			Cum igitur hic ita affirmasset, ad secundum quaesitum regreditur;
+etenim primum quaesitum fuit, cur elementa ad propria
+eorum loca moverentur, secundum autem, in quo de differentiis
+levis et gravis disputatur, quae eis contingunt, &lt;nunc&gt;
+ait: quoniam de his hoc in loco disputatur, primum
+
+		</div>
+		<div n="10032602">
+			f. 62r
+		</div>
+		<div n="10032603">
+			5.6 fertur, atlrahilur, pellitur codd. Al 11 cf. Averr. p. 248 L et eiusdem Paraphr.
+p. 331 F et sq. 14 hoc&#8212;habet. codd. Al: est perfectio eius Averr. et (p. 331) aut quia
+le eius more est, ut moveatur ad sanitatem 19 ipse scripsi: motus eorum. causa codd.
+Al 37 el gravia addidi 38 post enim signum lacunae; ignis supplevit Al
+		</div>
+		<div n="10032605">
+			f. 62r
+		</div>
+		<div n="100326013">
+			2 et leve addidi 10 igni scripsi: terrae codd. Al ante absolute et post substernitur
+(11) lacuna statuenda; arjua supplevi 11 pro verbis sed&#8212;quae Al arbitrario
+et male addidit: atqui quomodo aer levis est? non alia sane ratione, nisi quia terrae (sici) eminet.
+si autem secundum naturae eorum genus 15 cf. Averr. Paraphr. p. 332 A
+et sq. 24. 25 mihi autem et sq.] cf. Simpl. p. 70,2 &#7936;&#955;&#955;&#8048; &#954;&#945;&#8054; &#8001; &#920;&#949;&#956;&#8055;&#963;&#964;&#953;&#959;&#962; . . &#954;&#7938;&#957;
+&#7936;&#952;&#949;&#964;&#8135; &#964;&#8056; &#946;&#945;&#961;&#8058; &#954;&#945;&#8054; &#954;&#959;&#8166;&#966;&#959;&#957; . . &#7936;&#955;&#955;&#8048; &#964;&#8053;&#957; &#947;&#949; &#8165;&#959;&#960;&#8052;&#957; &#8017;&#960;&#8049;&#961;&#967;&#949;&#953;&#957; &#966;&#951;&#963;&#8054; &#964;&#959;&#8150;&#962; &#963;&#964;&#959;&#953;&#967;&#949;&#8055;&#959;&#953;&#962; &#7952;&#957;
+&#964;&#8057;&#960;&#959;&#953;&#962; &#959;&#8022;&#963;&#953; &#955;&#8051;&#947;&#969;&#957; &#8220;&#949;&#8016;&#955;&#959;&#947;&#8061;&#964;&#949;&#961;&#959;&#957; &#948;&#8050; &#7938;&#957; &#7974;&#957; &#954;&#945;&#8054; &#963;&#8059;&#956;&#966;&#969;&#957;&#959;&#957; &#964;&#959;&#8150;&#962; &#960;&#949;&#961;&#8054; &#945;&#8016;&#964;&#8048; &#966;&#945;&#953;&#957;&#959;&#956;&#8051;&#957;&#959;&#953;&#962; &#964;&#8056;
+&#964;&#959;&#8150;&#962; &#7936;&#955;&#955;&#959;&#964;&#961;&#8055;&#959;&#953;&#962; &#964;&#8057;&#960;&#959;&#953;&#962; &#956;&#8118;&#955;&#955;&#959;&#957; &#964;&#8048;&#962; &#8165;&#959;&#960;&#8048;&#962; &#7936;&#960;&#959;&#948;&#953;&#948;&#8057;&#957;&#945;&#953; &#964;&#959;&#8150;&#962; &#963;&#964;&#959;&#953;&#967;&#949;&#8055;&#959;&#953;&#962;&#8221; 29 loco] 311b14
+30 quod&#8212;est supplevi
+		</div>
+		<div n="100326015">
+			f. 62r
+		</div>
+		<div n="1003270">
+			Deinde ait: cum igitur his inclinatio ita tribuatur, gravitas
+
+		</div>
+		<div n="1003280">
+			Deinde dicit: fit autem, ut non ubique unum et idem
+aliquid grave sit vel leve, neque ctiam uno eodemque levius
+
+		</div>
+		<div n="10032805">
+			f. 62v
+		</div>
+		<div n="10032806">
+			15 dicebat ex coniectura 20 centum codd. Al et Averr. hic et infra 25 inferiora
+addidi 36 trabs] &#958;&#8059;&#955;&#959;&#957; (cf. supra) 40. 41 exspectes in aqua Ievis est . . constat
+		</div>
+		<div n="10032808">
+			f. 62v
+		</div>
+		<div n="1003290">
+			At non convenit, ut veram hanc orationem affirmemus, eam
+nempe, quae tribus elementis in propriis eorum locis omnino pondus
+inesse statuit. primo quidem, cur illis in propriis locis existentibus
+
+		</div>
+		<div n="10032904">
+			1 in acre scripsi: potestatc Al: potestatibus codd. 12 subsidet scripsi: innovabitur codd.
+Al (cf. l. 28 et 30) 15 intellegi e coniectura: multiplex reddi Al 17 Al &#928;&#959;&#953; convenit
+et sq.] cf. Averr. 257 A. F. H et sq. eiusque Paraphr. 333 E et sq. 22 si igitur]
+nisi Al 24 levitas] gravitas Al 27 dicimusque scripsi: dicitque codd. Al
+36 levia scripsi: gravia codd. Al. Al vertit: inter se in propriis . . non erunt; hac enim
+ratione non essent
+		</div>
+		<div n="10032906">
+			f. 62v
+		</div>
+		<div n="100329014">
+			f. 63r
+		</div>
+		<div n="100329016">
+			4 se ipsum codd.: eam per se Al. quae sequuntur usque ad cur (5) corrupta videntur
+15 post feruntur adduut codd. neque in proximis locis levia sunt, cum in propriis eorum
+locis pondus habeant 19 ubi&#8212;inclinat (20) corrupta 25 innovatur] cf. supra
+232,12 subsidet 31 extremis finibus . . versus extremos fines codd.
+		</div>
+		<div n="100329018">
+			f. 63r
+		</div>
+		<div n="100329026">
+			7 neque&#8212;movebuntur (8) om. codd. exspectes sed a propriis . . . sursum movebuntur
+10 iuxta Al: immo codd. ex propriis locis om. codd. 18 calce] 313b6
+22 divisiva et dividunt scripsi: divisio et dividuntur codd. Al 25 divisiva scripsi:
+divisa codd. Al 26 supra . . natant] ad divisa inclinant codd. Al 28 divisioni
+repugnant] divisum dividetur Al 35 ob eius amplitudinem emendavi: a spiritu codd.
+Al 36 divisionem prohibebit] a divisione prohihebitur A I (locus corruptus)
+		</div>
+		<div n="1003300">
+			Cum autem in orationis limine grave et leve posuisset dixissetque
+absolute leve id esse, quod corporibus eminet, tamquam hoc
+omnibus perspicuum sit, ea autem deinceps in medium adduxisset,
+
+		</div>
+		<div n="10033003">
+			f. 63v
+		</div>
+		<div n="10033004">
+			2 inclinationem&#8212;prohibeatur (3)] inclinationem praestet, a propriae formae loco eo privabitur,
+quod latitudinis mensura extiterat Al male 9 secundum id addidi divisio&#8212;separat
+(10)] locus incertus; ex divisione enim sustentaculi aquae transmutabitur, quod
+lalitudinis eius causa sepurabit Al 23 leve scripsit Al; sed cum codd. grave exhibeant,
+lacunam statuere praetulerim
+		</div>
+		<div n="10033006">
+			f. 63v
+		</div>
+		<div n="1003310">
+			At vero quod in oratione deduxit definitum quoddam medium
+inveniri, ad quod gravia corpora moventur, id ipsum initio explicavit
+inquiens: fieri non potest, ut infinite quicquam moveatur;
+
+		</div>
+		<div n="10033102">
+			3 leve codd.: grave Al ex coniectura; sed lacuna unius lineae statuenda 9 verba
+quandoquidem&#8212;appellatur (10) aliunde huc illata esse videntur. 31 non possit
+40 fieret scripsi: inveniretur codd. Al
+		</div>
+		<div n="10033104">
+			f. 63v
+		</div>
+		<div n="1003320">
+			Deinceps explicabitur omnino consentaneum esse, ut corporum
+inclinationes duae existant. quoniam autem medium invenitur et
+ad id corpus fertur, (piod omnibus corporibus subest . . . extremum
+
+		</div>
+		<div n="10033201">
+			f. 64r
+		</div>
+		<div n="10033204">
+			9 aliud alii addidi: ei Al: codd. corrupti 13 si - sursion (15) scripsi: quoniam si
+erit, postquam aliquid attigerit, fieri etiam . . . ut grave guippiam sursum Al
+15 siquidem &#8212; fertur (16) om. codd. 17 nostrum &#8212; pertractare scripsi: de hoc
+inferius pertractabimus Al male supra] Arist. 296b9 et sqq.
+24 post subest lacuna hiat 25 eorum, faciunt emendavi hic et infra (28): eius,
+reponit Al
+		</div>
+		<div n="10033206">
+			f. 64r
+		</div>
+		<div n="1003330">
+			Oratione autem in longum producta ex hoc in id fertur,
+quod ei annectitur, cum dicat: est [etiam] aliquid in horum
+
+		</div>
+		<div n="1003340">
+			Idem deinceps alia oratione hunc iu modum explicavit.
+		</div>
+		<div n="1003350">
+			Quod continet, id formae, quod vero contiuetur, id
+
+		</div>
+		<div n="10033506">
+			f. 64r
+		</div>
+		<div n="1003360">
+			Corpus enim quod eiusmodi materiam, levitateni nempe,
+sortitur, veluti ignis, statim leve et supra invenitur, quod
+autem coutrariam materiam habet, contra grave et infra
+est, quemadmodum invenitur terra; et veluti ignis ex materia et
+
+		</div>
+		<div n="1003370">
+			Inter has quidem, inquit, duas materias, levis nempe et gravis
+materiam, duae aliae materiae collocantur, quae veluti duo earum
+
+		</div>
+		<div n="10033702">
+			f. 64v
+		</div>
+		<div n="10033705">
+			9 quemadmodum et sqq.] Al exhibet: et quemadmodum invenitur terra, ita et ignis quoque.
+ex materia enim et forma coniunctis terrae materia, ex materia autem et forma ordinatis,
+ignis materia constat 20 fines] cf. Simpl. p. 719, 29 non om. codd.
+21 superficies (alt.)] exspectes fines] finis codd. Al 22 quae&#8212;existit scripsi:
+a quibus in aliquo dirersae sunt, ac illis communes existunt codd. Al 23 fuscum
+ac terreum Al: intellege &#964;&#8056; &#966;&#945;&#953;&#8057;&#957; 25 ac cum scripsi: quemadmodum codd. Al
+26 et addidi
+		</div>
+		<div n="10033707">
+			f. 64v
+		</div>
+		<div n="1003380">
+			Nihil enim obstat, quominus in medio contrariorum
+unum et plura sint. et inquit Alexander: qui omnino quatruplicem
+materiam efficit, quae uniuscuiusque elementorum inclinationi
+
+		</div>
+		<div n="10033803">
+			1 duae (materiae) codd, ac finis Al.: finium codd. 7 de Ortu] &#928; 2 11 ut&#8212;
+quod (12) scripsi: quod communi alicui occurrit, unum sit quodque Al (fort, post est lacuna
+hiat) 12 cum&#8212;explicabitur (15) delenda sunt 14 et 16 duo Al: aequales codd.
+16 duo sunt corruptum: conicio declaratur (cur . . conveniat) (cf. Averr. p. 263 K
+17 et addidi sumut scripsi: sumamus codd. Al 21 motus suspectum
+23 Alexander] cf. Simpl. p. 720, 9 et sqq. (locus corruptus) 27 aer Al (cf. Simpl.
+l. 17): aurum codd. 29 ante cum lacuna hiat 32 retulit] 312a17
+		</div>
+		<div n="10033805">
+			f. 64v
+		</div>
+		<div n="1003390">
+			Deinceps explicare vult elementis, quae interiecta sunt, [pondus]
+inesse . . ., praeterquam (?) iis in locis, quibus supereminet
+
+		</div>
+		<div n="10033905">
+			f. 65r
+		</div>
+		<div n="10033908">
+			4 signum lacunae posui 17 ad&#8212;coligitur (18)] exspectes subiectam . . ad se . . colligit
+18 extensioque et una fit (19) emendavi: ponitque extensionem et unam esse codd. Al
+21 celeritas&#8212;simili (25)] locum obscurum vertit Al: levitas motus . . aqua attrahitur, sursum
+extiterit et aquae motio, levitate aquae levior fuerit . . . quemadmodum iis usu venit, quae
+lentore visciditateque praedita sunt, quibus aliquid annectitur, dum aliquis corpus quidpiam
+eis adhaerere facit, veluti trabem vel aliquid simile. 29 divisionel fort, emendandum
+attractione
+		</div>
+		<div n="100339010">
+			f. 65r
+		</div>
+		<div n="1003400">
+			Haec autem sententia cum iis, quae ad sensum apparent, dissentanea
+est, tum etiam propter illa, quae antea a nobis dicta sunt, rationi ac
+veritati dissentanea est. absurdum namque ac dissentaneum est elementis
+in propriis eorum locis omnino poudus inesse. num autem
+
+		</div>
+		<div n="10034004">
+			1 non addidi 32 cum&#8212;sumantur suspecta 36 itaque et sqq.] cf. Averr, p. 265 I et eiusdem
+Paraphr. p. 335 G et sqq. cur et nisi quod scripsi: quod (aerem . . contentum) et si
+codd. Al (locus non integer) 38 cur . . non existit emendavi: non . . extiterit codd. Al
+		</div>
+		<div n="10034006">
+			f. 65r
+		</div>
+		<div n="1003410">
+			Alexander autem inquit, quod, si aer attenuetur ac in maiorem
+mensuram effundatur repleaturque inanitas, quae eodem in vase
+consistit, rursus deminuitur, secundum quod ex aquae frigiditate incrassatur,
+quando eam tangit, et statim aquam attrahit, quae ei
+
+		</div>
+		<div n="10034102">
+			f. 65v
+		</div>
+		<div n="1003420">
+			Quod autem rationi dissentaneum sit, quod in hoc allatum
+est, iam diximus; et ex eo, quod in his duobus elementis ad
+propria eorum loca inclinatio praecessit, multoque magis, si necessario
+id ceteris illis contingat, neque in propriis eorum locis
+quiescere, neque ad haec loca moveri necessario illis continget,
+
+		</div>
+		<div n="10034201">
+			11 Alexander] cf. Simpl. p. 724, 11 et Averr. p. 265 I et sqq. 13 deminuitur
+emeadavi: occultabitur codd. Al 24 attamen&#8212;etiamsi] ita Al e coniectura: codd.
+corrupti quod et sqq.] cf. p. 242, 22.
+		</div>
+		<div n="10034203">
+			f. 65v
+		</div>
+		<div n="1003430">
+			Modo autem de eo, quod hac in oratione dicendum remanet,
+disseramus.
+		</div>
+		<div n="1003440">
+			Itaque dicimus, quod eo, quia ad elementorum inclinationem
+propriae materiae necessario requiruntur, ideo explicare intendit
+huiuscemodi ordinem inveniri. parem autem, inquit, distinctionem
+
+		</div>
+		<div n="10034400">
+			7 cetera&#8212;similiter] interpretatio incerta: ad idem, cum in eo extiterit Al male
+17 trahatur scripsi: coniungatur codd. Al 29 et 30 cf. Tim. 58 A anticrosas] &#7936;&#957;&#964;&#953;&#954;&#961;&#959;&#8059;&#963;&#949;&#953;&#962;?
+31 eum scripsi: eos codd. Al
+		</div>
+		<div n="10034402">
+			f. 65v
+		</div>
+		<div n="10034406">
+			f. 66r
+		</div>
+		<div n="100344012">
+			2 ne] coaicio ut 4 immobilia] exspectes indivisibilia 7 si scripsi: aut codd.
+Al 15 quod&#8212;movetur emendavi: parvum in sublimi codd. Al 30 si scripsi:
+vel codd. Al
+		</div>
+		<div n="100344014">
+			f. 66r
+		</div>
+		<div n="100344023">
+			5 aequales Al: distinctae codd. 38 Democritus enim scripsi ex coniectura: quaeritur
+enim hoc tempore Al male
+		</div>
+		<div n="100344025">
+			f. 66r
+		</div>
+		<div n="100344027">
+			f. 66v
+		</div>
+		<div n="1003450">
+			Finis
+		</div>
+		<div n="1003460">
+			Commentarii Themistii in Quatuor Libros
+Aristotelis de Caelo et Mundo.
+		</div>
+		<div n="1003461">
+			4 accidat scripsi: in profundum non feratur codd. Al (cf. p. 232,12) 17. 18 fort, cum Al
+legendum secantur ac disrumpuntur 23 ut&#8212;repugnat (25) emendavi: mimis autem
+dividantur, cum eorum corporum, quae continuata sunt, vis expulsionis superabit Al (cf.
+p. 234, 30).
+		</div>
+		</body>
+    </text>
+</TEI>

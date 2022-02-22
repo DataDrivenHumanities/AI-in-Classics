@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader xml:lang="eng">
+        <title xml:lang="lat">Iusiurandum</title>
+    <author n="0">Hippocrates</author>
+	</teiHeader>
+    <text>
+        <body>
+        <div n="10002">
+			&#927;&#929;&#922;&#927;&#931;.
+		</div>
+		<div n="10003">
+			&#8012;&#956;&#957;&#965;&#956;&#953; &#7944;&#960;&#8057;&#955;&#955;&#969;&#957;&#945; &#7984;&#951;&#964;&#961;&#8056;&#957;, &#954;&#945;&#8054; &#7944;&#963;&#954;&#955;&#951;&#960;&#953;&#8056;&#957;, &#954;&#945;&#8054; &#8025;&#947;&#949;&#8055;&#945;&#957;, &#954;&#945;&#8054;
+
+		</div>
+		</body>
+    </text>
+</TEI>

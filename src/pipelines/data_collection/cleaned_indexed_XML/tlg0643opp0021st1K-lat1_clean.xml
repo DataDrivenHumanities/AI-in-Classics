@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader xml:lang="eng">
+        <title xml:lang="mul">Epimetrum to Anonymi Londinensis ex Aristotelis iatricis Menoniis et aliis medicis eclogae</title>
+    <author n="0">Hermannus Diels</author>
+	<author n="1">Anonymus Londinensis</author>
+	</teiHeader>
+    <text>
+        <body>
+        <div n="1001">
+			EPIMETRUM
+		</div>
+		<div n="10020">
+			De titulo qui p. IV 18. 19 inter Prooemium et Menonia interiectus
+est, addam quae mihi nuper in mentem venerunt. cum enim exemplar
+lucis ope confectum, unde autotypa tabulae II expressa sunt, accepissem,
+vexatissimum illum locum denuo examinavi et quod non raro accidere
+solet, vidi priorem saltem versum paulo clarius legi in simulacro quam
+in ipsa papyro. itaque nunc mihi veri similis est haec lectio [&#954;&#945;&#964;&#8048;
+&#960;]&#955;&#940;[&#964;]&#959;&#962;. intellego enim titulo hoc &#922;&#945;&#964;&#8048; &#960;&#955;&#8049;&#964;&#959;&#962; &#957;&#972;&#963;&#959;&#953; voluisse compilatorem
+transitum significare ad uberiora illa ex Menoniis excerpta. etenim cum
+prooemium versetur in rebus, quae ad philosophiam magis spectant
+quam ad medicinam, ipse filum disputandi subinde interrupisse vel brevius
+excerpsisse videtur, si quidem ipse taedium haud obscure significavit
+velut &#954;&#945;&#8054; &#964;&#8134;&#962; &#956;&#8050;&#957; &#7952;&#957;&#964;&#961;&#949;&#967;&#949;&#943;&#945;&#962; &#7952;&#960;&#8054; &#964;&#959;&#8166; &#960;&#945;&#961;&#972;&#957;&#964;&#959;&#962; &#959;&#8016; &#967;&#961;&#8080;&#950;&#959;&#956;&#949;&#957; (I 24) vel &#7936;&#955;&#955;&#8048;
+&#964;&#959;&#8166;&#964;&#959; &#964;&#959;&#8150;&#962; &#957;&#949;&#969;&#964;&#941;&#960;&#959;&#953;&#962; &#956;&#949;&#955;&#8053;&#963;&#949;&#953; (II 30). iam vero cum medicorum de morbis
+opiniones tractaret, consentaneum est copiosius et religiosius eum exemplar
+suum compilasse. similiter Ammonio qui addi solet grammaticus primum
+breviter &#960;&#949;&#961;&#8054; &#946;&#945;&#961;&#946;&#945;&#961;&#953;&#963;&#956;&#959;&#8166; et &#960;&#949;&#961;&#8054; &#963;&#959;&#955;&#959;&#953;&#954;&#953;&#963;&#956;&#959;&#8166; agit (p. 189&#8212;193), tum p.
+&#7953;&#964;&#941;&#961;&#969;&#962; &#960;&#949;&#961;&#8054; &#946;&#945;&#961;&#946;&#945;&#960;&#953;&#963;&#956;&#959;&#8166; &#954;&#945;&#964;&#8048; &#960;&#955;&#940;&#964;&#959;&#962; itemque p. 197 &#928;&#949;&#961;&#8054; &#963;&#959;&#955;&#959;&#953;&#954;&#943;&#945;&#962; &#954;&#945;&#964;&#8048;
+&#960;&#955;&#940;&#964;&#959;&#962;. itemque Laertius Diogenes in Stoicis (VII 76) ad ea relegat &#960;&#949;&#961;&#8054;
+&#8039;&#957; &#7952;&#957; &#964;&#8183; &#960;&#955;&#940;&#964;&#949;&#953; &#955;&#941;&#947;&#959;&#956;&#949;&#957;. quid? quod Aeliani duplex extitit Byzantinorum
+temporibus editio, quarum &#964;&#8056; &#960;&#955;&#940;&#964;&#959;&#962; i. e. integram opponit epitomae excerptor
+Constantini [cf. Sp. Lambros in Supplementi huius II p. XI sq.]
+cognatus est huic, sed tamen paulo distat usus, ut &#964;&#8056; &#7952;&#957; &#960;&#955;&#940;&#964;&#949;&#953; (summatim)
+oppositum sit &#964;&#8183; &#954;&#945;&#964;&#8217; &#7936;&#945;&#961;&#964;&#953;&#963;&#956;&#972;&#957; sim. (accurate), ut apud Dionys.
+Halic. de comp. verb. 21 p. 147. 186 R. et saepe apud grammaticos et
+philosophos posteriores. prior significatio inest adverbio &#960;&#955;&#945;&#964;&#965;&#954;&#8182;&#962;, altera
+&#960;&#955;&#945;&#964;&#953;&#954;&#8182;&#962; pltttice, de quo consulendus Usenerus [Mus. Rhen. XXIV 311].
+		</div>
+		</body>
+    </text>
+</TEI>

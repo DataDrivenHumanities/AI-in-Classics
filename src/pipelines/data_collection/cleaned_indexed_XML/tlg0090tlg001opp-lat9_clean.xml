@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader xml:lang="eng">
+        <title xml:lang="lat">Geographiae Informatio</title>
+    <author n="0">Agathemerus</author>
+	<author n="1">Agathemerus </author>
+	</teiHeader>
+    <text>
+        <body>
+        <div n="10010">
+			AGATHEMERI Orthonis filii Geographiae
+                        expositionum in epitome redactae
+		</div>
+		<div n="10011">
+			LIBER PRIMUS.
+		</div>
+		<div n="1002000">
+			
+                               
+                                Caput I. De veterum Geographia. 
+		</div>
+		<div n="100201">
+			 Anaximander Milesius, Thaletis auditor, sustinuit omnium 
+		</div>
+		<div n="100210">
+			 Veteres ergo orbem habitabilem effigiarunt rotundum, mediam vero sitam
+                            esse Graeciam, et eius Delphos; obtinere enim umbilicum terrarum. Sed
+                            Democritus, cujus multa scientiae experimenta exstant, primus affirmavit
+                            terram esse oblongam, ita ut longitudo ad latitudinem habeat rationem
+                            sesquialteram. Cui sententiae etiam Dicaearchus Peripateticus accessit.
+                            Eudoxus autem dixit longitudinem ad latitudinem esse in ratione dupla;
+                            sed Eratosthenes in majore quam dupla. Crates semicirculo as
+		</div>
+		<div n="100220">
+			Termini continentium sunt: Europae quidem atque Africae columnae
+                            Herculis: Africae et Asiae Nilus, vel, ut alii volunt, Isthmus ille a
+                            palude Sarbonide et sinu Arabico: Asiae vero et Europae terminum antiqui
+                            dixerunt Phasin fluvium, et Isthmum, 
+		</div>
+		<div n="100230">
+			Continentes autem appellantur (Graeca voce) quasi infinitae, ob
+                            ignorationem. Asia dicta est ab 
+		</div>
+		<div n="1002300">
+			&#7940;&#963;&#963;&#959;&#957;
+		</div>
+		<div n="100240">
+			 Tandem Dicaearchus definit orbem terrarum non aquis, sed ductu lineae
+                            cuiusdam simpliciter rectae, a columnis Herculis per Sardiniam,
+                            Siciliam, Peloponnesum, Ioniam, Cariam, Lyciam, Pamphyliam, Ciliciam, et
+                            Taurum, et inde usque ad Imaum actae: secundum quam alias orbis partes
+                            Boreales, alias Australes nominat. 
+		</div>
+		<div n="1003000">
+			Caput II. De Ventis.
+                            
+		</div>
+		<div n="100301">
+			Venti autem flant ab Aequinoctiali ortu Apeliotes, ab occasu
+                            Aequinoctiali Zephyrus; a meridie Notus, a Septentrione Aparctias: ab
+                            aestivi Tropici ortu spirat Caecias; dein ab ortu Aequinoctiali
+                            Apeliotes, ab hiberno denique Eurus.
+		</div>
+		<div n="100310">
+			 Rursum ab occasu hiberno Libs, deinde ab occasu aequinoc
+		</div>
+		<div n="1004000">
+			Caput III. Circumnavigatio
+                                marium. 
+		</div>
+		<div n="100401">
+			Syrtium autem maior quinque millibus stadiorum ambitur, minor mille et
+                            sexcenta continet. Fauces vero maris Adriatici, 
+		</div>
+		<div n="100410">
+			Aegaeum mare sequitur Hellespontus ad Abydum et Sestum desinens: mox
+                            Propontis usque ad Chalcedonem et Byzantium patens, ubi angustiae, a
+                            quibus Pontus incipit, post quem iacet Palus Maeotis. Rursum si incipias
+                            a confiniis Africae et Europae, erit Ibericum mare, quod a Columnis
+                            pertinet ad montem Pyrenaeum, 
+		</div>
+		<div n="100420">
+			 Europae autem ab ostiis Tanais fluvii ad columnas Herculis 
+		</div>
+		<div n="100430">
+			 Euxinus vero Pontus ambitur stadiis 23083. Thracius Bosporus, angustiae,
+                            quas Darius ponte iunxit subitario aggredians Scythas, stadiorum sex.
+                                
+		</div>
+		<div n="100440">
+			 Mare Persicum, quod est valde rotundum, ostium suum contrahens
+                            promontorio Carmaniae et Arabiae, habet circuitum stadiorum 20000.
+                            Ostium vero ipsum inter Arabiam et Carmaniam patet stadia 400.
+		</div>
+		<div n="100450">
+			 Hyrcanum vero, quod et Caspium mare, lunato flexu sinuatum, et ut aliis
+                            placet, oblongum, extenditur in stadia 22000; ostium vero traiicitur
+                            stadiis quatuor. 
+		</div>
+		<div n="100460">
+			 Arabicus sinus, qui est angustus et oblongus, initium capit ab Heroum
+                            oppido, praeterit oram Troglodyticam, usque ad oppidum Ptolema&#239;dem ad
+                            venationes; habet stadiorum 9000 longitudinem. 
+		</div>
+		<div n="1005000">
+			Caput. IV. De Longitudine et
+                                Latitudine orbis habitati. 
+		</div>
+		<div n="100501">
+			 Longitudo vero orbis terrarum concipitur a fluvio Gange ad 
+		</div>
+		<div n="100510">
+			 Iam vero a Myriandro usque Gades stadia 26820, hoc modo: 
+		</div>
+		<div n="100520">
+			 Alia via. A Gange ad Euphratem amnem stadia 41350. Ab Euphrate ad
+                            Cappadocum Mazaca 2550. A Mazacis vero 
+		</div>
+		<div n="10052020">
+			lacuna stated by S. Tennulius but restored by Karl M&#252;ller with
+                                    excerpts from the indirect tradition.
+		</div>
+		<div n="100530">
+			 Latitudo terrae qua habitatur, ab Aethiopico oceano ad Me
+		</div>
+		<div n="100540">
+			Aliter etiam a Rhodo cursus hic intelligitur, in Cnidum nu
+		</div>
+		<div n="1006000">
+			Caput V. Insularum
+                                dimensio.
+		</div>
+		<div n="100601">
+			Restat, ut dicamus insularum nobis affinium ambitus, prout accepimus ab
+                            Artemidoro, Menippo et aliis autoribus fide dignis. Gadium longitudo
+                            stadiorum 108, latitudo 16. Fretum ad columnas Herculis, qua
+                            angustissimum est, patet 80 stadia. 
+		</div>
+		<div n="100610">
+			 Cercina insula habet longitudinem stadiorum 70, et ubi angustissima est,
+                            latitudinem 40. Iacet e regione urbis in continente Thenae, iuxta
+                            initium Syrtis minoris. Adiacet vero Cercinae Cercinitis insula ponte
+                            coniuncta; longa stadia 40, et lata 25.
+		</div>
+		<div n="100620">
+			A Cercina in insulam Meningem, Lotophagitis regionis, traiectus stadiorum
+                            600, quantum etiam Syrtis minoris ostium dicitur. Meninx vero longa est
+                            stadia 600, lata 180. Circa hanc magnae reciprocationes contingunt. 
+		</div>
+		<div n="100630">
+			 Cephallenia insula habet quatuor urbes, longitudinem stadiorum 400. Sunt
+                            quoque in Adriatico mari insulae propter oram Illyrici, quarum
+                            insigniores sunt Issa, et Corcyra Nigra, Pharus dein et Melita, quarum
+                            dimensiones non habeo compertas.
+		</div>
+		<div n="100640">
+			 Peloponesus, si connumeres etiam eius sinus, circumnavigatur stadiis
+                            5627: quod si sinus praetereas, ambitur stadiis 4000. 
+		</div>
+		<div n="100650">
+			Insula Aegina exadversum Atticam sita, oblonga est stadia 
+		</div>
+		<div n="100660">
+			At vero Creta circa Maleam Peloponneso adiacet; suo ambitu stadia implet
+                            4100, longitudine 2300. Nam plurimum in longitudinem patet. Cythera
+                            inter Cretam et oram Laconicam media. Cyprus habet figuram similem
+                            tergori bovis, et circumnavigatur stadiis 3420, longa est 1300. Ab Papho
+                            flante Borea traiicitur Alexandriam spatio stadiorum 3800. Insula Rhodus
+                            circuitur stadiis 1300. Cos 550 cingitur. 
+		</div>
+		</body>
+    </text>
+</TEI>

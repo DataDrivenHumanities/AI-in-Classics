@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader xml:lang="eng">
+        <title xml:lang="mul">Prefatio to Res Publica Atheniensium</title>
+    <author n="0">Georgius Wentzei</author>
+	<author n="1">Aristotle</author>
+	</teiHeader>
+    <text>
+        <body>
+        <div n="1001">
+			PRAEFATIO
+		</div>
+		<div n="10020">
+			Aristotelis libellus de re publica Atheniensium cur in hoc Supplemento 
+		</div>
+		<div n="100200">
+			Auctoritas libri Aristotelici
+		</div>
+		<div n="10030">
+			Edendum igitur esse cum ceteris Aristotelicis libris in editione Academica
+hunc librum consentient omnes; de editore autem fortasse mirabuntur
+buntur nonnulli. cum autem multi sint, &#8212; quorum inter primos Hermannum
+Diels et Udalricum de Wilamowitz-Moellendorff honoris causa nomino, &#8212;
+qui rem maiore sollertia, acumine, experientia, doctrina peragere possent,
+illis varias ob causas non contigit opus suscipere, praecipue cum papyrum
+ipsam sub oculis habere non possent; itaque mihi tandem, cui fors fortuna
+opportunitatem illis non concessam dederat, honos a collegio Academico
+oblatus est, ut qui quasi recens nato sedulus sed imperitus olim ministraveram,
+idem nunc togatum inter adultos ponerem. quem laborem dum
+libenter idemque non sine timore suscipio, rationem huius novae editionis
+breviter exponam.
+		</div>
+		<div n="10040">
+			Ante annum post Christum MDCCCLXXX de opere Aristotelico nihil
+nisi fragmenta a lexicographis aliisque antiquis scriptoribus citata exstabat,
+
+		</div>
+		<div n="100400">
+			1) Anonymi Londinensis ex Aristotelis lalricis Menoniis et aliis medicis eclogae (Suplementum
+Aristotelicum vol. III, pars 1 ; MDCCCLXXXXIII).
+		</div>
+		<div n="100402">
+			Codex Berolinensis
+		</div>
+		<div n="100403">
+			B
+		</div>
+		<div n="10050">
+			Codex Londincnsis Hoc tamen nil nisi gustus epularum lautiorura fuit. initio enim anni
+p. C. MDCCCXC volumina nonnulla papyracea ex Aegypto (de loco quo
+inventa sunt nihil amplius publici iuris adhuc factum est) in Museum
+Britannicura adlata sunt, inter quae quattuor, non sine labore transcripta,
+de re publica Atheniensiura agere videbantur; neque scriptoris nomen diu
+latuit, quia fragraenta illa paene orania, quae collegerat Rose, illa quoque
+quae in codice Berolinensi exstabant, hic suis locis reperta sunt. quae
+
+		</div>
+		<div n="100500">
+			L
+		</div>
+		<div n="100501">
+			1) Aristotelis opera; edidil Academia Regia Borussica. Vol. V, Aristotelis qui ferebanlur
+librorum fragmenta (MDCCCLXX).
+		</div>
+		<div n="100502">
+			2) Hermes, XV, 366 (MDCCCLXXX).
+		</div>
+		<div n="100503">
+			3) Rheinisches Museuw, XXXVII, 87 (MDCCCLXXXI).
+		</div>
+		<div n="100504">
+			4) Abhandlungen der kgl. Akademie der Wissenschajten zu Berlin, MDCCCLXXXV.
+		</div>
+		<div n="10060">
+			De aetate codicis plura nunc sunt testiraonia quara eo tempore fuerunt 
+		</div>
+		<div n="100600">
+			Aetas codicis
+		</div>
+		<div n="10070">
+			Archetypum e quo transcriptum est exeraplura Londinense mutilum 
+		</div>
+		<div n="100700">
+			Archetypi mutilatio
+		</div>
+		<div n="100701">
+			1) Cum hoc folium tum primum ad scripturam accipiendam adhiberetur, scriba recto
+latere (pronis scilicet fibris) usus est; aversum absque scriptura est.
+		</div>
+		<div n="100702">
+			2) Textus in editione mea tertia impressus exstat.
+		</div>
+		<div n="100703">
+			3) Confer praecipue papyros Musei Britannici 289 (anno 91 scriptam). 142 (a. 95),
+143 (a. 97), et Musei Raineri 215 (a. 83), quarum imagines phototypicae exstant (Greek
+Papyri in the British Museum, vol. II, Atlas of Facsimiles, pl. 34, 43, 44; Papyrus Erzherzog
+Rainer, FUhrer ciurch die Ausstellung, Taf. IX).
+		</div>
+		<div n="10071">
+			Librarii L1&#8212;4
+		</div>
+		<div n="10080">
+			Ad scriptorcs librarios venimus, qui numero sunt quattuor. primus
+(quem L1 in adnotationibus vocamus) volumen primum totum
+idemque paginam primam in voluraine altero, scriptura ille usus minuta
+sed crassiore eius generis quod cursivum nuncupatur, multis compendiis,
+de quibus infra tractabitur. errores ipse suos plerumque correxit, neque,
+quod videmus, multos omnino fecit; non indoctus enim fuisse videtur,
+licet scriba peritus non fuerit. sub finem autem errores nonnullos correxit
+et litteras male formatas rescripsit etiam scriba quartus (L4) alter (L2),
+qui paginas septem et dimidiam (13&#8212;20) scripsit, unciali scripturae genere
+utitur, magnitudinis mediocris, visu non iniucundo, sed erroribus scatente,
+praecipue in orthographia. correctoris opere functus est scriba quartus
+(L4): qui menda permulta sustulit, nonnulla tamen reliquit. in medio
+paginae vicesimae opus incipit scriba tertius (L3) qui partem voluminis
+alterius (pp. 20&#8212;24) confecit, idemque totum volumen quartum transcripsit.
+et hic quidem scriptura utitur interdum unciali, crassa atque deformi,
+saepius autem cursiva, tenui et rapida, ita ut nonnunquam verba vix legenda
+sint. quod cum accidisset, saepe scriba quartus eadem verba melius superscripsit,
+scripsit, idemque errores nonnullos sustulit. volumen denique tertium
+huius scribae (L4): totum est opus, qui omnia transcripsit et suos ipse
+errores correxit. scriptura parva et cursiva est, manui primae non dissimilis,
+similis, sed minor et tenuior; et quanquam compendiis plerumque iisdem
+utitur, non omnia similia sunt 1). hunc autem scriptorem cum munere
+correctoris per totum librum (nonnunquam etiam in provincia scribae primi)
+fungi videamus, neque qui scriptoriam artem profiteretur sed potius privatum
+tum aliquem hominem haec exarasse: facilis est coniectura eundem huius
+libri possessorem fuisse, cui nos tot post saecula, totoque divisi orbe, opus
+Aristotelicum servatum debemus.
+		</div>
+		<div n="10081">
+			Compendia
+		</div>
+		<div n="10090">
+			Compendia in hoc libro, quippe qui in usum privatum scriptus sit,
+ita multa ut in paucis aliis usurpantur; neque tamen eadem apud omnes
+scriptores. &#8217; haec adhibet compendia:
+
+		</div>
+		<div n="100900">
+			1) De discrepantiis quibus L1 et L4 necnon L2 et L3, inter se distinguuntur, conferre
+ferre licet quae in editione mea tertia (pp. XII, XIII) scripsi.
+		</div>
+		<div n="1009020">
+			ABBREV = &#945;&#8016;&#964;&#8053;&#957; (P. 9,8)
+		</div>
+		<div n="1009021">
+			&#947;&#900; = &#947;&#8049;&#961;
+		</div>
+		<div n="1009022">
+			&#948;&#900; = &#948;&#949;
+		</div>
+		<div n="1009023">
+			&#948;&#900; = &#948;&#953;&#8049;
+		</div>
+		<div n="1009024">
+			ABBREV = &#949;&#7990;&#957;&#945;&#953;
+		</div>
+		<div n="1009025">
+			ABBREV = &#7952;&#963;&#964;&#8055;&#957;
+		</div>
+		<div n="1009026">
+			&#954;&#900; = &#954;&#945;&#953;
+		</div>
+		<div n="1009027">
+			&#954; = &#954;&#945;&#964;&#945;
+		</div>
+		<div n="1009028">
+			&#956; = &#956;&#949;&#957;
+		</div>
+		<div n="1009029">
+			&#956; = &#956;&#949;&#964;&#945;
+		</div>
+		<div n="10090210">
+			&#8057; = &#959;&#965;&#957;
+		</div>
+		<div n="10090211">
+			&#960; = &#960;&#945;&#961;&#945;
+		</div>
+		<div n="10090212">
+			&#960;&#900; = &#960;&#949;&#961; vel &#960;&#949;&#961;&#8055;
+		</div>
+		<div n="10090213">
+			&#963; = &#963;&#965;&#957;
+		</div>
+		<div n="10090214">
+			ABBREV = &#964;&#945;&#953;
+		</div>
+		<div n="10090215">
+			&#964;&#900; = &#964;&#951;&#957;
+		</div>
+		<div n="10090216">
+			&#964;&#8127;= &#964;&#951;&#962;
+		</div>
+		<div n="10090217">
+			&#964;&#900; = &#964;&#969;&#957;
+		</div>
+		<div n="10090218">
+			ABBREV = &#967;&#961;&#8057;&#957;&#959;&#962;
+		</div>
+		<div n="100100">
+			Praeter haec autem compendia, verba saepe brevioribus formis ita
+scribit ut litteras finales omittat, eamque quam postremam retinet super
+versum aliquantulo erigat; quales sunt &#931;&#959;&#955;&#969;&#957; &#959;, &#947;&#953;&#957;&#949;&#963; &#965;, &#945;&#947;&#961; &#969;, x. t. X. hoc in
+verbis plus quam centum triginta efficit L1; praecipue autem terminationes
+quae in -ov, -&#959;&#962;, -&#959;&#965; desinunt per &#959; solum significat, e. g. &#960;&#959;&#955;&#949;&#956;&#945;&#961;&#967; &#959;,
+&#947;&#965;&#957;&#945;&#953;&#954; &#959;, &#963;&#951;&#956;&#949;&#953; &#959;, &#960;&#955;&#951;&#952; &#959;, &#949;&#964;&#965;&#967; &#959;, et circa quadraginta alia, etiam &#945;&#955;&#955; &#959; pro
+&#7940;&#955;&#955;&#959;&#953;&#963; semel habet. necnon &#969; pro &#969;&#957; saere usurpat, sicut &#960;&#955;&#959;&#965;&#963;&#953; &#969;, &#946;&#945;&#963;&#953;&#955;&#949; &#969;,
+&#960;&#959;&#955;&#955; &#969;, &#954;.&#964;.&#955;. modus infinitivus mediae aut passiveas vocis saepe &#952; pro &#952;&#945;&#953;
+habet, ut &#947;&#953;&#957;&#949;&#963; &#952;, &#954;&#959;&#956;&#953;&#963;&#945;&#963; &#952;, &#954;&#955;&#951;&#961;&#959;&#965;&#963; &#952;. raeter hoc non ita saere in consonantibusvocem claudit; exstant autem &#913;&#961;&#953;&#963;&#964;&#949;&#953; &#948;, &#945;&#961;&#967;, &#913;&#964;&#964;&#953; &#954;, &#946;&#945;&#963;&#953; &#955;, &#946;&#959;&#965; &#955;, &#948;&#965;&#957;&#945; &#956;, &#952;&#949;&#956;&#953;&#963;&#964;&#959; &#954;,
+&#952;&#949;&#956;&#953;&#963;&#964;&#959;&#954; &#955;, &#956;&#945;&#967;, &#969;&#945;&#965;&#956;&#945; &#967;, &#959;&#957;&#959; &#956;, &#931;&#945;&#955;&#945; &#956;, &#931;&#953;&#954;&#949; &#955;, &#963;&#965;&#956;&#956;&#945; &#967;, &#966;&#953; &#955;, &#966;&#965; &#955;. si &#954;&#965;&#961; &#953;, pro
+&#963;&#8059;&#961;&#953;&#959;&#962; et &#966; &#951; pro &#966;&#951;&#963;&#8055;&#957; addas, omnia genera abbreviationis a L1 usitata habes.
+		</div>
+		<div n="100110">
+			In L2 nulla omnino sunt compendia, nec multa in L3. hic tamen &lt;
+pro &#948;&#961;&#945;&#967;&#956;&#8053;&#957; et &#965;&#8127; pro &#8016;&#960;&#8051;&#961; habet, item &#945;&#957;&#948;&#961; &#953;=&#7940;&#957;&#948;&#961;&#945;&#962;, &#945;&#960;&#959;&#947;&#961;&#945;&#966;&#8150;=&#7936;&#960;&#959;&#955;&#947;&#961;&#945;&#966;&#8049;&#962;,
+&#948;&#953; &#953;=&#948;&#953;&#8049;, &#964;&#961;&#959;&#8127;=&#964;&#961;&#8057;&#960;&#969;&#957;, &#967;&#969;&#961;&#8127;=&#967;&#8061;&#961;&#945;&#957;, quae tachggraphici generis signa sunt;
+et &#954;&#945;&#8055; saepe ita cursive scribitur ut paene compendium fiat. praeterea verba haec abbreviata inveniuntur: &#960;&#959; &#955;=&#960;&#8057;&#955;&#949;&#969;&#962;, &#960;&#959;&#955;&#953; &#964;=&#960;&#959;&#955;&#953;&#964;&#8182;&#957;, &#964;&#951;=&#964;&#8134;&#962;.
+L4 speciem eandem quae in L1 est plerumque reddit. compendia haec habet:
+
+		</div>
+		<div n="10011000">
+			&#8048;=&#7936;&#957;&#8049;
+		</div>
+		<div n="10011001">
+			&#947;&#900;=&#947;&#8049;&#961;
+		</div>
+		<div n="10011002">
+			&#948;&#900;=&#948;&#8051;
+		</div>
+		<div n="10011003">
+			&#948;`=&#948;&#953;&#8049;
+		</div>
+		<div n="10011004">
+			&lt;=&#948;&#961;&#945;&#967;&#956;&#8053;
+		</div>
+		<div n="10011005">
+			\=&#949;&#7991;&#957;&#945;&#953;
+		</div>
+		<div n="10011006">
+			ABBREV=&#948;&#7984;&#963;&#8055;
+		</div>
+		<div n="10011007">
+			-=&#7952;&#963;&#964;&#8055;
+		</div>
+		<div n="10011008">
+			&#952;&#900;=&#952;&#945;&#953;
+		</div>
+		<div n="10011009">
+			&#952;&#900;=&#952;&#969;&#957;(&#954;&#961;&#953;&#952;&#8182;&#957;, p.26,
+36, ut videtur)
+		</div>
+		<div n="100110010">
+			&#954;&#900;=&#954;&#945;&#953;
+		</div>
+		<div n="100110011">
+			&#954;`=&#954;&#945;&#964;&#8049;
+		</div>
+		<div n="100110012">
+			&#956;&#900;=&#956;&#949;&#957;
+		</div>
+		<div n="100110013">
+			&#956;`=&#956;&#949;&#964;&#8049;
+		</div>
+		<div n="100110014">
+			&#956;&#900;=&#956;&#969;&#957; (&#969;&#8057;&#956;&#969;&#957;, P. 26,
+30; &#963;&#964;&#945;&#952;&#956;&#8182;&#957;, p. 26,32)
+		</div>
+		<div n="100110015">
+			v&#900;=&#957;&#969;&#957;(&#960;&#949;&#957;&#964;&#945;&#954;&#959;&#963;&#953;&#959;&#956;&#949;&#948;&#8055;&#956;&#957;&#969;&#957;, p. 25,6)
+		</div>
+		<div n="100110016">
+			&#959;&#900;=&#959;&#965;&#957;
+		</div>
+		<div n="100110017">
+			&#960;`=&#960;&#945;&#961;&#8049;
+		</div>
+		<div n="100110018">
+			&#960;&#900;=&#960;&#949;&#961;&#8055;
+		</div>
+		<div n="100110019">
+			&#963;&#900;=&#963;&#8059;&#957;
+		</div>
+		<div n="100110020">
+			&#964;ABBREV=&#964;&#945;&#953;
+		</div>
+		<div n="100110021">
+			&#964;`=&#964;&#951;&#957;
+		</div>
+		<div n="100110022">
+			&#964;&#8127;=&#964;&#951;&#962;
+		</div>
+		<div n="100110023">
+			&#964;&#900;=&#964;&#969;&#957;
+		</div>
+		<div n="100110024">
+			&#965;`=&#8017;&#960;&#8057;
+		</div>
+		<div n="100120">
+			Ergo viginti septem compendiorum septemdecim scribae utrique L1
+et L4 communia sunt; sibi propria habet L1 ABBREV=&#945;&#8016;&#964;&#8053;&#957; et ABBREV=&#967;&#961;&#8057;&#957;&#959;&#962;, L4
+autem &#945;`, &lt;, =, &#952;&#900;(=&#952;&#945;&#953; et &#952;&#969;&#957;), &#956;&#900;(=&#956;&#969;&#957;), &#957;&#900;, &#965;`. verbis abbreviatis
+L4 minus saepe quam L1 utitur; in &#959; praecipue non nisi ter berbum desinti,
+&#969; &#960;&#961;&#959; &#969;&#957; in quinque verbis stat, &#959; &#965; pro semel. In comsonanti exeuntia
+habet &#946;&#945;&#963;&#953; &#955;, &#946;&#959;&#965; &#955;, &#947;&#965;&#956;&#957;&#953; &#954;, &#947;&#965;&#957;&#945;&#953; &#954;, &#952;&#961;&#953; &#952;, &#957;&#959; &#956;, &#959;&#946;&#959; &#955;, &#960; &#959; (= &#960;&#961;&#8057;&#962;),
+&#967;&#961;&#951;&#956;&#945; &#964;1). Pro &#7936;&#960;&#8056; exhibet etiam compendium singulare &#945;&lt; (p.27,23).
+		</div>
+		<div n="100121">
+			Editores
+		</div>
+		<div n="100130">
+			Talis igitur est papyrus unde Aristotelis librum anno MDCCCXCI
+primmum edidi, accuratius editione tertia anno MDCCXCII. editiones alias
+alii curaverunt: Herwerden et van Leeuwen (MDCCCXCI), Kailbel et
+von Wilamowitz-Moellendorff (MDCCCXCI semel et bis, et MDCCCXCVIII),
+Ferrini (MDCCCXCI), Blass (MDCCCXCII, MDCCCXCV, MDCCCXCVIII;
+quarta nunc prodiit), Sandys (MDCCCXCIII), Lowjagin (MDCCCXCV)2),
+patim etiam Haussoullier3) (MDCCCXCIII) et Hude4) (MDCCCXCII).
+papyrum ipsam contulit horum nemo nisi Blass, et pro editione Kailbelii
+et Wilamowitzii tertia Wilcken, ceteris editio phototypica praesto fuit.
+
+		</div>
+		<div n="1001300">
+			Fragmenta nova
+		</div>
+		<div n="100131">
+			Editionis hius ratio
+		</div>
+		<div n="100140">
+			In textu constituendo cautus fui. cum enim nullus dubitem, in memoriam uno codice servatam quin plures quam scimus errores se insinuare
+potuerint, persuadere mihi nequeo nos, nisi manifestus sit error, coniecturis
+adhibitis non plus damni quam auxilii esse adlaturos. Ubi manifestus est
+error, aut hiat papyrus, inter supplementa a viris doctissimis proposita
+elegi ut potui; paucissima et levissima mea addidi. supplementorum primum
+quemque auctorem in adnotationibus semper nominavi: si nomen abest,
+meum est. omino  hoc in mente habui, ut textum Aristotelicum qualis
+in papyro Londinensi exstat, certissimis tantum amotis erroribus, quam
+accuratissime ante oculos haberet lector. ergo si quid in codice mutavi,
+omnia vel levissima in adnotationibus notavi. taedio fortasse nonnullis
+erit, omnia quae in orthographia peccavit scriba alter (L2) ordine longo
+		</div>
+		<div n="100141">
+			1) Plura si quis velit, videat &#8222;observationes palaeographicas&#8220; Leeuveni in editione
+Batava (Lugd. MDCCCXCI), qui omnia ordine et numero disposuit.
+		</div>
+		<div n="100142">
+			2) Aristotelis &#8127;&#913;&#920;&#919;&#925;&#913;&#921;&#937;&#925; &#919;&#927;&#923;&#921;&#932;&#917;&#921;&#913; graece et russice St. Petroburgi (hanc non
+ipse vidi).
+		</div>
+		<div n="100143">
+			3) La constitution d'Ath&#232;nes avant Dracon (cc.I&#8212;III), Revue de Philologie, tom. XVII;
+etiam cc. LXIV&#8212;LXIX ibid., tom. XV.
+		</div>
+		<div n="100144">
+			4) &#913;&#929;&#921;&#931;&#932;&#927;&#932;&#917;&#923;&#927;&#915;&#931; &#913;&#920;&#919;&#925;&#913;&#921;&#937;&#925; &#928;&#927;&#923;&#921;&#932;&#917;&#921;&#913;: den historiske Del (kapp. I&#8212;XLI) udgivet
+med Fortolkning (Hauniae; idem Germanice Lipsiae).
+		</div>
+		<div n="100150">
+			exposita videre; sed in codice unico edendo operae pretium esse videbatur
+omnia semel referre; in ceterum eligat sibi quisque quod velit.
+		</div>
+		<div n="100160">
+			Quod ad ceteras adnotationes attinet, non necessarium putavi semper
+indicare quis primum recte verbum hoc vel illud in papyro esse aut viderit
+aut divinaverit. scio equidem nimirum in editione principi multos irrepsisse
+eroores, multa aliorum scientia et acumine postea restituta esse. textus
+autem, qualis nunc exstat, non unius hominis opus est; sed patem suam
+cuique in adnotationibus usque tribuere supervacaneum videbatur. itaque
+codicis lectiones, quales nunc esse iudico, imprimendas curavi, nihil adnotavi,
+nisi ubi aut lectio dbia est aut aliquid quod in codice non exstat
+in textum rettuli.
+		</div>
+		<div n="100170">
+			De quarto volumnie plura nonnulla sunt praefanda. in his laceris 
+		</div>
+		<div n="1001700">
+			De volu mine quarto
+		</div>
+		<div n="100180">
+			Testimonia amplissima e lexicographis aliisque scrptoribus sedula 
+		</div>
+		<div n="1001800">
+			Testimonia
+		</div>
+		<div n="100190">
+			Indices nominum et verborum (quales antea etiam Herwerden&#8211;Leeuwen 
+		</div>
+		<div n="1001900">
+			Index
+		</div>
+		<div n="100200">
+			Quae cum ita sint, quid restat nisi ut omnibus quorum auxilio hanc 
+		</div>
+		<div n="1002000">
+			Gratiarum actio
+		</div>
+		<div n="1002001">
+			1) De sortitione iudicum apud Athenienses (Gottingae, MDCCCXCIV).
+		</div>
+		<div n="1002002">
+			2) &#7944;&#952;&#951;&#957;&#8118;, tomm. X, XI, XIV, XV.
+		</div>
+		<div n="100210">
+			Datum Londini
+		</div>
+		<div n="100220">
+			Kal. Octobr. MCMIII.
+		</div>
+		<div n="100230">
+			Fridericus G. Kenyon.
+		</div>
+		<div n="100240">
+			Testimonia composui quaecumque repperi omnia: his addidi locos
+nonnullos qui utrum ex Aristotelis libello fluxerint necne homines docti
+adhuc disputant aut certe ambigunt, seclusi quae ab Aristotele aliena esse
+meo quidem iudicio certum est; qua in re larior quam parcior esse malui.
+verba scriptorum ita edidi, ut clare appareat, quid libri manu scripti exhibeant;
+in lexicographis et grammaticis et meis et Reitzensteinii et Bethii
+in Diogene Laertio Dielesianis copiis usus sum, ubi si quid discrepat ab
+lectione editionum adhuc pevulgatarum, id ex codicibus sumptum esse
+moneo; reliquorum auctorum verba ut ad fidem codicum recenserem, adii
+editiones et commentationes virorum doctorum eas, quae de libris manuscriptis
+aliquid referunt. restat ut ego quoque Hermanno Diels gratias
+debitas agam: qui huic quoque parti libelli patronus extitit strenuus et
+indefesus.
+		</div>
+		<div n="100250">
+			Datum Berolini
+		</div>
+		<div n="100260">
+			a. d. VII Kal. Nov.
+		</div>
+		<div n="100270">
+			Georgius Wentzei.
+		</div>
+		</body>
+    </text>
+</TEI>

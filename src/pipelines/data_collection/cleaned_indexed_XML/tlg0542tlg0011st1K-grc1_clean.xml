@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader xml:lang="eng">
+        <title xml:lang="lat">Onomasticon</title>
+    <author n="0">Julius Pollux</author>
+	</teiHeader>
+    <text>
+        <body>
+        <div n="10001">
+			I. Fragmenta de mensuris porrectis et
+quadratis.
+		</div>
+		<div n="100020">
+			1. E Iulii Pollucis onomastico (2. 157. 158).
+(Vide prol. &#167; 2.)
+		</div>
+		<div n="100021">
+			&#932;&#8182;&#957; &#948;&#8050; &#956;&#941;&#964;&#961;&#969;&#957; &#7956;&#1010;&#964;&#953; &#956;&#941;&#957; &#964;&#953; &#954;&#945;&#8054; &#948;&#940;&#954;&#964;&#965;&#955;&#959;&#1010;&#183; &#948;&#959;&#967;&#956;&#8052; 
+		</div>
+		<div n="1000210">
+			157
+		</div>
+		<div n="100030">
+			&#949;&#7984; &#948;&#8050; &#964;&#8056;&#957; &#956;&#941;&#947;&#945;&#957; 
+		</div>
+		<div n="1000300">
+			158
+		</div>
+		</body>
+    </text>
+</TEI>

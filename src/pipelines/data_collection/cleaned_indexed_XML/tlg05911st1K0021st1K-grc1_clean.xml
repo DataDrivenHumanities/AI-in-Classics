@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader xml:lang="eng">
+        <title>Odysseus</title>
+    <author n="0">Antisthenes</author>
+	<author n="1">&#913;ntisthenes</author>
+	</teiHeader>
+    <text>
+        <body>
+        <div n="1000">
+			&#913;&#925;&#932;&#921;&#931;&#920;&#917;&#925;&#927;&#933;&#931; &#927;&#916;&#933;&#931;&#931;&#917;&#933;&#931;.
+		</div>
+		<div n="100142">
+			&#959;&#7985;
+		</div>
+		<div n="100201">
+			&#7970;
+		</div>
+		<div n="100202">
+			&#958;&#8055;&#966;&#949;&#953;
+		</div>
+		<div n="100221">
+			&#7984;&#8061;&#957;
+		</div>
+		<div n="100222">
+			&#948;&#8050;
+		</div>
+		<div n="100241">
+			&#7938;&#957;
+		</div>
+		</body>
+    </text>
+</TEI>

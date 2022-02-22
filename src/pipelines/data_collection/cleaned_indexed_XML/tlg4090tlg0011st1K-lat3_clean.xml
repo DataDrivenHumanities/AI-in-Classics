@@ -1,0 +1,4227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader xml:lang="eng">
+        <title xml:lang="mul">Index In Cyrilli In XII Prophetas</title>
+    <author n="0">Philip Edward Pusey</author>
+	<author n="1">Cyrilli Archiepiscopi Alexandrini</author>
+	</teiHeader>
+    <text>
+        <body>
+        <div n="1001">
+			INDEX KEEUM.
+		</div>
+		<div n="10020">
+			Aaron, pro peccatis populi Mediatoris
+partem gerebat 71 e; Christi
+typus erat, Sanctuarium ingrediens,
+non vitulum faciens 366 b c;
+Aaron Mediator missus, insigne
+Divinae erga Israelem misericordiae
+diae exemplar 446 c ; Christi
+typus 446 e ; 675 c.
+		</div>
+		<div n="10030">
+			Abacuc, Propheta, gentes per Apostolos
+spoliandas praedicit 442 d;
+et peritia et Spiritu plenus 517 a;
+Judaeos justura judicium passuros
+ostendit 518 a; impios insectatur,
+Babyloniorum irruptionem
+praedicit 518 b; ipsius etiam
+Babylonis arrogantiam, et captivitatem
+518 c; item Redemptionem
+per Christum 518 d;
+miserorum oppressionem considerans,
+nimis longae patientiae
+incusat Deum 519 bc; de corruptione
+judiciorum conqueritur
+521 a; de judiciis eventuris,
+admiratione dignis, adraonet
+522 a ; Babylonios Judaeam invasuros
+praedicit, et describit
+522 e ; regem Nabuchodonosor
+describit 523 e ; Judaeorum finem
+extremum praedicit 525 d ;
+Jcchoniae captivitatcm 526 d ;
+reditum Judaeorum 527 bcj a
+Deo instructus ad judiciurn declarandum
+528 d ; Dei infinitam
+declarat puritatem 528 e ; Dei
+longanimam patientiam erga contemptores
+obstupescit 529 b ;
+de demonibus loqui videtur 530 b;
+item de genere humano toto peccante
+531c; visionemhabetChristi
+venturi 532a; et justos per fidem
+accepturi 534 b; arrogantes, sive
+Babylonios, sive Satanarn, e
+medio sublatos iri praedicit 534 c;
+536 b ; et Cyri, et Christi adventum,
+537 a ; et Chaldaeos et
+Satanara cupiditatis damnatos iri
+538 b e ; per figuras lapidum,
+Babylonis ruinam insinuat 540 a;
+sanguinolentiae damnatos iri
+Chaldaeos, item Judaeorum principes,
+affirmat 540 d ; quare
+temporum discrimen confundat
+541 d ; gentiura vocationeni
+praedicit 542 b ; item Pharisaeorum
+insaniam 543 b ; item
+Haereticorum fallacias 543 c ;
+confidentiae Babyloniorum iram
+divinam intentat 544 b ; item
+Pharisaeorum 545 e : idolorum
+
+
+		</div>
+		<div n="10040">
+			Abdias, eodem teinpore quo Joel
+vaticinatus 354 a; Idumeae desolationem
+praedicit 354 b ; quam
+sibi a Deo revelatam habuisse
+affirmat 356 b ; Idumaeis regioni
+suae fidentibus irridet 357 c;
+crudelitatem Idumaeorum in fratrem
+Jacob insectatur 358 a;
+359 c ; Dei judicium pariter crudele
+minitatur 360 b ; pugnam
+in valle Josajihat praedicit 360 c ;
+victoriam Judaeorum 361 a; subjectionem
+Idumaeae 361 b; extensionem
+regni Judaeorum, usque
+ad Idumaeam 361 e; et ad Galaaditim
+362 a ; ad Phoenicen
+362 c; ad Ephratam 362 d;
+denique ad quatuor ventos 362 e;
+post captivitatem, Sionis praedicit
+principatum 363 a.
+		</div>
+		<div n="10050">
+			Aboniinatio, idololatriae, sanguinolenta
+est 733 b c.
+		</div>
+		<div n="10060">
+			Abrabam, ideo quod in virtute et
+pietate vixerit, ipse, cum posteris
+suis, Deo placuit 16 b; virtutem
+strenuam exbibuit filium colligans
+158 e; charitatem, cum genero
+foedus faciens 259 d ; gentes
+fidentes pro filiis habet 408 a ;
+
+
+		</div>
+		<div n="10070">
+			Abstincntia, vinolentis, a Joele;
+luxuriosis, a S. Paulo commcn-
+datur 201 e.
+		</div>
+		<div n="10080">
+			Abyssus, de multitudine Angelorum
+dictum 566 c ; item de turba
+credentium 566 c ; item de toto
+genere humano 567 e.
+		</div>
+		<div n="10090">
+			Accarira, nomen urbis, ex Hebraea
+editione libri Amos abest 247 d.
+		</div>
+		<div n="100100">
+			Accaron, i. e. Eradicatio, exitio
+devovetur 595 e ; ad fidem conversus,
+tribunus fiet Judaeorum
+734 ab.
+		</div>
+		<div n="100110">
+			Accaronitae, Samariam et Judaeam
+lacerabant 249 e; Idumaeorum
+adjutores 257 c; 258 a.
+		</div>
+		<div n="100120">
+			&#8220; Accipere,&#8221; i. e. pro peccato
+72 b ; modo de populo, modo de
+sacerdotibus dictum 72 c; 206 e.
+		</div>
+		<div n="100130">
+			Accolere, insecurara, incolere, securam
+significat vitam 780 cd.
+		</div>
+		<div n="100140">
+			Achab, Rex Israelis, propter metum
+et perversitatem condemnatus
+14 a; item propter caedem innocentis
+Naboth 18 a; a rege
+Syriorum invasus, servatur 249 e;
+250 d ; luxuriae convincitur, domum
+eburneam faciens 286 d;
+Israelitas habuit imitatores scelerum
+suorum 451 de; sanguine
+et persecutione gaudebat 453 b.
+		</div>
+		<div n="100150">
+			Achar, de anathemate furatus, et
+furti convictus, lapidatur, cum
+omnibus suis 47 a c.
+		</div>
+		<div n="100160">
+			Achaz, Judae rex impius 8 e ; templum
+spoliat 9 a ; et polluit, filio
+per ignem translato 9 b ; 181 a ;
+ad propulsandos Syrios, Assyrios
+conducit 92 b; 145 cd; 256 &#945;;
+391 c; 457 d e; ab Aegypto
+opem petens, ironice Prudena
+appellatur ISGae; a Syriis devictus
+castigatur 391 c; 458 e;
+Ilaereticorum, infaiites Cbristi
+perdentium, typus 459 b.
+		</div>
+		<div n="100170">
+			Achor, i. c. Vallis pervcrsionis, Inferorum
+typus 46 e; 47 c.
+		</div>
+		<div n="100180">
+			Acquisitio Dei, timentes Deum
+863 b.
+		</div>
+		<div n="100190">
+			Acueie, cornua, sive gentes, quid
+sit 665 c d ; 666 d.
+		</div>
+		<div n="100200">
+			Adam, quibus malis naturam nostram
+subjecerit 95 d e ; exemplar
+peccatorum Israelis 99 c d ; spirituali
+gratia prophetiae non carebat
+priusquam transgressus erat
+227 e; Secundus, de Christo
+dicitur, quasi sit secundae generis
+humani primitiae 228 c; ejectionis
+causae fuit omnibus 472 e;
+quam peccati sui poeuam nobis
+intulerit 552 c.
+		</div>
+		<div n="100210">
+			Adama, urbs Sodomitica, igne coelesti
+absumpta 163 b.
+		</div>
+		<div n="100220">
+			Adamas significat, aut duritiam Assyriorum
+325 c; aut Dei Verbum
+immutabilem 325 d ; aut Christum,
+Lapidera electionis Angularem
+326 c ; murus adamantinus,
+Dei essentiam iinmutabilem 325 b.
+		</div>
+		<div n="100230">
+			Ader, Rex Syriae, contra Israelitas
+expeditionem suscepit 14 a; 457
+b ; duo et triginta reges ducit
+bocios 250 a ; urbes quam plurimas
+evertit 19 b ; in manus regis
+Achab a Deo traditus, ab eo male
+diraittitur 14 ad.
+		</div>
+		<div n="100240">
+			Admonitio, duplici modo, nunc suppliciis,
+nunc praemiis propositis,
+adhibenda est 151 e.
+		</div>
+		<div n="100250">
+			Adolescentes, idolis consecrati, artis
+magicae ministri 339 e; per
+Dan et Beersabee jurare soliti
+340 b; praedicuntur perituri
+340 c; roboris firraissimi typus
+340 d.
+		</div>
+		<div n="100260">
+			Adonis, sub nomine Thamrauz, a
+Judaeis adoratus 79 b.
+		</div>
+		<div n="100270">
+			Adoptio, filiorum Dei, Novi Testa-
+menti munus 101 a; in Christo
+datur 465 b; 470 d; 472 d;
+678 e; per Incarnationem comparata
+549 b; 718 a; Sioni, post
+Incarnationem extenditur 735 e;
+736 a.
+		</div>
+		<div n="100280">
+			Adrianus, lacessivit, non abduxit,
+Judaeos 350 c.
+		</div>
+		<div n="100290">
+			Adulatores, Samaritanis perniciosi
+erant 288 b.
+		</div>
+		<div n="100300">
+			Advena, non impune violatus 854 e.
+		</div>
+		<div n="100310">
+			Adventus, Christi, non aeternum
+tardandus 533 c; Exodo Judae-
+orum ab Egypto comparatur 641
+b; praedictus 670 c d; 799 a;
+tempus visitationis 735 c; item
+laetitiae 735 e; renovabit orania
+800 e; tempus correctionis 829 e;
+ad teinplum repentinus, a Malachia
+praedictus, quid fuerit 850 b;
+nulli despicabilis, incredulis in-
+&#8217;. tolerabilis 851 be; igni purgante
+comparatus 852 b.
+		</div>
+		<div n="100320">
+			Adversarii, Judaeorum, Samaritae,
+daemonibus comparati 235 c.
+		</div>
+		<div n="100330">
+			Aedificatio, templi, ardenti zelo confecta,
+Deo placet 634 c; qualis
+esse debeat 634 d e; neglecta
+bonis moribus nocet 635 a; templi,
+vel Ecclesiae, principium gratiae
+719 cd.
+		</div>
+		<div n="100340">
+			Aegyptii, puniti, Nilo in sanguinem
+commutato 23 d; item regno a
+Cambyse subacto 244 d; Apim,
+seu vitulum, adorabant 81 b; item
+vitulos plurimos 309 c; itera,
+multa idolorum millia 127 e ;
+magica gaudebant 128 a; a Bayloniis
+triumphati, gladio, fame-
+que obruuntur 129 e; equitibus
+sagittariis valebant 191 d; in
+poenam Samariae a Propheta provocati
+280 a; regnante Pharao
+Nechao Judaeain invadunt 282 b;
+cum Judaeis foedus faciunt, contra
+Babylonios 509 a.
+		</div>
+		<div n="100350">
+			Aegyptus ad occidentalem Judaeam
+respicit 322 d; regio pinguis et
+frumenti ferax 401 e; commota
+exeuntibus Judaeis 480 cd; Aethiopiae
+pars 601 d; typus erat
+spiritualis exitii 161 d; item, adversariorum
+Dei 248 e; item,
+servitii spiritualis 271 d; item,
+caliginis spiritualis 446 d; item
+carnalitatis 752 d; item impiorum
+perditorum 811 be; Caligo interpretatur
+753 a.
+		</div>
+		<div n="100360">
+			Aemath, Major, et Minor, urbes in
+Damasceno 312 e; Major nunc
+Antiochia, Minor Epiphania, dicitur
+313 a; Major, Assyriis subjecta
+322 d.
+		</div>
+		<div n="100370">
+			Aenigmata, apud Prophetas, saepe
+doctrinana insinuant 199 e.
+		</div>
+		<div n="100380">
+			Aequalitas, i. e. aequa inter hostes
+divisio, urbium Judaearum prae-
+dicitur 465 b; 466 a.
+		</div>
+		<div n="100390">
+			Aestas, pro calidis regionibus dicitur
+803 b c.
+		</div>
+		<div n="100400">
+			Aestus, pro tribulatione ferventiori
+dicitur 167 c,.
+		</div>
+		<div n="100410">
+			Aeterna, et poena, et laetitia
+41 e; poena 47 d; desponsatio
+51 e.
+		</div>
+		<div n="100420">
+			Aeternitas, futurac poenac 623 c.
+		</div>
+		<div n="100430">
+			Aethiopes, spiritualem caliginein
+significant 121 b; 563 b; 602 a;
+item, sanctae civitatis adversarios
+562 e; item Ethnicos tenebris
+jacentes 602 b ; pari loco cum
+Judaeis aestimati 348 b; Libyae,
+Judaeorum socii 509 c; nigris
+sunt cordibus; draconibus pascuntur
+563 b; et Australes, et
+Orientales, condemnati 601 d.
+		</div>
+		<div n="100440">
+			Afflictiones nobilitatem praebent
+774 c; Dei doraesticos cognitosque
+efficiunt 794 c.
+		</div>
+		<div n="100450">
+			Afflictionum terniiiius fama et deliciae
+401 c.
+		</div>
+		<div n="100460">
+			Agag, Rex Amalecitarum, quare
+daranatus fuerit 13 d.
+		</div>
+		<div n="100470">
+			Aggaeus, Propheta, Judaeorum post
+captivitatem fortunas tractat 232
+d; 626 e; oratione utitur perquam
+mystica 627 e; Dei ipsius
+verba edebat 628 c; et regi et
+summo sacerdoti alloquitur 629 a;
+socordiae populum condemnat 629
+c e; item templi foeditatetn 630 a;
+item ambitiosa domorum privatorum
+sculptilia 630 b; item mercatorum
+avaritiam 631 c; reditum
+Judaeorum spiritualiter de Redemptione
+interpretatur 631 e;
+632 a b; Redemptionis abundan-
+tera gratiatn describit 632 d;
+Israelis inertiam cum gentium
+alacritate comparat 633 a b; ad
+aedificationem terapli hortatur
+634 a; zelum Ecclesiae placere
+Deo affirmat 634 ce; templi neg-
+lectum, frugum inopia punitum
+iri minitatur 635 b e; Angelus
+nominatur, quippe Dei nuntius
+637 b; Dei Spirituni omnium
+boiioruin operum auctorem affir-
+mat 637 e; Judaeorum futuram
+convcrsionem praedicit 638 b;
+&#8217;hristuin Mediatorern ostentat
+638 c; castigat querimonias eo-
+rum, qui templi novi gloriam
+miiuiebant 639 a d; conditores
+conifortatur, Spiritum Dei una
+conditurum esse affirmans 639 e;
+motus gcntium adventu Christi
+futuros praedicit 640 d; et gloriam
+Divinam secundo templo
+poUicetur 641 de; eamque primi
+templi gloria majorem fore affirmat
+642 b; Pacem, scilicet Christum
+ipsum, ibi datum iri praedicit
+643 b; doctrinam tura Mosis,
+tum Christi, de sanctificatione, et
+contra de pollutione explicat 644
+645; conditorum templi quaestus
+intempestivos, et socordiam condemat
+646 a; a voluptate dehortatur
+646 d e ; negligentibus
+sterilitatem minitatur 647 b d ;
+strenuis fertilitatera pollicetur
+648 a c ; denique terrae motus
+tanquam post Incarnationera futuros
+iterum praedicit 649 b c ;
+iterum potestates mundi eversas
+iri 649 c d e; iterumque sub persona
+regis Zorobabel, Christum
+Ecclesiae Principem, et Conditorum
+Praesidem demonstrat 650 d;
+651 a.
+		</div>
+		<div n="100480">
+			Agni, duo quotidie immolati sancto
+tabernaculo 290 b; sprirituales,
+a Domino curati 746 d ;
+747 ac.
+		</div>
+		<div n="100490">
+			Agnus, Paschalis, Christi typus
+836 d.
+		</div>
+		<div n="100500">
+			Agnus spiritualiter sacrificatur usque
+hodie 617 d.
+		</div>
+		<div n="100510">
+			Agricolae, urbium lamentationem
+iterantes describuntur 305 c.
+		</div>
+		<div n="100520">
+			Agrostis, herba ineradicabilis, divini
+judicii typus 144 d.
+		</div>
+		<div n="100530">
+			Ala, divinae providentiae typus
+867 e.
+		</div>
+		<div n="100540">
+			Alapa, pro levi castigatione dictum
+160 a.
+		</div>
+		<div n="100550">
+			Albus, color, quare Graecis ascriptus
+701 d; Alexandri iraperium de-
+notat 702 c.
+		</div>
+		<div n="100560">
+			Alexander, aggeribus ad obsidendas
+urbes utebatur 526 e; apud Issum
+victor Persarum 702 d; ad vindicandam
+crudelitatem Babyloni-
+orum missus 703 a.
+		</div>
+		<div n="100570">
+			Alexandria, Aegypti caput, describitur
+509 b.
+		</div>
+		<div n="100580">
+			Alieni filii, qui fuerint 85 d; alieni,
+de diis falsis dictum 120 e.
+		</div>
+		<div n="100590">
+			Alienigenae, pro Palaestinis dictum
+732 e; convertendi ad fidem
+734 a; secundum Legem non
+ducendi in matrimonium 818 a;
+niulieres, tecnpore Malachiae, a
+Judaeis in matrimonium ductae
+840 e; interdictae per legem
+Mosis 842 a ; quam maxime
+corrumpebant maritorum mores
+842 e; uxores, haereticorum
+doctrinis illicitis comparantur
+847 b c; ab impiis, beati repu-
+tantur 861 a; a Deo, comburendi
+condemnantur 865 b; de
+idololatris et haereticis dictum
+865 c.
+		</div>
+		<div n="100600">
+			Altare, novum, a Rege Achaz exstructum.
+9 b.
+		</div>
+		<div n="100610">
+			Altaie Deo, quisque, vitam Deo
+totam oiferens 342 d; Domini, a
+Judaeis despectum, a Gentibus
+observatur 830 c d ; Altari sancto.
+omnes qui non reverentiam debitam
+servant, factis ipsis dicunt,
+Mensa Domini contaminata est
+830 e; lachrymis polluitur 844
+Altaria sub arboribus Nymphis
+exstructa 76 b ; Hieroboami,
+multa, Templi, duo 123 d;
+Ephraemitarum plurima 123 e;
+daemonum, ab haereticis dilecta
+124 b; pro peccatis dicta, quia
+sint peccati monumenta 147 d;
+in collibus stiucta, quid mali produxerint
+148 d; 150 a.
+		</div>
+		<div n="100620">
+			Amasias, Rex Jiidae, vir religiosus
+150 e.
+		</div>
+		<div n="100630">
+			Amasias, Sacerdos ad Bethel, Prophetae
+Amos accusator 247 a ;
+Prophetae Amos minitatur 276 a;
+vir profanus 327 b; impudentiae
+convictus 327 e; Proplietam accusat
+avaritiae 327 e; 328 e;
+et proditionis 328 a; falso 329 a;
+ipse minis urgetur 329 c; uxore,
+et filiis, et patria, privandus
+329 d.
+		</div>
+		<div n="100640">
+			Ammon in fluminibus habitans,
+pro Alexandria dictum 508 e ;
+509 e.
+		</div>
+		<div n="100650">
+			Ammonitae, ob crudelitatern et impietatem,
+Deo displicentes, ab
+Assyriis subacti 262 d e; haereticis
+comparati 263 a ; Judaeis
+afflictis insultantes devoventur
+exitio 598 b d.
+		</div>
+		<div n="100660">
+			Amnestia, peccatoribus per Christum
+praedicata 618 b.
+		</div>
+		<div n="100670">
+			Amon, Rex Judae, regis Manassis
+filius, mali corvi malum oviim
+281 b; patri impio impietate
+aequalis 580 a.
+		</div>
+		<div n="100680">
+			Amor, Dei, in nos quara &#8220; Robustus&#8221;
+sit 557 d.
+		</div>
+		<div n="100690">
+			Amorem erga Christum non habentes,
+cuni inimicis Ejus portionem
+habebunt 811 a.
+		</div>
+		<div n="100700">
+			Amorrhaei, gens barbara, saeva, et
+frequens, pro barbaris gentibus
+universaliter ponuntur 270 d ;
+cedro et quercui similes, Israeli
+tamen subjecti 270 e; hostiuni
+spiritualium typus 271 a.
+		</div>
+		<div n="100710">
+			Amos, Esaiae Prophetae pater 247 c.
+		</div>
+		<div n="100720">
+			Amos Propbeta, pastor fuit, et
+pastoritiis moribus 246 a; pastoribus
+primum, deinde Israelitis,
+prophetabat 246 b ; aram ad
+Bethel delendam praedixit 247 a;
+Oziae et Hieroboami II tempore
+247 d; Dei sermones se vidisse
+ait 249 a; sub nomine Hierosolymae
+totam nationein Judaeorum
+significat 248 d; 249 b; Synagogae
+peccata commemorat 248 d;
+Redemptionem Christi praedicit
+248 e; vicinis gentibus comminatur
+249 b ; metaphoris operi
+pastorum propriis utitur 252 c ;
+Svrae et Damasco minitatur
+253 d; itera Philistaeis urbibus
+256 b ; Tyriis, vendentibus Israelitas
+in servitutem, minitatur
+258 a b ; item Idumaeae,
+fratrem persequenti 259 e; item
+Ammonitis, in foeminas saevienti-
+bus 262 b; item Moabitis mor-
+tuos comburentibus 263 b; item
+Judae et Hierosolymae 264 c;
+item Israeli 265 c; totius populi
+condemnat, injustitiam 266 a;
+crudelitatem 266 d; superbiam
+267 b; fornicationes incestas
+268 a; sacrilegia 269 a e; et
+ingratitudinem 270 c; 271 b;
+introducit Deum interrogantem
+Israclitas 272 d; itcm ad ultioncm
+surgciitem 273 a; reprehendit
+Judaeos, electionis suae oblitos
+274 e; a falso sacerdote accusatur
+276 a; cornparat Deuin
+praemonentem impiis, leoni rugienti
+277 a; impios, avibus irretitis
+277 d ; Propbetas, tubae
+Divinae 278 c; Prophetas Dei
+voluntatem revclatam habere affirmat
+279 c; gentes in poenam
+Samariae vocat 280 a; Dei tamen
+niansuctudinem asserit 284 b;
+Christum, Bonum Pastorem, praemonstrat
+285 a; saccrdotes Leviticos
+ad libere praedicandum
+hortatur 285 c; Samariae eversionem
+minitatur 285 d; Basanitidis
+vaccis comparat, aut prin-
+cipes Israelis 287 d; aut mulieres,
+288 e; impietatem ad Baethel
+et Galgala, condemnat 289 b;
+item studiosam idolorura venerationem
+290 ae; laudat patientiam
+Dei, peccatores ad se
+revocantis 291 b; item morbis
+et variis suppliciis castigantis
+293 a; item ab igne rapientis,
+frustra 294 b; asserit majestatem
+Dei, omnia creantis, et Cbristum
+emittentis 295 c; Dei, non sua,
+verba loquens, Israelis apostasin
+luget 297 a c; item miseriam,
+vix decima parte relicta 298 a;
+relictos spe Divinae misericordiae
+consolatur 298 c; propositum
+habet, Deum supremum demonstrare
+299 e ; deceptis consulit,
+ad Deum verum ducens 300 d ;
+ne videatur injustus, causas increpationis
+suae profert, Prophetarum
+persecutionem 301 b c;
+
+
+		</div>
+		<div n="100730">
+			Anameel, nomen turrisHierosolymae
+804 e.
+		</div>
+		<div n="100740">
+			Ananias Discipulus Christi, ob fidem,
+
+
+		</div>
+		<div n="100750">
+			Ananias, Pscudoprophcta, Jcremiac
+sermonibus rcfragatus 175 c.
+		</div>
+		<div n="100760">
+			Anathemata, quo sensu nuUa in
+Ecclesia 805 c; ex instrumentis
+bellicis, Deo offerenda 812 c.
+		</div>
+		<div n="100770">
+			Angeli, Deum inter hominemque
+intercedere solent 52 d; omnes
+iiaturae suae facultates a Deo
+derivatas habent 55 d; legi justitiae
+Dei subditi 299 e; 300 a;
+describuntur Sodomam venientes
+305 d; caelum incolentes, ad
+tcrrarn pcr scalam descendentes
+345 bc; item Samariam deserentes
+397 d; ad Israelem tuendum
+a Deo constituti 489 a;
+490 c; Filio Primogenito, quam
+sint inferiores 554 e ; fabris comparantur,
+quasi Dei operarii
+665 d e; in perpetua sunt vigilia
+682 c.
+		</div>
+		<div n="100780">
+			Angelica, vita, justificatis in Christo,
+propria et possibilis 669 e.
+		</div>
+		<div n="100790">
+			Angelicis potestatibus nos circumsepit
+Jesus Christus 735 a.
+		</div>
+		<div n="100800">
+			Angelus, loquens in Prophetis, Verbum
+Dei 10 b ; Dei, centum octoginta
+quinque millia ex Regis Senacherib
+copiis nocte caedit 24 c;
+151 b; 323 e; 433 a; cum patre
+Jacob luctatus Christum praemonstravit
+169 c; loquebatur
+Mosi in monte Sina 310 a; de
+nuntiis Dei quibuslibet dictum
+637 a b; pro captivis in Babylone
+mediator fit 660 b e j ut pro ficu
+in Parabola 660 c; pro timentibus
+Deum 661 b; a Deo auditur
+661 d e; Zacbariae se oiFert
+videndum 658 b; 661 c; 663 c;
+664 b; quarc Hierosolymain funiculo
+metitus sit 666 d; pcrsonam
+Christi gerebat 673 a; et fidelibus
+Judaeis, ct Christianis, astat
+sacrificantibus 675 e; 676 c;
+quarc scmper stare soleat 676 c;
+dc domo Davidis dictuni 780 b;
+782 b; Malacbiae nomen 816 b;
+de ministris Dei dictum 817 a;
+de Christo 817 b; saepe Prophetis
+verbum ministrabat 818 e;
+quare de sacerdotibus dictum
+839 c; de Joanne Baptista dic-
+tmn, non natura, sed oillcio 849 c;
+850 a; Testamenti, de Christo
+praedicanti Evangclium dicitur
+850 cd.
+		</div>
+		<div n="100810">
+			Angiili, inurorum, pro expugnatio-
+nibus urbiuni captarum dlctutn
+591 e; itera, pro moenibus turritis
+611 b; deleti, desolationis
+typus 611 c.
+		</div>
+		<div n="100820">
+			Anima, hominis, ad transgressioncm
+prona 33 a; abjiciens gratiam, a
+Satana capietur 34 c; qualis sit,
+ex fructibus actionis prodit 44 b;
+peccatrix, mulieri improbae comparatur
+44 c; quae peccaverit,
+ipsa morietur 254 b; modo sit
+pura atque humilis, Deo templum
+est gratissimum 642 b.
+		</div>
+		<div n="100830">
+			Animal, (&#950;&#8183;&#959;&#957;) apud Prophetas,
+viventibus, non de Vita Ipsa, i. e.
+de Deo, dictum 549 d; duos in
+Tabernaculo Cberubim significat
+551 a; 552 c; foemineum pro
+peccato oiFerri potuit 833 c.
+		</div>
+		<div n="100840">
+			Animalia, rege carentia, quid significent
+68 b; apud Scripturas,
+rationem exhibent, mores docent
+212 a; pro dominis suis metaphorice
+dicta 808 d.
+		</div>
+		<div n="100850">
+			Animus, humanus divinis sermonibus
+nutritur 292 c.
+		</div>
+		<div n="100860">
+			Annus, Septimus, annus remissionis
+333 a; non sine gratiarum
+actione consummandus 859 c d.
+Antichristus, a Zacharia praedictus
+769 d; qualis sit 769 e; 772 b.
+		</div>
+		<div n="100870">
+			Antiocha, urbs eadem quae Aemath
+antea dicta fuerat, ab Antiocho
+nominata 313 a.
+Antiochus, Epiphanes, Judaeorum
+oppressor tertius 201 a; urbes
+duasinDamasceno condidit 313a;
+Judaeos lacessivit, non abduxit
+captivos 350 c ;quibus copiis
+Judaeam invaserit 748 d.
+		</div>
+		<div n="100880">
+			Apes, utilia ab inutilibus separantes,
+sacras Scripturas inter-
+pretantibus exemplo sunt, doctorum
+Ecclesiae sapientiorum
+typus 352 c.
+		</div>
+		<div n="100890">
+			Apiarii, fumo apes suffocare sole-
+bant 503 d.
+		</div>
+		<div n="100900">
+			Apis, Aegyptiorum Deusj sub vitulis
+Hieroboami colebatur 81 b;
+145 a; Lunae signum in fronte
+habebat 87 d.
+		</div>
+		<div n="100910">
+			Apostasis, quam sit credentibus
+damnosa 865 e.
+Apostoli, per Evangelium filios in
+Chiisto generant 25 a; confitebantur
+a Deo se vocari 231 e;
+243 e; proditorem comitem habebant
+232 a; gloriae Christi
+testati sunt toto orbe terrarum
+346 d; leonibus coniparati 442 c;
+contra Satanam praevalebant
+442 d; 564 d; equis coraparati
+564 b; item, jaculis 568 e; quo
+splendore fulgeant 569c; 740 d e;
+alioruni illuminatores 570 a; a
+persecutione tandem liberati, equis
+triumphanter frementibus comparati
+572 be; gladio Spiritus
+armandi praedicuntur 650 a; luce
+nou sua fulgentes, lucernis comparantur
+682 a; 683 d; fundamenta
+Ecclesiae 690 a ; sagittis
+Dei comparantur 740 a e ; item
+fulguri 741 d; contra Graecos
+etnissi praevaluerunt 742 b;
+Graecos superantes, equis comparantur
+747 c d; Graecos, ut
+lutum, conculcabant 748 b; Ephraimitis,
+quasi bellatoribus,
+comparati 750 a; quos haberent
+filios, sc. spirituales 750 d e;
+chiliarchis, et militibus coraparati
+776 bc; 777 c; item ardenti
+torri, et lampadi 777 cd; 778 b.
+		</div>
+		<div n="100920">
+			Appropinquare ad Deura idem est
+quod obedire, et fidere 606 c.
+		</div>
+		<div n="100930">
+			Aqua, multitudinis typus 101 d;
+488 b; pro populo indocto meta-
+phorice dictum 101 de; de fontibus
+Salvatoris quae sit 213 e;
+Sacri Baptismatis praedicta 224 e;
+idololatris in poenam negata
+291 e; sive data, sive negata,
+gratiae typus 292 c d; e mari in
+nubes evecta, et ibi mutata, gloriam
+Dei demonstrat 300 c; maris
+commota, Judaeorum tumultus
+significans 339 b; araara, per
+lignum sanata, legis per Crucem
+sanatae, typus 347 b; transiens,
+Judaeorum periturorum typus
+395 c; pro multitudine populorum
+488 b; 512 b; turbata, vitae
+hominum perturbatae typus 573 e;
+vitae symbolum 738 e; 739 b;
+&#8220; Viva, &#8221; de Spiritu Sancto dicitur
+801 d; &#8220; Redargutionis, &#8221;
+quos usus habuerit 807 b.
+		</div>
+		<div n="100940">
+			Aquila, tlivinac viiulictac syinboluiii
+117 d; grandis, iiiagnarum alarum,
+apud Ezccliielcm, rcgcm
+Assynorum significabat 199 e;
+pullos suos amans 405 g; pullos
+suos alis supervolitans, divinac
+rrovidentiae typus 867 e.
+		</div>
+		<div n="100950">
+			Aquila, trunslator Scripturae nominatur
+310 b; in Michaeam
+i. 11, pro Senaar, habet Scnan
+401 d.
+		</div>
+		<div n="100960">
+			Aquilo, simpliciter Assyriorum, spiritualiter
+Satanae, regionem significat
+222 c; 223 a b; 667 d;
+703 ab; item pro frigida affectione
+animi 668 a c.
+		</div>
+		<div n="100970">
+			Arabes, finitimi Judaeoruin, in valle
+Josaphat pugiiantes obruuntur
+239 e.
+		</div>
+		<div n="100980">
+			Ararat mons, aeternus, Israelitis exilii
+sedes diuturna 412 b.
+		</div>
+		<div n="100990">
+			Arbeseer, dux Samaritanorum, mittit
+interrogatum de jejunio 708 b;
+709 c; 710 d.
+		</div>
+		<div n="1001000">
+			Arbores, Deo irato, in silvis morientes
+describuntur 270 e.
+		</div>
+		<div n="1001010">
+			Arcades, natio quaedam apud Memphim,
+ut videtur, sita 129 e.
+		</div>
+		<div n="1001020">
+			Archangelus, a Deo, cum tuba, missus
+describitur 241 b.
+		</div>
+		<div n="1001030">
+			Arcus Christi, de Juda, et Apostolis
+dictum 740 a; impletus quid sit
+740 b; de doctoribus Ecclesiae
+dicitur 740 d; 741 a; Dei, ministri
+et Apostoli ejus 740 ae;
+741 a; Judas tribus 748 a.
+		</div>
+		<div n="1001040">
+			Area, impiorum, a Deo maledicta,
+contra piorum benedicta 648 a c.
+Argentum, pro doctrina intelligendum
+60 ab; igne purgatum, Ecclesiae
+afflictae symbolum 794 a b;
+852 b.
+		</div>
+		<div n="1001050">
+			&#8220;Arguentcs,&#8221; i. e. correctorcs, voluptuariis
+odiosi 646 d.
+		</div>
+		<div n="1001060">
+			Ariaiiis coiitradicitur 592 e.
+		</div>
+		<div n="1001070">
+			Arma, pro potentia dictum 498 d.
+		</div>
+		<div n="1001080">
+			Armatura, Dei, qualis sit, quo splendore
+fiilgcat 569 c d.
+		</div>
+		<div n="1001090">
+			Armenia, montana, exilii lucus Sanaritanis
+288 c.
+		</div>
+		<div n="1001100">
+			Armns victimae, roboris symbolum
+835 a b.
+		</div>
+		<div n="1001110">
+			Arrogaiip, pro Rege Nabuchodonosor
+dictum, item pro Satana
+534 d.
+		</div>
+		<div n="1001120">
+			Arrogantia, quam git Deo invisa, et
+cito peritura 534 e.
+		</div>
+		<div n="1001130">
+			Artaxerxes, Rcx Persarum, Judaeis
+amicus 233 e.
+		</div>
+		<div n="1001140">
+			Asa, Rex Judae, Ramam diriiit
+457 c.
+		</div>
+		<div n="1001150">
+			Asael, vicus in extremo Moutis Olivarum
+797 c.
+		</div>
+		<div n="1001160">
+			Ascalon, Idumaeis contra Judaeos
+auxilium ferens 356 c; desolandus
+praedicitur 594 e; 595 c e;
+597 e; Tyri exitio perturbatur
+732 cd.
+		</div>
+		<div n="1001170">
+			Ascensio, Christi, per visionem scalae,
+patri Jacob praemonstrata
+345 c; nostra, Christo ascendente,
+patefacta 346 b c; de surgentibus
+a doctrinis Graecorum ad sublimitatem
+Evangelii per metaphoram
+dicitur 425 c; de ingressu
+victoris cujusdam, e. gr. Cyri,
+dictum 496 d; relictorum ex
+Gentibus ad adorandum praedicta
+810 a.
+		</div>
+		<div n="1001180">
+			Asinus, Christum portans, quid significavcerit
+736 c; quid generaliter
+736 e; sub lege Mosaicae,
+quid 737 a; segnioris ingenii
+typus 809 c.
+		</div>
+		<div n="1001190">
+			Aspicere ad Deum, quid sit
+783 b.
+		</div>
+		<div n="1001200">
+			Assistentia, promptam Ecclesiae
+obedientiam exprimit 694 a ;
+eadetn Mosi ascribitur 694 b ;
+item quatuor ventis, seu mundi
+partibus 701 b.
+		</div>
+		<div n="1001210">
+			Assumptio, vaticinii in quosdani assumpti
+materies 476 ab; item
+praescientia prophetica, a Deo
+derivata 518 e; 524 b; verbi
+Domini, quid sit 729 b; 73&#959; bc;
+772 b; increpationem populi significat 818 d.
+		</div>
+		<div n="1001220">
+			Assur, Assyrius, significat Satanam,
+Principem hujus mundi 161 a;
+245 c; 438 c; 514 c; ilem Diabolos
+omnes, Ecclesiae oppugnantes
+438 d; item alienigenas
+quosvis 439 b; itcm Haereticos
+439 d; Verbo Dei superabitur
+440 ab.
+		</div>
+		<div n="1001230">
+			Assyrii, invadunt Samariam 8 ac;
+9 c; deinde Juducam 9 a; Hicrosolymam
+oppiignant 24 b; ab
+Angelo caesi 24 c; matres, filiosque,
+solo allidebant, sicut antea
+Madianitae 155 ae; ad Samariam
+ulciscendam a Propbcta provocati
+280 a; regnante Nabuchodonosor
+eam invadunt 282 d 
+usque ad Aemath venturi praedicuntur
+322 d; per Regem Gog
+describuntur, sub rege Senacherib
+ab Angelo caesi 323 e; intra
+fossam septi capiuntur 440 d;
+credebant se Judaeos vicisse, viribus
+puis, invito Deo 477 e;
+Samariam non nisi Dei auxilio
+ceperunt 487 e; exitio dcvoventur
+602 e; 604 b; foedis animalibus
+vastandi 6&#927;3 b ; arrogantiae
+convicti 603 e; 604 a; quare
+acui dicantur 665 c d.
+		</div>
+		<div n="1001240">
+			Assyrii comparati, feris quam saevissimis
+184 c; item catulis 185
+a; item locustis, a Joele 221 a;
+ab Anios 323 c; item equis foe-
+minas persequentibus 32&#959; c; item
+Nilo exundanti 334 e; item cursoribus
+et torrentibus 394 e; item
+smilaci, plantae cuidam serpenti
+487 b; item cornibus 665 a.
+		</div>
+		<div n="1001250">
+			Assyrius, nomine &#8220;Exitii,&#8221; quasi
+personae, propter exitialem naturam,
+descriptus 130 d.
+Astarte, abominatio Sidoniorum 3 c;
+i. q. Venus, in Hierosolyma culta
+78 b; item in Judaea 592 c.
+Astra ab Israclitis in deserto plurimum
+colebantur 309 d.
+		</div>
+		<div n="1001260">
+			Asylum, lege Mosaica fugitivis datum 629 a.
+Atbeismus, Judaeis quibusdam imputatur
+589 b; a Graecis etiam
+doctoribus condemnabatur 589 c.
+		</div>
+		<div n="1001270">
+			Attellabus, locustae species parva,
+descriptus 513 c.
+		</div>
+		<div n="1001280">
+			Auceps, dejiciens aves, Deum voluptarios
+deturbantetn significat
+277 e.
+		</div>
+		<div n="1001290">
+			Audacia tutamen cordis 184 e.
+		</div>
+		<div n="1001300">
+			Augures, mendacissimi et iniquissimi
+describuntur 281 a.
+		</div>
+		<div n="1001310">
+			Augustus Caesar Judaeam populatur
+75 c.
+		</div>
+		<div n="1001320">
+			Aurum, spirituabum divitiarum typus
+807 c; impiis a Juda rapiendum
+808 ac; igne purgatum,
+typus Ecclesiae vasculorum
+852 bc.
+		</div>
+		<div n="1001330">
+			Auspicia, idololatriae sunt conjuncta
+75 b; insaniae genus 75 d.
+Auster, ventus deserti, Judaeis ini-
+
+
+		</div>
+		<div n="1001340">
+			Avaritia, avaris ipsis damno est 302
+c; 608 a; et Atheismus cst, ct
+inhumanitas 302 c; Judaeoruin
+domos evertebat 405 d; Deo invisa
+712 d; Deum ultorera habebit
+vclocem 856 ab.
+		</div>
+		<div n="1001350">
+			Avcrsio facics Dci, irae initiura ct
+exitii hospcs 378 a; in miseria
+esse facit 415 a.
+		</div>
+		<div n="1001360">
+			Aversio oculorum Dei, irae indicium
+529 a.
+		</div>
+		<div n="1001370">
+			Aversione punit peccatorem et superbum
+Deus 775 e.
+		</div>
+		<div n="1001380">
+			Aversionem, ira sequitur 265 e;
+776 a
+		</div>
+		<div n="1001390">
+			Avertit faciem a non metuentibus
+Sibi offendere Deus 827 b.
+		</div>
+		<div n="1001400">
+			Aves, migrationibus suis mores Judaeorum
+exhibuerunt 137 c;
+captae laqueis, voluptatis captivos
+significant 277 e; vanae
+superbiae typus 330 e.
+		</div>
+		<div n="1001410">
+			Azael, Rex Syriae, Israelitas in
+valle Jezreel superat 19 b; 22 d;
+200 d; iram divinam in Hierosolymam
+exequitur 250 a; iirbes
+munitas igne succendit, captos
+trucidavit 255 b.
+		</div>
+		<div n="1001420">
+			Azarias sive Ozias, Rex Judae, vir
+pius, sed non usquequaque 6 e;
+7 a; sacerdotium invadens, lepra
+castigatur 7 b c; 251 b; in libro
+Paralipomenon altero describitur
+vir strenuus 251 c; per terrae
+motum admonitus 797 d.
+		</div>
+		<div n="1001430">
+			Azarias, alias Zacharias, Rex Israelis,
+ex domo Jehu 7 c d; 19 a; 391 d.
+		</div>
+		<div n="1001440">
+			Azotus Idumaeis contra Judaeos
+opcm fcrt 249 c; 256 c; Judaeae
+vicina ct confinis fuit 280
+c; copias latronum contra Samariam
+mittit 284 a; projicienda
+praedicitur 594 e; 595 ce.
+		</div>
+		<div n="1001450">
+			&#914;
+		</div>
+		<div n="1001460">
+			Baal, idolon Aminoiiitarum 3 c;
+de mcdio periturus praedicitur
+582 a.
+		</div>
+		<div n="1001470">
+			Baalim, quid velit 49 d; 50 a.
+		</div>
+		<div n="1001480">
+			Baasa, Rex Israelis, Ramam aedificat
+457 b; cum Syriis pugnat
+457 c.
+		</div>
+		<div n="1001490">
+			Babylon, a Cyro capta 29 b; 165 b;
+294 d; regni Satanae typus 235
+b; 547 e; confusioncm significat
+432 d; insultatrix et arrogans
+civitas 461 d; praeter spem capta
+et excisa 546 c; nulli plorata, ab
+omBibus insultata, cecidit 575 e;
+Confusio interpretata, pro peccato,
+quasi confusione animi, dictum
+668 b; 753 b.
+		</div>
+		<div n="1001500">
+			Babylonia, regio fluviis abundans
+564 e.
+		</div>
+		<div n="1001510">
+			Babylonii, non permittebant captivis
+sanctas legis caerimonias 41 b;
+frugum copiam, more ferarum
+devorabant 43 b; propter saevitiam
+bestiis comparati 50 d;
+525 ab; 530 a; 540 d; Samariam,
+Hierosolymam, Aegyptum
+nullo negotio evertunt 129 c;
+&#8220;filii aquarum&#8221; vocantur,
+piscibus propter timiditatem comparati
+165 d; Cyri adventu perteriti
+165 e; omnia vastantes
+diem Domini representabant 210
+e; crudelitatis insolitae accusati
+221 d; more railitari, in victoria
+vociferabant 262 e; nudi armatis
+
+
+		</div>
+		<div n="1001520">
+			Balac, Rex Moabites, execrabilis
+75 a; quid fecerit contra Israelitas
+447 b d; magica utebatur,
+Babylonios imitatus 506 c;
+524 c.
+		</div>
+		<div n="1001530">
+			Balaam, Propheta, Israeli ingrato
+exprobatur 447 b d.
+		</div>
+		<div n="1001540">
+			Baptisma sanctumjanua ingressionis
+ad Christura 85 c; salutare, ab
+Haereticis contemptum 124 b;
+aquam viventem dat 224 e;
+peccati abolitio, purificationis effectrix
+465 b; Judaeorum in
+Mari et Nube, nostri typus 469 b;
+unum, et unionis inter Christianos
+vinculum 491 d; Baptisma
+Spiiitus Sancti et iguis quid
+778 a; Catechumenis, oneris
+peccati levatio est 780 e; fons
+purgationis praedicitur 786 e.
+		</div>
+		<div n="1001550">
+			Baptista vir unicus, quo non surrexit
+major, 242 b; Christum
+praedicans, per Cyii nuntios,
+
+
+		</div>
+		<div n="1001560">
+			Beelphegor, i. q. Priapus 77 d;
+81 b; idolon formae pudendae
+137 a; propter deformitatem dictus,
+&#8220;Arae risus&#8221; 326 a; a
+veneratus 592 c; a filiabus
+Moabitarura, Judaeis colendus
+importatus est 8 13 b.
+		</div>
+		<div n="1001570">
+			Beelzcbub, Pharisaeos contra Christum
+seduxerit 415 b.
+		</div>
+		<div n="1001580">
+			Barachias, Zachariae pater 653 b.
+		</div>
+		<div n="1001590">
+			Barbari ad iram propensi 370 e.
+		</div>
+		<div n="1001600">
+			Basanitis, vacca, typus luxuriae et
+libidinis, Samaritanorum principum
+et mulierura 287 b; 289 a;
+nomen, quid significet 469 d;
+regio, diminuta, omen Ninevitis
+exitii sui 481 cd; florentium
+regionum typus 482 e; 483 b;
+pro Judaeis Christum persequentibus
+dictum 483 a; item metaphorice
+pro optimatibus 483 c;
+regio et gleba et arboribus, foecundissima
+756 a.
+		</div>
+		<div n="1001610">
+			Beeleraus (Vide 3 Esdr. ii. 15 &amp; c)
+233 e; 627 a.
+		</div>
+		<div n="1001620">
+			Bel, idolon Babyloniorum 50 b.
+		</div>
+		<div n="1001630">
+			Bellura, quibusdara favet 508 a;
+Romanum praedicitur 773 c.
+		</div>
+		<div n="1001640">
+			Benadad, Rex Syriae, obsedit Samariam
+249 e; 250 a; vide
+Ader.
+		</div>
+		<div n="1001650">
+			Benedictio Abrahae, est omnium
+in Christo fidentium 473 b; et
+Israelitis et nobis promissa 722 d;
+723 e.
+		</div>
+		<div n="1001660">
+			Benedictio ficta judicum Judaeorum
+damnata 759 d; sine obedientia
+vana est 759 e; Judaeorum,
+a Deo maledicitur 834 a;
+Dei, revertentibus ad Dcum promissa
+859 e ; viri, cst, quae habet,
+cominunicare 860 d.
+		</div>
+		<div n="1001670">
+			Benedictio mystica 561 e. Vide
+Sacrificium Incruentum.
+		</div>
+		<div n="1001680">
+			Benjamin, non defccit, aliis tribubus
+doficientibus 5 b; pro regno
+duorum tribuum dictum 5 c;
+quo sensu, mente excesserit 88 a;
+89 b; Sionem contemnens rephrehenditur
+311 a; 314 b; nomen
+portae Hierosolymae angularis
+804 e.
+		</div>
+		<div n="1001690">
+			Benjamitae, ad Gabaam quid commiserint
+136 a; quomodo poenas
+dederint 136 b; propter concubinam
+Levitae violatam quae passi
+sint 456 e; 457 a.
+		</div>
+		<div n="1001700">
+			Bersabee, plerumque ad significandos
+Australes Judaeae fines usurpatur
+340 b.
+		</div>
+		<div n="1001710">
+			Bestiae, quo sensu apud Hoseara
+sint intelligendae 43 a; 50 d;
+de ferocissimis hominum symbolice
+dictum 66 e; iram Dei exprimunt
+93 a; urbem vastantes,
+exitii typus, 603 b; item deamonum
+figura 603 d.
+		</div>
+		<div n="1001720">
+			Bethel, domus Dei, item domus
+vituli 79 d; 144 e; 171 c; domus
+On, i. e, Solis 145 a; domus
+vanorum, i. e. idolorum 255 d;
+exitio devovetur 285 c; 286 c;
+299 c; praecipuum idololatriae
+Sanctuarium 289 b; 299 b; 328 a.
+		</div>
+		<div n="1001730">
+			Bethlehem, urbs Levitarum, tribus
+Judae 134 b; regni Christi
+sedes praedicta 434 d; 435 c;
+urbs Australis, a Thaeman, Australi
+regione, praemonstratur
+553 e.
+		</div>
+		<div n="1001740">
+			Blasphemia, lege Mosis, lapidatione
+
+
+		</div>
+		<div n="1001750">
+			Bona, carnis peritura, spiritus aeterna
+469 a.
+		</div>
+		<div n="1001760">
+			Boni, ignaviae convicti 82 a.
+		</div>
+		<div n="1001770">
+			Bonum, quaerendum oranibus vivere
+volentibus 304 e.
+		</div>
+		<div n="1001780">
+			Boreae terra, dispositionem animi
+mundanam 668 a,
+Brachium, potentiae symbolum 771 b;
+brachium victimarum, quare Deo
+datum 771 c.
+		</div>
+		<div n="1001790">
+			Bruchus, locustae genus perniciosum
+330 c; grandine et pluvia gravatus,
+perit 512 e.
+		</div>
+		<div n="1001800">
+			C
+		</div>
+		<div n="1001810">
+			Caeca animalia, quare non Deo
+offcrcnda 826 e.
+		</div>
+		<div n="1001820">
+			Cainus, patrem habuisse Satanam
+fingitur 420 c; detcriora Deo
+dabat 826 d.
+		</div>
+		<div n="1001830">
+			Calmuitates, Roniani belli praedictae
+230 d; acerbissimae, per obscurationem
+solis indicatae, 410 b;
+torrenti praecipiti comparatac
+335 c.
+		</div>
+		<div n="1001840">
+			Calainus, mensorius Ezcchielis, quid
+significaverit 805 a.
+		</div>
+		<div n="1001850">
+			Calix, Dei, pro ira Divina dictum
+544 d; non evitabilis 544 e.
+		</div>
+		<div n="1001860">
+			Calvitium, in opprobrium Judaeorum
+praedicitur 336 c.
+		</div>
+		<div n="1001870">
+			Caiuflus, petulantiae typus 809 b.
+		</div>
+		<div n="1001880">
+			Campi, doctores, e caelo irrigatos
+pecoraque nutrieiites, significant
+224 b.
+Campus, pro faciliori quovis negotio,
+item pro viris buniilibus dictum
+558 bc.
+		</div>
+		<div n="1001890">
+			Candclabrum, Zachariae ab Angelo
+deuionstratum, Ecclesiae typus
+682 a; 683 ab; in Tabernaculo,
+a tergo lucem non dedit 684 b;
+687 a; 692 d; 693 e.
+		</div>
+		<div n="1001900">
+			Cantharus, modo insecti, modo trabis,
+nomen 540 c.
+		</div>
+		<div n="1001910">
+			Cappadoces, in Palaestinam coloni
+deducti 596 c.
+		</div>
+		<div n="1001920">
+			Captivitas, post Babyloniam, nulla
+fuit Israeli 491 b; et Aegyptia,
+et Assyria, spiritualis captivitatis
+typus 752 d; 754 c; peccati, per
+Christum amovetur 753 c; 754 d.
+		</div>
+		<div n="1001930">
+			Captivitates Judaeorum numcratae
+304 c.
+		</div>
+		<div n="1001940">
+			Carbo Esaiae Prophetae quid 778 b.
+		</div>
+		<div n="1001950">
+			Carmel, pro universa Judaea dictum
+253 b; mons summus, latebrarum
+plenus 343 c; quid significet
+469 d; quo seiisu diminutus
+481 c; typus prosperitatis 482 e;
+item Judaeorum Cliristo imminentium
+483 ab; item metaphorice
+quorumvis principum 483 c.
+		</div>
+		<div n="1001960">
+			Carnis amor efficit, ut neque fidem
+teneamus neque pie in Christo
+vivamus &#948;&#8057;&#964;&#8217; a.
+		</div>
+		<div n="1001970">
+			Caro, in Christo subjcctus 688 b;
+quo sensu tabescat, hostibus Dei
+806 d e; peccatorum carnalium
+poenas luct 807 c; quam contra
+Spiritum pugnet 867 e.
+		</div>
+		<div n="1001980">
+			Castigante Deo; amarum, essc supinum,
+sensum abjicere, mala
+adhuc pejora inferet 294 a.
+		</div>
+		<div n="1001990">
+			Castigatio, amoris Divini indicium
+159 e; credentibus non acerba
+160 a; sapientibus fructuosa
+444 a.
+		</div>
+		<div n="1002000">
+			Catechumeni, ante Baptisma, quo
+statu sint, quo postea 780 e;
+781 a; non ab Ecclesiis exclusi,
+Deo laudato 825 d.
+		</div>
+		<div n="1002010">
+			Catuli lconum, pro Satrapis Assyriae
+dictuin 502 c.
+		</div>
+		<div n="1002020">
+			Cedron, rivulus, Cyrillo auctore,
+rivus Ccdrorum 244 b.
+		</div>
+		<div n="1002030">
+			Cedrus Libani, splcndoris saecularis
+typus 483 c; itera Sanctorum
+superna cogitantium 545 b;
+753 c; itcm sacerdotuiu 545 c;
+755 b; pro Judaea ponitur
+785 b c.
+		</div>
+		<div n="1002040">
+			Chalanno, urbs Persarum, in Amos
+vi. 2. secundum Hebraeos nominata
+313 b.
+		</div>
+		<div n="1002050">
+			Chaldaea, quare terra Aquilonis
+dicatur 66 d.
+		</div>
+		<div n="1002060">
+			Chaldaei, propter iramanitatem belluis
+comparati 540 d; quam
+gloriam primum, quam deinceps
+miseriam, experti sint 541 e;
+542 b; plus solito sanguinarii
+710 c; 702 c; poenas dederunt,
+Cyro vastante 703 b.
+		</div>
+		<div n="1002070">
+			Chamaeleontes, meniorantur 602 d;
+603 b.
+		</div>
+		<div n="1002080">
+			Chanaan, i. e. Chanaanaeis similis
+173 b; 174 a; item inimicus
+misericordiae 174 b; terrae caelestis
+typus 469 c; pro Phaenicibus
+dictutn 596 e.
+		</div>
+		<div n="1002090">
+			Chananaei, quam multae gentes pro
+Israel ceciderunt 522 b; probri
+loco, de Judaeis dictum 588 a;
+inter eos usque ad Cyrilli tempora,
+tanquam oves vivebant secundum
+Mosis legem Judaei 760 e;
+761 a; Chananaei, sc. Gentes
+in caulam Christi per fidem
+vocandi 765 cd; 768 a; per
+legem Mosis, non solutam, instructi
+sunt 768 b d; pro idololatris
+positi, in Ecclesia cessabunt
+814 c; 815 c.
+		</div>
+		<div n="1002100">
+			Clmrismata, a Christo omnia 224 e;
+justificatis in Christo quanta sint
+669 d e; omnibus ct locis et
+temporibus data 803 c.
+		</div>
+		<div n="1002110">
+			Chaiitas, multurum rcfrigescet
+222 c; lcgis plenitudinem complectitur
+302 e; a Cbristo, et a
+Paulo, rcbus omnibus praeposita
+331 e; radix omnium virtutum
+332 a; erga Deum, fidei, orga
+homincs, justitiae, testiinunium
+334 b; boni studiosis, a Deo
+datur 334 c; erga Deum, vera
+est ea, voluntatem ejus sequi
+447 e; in homines, optimum est
+et Deo acceptissimum sacrificium
+449 a; obedientiam periicit
+594 bd.
+		</div>
+		<div n="1002120">
+			Charran urbs bellicosa, Damasco
+propinqua 255 d.
+Cherubim, in Tabernaculo, quare
+versus propitiatorium spectaverint
+550 e; 552 c.
+		</div>
+		<div n="1002130">
+			Chiliarcbae, de Apostolis dictum
+776 ab.
+		</div>
+		<div n="1002140">
+			Chiram, Rex Tyriorum, Salamonem
+in templo aedificando adjuvat
+258 e.
+		</div>
+		<div n="1002150">
+			Chorda, pro cantu triumphali dictum
+509 d.
+		</div>
+		<div n="1002160">
+			&#967;&#961;&#951;&#963;&#964;&#959;&#949;&#960;&#949;&#8150;&#957; simulate, nec a voluntate
+sua cessare, non propitium
+Deum facit 408 e; ad Deum peccatores,
+non omnino inutile si non
+sine pudore et faciei confusione
+409 e; 410 c.
+Christiani, per ignaviam scandali
+occasionem praebent 82 b; moerore
+carent 91 b; carne mortui,
+spiritu vivunt 222 c; Satanae
+cedentes, steriles fiunt, Christo,
+fertiles 225 c; divites facti per
+40
+
+
+		</div>
+		<div n="1002170">
+			Christus, peccatoribus indulgens, in
+Osea nubente intelligendus 15 d;
+17 a. Christus, innocentium caedem
+ulciscitur 19 c. Christus,
+verum Dei semen in puero Jezreel
+figuratur 20 d; item in
+Naboth occiso 20 e. Christus,
+resurgens quid fecerit 22 e.
+		</div>
+		<div n="1002180">
+			Christus, auctor Regenerationis
+25 a. Christus, verus Deus, verus
+Homo 26 e. Christus, pro nobis
+passus est 27 a. Christus, sub
+nomine Davidis dictus 29 e.
+Christus, ab Hosea praedictus
+45 e. Christus, inest cordibus
+sanctorum 46 e. Christus, reddet
+unicuique secundum opera
+sua 47 d. Christus, ipse Dominus,
+Homo similis nostrum factus
+52 e. Christus, Mediator Dei, et
+hominum peccatum sustulit 53 b.
+Christus, qua justitia judicabit
+54 b. Christus, Verus Dei Filius
+56 c. Christus, pro universa
+hominuin salute crucifixus 61 e.
+Christus, quo sensu sit manifestatio
+et Veritas 62 b. Christus,
+semen Davidis 62 e. Christus,
+quae passus fuerit praevisa 65 a.
+Christus, idem cum Patre 65 b.
+Christus, quod falso testimonio
+damnandus esset praevisum 68 a.
+Christus, lux mundi et scientia
+69 d, Christus, Mediator, a sacerdotibus
+Legis praemonstratus
+71 c; item ab Aarone 71 e; ab
+ipso Mose 72 a. Christus, per
+fidem etBaptisma solum adeundus
+85 b. Christus, per &#8220; Faciem &#8221;
+significatus 94 c. Christus, figura
+substantiae Patris 94 d. Christus,
+resurrexit secundum Scripturas
+94 e. Christus, linamento gratiae
+vulnera naturae sanat 95
+d e. Christus, resurgens, nos
+facit resurgere 95 a; et coram
+Deo stare 96 b. Christus,
+fons et luminis et gratiae 96 c.
+Christus, per pluviam significatus
+97 b, Christus, Israelis sanguine
+prognatus 98 b. Christus, Homo,
+nostri similis 98 c. Christus, quo
+sensu misericordiam, non sacrificium,
+velit 98 d. Christus, Unus
+cuni Patre 99 a. Christus, tollit
+peccata, et fide justificat 99 b;
+100 a. Christus, a Judaeis oppressus,
+Sicimitis comparatur
+105 c. Christus, nomine Emmanuelis
+insignitus 107 e. Christus,
+in ministris suis ipse oppugnatur
+141 b. Christus, fons gratiae
+142 d. Christus, ab Angelo, cum
+Jacob luctanti, praenionstratus
+169 c. Christus, et Judaeis, et
+omnibus, Redemptionem tulit
+187 b c d, Christus, praedicatur
+
+
+		</div>
+		<div n="1002190">
+			Christum ad sanctificationem et
+participationem vitae proponentes,
+operum thymiama bonorum Illi
+offerimus 854 a.
+		</div>
+		<div n="1002200">
+			Cilicoim, vestimenti genus, poenitentiae
+symbolum, pseudoprophetis
+usitatum 790 b.
+		</div>
+		<div n="1002210">
+			Circumcisio, naturam carnalem humi
+deprimens, cum subliraitate Evengelii
+comparatur 424 d; quae sit
+vera 469 e; 772 c; eam agnoscere
+quid sit 470 b; cum praeputio in
+unionem spiritualem coramista in
+Christo 473 b; spiritualis quae
+sit 494 e; a Sephora, et a Jesu
+post Mosen facta, petra adhibita,
+typus Christi, 559 a; spiritualis,
+circumcisos Christi possessiones
+facit 672 c.
+		</div>
+		<div n="1002220">
+			Civile bellura, in supplicium Israelis
+praedicitur 452 b.
+		</div>
+		<div n="1002230">
+			Civitas, quaevis per invocationem
+Divini Nominis salvari potcst
+449 e; nulla per fraudem adjuvatur
+450 c; Dci, per Hierosolyman
+adumbrata, sanctis patefacta
+548 ab.
+		</div>
+		<div n="1002240">
+			Clamor nequitiae ad Deum surgit,
+quid 369 b.
+		</div>
+		<div n="1002250">
+			Clauda, aniraalia quare non Deo
+offerenda 826 e.
+		</div>
+		<div n="1002260">
+			Clausura, serpentum, pro Inferno
+dictum 472 d.
+		</div>
+		<div n="1002270">
+			Clavus, ex ipsa Domini Cruce, a
+Constantino veneratus 813 a.
+		</div>
+		<div n="1002280">
+			Clibanus, idololatriae fervorem exprimit
+109 b; 110 e; judicii
+divini signum, alienigenis paratur
+865 a b; itera idololatris, et
+Haereticis 865 c.
+		</div>
+		<div n="1002290">
+			Cocta, cum vinaceis, sive uvis passis,
+oblata diis alienis 59 b.
+		</div>
+		<div n="1002300">
+			Coelum, pro Angelis coelum habitantibus
+dictum 345 b.
+		</div>
+		<div n="1002310">
+			Colles, sacrificiis dediti, occasionem
+idololatriae dederunt 148 e; pro
+Sanctis insignioribus secundi ordinis
+dictum 352 c; pro optimatibus
+erainentioribus 445 cd;
+pro principibus Synagogae 560 e;
+item pro praepositis Ecclesiae
+561 a; quare Aeterni 561 b.
+		</div>
+		<div n="1002320">
+			Colligatio, a nutricibus infantiura, a
+precantibus, et sacra facientibus.
+usitata 158 d.
+		</div>
+		<div n="1002330">
+			Colores, alii alia exprimunt aenigmata
+659 a d e.
+		</div>
+		<div n="1002340">
+			Columba, lamentationis propter
+timorem celatae figura 500 b;
+pulchritudinis typus 605 c; item
+fidelitatis, quodnidorelicto semper
+revertitur 605 d.
+Commotio, terrae facta Judaeis ab
+Aegypto exeuntibiis 480 c; montium,
+Deo facillima 482 b; item
+totius mundi 482 c.
+		</div>
+		<div n="1002350">
+			Communicantibus quac praemia,
+qiiales frugcs corda quasi terra
+proferent, Deo irrigante 860
+de.
+		</div>
+		<div n="1002360">
+			Communio, Sanctorum cum Deo
+52 d; non est nisi per Christum
+53 b; ad humanam virtutem
+necessaria 88 b c; per Spiritum,
+Christi munus 101 a; omnino
+servanda 137 a; imprimis ad
+gratiam necessaria 142 d; 160 c;
+sine Sanctitate nulla est 163 d;
+vere desiderantibus solum datur
+172 e; satietatem non habet
+195 a; cum Patre, et Filio,
+spiritualis et perpetua 491 d;
+nuUi bono comparanda 636 e;
+panis Divini mystica est 688 c.
+		</div>
+		<div n="1002370">
+			Commutationes, i. e. corrupti judicii
+merces iniqua, condemnatae
+303 c.
+Conceptio, spiritualiter de peccato
+dictum 186 a.
+		</div>
+		<div n="1002380">
+			Concisio, a sacerdotibus idololatris
+usitata 115 b; 118 a; 124 a,
+Conclusio cordis, pro fiducia dictum
+184 e.
+		</div>
+		<div n="1002390">
+			Concussio, pro malo inevitabili
+dictum 479 b; item pro Noachi
+diluvio 479 c; item pro Christi
+Incarnatione 479 e.
+Condemnatio, peccati, in Adamo
+promulgata, in Christo toUitur
+552 c.
+		</div>
+		<div n="1002400">
+			Confessio, sine emendatione vitae
+est nihili 408 d; cum vera erubescentia,
+magni 410 c; secundum
+Legem pro voluntariis oblationibus
+dictum 290 e.
+		</div>
+		<div n="1002410">
+			Confidentia, carnalis reprehenditur,
+spiritualis laudatur 511 d; 513
+c d; fidelibus omnibus convenit
+723 a; 724 b.
+		</div>
+		<div n="1002420">
+			Conflatilia, quo sensu instar sepulchri
+quibusdam fuerint posita 492 d.
+		</div>
+		<div n="1002430">
+			Conflatorium, de Ecclesia metaphorice
+dictum 767 c; de gratia
+Dei purgatoria dictum 852 b c.
+		</div>
+		<div n="1002440">
+			Congregatio, pro concordia animorum
+dictum 414 e.
+		</div>
+		<div n="1002450">
+			Congregationes,i.e. daemonum malorum,
+per Resunectionem Christi
+dissipatae 615 d.
+		</div>
+		<div n="1002460">
+			Conjugium, vide Matrimonium.
+Connubium, spirituale, descriptum
+52 b.
+		</div>
+		<div n="1002470">
+			Consecramur Deo, amorem erga
+Illum excolentes et voluntatem
+Illius facere exoptantes 853 c.
+Consecratio, vera spiritualis describitur
+853 c.
+		</div>
+		<div n="1002480">
+			Consolatio, nuUa non Domino nota
+188 b; vera, est in Christo
+188 c.
+		</div>
+		<div n="1002490">
+			Constantinus, Iraperator quem honorem
+Cruci dederit 812 e; laudatur
+propter pietatem insignem
+813 b.
+		</div>
+		<div n="1002500">
+			Consummatio, pro calamitate inevitabili
+479 b; pro diluvio Noachi,
+479 c; pro Incarnatione Christi
+479 e; pro universa pernicie
+dictum 592 d.
+		</div>
+		<div n="1002510">
+			Contaminatio Israelis, matrimoniis
+illicitis ascribitur 842 e; 843 ab.
+		</div>
+		<div n="1002520">
+			Contemptores, Dei, non impune
+evadent 139 d; Dei, et Ecclesiae,
+judicandi praedicuntur 618 cd.
+		</div>
+		<div n="1002530">
+			Contrita, nempe filia Sionis, demum
+accipicnda 429 e; 430 b.
+		</div>
+		<div n="1002540">
+			Contritio, cordis, non vestium, Deo
+grata 219 d; robori praeponitur
+coram Oeo, 299 e; 301 a; quibus
+signis distinguatur 501 d; Ninevitarum
+descripta 501 e; perfugium
+melius quam montes vel celsissimi
+587 c.
+		</div>
+		<div n="1002550">
+			Conturbatio animae, peccati supplicium
+552 c; in Christo sublata
+553 ab.
+		</div>
+		<div n="1002560">
+			Conversio, et Israelis, et Gentium,
+praenuntiata 192 de; vera est
+ea, peccata praeterita projicere
+218 e; linguarum ad Pentecosten,
+praedicta 616 ae; iteni Gentium
+universarum in Ecclesiam 617 ad;
+spiritualis, Prophetae animi elationem
+significans 694 e; 700 a;
+cordis ad Deum, Dei justitiam
+patefacit 864 a.
+		</div>
+		<div n="1002570">
+			Convivia Samaritanorum descripta
+315 e.
+		</div>
+		<div n="1002580">
+			Cor, Deo aperiendum 219 d; dhina
+Gratia irrigatum, agro, horto,
+vineae, comparatur 222 c; contritum
+a diruptione montium
+praefiguratum 798 b c; Deo damdum
+819 ad.
+		</div>
+		<div n="1002590">
+			Corinthii, a traditionibus Pauli recedentes
+reprehensi 314 a.
+		</div>
+		<div n="1002600">
+			Cornu, Divini Judicii symbolum 433
+b; potentiae sive regni signum,
+saepe etiam superbiae, 664 d.
+		</div>
+		<div n="1002610">
+			Cornua, pro fortitudine dictum 321
+e; generaliter, quid significent
+556 b; de Deo dicta, quid 556
+c; de Satana, quid 556 d; item
+de Christo, quid 557 a; a Zacharia
+visa, aut quatuor niundi
+Imperia significant 644 e; aut
+quatuor Judaeorum oppressores
+645 a; acuere quid sit 665 c d;
+666 d.
+		</div>
+		<div n="1002620">
+			Corona, et Christi et Christianorum
+qualis sit 706 c d; 707 d e.
+		</div>
+		<div n="1002630">
+			Correctionis tempus, de Adventu
+Christi dictum 829 e.
+		</div>
+		<div n="1002640">
+			Correptionis, dies, quid sit 86 b;
+88 c.
+		</div>
+		<div n="1002650">
+			Corruptio, judicii Deo exosa 422 c;
+Justitiae, legis est corruptio 520
+d; judicum Judaeorum reprehenditur
+520 e; sacerdotum Israelis,
+sibi ipsis exitio fuit 610 e.
+		</div>
+		<div n="1002660">
+			Creator omnium, debet Rex omnium
+haberi 300 ab.
+		</div>
+		<div n="1002670">
+			Creatura ideo creata est, ut ad
+Creatorem duceret 181 e; Christum
+Crucifixum deflevit 338 a;
+quo sensu vocem edere videatur
+539 e; post Judicium supremum
+reformanda est 800 e;
+801 a.
+		</div>
+		<div n="1002680">
+			Creta, herbarum odoribus insignis
+596 b; exitio devovetur 597 c.
+		</div>
+		<div n="1002690">
+			Cretenses, pro Phoenicibus positi
+596 a; 597 c; item pro Libycis
+596 c.
+		</div>
+		<div n="1002700">
+			Cribrum, Divini Judicii typus 348 d.
+		</div>
+		<div n="1002710">
+			Crux, instrumentura triumphi sui
+Salvatori fuit 25 b; a ligno in
+aquas amaras immisso praefigurata
+347 b; Ecclesiae gloria 623
+b c 5 ei offenderunt Judaei 679 a;
+sub figura foveae praedicta 679
+a b; Judaeis, in eo incidentibus,
+fovea, credentibus salus et laetitia
+680 b c; pro insigni est
+Ecclesiae 751 e; inventa, cum
+clavis infixis, tempore Constantini
+812 e.
+		</div>
+		<div n="1002720">
+			Cucurbita, Jonae, Dei voluntate sola
+non verbo creata 387 b.
+		</div>
+		<div n="1002730">
+			Culpae Judaeorum priores purgatae
+sunt per captivitatem 714 b.
+		</div>
+		<div n="1002740">
+			Currus, i.e. bellatores ipsi, evertendi
+praedicuntur 648 e; 649 c; 650
+a; pro incursationibus hostium
+dictum 737 b c
+		</div>
+		<div n="1002750">
+			Custodia, Prophetarum, mentem vacuam
+et sublimem denotat 532 a;
+item spiritualem in cordc observationem
+574 a.
+		</div>
+		<div n="1002760">
+			Custodiae, i.e. consuetudines sacerdotum
+solcnnes, ab iis ncglectae
+589 a.
+		</div>
+		<div n="1002770">
+			Cyrene, quod in sinu lateret, a Judaeis
+contumeliosu &#8217; fovea &#8217; nominata
+348 c; urbs illustrissima,
+Phoenicum incuuabula 596 d:
+597 c.
+		</div>
+		<div n="1002780">
+			Cyrillus, quare scripserit 2 b; literalem
+sensum defendit 11; editione
+Septuaginta interpretum
+utitur 18 b; Hoseae priorem
+partem recoUigit 63 b; electi
+populi duritiam obstupescit, 104
+d; quorundam de verbis Prophetae
+Amos vi. 10, sententiam
+aversatus 319 c; Jonae praefatus,
+de &#8216;interpretatione&#8217; typorum
+quaedam sapienter instituit
+365 c; primo literalem,
+deinde spiritualem sensum explicare
+solet 335 e.
+		</div>
+		<div n="1002790">
+			Cvrus, Judaeos in patriam dimittens
+laudatur 29 b; 123 a; 165 c;
+201 a; 232 d; 294 d; 350 c;
+460 d; 463 b; 548 a; 595 c;
+627 a; Dei servus 165 a; quare
+leoni comparatus 165 d; 495 d;
+tabernaculum Davidis suscitabit
+Judaeos in patriam remittens
+350 c; Judaeos liberaturus praedictus
+est 493 c; irae Divinae
+in Babylonem instrumentum 463
+b; 489 a; eam tanquara lutum
+
+
+		</div>
+		<div n="1002791">
+			D
+		</div>
+		<div n="1002800">
+			D aemones, Apostatae, auctores scelerum
+36 a; ab anirais puris
+refugiunt 45 d ; quantam potestatem
+habeant 76, a; immunditiis
+pascunt cultores suos 128
+e; Samaritis, Judaeorura adversariis
+comparati 235 c; Christum
+timebant 395 b; domi raanent,
+post Christi adventum per sanctorum
+vigilantiam cobibiti 440 e;
+tyrannide sua exuti per Christum
+470 d; silebunt tandem
+47&#959; e; precepta Dei in nos
+misericordia stupescent 471 b;
+quomodo serpentibus similes 471
+c; viso Christo formidant 4&#964;&#959; d ;
+per Christum expulsi 495 d;
+quantis terroribus semper vexati
+sint 499 d ; per Christum spoliati
+501 c; quam robusta sint malignitate
+560 d; Christi jaculis, i.e.
+Apostolis, vulnerantur 569 b.
+		</div>
+		<div n="1002810">
+			Damasceni, inter hostes Judaeorum
+acerrimi 236 a; insolita
+crudelitate Judaeos tractabant
+255 a.
+		</div>
+		<div n="1002820">
+			Damascus, Syriae metropolis 9 a;
+expugnatur ab Assyriis 92 b;
+145 d; Regis Ader urbs regalis
+25&#959; a; per Assyrios cremata
+251 d; saepe Deum offendebat,
+saepe misericordem expertus est
+254 d; in foeminas Galaaditas
+crudeliter saeviens condemnatur
+254 e; 255 a; per Oziam et
+Hieroboam poenas dat 255 c;
+Judam persecutus, ab Assyriis
+captus poenas dat 284 e; pro
+Babylone ponitur, utpote Orientem
+spectans 310 e; 391 d;
+458 e; et descriptus, et exitio
+devotus 598 e; Phoenicum et Palestinae
+metropolis dicitur 730 c.
+		</div>
+		<div n="1002830">
+			Dan, urbs Samaritarum illustris 5 a;
+tribus, relicta sua, novam occupant
+terram, Lais-a, ibique idola
+colunt 134b-136c; terrae sanctae
+terminus 340 b.
+		</div>
+		<div n="1002840">
+			Darius, templi instaurationem promovet
+627 c; 628 b ; 632 a;
+633 b.
+		</div>
+		<div n="1002850">
+			David, Christum exprimit secundum
+carnem, ex semine Davidis 62 e;
+vir sapiens 302 a; propter fidem
+et pietatem laudatus 322 b; oriundus
+ex Bethlehem 435 c ; praedicit
+reditum Judaeorum e cap-
+
+
+		</div>
+		<div n="1002860">
+			Debita, anno septimo Judaeis remittenda 333 a.
+		</div>
+		<div n="1002870">
+			Decem, numerus perfectionis symbolum 728 b; vide Tribus.
+		</div>
+		<div n="1002880">
+			Decimae, secundum Legem, Deo
+dandae, idolis translatae 290 c d ;
+idolis datae, dantem populum
+decimabant 298 a b; a saceidotibus Judaeoruin neglectae
+858 e.
+		</div>
+		<div n="1002890">
+			Declinantes, a Deo, devoventur exitio 582 a e.
+		</div>
+		<div n="1002900">
+			Dejici nimis non oportet, quasi nostrum
+servorum Illius obliviscente
+Deo, Illo castigante 862 e.
+		</div>
+		<div n="1002910">
+			Delectatur Deus, vide Laetificatur.
+		</div>
+		<div n="1002920">
+			Denarius, numerus, perfectionis
+symbolum 60 c.
+		</div>
+		<div n="1002930">
+			Dentes stridentes, pro angore animi
+intelligendum 291 d; 292 c;
+quomodo stupore insolito afficiantur 292 c.
+		</div>
+		<div n="1002940">
+			Deserere domum Dei, moribus nocet
+635 a; rore Divino privat
+635 be.
+		</div>
+		<div n="1002950">
+			Desertum, cujus rei sit typus 45 c;
+speciosa quaedum plerumque habet
+loca, Ecclesiam inter barbaros
+referentia 213 e; (vide Solitudo.)
+		</div>
+		<div n="1002960">
+			Desiderabilis terra, a Malachia praedicta 860 b c.
+		</div>
+		<div n="1002970">
+			Desolatio agrorum, pro incolarum
+miseriis dictum 207 e.
+		</div>
+		<div n="1002980">
+			Desponsatio, per legem, aeternae
+desponsationis figura 52 a.
+		</div>
+		<div n="1002990">
+			Deus, par pari reddit 4 b. Deus,
+Regem Rhesin in Judam incitat
+8 c. Deus, pro nuntio Verbum
+habet 10 b. Deus Supremus
+recti Judcx 13 b. Dcus, quam
+obedicntiam requirat 13 c. Deus,
+quare Saulern Regem rejecerit
+13 e; quare Achab 14 a. Deus,
+qua cum veneratione considerandus
+15 b. Deus, per figuras loquitur
+16 b. Deup, Synagogae
+fornicantis miseretur 20 b. Deus,
+resisti nequit 23 b; 145 b;
+218 e; 297 e. Deus. quare
+castiget impios 23 c. Deus, quo-
+modo contra Israelein pugnaverit
+ipse 24 a; Judae parcit 25 a.
+Deus, virtutem, non multitudinem,
+curat 27 b, Deus, ne
+unum quidem justura orantem
+despicit 27 c d. Deus, misericordiam
+reminiscitur 31 a. Deus,
+non vult ullius perniciem 32 b.
+Deus, qua disciplina utatur 33 a ;
+34 a. Deus, oninium cum caelestium,
+tum terrenorum bonorum
+largitor 36 e; 38 e; 39 c. Deus,
+quomodo et quare resistat impiis
+37 b. Deus, tanquam pater filios
+castigat 38 a. Deus, quam sit
+Zelotypus 38 e. Deus, quo modo
+sit inaurandus 39 c. Deus, quo
+sensu seducat impios 45 a. Deus,
+quomodo desponsaverit Israelem
+51 e ; quomodo Christianos
+52 a. Deus, Sui Ipsius causa
+nos conserit 57 b. Deus, in Filio
+notus 57 c. Deus, ex insita bonitate
+suaest misericors 59a. Deus,
+in puro corde habitat 62 c. Deus,
+quam lentus fuerit in judicium
+Israelis 64 a. Deus, omnis boni
+fons et origo &#964;&#8056; b. Deus, secundum
+opera sua quemque judicat
+7&#959; c; 73 a. Deus, consilio-
+
+
+		</div>
+		<div n="1003000">
+			Dextera, quodvis aut melius aut
+rectius est significat 673 d; 771 e;
+772 a.
+		</div>
+		<div n="1003010">
+			Diabolus, vide Daemones,
+Satanas.
+		</div>
+		<div n="1003020">
+			Dies, tempus vocationi conveniens
+64 d.
+		</div>
+		<div n="1003030">
+			Dies Christi, pro Adventu duplici
+dictum 30 e; 49 c; abolitio est
+peccati 465 b; facit mortales, sui
+studiosos, aliorum negligentes
+465 e; universae terrae fert confusionem
+466 a; quam sit intolerabilis,
+praesertim incredulis
+851 be.
+		</div>
+		<div n="1003040">
+			Dies Collis, caedem ad Gabaam
+factam significat 129 b.
+Dies Correptionis, quid sit 86 b;
+88 c.
+		</div>
+		<div n="1003050">
+			Dies doloris, parturitio, sive expectatio
+mali 336 e.
+		</div>
+		<div n="1003060">
+			Dies Domini, tempus irae Divinae
+210 d; terapus jam praesens
+214 b; tempus Supplicii, a Deo
+missi 306 c; tempiis Captivitatis
+584 a; quare ajjpropinquare dicatur
+584 b; tempus tribulationis
+591 a; calamitates Judaeis eventuras
+exprimit 795 a b; expugnatam
+urbem, direptas doraos,
+niulierum raptus 795 c e; nuUas
+lucis et tenebrarum vices habebit
+800 a; renovabit omnia 800 b;
+801 a.
+		</div>
+		<div n="1003070">
+			Dies Judicii, ex sententia celatur
+230 e; qualis futurus sit, et malis,
+et bonis 864 bc; clibano comparatur
+864 e.
+		</div>
+		<div n="1003080">
+			Dies malus, calaniitatis tempus,
+
+
+		</div>
+		<div n="1003090">
+			Dies priores, saccuhi ante Christum
+significant 721 b e.
+		</div>
+		<div n="1003100">
+			Dies qiiintus, quare jejunio olim
+celebratus 725 b; 726 b.
+		</div>
+		<div n="1003110">
+			Dies regura, de festo dictum 109 c.
+		</div>
+		<div n="1003120">
+			Dies Resurrectionis, quo sensu sit
+expectanda 613 e; tempus auxilii
+Divini 614 a.
+		</div>
+		<div n="1003130">
+			Dies Saeculi, tempus diuturnum significat
+350 a.
+		</div>
+		<div n="1003140">
+			Dies septimus, quare jejunio olim
+celebratus 726 c.
+		</div>
+		<div n="1003150">
+			Dies, SoUennitatis, pro die Judicii
+dictum 129 b.
+		</div>
+		<div n="1003160">
+			Dilecti, a Domino, de Judaeis dictum
+819 a; nihilo minus poenas luunt
+819 e; ii sunt quos praescivit
+Deus dilectione dignos fore
+820 cd.
+		</div>
+		<div n="1003170">
+			Dilectio, legis plenitudo 172 b.
+		</div>
+		<div n="1003180">
+			Diluculum, pro malis cito venturis,
+dictum 612 e.
+		</div>
+		<div n="1003190">
+			Diluvium, Noachi, descriptum 479 c;
+maris, aut fluvioi-um, calamitatis
+typus 481 b; regionis Judae,
+divinii Judicii typus 484 d.
+		</div>
+		<div n="1003200">
+			Dina, Israelis fiba 103 e; 107 a.
+		</div>
+		<div n="1003210">
+			Discalceatio, captivitatem indicat
+399 b; item vitam quovis modo
+deformem 400 b.
+		</div>
+		<div n="1003220">
+			Disciplina, vel animae, vel corpori
+perutilis 94 a c; neglecta, exitium,
+suscepta salus est 612 bc.
+		</div>
+		<div n="1003230">
+			Discipuli, Christi, cum delectu vocati
+sunt, non sponte sua ad Eum
+accesserunt 2316; flagellati sunt,
+caesi gaudebant 420 e; agnis
+luxuriantibus comparati 441 d;
+item, catulis leonum 442 b; vide
+Apostoli.
+		</div>
+		<div n="1003240">
+			Discipuli magistroium divitiac
+808 c.
+		</div>
+		<div n="1003250">
+			Discissio, vestium, rnos Judaeorum,
+a blasphemia abhorrentium, a Deo
+reprehcnditur 496 a b; cordis,
+comnicndatur 496 c.
+		</div>
+		<div n="1003260">
+			Dispersio, Judaeorum praedicitur
+61 e; Judaeorum, non extinctio
+fuit 73 d; Judaeorum, praedicta
+et perfecta 142 c; Gratiae, de
+Cbristi praedicatione dictum
+566 b.
+		</div>
+		<div n="1003270">
+			Dives, in Parabola Christi, amentiac
+exemplum insigne 860 c.
+		</div>
+		<div n="1003280">
+			Dividere, de beneficentia Dei dictum
+850 b.
+		</div>
+		<div n="1003290">
+			Divinatio, per virgas, Chaldaicae
+curiositatis inventum 75 c.
+		</div>
+		<div n="1003300">
+			Divinitas, nullo loco definitur 93 d.
+		</div>
+		<div n="1003310">
+			Divisio urbium inter hostes, Judaeis
+praedicitur 466 a.
+		</div>
+		<div n="1003320">
+			Divitiae, iniquitate partae, quam
+sint fugaces 173 d; laqueus diaboli
+424 d; causa erant iniquitatis
+Israeli 451 c; quam nihil
+prosint impiis 588 b; 500 a;
+quam periculosae moribus 590 b;
+quam fugaces 590 c; verae sunt
+in Deo quaerendae 590 e; quam
+sint moribus damnosae 608 a;
+impiis, ut Tyriis, nihil commodi
+ferunt 731 d; populorum a Juda
+rapiendae 807 c; sanctorum, spirituales
+sunt 808 a.
+		</div>
+		<div n="1003330">
+			Divortium, lege Mosis permissura,
+a Propheta quare condemnetur
+846 bd.
+		</div>
+		<div n="1003340">
+			Doctores, divinis charismatibus scatentes
+campis comparati 242 b.
+		</div>
+		<div n="1003350">
+			Doctrina, falsa, aquae turbidae comparata
+1 1 b; falsa, nullos omnino,
+vera, optimos producit
+
+
+		</div>
+		<div n="1003360">
+			Dogmata Ecclesiae contradicentes
+quomodo puniuntur 807 b.
+		</div>
+		<div n="1003370">
+			Dominus, a servo jure timendus
+823 cd; [vide Christus.]
+		</div>
+		<div n="1003380">
+			Domus, de Hierosolyma dictum, op
+&#8220;collibus,&#8221; i. e. Israeli
+87 b.
+		</div>
+		<div n="1003390">
+			Domus Davidis, apud Judaeos honoratissimos
+significat 780 d ;
+quam abundanter gratia ditanda
+sit 782 c; regno privata plangit
+785 d; spiritiialis, libertate fruetur
+786 c; et fluminibus gratiae
+786 e.
+		</div>
+		<div n="1003400">
+			Donius Dei neglecta, privatorum
+ornatissima 629 e; 630 b; aedificata
+ardenter, Deo placet 639 c;
+deserta, moribus nocet 635 a ;
+privatione roris divini punitur
+635 be; secunda, priorem superavit
+gloria 642 b; nos ipsi sumiis
+734 c; [vide Templum.]
+		</div>
+		<div n="1003410">
+			Domus, magna, pro regno Israelis;
+parva, pro Juda, dictum 320
+d e.
+		</div>
+		<div n="1003420">
+			Doxologia, a Christianis neglecta
+530 c.
+		</div>
+		<div n="1003430">
+			Draco, secundum Hebraeos, cetus,
+sub mari latens describitur 341 c;
+ejulare vulneratus et terram
+cauda verberare dicitur 399 d;
+pro Satana, tenebrarura patre
+dictuni 602 a c; mari illudens,
+quid sit 802 c.
+		</div>
+		<div n="1003440">
+			Dulcedo, montium, sanctorutn sermones 243 b.
+		</div>
+		<div n="1003450">
+			Durus et inobediens inimicorum
+portio erit 405 d.
+		</div>
+		<div n="1003460">
+			&#917;
+		</div>
+		<div n="1003470">
+			Ebrietas, Israelitarum a Joele re
+prehenditur 202 a; praeter modum
+egressa 202 e; finem habet,
+lamentationem 203 a.
+		</div>
+		<div n="1003480">
+			Ebullitio, contritionis signum 501 e.
+		</div>
+		<div n="1003490">
+			Ebur, luxuriae indicium 286 d;
+in lectis usitatum, Samariae
+315 d.
+		</div>
+		<div n="1003500">
+			Ecclesia, ex Gentibua congregata
+46 c; mater justificatorum 69 c;
+sacrum et Divinum ovile 124 c;
+ex Gentibus collecta, in Cantico
+Canlicorum de Christo praedicat
+193 d; Judaeorum, apris sylvestribus,
+sive motibus indignissimis
+subjecta 194 d; fructus
+ferens, a sponsa in Cantico Canticorum
+descripta 2&#924; e ; de gentibus,
+vocata in locum sponsae
+205 d ; Judaeorum, cum Satana
+fornicata, repudiatur 2&#959;5 e ; sincere
+lugens Deum movebit 210 c;
+orbis terrarum magistra futura
+226 e; Nova Hierosolyma 235 b;
+finem habet, simplex veritatis studium
+237 a; Domino tuente,
+frustra oppugnatur 238 c; 245 a;
+liberorum ejus curam habet Christus,
+sicut olim Judaeorum 242 c ;
+vera est, quae ex vere Sanctis constat
+242 d ; torrenti juncorum
+pleno comparata 244 b; a suis
+contempta 311 e; sanctis, sicut
+montes arboribus,insignita 352 b;
+doctrinae dulcedinem, sicut apes
+mella,conficit 352 c; utSion,celsa
+et sancta 86&#959; e ; Dei Sanctissimi
+Civitas, et domus Christi 393 d ;
+per lachrymas in risum exit 401 c;
+de Gentibus congreganda prae
+124 b ; per figuram mon-
+
+
+		</div>
+		<div n="1003510">
+			Ecclesiae violatae, Deurn testem et
+ultorem habent 269 d; quomodo
+inhabitat Deus qui &#7952;&#957; &#967;&#949;&#953;&#961;&#959;&#960;&#959;&#953;&#8053;&#964;&#959;&#953;&#962;
+non incolit 393 b; ardenti studio
+aedificatae Deo placent 634 c;
+neglectae moribus nocent 635 a.
+		</div>
+		<div n="1003520">
+			Ecstasis, diversas habet in Prophetis
+significationes 571 b; casus eventuri
+signum 572 a; pro stupore
+dictum 807 d.
+		</div>
+		<div n="1003530">
+			Edom, unde Idumaei, terrenae cupiditatis
+exemplura 260 c; 354 e;
+fratres suos odio habens, Deo
+invisus fiebat 261 d.
+		</div>
+		<div n="1003540">
+			Elamitae et Samariam et Judaeam
+foede laceraverunt 248 e.
+		</div>
+		<div n="1003550">
+			Elatio Hierosolymae quid sit 779
+de.
+		</div>
+		<div n="1003560">
+			Elcesa, Judaeae vicus, Prophetae
+Nahum patria 476 b.
+		</div>
+		<div n="1003570">
+			Electi, vasis Nineves pretiosis praefigurati,
+ad fidem accurrunt 501 d.
+		</div>
+		<div n="1003580">
+			Electio, universa fuit, toti Israelis
+familiae 157 a; Israelis ex millibus
+niultis civitatum, in opprobrium
+ingrati, objicitiir 275 a;
+Gentium praedicitur 641 d.
+		</div>
+		<div n="1003590">
+			Eliacim, Josiae filius, ab Aegyptiis
+factus rex 282 d; ab Assyriis
+servus 282 e.
+		</div>
+		<div n="1003600">
+			Elias, Propbeta et pseudoprophetarum
+extinctor, laudatur, 14 e;
+97 d; Thesbites, in monte Carmeli
+habitabat 253 a; homo fuit similis
+nostri, precibus tanien praevaluit
+292 a; praeventurus Judicio
+supremo 868 e.
+		</div>
+		<div n="1003610">
+			Elisaeus Propbeta, Jebu regem unxit
+18 c; 97 d; crudelitatem Azaelis
+et victorias praedicit 255 b;
+accersitus a regibus 263 e; Eliae
+discipulus 329 a.
+		</div>
+		<div n="1003620">
+			Ematb, Regio Orientis, Antiochiae
+finitima 730 c; [ vide Aemath].
+		</div>
+		<div n="1003630">
+			Einraanuel, in persona Naboth
+praevisus 20 d; illuxit, regno
+Israelis sublato 22 b; per Jezreelem,
+i. e. Dei semen, intelligitur
+24 d; 25 c; pro Christo
+dictum 107 e; et docens et
+confirmans Judaeos, rejectus est
+116 e; Patris Ipsius revelatio
+erat 169 d; virgineus Sponsus
+Ecclesiae 205 e; interpretatur,
+Nobiscum Deus, 326 c; homo
+in terris versatus 337 a; populum
+virga pastoris regens describitur
+467 bc; per solem significatus
+568 ac; per lampadis figuram
+praemonstratus 694 a; quid sit
+728 d; purificatio, peccatorum
+abjectio, ad meliora via, porta et
+Dux ad vitam aeternara 849 b;
+pro Domino Jesu Christo, passim.
+		</div>
+		<div n="1003640">
+			Emmor, Filius Sichem, in Sicimis
+104 a.
+		</div>
+		<div n="1003650">
+			Enaeim, urbs Judaeae Australis, ab
+alienigciiis habitata 401 a; Palaestinae
+indigciuic, Isnicli cadcnti
+irridcntcs admoncntur 400 b;
+402 c; 404 b.
+		</div>
+		<div n="1003660">
+			Ephod, liberationem significat
+135 b.
+		</div>
+		<div n="1003670">
+			Ephraim cum Manasse, pro una tribu
+erat 4 b; pro regno Saniaritarum
+dictus 5 c et passim; quare totum
+Israclciu significet 81 a; Apini
+Aegyptium colebat 81 b; urgente
+Juda in perniciem celerius volavit
+81 d; quo scnsu &#8220;Deo cognitus
+&#8221; 83 d; poenitentiae curam
+nullam babuit 84 a; quo sensu
+&#8220;in faciem &#8221; 84 c;
+desolatus 88 a; conculcavit judicium
+i. e, legem 89 b; 90 c;
+&#8220;oppressit &#8221;, ironice
+dictum 90 b; tribulatus resipiscit,
+desperare coepit 91 c d; socios
+non licitos assumit, frustra 92 a c;
+tribulatus Deum requirit 94 c d;
+spiritualiter fornicatus 102 c;
+104 d; operatur tnendacia 105 e;
+tribus regia Israelitarum 106 a;
+idola fabricari solebat 106 b; pios
+Hierosolymam peregriuantes spoliabat
+106 c; quo sensii totam
+noctem dormiverit 110 bc; cum
+populo mistus 111 b; multitudine
+sua superbiebat 111 e; non
+cogitando periit 112 a; non ipsa
+senectute monitus fit sapientior
+112b; 113e; neque contemptu
+populi 112 c; stultitiae convictus,
+Aegypto nitens 113 ab;
+seipsura perdidit, a Deo discedens
+113 e; 114 a; a Deo redemptus,
+contra Deum mendacia
+edit 114 c; effeminatiis fit moribus
+115 a; irridetur, quasi efflorescens,
+ironice 122 a; dans
+hosti dona, hostibus datur 122 b;
+per reges idololatras, causa exitii
+Israeli fuit 122 cd; aras multiplicans
+condemnatur 123 c; mons,
+idololatriae sedes, Michae tempore
+134 c; suos ipse filios exitio
+tradidit 139 c; ad radices ipsos
+sterilis invenitur 141 e; vitulo
+pugnaci comparatus 150 b; &#8220;ascendente&#8221;
+Deo humUiatus, 1 50 c;
+pro universo Israele dictum 158 c;
+in Aegypto habitans, a Deo exulavit
+160 c; Assyriam etiam concupivit
+161 a; quare tamdiu Dei
+misericordiam moverit 163 b; in
+apostasiam lapsus est 164 b; nimium
+coniidens reprebenditur
+164 d; pietatem vovet 164 e;
+ubique mendax 166 c; supplicio
+exnendatus 166 e; pro principibus
+Samariae dictum 167 b;
+Malus spiritus vocatur 167 c;
+Aegyptios Assyriosque socios
+mercatus, stultitiae convincitur
+167 e; 168 a b; Patri Jacob
+contrarius, labores fugiebat, idola
+curabat 171 a e; flagello Dci
+misericordiam custodire jubetur
+172 ad; idola colens, fit similis
+Canaanitis 173 b; divitias per
+iiiiquitatem unde-unde extricans,
+frustra 173 c de; vocatur Chanaan
+propter impietatem 174 a;
+oblitus Dei Redemptoris, etsi per
+Scenopegiam continuo monitus
+175 e; ad Assyrios abiens reprehenditur
+294 a; pro Samaritanis
+positum 299 c; decem tribus
+significat 305 a; usque ad finem
+confidebat nionti Samariae 31 1 a &#7988;&#8217;
+
+
+
+		</div>
+		<div n="1003680">
+			Ephraimitae, de Apostolis, quasi
+bellatoribus, dictum 750 b.
+		</div>
+		<div n="1003690">
+			Ephrata, pro Australi Judaea, Judaeis
+promissa 362 d.
+		</div>
+		<div n="1003700">
+			Epicurus, condemnatus a Graecis,
+quasi fuerit &#7940;&#952;&#949;&#959;&#962; 589 c.
+		</div>
+		<div n="1003710">
+			Epiphania, urbs ab Antiocho Epiphane
+nominata 313 a.
+		</div>
+		<div n="1003720">
+			Episcopi, pro oculis Christo sunt,
+per quos in Eum credentibus intuetur
+692 b.
+		</div>
+		<div n="1003730">
+			Equi, a Samaritanis multiplicati,
+pompae causa 317 a; hinnire
+solent publice quasi consulto
+317 b; a dominis superbis auferendi
+praedicuntur 317 c; pro
+Apostolis, Christum circumferentibus,
+dictum 564 b; 573 b;
+item pro iisdera prae laetitia frementibus
+572 d; in visione Zachariae,
+pro regnis mundi clarioribus
+700 e; militaris violentiae
+symbolum, impiis disperdendi
+737 bd.
+		</div>
+		<div n="1003740">
+			Equitatus, Judaeis interdictus 443 c.
+		</div>
+		<div n="1003750">
+			Equites, Cyri, terrori erant Ninevitis
+498 d; falsorum dogmatum
+duces significat 749 a; de Graeciae
+sapientibus dictum 749 e;
+pro quibusvis persecutoribus dictum
+775 a; a sanctis martyribus
+obstupefacti 775 b.
+		</div>
+		<div n="1003760">
+			Equus, Deo repugiiante, nihili est
+274 b; superbiae typus 321 b;
+equas super scopulos persequens,
+Assyriorum irruentium figura
+321 c; rufus, Dei iram significat
+658 a; 659 a; cujuscunque sit
+coloris, pio regibus bellicis metaphorice
+dicitur 659 d; pro incursatione
+hostium 737 b c;
+metaphorice de Apostolis dictum
+747 c d; pro quovis Ecclesiae persecutore
+dicitur 774 e; 775 c
+obstupefactus, quid sit 775 b
+voluptuarii cujusque typus 809 b
+belli symbolum, in Ecclesia praedicitur
+cessaturus 812 c d.
+		</div>
+		<div n="1003770">
+			Erectio, spiritualis, ipse Christus est
+734 c e.
+		</div>
+		<div n="1003780">
+			Error, virtutem animae, sicut humorem
+uvac, exhaurit 624 a.
+		</div>
+		<div n="1003790">
+			Errores, in Ecclesia quandoque
+cessabunt 734 c; 735 d.
+		</div>
+		<div n="1003800">
+			Eruca, &#8220;Dei &#8221; ironice dicta
+225 d; ad imbecillitatem hominum
+exhibendam missa 225 e;
+ab Haereticis profanis Christo
+comparata 226 e; ex rore matutino
+generata 388 a.
+		</div>
+		<div n="1003810">
+			Erythraeum Mare, navigantibua ad
+Indos frequentatum 369 c.
+		</div>
+		<div n="1003820">
+			Esaias, quare jussus se nudare 14 e;
+16 d; Christi typus 17 c; plagas
+Christi Crucifixi praevidisse videtur
+415 d; visionem Dei claram
+habuit 658 d.
+		</div>
+		<div n="1003830">
+			Esau quare ex utero Deo invisus
+169 a; primogeniturara vendens,
+
+
+		</div>
+		<div n="1003840">
+			Esdras, liber Apocryphus, laudatur
+627 c.
+		</div>
+		<div n="1003850">
+			Ethnici, oppressioni maxime dediti
+173 c.
+		</div>
+		<div n="1003860">
+			Eucharistia vide Benedictio mystica,
+Sacrificium Incruentum. De Eucharistia
+caute et tacite loquitur
+S. Cyrillus 814 b.
+		</div>
+		<div n="1003870">
+			Evangelicis praedicationibus orbis
+terranim inauratus est 670 e.
+		</div>
+		<div n="1003880">
+			Evangelium, legi Mosis opponitur,
+Spiritualis Communionis praecepta
+continens 52 c d; in Hierosolyma
+praedicandum praemonstrat
+Joel 231 d; onus peccati
+eximit 412 e; pacem gentibus
+daturum praedicitur 427 d; quae
+benefacta contulerit descripta
+549 a; quantum lege Mosis sit
+praestantius 642 c; Tubae comparatur,
+quia minarum sit abundans
+742 c; item fundae, quia
+supplicii 742 d.
+		</div>
+		<div n="1003890">
+			Evangelizantes, sub persona Cyri
+praedicti 493 d; Deum in se
+loquentes habent 517 a.
+		</div>
+		<div n="1003900">
+			Excelsa, i. e. templa in montibus et
+coUibus 422 c.
+		</div>
+		<div n="1003910">
+			Exemplum, parentuin, non omiii
+tempore imitandum 857 c.
+		</div>
+		<div n="1003920">
+			Exodus, ab Aegypto, Redemptionis
+typus 271 d; 446 e; 469 a;
+563 e; 641 b; 753 e; 754 a;
+779 a; describitur 480 b; Christi,
+describitur 570 d; motu terrae
+insolito insignitus 641 a.
+		</div>
+		<div n="1003930">
+			Experientia, optima magistra 1 12 a;
+conlempta, contemptoribus exitio
+est 112 b; 113 e.
+		</div>
+		<div n="1003940">
+			Exsufflatio, de vanis laboribus dictum
+634 a.
+		</div>
+		<div n="1003950">
+			Ezekias, Rex unice pius 9 c; Deo
+carus 150 e; et a Babyloniis
+ereptus 223 a; 336 d; 433 d;
+laudatur 579 b.
+		</div>
+		<div n="1003960">
+			Ezekiel, Bonum Pastorem Christum
+praevidit 29 e; Solis cultores in
+templo videt 86 d; visionem
+virorura cum securibus habet
+89 d; mutus factus 227 d; visionem
+habet templi diruendi
+342 a; visionem Dei claram
+habuit 659 d.
+		</div>
+		<div n="1003970">
+			F
+		</div>
+		<div n="1003980">
+			Fabri, acuentes cornua, in Zacharia,
+pro Angelis dictum 665 d e.
+		</div>
+		<div n="1003990">
+			Facies Dei, Filium Dei significat
+94 cd.
+		</div>
+		<div n="1004000">
+			Falx, in visione Zachariae quid significaverit
+695 ab.
+		</div>
+		<div n="1004010">
+			Faraa bona, divitiis praestat 266 c.
+		</div>
+		<div n="1004020">
+			Fames, philostorgiara alioqui inexpugnabilem
+vincere cogit 24 e;
+audiendi verbum Domini praedicitur
+35 a; 227 c; 339 a; a
+locustis invecta 214 c; idololatriae
+poena 291 d; in Samaria
+
+
+		</div>
+		<div n="1004030">
+			Felicitas, rerura publicarum, in quibus
+rebus consistat 584 e.
+		</div>
+		<div n="1004040">
+			Femina, vide Mulier.
+		</div>
+		<div n="1004050">
+			Fermentum, spirituale quid sit
+109 b.
+		</div>
+		<div n="1004060">
+			Fertilitas, sive vineae sive areae,
+araoris Divini indicium 648 a c.
+		</div>
+		<div n="1004070">
+			Festinatio, de Divino Judicio praedicitur
+592 d.
+		</div>
+		<div n="1004080">
+			Festivitates, Judaeorum, annuae,
+idolis translatac 290 c; Samariae
+in luctum mutandae 330 b; Judaeorum,
+brevi periturae praedi-
+cuntur 494 a d; in Cbiisto fidentibus
+sanctificatae erant 494 e.
+		</div>
+		<div n="1004090">
+			Ficus, dulcedinis spiritualis symbolum
+428 d; 681 a; matura, facile
+decussa, typus Nineves periturae
+510 e; item animae peiiturae
+511 b; sterilis, Synagogae Judaeorum
+typus 575 b; in Parabola
+Christi, Synagogam Judaeorum
+significat 660 c; florens, Ecclesiae
+florentis symbolum 681 b.
+		</div>
+		<div n="1004100">
+			Fidelis, unusquisque templum, sive
+altare, Dei est 342 c.
+		</div>
+		<div n="1004110">
+			Fides, quara sit necessaria 54 c;
+Judacorum praedicta 54 e; 65 c;
+spem gignit 56 a; in Deum, benedicta,
+in hominem maledicitur
+92 d; justificationis in Christo
+conditio 99 b; filios Dei facit
+101 a; in Deo adhibenda, etiam
+praeter rationem operanti 376 d;
+peccati onus valet excutere 406 c;
+sine operibus approbatis nibil valet
+423 e; Chribtianoriim iina 491 d;
+lex Justificationis 533 bc; 534 b;
+Salutis conditio 470 c; Sanctorum
+alimentum 573 a; ad agnitionem
+veritatis ducit 600 c; in
+pecunia tum quaerenda, tum collocanda
+laudatur 631 e; verrriculo
+comparata 718 c 5 a non
+habentibu? rectam subtrahendum
+est 842 e; sine operibus mortua
+865 d.
+		</div>
+		<div n="1004120">
+			Filii, Apostolorum, spirituales per
+Evangelium generati 25 a; 750 d;
+752 b; fornicationis qui sint, kicis,
+et diei 51 b; Judae, sancti sunt,
+filii confessionis 245 b; corona
+senura 752 c.
+		</div>
+		<div n="1004130">
+			Filius Dei, per Jezreel significatus
+56 c; in Patre visus 57 c; cum
+Patre unus idemque 98 c; 99 a;
+100 b; Coaequalis Patri, Unigenitus
+472 c; quanta admiratione
+sit dignus 548 c; per omnia
+aequalis Patri 548 c; cum
+Patre et Spiritu Sancto Coaeternus
+549 e; nisi natura sua Deus
+sit, idolon est 593 a; Deus ipse,
+noptri tamen similis 600 b; quare
+Dei signaculum nominetur, 650 e;
+voce Divina ad fliivium Jordanem
+demonstratus 651 a; ipse, natura
+sua, Lumen, non aliunde derivatum
+683 d; [ vide Christus] .
+Fimbria vestis Judaicae, quid vellet
+728 a e.
+		</div>
+		<div n="1004140">
+			Finis, laboium gloria et voluptas
+401 c; qualis sit futurus, cum
+hostibus, tum servis Dei 864 b c.
+		</div>
+		<div n="1004150">
+			Finitimi, Judaeorura Judaeis oppressis
+irridentes a Deo minis
+urgentur 236 b; in vallem Judicii
+vocantur 239 e; [ vide
+Vicini].
+		</div>
+		<div n="1004160">
+			Flores, fragilitatis inipiuriun typus
+593 d.
+		</div>
+		<div n="1004170">
+			Flumina, quo sensu, &#8220;omnia,&#8221; ante
+Judaeos exsiccata 481 a; exumdantia,
+calamitiitum typus, et
+Satanae 482 b; et Judaeac et
+Ecclesiae tcrmiims 738 a.
+		</div>
+		<div n="1004180">
+			Fluvius, racii, nonien Christi 244 b;
+de Christo diclum, quijjpe quod
+gratia rigat 565 b; item de sanctis
+tis 565 c; &#8220;Fluviorum &#8221;
+modo de Babylonia, modo de
+Judaea, intelligenda 565 a d.
+		</div>
+		<div n="1004190">
+			Foeneratio, Israelitarum reprehensa
+332 d; onerosa, a Lege Mosis
+interdicta 332 e.
+		</div>
+		<div n="1004200">
+			Fons, luminis et gratiae, Christus
+96 c; 142 d; 351 e; 549 a;
+746 b; 810 e; 866 de; vitae,
+Christus 244 b; 341 a; 534 b;
+vivus, Dei Filius 292 d.
+		</div>
+		<div n="1004210">
+			Fontes, aquarum incorruptibilium,
+scripta Apostolorum Sanctorum
+271 d.
+		</div>
+		<div n="1004220">
+			Fornicatio, spiritualis 32 d; 109 b;
+Dei gratiam extinguit 35 b; de
+filiis Synagogae dicta 35 c; pro
+nutritu malo dicta 35 e; idem
+est quod Deum deserere 73 e;
+pro licentia victorum dicitur 77 a;
+incesta, et naturae contraria, inter
+Israelitas et postea inter Corinthios,
+facta 268 c; Israelis in
+Aegypto involuntaria fuit, posttea
+minus 297 c d.
+		</div>
+		<div n="1004230">
+			Fortia peccata, sunt grandia, intolerabilia
+304 a.
+		</div>
+		<div n="1004240">
+			Fovea, Crucis figura 679 a; quo
+sensu Crucifixoribus ipsis a Deo
+parata 679 b c.
+		</div>
+		<div n="1004250">
+			Fractio, a ruptura distinguitur
+320 e.
+		</div>
+		<div n="1004260">
+			Fracna, persccutionis, ab Apostolis
+excussa 572 d.
+		</div>
+		<div n="1004270">
+			Fraenuin, militiae symbolum, in
+Ecclesia praedicitur cessaturum
+812 bc.
+		</div>
+		<div n="1004280">
+			Frigus, post judicium cessabit 800 a.
+		</div>
+		<div n="1004290">
+			Fructus, Gratiae quales sint 153 d;
+quales sint erroris, qualcs veritatis
+204 de; ibi flurcbunt, ubi
+vera discendi cupiditas 205 a;
+terrae, pro cultoribus dictum
+208 a; virtutes significant 208 d;
+vineae, pro vera doctrina positus
+224 c; bonae doctrinae, bona
+vita 352 d; bonitatis, in Ecclesia
+abundans 352 e; poenitentibus
+abundanter proraissus
+860 b.
+		</div>
+		<div n="1004300">
+			Frugiferi in Ecclesia 842 e.
+		</div>
+		<div n="1004310">
+			Frumentum, vitae typus 55 e; idolis
+oblatum 115 b; robur spirituale
+solet exprimere 194 a;
+744 a; 745 c.
+		</div>
+		<div n="1004320">
+			Funda, Judicii Divini symbolum
+742 ad; 743 b.
+		</div>
+		<div n="1004330">
+			Fundamenta terrae, pro optimatibus
+dictum 445 c.
+		</div>
+		<div n="1004340">
+			Funiculus, quo sensu prosperitatis
+signum 666 d; virga secunda
+apud Zachariam, quid velit 761 b;
+767 e.
+		</div>
+		<div n="1004350">
+			G
+		</div>
+		<div n="1004360">
+			Gaba, seu Gabaa, urbs Benjamitarum,
+poUuta et punita 135 d e;
+vicus Benjamitarum 456 d;
+collem, seu speculam, significat
+457 b.
+		</div>
+		<div n="1004370">
+			Galaad, urbs Levitica, Sacerdotii
+typus 101 c; 102 b; Sicimitas
+poenitentes trucidat 103 b; pro
+latronibus dictuin 103 e; irae
+
+
+		</div>
+		<div n="1004380">
+			Galaad, mons, ab Assyriis vastatus,
+iterum a Judaeis occupatus
+362 b.
+		</div>
+		<div n="1004390">
+			Galaaditae feminae, serris, i. e. rotis
+curruum ferreis, a Damascenis
+dissectae 254 e.
+		</div>
+		<div n="1004400">
+			Galaaditis, quid significet 468 d &#7988;&#8217;
+propter fertilitatera terrae, abundantem
+Ecclesiae gratiam significat
+753 b.
+		</div>
+		<div n="1004410">
+			Galgala, idolorum sedes, ad exprimendam
+idololatriam usurpatur
+79 c; 140 c; 175 e; ad apostasiam
+etiam atque etiam propensa
+289 d; vitanda denunciatur 299 a.
+		</div>
+		<div n="1004420">
+			Galilaea, oranis idololatriae dedita
+368 a; Gentium, quid velit 555 d.
+		</div>
+		<div n="1004430">
+			Gaudium, verae erga Deum pietatis
+indicium 751 a.
+		</div>
+		<div n="1004440">
+			Gaza, urbs hodie Palaestina dicta
+256 d; diripienda praedicitur
+594 e; 595 e; Tyri exitio perturbatur
+732 c d.
+		</div>
+		<div n="1004450">
+			Gazaei, populo Dei oppugnantes,
+minis urgentur 256 b; 257 e.
+		</div>
+		<div n="1004460">
+			Gedeon, quare Hierobaal cognomen
+habuerit 155 a b.
+		</div>
+		<div n="1004470">
+			Gentes, aliquando convertentur 26 e;
+29 e; non Hierosolymam temporalem
+poralem habebunt 28 c d; Sanctis
+laetitiam afferent 31 d; ante
+Christum, quales fuerint 43 d;
+Israelitas formidabant 63 d; barbarae,
+crudelissimae 173 c; convertendae
+ad Deum, et per fidem
+in Christo recipiendae 192 e;
+fructus, odores, flores ferent 193
+a b c &#7988;&#8217; finem peccato imponent, in
+Ecclesiam receptae 193 d, in
+vitam aeternam 194 a; in locum
+Israelis vocatae 205 d; vicinae,
+Judaeis opressis insultantes, a
+Deo minis urgentur 236 a; 239 c;
+ad vallem Judicii sternuntur
+239 e; adversarios Dei universos
+representant 244 e; vicinae Judaeis,
+iram divinam cupidissime
+administrant 249 e; Deo gloriam
+invidentes, poenas dant 250 b;
+eo longius impunitae, quod legera
+non babuerunt 264 d; sub noraine
+Amorrhaeorum significatae 270 d;
+item Idumaeonim 356 b; ad
+Idumaeam obsidendam a Deo
+moventur 356 c; una cum Idumaeis,
+in valle Josaphat, a Judaeis
+conciduntur 360 c; ad Christum
+venturae, praedicuntur 351 a;
+omnes in Ninevitis inclusae 367 c;
+omnes ad sancte vivendum creatae
+367 d; omnes per Christum redemptae
+367 e; omnes ante
+Christum Deo erant curae 368 a;
+vicinae Judaeis idololatrae omnes
+368 a; in haereditatem Israelis
+inductae 408 a; gratiae omnis
+participes 408 b; in Ecclesiam
+properantes describuntur 425 d;
+ante Christum Judaismo sese
+dederant 425 e; majori studio in
+Ecclesiam accurrebant 426 b; a
+Christo judicatae dicuntur, quia
+ad conversionem vocarentur 426 c;
+Sioni insultantes, ut Senacherib,
+Divino judicio triturandae 433 a;
+Sioni insultantes, victorum pedibus
+substratae, ut manipulus triturantibus
+433 e; paratiores ad
+Christi fidem amplectendum
+441 b; a Judaeis, conversis ad
+
+
+		</div>
+		<div n="1004480">
+			Genua, dissoluta habere, contritionis
+signutn 501 e.
+		</div>
+		<div n="1004490">
+			Genus humanum, ad quid creatum,
+quoraodo renovatum 367 d e.
+		</div>
+		<div n="1004500">
+			Geon, fluvius Aethiopum Orientalium
+617 c.
+		</div>
+		<div n="1004510">
+			Gerara, urbs juramenti Abrahae
+299 a; postea sedes idololatriae
+299 b.
+		</div>
+		<div n="1004520">
+			Gergesaei, Finitimi Judaeorum
+239 e; Samariam et Judaeam
+vexant 248 e; a Judaeis consumpti
+270 e.
+		</div>
+		<div n="1004530">
+			Geth, Judaeae vicus, Jonae Prophetae
+incunabulum 364 a; alienigenarum
+dicta, urbs Palaestinae
+olim primaria 236 a; 313 b;
+Philistaeorum metropolis 400 e;
+Samariae captae irridens irridetur
+quasi a Babyloniis capienda 40 1 ab.
+		</div>
+		<div n="1004540">
+			Gethaei, Israeli irridentes, cum Israelitis
+in exilium dantur 404 d;
+vana domus dicti, propter impietatem
+404 e.
+		</div>
+		<div n="1004550">
+			Gladius, spiritualiter, pro animi affectibus
+dictum 161 a; Dei, quid
+sit 601 e; spiritualis, Verbu Divini
+ab Aggaeo praedicitur 650 a;
+Dei, quid faciat 741 b c. [ Vide
+Rbomphaea.]
+		</div>
+		<div n="1004560">
+			Gloria, Judaeorum falsa, Deo invisa
+70 d;; ; mundana, sine caritate,
+nihil valet 286 e; divina, nostrae
+ipsorum anteponenda 636 a;
+Deitatis, a Christo Incarnato deposita
+668 e; 669 a; Deo, utpote
+Patri, debita 823 c d; ab
+obedientibus, data 824 a.
+		</div>
+		<div n="1004570">
+			Gloriam Dei qui non quaerunt, in iis
+aspicere non dignatur IUe 827 b.
+Gloriatio, Davidis, principes Judaeorum
+779 d e.
+		</div>
+		<div n="1004580">
+			Godolias, Judaeae praefectus interficitur
+710 ab; 726 c.
+		</div>
+		<div n="1004590">
+			Gog, regetn Senacherib significat
+323 e; 330 c; item Assyrios
+ipsos 324 b.
+		</div>
+		<div n="1004600">
+			Gomer, typus animae quae sibi
+vitam inhonestam dclegit 12 d;
+quare ab Osea esset nubenda 15 e;
+1 7 e; honesta parens facta, fieri
+potest ut salvetur 16 b c.
+		</div>
+		<div n="1004610">
+			Graeci, i. e. Philosopbi, Daemonibus
+ascribebant diviria beneBcia 39 b
+quanta fuerint arrogantia 236 e
+237 e; quidam a Chiisto conversi
+238 b; barbaris utebantur legibus
+258 c; a quibusdam fidelibus
+antepositi Sacris 313 c; Sacris
+tamen multo inferiores 313 e;
+quas de Dei natura fabulas ediderint
+375 a; 376 a; per Christum
+Redempti 389 c; turpissimas
+doctrinas tradentes, cum sublimitate
+Evangelii coraparantur
+424 e; Ecclesiae inimici, ab ea
+conculcati 463 e; contra Evangelium
+scriptis saeviebant 623 cd;
+munitionibus philosophiae nihil
+valebant, contra Cbristum 731 e;
+spoliati sunt ab Ecclesiae praefectis
+732 a; quantum posteris
+per doctrinas pemiciosas laeserint
+743 a; quam per veritatem extincti
+fuerint 743 b; a sagittis
+Dei, Apostolis, devicti 741 b;
+multa saecula doctrinis suis perniciosis
+seduxerunt 743 a; ideoque
+extincti sunt 743 b; falsa
+eluquentia seducebant 746 e; ab
+Apostolis, tanquam ab equis,
+superati 747 c; ab iisdem, tanquam
+lutum in plateis, conculcati
+748 b; Antiochum sequentes, ab
+Israehtis superati 749 a; patrum
+consuetudines imitari et laudare
+gaudebant 857 c d.
+		</div>
+		<div n="1004620">
+			Gratia, a Judaeis ad Gentes transivit
+25 c; quam sit necessaria
+34 c; 40 b; 43 e; 73 a; 88 b;
+228 d; 400 a; unde et quibus
+sit data 34 e; quibiis auferatur
+35 b; per typos descripta 40 a;
+quando et quomodo data sit 44 e;
+per Christum dala, Adae vulnera
+sanavit 95 e; nulla non data Israeli
+96 e; nulla non frustra
+97 a; Evangelii praevisa 97 b;
+quo sensu &#8220;tos matutinus&#8221; 97 b;
+Christi munus 99 b; habentibus
+additur, negUgentibus adiiuitur
+125 e; neglecta neglectorem
+Satanae tradit 130 e; promissa
+Israeli, minis intermistis 171 e;
+per fidem m Christo, promissa
+Gentibus 192 e; Judaeis poenitentibus
+promissa 213 e; judicium
+pone sequitur 221 d; fructiferos
+reddit, fidentes Christo
+225 b; divites etiam 226 c;
+omnibus merentibus data 226 d;
+filiis Dei perquam necessaria
+228 d; a Christo fonte, ad Apostolos
+243 e, inde ad nos defluit
+
+
+		</div>
+		<div n="1004630">
+			Gratias debitas Deo reddentibus,
+omnino benedicet bonaque largietur
+Ille: manum contrahentibus,
+nec Ipse alacriter dabit 859 d.
+		</div>
+		<div n="1004640">
+			Greges, in urbibus pascentes, exitii
+typus 603 a.
+		</div>
+		<div n="1004650">
+			H
+		</div>
+		<div n="1004660">
+			Hades, in Christo transtixus
+187 e.
+		</div>
+		<div n="1004670">
+			Haeretici, Divina beneficia daemonibus
+ascribunt 39 b; idololatriae
+convicti 124 b; Satanae tradendi
+130 e; a feris parum discrepant
+133 c; Ecclesiae nocent, sicut
+Israeli vitulus aureus 147 b; sibi,
+non Deo, seininant 152 e; quae
+serunt mendacia, non sunt tacenda
+154 b; locustis, Dei vineam
+vastantibus, comparati 204 c;
+Dco invisi 204 d; crucaiii nonnulli
+profane Christo coinparaiit
+226 a; servorum mcrcatoribus
+comparati 236 c; Christianis nocentes
+Christo uoccnt 237 b; sibi
+fidcntcs, alios a veritate avertuiit
+237 c; iiiter daenionas numerati
+244 e; non cruiit impuniti 245 a &#7988;&#8217;
+Samaritis, acdiiicantes Judaeos
+impedientibus, coraparati 235 c;
+itern Ammonitis feminas dissecantibus
+263 a; viam humiliuin
+detorquent 267 d; nihil habent
+sani 267 e; adversus Unigenitum
+mentiuntur, odor sut Beelzebub
+307 d; propter fiduciam, et contemptionem
+Ecclesiae, reprehensi
+31 1 e; nonnuUi Graecos doctores
+Christianis anteferebant 313 c;
+doctrinas Sacris angustiores amabant
+313 e; solem amittunt,
+veritatem obscurantes 419 d;
+doctrina veritatis non saturati.
+fame spirituali vexantur 453 c d;
+inimici pacis, pacem privantur
+458 b; Divinam ultionem sentient
+459 a; iii fratres peccantes,
+in Christum peccant 459 b; sanctis
+adversantes, ab iis conculcantur
+463 e; in divisione uibium,
+praedicta a Michaea, praedicumtur
+466 c; amore dominandi, et
+superbia, sese extollunt 539 d;
+discipulos suos pravo erroris vino
+ebrios facientes, praedicuQtur
+543 d; Filii Deitatem negantes,
+idololatriae convicti 592 e; feris
+rugientibus et rapientibus comparantur
+607 b; a Judaeorum
+vicinis praefigurati 733 b; mulieres
+illicitas ducentibus comparantur
+847 b c.
+		</div>
+		<div n="1004680">
+			Hebraea Editio, Amos i. 1, verbo
+Accarim caret 247 d ; Amos i. 2,
+pro &#8220;locutus est&#8221; habet &#8220; ululavit,&#8221;
+sive &#8221;rugiit&#8221; 252 d ; Amos,
+i. 6, verbo Salomonis eget 256 c;
+in Amos iii. 9, Azoti, habet, pro
+Assyriae 28&#959; c; in Amos v. 27
+Babylonem, pro Damasco, legit
+310 d ; pro, &#8220;Draconi&#8221; in Amos
+ix. 3, habet &#8220;Ceto&#8221; 343 c; pro
+Morasthae, legit Morasthiten,
+in Michaea i. 1, 392 b; in Aggaei
+2do, quibusdam verbis caret
+646 a; in Zach. viii. 10, erat,
+pro erit, legit 720 a; in Zach.
+xii. 10, ab editione Septuaginta
+Interpretum ditfert 783 c; item
+in Zach. xiii. 1, 786 d; item in
+Zach. xiv. 8, 802 e.
+		</div>
+		<div n="1004690">
+			Hebraeae mulieres maritos suos falsorum
+deorum nominibus appellabant 50 a.
+		</div>
+		<div n="1004700">
+			Herba, campi, doctrinae, animorum
+cibi, typus 224 a; agrestibus aut
+donata, aut negata, pro spirituali
+pabulo sumenda 746 c.
+		</div>
+		<div n="1004710">
+			Hercules, apud Lycopbronem, traditur
+devoratus a ceto, sicut Jonas,
+et vitae redditus 376 b.
+Herodes, Antipatri filius, Ascalonites
+763 d.
+		</div>
+		<div n="1004720">
+			Hieremias, Propheta, in utero sanctificatus
+11 d; juvenis adhuc vocatus
+est 13 b; 820 c; Deo jubente
+in Aegyptum descendit 42 c;
+a mulieribus in Aegypto irrisus
+42 d; dissuadet sacrificia idolorum
+149 b; praenuntiat Babylonem
+capiendam 165 b; Dei jussu
+catenas collo suo imponit 175 c;
+ad foedum belli spectaculum animo
+abrcptus 24&#959; d; a Rege
+Sedecia vincitur 303 e; prohibetur
+orare pro indignis 311 b ;
+bellum Hierosolymae praedicit
+415 e; praevidit Christi sermonem
+dulcissimum 428 d ; memoratur
+444 b; 458 b ; 461 e;
+463 a; Beatus nuncupatur, 485 a;
+725 d; 752 b; 820 c; Sapiens
+dicitur 504 c; 536 c; negligentibus
+pastoribus invehitur 514 d;
+609 b; 62&#959; d; 756 e; 793 c;
+814 e; 824 d; 826 e; pulchram
+Ecclesiae Judaicae olivam 575 e;
+Dei Ipsius verba locutus est,
+578 a; 590 c; 608 d; 814 e;
+testatur Israelitas servasse praeceptum
+quoddam Mosaicae Legis
+582 e; pseudoprophetas reprehendit
+636 e; 788 c; expugnationein
+Hierosolymae describit
+725 d; Passionem Christi praevidit
+764c; 793 a; a Deo dilectus,
+quia praecognitus 820 c; idololatris
+increpat 860 d; de prosperitate
+impiorum conqueritur 864 d.
+		</div>
+		<div n="1004730">
+			Hierobaal, Gedeonis cognomen quid
+velit 134 b.
+		</div>
+		<div n="1004740">
+			Hieroboam, &#921;, filius Nabat, servus
+Salomonis, in regnum accitus 4 d
+de vulgo sacerdotes eligit 82 d
+quae monstra introduxerit 86 c
+Apin venerabatur 87 d; quo consilio
+vitulos fecerit 103 a; 108 c;
+148 e; 178 d; 186 a; 328 a;
+quos ritus induxerit 108 e; a
+suis laudatus, audacior fit 110 c;
+Deo non probante rex factus, impotens
+evadit 119 c; Apostasiae
+inventor, et causa omnium malorum
+Israelitis fuit 122 c; altaria
+multiplicavit 123 c; dctestandus
+178 b; vitulis suis Divinam glo-
+
+
+		</div>
+		<div n="1004750">
+			Hieroboam, II, filius Joas, rex Israelis,
+primo impietate similis 6 c;
+250 d; 326 b; 364 b; ciuamvis
+impiiis, barbaros tamen, magis
+irnpios, Deo duce superavit 250 e;
+restituit terminos Israelis 251 a;
+365 a; Assyrios pecunia avertit
+391 d.
+		</div>
+		<div n="1004760">
+			Hierosolyma, I. Temporalis, delenda
+praedicitur ab Hosea 24 e;
+Judaeis, religionis suae sedes
+unica 28 d; serius munita lapidibus
+126 c; igni datur 126 d;
+eversa 129 c; vi et armis Babyloniorum
+capta 149 b; 200 e;
+ad Austriim solitudinem longam
+habet 222 e; prima occidit Dominum
+231 d; pacis et sanctificationis
+spe bona fovetur 242 a;
+a Deo iterum habitanda 242 e;
+pro universa Judaeorum natione,
+ponitur 249 b; terrae motu, Ozia
+peccante turbatur 251 e; per
+montem Carmelum significatur
+253 a; igni comburenda praedicitur
+265 a; corrupti judicii
+acciisatur 265 d; mater Judaeorum
+266 c; capta 282 e; vastata,
+Sodomae vastatae comparatur
+294 c; et Baal et verum
+Deiim simul colebat 307 a; ipsa
+iuontcm Sioiicm coiitcmsit 31 1 c;
+invadcnte Sciiucliciib, tanqiiam
+sole obscurato, consternata describitur
+336 d; consternata cives
+habuit cuin Ephraimitis consentientes
+336 e; Justi sanguine
+polluta, funditus deletur 343 e;
+obsessa ab Aiisyriis, extremam
+passa est miseriam 355 b; capta
+a Babyloniis solitudo facta 361 d;
+propter idololatriam suam, Judac
+vocatur Peccatum 396 c; aras,
+vicis omnibus, Baal idolo structas
+habuit 396 d; Judam omnem
+seduxit 396 e; in tuguriutn, horti
+custodiam, redigenda praedicitur
+397 d; nuda, et discalceata, ut
+captiva, describitur 399 c; habitabat
+dolores, in perpetuis terroribus
+versata 402 d; raetu
+regis Senacherib, sub noctem
+lachrymatur 403 a; mane exultat
+403 b; aranda praedicitur
+423 c; arata fuit 423 d; in
+squalorem paupertatis redigenda
+praedicitur 430 c; item in tenebras
+spirituales 430 d; cum
+Ephraimitis bellum gerit civile
+452 b; capta et divisa, Haereticorum
+typus 466 c; in persona
+Ninives, devota exitio 489 b;
+plusquam Nineve sanguinaria, et
+in religione mendax 504 d; Lucem
+mundi rejiciens, damnatur
+510 cd; praeter niodum debacchata,
+praeter spem contrita est
+515 b; Babyloni comparatur
+515 c d; capta a Chaldaeis,
+mundi, a Satana capti, liberata a
+Cyro, Redempti, typus 548 a b;
+quantum esset a Babyloniis
+
+
+		</div>
+		<div n="1004770">
+			Hierosolyma, II. Spiritualis, Ecclesia
+Dei viventis 28 e; 235 b;
+241 d; 242 c; 245 c; 498 a;
+718 c; 723 d; 724 a; 772 c;
+780 c; 782 a; 786 c; 805 a;
+806 d; 807 e. [ Vide Ecclesia.]
+		</div>
+		<div n="1004780">
+			Hilaritas, in sacris faciendis Deo
+placet 844 c.
+		</div>
+		<div n="1004790">
+			Hircus, pro peccato oblatus, quare
+comedendus 71 c.
+		</div>
+		<div n="1004800">
+			Historia, sive felix, sive infelix sit,
+tum ad hortandum, tum ad dehortandum,
+utilis 199 b c.
+		</div>
+		<div n="1004810">
+			Holocausta, misericordiae posthabita
+98 d; 99 a; 100 a; sine pietate
+nihil valent apud Deum 448 e;
+449 d e; impiorum rejecta 829 d.
+		</div>
+		<div n="1004820">
+			Homicidium, ab ipsis hominibus inventum
+180 e; ab Israelitis, etiam
+Judaeis, usitatum 181 a b.
+		</div>
+		<div n="1004830">
+			Hordeum, utpote cibus pecudibus
+conveniens, vitae bestialis typus
+61 b.
+		</div>
+		<div n="1004840">
+			Hosea, vide Osea.
+		</div>
+		<div n="1004850">
+			Hostes, Hierosolymae, apud Prophetas,
+aut Romanos, aut daemonas
+significant 510 d; Ecclesiae,
+quem finem habituri sint
+806 b; 807 c; Ecclesiae, non
+nisi vilioribus aniraalibus comparati
+809 c.
+		</div>
+		<div n="1004860">
+			Humerus, victimae, quare Deo separatus
+834 d.
+		</div>
+		<div n="1004870">
+			Humiles, Deo cari, superbis invisi
+267 a d; a Deo decorati 535 a;
+611 a; quatenus de Judaeis dici
+possit 619 d.
+		</div>
+		<div n="1004880">
+			Hypocritae, Deo, non homini, patent
+583 d.
+		</div>
+		<div n="1004890">
+			I
+		</div>
+		<div n="1004900">
+			Icterus, morbi genus, ad castigationem
+Israelis inissum 293 b.
+Idola, Baalim, ex lapide confecta
+49 e; Chamos, Astarte, Baal
+131 e; 148 a; unicuique urbi
+
+
+		</div>
+		<div n="1004910">
+			Idololatrae, contra Deum armati
+116 c; lignum colentes, stultis-
+simi arguuntur 116 d ; Deo sub-
+sannantes pocnas dant 117 b;
+in adversis rebus solebant templa
+spoliare &#921;45 c; in collibus pec-
+care coeperunt 148 e; &#921;49 a;
+et supremas et infimas res cole-
+bant 181 ab; daemonibus cora-
+parati 244 e; ad exempla patrum
+imitanda proni sunt 656 a; quem
+finem habeant 733 b; sanguin-
+olentiae convicti, exitio devo-
+ventur 733 c d ; in Ecclesia ces-
+saturi 815 c.
+		</div>
+		<div n="1004920">
+			Idololatria, Soloraonis 2 e ; 3 a ;
+quam sit nefanda 3 d ; Regis
+Hieroboami 5 a ; totius Israelis,
+Oseae tempore 17 b ; in Aegypto
+19 e; in partibus Assyriae 26 a ;
+durante captivitate cessat 35 d ;
+spes fallit suorum 3&#964; d; a suis
+culpata 40 c; quas mercedes ba-
+beat 42 b c ; quo supplicio vindi-
+canda 44 b ; Dei oblivionem in-
+ducit 44 d ; Judaeorum descripta
+&#964;6 a; amorem Dei extinxit 76 C;
+per filiorum scelera castigatur
+76 e ; idem est quod Deum con-
+tumelia lacessere 114 d; 178 d;
+effeminatos reddit 115 a; quae
+colit mysteria descripta 115 b ;
+(&#956;&#954;&#967;&#912; nibili cst colens, excuii^ari
+iic(juit 115 e; Dei subsaiinatio
+1 1 7 a ; Foedcris violalio 1 1 7 e ;
+animam Dco odiosam reddit
+119 e; " semiuatio vana" 120 c;
+quas gignit virtutcs Deo displi-
+cent 12&#959; d; Christianorum post
+Baptismum 124 ab; Michae, ad
+monteni Ephraiin, ct Danitarum
+luirrata 134 a; ab Israele toto
+impune permissa 135 d; postea
+per caedein, ad Gabaam factam,
+pocnas dedit 136 c; Israelis et
+Jiidae, tempore Amasiae Regis
+punita 136 d; primo suis prod-
+esse videbatur 149 d; iii regno
+Israelis pejor quam Judae 15&#959; d;
+et stultitia est, et insolentia 166 d;
+aDeo separat 172 e; Regis Achaz
+sanguiuolenta 181 a; perpetuo
+ab Hosea reprehensa 181 c; et
+stultissima et ingratissiraa ar-
+guitur 182 b; 194 b; Israelitis
+nihil valebat, Deo castigante
+221 b; ad Baethel multa erat
+289 b ; ad Galgala plurima
+289 d ; Deum de throno trudit
+290 a; omnis, sub nomine Beel-
+phegor condemnatur 326 a ;
+idololatris deceptis fidera fallit
+398 a; caeca et caecos faciens
+describitur 398 c ; Judaeis per-
+niciera tulit 443 cd; ad supersti-
+tionem augurum proclivis 538 d
+quam infructuosa sit suis 546 b
+quam rationi contraria 547 c
+quas Judaeis intulerit calamitates
+592 c d ; haereticis, Filii Deitatem
+negantibus tribuitur 592 e ; upu-
+pae, volucri immundae, comparata
+699 c ; Gentiurn, excusatur prop-
+ter ignorantiam ; Judaeorum, ar-
+
+
+		</div>
+		<div n="1004930">
+			Idolum, &#8220;arae &#8221; nominatum
+325 e.
+		</div>
+		<div n="1004940">
+			Iduinaea, redacta in solitudinem
+244 d; Dei hostium universorum
+typus 244 e; intelligenda est,
+Terrena, ab Esau carnali 354 b;
+in Seir et Theman divisa 355 a;
+pro gentibus quibuscunque posita
+356 b; a gentibus vicinis, Deo
+movente, obsessa 356 c; umero
+populi debilis, asperitate locorum
+confidentissiraa erat 357 a; rupibus,
+ut nido aquila, insidebat
+357 b; pejora sustinuit quam
+viator a latronibus, aut vitis a
+vindemiantibus 357 d; pro partibus
+Judaeae Australibus dicitur
+361 e; subvertenda praedicitur
+821 e; quare nominetur Termini
+impietatis 822 b; raundanae mentis,
+exosae Deo, typus 822 c;
+ut vastata est, ita permansit
+823 a.
+		</div>
+		<div n="1004950">
+			Idumaei, contra Israelem congregati
+236 a; finitimi Judaeorum 239 e;
+Samariam, Judamque, foede lacerabant
+249 e; ex sanguine Esau
+oriundi; perpetuolsraelitis inimici
+256 e; 354 b; Philistaeis conjuncti,
+Salomonis aggrediuntur
+257 c; Israelitas, fratres suos
+aggressi, minis urgentur 259 e;
+patris Esau placabilem aniraum
+non irnitati sunt 261 e; ad finem
+erant Israelitis inimici 262 a;
+reprehenduntur, primum quod
+patris Esau, primogenituram vendentis,
+profanitatera, imitati fuerant
+260 b c; deinde quod viam
+Israelitis peregrinantibur obstruxerant
+261 a; iterum quod populi
+metum irriserant 261 c; Judaeos
+ad se confugientes interficiunt
+355 c; eosdem aedificantes vexant
+355 d; a Judaeis exterminati
+355 e; 357 e; 358 c; a falsis
+sapientibus delusi 358 d; timidi
+facti 358 e; ad unum occisi
+propter crudelitatem in fratrera
+Jacob 359 b; saevi, et ab
+omni sensu misericordiae alieni
+359 e; judicio Divino perierunt
+360 b; ad normam factorum
+suorum puniti 360 c; Hierosolyma
+obsessa, festum facientes,
+ipsi pro festo Hierosolyraae fiebant
+360 d; haereditatem patris
+Jacob se possessuros rati, a posteris
+Jacob, ut ab igne calamus,
+consumpti sunt 361 b c; post
+captivitatem Judaeis subjecti
+361 e.
+		</div>
+		<div n="1004960">
+			Ignavia bonorum, et sibi et aliis
+damnosa 82 b.
+		</div>
+		<div n="1004970">
+			Ignifer, i. e. praecursor militaris,
+Jiidaeis defuit, desolationis indicium
+361 c.
+		</div>
+		<div n="1004980">
+			Ignis, quo sensu de domo Jacob,
+dictum 361 bc, in stipula, ferventis
+Ecclesiae zeli, peccata consumentis,
+typus 777 c; 778 b;
+metallorum purgatorius, divini
+judicii, et afflictionis typus 794 a;
+purgatorius, de Gratia mentem
+purgante dictum 852 b c.
+		</div>
+		<div n="1004990">
+			Illuminatio Spiritus Sancti, et defensio,
+et felicitas 430 e.
+Illustrare anitnas obedientiae studiis
+oportet 843 e.
+		</div>
+		<div n="1005000">
+			Imitatio pravorum hominuni periculosa
+174 a.
+		</div>
+		<div n="1005010">
+			Imniurtalitas, justificatis promissa
+531 b.
+		</div>
+		<div n="1005020">
+			Immunditia, pro idololatria dictum
+413 a; Judacis exitio fuit 413 b.
+		</div>
+		<div n="1005030">
+			Impietas, et Judac, et Isracli, exitii
+causa 84 b; ad niiseriam quaui
+certissime rapit 160 c; virtuti
+relictae succedit, ut luci tenebrae
+302 b.
+		</div>
+		<div n="1005040">
+			Impii, gaudere nequeunt vernii sempiternae
+reservati 41 d; gratia
+Dei privati, necesse est pereant
+43 e; qui sint maxime 44 d;
+quae sint passuri 47 a; radicitus
+peribunt 47 d; pauperes oderunt
+267 b; homines fHllunt, non
+Deum 583 d; Deo irascente,
+infirmantur 581 b; cura alienigenis
+comburendi 866 a.
+		</div>
+		<div n="1005050">
+			Impossibilitas, Deo, nulla est 718 ad.
+		</div>
+		<div n="1005060">
+			Impudentia, stultitiae certum indicium
+470 b.
+		</div>
+		<div n="1005070">
+			Impuri, blasphemiae convicti 268 d.
+		</div>
+		<div n="1005080">
+			Incarnatio De, praevisa 98 b;
+99 a; 100 a; 226 b; 677 e;
+678 a; mysteriura, omnem admirationem
+transcendens 472 c;
+consummatio et concussio dicitur
+quasi saeculi potestates evertens
+479 e; Prophetae Abacuc
+admirationem vehementer
+excitabat 548 c; describitur 548 e;
+ad urbem Bethlehem eventura
+praedicitur 553 e; Assuraptio
+naturae bumanae fait 554 a; Dei
+manifestatio erat 609 b; quae
+benefacta nobis intulerit 614 b;
+omnis boni spiritualis causa habenda
+625 a b; mysterium est,
+ipsam admirationem superans
+717 e; fons omniiiiii lioiniiiibus
+bonoiutn 719 c; gentium est
+vocatiu 729 a; quam pacem,
+laetitiam, gratiae abundantiam,
+Ecclcsiae contulerit 734, 735
+736; qualis fuerit, quae bona
+iiobis comparaverit 791 a b.
+Incestuin, pro unoquoquc scelere,
+positum 268 a.
+		</div>
+		<div n="1005090">
+			Inclinatio, mala, vel minima cavenda
+162 b.
+		</div>
+		<div n="1005100">
+			Incolere, Christum amantium securam,
+accolere, segnium negligentiumque
+periculosam, conditionem
+exprimit 780 c d.
+		</div>
+		<div n="1005110">
+			Incorruptio, amitti non potest, cuivis
+in Christo resurgenti 350 e.
+		</div>
+		<div n="1005120">
+			Increduli, quantam timoris causam
+habeant 671 e; 672 a.
+		</div>
+		<div n="1005130">
+			Incredulitas, Sarae, de partu suo
+718 a; Judaeorum post Captivitem,
+de raultitudine futura sua
+718 ab; a Deo non permissa
+718 c; Judaeorum, praedicta
+754 e.
+		</div>
+		<div n="1005140">
+			Incruentiim, vide Sacrificium.
+Indi, sub nomine Nageb significati
+362 d; item per vocabulum
+harsis 369 e.
+		</div>
+		<div n="1005150">
+			Indicum mare 222 e; 246 a.
+		</div>
+		<div n="1005160">
+			Indicus lapis, Ninivitis notissimus
+501 a.
+		</div>
+		<div n="1005170">
+			Inebriatio, Lege Mosis summopere
+condemnata 270 a; pro spirituali
+ignorantia dictum 510 b.
+Infans, in utero servatus, Jonae
+in ceto servato comparatur
+376 c.
+		</div>
+		<div n="1005180">
+			Infantes, in historia Jonae Prophetae,
+viri siraplicis, simplicitatis notantur
+387 d.
+		</div>
+		<div n="1005190">
+			Infernus, quo sensu insatiabilis
+
+
+		</div>
+		<div n="1005200">
+			Infirmari, i. e. exitio devoveri, de
+impiis dictum 581 b.
+		</div>
+		<div n="1005210">
+			Infirraitas, ea summa est, aut voluptatem
+sequi, aut idola colere
+194 b; disciplina Dei est
+195 d.
+		</div>
+		<div n="1005220">
+			Ingratitudo, scelus infandum 159 a;
+Israelis, convincitur turpissima
+159 b; 182 b; 272 b; 446 ab;
+pro Blasphemia habenda 182 a;
+Judae, jure castigata 321 e.
+		</div>
+		<div n="1005230">
+			Iniquitas, quare per raulieris figuram
+describatur 698 a.
+		</div>
+		<div n="1005240">
+			Initiati, mysteriorum idoli Beelphegor,
+descripti 77 e.
+		</div>
+		<div n="1005250">
+			Injustitia, quam sit Deo invisa
+609 e; pessima est, injustos non
+castigare 610 b.
+		</div>
+		<div n="1005260">
+			Innocentes, a Deo ultore vindicandi
+245 b; a lege Mosis defensi
+521 c.
+		</div>
+		<div n="1005270">
+			Insania, Pseudoprophetis ascriptum
+133 d.
+		</div>
+		<div n="1005280">
+			Instabilitas, impiorum describitur
+90 e.
+		</div>
+		<div n="1005290">
+			Insufflare, in facies aegrotantium,
+mos Judaeorum 496 c ; Cyro
+ascribitur, Judaeos liberanti 496d;
+Christus insufflat Apostolis 496 e.
+		</div>
+		<div n="1005300">
+			Insulae, pro Ecclesiis Gentilibus
+dictum, ut stabilibus, nec a tentationibus
+afflictionibusque submersis 601 c.
+		</div>
+		<div n="1005310">
+			Integritas, quam sit religiosis necessaria 724 d.
+		</div>
+		<div n="1005320">
+			Intercessio, quantum valet Angelorum
+661 a e; Sanctorum 663 b;
+per quantas hominum, sanctorumque
+angelorum, e captivitate
+reditu potiti sunt Judaei 697 b.
+		</div>
+		<div n="1005330">
+			Interpretes, Sacrae Scripturae, ante
+Cyrillura multi 1 a; quaedam
+iterare solent, recte 2 a ; literalem
+sensum negantes, reprehensi 11 c;
+sicut apes, ea quae Christi raysteria
+elucidant, jussi colligere
+367 b; legis Mosaicae, judicibus
+semper assidebant 763 a;
+legis Mosaicae, Christum interficientes,
+a Christo damnati 763 c.
+		</div>
+		<div n="1005340">
+			Inundatio, sive maris, sive fluviorum,
+malignas potestates, ingruentes
+significat, praesertim Satanam
+481 b.
+		</div>
+		<div n="1005350">
+			Inventiones, hominum, sibi ipsis
+perniciosae 465 c; 466 b c d.
+		</div>
+		<div n="1005360">
+			Ira, aversiones sequitur omnino, et
+quodammodo comitatur 265 e ;
+Dei, quara sit metuenda 483 e;
+diluvio comparata 484 d ; Divina,
+tanta est, quanta hominum scelera
+615 b; Dei in Judaeos ante captivitatem
+descripta 654 b.
+		</div>
+		<div n="1005370">
+			Israel, tempore Roboanii regnare
+incepit 4 b; et ab Ecclesia, et a
+republica defecit 5 a; pro Samaritis
+intelligendum 5 c; 7 c; in
+montes et fluvios Medorurn translatus
+9 c; tempore Christi desiit
+22 b; a nomine populi Dei degeneravit
+26 a; spe reditus consolatur
+27 e; quo sensu redibit
+28 d; post Captivitatem, Judae
+conjunctus 29 c; daeinonibus deditus
+34 c; ipse sua idola spernebat
+40 d; diebus festis et
+Sabbato privatus 41 a; item
+terrae fructibus 42 b; claudicans
+inter Deum et Baal condemnatur
+41 c; 79 a; 125 d; quo sensu,
+praeda bestiis 42 d; velatus corde
+48 c; ad monteni Sinai regenera-
+
+
+		</div>
+		</body>
+    </text>
+</TEI>

@@ -1,0 +1,2556 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader xml:lang="eng">
+        <title xml:lang="lat">De Filio (Orat. 29)</title>
+    <author n="0">Gregorius Nazianzenus</author>
+	</teiHeader>
+    <text>
+        <body>
+        <div n="1001">
+			&#920;&#769;&#769;E&#927;&#923;&#927;&#915;&#921;K&#927;&#931; TPITOS.
+		</div>
+		<div n="1002">
+			&#928;&#917;&#929;&#921; &#933;&#921;&#927;&#933;.
+		</div>
+		<div n="10030">
+			&#7947; &#956;&#8050;&#957; &#959;&#8022;&#957; &#949;&#7988;&#960;&#959;&#953; &#964;&#953;&#962; &#7938;&#957; &#7952;&#960;&#953;&#954;&#8057;&#960;&#964;&#969;&#957; &#964;&#8052;&#957; &#960;&#949;&#961;&#8054; &#964;&#8056;&#957;
+&#955;&#8057;&#947;&#959;&#957; &#945;&#8016;&#964;&#8182;&#957; &#7953;&#964;&#959;&#953;&#956;&#8057;&#964;&#951;&#964;&#945; &#954;&#945;&#8054; &#964;&#945;&#967;&#8059;&#964;&#951;&#964;&#945;, &#954;&#945;&#8054; &#964;&#8056; &#964;&#959;&#8166; &#964;&#8049;&#967;&#959;&#965;&#962;
+&#7952;&#960;&#953;&#963;&#966;&#945;&#955;&#8050;&#962; &#7952;&#957; &#960;&#8118;&#963;&#953; &#956;&#8050;&#957; &#960;&#961;&#8049;&#947;&#956;&#945;&#963;&#953;, &#956;&#8049;&#955;&#953;&#963;&#964;&#945; &#948;&#8050; &#7952;&#957; &#964;&#959;&#8150;&#962;
+&#960;&#949;&#961;&#8054; &#952;&#949;&#959;&#8166; &#955;&#8057;&#947;&#959;&#953;&#962;, &#964;&#945;&#8166;&#964;&#8049; &#7952;&#963;&#964;&#953;&#957;. &#7952;&#960;&#949;&#8054; &#948;&#8050; &#964;&#8056; &#956;&#8050;&#957; &#7952;&#960;&#953;&#964;&#953;&#956;&#8119;&#957;
+&#959;&#8016; &#956;&#8051;&#947;&#945;&#903; &#8165;&#8119;&#963;&#964;&#959;&#957; &#947;&#8048;&#961; &#954;&#945;&#8054; &#964;&#959;&#8166; &#946;&#959;&#965;&#955;&#959;&#956;&#8051;&#957;&#959;&#965; &#960;&#945;&#957;&#964;&#8057;&#962;&#903; &#964;&#8056; &#948;&#8050; 
+		</div>
+		<div n="100302">
+			1. &#921; &#7952;&#960;&#953;&#954;&#8057;&#960;&#964;&#969;&#957;] &#7952;&#960;&#953;&#963;&#954;&#8061;&#960;&#964;&#969;&#957; b &#921;&#921; &#8217;&#964;&#959;&#957; &#955;&#8057;&#947;&#959;&#957;] &#964;&#8182;&#957; &#955;&#8057;&#947;&#969;&#957; b II 3 &#7952;&#957; &#964;&#959;&#8150;&#962;]
+om &#7952;&#957; c &#921;&#921; 7 &#960;&#957;&#949;&#8059;&#956;&#945;&#964;&#953; &#952;&#945;&#961;&#961;&#8053;&#963;&#945;&#957;&#964;&#949;&#962; cde || 8 &#7972;&#956;&#969;&#957;] &#7973;&#956;&#953;&#957; b &#921;&#921; 10 &#960;&#961;&#959;&#963;&#949;&#957;&#949;&#947;&#954;&#969;&#956;&#949;&#957;
+f
+		</div>
+		<div n="100303">
+			1. We have stated our objections
+to the hasty theology of the Euuomians;
+but it is a harder task to set
+forth our own. I will endeavour to
+do so with the aid of the Holy Spirit,
+&#8212; as indeed I have done before, but it
+is more necessary now than ever, &#8212;
+as briefly &#7939;&#962; I can.
+		</div>
+		<div n="100304">
+			1. &#7952;&#960;&#953;&#954;&#8057;&#960;&#964;&#969;&#957;] &#8217;by way of check-
+&#8217; &#913;&#8016;&#964;&#8182;&#957;, the Eunomians.
+		</div>
+		<div n="100305">
+			2. &#964;&#8056;...&#7952;&#960;&#953;&#963;&#966;&#945;&#955;&#8051;&#962;] &#8217;the danger.&#8217;
+		</div>
+		<div n="100306">
+			4. &#964;&#8056; &#956;&#8050;&#957; &#7952;&#960;&#953;&#963;&#966;&#945;&#955;&#8051;&#962;] &#954;&#964;&#955;.] taken
+from Demosth. Olynth. i 7.
+		</div>
+		<div n="100307">
+			6. &#7936;&#957;&#964;&#949;&#953;&#963;&#8049;&#947;&#949;&#953;&#957;] not merely &#8216;to
+state in opposition,&#8217; but to &#8216;instate,&#8217;
+to &#8216;substitute.&#8217;
+		</div>
+		<div n="100308">
+			8. &#960;&#961;&#959;&#963;&#954;&#965;&#957;&#959;&#965;&#956;&#8051;&#957;&#8179;] This does not
+compel us to suppose that Gr. used
+or was acquainted with the last part
+of our present &#8216; Nicene &#8217; Creed. See
+the quotations in Hort Two Diss,
+p. 88.
+		</div>
+		<div n="100309">
+			11. &#964;&#959;&#8166;&#964;&#959; &#947;&#8048;&#961; &#956;&#8057;&#957;&#959;&#957;] The verb
+omitted would prob. have to be expressed
+by perf. and pres. together;
+&#8217;have been and are.&#8217; Gr. refers to
+former outspoken sermons of his
+such as Orat. XX. For &#957;&#8051;&#945;&#957;. cp. i 2.
+		</div>
+		<div n="10040">
+			&#964;&#961;&#949;&#8150;&#962; &#945;&#7985; &#7936;&#957;&#969;&#964;&#8049;&#964;&#969; &#948;&#8057;&#958;&#945;&#953; &#960;&#949;&#961;&#8054; &#952;&#949;&#959;&#8166;, &#7936;&#957;&#945;&#961;&#967;&#8055;&#945;, &#954;&#945;&#8054;
+&#960;&#959;&#955;&#965;&#945;&#961;&#967;&#8055;&#945;, &#954;&#945;&#8054; &#956;&#959;&#957;&#945;&#961;&#967;&#8055;&#945;. &#945;&#7985; &#956;&#8050;&#957; &#959;&#8022;&#957; &#948;&#8059;&#959; &#960;&#945;&#953;&#963;&#8054;&#957; &#8216;&#917;&#955;&#955;&#8053;&#957;&#969;&#957;
+&#7952;&#960;&#945;&#8055;&#967;&#952;&#951;&#963;&#945;&#957;, &#954;&#945;&#8054; &#960;&#945;&#953;&#950;&#8051;&#963;&#952;&#969;&#963;&#945;&#957;. &#964;&#8057; &#964;&#949; &#947;&#8048;&#961; &#7940;&#957;&#945;&#961;&#967;&#959;&#957;
+
+		</div>
+		<div n="100401">
+			2 &#949;&#8016;&#948;&#959;&#954;&#953;&#956;&#949;&#8150;&#963;&#952;&#945;&#953; b || 6 om &#8033;&#962; f || 7 &#947;&#949;&#957;&#951;&#964;&#945;&#953;] &#947;&#8051;&#957;&#969;&#957;&#964;&#945;&#953; b &#8216;Reg. Cypr.&#8217; ||
+9 &#948;&#953;&#945;&#967;&#965;&#952;&#8135; bd &#8217;Reg. Cypr.&#8217; || IO &#957;&#959;&#959;&#8059;&#956;&#949;&#957;&#945;] &#955;&#949;&#947;&#8057;&#956;&#949;&#957;&#945; &#8217;Reg. Cypr.&#8217;
+		</div>
+		<div n="100402">
+			1. &#964;&#8134; &#8017;&#960;&#959;&#963;&#964;&#959;&#955;&#8135;] Heb. x 38, 39
+(Hab. ii 4). The word, as the context
+here shews, implies a disingenuous
+reticence; cp. Gal. ii 12,
+13.
+		</div>
+		<div n="100403">
+			2. &#948;&#953;&#964;&#964;&#959;&#8166; &#948;&#8050; &#8004;&#957;&#964;&#959;&#962;] The Bene-
+dictine editors compare Athenagoras
+de Resurr. 1.
+		</div>
+		<div n="100404">
+			7. &#945;&#8016;&#964;&#959;&#8055;] the Eunomians. Gr.
+incidentally shews how systematically
+they went to work.
+		</div>
+		<div n="100405">
+			10. &#963;&#969;&#955;&#8134;&#957;&#953;&#963;&#966;&#953;&#947;&#947;.] &#8217;compressed in
+&#945; pipe.&#8217;
+		</div>
+		<div n="100406">
+			11. &#967;&#949;&#8057;&#956;. &#954;. &#955;&#965;&#8057;&#956;.] Cp. ii 13.
+		</div>
+		<div n="100407">
+			2. Atheism, Polytheism, Monotheism,
+are the three ancient opinions
+about God. The second ends in the
+same anarchy as the first, and we
+leave it to the Gentiles. Our Monotheism,
+however, is one where Three
+Persons are joined in equality of
+nature and in identity of will, &#8212; two
+of the three being derived from the
+first by what Scripture describes as
+generation and emission respectively.
+		</div>
+		<div n="100408">
+			12. &#945;&#7985; &#7936;&#957;&#969;&#964;&#8049;&#964;&#969; &#948;&#8057;&#958;&#945;&#953;] &#8217;the most
+ancient opinions.&#8217;
+		</div>
+		<div n="100409">
+			13. &#960;&#945;&#953;&#963;&#8054;&#957; &#7961;&#955;&#955;&#8053;&#957;&#969;&#957;] a phrase
+formed on the fashion of &#965;&#7985;&#959;&#8054; &#7992;&#963;&#961;&#945;&#8053;&#955;;
+but the word &#960;&#945;&#8150;&#948;&#949;&#962; seems to be
+chosen with a view to the verb
+&#7952;&#960;&#945;&#8055;&#967;&#952;&#951;&#963;&#945;&#957;. &#8216;With the first two
+the children of Greece amused themselves.&#8217;
+		</div>
+		<div n="1004010">
+			14. &#964;&#8057; &#964;&#949; &#947;&#8049;&#961;] The &#947;&#8049;&#961; gives
+the reason why Gr. leaves those
+theories to the children of Greece
+(imperative).
+		</div>
+		<div n="1004011">
+			17. &#7936;&#964;&#945;&#958;&#8055;&#945; &#947;&#8048;&#961; &#956;. &#955;.] &#8217;Disorder
+is the prelude to &#8217;For
+&#956;&#949;&#955;&#8051;&#964;&#951; (lit. &#8217;practice,&#8217; &#8217;rehearsal&#8217;)
+cp. i 7.
+		</div>
+		<div n="1004015">
+			2. 6 &#947;&#949;&#957;&#951;&#964;&#951;&#962;] &#947;&#949;&#957;&#957;&#8053;&#964;&#951;&#962; def || &#964;&#8134; &#947;&#949; &#959;&#8016;&#963;&#8055;&#945;] &#964;&#8134; &#7952;&#958;&#959;&#965;&#963;&#8055;&#945; ac (sed &#964;&#8134; &#947;&#949;
+&#959;&#8016;&#963;&#8055;&#945; in marg.) g: &#964;&#8134; &#947;&#949; &#959;&#8016;&#963;&#8055;&#945; e in rasura
+		</div>
+		<div n="1004016">
+			1. &#956;. &#948;&#8051;, &#959;&#8016;&#967; &#7970;&#957; &#7952;&#957;] &#8216;Not a souereignty
+contained in a single person.&#8217;
+		</div>
+		<div n="1004017">
+			2. &#7952;&#963;&#964;&#953; &#947;&#8049;&#961;] Such a sovereignty,
+of a single person, does not necessarily
+exclude the thought of discord
+and confusion. It is possible to
+conceive of a single entity being
+divided against itself, and so becoming
+many. The divine unity,
+which we believe, is the result of
+&#8216;equality of nature, unanimity of
+judgment, and identity of action&#8217;
+&#8216;of will.&#8217;
+		</div>
+		<div n="1004018">
+			5. &#960;&#961;&#8056;&#962; &#964;&#8056; &#7952;&#957; &#954;&#964;&#955;.] This complete
+harmony of mind and will in
+the Godhead is itself based upon
+the concurrence of the other Blessed
+Persons with that One of Their
+number from whom They are derived,
+viz. the Father. Gr. does not as
+yet name the Father, nor indeed
+any of the Persons, because he is
+speaking in the abstract of the
+divine unity and its conditions, and
+so says &#964;&#8056; &#7952;&#957; and not rbv &#7956;&#957;&#945;. &#913;
+comparison of v 14 shews that &#964;&#8182;&#957;
+&#7952;&#958; &#945;&#8016;&#964;&#959;&#8166; depends on &#963;&#8059;&#957;&#957;&#949;&#965;&#963;&#953;&#962;, not
+on &#964;&#8056; &#7952;&#957;. The &#8216;antecedent&#8217; of &#7952;&#958;
+&#945;&#8016;&#964;&#959;&#8166; (neut.) is &#964;&#8056; &#7952;&#957;.
+		</div>
+		<div n="1004019">
+			ib. &#8005;&#960;&#949;&#961;] refers to the whole fourfold
+description. It is perhaps not
+impossible that such an unity should
+exist among creaturely beings, but
+our experience suggests no instance
+of it, &#8212; only imperfect images of it.
+The clause is of course parenthetical.
+		</div>
+		<div n="1004020">
+			6. &#8037;&#963;&#964;&#949;] again refers to the
+whole description. It will be seen
+that &#959;&#8016;&#963;&#8055;&#945; to Gr. means more than
+&#966;&#8059;&#963;&#953;&#962;. There is a moral element in
+it, and not only a metaphysical;
+&#8001;&#956;&#959;&#964;&#953;&#956;&#8055;&#945; &#966;&#8059;&#963;&#949;&#969;&#962; is one of the things
+which secure &#959;&#8022;&#963;&#8217;. &#956;&#8052; &#964;. The reading
+&#964;&#8134; &#7952;&#958;&#959;&#965;&#963;&#8055;&#8115; gives no satisfactory sense.
+		</div>
+		<div n="1004021">
+			7. &#956;&#959;&#957;&#8048;&#962; &#7936;&#960;&#8217; &#7936;&#961;&#967;&#8134;&#962;] The language
+comes perilously near the
+Sabellian conception of &#960;&#955;&#945;&#964;&#965;&#963;&#956;&#8057;&#962;
+(see Dorner Person of Christ div. I,
+vol. 2, p. 156); but of course Gr.'s
+tenses &#954;&#953;&#957;&#951;&#952;&#949;&#8150;&#963;&#945;, &#7956;&#963;&#964;&#951;) are not to
+be understood in a temporal sense.
+There was no time before the &#954;&#8055;&#957;&#951;&#963;&#953;&#962;
+of which he speaks. For &#956;&#8049;&#961;&#953; see
+ii 9.
+		</div>
+		<div n="1004022">
+			9. &#947;&#949;&#957;&#957;. &#954;. &#960;&#961;&#959;&#946;.] the &#947;&#949;&#957;&#957;&#8053;&#964;&#969;&#961;,
+of course, of the Son; &#960;&#961;&#959;&#946;&#959;&#955;&#949;&#8059;&#962;, of
+the Spirit.
+		</div>
+		<div n="1004023">
+			12. &#7936;&#966;&#949;&#955;&#8061;&#957; &#954;&#964;&#955;.] Gr. knows no
+other way of expressing the relation
+of the Son and Spirit to the Father,
+such as might get rid of material suggestions.
+		</div>
+		<div n="10050">
+			&#928;&#8057;&#964;&#949; &#959;&#8022;&#957; &#964;&#945;&#8166;&#964;&#945;; &#8017;&#960;&#8050;&#961; &#964;&#8056; &#960;&#8057;&#964;&#949; &#964;&#945;&#8166;&#964;&#945;. &#949;&#7984; &#948;&#8050; &#948;&#949;&#8150;
+&#964;&#953; &#954;&#945;&#8054; &#957;&#949;&#945;&#957;&#953;&#954;&#8182;&#962; &#949;&#7984;&#960;&#949;&#8150;&#957;, &#8005;&#964;&#949; &#8001; &#960;&#945;&#964;&#8053;&#961;. &#960;&#8057;&#964;&#949; &#948;&#8050; &#8001; &#960;&#945;&#964;&#8053;&#961;;
+&#959;&#8016;&#954; &#7970;&#957; &#8005;&#964;&#949; &#959;&#8016;&#954; &#7974;&#957;. &#964;&#959;&#8166;&#964;&#959; &#959;&#8022;&#957; &#954;&#945;&#8054; &#8001; &#965;&#7985;&#8057;&#962;, &#954;&#945;&#8054; &#964;&#8056; &#960;&#957;&#949;&#8166;&#956;&#945; &#964;&#8056;
+&#7941;&#947;&#953;&#959;&#957;. &#960;&#8049;&#955;&#953;&#957; &#7952;&#961;&#8061;&#964;&#945; &#956;&#949;, &#954;&#945;&#8054; &#960;&#8049;&#955;&#953;&#957; &#7936;&#960;&#959;&#954;&#961;&#953;&#957;&#959;&#8166;&#956;&#945;&#8055; &#963;&#959;&#953;.
+
+		</div>
+		<div n="100501">
+			1 &#952;&#945;&#961;&#961;&#8053;&#963;&#969;&#956;&#949;&#957; ab II 3 &#8017;&#960;&#949;&#961;&#949;&#961;&#961;&#8059;&#951;] &#8017;&#960;&#949;&#961;&#961;&#8059;&#951; dfg || 4 &#960;&#8051;&#961;&#953;] + &#964;&#8134;&#962; f || IO om
+&#954;&#945;&#8054; f 3. 13 &#960;&#957;&#949;&#8166;&#956;&#945;] + &#964;&#8056; &#7940;&#947;&#953;&#959;&#957; c &#8217;Colb. I&#8217; || 17 &#949;&#953;] + &#956;&#8052; &#8217;Coisl. 3&#8217;
+		</div>
+		<div n="100502">
+			3. &#959;&#7991;&#959;&#957; &#954;&#961;&#945;&#964;&#8053;&#961; &#964;&#953;&#962;] The simile
+is used by Plato Tim. 41 D; but,
+as Jahn points out in his annotations
+Elias, in a different connexion.
+Gr. prob. refers to some Neoplatonic
+author.
+		</div>
+		<div n="100503">
+			7. &#7952;&#960;&#8054; &#964;&#8182;&#957; &#7968;&#956;&#8217;. &#8004;&#961;&#969;&#957;] keeping to
+consecrated by Christian
+usage; cp. i 5.
+		</div>
+		<div n="100504">
+			9. &#8037;&#962; &#960;&#959;&#8059; &#966;&#951;&#963;&#953;&#957;] John xv 26.
+		</div>
+		<div n="100505">
+			3. The acts thus described are
+above and before time, although it is
+impossible to divest ourselves of ternporal
+notions in attenmpting to illustrate
+them. The Second and Third
+Persons are not posterior to the First
+point of time, though Their being
+springs out of His.
+		</div>
+		<div n="100506">
+			11. &#964;&#945;&#8166;&#964;&#945;] sc. &#964;&#8056; &#947;&#949;&#957;&#957;&#951;&#964;&#8057;&#957; and &#964;&#8056;
+&#7952;&#954;&#960;&#959;&#961;&#949;&#965;&#8057;&#956;&#949;&#957;&#959;&#957;. This is shewn by
+&#8005;&#964;&#949; &#8001; &#960;&#945;&#964;&#8053;&#961; in the next line,
+ib. &#8017;&#960;&#8050;&#961; &#964;&#8056; &#960;&#8057;&#964;&#949;] above and be
+yond a &#8217;when.&#8217;
+		</div>
+		<div n="100507">
+			13. &#959;&#8016;&#954; &#7970;&#957; &#8005;&#964;&#949; &#959;&#8016;&#954; &#7970;&#957;] He replies
+with the phrase so well known at
+the beginning of the Arian controlanguage
+versy.
+		</div>
+		<div n="100508">
+			ib. &#964;&#959;&#8166;&#964;&#959;] sc. what is implied in
+&#959;&#8016;&#954; &#7970;&#957; &#8001;&#964;&#949; &#959;&#8016;&#954; &#7970;&#957;, eternal.
+		</div>
+		<div n="100509">
+			19. &#7956;&#956;&#966;&#945;&#963;&#953;&#957;] &#8217;an image.&#8217; In
+order to convey any notion of what
+is above time, it is impossible to
+avoid the employment of temporal
+imagery. &#7964;&#956;&#966;&#945;&#963;&#953;&#962; is, however, used
+in rhetoric for an innuendo, a sugin
+gestion of something beyond what
+the words express; and this may be
+Gr.'s meaning here.
+		</div>
+		<div n="10060">
+			&#7976;&#8060;&#962; &#959;&#8022;&#957; &#959;&#8016;&#954; &#7952;&#956;&#960;&#945;&#952;&#8052;&#962; &#7969; &#947;&#8051;&#957;&#957;&#951;&#963;&#953;&#962;; &#8005;&#964;&#953; &#7936;&#963;&#8061;&#956;&#945;&#964;&#959;&#962;.
+&#949;&#7984; &#947;&#8048;&#961; &#7969; &#7952;&#957;&#963;&#8061;&#956;&#945;&#964;&#959;&#962; &#7952;&#956;&#960;&#945;&#952;&#8053;&#962;, &#7936;&#960;&#945;&#952;&#8052;&#962; &#7969; &#7936;&#963;&#8061;&#956;&#945;&#964;&#959;&#962;. &#7952;&#947;&#8060; &#948;&#8051;
+&#963;&#949; &#7936;&#957;&#964;&#949;&#961;&#8053;&#963;&#959;&#956;&#945;&#953;&#903; &#960;&#8182;&#962; &#952;&#949;&#8057;&#962;, &#949;&#7984; &#954;&#964;&#8055;&#963;&#956;&#945;; &#959;&#8016; &#947;&#8048;&#961; &#952;&#949;&#8056;&#962; &#964;&#8056; &#954;&#964;&#953;&#950;&#959;&#769;- 
+		</div>
+		<div n="100601">
+			2 &#963;&#965;&#956;&#960;&#945;&#961;&#949;&#954;&#964;&#949;&#953;&#957;&#8057;&#956;&#949;&#957;&#959;&#957; c &#8216;Reg. Cypr.&#8217; || 3 &#955;&#945;&#956;&#946;&#8049;&#957;&#959;&#956;&#949;&#957; b II 6 &#7952;&#954;&#949;&#8150;&#957;&#959;&#957; def
+&#964;&#8056; &#8217;&#948;&#949; &#7936;&#8055;&#948;&#953;&#959;&#957; def || 9 &#8034;&#957;] + &#7952;&#963;&#964;&#953;&#957; bdf
+		</div>
+		<div n="100602">
+			2. &#960;&#955;&#8052;&#957; &#949;&#7984; &#954;&#964;&#955;.) The only
+way, Gr. says, is to adopt the
+standard of Eternity. Eternity does
+indeed suggest a kind of temporal
+duration; that cannot be helped;
+but we use it to denote &#8217;an interval
+or &#8217; commensurate with
+things of a supra-temporal order,
+not measured by any measurement
+known to time. It seems best to
+connect the &#960;&#955;&#8052;&#957; with &#949;&#7984; &#954;&#945;&#7984; &#956;&#8052; &#948;&#965;&#957;&#8049;&#956;&#949;&#952;&#945;,
+and to treat the intervening
+sentence (in accordance with Gr.s
+manner) as parenthetical.
+		</div>
+		<div n="100603">
+			5. &#7952;&#954;&#949;&#8150;&#952;&#949;&#957;] sc. &#7952;&#954; &#964;&#959;&#8166; &#960;&#945;&#964;&#961;&#8057;&#962;.
+		</div>
+		<div n="100604">
+			9. &#964;&#959;&#8166; &#966;&#969;&#964;&#8056;&#962; &#7972;&#955;&#969;&#962;] The simile
+is, of course, unscientific; but it
+serves its purpose.
+		</div>
+		<div n="100605">
+			10. &#7940;&#957;&#945;&#961;&#967;&#8049; &#960;&#8060;&#962; &#964;&#8183; &#967;&#961;.] In a
+sense, so far as time is concerned,
+that which is Begotten and that
+which Proceeds are without a beginning,
+as no date can be assigned,
+prior to which They had not begun.
+		</div>
+		<div n="100606">
+			ib. &#956;&#959;&#961;&#956;&#959;&#955;&#8059;&#964;&#964;&#8131;] &#8216;to scare&#8217; with
+&#956;&#959;&#961;&#956;&#8061;, or bugbear.
+		</div>
+		<div n="100607">
+			4. If difficulty is felt about the
+&#8216;generation&#8217; of the Son by the Father,
+the difficulty is not got rid rid by
+making the Son a &#8216;creature&#8217; instead.
+It only arises from a carnal notion
+of what is meant by generation, as
+if there could be no higher hind of
+generation.
+		</div>
+		<div n="100608">
+			15. &#960;&#8182;&#962; &#952;&#949;&#8057;&#962;] which the Eunomians
+acknowledged, though with
+an interpretation of their own.
+		</div>
+		<div n="100609">
+			16. &#954;&#7936;&#957;&#964;&#945;&#8166;&#952;&#945;] i.e. &#7952;&#957; &#964;&#8183; &#954;&#964;&#8055;&#950;&#949;&#953;&#957;.
+&#913; work of creation (lit. &#8216;founding&#8217;)
+as known to man involves time in
+which to work it out, desire for the
+accomplishment, the formation of
+a mental ideal, thought as to the
+mode of execution, etc. Gr.'s objeel
+is to shew that the thought of creation
+on &#8217;s part involves as many
+difficulties as that of generation.
+		</div>
+		<div n="10070">
+			&#964;&#8055;&#962; &#959;&#8022;&#957; &#7952;&#963;&#964;&#8054; &#960;&#945;&#964;&#8052;&#961; &#959;&#8016;&#954; &#7968;&#961;&#947;&#956;&#8051;&#957;&#959;&#962;; &#8005;&#962; &#964;&#953;&#962; &#959;&#8016;&#948;&#8050; &#964;&#959;&#8166;
+&#949;&#7990;&#957;&#945;&#953; &#7972;&#961;&#958;&#945;&#964;&#959;&#903; &#8103; &#948;&#8050; &#964;&#8056; &#949;&#7990;&#957;&#945;&#953; &#7972;&#961;&#958;&#945;&#964;&#959;, &#964;&#959;&#8059;&#964;&#8179; &#954;&#945;&#8054; &#964;&#8056; &#949;&#7990;&#957;&#945;&#953;
+&#960;&#945;&#964;&#961;&#8055;. &#959;&#8020;&#954;&#959;&#965;&#957; &#960;&#945;&#964;&#8052;&#961; &#8021;&#963;&#964;&#949;&#961;&#959;&#957;, &#959;&#8016; &#947;&#8048;&#961; &#7972;&#961;&#958;&#945;&#964;&#959;&#903; &#954;&#945;&#8054; &#960;&#945;&#964;&#8052;&#961;
+&#954;&#965;&#961;&#8055;&#969;&#962;, &#8005;&#964;&#953; &#956;&#8052; &#954;&#945;&#8054; &#965;&#7985;&#8057;&#962;&#903; &#8037;&#963;&#960;&#949;&#961; &#954;&#945;&#8054; &#965;&#7985;&#8056;&#962; &#954;&#965;&#961;&#8055;&#969;&#962;, &#8005;&#964;&#953; &#956;&#8052; &#954;&#945;&#8054;
+&#960;&#945;&#964;&#8053;&#961;. &#964;&#8048; &#947;&#8048;&#961; &#7969;&#956;&#8051;&#964;&#949;&#961;&#945; &#959;&#8016; &#954;&#965;&#961;&#8055;&#969;&#962;, &#8005;&#964;&#953; &#954;&#945;&#8054; &#7940;&#956;&#966;&#969;&#903; &#959;&#8016; &#947;&#8048;&#961;
+
+		</div>
+		<div n="100700">
+			4. 1 &#7956;&#966;&#949;&#963;&#953;&#962; &#967;&#961;&#8057;&#957;&#959;&#962; ac li 4 &#7952;&#957;&#957;&#959;&#949;&#8150;&#957;] &#7952;&#960;&#953;&#957;&#959;&#949;&#8150;&#957; b &#8216;Reg. &#8217; 5 &#954;&#965;&#951;&#963;&#949;&#969;&#962;]
+&#954;&#953;&#957;&#8053;&#963;&#949;&#969;&#962; d &#921;&#921; 8 &#964;&#959;&#8059;&#964;&#969;&#957;] + &#948;&#8052; &#8217;Or. I&#8217; || 9 &#7952;&#957;&#945;&#8055;&#961;&#949;&#953;&#957; &#8216;Reg. Cypr.&#8217; ||
+&#954;&#945;&#953;&#957;&#8134;&#962;] &#954;&#949;&#957;&#8134;&#962; be &#8217;Reg. Cypr.&#8217;: + &#963;&#959;&#965; beg 15 &#964;&#959;&#965;] rob: &#964;&#959;&#965; f in
+rasura || 17 &#960;&#945;&#964;&#961;&#8054;] &#960;&#945;&#964;&#8052;&#961; b &#8217;Reg. a1&#8217;
+		</div>
+		<div n="100701">
+			4. &#963;&#965;&#957;&#948;&#965;&#945;&#963;&#956;&#959;&#8059;&#962;] &#8216;copulation.&#8217;
+		</div>
+		<div n="100702">
+			5. &#7936;&#956;&#946;&#955;&#8061;&#963;&#949;&#969;&#962;] &#8216;miscarriage.&#8217;
+		</div>
+		<div n="100703">
+			6. &#959;&#8021;&#964;&#969;] by such ways as &#963;&#965;&#957;&#948;&#965;&#945;&#963;&#956;&#8057;&#962;
+and so on.
+		</div>
+		<div n="100704">
+			9. &#7970; &#954;&#945;&#8055;] &#8216;or else, &#8217; if the generation
+of the Son does not fit in with
+your select example, &#8216;get rid of Him
+altogether as a result of your novel
+scheme.&#8217;
+		</div>
+		<div n="100705">
+			12. &#7970; &#960;&#957;&#949;&#8166;&#956;&#8217;. &#947;&#8051;&#957;&#957;&#951;&#963;&#953;&#962;] i.e. His
+generation ace. to His divine nature.
+&#7960;&#958;&#945;&#955;&#955;&#8049;&#964;&#964;&#949;&#953;&#957; is freq. used intrans.
+		</div>
+		<div n="100706">
+			5. The Father never &#969;&#945;&#962; anything
+else but Father. While we
+human beings are sons, as well as
+fathers, He is absolutely Father,
+and that alone. If we say that He
+&#8217;has begotten&#8217; a Son, we do
+mean to imply a moment or date.
+Scripture often uses tenses in a way
+which differs from that of ordinary
+life.
+		</div>
+		<div n="100707">
+			15. &#964;&#8055;&#962; &#959;&#8022;&#957;] It is the &#8217;s
+question: &#8216;What father is there who
+never began to be a father ?&#8217;
+		</div>
+		<div n="100708">
+			17. &#959;&#8020;&#954;&#959;&#965;&#957; &#960;. &#8021;&#963;&#964;.] &#8216;He did
+become Father at some subsequent
+point, because (ace. to the foregoing
+argument) He never began to be.&#8217;
+		</div>
+		<div n="100709">
+			18. &#954;&#965;&#961;&#8055;&#969;&#962;] &#8216;properly, because He
+is not at the same time Son.&#8217;
+on the other hand, Gr. goes on to
+say, are not &#8216;properly &#8217; fathers, because
+we are &#7940;&#956;&#966;&#969;, sons as much
+as fathers. The variety of our relationships
+makes it impossible to
+consider any one of them an exhaustive
+description of a human
+being; but fatherhood expresses all
+that the person of God the Father
+is.
+		</div>
+		<div n="1007013">
+			5 &#7952;&#947;&#8051;&#957;&#957;&#951;&#963;&#949;&#957; &#945;&#8016;&#964;&#8056; &#966;&#951;&#963;&#953;&#957; f || 12 &#964;&#8134;&#962;] + &#952;&#949;&#8055;&#945;&#962; b
+		</div>
+		<div n="1007014">
+			1. &#7952;&#958; &#7936;&#956;&#966;&#959;&#8150;&#957;] not the same &#7940;&#956;&#966;&#969;
+as above, but here as if = &#7952;&#954; &#948;&#965;&#959;&#8150;&#957;.
+Gr. is thinking chiefly how our sonship
+differs from that of the Eternal
+Son, and leaves the difference of the
+fatherhood. Each of us has two
+parents, not one, so that we are in
+a way divided between them.
+		</div>
+		<div n="1007015">
+			2. &#954;&#945;&#964;&#8217; &#948;&#955;. &#7940;&#957;&#952;&#961;.] another difference;
+we only gradually attain the
+position of human beings by a long
+fashioning in the womb, and some
+hardly attain it at all. In the last
+clause no doubt Gr. means idiots
+and persons otherwise deficient.
+The wishes of human parents for
+their offspring are often far from
+being realised &#959;&#7990;&#959;&#953; &#956;&#8052; &#964;&#949;&#952;.).
+		</div>
+		<div n="1007016">
+			3. &#7936;&#966;&#953;&#8051;&#957;&#964;&#949;&#962;] The children in
+many cases go their way, and the
+parents theirs, and nothing is left of
+the sacred relationship except the
+name.
+		</div>
+		<div n="1007017">
+			5. &#7952;&#947;&#8051;&#957;&#957;&#951;&#963;&#949;] We have been
+using expressions like &#8216;begat&#8217; and
+&#8216;is begotten,&#8217; which necessarily
+besides the notion of begetting,
+the tense-notion of a moment when.
+To evade the difficulty, Gr. proposes
+to use a formula which puts the
+&#8216;moment&#8217; back before the beginning
+of time, and to say that the Son
+&#8216;was&#8217; already &#8216;begotten from the
+beginning.&#8217;
+		</div>
+		<div n="1007018">
+			9. &#947;&#961;&#945;&#966;&#8052;&#957; &#7936;&#960;&#959;&#8055;&#963;&#949;&#953;&#962; &#954;&#945;&#952;&#8217; &#7972;&#956;&#8217;.] a
+legal term, which has only an accidental
+relation to the use of &#947;&#961;&#945;&#966;&#8052;
+immediately after in the sense of
+&#8217;Scripture.&#8217; It means &#8216;to file an
+accusation?
+		</div>
+		<div n="1007019">
+			ib. &#960;&#945;&#961;&#945;&#967;&#945;&#961;&#945;&#964;&#964;&#8057;&#957;&#964;&#969;&#957;] &#8216;putting
+a false mark &#8217; i.e. &#8216;falsifying&#8217;;
+chiefly used of coin that has been
+tampered with.
+		</div>
+		<div n="1007020">
+			11. &#7952;&#957;&#951;&#955;&#955;&#945;&#947;&#956;. &#964;. &#967;&#961;&#948;&#957;.] Much of
+our language which denotes time is
+used in an inverse manner to the
+time intended.
+		</div>
+		<div n="1007021">
+			14. &#7988;&#957;&#945; &#964;&#8055; &#7952;&#966;&#961;.] Psalm ii 1.
+		</div>
+		<div n="10080">
+			&#964;&#959;&#8166;&#964;&#959; &#956;&#8050;&#957; &#948;&#8052; &#964;&#959;&#953;&#959;&#8166;&#964;&#959;&#957;. &#959;&#7991;&#959;&#957; &#948;&#8050; &#945;&#8016;&#964;&#8182;&#957; &#954;&#7936;&#954;&#949;&#8150;&#957;&#959;, &#8033;&#962;
+&#955;&#8055;&#945;&#957; &#948;&#8059;&#963;&#949;&#961;&#953; &#954;&#945;&#8054; &#7936;&#957;&#945;&#8055;&#963;&#967;&#965;&#957;&#964;&#959;&#957;* &#946;&#959;&#965;&#955;&#951;&#952;&#949;&#8055;&#962;, &#966;&#945;&#963;&#953;, &#947;&#949;&#947;&#8051;&#957;&#957;&#951;&#954;&#949;
+&#964;&#8056;&#957; &#965;&#7985;&#8057;&#957;, &#7970; &#956;&#8052; &#946;&#959;&#965;&#955;&#8057;&#956;&#949;&#957;&#959;&#962;. &#949;&#7990;&#964;&#945; &#948;&#949;&#963;&#956;&#959;&#8166;&#963;&#953;&#957;, &#8033;&#962; &#959;&#7988;&#959;&#957;&#964;&#945;&#953;,
+&#7936;&#956;&#966;&#959;&#964;&#8051;&#961;&#969;&#952;&#949;&#957; &#7941;&#956;&#956;&#945;&#963;&#953;&#957;, &#959;&#8016;&#954; &#7984;&#963;&#967;&#965;&#961;&#959;&#8150;&#962;, &#7937;&#955;&#955;&#8048; &#954;&#945;&#8054; &#955;&#8055;&#945;&#957; &#963;&#945;&#952;&#961;&#959;&#8150;&#962;.
+&#949;&#7984; &#956;&#8050;&#957; &#947;&#8048;&#961; &#959;&#8016; &#952;&#8051;&#955;&#969;&#957;, &#966;&#945;&#963;&#8055;, &#964;&#949;&#964;&#965;&#961;&#8049;&#957;&#957;&#951;&#964;&#945;&#953;. &#954;&#945;&#8054; &#964;&#8055;&#962;
+&#964;&#959; &#8001; &#964;&#965;&#961;&#945;&#957;&#957;&#8053;&#963;&#945;&#962;; &#954;&#945;&#8054; &#960;&#8182;&#962; &#8001; &#964;&#965;&#961;&#945;&#957;&#957;&#951;&#952;&#949;&#8054;&#962; &#952;&#949;&#8057;&#962;; &#949;&#7984; &#948;&#8050; &#952;&#8051;&#955;&#969;&#957;,
+&#952;&#949;&#955;&#8053;&#963;&#949;&#969;&#962; &#965;&#7985;&#8056;&#962; &#8001; &#965;&#7985;&#8057;&#962;&#903; &#960;&#8182;&#962; &#959;&#8022;&#957; &#7952;&#954; &#964;&#959;&#8166; &#960;&#945;&#964;&#961;&#8057;&#962;; &#954;&#945;&#8054; &#954;&#945;&#953;&#957;&#8053;&#957;
+&#964;&#953;&#957;&#945; &#956;&#951;&#964;&#8051;&#961;&#945; &#964;&#8052;&#957; &#952;&#8051;&#955;&#951;&#963;&#953;&#957; &#7936;&#957;&#964;&#8054; &#964;&#959;&#8166; &#960;&#945;&#964;&#961;&#8056;&#962; &#7936;&#957;&#945;&#960;&#955;&#8049;&#964;&#964;&#959;&#965;&#963;&#953;&#957;.
+&#7955;&#957; &#956;&#8050;&#957; &#959;&#8022;&#957; &#964;&#959;&#8166;&#964;&#959; &#967;&#945;&#961;&#8055;&#949;&#957; &#945;&#8016;&#964;&#8182;&#957;, &#7938;&#957; &#964;&#959;&#8166;&#964;&#959; &#955;&#8051;&#947;&#969;&#963;&#953;&#957;, &#8005;&#964;&#953; &#964;&#959;&#8166;
+&#960;&#8049;&#952;&#959;&#965;&#962; &#7936;&#960;&#959;&#963;&#964;&#8049;&#957;&#964;&#949;&#962; &#7952;&#960;&#8054; &#964;&#8052;&#957; &#946;&#959;&#8059;&#955;&#951;&#963;&#953;&#957; &#954;&#945;&#964;&#945;&#966;&#949;&#8059;&#947;&#959;&#965;&#963;&#953;&#957;&#903; &#959;&#8016;
+
+		</div>
+		<div n="100801">
+			3 &#949;&#7988;&#951;] &#951;&#957; f 6 &#966;&#945;&#963;&#953;] &#966;&#951;&#963;&#953; df || 7 &#959;&#953;&#959;&#957;&#964;&#945;&#953;] &#959;&#953;&#959;&#957; &#964;&#949; &#8217;duo Colb.&#8217; ||
+11 &#954;&#945;&#953;&#957;&#8052;&#957;] &#954;&#949;&#957;&#8052;&#957; &#8217;Reg. Cypr.&#8217;
+		</div>
+		<div n="100802">
+			1. &#7952;&#957; &#960;&#959;&#964;&#945;&#956;&#8182; Psalm lxv (lxvi)
+6.
+		</div>
+		<div n="100803">
+			4. &#964;&#949;&#964;&#8053;&#961;&#951;&#957;&#964;&#945;&#953;] &#8216;have been observed.&#8217;
+		</div>
+		<div n="100804">
+			6. &#8217;Did the Father beget the
+Son,&#8217; asks the opponent, &#8216;by an act
+of will, or not? If not, He was
+tinder constraint, which is impossible;
+if so, then the Son owes His
+being not to the Father only, but
+also to the Father's will, zvhich thus
+becomes &#945; kind of motherhood.&#8217; This
+dilemma is met by a similar one
+with regard to the &#8217;s &#959;&#8023;&#954;
+birth, and by another with regard to
+creation. Gr. then shews that &#7939;&#962; a
+word is not the result of speaking,
+considered as &#945; separate ajtd sub-
+stantive thing, but springs direct
+from the speaker, so the thing willed
+springs not from will in the abstract,
+but direct from him who wills.
+		</div>
+		<div n="100805">
+			8. &#963;&#945;&#952;&#961;&#959;&#8150;&#962;] Cp. i 3.
+		</div>
+		<div n="100806">
+			11. &#960;&#8182;&#962; &#959;&#8022;&#957; &#7952;&#954; &#964;&#959;&#8166; &#960;.] It certainly
+seems a strangely captious
+argument. If it was ever seriously
+urged by the Eunomians, we must
+suppose that &#952;&#8051;&#955;&#969;&#957; is not merely =
+&#7953;&#954;&#8061;&#957;, but &#8217;by willing&#8217;; i.e. it was
+the act of will which produced the
+Son. Then, as other faculties of
+the divine being are represented to
+us as hypostatic &#8212; notably the &#923;&#8057;&#947;&#959;&#962;
+&#8212; we are driven to suppose that
+this primary faculty, antecedent and
+necessary to the production of the
+Son, is hypostatic also. If that is
+the case, He does not owe His
+being solely to the Father, but
+partly also to the &#8217;s Will,
+which is thus constituted a kind of
+mother in the Godhead. But Gr.'s
+subsequent words &#7938;&#957; &#964;&#959;&#8166;&#964;&#959; &#955;&#8051;&#947;&#969;&#963;&#953;&#957;
+suggest the doubt whether he did
+not himself invent this part of the
+argument for the Eunomians.
+		</div>
+		<div n="100807">
+			13. &#945;&#8016;&#964;&#8182;&#957;] depends upon &#967;&#945;&#961;&#8055;&#949;&#957;
+(av &#949;&#7988;&#951;) by an idiom well known in
+colloquial English as well as in
+Greek; &#8216;it it will be delightful of
+them.&#8217;
+		</div>
+		<div n="100808">
+			14. &#959;&#8016; &#947;&#8048;&#961; &#960;&#8049;&#952;&#959;&#962; &#7970; &#946;.] This is
+true; nevertheless it is difficult for
+the human mind to imagine an act
+of will which is not caused by something
+which would come under the
+description of a &#960;&#8049;&#952;&#959;&#962;.
+		</div>
+		<div n="1008013">
+			2 &#945;&#957;] &#7956;&#945;&#957; b || 3 &#949;&#952;&#949;&#955;&#951;&#962;] &#952;&#8051;&#955;&#8131;&#962; def &#921;&#921; 7 &#952;&#949;&#955;&#951;&#956;&#945;&#964;&#959;&#962;] &#952;&#949;&#955;&#8053;&#963;&#949;&#969;&#962; def || 10 &#965;&#960;&#949;&#963;&#964;&#951;&#963;&#949;]
++ &#952;&#949;&#8056;&#962; bcd: + &#959; &#952;&#949;&#8056;&#962; ef || 14 &#952;&#949;&#955;&#951;&#963;&#949;&#953;] &#952;&#8051;&#955;&#951;&#963;&#953;&#962; b || om &#947;&#8048;&#961; b || 15 &#7952;&#963;&#964;&#953;&#957;
+&#959;&#7988;&#956;&#945;&#953; &#952;&#8051;&#955;&#969;&#957; bdf
+		</div>
+		<div n="1008014">
+			1. &#964;&#8056; &#7988;&#963;&#967;&#8217;. &#945;&#8016;&#964;&#8217;. &#246; &#964;&#953; &#955;] &#8216;what they
+consider their strong point? &#916;&#949;&#8059;&#964;&#949;&#961;&#959;&#957;
+&#948;&#8050; corresponds to &#7952;&#957; &#956;&#8051;&#957;. Before,
+however, entering upon this
+&#948;&#949;&#8059;&#964;&#949;&#961;&#959;&#957;, which he does at &#7936;&#955;&#955;&#8217; &#7952;&#960;&#8054;
+&#964;. &#952;., Gr. thinks it best &#960;&#961;&#8057;&#964;&#949;&#961;&#959;&#957;)
+to grapple with his adversaries at
+closer quarters. This he does in the
+question &#963;&#8058; &#948;&#8050; &#945;&#8016;&#964;&#8057;&#962; &#954;&#964;&#955;., which
+brings the argument home to them
+personally &#7952;&#947;&#947;&#965;&#964;&#8051;&#961;&#969;).
+		</div>
+		<div n="1008015">
+			5. &#959;&#8016; &#947;&#8048;&#961; &#948;&#8052; &#964;&#8052;&#957; &#966;&#8059;&#963;&#953;&#957; &#7952;&#961;&#949;&#8150;&#962;]
+&#8216;You will not say that he was compelled
+by nature. Nature admits
+equally of self-restraint.&#8217;
+		</div>
+		<div n="1008016">
+			10. &#8017;&#960;&#8051;&#963;&#964;&#951;&#963;&#949;] &#8216;gave them existence,&#8217;
+ence? i.e. by creation.
+		</div>
+		<div n="1008017">
+			12. &#7952;&#963;&#951;&#961;&#951;&#964;&#945;&#953; &#964;&#959;&#8166; &#952;.&#954;. &#964;&#8048; &#954;&#964;] As,
+ace. to their supposed argument,
+the Son is deprived of the Father
+by the interposition of the Will
+from which He sprang, so is creation
+deprived of its Creator. His
+Will runs like a wall between it
+and Him. The Eunomian is the
+first to suffer the loss, because
+he invented it; that is poetical
+justice.
+		</div>
+		<div n="1008018">
+			15. &#7957;&#964;&#949;&#961;&#959;&#957; &#959;&#7991;&#956;&#945;&#953;] Gr.'s argument
+is not very clear; because the Eunomians
+also had distinguished very
+sharply between the will and the
+person who wills, &#8212; so sharply that
+they said that the Son could not be
+the Son of one who willed to beget
+Him, but only of that will itself.
+But in so arguing they set up
+a new, though fictitious, identity.
+They converted the will itself into
+a personal agency. This is what
+Gr. combats. Will is one thing,
+and the person who wills is another.
+You might as well say that the
+thing begotten is the son of beget-
+ting, or trace the thing spoken to
+speaking instead of the speaker, as
+thus erect will into a substantive
+and independent force.
+		</div>
+		<div n="10090">
+			&#914;&#959;&#8059;&#955;&#949;&#953; &#964;&#953; &#960;&#961;&#959;&#963;&#960;&#945;&#8055;&#958;&#969; &#954;&#945;&#8054; &#964;&#8056;&#957; &#960;&#945;&#964;&#8051;&#961;&#945;; &#960;&#945;&#961;&#8048; &#963;&#959;&#8166;
+
+		</div>
+		<div n="100901">
+			1 &#956;&#949;&#952;&#8059;&#969;&#956;&#949;&#957; b &#921;&#921; 5 &#947;&#949;&#957;&#957;&#8182;&#957;&#964;&#959;&#962; cdefg || 7 &#948;&#949;&#958;&#803;&#837;&#959;&#956;&#949;&#952;&#945; deg &#8216;Or. 1&#8217;
+		</div>
+		<div n="100902">
+			1. &#964;&#8048; &#956;&#8051;&#957;] i.e. the series &#952;&#8051;&#955;&#969;&#957;,
+&#947;&#949;&#957;&#957;&#8182;&#957;, &#955;&#8051;&#947;&#969;&#957;; &#964;&#8048; &#948;&#8051;, i.e. the series
+&#952;&#8051;&#955;&#951;&#963;&#953;&#962;, &#947;&#8051;&#957;&#957;&#951;&#963;&#953;&#962;, &#955;&#8057;&#947;&#959;&#962;.
+		</div>
+		<div n="100903">
+			3. &#959;&#8016;&#948;&#8050; &#947;&#8048;&#961; &#7957;&#960;&#949;&#964;&#945;&#953; &#960;&#8049;&#957;&#964;&#969;&#962;] Gr.
+is using &#7957;&#960;&#949;&#964;&#945;&#953; in its logical sense.
+He does not mean that in the order
+of facts the act of will sometimes
+fails of its effect; he means that it
+does not &#8216;follow&#8217; that, because a
+thing has been willed, that thing is
+the result of will. It is the result
+of the personal force lying behind
+the will.
+		</div>
+		<div n="100904">
+			5. &#964;&#8048; &#964;&#959;&#8166; &#952;&#949;&#959;&#8166; &#948;&#8051;] All this holds
+true even in the experience of our
+limited personalities; much more
+may we suppose it to be so in
+regard to the divine nature. With
+God, so far as we know &#7988;&#963;&#969;&#962;), will
+and action are identical, and there
+is no medium whatever.
+		</div>
+		<div n="100905">
+			7. &#954;&#945;&#8054; &#964;&#959;&#8166;&#964;&#959;] i.e. the proposition
+that &#947;&#8051;&#957;&#957;&#951;&#963;&#953;&#962; = &#7969; &#964;&#959;&#8166; &#947;. &#952;. Gr. evidently
+inclines rather to the view
+that &#8216;the generation &#8001; the Son of
+God is even above and beyond
+will.&#8217;
+		</div>
+		<div n="100906">
+			7. Gr. retaliates by asking how
+God comes to be God. If by His
+will, when did He first will it? is
+one portion of His being the result of
+the will of another portion? is He
+not in this case as much a child of
+will as the Son? If He is God
+without willing to be so, then He is
+under compulsion.
+		</div>
+		<div n="100907">
+			&#8216;How then, is the Son begotten?&#8217;
+asks the Eunomian. &#8216;How is He
+created?&#8217; &#959;&#7985;. replies. Men do
+create in the way which it is
+to assume was &#8217;s way.
+		</div>
+		<div n="100908">
+			9. &#946;&#959;&#8059;&#955;&#949;&#953; &#964;&#953; &#954;&#964;&#955;.] &#8217;Do you wish
+me to make sport awhile with the
+Father also? &#8217; Hitherto the &#8216;sport&#8217;
+has been with the Son. Gr. intentionally
+uses a shocking expression.
+		</div>
+		<div n="100909">
+			11. &#954;&#945;&#8054; &#8005;&#960;&#969;&#962; &#7936;&#960;&#959;&#966;.] &#8217;and in order
+that you may escape: The main
+verb is the imperative implied in
+the question &#960;&#8057;&#964;&#949;. . . &#7968;&#961;&#947;&#956;&#8051;&#957;&#959;&#962; &#956;&#8057;&#957;&#959;&#962; &#8212; &#8216;tell
+me when.&#8217;
+		</div>
+		<div n="1009010">
+			12. &#960;&#961;&#8054;&#957; &#949;&#7990;&#957;&#945;&#953;] sc &#952;&#949;&#8057;&#962;; &#8216;not befpre
+He was so; for He tvas never
+anything before.&#8217;
+		</div>
+		<div n="1009011">
+			13. &#964;&#8056; &#956;&#8050;&#957; &#945;&#8016;&#964;&#959;&#8166;] &#8216;or did one part
+of Him will it, while the other part
+was the result of that will?
+		</div>
+		<div n="100100">
+			&#928;&#8182;&#962; &#959;&#8022;&#957; &#947;&#949;&#947;&#8051;&#957;&#957;&#951;&#964;&#945;&#953;; &#959;&#8016;&#954; &#7938;&#957; &#7970;&#957; &#956;&#949;&#947;&#8049;&#955;&#951; &#7969; &#947;&#8051;&#957;&#957;&#951;&#963;&#953;&#962;, 
+		</div>
+		<div n="1001002">
+			7. 1 &#959;&#965;&#957;] + &#966;&#951;&#963;&#953; bedf &#921;&#921; 6 &#949;&#953;&#960;&#959;&#953;&#962;] + &#8005;&#964;&#953; b 8. 13 &#959;&#953;&#949;&#953;] &#959;&#953;&#951; e || &#964;&#945; ce race
+		</div>
+		<div n="1001003">
+			2. &#949;&#7984;&#962; &#964;&#8056; &#949;&#7990;&#957;&#945;&#953;] again &#8217; to be so,&#8217;
+i.e. &#952;&#949;&#8057;&#962;.
+		</div>
+		<div n="1001004">
+			3. &#954;&#945;&#7984; &#964;&#945;&#8166;&#964;&#945; &#954;&#964;&#955;.] &#8216;and compelled
+to that very thing, namely to
+be God.&#8217;
+		</div>
+		<div n="1001005">
+			4. &#960;&#8182;&#962; &#959;&#8022;&#957;] Gr. returns rapidly
+to the original question, and again
+parries it by the counter question
+as to the creation of the Son. The
+difficulty of imagining the creation
+is as great as that of imagining the
+generation.
+		</div>
+		<div n="1001006">
+			7. &#7956;&#961;&#947;&#959;&#965; &#948;&#8059;&#957;. &#7956;&#963;&#967;&#949;&#953;&#957;] &#8216;how came
+it to have that effective force?"
+		</div>
+		<div n="1001007">
+			9. &#959;&#8021;&#964;&#969;&#962;] sc &#946;&#959;&#8059;&#955;&#949;&#964;&#945;&#953; &#954;&#945;&#7984; &#955;&#8057;&#947;&#949;&#953;.
+		</div>
+		<div n="1001008">
+			8. You do not understand your
+own generation, or the law of your
+own development; how can you expeel
+to understand that of God?
+That, however, &#7986;&#962; no proof that God
+does not beget. If nothing is to be
+true but what you understand,
+must reduce the list of existences,
+beginning with that of God Himself
+The mode of the divine generation
+is evidently beyond us.
+		</div>
+		<div n="1001009">
+			14. &#955;&#8057;&#947;&#959;&#965;&#962; &#963;&#965;&#956;&#960;.] &#8216;the formulae,&#8217;
+or &#8216;laws.&#8217;
+		</div>
+		<div n="10010010">
+			16. &#964;&#961;&#959;&#966;&#8134;&#962; &#7952;&#958;&#959;&#956;.] &#8216;assimilation of
+food.&#8217;
+		</div>
+		<div n="10010011">
+			17. &#956;&#957;&#8053;&#956;&#951;&#957;, &#7936;&#957;&#8049;&#956;&#957;.] Cp. ii 22.
+		</div>
+		<div n="10010012">
+			ib. &#964;&#8055;&#957;&#945; &#956;&#8051;&#957;] &#8216;what things belong
+to the united compound of soul and
+body.&#8217;
+		</div>
+		<div n="10010013">
+			19. &#964;&#8048; &#956;&#949;&#956;&#949;&#961;.] We might have
+expected &#956;&#949;&#956;&#949;&#961;&#953;&#963;&#956;&#8051;&#957;&#969;&#957;, &#8216;belong to
+soul and body apart&#8217;; but it
+&#8216;which are the things distributable&#8217;
+to soul and body respectively.
+		</div>
+		<div n="100101">
+			2 &#966;&#953;&#955;&#959;&#963;&#959;&#966;&#8053;&#963;&#949;&#953;&#962; af: -&#963;&#959;&#953;&#962; &#8216;Or. &#921;&#8217; &#921;&#921; 9 &#7936;&#960;&#8049;&#957;&#964;&#969;&#957;] &#960;&#8049;&#957;&#964;&#969;&#957; ef &#921;&#921; &#959;&#8016;&#948;&#8050;] &#959;&#8016; bf ||
+
+		</div>
+		<div n="100102">
+			1. &#8039;&#957; &#947;&#8048;&#961; &#8020;&#963;&#964;. &#7969; &#964;&#949;&#955;.] Although
+some parts and faculties of our nature
+only reach their perfection at a
+later time, the law of their development
+ment is present in the very moment
+of generation.
+		</div>
+		<div n="100103">
+			2. &#956;&#951;&#948;&#8050; &#964;&#8057;&#964;&#949;] not even when you
+have stated the laws of human development.
+		</div>
+		<div n="100104">
+			8. &#948;&#953;&#945;&#947;&#961;&#8049;&#966;&#949;&#953;&#957;] &#8217;to cancel,&#8217; &#8216;strike
+off the list.&#8217; Cp. v23.
+		</div>
+		<div n="100105">
+			11. &#954;&#945;&#964;&#8049;&#946;&#945;&#955;&#8051; &#963;&#959;&#965; &#964;&#8048;&#962; &#8127;&#961;.] &#8216;drop
+your dissipations. &#8217; The Eunomians
+conceived of the orthodox theology
+in a materialistic way, and proceeded
+to apply to it language of this
+kind. For &#8165;&#949;&#8059;&#963;&#949;&#953;&#962; cp. v 31; for
+&#948;&#953;&#945;&#953;&#961;. and &#964;&#959;&#956;&#8049;&#962; cp. i 6.
+		</div>
+		<div n="100106">
+			15. &#948;&#965;&#963;&#967;&#949;&#961;&#945;&#8055;&#957;&#969;&#957;] &#8216;with loathing.&#8217;
+		</div>
+		<div n="100107">
+			20. &#7936;&#956;&#946;&#955;&#965;&#969;&#960;&#8055;&#945;&#957;] &#8217;the dulness of&#8217;
+your &#8217;blinded sight.&#8217;
+		</div>
+		<div n="100108">
+			9. A fresh puzzle is proposed by
+the Eunomian. Does the Son exist
+prior to generation, or not? The
+answer &#7986;&#962; that there is no such
+as a time prior to that generation.
+It is from all eternity. There is no
+more need to ask whether the Son is
+&#7952;&#958; &#8004;&#957;&#964;&#969;&#957; or &#7952;&#958; &#959;&#8016;&#954; &#8004;&#957;&#964;&#969;&#957; than there
+is to ask the same question concerning
+the Father. We are not compelled
+to believe that either one or the other
+of two alternates is true. Take
+instances. Is time in time or outside
+of time? A man says, &#8216;I am
+lying&#8217;: is he speaking the truth or
+not? Were yon present at your
+own conception or not? Both alternatives
+may be false. The question
+is absurd.
+		</div>
+		<div n="100110">
+			&#8004;&#957;&#964;&#945; &#959;&#8022;&#957; &#947;&#949;&#947;&#8051;&#957;&#957;&#951;&#954;&#949;&#957;, &#7970; &#959;&#8016;&#954; &#8004;&#957;&#964;&#945;; &#964;&#8182;&#957; &#955;&#951;&#961;&#951;&#956;&#8049;&#964;&#969;&#957;&#903;
+&#960;&#949;&#961;&#8054; &#7952;&#956;&#8050; &#954;&#945;&#8054; &#963;&#8050; &#964;&#945;&#8166;&#964;&#945;, &#959;&#7987; &#964;&#8056; &#956;&#8051;&#957; &#964;&#953; &#7974;&#956;&#949;&#957;, &#8037;&#963;&#960;&#949;&#961; &#7952;&#957; &#964;&#8135;
+&#8000;&#963;&#966;&#8059;&#953; &#964;&#959;&#8166; &#7944;&#946;&#961;&#945;&#8048;&#956; &#8001; &#923;&#949;&#965;&#8054;, &#964;&#8056; &#948;&#8050; &#947;&#949;&#947;&#8057;&#957;&#945;&#956;&#949;&#957;&#8217; &#8037;&#963;&#964;&#949; &#7952;&#958;
+&#8004;&#957;&#964;&#969;&#957; &#964;&#961;&#8057;&#960;&#959;&#957; &#964;&#953;&#957;&#8048; &#964;&#8056; &#7969;&#956;&#8051;&#964;&#949;&#961;&#959;&#957;, &#954;&#945;&#8054; &#959;&#8016;&#954; &#8004;&#957;&#964;&#969;&#957;&#903; &#7952;&#957;&#945;&#957;&#964;&#8055;&#969;&#962;
+&#960;&#949;&#961;&#8054; &#964;&#8052;&#957; &#7936;&#961;&#967;&#8051;&#947;&#959;&#957;&#959;&#957; &#8021;&#955;&#951;&#957; &#8017;&#960;&#959;&#963;&#964;&#8118;&#963;&#945;&#957; &#963;&#945;&#966;&#8182;&#962; &#7952;&#958; &#959;&#8016;&#954; &#8004;&#957;&#964;&#969;&#957;, 
+		</div>
+		<div n="1001102">
+			9. 1 &#964;&#8182;&#957;] &#969; &#964;&#8182;&#957; e || 6 &#7936;&#947;&#8051;&#957;&#951;&#964;&#959;&#957;] &#7936;&#947;&#8051;&#957;&#957;&#951;&#964;&#959;&#957; def &#921;&#921; &#7936;&#957;&#945;&#960;&#955;&#8049;&#964;&#964;&#959;&#965;&#963;&#953;&#957; e ||
+7 &#964;&#8060; &#949;&#7990;&#957;&#945;&#953; &#964;&#8056;] &#964;&#8056; &#949;&#7990;&#957;&#945;&#953; &#964;&#8060; &#8216;Reg.&#8217; a&#8217; 9 &#951; &#964;&#8056; &#956;&#8052;] om &#964;&#8056; cd
+		</div>
+		<div n="1001103">
+			1. &#8004;&#957;&#964;&#945;] &#913; fresh difficulty: was
+the Son already in existence when
+He was begotten, or not? Gr.
+admits that the question might have
+some meaning in regard to human
+generation. In one sense we already
+existed &#964;&#8056; &#956;&#8051;&#957; &#964;&#953;); in another, we
+then began to be (&#955;&#947;&#955;&#8057;&#957;&#945;&#956;&#949;&#957; practically=&#7952;&#947;&#949;&#957;&#8053;&#952;&#951;&#956;&#949;&#957;).
+		</div>
+		<div n="1001104">
+			3. &#8001; &#923;&#949;&#965;&#8055;] Heb. vii 10.
+		</div>
+		<div n="1001105">
+			4. &#964;&#8056; &#7969;&#956;&#8051;&#964;&#949;&#961;&#959;&#957;] = &#7969;&#956;&#949;&#8150;&#962;.
+		</div>
+		<div n="1001106">
+			6. &#954;&#7940;&#957; &#964;&#953;&#957;&#949;&#962; &#7938;&#947;. &#7936;&#957;&#945;&#960;&#955;.] The
+reference is to &#8217;s Timaeus.
+		</div>
+		<div n="1001107">
+			ib. &#963;&#8059;&#957;&#948;&#961;&#959;&#956;&#959;&#957; &#964;&#8183; &#949;&#7984;. &#964;&#8056; &#947;.] &#8217;In
+this &#8217; of the Eternal Son, &#8216;generation
+is coincident with existence,
+and is from all eternity.&#8217;
+		</div>
+		<div n="1001108">
+			7. &#960;&#959;&#8166; &#952;&#8053;&#963;&#949;&#953;&#962;] Where will you
+find a place, a date, for your question
+to apply to? &#8216;Already in
+existence when He was begotten &#8217;
+implies a time before the begetting;
+but there was no such time. He
+was begotten from the beginning.
+What was there before &#8217;the begin-
+ning, &#8217; that we may say whether the
+Son then existed or not? In either
+case, whether we affirm or deny His
+existence, it is clear that that subsequent
+moment at which we suppose
+Him to have been begotten
+cannot really have been the beginning.
+		</div>
+		<div n="1001109">
+			10. &#949;&#7984; &#956;&#8053; &#963;&#959;&#953; &#954;. &#8001; &#960;.] If you still
+press your question, we will once
+more ask you about the Father,
+whether His existence is derived
+from elements that were beforehand
+or from elements that were not.
+Perhaps then you will make out
+that both propositions are true, and
+that He has two modes or stages of
+existence, one before and the other
+after the absorption of those elements.
+Or you will choose the
+latter alternative, and say of Him,
+as you say of the Son, that He
+comes into being from nothingness.
+If you are ready to admit this of the
+Father (such is the force of the &#949;&#7984;
+&#956;&#8053;), there is some consistency in
+what you affirm of the Son.
+		</div>
+		<div n="10011014">
+			3 &#7952;&#954; &#968;&#8049;&#956;&#956;&#969;&#957;] &#949;&#958; &#7940;&#956;&#956;&#969;&#957; a || &#959;&#7984;&#954;&#959;&#948;&#959;&#956;&#8055;&#945;&#962; ac || 12 om &#951; &#8217;duo Reg.&#8217;
+		</div>
+		<div n="10011015">
+			1. &#246; &#956;&#8050;&#957; &#960;&#961;., &#948; &#948;&#8050; &#8036;&#957;] For this
+use of &#948; (here accus.) cp. Matt.
+xiii 8.
+		</div>
+		<div n="10011016">
+			4. &#956;. &#945;&#8020;&#961;&#945;&#953;&#962; &#7989;&#963;&#964;&#945;&#957;&#964;&#945;&#953;] &#8216;cannot
+even stand a puff of wind&#8217;; a natural
+use of &#7988;&#963;&#964;&#8217;. but difficult to parallel.
+ib. &#964;&#959;&#8059;&#964;&#969;&#957;] of the two alternatives,
+&#8004;&#957;&#964;&#945; &#7970; &#959;&#8016;&#954; &#8004;&#957;&#964;&#945; &#947;&#949;&#947;&#8051;&#957;&#957;&#951;&#954;&#949;&#957;. 
+		</div>
+		<div n="10011017">
+			5. &#964;&#8056; &#7940;&#960;&#959;&#961;&#959;&#957; &#964;&#8052;&#957; &#7936;&#960;&#8217;.] &#913; chiasm:
+&#7936;&#960;&#8049;&#957;&#964;. corresponds to &#7952;&#961;&#8061;&#964;., as &#964;&#8056;
+&#7940;&#960;&#959;&#961;&#959;&#957; to &#964;&#8056; &#7940;&#964;&#959;&#960;&#959;&#957;. It is not that
+the encounter presents a difficulty,
+but the question presents an ab-
+surdity.
+		</div>
+		<div n="10011018">
+			10. &#964;&#8055; &#960;&#945;&#961;&#8048; &#964;&#959;&#8166;&#964;&#959;&#957; &#8004;&#957;&#964;&#953;] &#8217;what is
+it besides the time which is in it?
+and how does it contain that ?&#8217;
+		</div>
+		<div n="10011019">
+			12. &#964;&#959;&#8166; &#948;&#8051;, &#925;&#8166;&#957; &#7952;&#947;&#8060; &#968;.] &#913; well-known
+puzzle. &#8217;"I am now telling
+a lie." One thing or the other; is
+the statement true or false? We
+will not admit that it is both.
+you answer, it is impossible to adopt
+the one alternative to the exclusion
+of the other, for if he is lying, he
+speaks the truth, and if he speaks
+the truth, he lying.&#8217;
+		</div>
+		<div n="10011020">
+			15. &#964;&#8055; &#959;&#8022;&#957; &#952;&#945;&#965;&#956;&#945;&#963;&#964;&#8057;&#957;] As, in the
+case of the &#968;&#949;&#965;&#948;&#8057;&#956;&#949;&#957;&#959;&#962;, contradictories
+are reconciled, so we need
+not be surprised if, in the proposed
+dilemma of &#8004;&#957;&#964;&#945; &#7970; &#959;&#8016;&#954; &#8004;&#957;&#964;&#945;, both
+alternatives are false.
+		</div>
+		<div n="10011021">
+			17. &#7968;&#955;&#8055;&#952;&#953;&#959;&#957;] &#8216;silly.&#8217;
+		</div>
+		<div n="100120">
+			&#7944;&#955;&#955;&#8217; &#959;&#8016; &#964;&#945;&#8016;&#964;&#8057;&#957;, &#966;&#951;&#963;&#953;, &#964;&#8056; &#7936;&#947;&#8051;&#957;&#957;&#951;&#964;&#959;&#957; &#954;&#945;&#8054; &#964;&#8056;
+&#947;&#949;&#957;&#957;&#951;&#964;&#8057;&#957;. &#949;&#7984; &#948;&#8050; &#964;&#959;&#8166;&#964;&#959;, &#959;&#8016;&#948;&#8050; &#8001; &#965;&#7985;&#8056;&#962; &#964;&#8183; &#960;&#945;&#964;&#961;&#8054; &#964;&#945;&#8016;&#964;&#8057;&#957;. &#8005;&#964;&#953;
+&#956;&#8050;&#957; &#966;&#945;&#957;&#949;&#961;&#8182;&#962; &#8001; &#955;&#8057;&#947;&#959;&#962; &#959;&#8023;&#964;&#959;&#962; &#7952;&#954;&#946;&#8049;&#955;&#955;&#949;&#953; &#964;&#8056;&#957; &#965;&#7985;&#8056;&#957; &#964;&#8134;&#962; &#952;&#949;&#8057;&#964;&#951;&#964;&#959;&#962;,
+&#7970; &#964;&#8056;&#957; &#960;&#945;&#964;&#8051;&#961;&#945;, &#964;&#8055; &#967;&#961;&#8052; &#955;&#8051;&#947;&#949;&#953;&#957;; &#949;&#7984; &#947;&#8048;&#961; &#964;&#8056; &#7936;&#947;&#8051;&#957;&#957;&#951;&#964;&#959;&#957; &#959;&#8016;&#963;&#8055;&#945; &#921;&#927;
+&#952;&#949;&#959;&#8166;, &#964;&#8056; &#947;&#949;&#957;&#957;&#951;&#964;&#8056;&#957; &#959;&#8016;&#954; &#959;&#8016;&#963;&#8055;&#945;&#903; &#949;&#7984; &#948;&#8050; &#964;&#959;&#8166;&#964;&#959;, &#959;&#8016;&#954; &#7952;&#954;&#949;&#8150;&#957;&#959;. &#964;&#8055;&#962;
+&#7936;&#957;&#964;&#949;&#961;&#949;&#8150; &#955;&#8057;&#947;&#959;&#962;; &#7953;&#955;&#959;&#8166; &#964;&#959;&#8055;&#957;&#965;&#957; &#964;&#8182;&#957; &#7936;&#963;&#949;&#946;&#949;&#953;&#8182;&#957; &#8001;&#960;&#959;&#964;&#8051;&#961;&#945;&#957; &#946;&#959;&#8059;&#955;&#949;&#953;,
+&#8038; &#954;&#949;&#957;&#8050; &#952;&#949;&#959;&#955;&#8057;&#947;&#949;, &#949;&#7988;&#960;&#949;&#961; &#7936;&#963;&#949;&#946;&#949;&#8150;&#957; &#960;&#8049;&#957;&#964;&#969;&#962; &#7952;&#963;&#960;&#959;&#8059;&#948;&#945;&#954;&#945;&#962;. &#7956;&#960;&#949;&#953;&#964;&#945;
+&#960;&#8182;&#962; &#959;&#8016; &#964;&#945;&#8016;&#964;&#8056;&#957; &#955;&#8051;&#947;&#949;&#953;&#962; &#964;&#8056; &#7936;&#947;&#8051;&#957;&#957;&#951;&#964;&#959;&#957; &#954;&#945;&#8054; &#964;&#8056; &#947;&#949;&#957;&#957;&#951;&#964;&#8057;&#957;; &#949;&#7984; &#956;&#8050;&#957;
+&#964;&#8056; &#956;&#8052; &#7952;&#954;&#964;&#953;&#963;&#956;&#8051;&#957;&#959;&#957; &#954;&#945;&#8054; &#7952;&#954;&#964;&#953;&#963;&#956;&#8051;&#957;&#959;&#957;, &#954;&#7936;&#947;&#8060; &#948;&#8051;&#967;&#959;&#956;&#945;&#953;. &#959;&#8016; &#947;&#8048;&#961; 
+		</div>
+		<div n="1001201">
+			1 &#963;&#949;&#945;&#965;&#964;&#959;&#8166;] &#7953;&#945;&#965;&#964;&#959;&#8166; &#8217;in nonnull.&#8217; || 2 &#945;&#960;&#945;&#953;&#948;&#949;&#965;&#964;&#959;&#957;] + &#964;&#959; bdf 10. 7 &#966;&#945;&#963;&#953; b ||
+10 &#967;&#961;&#8052;] + &#954;&#945;&#8054; cef &#7996;&#8217; 13 &#954;&#949;&#957;&#949;] &#954;&#945;&#953;&#957;&#8050; c
+		</div>
+		<div n="1001202">
+			1. &#7936;&#955;&#955;&#8217; &#7936;&#960;&#945;&#8055;&#948;&#949;&#965;&#964;&#959;&#957;] &#7944;&#955;&#955;&#8049; = at;
+as above, &#7936;&#955;&#955;&#8217; &#959;&#8016;&#954; &#7952;&#957;&#948;&#8051;&#967;&#949;&#964;&#945;&#953;. &#8216;Nay,
+you will answer, it is stupid to
+enquire about a single individual,
+whether he is present with himself,
+or not. Those things apply to other
+people, not to oneself.&#8217;
+		</div>
+		<div n="1001203">
+			5. &#948;&#953;&#949;&#965;&#952;&#8059;&#957;&#949;&#963;&#952;&#945;&#953;] &#8216;to be setting
+people to rights about the question
+whether.&#8217;
+		</div>
+		<div n="1001204">
+			6. &#960;&#949;&#961;&#8054; &#964;&#8182;&#957; &#967;&#961;. &#948;&#953;&#945;&#953;&#961;.] &#8127;about
+things which are divided by an interval
+of time.&#8217;
+		</div>
+		<div n="1001205">
+			10. &#8216;Begotten and Unbegotten
+are not the same; therefore if the
+Son is begotten and the Father unbegotten,
+the Son differs from the
+Father.&#8217; The statement is false;
+it is the very meaning of generation
+to transmit the nature of the parent.
+The contrast of begotten and unbegottens
+is only like that of wise and
+uniwise, which can be predicated of
+different individuals without involvomg
+&#945; difference of nature or essence.
+To erect Unbegottenness into Constituting
+the very essence of God
+brings you into difficulties with other
+attributes, like Immortal, Unchangesable,
+able, which have &#7939;&#962; good a right to
+be considered &#7939;&#962; constituting that
+essence.
+		</div>
+		<div n="1001206">
+			7. &#959;&#8016; &#964;&#945;&#8016;&#964;&#8057;&#957;] &#8216;not the same thing&#8217;;
+i.e. a difference of nature itself is
+involved.
+		</div>
+		<div n="1001207">
+			14. &#960;&#8182;&#962; &#959;&#8016; &#964;&#945;&#8016;&#964;&#8057;&#957;] llOt &#8217; III what
+sense do you &#8217; for Gr. is not
+prepared to admit that it is true in
+any sense ; but simply challenging
+the statement altogether: &#8217; how can
+you say so? if you had said thai
+created and uncreated are not tin
+same, I should agree with you,
+but the transmission of the &#8217;s
+nature is of the very essence of
+generation.&#8217;
+		</div>
+		<div n="100130">
+			&#964;&#945;&#8166;&#964;&#945; &#956;&#8050;&#957; &#959;&#8020; &#966;&#945;&#963;&#953;, &#954;&#959;&#953;&#957;&#8048; &#947;&#8048;&#961; &#954;&#945;&#8054; &#7940;&#955;&#955;&#969;&#957;. &#8003; &#948;&#8050;
+&#956;&#8057;&#957;&#959;&#965; &#952;&#949;&#959;&#8166; &#954;&#945;&#8054; &#7988;&#948;&#953;&#959;&#957;, &#964;&#959;&#8166;&#964;&#959; &#959;&#8016;&#963;&#8055;&#945;. &#959;&#8016;&#954; &#7938;&#957; &#956;&#8050;&#957; &#963;&#965;&#947;&#967;&#969;&#961;&#8053;&#963;&#945;&#953;&#949;&#957;
+
+		</div>
+		<div n="1001301">
+			1 &#947;&#949;&#947;&#949;&#957;&#957;&#951;&#956;&#8051;&#957;&#959;&#957;] + &#959;&#8016; &#964;&#945;&#8016;&#964;&#8056;&#957; &#955;&#8051;&#947;&#949;&#953;&#962; dg || 1 &#966;&#8059;&#963;&#953;&#962;] + &#947;&#949;&#957;&#957;&#8053;&#964;&#959;&#961;&#959;&#962; &#954;&#945;&#8054; be ||
+3 &#966;&#8059;&#963;&#953;&#957;] + &#964;&#8056; &#947;&#8051;&#957;&#957;&#951;&#956;&#945; b || 4 &#949;&#7984; &#956;&#8050;&#957;] + &#947;&#8048;&#961; e || 5 &#964;&#8052;&#957; &#7940;&#947;&#949;&#957;.] om &#964;&#8052;&#957; e
+		</div>
+		<div n="1001302">
+			5. &#964;&#8052;&#957; &#7936;&#947;&#949;&#957;&#957;. &#945;&#8016;&#964;&#8053;&#957;] &#8217; unbegottenness
+itself? the very character of not
+being begotten.
+		</div>
+		<div n="1001303">
+			7. &#960;&#949;&#961;&#8054; &#964;&#945;&#8016;&#964;&#8056;&#957; &#948;&#8051;] not, of course,
+&#960;&#949;&#961;&#8054; &#964;&#8056;&#957; &#945;&#8016;&#964;&#8057;&#957;. They are opposite
+characteristics, but both are found
+in man without any difference of
+nature being involved. The wise
+man and the foolish man are alike
+man.
+		</div>
+		<div n="1001304">
+			8. &#959;&#8016;&#954; &#959;&#8016;&#963;&#8055;&#945;&#962; &#964;.] &#8216;they do not
+divide the essences; they are divisions
+(lit. divided) within (in connexion
+with) the same essence.&#8217;
+		</div>
+		<div n="1001305">
+			9. &#7970; &#954;&#945;&#8054; &#964;&#8056; &#7936;&#952;&#8217;.] &#913; fresh argument.
+If &#964;&#8056; &#7936;&#947;&#8051;&#957;&#957;&#951;&#964;&#959;&#957; constitutes
+the divine nature, so that it and
+&#964;&#8056; &#952;&#949;&#8150;&#959;&#957; are convertible terms, a
+similar case can be made out for
+these other predicates. Then, since
+the divine nature is absolutely identified
+with &#964;&#8056; &#7936;&#947;&#8051;&#957;&#957;&#951;&#964;&#959;&#957;, and yet
+at the same time with &#964;&#8056; &#7936;&#952;&#8049;&#957;&#945;&#964;&#959;&#957;,
+we are driven to suppose that these
+are separate natures, or essences, or
+that they compose the divine nature
+by their aggregation.
+		</div>
+		<div n="1001306">
+			11. Assume for the sake of argument
+that to be unbegotten belongs
+to God alone, though the assertion
+would by some be denied. It does
+not follow that unbegottenness is a
+necessary part of the divine essence.
+Adam alone was directly fashioned
+by God; yet Seth is as truly man
+as Adam. The divine essence is a
+positive, not &#945; negative thing. If
+you ask me what it is, I can
+answer that I hope we may know
+some day, but not here. Meanwhile,
+whatever glory there is in the underived
+existence belongs to the Son
+who is begotten of the Underived.
+		</div>
+		<div n="1001307">
+			13. &#954;&#959;&#953;&#957;&#8048; &#947;&#8049;&#961;] Angels e.g. are
+&#7936;&#952;&#8049;&#957;&#945;&#964;&#959;&#953;; doves and lambs are called
+&#7940;&#954;&#945;&#954;&#945;.
+		</div>
+		<div n="1001308">
+			15. &#959;&#7985; &#954;&#945;&#8054; &#964;&#8052;&#957; &#8020;.] The Platonists.
+Gr. does not adopt their opinion.
+He only uses it to embarrass the
+Eunomian. He might have cited
+in like manner the &#8217;darkness,&#8217; which
+the Manichees made to be coeternal
+with light ; but he disdains to do so.
+		</div>
+		<div n="10013013">
+			11. 1 &#7936;&#947;&#8051;&#957;&#951;&#964;&#945; de || 2 &#961;&#953;&#968;&#969;&#956;&#949;&#957;] -&#959;&#956;&#949;&#957; b &#921;&#921; 5 &#947;&#8048;&#961;] + &#954;&#945;&#8054; d || 6 fiovov]
+&#956;&#8057;&#957;&#959;&#962; c || 11 om &#7952;&#963;&#964;&#953; df || o] &#969; e2 || 14 om &#949;&#7984;&#962; &#8217;Reg. a&#8217; 15 ws] +
+&#966;&#951;&#963;&#953;&#957; b || 17 &#964;&#959;&#8059;&#964;&#969;] &#964;&#959;&#8166;&#964;&#959; g || 18 &#952;&#945;&#961;&#961;&#8053;&#963;&#959;&#956;&#949;&#957;] -&#969;&#956;&#949;&#957; adef
+		</div>
+		<div n="10013014">
+			2. &#7956;&#963;&#964;&#969;] for argument's sake, he
+will assume that none but God is
+unbegotten. That does not preclude
+the possibility of One who is
+begotten being God likewise, any
+more than the fact that Adam alone
+was directly formed by God precludes
+others who are not so formed
+from having the same nature as
+Adam.
+		</div>
+		<div n="10013015">
+			6. ovbt &#964;&#8056; &#7938;&#947;. &#956;&#8057;&#957;&#959;&#957; &#952;&#949;&#8057;&#962;] It
+would not be true to say that only
+what is unbegotten can be God &#8212;
+though nothing can be God which
+is not begotten of the Father; you
+must admit that what is begotten of
+Him is God likewise.
+		</div>
+		<div n="10013016">
+			8. &#960;&#8182;&#962; &#959;&#8016;&#963;&#8055;&#945;&#957; &#952;. &#955;] How can a
+merely negative attribute be spoken
+of as constituting the essence of
+God? Cp. ii 9.
+		</div>
+		<div n="10013017">
+			11. &#8002; &#964;&#8052;&#957; &#966;&#8059;&#963;&#953;&#957; &#7952;&#963;&#964;&#953;] &#8216;what He
+is by nature; nor what it is that
+has no generation.&#8217;
+		</div>
+		<div n="10013018">
+			12. &#964;&#959;&#8166;&#964;&#959; &#955;&#8051;&#947;&#949;&#953;&#957;] &#8217;to ash the question.&#8217;
+&#928;&#959;&#955;&#965;&#960;&#961;., cp. ii. 9.
+		</div>
+		<div n="10013019">
+			15. &#8033;&#962; &#7969; &#964;&#959;&#8166; &#7938;&#968;. vir.] Prob. Gr.
+refers to 1 Gor. xiii 12; cp. ii 
+		</div>
+		<div n="10013020">
+			17. &#964;&#959;&#8150;&#962; &#7952;&#960;&#8054; &#964;. &#954;&#945;&#952;&#945;&#953;&#961;] Gp. ii 12
+&#964;&#959;&#8150;&#962; &#7952;&#957;&#964;&#945;&#8166;&#952;&#945; &#954;&#949;&#954;. . . .&#960;&#961;&#8056;&#962; &#964;&#8056; &#960;&#959;&#952;&#959;&#8059;&#956;&#8051;&#957;&#959;&#957;.
+		</div>
+		<div n="10013021">
+			18. &#949;&#7984; &#954;&#945;&#7984; &#956;&#8051;&#947;&#945; &#954;&#964;&#955;.] If it is a
+great thing to be altogether underived,
+as the Father is, it is no
+less a thing to be derived from Him
+in the way the Son is. He shares
+the nature and glory of the Selfexistent,
+and has the additional
+glory of being begotten of Him.
+Cp. iv 7.
+		</div>
+		<div n="100140">
+			&#7944;&#955;&#955;&#8217; &#949;&#7984; &#964;&#945;&#8016;&#964;&#8056;&#957; &#964;&#8183; &#960;&#945;&#964;&#961;&#8055;, &#966;&#945;&#963;&#953;&#957;, &#8001; &#965;&#7985;&#8056;&#962; &#954;&#945;&#964;&#8217;
+&#959;&#8016;&#963;&#8055;&#945;&#957;, &#7936;&#947;&#8051;&#957;&#957;&#951;&#964;&#959;&#957; &#948;&#8050; &#8001; &#960;&#945;&#964;&#8053;&#961;, &#7956;&#963;&#964;&#945;&#953; &#964;&#959;&#8166;&#964;&#959; &#954;&#945;&#8054; &#8001; &#965;&#7985;&#8057;&#962;.
+&#954;&#945;&#955;&#8182;&#962;, &#949;&#7988;&#960;&#949;&#961; &#959;&#8016;&#963;&#8055;&#945; &#952;&#949;&#959;&#8166; &#964;&#8056; &#7936;&#947;&#8051;&#957;&#957;&#951;&#964;&#959;&#957;, &#7989;&#957; &#8086; &#964;&#953;&#962; &#954;&#945;&#953;&#957;&#8052;
+&#956;&#8055;&#958;&#953;&#962;, &#947;&#949;&#957;&#957;&#951;&#964;&#959;&#945;&#947;&#8051;&#957;&#957;&#951;&#964;&#959;&#957;. &#949;&#7984; &#948;&#8050; &#960;&#949;&#961;&#8054; &#959;&#8016;&#963;&#8055;&#945;&#957; &#7969; &#948;&#953;&#945;&#966;&#959;&#961;&#8049;,
+
+		</div>
+		<div n="1001401">
+			4 &#963;&#949;&#946;&#945;&#963;&#956;&#953;&#959;&#957;] &#963;&#949;&#956;&#957;&#8056;&#957; &#8216;Reg, a&#8217; II &#967;&#945;&#956;&#945;&#953;&#960;&#949;&#964;&#8051;&#963;&#953;] &#967;&#945;&#956;&#949;&#961;&#960;&#8051;&#963;&#953; b 12. 6 &#964;&#945;&#8166;&#964;&#959;&#957;
+&#966;&#945;&#963;&#953; &#964;&#8060; &#960;&#945;&#964;&#961;&#8054; &#959; &#8017;&#8055;&#959;&#962; b: &#964;&#945;&#8016;&#964;&#8056;&#957; &#966;. &#959; &#8017;&#8055;&#959;&#962; &#964;&#8060; &#960;&#945;&#964;&#961;&#8054; df || 7 &#7936;&#947;&#8051;&#957;&#957;&#951;&#964;&#959;&#962; bde ||
+9 om &#8217;&#948;&#949; c || 10 om &#951; c
+		</div>
+		<div n="1001402">
+			12.&#8216;If &#8217;the Father is unbegotten,&#8217;
+they urge, &#8216;and the Son is what the
+Father is, then the Son too is unbegotten.&#8217;
+That would be true if
+unbegottenness zuere the actual essence
+of God; but it is &#7988;&#959;&#953;. If &#8216;unbegotten&#8217;
+and &#8216;God&#8217; were equivalent
+terms, then we should be able to put
+the one for the other, and say not
+only &#8217; the God of Israel&#8217; but &#8216;the
+Unbegotten of Israel? On this theory,
+the nature of the begotten Son is not
+only different from that of the unbegotten
+Father, but is its exact
+opposite; and indeed it might be
+argued that since the positive is prior
+to the negative, the begotten Son is
+prior to the unbegotten Father.
+		</div>
+		<div n="1001403">
+			7. &#7956;&#963;&#964;&#945;&#953; &#964;&#959;&#8166;&#964;&#959;] sc. &#7936;&#947;&#8051;&#957;&#957;&#951;&#964;&#959;&#957;
+Quite true, Gr. replies, on the assumption
+that unbegottenness is the
+essence of God; the Son in that
+case will be begotten-unbegotten!
+		</div>
+		<div n="1001404">
+			9. &#960;&#949;&#961;&#8054; &#959;&#8016;&#963;&#8055;&#945;&#957;] The prep, is
+emphatic. It is used as in &#167; 10
+sub fin. &#8216;If the difference between
+begotten and unbegotten is (not one
+of nature but only) one affecting the
+modes of that nature.&#8217;
+		</div>
+		<div n="1001405">
+			10. &#960;&#945;&#964;&#8052;&#961; &#964;&#959;&#8166; &#960;.] &#8216;Are you your
+father's father?&#8217; If not, ace. to
+your argument, you cannot have the
+same essence as your father.
+		</div>
+		<div n="1001406">
+			12. &#7984;&#948;&#953;&#8057;&#964;&#951;&#964;&#959;&#962;] not &#8217;&#8217;personality&#8217;
+but the special distinguishing peculiarities
+which differentiate one person
+from another; the &#8216;property,&#8217;
+as Hooker calls it (E. P. v 51). If
+we enquire at all what the nature
+of God is, we will do so without
+touching these individual properties.
+		</div>
+		<div n="100141">
+			8 &#949;&#7984;&#963;&#945;&#967;&#952;&#8134;&#957;&#945;&#953;] &#7936;&#957;&#964;&#949;&#953;&#963;&#945;&#967;&#952;&#8134;&#957;&#945;&#953; b
+		</div>
+		<div n="100142">
+			1. &#964;&#953;&#957;&#8182;&#957; &#8001; &#952;&#949;&#8057;&#962;] &#8217;God,&#8217; acc. to
+Gr., is a relative term; a &#8217; God &#8217;
+must be &#8217;God of&#8217; some one. If
+then unbegottenness is the very
+essence of God, and &#8216;unbegotten&#8217;
+and &#8216;God&#8217; are convertible terms,
+then we must be able to say with
+equal correctness, &#8217; the God of all &#8217;
+and &#8216;the unbegotten of all&#8217;; or
+conversely, as the unbegotten is &#8217;no
+one's unbegotten,&#8217; so God must be
+&#8216;no one's God.&#8216; The argument
+does not seem a very valuable one,
+because, to begin with, it must be
+questioned whether &#8216;God&#8217; is really
+a term of relationship. If it be
+so, then apart from creation God
+would not be God. But the main
+purpose of the argument is sound,
+inasmuch as it shews the absurdity
+of identifying absolutely the positive
+existence of God with a merely
+negative description. On Gr. &#8217;s interprettation
+of the word &#952;&#949;&#8057;&#962;, see iv
+18.
+		</div>
+		<div n="100143">
+			3. &#8001;&#956;&#959;&#8055;&#969;&#962; &#7952;&#954;&#966;&#8051;&#961;&#949;&#964;&#945;&#953;] True synonyms
+are used interchangeably (lit.
+&#8217;are produced, employed, in a similar
+manner&#8217;); cp. &#960;&#961;&#959;&#966;&#8051;&#961;&#949;&#964;&#945;&#953; in &#167; 5.
+		</div>
+		<div n="100144">
+			8. &#7936;&#957;&#8049;&#947;&#954;&#951;] If &#7936;&#947;&#8051;&#957;&#957;&#951;&#964;&#959;&#957; is the
+very nature of God, and yet God
+begets a Son (which the Eunomians
+in a sense allow), it follows that the
+nature of the Son is not only different
+from that of the Father, but
+is diametrically opposite to it. This
+is not allowed by any one &#959;&#8016; &#948;&#8051;&#948;&#959;&#964;&#945;&#953;).
+		</div>
+		<div n="100145">
+			9. &#945;&#7985; &#7956;&#958;&#949;&#953;&#962; &#964;&#8182;&#957; &#8217;&#963;&#964;&#8217;. &#960;&#961;&#8057;&#964;&#949;&#961;&#945;&#953;] You
+cannot take away a thing which is
+not there to begin with. But &#7936;&#947;&#8051;&#957;&#957;&#951;&#964;&#959;&#957;
+implies a taking away of &#947;&#8051;&#957;&#957;&#949;&#957;&#957;&#951;&#964;&#8049;&#957;.
+Therefore &#947;&#8051;&#957;&#957;&#951;&#964;&#959;&#957; is prior
+to &#7936;&#947;&#8051;&#957;&#957;&#951;&#964;&#959;&#957;, &#8212; the Son to the Father,
+&#8212; and when the Father comes,
+and His &#7936;&#947;&#8051;&#957;&#957;&#951;&#964;&#959;&#957; is alone recongised
+as divine, He does away
+with the Son who occupied the
+ground before Him. Of course this
+argument is one of mere mockery
+&#7952;&#961;&#949;&#963;&#967;&#949;&#955;&#8055;&#945;, i 3).
+		</div>
+		<div n="100146">
+			13. &#8217;If the begetting of the Son
+is not a thing finished &#7936;&#957;&#8217; &#8217;done with,
+it is as yet incomplete, and will one
+day be completed: if it is finished, it
+must have begun.&#8217; That does not
+follow. &#7985;&#957; soul had a beginning,
+but will never have an end.
+		</div>
+		<div n="100147">
+			No; our belief is, that whatever
+possesses the essential notes of a class
+of beings &#8212; say of &#945; horse or an ox &#8212;
+is rightly called by that name, whatever
+distinctive properties it may
+have which mark it off from others
+of the class. So it &#7986;&#962; with God; the
+nature is one, although there are
+differences of designation, corresponding
+to differences hi fact, between the
+Persons who share that natitre.
+		</div>
+		<div n="100150">
+			&#964;&#8055;&#962; &#7956;&#964;&#953; &#955;&#8057;&#947;&#959;&#962; &#945;&#8016;&#964;&#959;&#8150;&#962; &#964;&#8182;&#957; &#7936;&#966;&#8059;&#954;&#964;&#969;&#957;; &#964;&#8049;&#967;&#945; &#7938;&#957; &#7952;&#960;&#8217;
+&#7952;&#954;&#949;&#8150;&#957;&#959; &#954;&#945;&#964;&#945;&#966;&#8059;&#947;&#959;&#953;&#949;&#957; &#964;&#949;&#955;&#949;&#965;&#964;&#945;&#8150;&#959;&#957;&#903; &#8033;&#962; &#949;&#7984; &#956;&#8050;&#957; &#959;&#8016; &#960;&#8051;&#960;&#945;&#965;&#964;&#945;&#953; &#964;&#959;&#8166;
+&#947;&#949;&#957;&#957;&#8119;&#957; &#8001; &#952;&#949;&#8057;&#962;, &#7936;&#964;&#949;&#955;&#8052;&#962; &#7969; &#947;&#8051;&#957;&#957;&#951;&#963;&#953;&#962;, &#954;&#945;&#8055; &#960;&#959;&#964;&#949; &#960;&#945;&#8059;&#963;&#949;&#964;&#945;&#953;.
+&#949;&#7984; &#960;&#8051;&#960;&#945;&#965;&#964;&#945;&#953; &#948;&#8051;, &#960;&#8049;&#957;&#964;&#969;&#962; &#954;&#945;&#8054; &#7972;&#961;&#958;&#945;&#964;&#959;. &#960;&#8049;&#955;&#953;&#957; &#959;&#7985; &#963;&#969;&#956;&#945;&#964;&#953;&#954;&#959;&#8054;
+
+		</div>
+		<div n="1001503">
+			13. 4 &#949;&#7984; &#8217;&#948;&#949; &#960;&#8051;&#960;&#945;&#965;&#964;&#945;&#953; df || 15 &#955;&#959;&#947;&#959;&#962;] &#8004;&#961;&#959;&#962; &#8217;tres Colb.&#8217; II 16 om &#954;&#945;&#8054; c
+17 &#956;&#8052; &#955;&#8051;&#947;&#949;&#963;&#952;&#945;&#953;] &#956;&#951;&#948;&#8050; &#955;. df
+		</div>
+		<div n="1001504">
+			1. &#964;&#8182;&#957; &#7936;&#966;&#8059;&#954;&#964;&#969;&#957;] i.e. which they
+consider to be so.
+		</div>
+		<div n="1001505">
+			3. &#954;&#945;&#8055; &#960;&#959;&#964;&#949; &#960;&#945;&#8059;&#963;&#949;&#964;&#945;&#953;] &#8216;and some
+day He will stop,&#8217; viz. when &#964;&#949;&#955;&#949;&#8055;&#945;
+&#7969; &#947;&#8051;&#957;&#957;&#951;&#963;&#953;&#962;. This is more pointed
+than to make &#960;&#8057;&#964;&#949; interrogative.
+		</div>
+		<div n="1001506">
+			6. &#960;,&#961;&#8056; &#960;&#8049;&#957;&#964;&#969;&#957; &#946;.] Prov. viii 25.
+		</div>
+		<div n="1001507">
+			9. &#7936;&#960;&#959;&#966;&#945;&#957;&#959;&#8166;&#957;&#964;&#945;&#953;] &#8217;will they shew
+to be the case.&#8217;
+		</div>
+		<div n="1001508">
+			12. &#959;&#8016;&#954;&#7940;&#961;&#945;&#7970;&#961;&#954;&#964;&#945;&#953; &#954;.&#945;&#8016;&#964;&#959;&#8016;&#962;&#964;&#8056;&#960;.]
+Therefore the thing which zuill one
+day stop can never according to them
+have had a beginning.&#8217; So Gr. turns
+their logic against them.
+		</div>
+		<div n="1001509">
+			13. &#8001; &#956;&#8050;&#957; &#959;&#8022;&#957; &#7968;&#956;&#8217;. &#955;.] sc. &#955;&#8051;&#947;&#949;&#953;.
+		</div>
+		<div n="10015010">
+			15. &#949;&#7991;&#962; &#955;&#8057;&#947;&#959;&#962; &#7952;&#963;&#964;&#8055;] &#8217;one &#8217; or
+&#8216;principle of existence&#8217;; and so, from
+the observer&#8217;s point of view, &#8216;definition.&#8217;
+What is implied may be seen
+by the corresponding words in the
+apodosis, &#959;&#8016;&#963;&#8055;&#945;&#957; &#954;. &#966;&#8059;&#963;&#953;&#957; &#954;. &#954;&#955;&#8134;&#963;&#953;&#957;.
+The meaning is not the same as in &#8001;
+&#7969;&#956;&#8051;&#964;&#949;&#961;&#959;&#962; &#955;. just before, nor has it any
+relation to &#955;&#8051;&#947;&#949;&#963;&#952;&#945;&#953; directly after.
+		</div>
+		<div n="10015011">
+			ib. &#8003; &#956;&#8050;&#957; &#7938;&#957; &#956;&#949;&#964;&#8051;&#967;&#8131; &#964;. &#955;.] &#8216;what.
+ever shares that characteristic principle,
+is rightly called by that name.&#8217;
+T&#959;&#8166;&#964;&#959;, however, is grammatically
+the subject of &#955;&#8134;., not the predicate.
+		</div>
+		<div n="10015012">
+			17. &#959;&#8021;&#964;&#969; &#948;&#8051;] The &#8216;apodotic&#8217; force
+of &#948;&#8051; is well known. It recurs again
+in the next section.
+		</div>
+		<div n="100160">
+			&#8013;&#964;&#945;&#957; &#948;&#8050; &#7936;&#957;&#952;&#965;&#960;&#959;&#966;&#8051;&#961;&#969;&#956;&#949;&#957; &#945;&#8016;&#964;&#959;&#8150;&#962;&#903; &#964;&#8055; &#959;&#8022;&#957;; &#959;&#8016;
+&#954;&#965;&#961;&#8055;&#969;&#962; &#952;&#949;&#8056;&#962; &#8001; &#965;&#7985;&#8057;&#962;, &#8037;&#963;&#960;&#949;&#961; &#959;&#8016;&#948;&#8050; &#950;&#8183;&#959;&#957; &#964;&#8056; &#947;&#949;&#947;&#961;&#945;&#956;&#956;&#8051;&#957;&#959;&#957;; &#960;&#8182;&#962; 
+		</div>
+		<div n="1001602">
+			4 &#7973;&#956;&#953;&#957; &#7952;&#963;&#964;&#953;&#957; f 14. 3 &#960;&#961;&#959;&#963;&#959;&#8055;&#963;&#959;&#965;&#963;&#953;&#957; bedef
+		</div>
+		<div n="1001603">
+			1. &#954;&#7938;&#957; &#7952;&#960;&#953;&#957;&#959;&#8055;&#945;&#953;&#962; &#964;&#953;&#963;&#953;] The distinctive
+&#8217;notions&#8217; which Gr. has in
+view are, of course, those of giving
+and of receiving life, of &#8216;proceeding &#8217;
+and its correlative. They are not,
+however, to be considered as merely
+subjective distinctions drawn by
+us, any more than the distinctions
+which we draw between one man
+and another. Td &#8000;&#957;&#8057;&#956;&#945;&#964;&#945;, sc. &#960;&#945;&#964;&#8053;&#961;,
+&#965;&#7985;&#8057;&#962;, &#960;&#957;&#949;&#8166;&#956;&#945;.
+		</div>
+		<div n="1001604">
+			2. &#8003; &#956;&#8050;&#957; &#7938;&#957; &#954;. &#955;&#8051;&#947;&#951;&#964;&#945;&#953;] sc. &#952;&#949;&#8057;&#962;.
+This seems hardly necessary to say;
+but it lends a kind of fulness to the
+following statement, &#8003; &#948;&#8217; &#7939;&#957; &#7970; &#954;&#945;&#964;&#8048;
+&#966;&#8059;&#963;&#953;&#957; &#952;&#949;&#8057;&#962;), &#964;&#959;&#8166;&#964;&#959; &#954;. &#7941;&#955;&#8217;. &#8000;&#957;&#959;&#956;&#8049;&#950;&#949;&#963;&#952;&#945;&#953;
+&#952;&#949;&#8057;&#957;). The &#8000;&#957;&#959;&#956;&#8049;&#950;&#949;&#963;&#952;&#945;&#953; = &#955;&#8051;&#947;&#949;&#963;&#952;&#945;&#953;,
+and has nothing to do with the &#8000;&#957;&#8057;&#956;&#945;&#964;&#945;
+above.
+		</div>
+		<div n="1001605">
+			4. &#959;&#7985; &#948;&#8051;] While names are not of
+much importance, so long as we get
+the facts right, they, the Eunomians,
+when pressed, will use the name of
+&#952;&#949;&#8057;&#962; to describe the Son, but explain
+it to have no foundation in fact.
+		</div>
+		<div n="1001606">
+			7. &#964;&#945;&#8150;&#962; &#956;&#945;&#961;&#964;&#965;&#961;&#8055;&#945;&#953;&#962;] &#8217;&#8217;testimonies
+of Scripture.&#8217; Cp v 2 29.
+		</div>
+		<div n="1001607">
+			ib. &#8001;&#956;&#8061;&#957;&#965;&#956;&#959;&#957;] &#8216;in an equivocal
+sense.&#8217; &#8009;&#956;&#8061;&#957;&#965;&#956;&#945; are in logic
+which bear the same name but in
+different senses.
+		</div>
+		<div n="1001608">
+			14. &#8217; The word God,&#8217; they
+&#8217;is an aequivocum; it is used to
+denote two things which are essehtially
+different, as dig, for example,
+denotes both &#945; beast and &#945; &#8217; Ah,
+but in the one case there is no difference
+in dignity between the two things
+which bear the same name; in the
+other, if your theory were true, two
+beings would bear the same name
+which cotild not be even distantly
+compared.
+		</div>
+		<div n="1001609">
+			12. &#8001;&#956;. &#964;&#945;&#8166;&#964;&#945; &#949;&#7990;&#957;&#945;&#953;] The neut.
+used, as in the preceding section, to
+avoid the irreverence of a direct
+reference to the Divine Persons.
+		</div>
+		<div n="10016010">
+			13. &#964;&#8056;&#957; &#954;&#8059;&#957;&#945;] the name of a fish,
+as well as of the beast. Both fish
+and beast are quite properly called
+&#8217;dog,&#8217; but not in the same sense.
+		</div>
+		<div n="10016011">
+			15. &#964;&#959;&#953;&#959;&#8166;&#964;&#959;&#957; &#949;&#7990;&#948;&#959;&#962;] &#8217;such a class&#8217;;
+namely, &#8001;&#956;&#8061;&#957;&#965;&#956;&#945; both of which
+&#8217;properly&#8217; bear the common name.
+		</div>
+		<div n="10016016">
+			13 &#959;&#953;&#959;&#957;&#949;&#953;] &#959;&#7990;&#959;&#957; a &#921;&#921; 17 &#956;&#949;&#964;&#945;&#946;&#945;&#8055;&#957;&#949;&#953;&#962;] &#951;&#962; (non &#8131;&#962;) a: &#949;&#953; d1
+		</div>
+		<div n="10016017">
+			2. &#948;&#8059;&#959; &#966;&#8059;&#963;&#949;&#953;&#962;] perh. &#8216;two kinds
+of animals.&#8217;
+		</div>
+		<div n="10016018">
+			4. &#960;&#961;&#8057;&#964;&#949;&#961;&#959;&#957;...&#8021;&#963;&#964;&#949;&#961;&#959;&#957;] as well as
+&#956;&#8118;&#955;&#955;&#959;&#957; and &#7974;&#964;&#964;&#959;&#957;, qualify &#959;&#8022;&#963;&#945;&#957; &#964;&#959;&#8166;&#952;&#8217;
+&#8004;&#960;. &#955;&#8051;&#947;&#8217;.
+		</div>
+		<div n="10016019">
+			6. &#959;&#8016;&#948;&#8050; &#947;&#8049;&#961; &#964;&#953; &#963;.] &#8217;for there is
+nothing attached to the name which
+forces such distinctions upon &#8217;
+There is nothing in the name &#8217;dog&#8217;
+to make you care to enquire whether
+the beast or the fish was the first to
+bear it, or whether the beast is more
+of a dog than the fish: the one 
+of &#8217;dog&#8217; is for all practical purposes
+as good as the other. The common
+name is borne by creatures which,
+though different from each other,
+are equals.
+		</div>
+		<div n="10016020">
+			11. &#7952;&#957;&#964;&#945;&#8166;&#952;&#945; &#948;&#8051;] &#8217; But when
+come to the case in point, you attach
+to God an awful solemnity, and say
+that He is too high to be described as
+having any essence or nature, &#8212; athing
+which belongs to none but God and
+constitutes as it were the nature of
+the Godhead; and you give this to
+the Father, but take it away from the
+Son, and make a subject of Him.&#8217;
+		</div>
+		<div n="10016021">
+			17. &#960;&#949;&#961;&#953;&#954;&#8057;&#960;&#964;&#949;&#953;&#962;] &#8216;mutitate.&#8217;
+ib. &#964;&#8134;&#962; &#964;&#8056; 1. &#7952;&#967;&#8217;. &#8001;&#956;&#969;&#957;.] such as
+that of the different &#8217;dogs.&#8217;
+		</div>
+		<div n="10016022">
+			19. &#8001; &#947;&#961;&#945;&#960;&#964;&#8057;&#962; &#963;. &#954;. &#8001; &#950;&#8182;&#957; &#7942;] The
+real man and the picture of a man
+(either of which is spoken of as &#8217;a
+man&#8217;) illustrate more nearly such a
+Godhead as the Eunomians speak
+of than the two kinds of &#8217;dogs.&#8217;
+The picture is not further from being
+a real man than the Son is from
+being really God, if the Eunomian
+account is correct; and at the same
+time it bears externally a greater
+resemblance to its original.
+		</div>
+		<div n="100170">
+			&#7960;&#8048;&#957; &#948;&#8050; &#955;&#949;&#947;&#8057;&#957;&#964;&#969;&#957; &#7969;&#956;&#8182;&#957;, &#8005;&#964;&#953; &#964;&#8183; &#945;&#7984;&#964;&#8055;&#8179; &#956;&#949;&#8055;&#950;&#969;&#957; &#8001; 
+		</div>
+		<div n="1001701">
+			3 &#964;&#8182;&#957; &#966;&#8059;&#963;&#949;&#969;&#957;] &#964;&#8134;&#962; &#966;&#8059;&#963;&#949;&#969;&#962; &#8217;nonnul.&#8217; || 6 &#7984;&#963;&#8057;&#964;&#953;&#956;&#959;&#957;] + &#956;&#8052; bedef
+		</div>
+		<div n="1001702">
+			15. 11 om &#8217;&#948;&#949; b &#8217;nonnul.&#8217;
+		</div>
+		<div n="1001703">
+			1. &#7970; &#948;&#8057;&#962;] Otherwise, &#8212; if the
+chasm between the two Persons
+bearing the name of God is not, on
+your theory, as vast as I have indicated,
+suppose you admit that the
+equivocal name is in this instance
+applied to two natures of equal
+splendour. You shall call them
+different natures, if you like; but
+admit that they are equal. What is
+the result? You are no longer satisfied
+with your illustration of the
+dogs. You invented it to justify an
+insinuation of inequality. The &#954;&#945;&#964;&#8048;
+in &#954;&#945;&#964;&#8048; &#964;&#8134;&#962; &#7936;&#957;&#953;&#963;. appears to be used
+as in the phrase &#964;&#959;&#958;&#949;&#8059;&#949;&#953;&#957; &#954;&#945;&#964;&#8048; &#963;&#954;&#959;&#960;&#959;&#8166;,
+of the point aimed at.
+		</div>
+		<div n="1001704">
+			5. &#949;&#7984; &#964;&#8056; &#7988;&#963;&#8217;. &#7956;&#967;&#959;&#953;&#949;&#957;] It requires
+great ingenuity to extract any meaning
+from the sentence, in relation
+to the context, if the reading &#956;&#8052;
+&#7956;&#967;. is adopted. The &#956;&#8052; was evidently
+introduced by copyists who
+thought that Gr. was making a
+statement of his own belief, which
+was that the name &#952;&#949;&#8057;&#962; is applied in
+precisely the same sense to Father
+and Son. But this ignores Gr.'s
+argument, &#8212; and, it may he added,
+the meaning of &#8001;&#956;&#969;&#957;&#965;&#956;&#8055;&#945;. Gr.'s
+immediate purpose is to shew that
+the Eunomian illustration is, from
+their own point of view, ill-chosen.
+To be of any service to them, their
+instance of &#8217;equivocation&#8217; should
+have been one where the same name
+is applied to two objects of very
+different value.
+		</div>
+		<div n="1001705">
+			15.&#8216;You admit,&#8217; they say, &#8216;that
+the Father is greater than the Son,
+inasmuch &#7939;&#962; He is the author of the
+Son's being; but since He &#7986;&#962; by
+nature author of the &#8217;s being, it
+follows that He is by nature greater
+than the &#8217; The fallacy of the
+argument, Gr. annoers, lies in this,
+&#8212;that they attribute to the underlying
+essence what is predicated of
+the particular possessor of that essence.
+It is like arguing that because so and
+so is a dead man, therefore man is
+dead.
+		</div>
+		<div n="1001706">
+			10. &#964;&#8183; &#945;&#7984;&#964;&#8055;&#8179; &#956;.] lby virtue of being
+the cause of His existence.
+		</div>
+		<div n="1001707">
+			11. &#960;&#961;&#959;&#963;&#955;&#945;&#946;&#8057;&#957;&#964;&#949;&#962; &#964;&#8052;&#957; . . . &#960;&#961;&#8057;&#964;&#945;&#963;&#953;&#957;]
+&#8216;taking &#8002;&#957; their minor premiss.
+&#928;&#961;&#8057;&#964;&#945;&#963;&#953;&#962; is the tehnical word for a
+&#8216;premiss&#8217;; the &#960;&#961;&#8057;&#962; in &#960;&#961;&#959;&#963;&#955;. denotes
+that this is a second (or minor) premiss.
+		</div>
+		<div n="10017010">
+			1. &#963;&#965;&#957;&#8049;&#947;&#969;&#963;&#953;&#957;] &#8216;conclude.&#8217; The
+Eunomian syllogism is this: &#8217;The
+Father is greater than the Son inasmuch
+as the Son owes His existence
+to Him. But the giving of existence
+to the Son belongs to the Father by
+nature. Therefore the Father is
+greater than the Son by nature.&#8217;
+		</div>
+		<div n="10017011">
+			3. &#959;&#8016; &#947;&#8048;&#961; &#7937;&#960;&#955;&#8182;&#962; &#954;&#964;&#955;.] The
+reply is that not everything which
+is predicated of a particular thing
+(e.g. of Socrates) is predicated of the
+nature which underlies that thing
+(in the example chosen, human nature).
+Everyone recognises what
+the statements are intended to
+apply to, and how they apply. So,
+what we say of the Father does not
+necessarily apply to the Divine
+Essence which belongs to Him;
+some things apply to Him as Father,
+not as God.
+		</div>
+		<div n="10017012">
+			4. &#954;&#945;&#964;&#8048; &#964;&#8055;&#957;&#959;&#962;, &#954;&#945;&#8054; &#964;&#8055;&#957;&#945;] The
+words are interrogative; if Gr. had
+intended the indef. pron., he must
+have said &#948;. &#8005;&#964;&#953; &#954;. &#964;. It seems
+necessary to understand &#954;&#945;&#964;&#8048; again
+before &#964;&#8055;&#957;&#945;, &#8217;in regard to what
+&#8217; &#8212; i.e. in regard to nature, or
+to individuality, or what. To take
+the example given by Gr. at the end
+of the section, if I say that Socrates
+is a dead man, it is plain that I am
+speaking of Socrates in particular
+and of no one else, and that I am
+speaking of Socrates in relation to
+the bodily life, not about his soul,
+nor about his influence.
+		</div>
+		<div n="10017013">
+			5. &#964;&#8055; &#954;&#969;&#955;&#8059;&#949;&#953; &#954;&#7936;&#956;&#8051;] Two can play
+at that game, Gr. says. He too can
+draw that kind of conclusion, and
+they shall see whether it will hold.
+He makes a major premiss of that
+conclusion of theirs, &#8217;The father is
+by nature greater than the &#8217;
+(We need not suppose that Gr. is
+for the moment speaking of God:
+the words would suit any father and
+son.) The minor premiss is, &#8217;But
+he is not by nature necessarily greater,
+or necessarily &#8217; So far there
+is no absurdity. He need never have
+had a son; there might have been
+nothing else to compare him with.
+(Gr., 1 repeat, is not speaking of
+God.) The right conclusion would
+be that the &#8217;s &#8217;natural&#8217; superiority
+over his son consists solely in
+his fatherhood, and not in his nature,
+&#8212;in his relationship, and not
+in that which he is when considered
+apart by himself. But the false conclusion
+which Gr. draws, to illustrate
+the false conclusions of the
+Eunomians, is this: &#8217;Therefore the
+greater is not necessarily greater, &#8217; or
+&#8216;The father is not necessarily father.&#8217;
+It will be observed that Gr. says
+&#956;&#949;&#8150;&#950;&#959;&#957;, not 6 &#956;&#949;&#8055;&#950;&#969;&#957;, which makes it
+clearer that the proposition is intended
+to be quite general: &#7945; thing
+which is greater than another need
+not be greater, but might be at the
+same time equal or less; a father
+need not be his &#8217;s father, but
+might be his brother or his son.&#8217;
+The second paralogism &#8001; &#952;&#949;&#8056;&#962; &#959;&#8016;
+&#960;&#8049;&#957;&#964;&#969;&#962; &#952;&#949;&#8057;&#962;) helps to shew that this
+is Gr.'s meaning.
+		</div>
+		<div n="100180">
+			&#7960;&#954;&#949;&#8150;&#957;&#959; &#948;&#8050; &#960;&#8182;&#962; &#960;&#945;&#961;&#945;&#948;&#961;&#8049;&#956;&#969;&#956;&#949;&#957;, &#959;&#8016;&#948;&#949;&#957;&#8056;&#962; &#7975;&#964;&#964;&#959;&#957; &#964;&#8182;&#957;
+&#949;&#7984;&#961;&#951;&#956;&#8051;&#957;&#969;&#957; &#8002;&#957; &#7936;&#958;&#953;&#8049;&#947;&#945;&#963;&#964;&#959;&#957;; &#8216;&#927; &#960;&#945;&#964;&#8053;&#961;, &#966;&#951;&#963;&#953;&#957;, &#959;&#8016;&#963;&#8055;&#945;&#962;, &#7970; 
+		</div>
+		<div n="1001801">
+			2 &#963;&#8059;&#957;&#945;&#947;&#949; cdefg &#8217;duo Reg. Or. 1&#8217;|| 3 &#960;&#8049;&#961;&#945; &#964;&#8056; &#960;&#951;] &#960;&#945;&#961;&#945;&#964;&#961;&#959;&#960;&#8052;&#957; (om &#954;&#945;&#953;)
+b: &#960;&#945;&#961;&#945;&#964;&#961;&#959;&#960;&#8135; &#8216;Reg. a&#8217;
+		</div>
+		<div n="1001802">
+			3. &#960;&#945;&#961;&#8048; &#964;&#8056; &#960;&#8134; &#954;. &#7937;&#960;&#955;&#8182;&#962;] &#8217;The
+fallacy lies in arguing from the conditioned
+to the absolute&#8217; (lit. &#8217;is on
+account of that which is so for special
+reasons and that which is so absolutely&#8217;).
+		</div>
+		<div n="1001803">
+			4. &#964;&#959;&#8150;&#962; &#960;&#949;&#961;&#8054; &#964;&#945;&#8166;&#964;&#945;] &#8217;to use the
+technical language of logicians&#8217; (lit.
+&#8217;as it is customary to speak technically
+for those who concern themselves
+with these&#8217;).
+		</div>
+		<div n="1001804">
+			5. &#7969;&#956;&#8182;&#957; &#947;&#8048;&#961; &#954;&#964;&#955;.] &#8217;For when
+we allow that it is in the nature of a
+cause to be greater than the thing
+caused, they infer that it is greater
+by nature; which is like arguing
+that because we say, "Such and such
+a man is dead." therefore man, in
+the abstract, is &#8217; The emphasis,
+of course, is on &#8001; &#948;&#949;&#8150;&#957;&#945;, and it
+seems simplest to take &#7940;&#957;&#952;&#961;. along
+with it as subject, understanding
+&#957;&#949;&#954;&#961;&#8057;&#962; alone to be predicate &#8212; an
+arrangement of words like &#8001; &#956;&#8051;&#947;&#945;&#962;
+&#964;&#8051;&#952;&#957;&#951;&#954;&#949; &#914;&#945;&#963;&#8055;&#955;&#949;&#953;&#959;&#962;. But the sense is
+the Same either way. In the apodosis,
+&#964;&#8056;&#957; &#7940;&#957;&#952;&#961;. is subject, the predicate
+being supplied from the previous
+clause, sc. &#957;&#949;&#954;&#961;&#8056;&#957; &#949;&#7990;&#957;&#945;&#953;. The
+commentators from Elias onwards
+have totally failed to catch the argument,
+or even to understand the
+grammar of the passage. If Gr. had
+intended to say anything so pointless
+as Petavius (de Trin. II v 12)
+makes out, viz. that because &#8001; &#948;&#949;&#8150;&#957;&#945;
+is a dead man, therefore he is a man,
+he must have said &#964;&#8056; &#7940;&#957;&#952;&#961;&#969;&#960;&#959;&#957;, not
+&#964;&#8057;&#957;. So far Elias, whom Petavius
+quotes, knew better.
+		</div>
+		<div n="1001805">
+			16. &#8217; Well? they say, &#8217;the word
+Father must denote either nature or
+operation: which is it to be?&#8217; Neither,
+is the answer; it denotes a relation,
+and &#945; relation which implies
+community of nature between the
+Father and the Son.
+		</div>
+		<div n="1001806">
+			10. &#7936;&#958;&#953;&#8049;&#947;&#945;&#963;&#964;&#959;&#957;] &#8216;astonishing,&#8217;
+from &#7940;&#947;&#945;&#956;&#945;&#953; &#8217;to wonder.
+		</div>
+		<div n="1001807">
+			ib. &#959;&#8016;&#963;&#8055;&#945;&#962;, &#7970; &#7952;&#957;&#949;&#961;&#947;. &#8004;&#957;.] &#8217;is it a
+name denoting essence, or operation?&#8217;
+		</div>
+		<div n="1001808">
+			12. &#7953;&#964;&#949;&#961;&#959;&#959;&#8059;&#963;&#953;&#959;&#957;] A word modelled
+on the false analogy of &#8001;&#956;&#959;&#959;&#8059;&#963;&#953;&#959;&#962;. It
+should be &#7952;&#964;&#949;&#961;&#959;&#8059;&#963;&#953;&#959;&#962;.
+		</div>
+		<div n="10018013">
+			16. 5 &#948;&#953;&#945;&#966;&#965;&#947;&#8057;&#957;&#964;&#945;] &#966;&#965;&#947;&#8057;&#957;&#964;&#945; b || 11 &#959;&#8016;&#963;&#8055;&#945;] &#959;&#8016;&#963;&#8055;&#945;&#962; e &#8216;Reg. Cypr. ||
+14 &#945;&#7985;&#961;&#8053;&#963;&#949;&#964;&#949;] &#963;&#951;&#964;&#949;b&#903;. &#963;&#949;&#964;&#945;&#953; d || 15 &#8217;&#948;&#949;] &#947;&#8048;&#961; &#8217;Reg. Cypr. aliiq. Reg. et
+Colb.&#8217; || 16 &#7940;&#955;&#955;&#969;&#962;] + &#960;&#8060;&#962; df || &#960;&#8051;&#961;&#953;] &#960;&#961;&#8056;&#962; b || 17 om &#954;&#945;&#8054; bc
+		</div>
+		<div n="10018014">
+			1. &#959;&#8023; &#947;&#8048;&#961; &#8001; &#7952;&#957;&#949;&#961;&#947;&#8182;&#957;] lit. &#8217;where
+there is one performing an operation,
+there is also the result of the operation.&#8217;
+It is not very obvious why
+&#947;&#8051;&#957;&#957;&#951;&#963;&#953;&#962; should not be included
+under the head of &#7952;&#957;&#8051;&#961;&#947;&#949;&#953;&#945;, and Gr.
+does not much object to it. But
+evidently Gr. &#8217;s opponent made &#949;&#787;&#957;&#949;&#961;&#947;&#949;&#8150;&#957;
+= &#960;&#959;&#953;&#949;&#8150;&#957;.
+		</div>
+		<div n="10018015">
+			3. &#8080;&#948;&#8051;&#963;&#952;&#951;&#957;] iron. &#8216;I should have
+stood in great &#8217;awe.&#8217;
+		</div>
+		<div n="10018016">
+			7. &#963;&#967;&#8051;&#963;&#949;&#969;&#962;] &#8217;relation&#8217;&#8217;, explained
+by &#964;&#959;&#8166; &#960;&#8182;&#962; &#8038;&#953; &#960;&#961;&#8057;&#962; &#954;&#964;&#955;.
+		</div>
+		<div n="10018017">
+			10 &#954;&#8048;&#954;&#949;&#8150; when used in ref. to
+the Godhead.
+		</div>
+		<div n="10018018">
+			12. &#963;&#965;&#957;&#949;&#953;&#963;&#8049;&#958;&#949;&#953;] &#8217;will at the same
+moment imply the Son.&#8217;
+		</div>
+		<div n="10018019">
+			15. &#945;&#8016;&#964;&#8056;&#948;&#7952; &#964;&#959;&#8166;&#964;&#959;] &#8217;His operation
+will still have produced that very
+result consubstantial with Himself.&#8217;
+		</div>
+		<div n="10018020">
+			ib. &#949;&#7984; &#954;&#945;&#7984; &#7940;&#964;&#959;&#960;&#959;&#962;] The &#954;&#945;&#8054;
+be taken closely with &#7940;&#964;&#959;&#960;&#959;&#962; and
+disjoined from &#949;&#7984;, which has here the
+force of &#8217;since.&#8217; The reading &#7970;,
+adopted by the Benedictines, makes
+&#7940;&#955;&#955;&#969;&#962; superfluous. The notion of
+such an operation as results in a
+Son&#8217; would be absurd if it did not
+imply a real (i.e. a consubstantial)
+Son.
+		</div>
+		<div n="10018021">
+			17. &#954;&#945;&#954;&#959;&#956;&#945;&#967;&#949;&#8150;&#957;] &#8216;to fight unscrupulously:
+The word &#963;&#964;&#961;&#959;&#966;&#8049;&#962;,
+&#8217;twists,&#8217; shews that the &#956;&#8049;&#967;&#951; is a
+wrestling-match, not a battle.
+		</div>
+		<div n="100190">
+			&#7977;&#956;&#949;&#8150;&#962; &#956;&#8050;&#957; &#947;&#8048;&#961; &#7952;&#954; &#956;&#949;&#947;&#8049;&#955;&#969;&#957; &#954;&#945;&#8054; &#8017;&#968;&#951;&#955;&#8182;&#957; &#964;&#8182;&#957;
+&#964;&#959;&#8166; &#965;&#7985;&#959;&#8166; &#964;&#8052;&#957; &#952;&#949;&#8057;&#964;&#951;&#964;&#945; &#954;&#945;&#8054; &#954;&#945;&#964;&#949;&#953;&#955;&#8053;&#966;&#945;&#956;&#949;&#957;, &#954;&#945;&#8054; &#954;&#951;&#961;&#8059;&#963;&#966;&#969;&#957;&#8182;&#957;
+&#963;&#959;&#956;&#949;&#957;. &#964;&#8055;&#957;&#969;&#957; &#964;&#959;&#8059;&#964;&#969;&#957;; &#964;&#8134;&#962; &#952;&#949;&#8057;&#962;, &#964;&#8134;&#962; &#955;&#8057;&#947;&#959;&#962;, &#8001; &#7952;&#957; &#7936;&#961;&#967;&#8135;, 
+		</div>
+		<div n="1001903">
+			17. 4 &#954;&#945;&#8054; &#954;&#945;&#964;&#949;&#953;&#955;.] om &#954;&#945;&#8054; e &#921;&#921; 16 om &#959; &#960;&#945;&#964;&#8052;&#961; ce
+		</div>
+		<div n="1001904">
+			2. &#948;&#8051;&#958;&#951; &#954;&#7936;&#957;&#964;&#8217;. &#960;&#949;&#8055;&#952;&#949;&#953;&#957;] &#8216;if from
+that quarter you can find means to
+persuade tis?
+		</div>
+		<div n="1001905">
+			17. The titles given to the Son in
+Scripture clearly shew His Godhead.
+		</div>
+		<div n="1001906">
+			5. &#964;&#8134;&#962; &#952;&#949;&#8057;&#962;] sc. &#966;&#969;&#957;&#8134;&#962;.
+		</div>
+		<div n="1001907">
+			6. &#7952;&#957; &#7936;&#961;&#967;&#8135; &#7970;&#957;] John i 1.
+		</div>
+		<div n="1001908">
+			7. &#956;&#949;&#964;&#8048; &#963;&#959;&#8166; &#7969; &#7937;.] Ps. cix (ex) 3
+where Swete reads &#956;. &#963;&#959;&#8166; &#7936;&#961;&#967;&#8053;. As
+the Ps. addresses Christ, the statement
+agrees with Gr.'s allusion to
+the passage just above; for if the
+&#7936;&#961;&#967;&#8053; (sc. the Father) is with Him,
+He is with the &#7936;&#961;&#967;&#8053;. In the Ps.
+the word &#7936;&#961;&#967;&#8053; was prob. intended
+to mean &#8216;rule.&#8217; &#8216;authority,&#8217; not (as
+Gr. seems to think) &#8216;beginning.&#8217;
+		</div>
+		<div n="1001909">
+			8. &#8001; &#954;&#945;&#955;&#8182;&#957; &#945;&#8016;&#964;&#8053;&#957;] Is. xli 4 where
+the true text is &#7936;&#960;&#8056; &#947;&#949;&#957;&#949;&#8182;&#957; &#7936;&#961;&#967;&#8134;&#962;,
+the &#945;&#8016;&#964;&#8053;&#957; prob. being repeated from
+the &#948;&#953;&#954;&#945;&#953;&#959;&#963;&#8059;&#957;&#951;&#957; of the previous vs.
+I cannot find that any other father
+uses the text in the same manner as
+Gr.
+		</div>
+		<div n="10019010">
+			ib. &#7952;&#960;&#949;&#953;&#948;&#8052; &#965;&#7985;&#8056;&#962; &#956;.] gives a justification
+for the text just used, &#8212; or
+perhaps for the orig. statement &#964;&#8052;&#957;
+&#952;&#949;&#8057;&#964;&#951;&#964;&#945;...&#954;&#951;&#961;&#8059;&#963;&#963;&#959;&#956;&#949;&#957;. The verb
+&#7952;&#963;&#964;&#8055;&#957;, or &#954;&#945;&#955;&#949;&#8150;&#964;&#945;&#953;, must be supplied:
+&#8217;for He is the only begotten Son.&#8217;
+		</div>
+		<div n="10019011">
+			9. &#8001; &#956;&#959;&#957;&#959;&#947;. &#965;&#7985;&#8057;&#962;] John i 18. Hort
+Two Dissertations p. 20 mentions
+that the phrase &#956;&#959;&#957;&#959;&#947;&#949;&#957;&#8052;&#962; &#952;&#949;&#8057;&#962; is
+once used by Gr. (Ep. 202 p. 168 C).
+It seems, however, from our present
+passage that Gr. considered &#965;&#7985;&#8057;&#962; to
+be the right reading in St John.
+		</div>
+		<div n="10019012">
+			10. &#7952;&#947;&#8061; &#949;&#7984;&#956;&#953; &#7970; &#8001;&#948;.] John xiv 6.
+		</div>
+		<div n="10019013">
+			11. &#964;&#8056; &#966;&#8182;&#962; &#964;. &#954;&#8057;&#963;&#956;&#959;&#965;] John viii
+12.
+		</div>
+		<div n="10019014">
+			12. X. &#952;&#949;&#959;&#8166; &#948;&#8059;&#957;.] 1 Cor. i 24.
+		</div>
+		<div n="10019015">
+			14. &#8003;&#962; &#8034;&#957; &#7936;&#960;&#945;&#8059;&#947;&#945;&#963;&#956;&#945;] Hob. i 3.
+		</div>
+		<div n="10019016">
+			15. &#949;&#7984;&#954;&#8060;&#957; &#964;&#8134;&#962; &#7938;&#947;.] Wisd. vii 26.
+		</div>
+		<div n="10019017">
+			ib. &#964;&#959;&#8166;&#964;&#959;&#957; &#947;&#8048;&#961; b &#960;. &#7952;&#963;&#966;&#961;.] John
+vi 27.
+		</div>
+		<div n="10019018">
+			17. &#7956;&#946;&#961;&#949;&#958;&#949; &#954;&#8059;&#961;&#953;&#959;&#962;] Gen. xix 24.
+		</div>
+		<div n="100200">
+			&#931;&#8058; &#948;&#8051; &#956;&#959;&#953; &#954;&#945;&#964;&#945;&#961;&#8055;&#952;&#956;&#949;&#953; &#960;&#961;&#8056;&#962; &#964;&#945;&#8166;&#964;&#945; &#964;&#8048; &#964;&#8134;&#962; &#7936;&#947;&#957;&#969;&#956;&#959;&#963;&#8059;&#957;&#951;&#962;
+&#8165;&#8053;&#956;&#945;&#964;&#945;, &#964;&#8056; &#952;&#949;&#8057;&#962; &#956;&#959;&#965; &#954;&#945;&#8054; &#952;&#949;&#8056;&#962; &#8017;&#956;&#8182;&#957;, &#964;&#8056; &#956;&#949;&#8055;&#950;&#969;&#957;, &#964;&#8056;
+&#7956;&#954;&#964;&#953;&#963;&#949;, &#964;&#8056; &#7952;&#960;&#959;&#8055;&#951;&#963;&#949;, &#964;&#8056; &#7969;&#947;&#8055;&#945;&#963;&#949;&#957;. &#949;&#7984; &#946;&#959;&#8059;&#955;&#949;&#953; &#948;&#8051;, &#954;&#945;&#8054; &#964;&#8056; &#948;&#959;&#8166;&#955;&#959;&#957;,
+&#954;&#945;&#8054; &#964;&#8056; &#8017;&#960;&#8053;&#954;&#959;&#959;&#957;&#903; &#964;&#8056; &#948;&#8051;&#948;&#969;&#954;&#949;, &#964;&#8056; &#7956;&#956;&#945;&#952;&#949;, &#964;&#8056; &#7952;&#957;&#964;&#8051;&#964;&#945;&#955;&#964;&#945;&#953;, &#964;&#8056;
+&#7936;&#960;&#8051;&#963;&#964;&#945;&#955;&#964;&#945;&#953;, &#964;&#8056; &#956;&#8052; &#948;&#8059;&#957;&#945;&#963;&#952;&#945;&#953; &#7936;&#966;&#8217; &#7953;&#945;&#965;&#964;&#959;&#8166; &#964;&#953; &#960;&#959;&#953;&#949;&#8150;&#957;, &#7970; &#955;&#8051;&#947;&#949;&#953;&#957;,
+
+		</div>
+		<div n="1002001">
+			18. 13 &#7952;&#957;&#964;&#8051;&#964;&#945;&#955;&#964;&#945;&#953;] &#7952;&#957;&#964;&#8051;&#964;&#945;&#955;&#954;&#949;&#957; b
+		</div>
+		<div n="1002002">
+			1. &#8165;&#8049;&#946;&#948;&#959;&#962; &#949;&#8022;&#952;&#8217;.] Ps. xliv 7 (xlv
+6); Heb. i 8.
+		</div>
+		<div n="1002003">
+			ib. &#8001; &#8034;&#957; &#954;. &#8001; &#7974;&#957;] Rev. i 4, 8; iv
+8; xi 17; xvi 5. In all these places
+St J. seems to use the expression to
+mean the Father.
+		</div>
+		<div n="1002004">
+			6. &#959;&#8016; &#947;&#8048;&#961; &#7952;&#954; &#960;&#961;&#959;&#963;&#952;&#8053;&#954;&#951;&#962;] The
+Father's perfection would be the consequence
+of an addition, if He had
+at one time been without the Son.
+The words which follow, &#7940;&#955;&#959;&#947;&#959;&#962;
+&#954;&#964;&#955;., are all chosen with ref. to one
+or other of the titles of the Son
+above cited.
+		</div>
+		<div n="1002005">
+			18. The htimbler language used
+concerning Him belongs to the human
+nature zvhich He assumed.
+		</div>
+		<div n="1002006">
+			10. &#964;&#8048; &#964;&#8134;&#962; &#7941;&#947;&#957;&#8217;. &#8165;&#8053;&#956;&#945;&#964;&#945;] The
+shade of meaning which Gr. intended
+&#7941;&#947;&#957;&#8217;. here to bear may be gathered
+from &#8001; &#957;&#8166;&#957; &#963;&#959;&#953; &#954;&#945;&#964;&#945;&#966;&#961;&#959;&#957;&#959;&#8059;&#956;&#949;&#957;&#959;&#962; in
+&#167; 19; &#8217;the words which you scornfully
+misunderstand.&#8217;
+		</div>
+		<div n="1002007">
+			11. &#952;&#949;&#8057;&#962; &#956;&#959;&#965;] John xx 17.
+		</div>
+		<div n="1002008">
+			ib. &#956;&#949;&#8055;&#950;&#969;&#957;] John xiv 28.
+		</div>
+		<div n="1002009">
+			12. &#7956;&#954;&#964;&#953;&#963;&#949;] Prov. viii 22.
+		</div>
+		<div n="10020010">
+			12. &#7952;&#960;&#959;&#8055;&#951;&#963;&#949;] Acts ii 36, Heb. iii 2.
+		</div>
+		<div n="10020011">
+			ib. &#7969;&#947;&#8055;&#945;&#963;&#949;&#957;] John x 36.
+		</div>
+		<div n="10020012">
+			ib. &#948;&#959;&#8166;&#955;&#959;&#957;] Phil, ii 7.
+		</div>
+		<div n="10020013">
+			13. &#8017;&#960;&#8053;&#954;&#959;&#959;&#957;] Phil, ii 8.
+		</div>
+		<div n="10020014">
+			ib. &#948;&#8051;&#948;&#969;&#954;&#949;] The passage in Ath.
+Or. iii c. Ar. &#7953; 35 suggests John iii
+35, but the context here may point
+to John xviii 11.
+		</div>
+		<div n="10020015">
+			ib. &#7956;&#956;&#945;&#952;&#949;] Heb. v 8.
+		</div>
+		<div n="10020016">
+			ib. &#7952;&#957;&#964;&#8051;&#964;&#945;&#955;&#964;&#945;&#953;] There seems to
+be no passage where the actual word
+occurs in relation to Christ, nor &#7952;&#957;&#964;&#8051;&#964;&#945;&#955;&#954;&#949;&#957;
+either. The ref. is prob.
+to John xv 10 and similar passages.
+		</div>
+		<div n="10020017">
+			14. &#7936;&#960;&#8051;&#963;&#964;&#945;&#955;&#964;&#945;&#953;] John v 36, xx 21.
+		</div>
+		<div n="10020018">
+			ib. &#956;&#8052; &#948;&#8059;&#957;&#945;&#963;&#952;&#945;&#953;...&#960;&#959;&#953;&#949;&#8150;&#957;] Johnv 19.
+		</div>
+		<div n="10020019">
+			ib. &#955;&#8051;&#947;&#949;&#953;&#957;] John viii 28, xii 49.
+		</div>
+		<div n="10020020">
+			15. &#954;&#961;&#8055;&#957;&#949;&#953;&#957;] John viii 15, xii 47.
+		</div>
+		<div n="10020021">
+			ib. &#948;&#969;&#961;&#949;&#8150;&#963;&#952;&#945;&#953;] Matt, xx 23.
+		</div>
+		<div n="10020022">
+			ib. &#946;&#959;&#8059;&#955;&#949;&#963;&#952;&#945;&#953;] John v 30.
+		</div>
+		<div n="10020023">
+			16. &#7940;&#947;&#957;&#959;&#953;&#945;&#957;] Mark xiii 32.
+		</div>
+		<div n="10020024">
+			ib. &#8017;&#960;&#8217; &#8001;&#964;&#8217; &#7938;&#947; &#7972;&#957;] Luke ii 51, 1 Cor.
+xv 28.
+		</div>
+		<div n="10020025">
+			ib. &#949;&#8016;&#967;&#8053;&#957;] Luke iii 21 etc.
+		</div>
+		<div n="10020026">
+			ib. &#7952;&#961;&#8061;&#964;&#951;&#963;&#953;&#957;] From the example
+given in &#167; 20, it seems that Gr.
+refers to occasions like John xi 
+		</div>
+		<div n="10020031">
+			7 &#963;&#959;&#965;] &#963;&#959;&#953; cdf || 8 &#8001;&#956;&#8057;&#964;&#953;&#956;&#959;&#957;] + &#964;&#8060; &#960;&#945;&#964;&#961;&#8054; bdf || 9 om &#959;&#8016; e || 15 &#964;&#8060; &#948;&#953;&#945;
+&#963;&#949;] om &#964;&#8060; c
+		</div>
+		<div n="10020032">
+			1. &#960;&#961;&#959;&#954;&#959;&#960;&#8053;&#957;] Luke ii 52.
+		</div>
+		<div n="10020033">
+			ib. &#964;&#949;&#955;&#949;&#8055;&#969;&#963;&#953;&#957;] Luke xiii 32, Heb.
+ii 10 etc.
+		</div>
+		<div n="10020034">
+			2. &#8017;&#960;&#957;&#959;&#8166;&#957;] Matt, viii 24.
+		</div>
+		<div n="10020035">
+			ib. &#960;&#949;&#953;&#957;&#8134;&#957;] Matt, xxi 18 etc.
+		</div>
+		<div n="10020036">
+			ib. &#954;&#959;&#960;&#953;&#8119;&#957;] John iv 6.
+		</div>
+		<div n="10020037">
+			3. &#948;&#945;&#954;&#961;&#8059;&#949;&#953;&#957;] John xi 35.
+		</div>
+		<div n="10020038">
+			ib. &#7936;&#947;&#969;&#957;&#953;&#8119;&#957;] Luke xxii 44.
+		</div>
+		<div n="10020039">
+			ib. &#8017;&#960;&#959;&#948;&#8059;&#949;&#963;&#952;&#945;&#953;] &#8216;to slip away,&#8217;
+&#8216;withdraw&#8217;; &#8212; a quite classical sense
+of the word. The ref. is prob. to
+John x 39.
+		</div>
+		<div n="10020040">
+			7. &#963;&#960;&#949;&#961;&#956;&#959;&#955;&#959;&#947;&#8053;&#963;&#945;&#953;&#962;] &#8216;pick up,&#8217;
+like a bird gathering up seed: cp.
+Acts xvii 18.
+		</div>
+		<div n="10020041">
+			ib. &#963;&#965;&#957;&#964;&#953;&#952;&#8051;&#957;&#945;&#953;] &#8217;to put together
+vour equivocal God&#8217;; with ref. to
+argument of &#167; 14.
+		</div>
+		<div n="10020042">
+			8. &#960;&#945;&#961;&#7952;&#951;&#961;&#945;&#960;&#964;&#959;&#957;] one whose
+name has been fraudulently put on
+the list.
+		</div>
+		<div n="10020043">
+			ib. &#8001;&#956;&#8057;&#964;&#953;&#956;&#959;&#957;] The words &#964;&#8183; &#960;&#945;&#964;&#961;&#8055;
+are prob. only a gloss, though a correct
+one.
+		</div>
+		<div n="10020044">
+			9. &#954;&#945;&#964;&#8048; &#956;&#8057;&#961;&#959;&#962; &#7952;&#960;&#949;&#958;. &#7952;&#958;&#951;&#947;.] &#8217;to go
+through them in detail and give you
+a very religious interpretation of each,
+and to clear away the offence whicli
+you find in the letter of Scripture.&#8217;
+		</div>
+		<div n="10020045">
+			14. &#960;&#945;&#952;&#8182;&#957; &#954;. &#963;&#8182;&#956;&#8217;.] governed by
+&#954;&#961;&#949;&#8055;&#964;&#964;&#959;&#957;&#953;. The Benedictine editors
+compare with this whole passage
+Leo Serm. 45 de Quadr. p. 228.
+See also his letter to Flavian &#167; 4.
+		</div>
+		<div n="10020046">
+			15. &#964;&#8183; &#963;&#965;&#957;&#952;&#8051;&#964;&#969; The words which
+follow &#8212; &#964;&#8183; &#954;&#949;&#957;&#969;&#952;&#8051;&#957;&#964;&#953; &#954;&#964;&#955;.&#8212; as well
+as &#7936;&#963;&#8059;&#957;&#952;&#949;&#964;&#959;&#962; in &#958; 19, shew that Gr.
+does not mean &#8216;to the composite nature,&#8217;
+sc. the human nature composed
+of body and soul, but &#8216;to Him
+who is composite, made up of two
+&#8217; Or possibly, as die &#964;&#8183; is
+repealed, Gr. may have intended &#964;&#8183;
+&#963;&#965;&#957;&#952;&#8051;&#964;&#8179; to be the dat. of &#964;&#8056; &#963;&#8059;&#957;&#952;&#949;&#964;&#959;&#957;,
+in the sense of &#8217;the composite
+whole,&#8217; consisting of Godhead and
+manhood. It would, of course,
+have been more exact to have said
+&#964;&#8134; &#948;&#953;&#8048; &#963;&#8050; &#954;&#949;&#957;&#8061;&#963;&#949;&#953;, or something of
+that kind; but it would have been
+less vivid; and there was no fear of
+any one supposing that Gr. meant by
+&#964;&#8183; &#954;&#949;&#957;&#969;&#952;&#8051;&#957;&#964;&#953; a different person from
+Him who had the &#954;&#961;&#949;&#8055;&#964;&#964;&#969; &#966;&#8059;&#963;&#953;&#957;.
+		</div>
+		<div n="100210">
+			&#927;&#8023;&#964;&#959;&#962; &#947;&#8048;&#961; &#8001; &#957;&#8166;&#957; &#963;&#959;&#953; &#954;&#945;&#964;&#945;&#966;&#961;&#959;&#957;&#959;&#8059;&#956;&#949;&#957;&#959;&#962;, &#7974;&#957; &#8005;&#964;&#949; &#954;&#945;&#8054;
+&#8017;&#960;&#8050;&#961; &#963;&#8050; &#7974;&#957;&#903; &#8001; &#957;&#8166;&#957; &#7940;&#957;&#952;&#961;&#969;&#960;&#959;&#962; &#954;&#945;&#8054; &#7936;&#963;&#8059;&#957;&#952;&#949;&#964;&#959;&#962; &#7974;&#957;. &#8003; &#956;&#8050;&#957; &#7974;&#957;,
+&#948;&#953;&#8051;&#956;&#949;&#953;&#957;&#949;&#957;&#903; &#8003; &#948;&#8050; &#959;&#8016;&#954; &#7974;&#957;, &#960;&#961;&#959;&#963;&#8051;&#955;&#945;&#946;&#949;&#957;. &#7952;&#957; &#7936;&#961;&#967;&#8135; &#7974;&#957; &#7936;&#957;&#945;&#953;&#964;&#8055;&#969;&#962;&#903;
+
+		</div>
+		<div n="1002101">
+			2 &#967;&#945;&#956;&#945;&#953;&#960;&#949;&#964;&#8050;&#962;] &#967;&#945;&#956;&#949;&#961;&#960;&#8050;&#962; bef || 4 &#949;&#957;&#945;&#960;&#959;&#956;&#949;&#957;&#951;&#962; c
+		</div>
+		<div n="1002102">
+			3. &#963;&#965;&#957;&#945;&#957;&#953;&#8051;&#957;&#945;&#953; &#952;.] &#8217;to move upwards
+&#8212; or perh. to grow up &#8212; with
+&#8217; The words do not necessarily
+imply that &#952;&#949;&#8057;&#964;&#951;&#962; &#7940;&#957;&#949;&#953;&#963;&#953;,
+and there is no ref. to the Ascension.
+		</div>
+		<div n="1002103">
+			4. &#7952;&#957;&#945;&#960;&#959;&#956;&#8051;&#957;&#959;&#953;&#962;] &#7960;&#957;&#945;&#960;&#959;&#956;&#8051;&#957;&#949;&#953;&#957; is
+&#8216;to remain on, to remain to the end,
+in.&#8217;
+		</div>
+		<div n="1002104">
+			5. &#966;&#8059;&#963;&#949;&#969;&#962; &#955;&#8057;&#947;&#959;&#962;] &#8217;what is the
+law of His (true, Divine) Nature.&#8217;
+		</div>
+		<div n="1002105">
+			6. &#959;&#7984;&#954;&#959;&#957;&#959;&#956;&#8055;&#945;&#962;] of accommodation
+to our circumstances. The word is
+very freq. used by the fathers in
+ref. to the Incarnation: see Suicer
+s.&#965;., and Sophocles' Lexicon.
+		</div>
+		<div n="1002106">
+			19. He was not always, what
+He became for our sakes; and He
+ever retained the nature which was
+originally His. The words which
+indicate His self-emptying are always
+balanced by others which indicate His
+divine glory.
+		</div>
+		<div n="1002107">
+			7. &#954;&#945;&#8054; &#8017;&#960;&#8050;&#961; &#963;&#949;] &#8216;even abpve you.&#8217;
+		</div>
+		<div n="1002108">
+			8. &#8003; &#956;&#8050;&#957; &#7970;&#957;, &#948;&#953;&#8051;&#956;&#949;&#953;&#957;&#949;&#957;] Cp. Zeno
+Ver. Serm. ii de Nat. saluo quod
+erat, meditatur esse quod non erat.
+St Austin plays upon the same formula
+in many of his Christmas
+sermons. See also Leo Serm. xxi
+de Nat. Dei &#167; 2.
+		</div>
+		<div n="1002109">
+			9. &#7936;&#957;&#945;&#953;&#964;&#8055;&#969;&#962;] It appears like a
+contradiction of what Gr. has said
+in &#958;&#958; 3. 15. But the sentences
+which follow shew that Gr. is thinking
+here of &#945;&#7984;&#964;&#8055;&#945; in the sense of a
+final cause.
+		</div>
+		<div n="10021010">
+			10. &#947;&#8051;&#947;&#959;&#957;&#949;] as in the N.T. = &#7952;&#947;&#8051;&#957;&#949;&#964;&#959;.
+		</div>
+		<div n="10021011">
+			12. &#948;&#953;&#8048; &#956;&#8051; &#963;&#959;&#965; &#957;&#959;&#8057;&#962;] Cp. Or. ii 23
+&#952;&#949;&#8056;&#962; &#963;&#945;&#961;&#954;&#8054; &#948;&#953;&#8048; &#956;&#8051;&#963;&#951;&#962; &#968;&#965;&#967;&#8134;&#962; &#7936;&#957;&#949;&#954;&#961;&#8049;&#952;&#951;,
+&#954;&#945;&#8054; &#963;&#965;&#957;&#949;&#948;&#8051;&#952;&#951; &#964;&#8048; &#948;&#953;&#949;&#963;&#964;&#8182;&#964;&#945; &#964;&#8134; &#960;&#961;&#8056;&#962;
+&#7940;&#956;&#966;&#969; &#964;&#959;&#8166; &#956;&#949;&#963;&#953;&#964;&#949;&#8059;&#959;&#957;&#964;&#959;&#962; &#959;&#7984;&#954;&#949;&#953;&#8057;&#964;&#951;&#964;&#953;. In
+Or. xxxviii, after shewing in &#167; 10
+how creatures endowed with mind
+have an affinity with God which
+other creatm-es have not, Gr. says
+in &#167; 13 that the Eternal Word was
+incarnate &#948;&#953;&#8048; &#956;&#8051;&#963;&#951;&#962; &#968;&#965;&#967;&#8134;&#962; &#957;&#959;&#949;&#961;&#8118;&#962;
+&#956;&#949;&#963;&#953;&#964;&#949;&#965;&#959;&#8059;&#963;&#951;&#962; &#952;&#949;&#8057;&#964;&#951;&#964;&#953; &#954;&#945;&#8054; &#963;&#945;&#961;&#954;&#8056;&#962; &#960;&#945;&#967;&#8059;&#964;&#951;&#964;&#953;.
+We cannot imagine an
+&#8217;incarnation &#8217; of the Word in an
+irrational thing.
+		</div>
+		<div n="10021015">
+			19. 2 &#963;&#965;&#957;&#945;&#957;&#949;&#954;&#961;&#8049;&#952;&#951;] &#963;&#965;&#957;&#949;&#954;&#961;&#8049;&#952;&#951; b || 4 &#947;&#949;&#947;&#8051;&#957;&#957;&#951;&#964;&#959; c || 9 &#7952;&#947;&#8055;&#957;&#949;&#964;&#959; e ||
+10 &#945;&#957;&#949;&#954;&#955;&#953;&#952;&#951;] &#7936;&#957;&#949;&#954;&#955;&#8053;&#952;&#951; a: &#7952;&#964;&#8051;&#952;&#951; b
+		</div>
+		<div n="10021016">
+			1. &#947;&#949;&#957;&#8057;&#956;&#949;&#957;&#959;&#962; &#7996;&#8217;., &#8001; &#954;&#8049;&#964;&#969; &#952;&#949;&#8057;&#962;]
+&#8216;was made man, the earthly God.&#8217;
+Gr. is fond of dwelling upon the
+intrinsic divinity of man. Cp. Or.
+xxxviii 7 &#7989;&#957;&#945;...&#8033;&#962; &#959;&#7984;&#954;&#949;&#8055;&#959;&#953;&#962; &#7972;&#948;&#951; &#960;&#961;&#959;&#963;&#959;&#956;&#953;&#955;&#8135;
+. . . &#952;&#949;&#8056;&#962; &#7953;&#957;&#959;&#8059;&#956;&#949;&#957;&#8057;&#962; &#964;&#949; &#954;&#945;&#8054;
+&#947;&#957;&#969;&#961;&#953;&#950;&#8057;&#956;&#949;&#957;&#959;&#962;. Here, the description
+of man as &#8001; &#954;&#8049;&#964;&#969; &#952;&#949;&#8057;&#962; is prepared
+for by the words &#948;&#953;&#8048; &#956;&#8051;&#963;&#959;&#965; &#957;&#959;&#8057;&#962;.
+		</div>
+		<div n="10021017">
+			2. &#963;&#965;&#957;&#945;&#957;&#949;&#954;&#961;&#8049;&#952;&#951; &#952;&#949;&#8182; Cp. iv 2
+&#7952;&#967;&#961;&#8055;&#963;&#952;&#951; &#952;&#949;&#8057;&#964;&#951;&#964;&#953;; iv 3 &#952;&#949;&#8183; &#960;&#955;&#945;&#954;&#8134;&#957;&#945;&#953;
+&#954;&#945;&#7984; &#947;&#949;&#956;&#8051;&#963;&#952;&#945;&#953; &#952;&#949;&#8056;&#957; &#7952;&#954; &#964;&#8134;&#962; &#956;&#8055;&#958;&#949;&#969;&#962;. The
+language, if pressed, would imply
+that Christ was a human person,
+taken into union with a divine one.
+This would, of course, be erroneous,
+and Gr. 's own words immediately
+before shew that he perfectly understood
+the Person of our Lord to be
+divine first, and then by condescension
+human. Prob. the nom. to
+&#963;&#965;&#957;&#945;&#957;&#949;&#954;&#961;&#8049;&#952;&#951; is strictly supplied from
+&#7940;&#957;&#952;&#961;&#969;&#960;&#959;&#962;, &#8001; &#954;. &#952;&#949;&#8057;&#962;, not from &#8001; &#957;&#8166;&#957; &#963;&#959;&#953;
+&#954;&#945;&#964;&#945;&#966;&#961;&#959;&#957;&#959;&#8059;&#956;&#949;&#957;&#959;&#962;. The humanity of
+Christ undoubtedly &#963;&#965;&#957;&#945;&#957;&#949;&#954;&#961;. &#952;&#949;&#8183;.
+Put the humanity of Christ, impersonal
+except by virtue of His assumption
+of it, is not exactly described
+by the term &#7940;&#957;&#952;&#961;&#969;&#960;&#959;&#962;. The
+rise of Nestorianism, which was
+after Gr.'s time, would have suggesed
+more careful phraseology;
+and it may be added that a fear of
+the still later Eutychianism might
+have made Gr. modify the words
+&#963;&#965;&#957;&#945;&#957;&#949;&#954;&#961;&#8049;&#952;&#951; and &#964;&#959;&#8166; &#954;&#961;&#949;&#8055;&#964;&#964;&#959;&#957;&#959;&#962; &#7952;&#954;&#957;&#953;&#954;&#951;&#963;&#945;&#957;&#964;&#959;&#962;.
+		</div>
+		<div n="10021018">
+			3. &#7989;&#957;&#945; &#947;&#8051;&#957;&#969;&#956;&#945;&#953;] It is perh. somewhat
+&#957;&#949;&#945;&#957;&#953;&#954;&#8057;&#957; to speak of our becoming
+Gods &#8216;to the same extent&#8217;
+as Christ is man; but doubtless Gr.
+would explain that he spoke of men
+in proportion to heir capacity; or
+perh., in view of what follows,
+&#964;&#959;&#963;&#959;&#8166;&#964;&#959;&#957; means &#8217;as truly.&#8217; He
+uses the same phrase in Or. xl
+45.
+		</div>
+		<div n="10021019">
+			4. &#7952;&#947;&#949;&#968;&#957;&#957;&#951;&#964;&#959;] &#8216;He had been begotten
+before,&#8217; i.e. eternally.
+		</div>
+		<div n="10021020">
+			7. &#8005;&#955;&#959;&#957; &#964;&#959;&#8166;&#964;&#959;] both the &#7936;&#960;&#8049;&#964;&#969;&#961;
+&#7952;&#957;&#964;&#8217;. and the &#7936;&#956;&#8053;&#964;&#969;&#961; &#7952;&#954;.
+		</div>
+		<div n="10021021">
+			ib. &#7952;&#947;&#957;&#8061;&#963;&#952;&#951; &#960;&#961;&#959;&#966;.] Luke i 41.
+		</div>
+		<div n="10021022">
+			9. &#7936;&#960;&#959;&#963;&#960;&#945;&#961;&#947;&#945;&#957;&#959;&#8166;&#964;&#945;&#953; &#964;&#8048; &#964;&#8134;&#962; &#964;.]
+Luke xxiv 12, John xx 6 f.
+		</div>
+		<div n="10021023">
+			11. &#8016;&#960;&#8217; &#7936;&#947;&#947;. &#7952;&#948;&#959;&#958;&#8049;&#963;&#952;&#951;] Luke ii
+9 f.
+		</div>
+		<div n="100220">
+			&#7960;&#946;&#945;&#960;&#964;&#8055;&#963;&#952;&#951; &#956;&#8050;&#957; &#8033;&#962; &#7940;&#957;&#952;&#961;&#969;&#960;&#959;&#962;, &#7936;&#955;&#955;&#8217; &#7937;&#956;&#945;&#961;&#964;&#8055;&#945;&#962;
+&#7956;&#955;&#965;&#963;&#949;&#957; &#8033;&#962; &#952;&#949;&#8057;&#962;&#903; &#959;&#8016; &#954;&#945;&#952;&#945;&#961;&#963;&#8055;&#969;&#957; &#945;&#8016;&#964;&#8056;&#962; &#948;&#949;&#8057;&#956;&#949;&#957;&#959;&#962;, &#7936;&#955;&#955;&#8217; &#7989;&#957;&#945;
+&#7937;&#947;&#953;&#8049;&#963;&#8131; &#964;&#8048; &#8021;&#948;&#945;&#964;&#945;. &#7952;&#960;&#949;&#953;&#961;&#8049;&#963;&#952;&#951; &#8033;&#962; &#7940;&#957;&#952;&#961;&#969;&#960;&#959;&#962;, &#7936;&#955;&#955;&#8217; &#7952;&#957;&#8055;&#954;&#951;&#963;&#949;&#957;
+&#8033;&#962; &#952;&#949;&#8057;&#962;&#903; &#7936;&#955;&#955;&#8048; &#952;&#945;&#961;&#961;&#949;&#8150;&#957; &#948;&#953;&#945;&#954;&#949;&#955;&#949;&#8059;&#949;&#964;&#945;&#953;, &#8033;&#962; &#954;&#8057;&#963;&#956;&#959;&#957; &#957;&#949;&#957;&#953;&#954;&#951;&#954;&#8061;&#962;.
+
+		</div>
+		<div n="1002202">
+			1 &#7952;&#966;&#965;&#947;&#8049;&#948;&#949;&#965;&#963;&#949; be: &#966;&#965;&#947;&#945;&#948;&#949;&#965;&#963;&#949; g 20. 7 om &#959;&#8016; &#954;&#945;&#952;&#945;&#961;&#963;&#8055;&#969;&#957; &#945;&#8016;&#964;&#8056;&#962; &#948;&#949;&#959;&#956;&#949;&#957;&#959;&#962;
+ce || 14 &#7952;&#946;&#945;&#961;&#8053;&#952;&#951;] &#7952;&#946;&#945;&#961;&#8059;&#957;&#952;&#951; cef
+		</div>
+		<div n="1002203">
+			1. &#966;&#965;&#947;&#945;&#948;&#949;&#8059;&#949;&#953; &#964;&#8048; &#913;&#7990;&#947;&#8217;.] The ref.
+is to the legend that the idols of
+Egypt were broken at His entrance
+into the land; which legend connected
+itself with such passages as
+Is. xix 16 f., Jer. xlvi 25.
+		</div>
+		<div n="1002204">
+			ib. &#959;&#8016;&#954; &#949;&#7990;&#967;&#949;&#957; &#949;&#7990;&#948;&#8217;.] Is. liii 2.
+		</div>
+		<div n="1002205">
+			2. &#8033;&#961;&#945;&#8150;&#959;&#962;] Ps. xliv 3 (xlv 2).
+		</div>
+		<div n="1002206">
+			3. &#7952;&#960;&#8054; &#964;&#959;&#8166; &#8004;&#961;&#959;&#965;&#962;] Matt, xvii 2,
+Luke ix 29.
+		</div>
+		<div n="1002207">
+			4. &#964;&#8056; &#956;&#8051;&#955;&#955;&#959;&#957; &#956;&#965;&#963;&#964;] &#8216;revealing
+the secret of the future.&#8217; Prob. to
+the three Apostles, &#8212; the future being
+His own future.
+		</div>
+		<div n="1002208">
+			6. &#7937;&#956;&#945;&#961;&#964;&#8055;&#945;&#962; &#7956;&#955;&#965;&#963;&#949;&#957;] Matt, ix 2
+etc. It is, of course, not &#8033;&#962; &#952;&#949;&#8057;&#962; that
+our Lord there claims to forgive sins.
+		</div>
+		<div n="1002209">
+			7. &#7989;&#957;&#945; &#7937;&#947;&#953;&#8049;&#963;&#8131; &#964;&#8048; &#8020;.] Cp. the i
+first prayer in the Baptismal Office.
+		</div>
+		<div n="10022010">
+			9. &#954;&#8057;&#963;&#956;&#959;&#957; &#957;&#949;&#957;&#953;&#954;.] John xvi 33.
+		</div>
+		<div n="10022011">
+			10. &#7940;&#961;&#964;&#959;&#962; &#7952;&#963;&#964;&#953;] John vi 51.
+		</div>
+		<div n="10022012">
+			11. &#7952;&#8049;&#957; &#964;&#953;&#962; &#948;&#953;&#968;&#8182; John vii 37.
+		</div>
+		<div n="10022013">
+			12. &#960;&#951;&#947;&#8049;&#950;&#949;&#953;&#957;] &#8216;give forth water
+like a fountain,&#8217; John vii 38.
+		</div>
+		<div n="10022014">
+			14. &#7936;&#957;&#8049;&#960;&#945;&#965;&#963;&#953;&#962;] Matt, xi 28.
+		</div>
+		<div n="10022015">
+			15. &#7952;&#960;&#8054; &#960;. &#954;&#959;&#965;&#966;&#8055;&#950;&#949;&#964;&#945;&#953;] Matt, xiv
+25 f.
+		</div>
+		<div n="10022016">
+			ib. &#7956;&#960;&#953;&#964;&#8217;. &#960;&#957;&#949;&#8059;&#956;&#945;&#963;&#953;&#957;] Matt, viii
+26.
+		</div>
+		<div n="10022017">
+			16. &#946;&#945;&#960;&#964;&#953;&#950;&#8057;&#956;&#949;&#957;&#959;&#957;] a classical sense
+of the word.
+		</div>
+		<div n="10022018">
+			17. &#7952;&#958; &#7984;&#967;&#952;&#8059;&#959;&#962;] Matt, xvii 27.
+		</div>
+		<div n="10022019">
+			id. &#931;&#945;&#956;&#945;&#961;&#949;&#8055;&#964;&#951;&#962;] John viii 48.
+		</div>
+		<div n="10022020">
+			18. &#964;&#8056;&#957; &#7936;&#960;&#8056; &#8216;&#921;. &#954;&#945;&#964;&#945;&#946;.] Luke &#967;
+30; &#8216;the Good Samaritan.&#8217;
+		</div>
+		<div n="10022021">
+			19. &#8017;&#960;&#8056; &#948;&#945;&#953;&#956;. &#7952;&#960;&#953;&#947;&#953;&#957;&#8061;&#963;&#954;&#949;&#964;&#945;&#953;] Mark
+i 24, 34 etc.
+		</div>
+		<div n="10022026">
+			1 &#955;&#949;&#947;&#949;&#8182;&#957;&#945;&#962; df || 5 &#960;&#959;&#965;] + &#964;&#8051;&#952;&#949;&#953;&#964;&#945;&#953; bdfg &#7996;&#8217; 7 &#954;&#959;&#963;&#956;&#959;&#957;] &#8217;&#964;&#959;&#957; &#954;. eg &#921;&#921; 12 &#956;&#949;&#956;&#945;&#955;&#945;&#954;&#953;&#963;&#964;&#945;&#948;]
++ &#954;&#945;&#8054; bdefg
+		</div>
+		<div n="10022027">
+			1. &#955;&#949;&#947;&#949;&#8182;&#957;&#945;] Mark v 9 etc.
+		</div>
+		<div n="10022028">
+			2. &#8033;&#962; &#7936;&#963;&#964;&#961;&#945;&#960;&#8053;&#957;] Luke &#967; 18.
+		</div>
+		<div n="10022029">
+			3. &#955;&#953;&#952;&#8049;&#950;&#949;&#964;&#945;&#953;, &#7936;&#955;&#955;&#8217; &#959;&#8016;&#967; &#7937;.] John
+viii 59.
+		</div>
+		<div n="10022030">
+			4. &#7952;&#960;&#945;&#954;&#959;&#8059;&#949;&#953;] Matt, viii 3 etc.
+		</div>
+		<div n="10022031">
+			ib. &#960;&#945;&#8059;&#949;&#953; &#948;&#8049;&#954;&#961;&#965;&#959;&#957;] Luke vii 13.
+		</div>
+		<div n="10022032">
+			5. &#7952;&#961;&#969;&#964;&#953;&#8119; &#960;&#959;&#965;] John xi 34. Cp.
+the discussion in Ath. Or. iii c. Ar.
+&#7953;37, 38- See also &#956;&#8217; Deer. Nic. &#167;14.
+Ath. decides in favour of supposing
+that our Lord knew the answer before
+asking the question; but he
+admits the possibility of the view
+adopted by Gr. &#7947;&#957; &#948;&#8050; &#966;&#953;&#955;&#959;&#957;&#949;&#953;&#954;&#8182;&#963;&#953;&#957;
+&#7956;&#964;&#953; &#948;&#953;&#8048; &#964;&#8056; &#7952;&#960;&#949;&#961;&#969;&#964;&#8118;&#957;, &#7936;&#954;&#959;&#965;&#8051;&#964;&#969;&#963;&#945;&#957;,
+&#7952;&#957; &#956;&#8050;&#957; &#964;&#8134; &#952;&#949;&#8057;&#964;&#951;&#964;&#953; &#959;&#8016;&#954; &#7952;&#963;&#964;&#953;&#957; &#7940;&#947;&#957;&#959;&#953;&#945;,
+&#964;&#8134;&#962; &#948;&#8050; &#963;&#945;&#961;&#954;&#8056;&#962; &#7988;&#948;&#953;&#8057;&#957; &#7952;&#963;&#964;&#953; &#964;&#8056; &#7938;&#947; &#957;&#959;&#949;&#8150;&#957;.
+		</div>
+		<div n="10022033">
+			7. &#7952;&#958;&#945;&#947;&#959;&#961;&#8049;&#950;&#949;&#953;] 1 Cor. vi 20, vii
+23; cp. 1 Pet. i 19.
+		</div>
+		<div n="10022034">
+			8. &#960;&#961;&#8057;&#946;&#945;&#964;&#959;&#957;] Is. liii 7.
+		</div>
+		<div n="10022035">
+			9. &#960;&#959;&#953;&#956;&#945;&#8055;&#957;&#949;&#953; &#964;. &#8217;I.] Ps. lxxix 2
+(lxxx &#921;).
+		</div>
+		<div n="10022036">
+			ib. &#957;&#8166;&#957; &#948;&#8051;] Ps. ii 9, Rev.
+xii 5.
+		</div>
+		<div n="10022037">
+			10. &#7936;&#956;&#957;&#8056;&#962; &#7940;&#966;&#8217;.] Is. liii 7.
+		</div>
+		<div n="10022038">
+			ib. &#955;&#8057;&#947;&#959;&#962; &#954;&#964;&#955;.] John i 1, 23.
+		</div>
+		<div n="10022039">
+			12. &#956;&#949;&#956;&#945;&#955;&#8049;&#954;&#953;&#963;&#964;&#945;&#953;] Is liii 5.
+		</div>
+		<div n="10022040">
+			ib. &#952;&#949;&#961;&#945;&#960;&#949;&#8059;&#949;&#953;] Matt, ix 35.
+		</div>
+		<div n="10022041">
+			14. &#964;&#8183; &#958;&#8059;&#955;&#969; &#964;&#8134;&#962; &#950;] Rev. xxii 2
+Gen. ii 9.
+		</div>
+		<div n="10022042">
+			15. &#955;&#8131;&#963;&#964;&#8053;&#957;] Luke xxiii 43.
+		</div>
+		<div n="10022043">
+			ib. &#963;&#954;&#959;&#964;&#8055;&#950;&#949;&#953;] Matt, xxvii 45.
+		</div>
+		<div n="10022044">
+			17. &#964;&#8056; &#8021;&#948;&#969;&#961;] John ii 9.
+		</div>
+		<div n="10022045">
+			ib. &#964;&#8134;&#962; &#960;&#953;&#954;&#961;&#8118;&#962; &#947;. &#954;&#945;&#964;.] &#917;x. xv
+25.
+		</div>
+		<div n="10022046">
+			18. &#947;&#955;&#965;&#954;&#945;&#963;&#956;&#8057;&#962;] Cant. V 16.
+		</div>
+		<div n="10022047">
+			19. &#7952;&#958;&#959;&#965;&#963;&#8055;&#945;&#957; &#7952;&#967;.] John x 18.
+		</div>
+		<div n="100230">
+			&#964;&#945;&#8166;&#964;&#945; &#964;&#959;&#8150;&#962; &#945;&#7984;&#957;&#953;&#947;&#956;&#945;&#964;&#953;&#963;&#964;&#945;&#8150;&#962; &#960;&#945;&#961;&#8217; &#7969;&#956;&#8182;&#957;, &#959;&#8016;&#967; &#7953;&#954;&#8057;&#957;&#964;&#969;&#957;
+
+		</div>
+		<div n="1002302">
+			2 &#960;&#961;&#959;&#949;&#947;&#949;&#8055;&#961;&#959;&#957;&#964;&#945;&#953;] &#7952;&#947;&#949;&#8055;&#961;&#959;&#957;&#964;&#945;&#953; &#8216;Reg. Cypr.&#8217; || 8 &#955;&#8059;&#949;&#953;] &#955;&#965;&#8051;&#964;&#969; f
+21. 15 &#960;&#961;&#959;&#946;&#945;&#955;&#8061;&#956;&#949;&#952;&#945; c
+		</div>
+		<div n="1002303">
+			I. &#954;&#945;&#964;&#945;&#960;. &#8165;&#8053;&#947;&#957;&#965;&#964;&#945;&#953;] Matt, xxvii
+51; cp. Heb. ix 8, x 19 f.
+		</div>
+		<div n="1002304">
+			2. &#960;&#961;&#959;&#949;&#947;&#949;&#8055;&#961;&#959;&#957;&#964;&#945;&#953;] Matt, xxvii 52.
+The reading &#7952;&#947;. is manifestly a cor-
+rection, to bring Gr. into conformity
+with St &#924;.
+		</div>
+		<div n="1002305">
+			3. &#950;&#969;&#959;&#960;&#959;&#953;&#949;&#8150;] John v 21.
+		</div>
+		<div n="1002306">
+			ib. &#954;&#945;&#964;&#945;&#955;&#8059;&#949;&#953;] Heb. ii 14; cp.
+2 Tim. i 10.
+		</div>
+		<div n="1002307">
+			4. &#7936;&#957;&#8049;&#947;&#949;&#953; &#968;&#965;&#967;&#8049;&#962;] &#913; ref. to the
+traditional belief of the "harrowing
+of hell." Cp. Ign. Magn. 9 &#960;&#945;&#961;&#8060;&#957;
+&#7972;&#947;&#949;&#953;&#961;&#949;&#957; &#945;&#8016;&#964;&#959;&#8058;&#962; &#964;&#959;&#8058;&#962; &#960;&#961;&#959;&#934;&#8053;&#964;&#945;&#962;) &#7952;&#954;
+&#957;&#949;&#954;&#961;&#8182;&#957;, where see &#8217;s note.
+The doctrine was naturally a favourite
+one among the speculative
+sects; see Anaph. Pilati B 8 (Tisch.
+p. 447).
+		</div>
+		<div n="1002308">
+			21. It has been a disagreeable
+task to examine these objections; believers
+are not fond of arguing; but
+it is important to shew that the
+arguments are not all on the side of
+heresy. To rely upon logic, however,
+is the abandonment of faith, the
+evacuation of the Gospel, and its
+betrayal. God bring the opponents
+to a better mind, and grant us a
+saving hold upon the Trinity.
+		</div>
+		<div n="1002309">
+			9. &#964;&#945;&#8166;&#964;&#945;] sc &#949;&#7984;&#961;&#8053;&#954;&#945;&#956;&#949;&#957; or &#949;&#7984;&#961;&#8053;&#963;&#952;&#969;.
+		</div>
+		<div n="10023010">
+			11. &#949;&#7991;&#962; &#7936;&#957;&#964;&#953;&#954;&#949;&#8055;&#956;&#949;&#957;&#959;&#962;] Satan.
+		</div>
+		<div n="10023011">
+			ib. &#964;&#959;&#8058;&#962; &#7952;&#956;&#960;&#8055;&#960;&#964;&#959;&#957;&#964;&#945;&#962;] &#8216;our assailants.&#8217;
+		</div>
+		<div n="10023012">
+			13. &#7936;&#8053;&#964;&#964;&#951;&#964;&#959;&#953; &#964;. &#960;. &#954;&#964;&#955;] &#954;&#964;&#955;.] &#8216;invincible
+in those fine arguments.
+which make void the Gospel.&#8217;
+		</div>
+		<div n="10023013">
+			15. &#960;&#961;&#959;&#946;&#945;&#955;&#955;&#8061;&#956;&#949;&#952;&#945;] &#8217;advance&#8217; as
+a sword or shield.
+		</div>
+		<div n="10023014">
+			ib. &#964;&#8056; &#964;&#959;&#803;&#8166; &#960;&#957;&#949;&#8059;&#956;&#945;&#964;&#959;&#962; &#7936;&#803;&#958;.] &#8217;defeat
+the credentials of the Spirit by our
+contentions.&#8217;
+		</div>
+		<div n="100231">
+			6 &#963;&#964;&#961;&#945;&#947;&#947;&#945;&#955;&#953;&#945;&#962;] + &#964;&#8182;&#957; a || &#948;&#959;&#947;&#956;&#8049;&#964;&#969;&#957;] &#963;&#965;&#957;&#945;&#955;&#955;&#945;&#947;&#956;&#8049;&#964;&#969;&#957; b || 7 &#960;&#959;&#953;&#8053;&#963;&#949;&#953;&#949;]
+&#960;&#959;&#953;&#8053;&#963;&#949;&#953; a || 9 &#960;&#945;&#961;&#945;&#954;&#945;&#955;&#959;&#8166;&#956;&#949;&#957;] + &#954;&#945;&#8054; g &#921;&#921; 10 &#963;&#946;&#8051;&#957;&#957;&#965;&#964;&#945;&#953; a || 12 &#7956;&#967;&#959;&#953;&#964;&#949;] &#7956;&#967;&#949;&#964;&#949;
+&#8217;in nonnull.&#8217; || 16 &#8217;&#948;&#959;&#958;&#945;] + &#954;&#945;&#8054; &#964;&#8056; &#954;&#961;&#8049;&#964;&#959;&#962; &#957;&#965;&#957; &#954;&#945;&#8054; &#7936;&#949;&#8054; &#954;&#945;&#8054; f
+		</div>
+		<div n="100232">
+			1. &#964;&#8056; &#7937;. &#964;&#959;&#8166; &#956;. &#966;] &#8216;the
+weakness of the argument is held to
+be the zveakness of our creed.
+		</div>
+		<div n="100233">
+			2. &#954;&#8051;&#957;&#969;&#963;&#953;&#962; &#964;&#959;&#8166; &#8217;&#963;&#964;&#8217;] I Cor. i 17.
+		</div>
+		<div n="100234">
+			4. &#960;&#955;&#8053;&#961;&#969;&#963;&#953;&#962;] the opposite of &#954;&#8051;
+&#957;&#8182;&#963;&#953;&#962;. It is the &#8216;fulfilling of the
+word&#8217; even when the &#955;&#8057;&#947;&#959;&#962; is feeble.
+		</div>
+		<div n="100235">
+			ib. &#7936;&#957;&#945;&#947;&#947;&#8051;&#955;&#955;&#969;&#957; . . . &#954;&#961;&#945;&#964;&#959;&#8059;&#956;&#949;&#957;&#945;]
+Dan. v 16. Seeiill.
+		</div>
+		<div n="100236">
+			6. &#963;&#964;&#961;&#945;&#947;&#947;&#945;&#955;&#953;&#8049;&#962;] &#8217; tightly twisted
+knots&#8217;; a quotation from Is. lviii
+with &#948;&#959;&#947;&#956;&#8049;&#964;&#969;&#957; substituted for &#963;&#965;&#957;&#945;&#955;&#955;&#945;&#947;&#956;&#8049;&#964;&#969;&#957;.
+		</div>
+		<div n="100237">
+			8. &#8000;&#957;&#959;&#956;&#8049;&#950;&#959;&#957;&#964;&#945;&#953;] sc. &#917;&#8016;&#957;&#959;&#956;&#953;&#945;&#957;&#959;&#8055;.
+		</div>
+		<div n="100238">
+			9. &#948;&#949;&#8057;&#956;&#949;&#952;&#945; &#8001;. X.] 2 Cor. v 20.
+		</div>
+		<div n="100239">
+			10. &#964;&#8056; &#960;&#957;&#949;&#8166;&#956;&#945; &#956;&#8052; &#963;&#946;.] 1 Thess.
+v 19.
+		</div>
+		<div n="1002310">
+			14. &#949;&#7984;&#955;&#953;&#954;&#961;. &#954;. &#7936;&#960;&#961;&#243;&#963;&#954;.] Phil, i 10.
+		</div>
+		</body>
+    </text>
+</TEI>

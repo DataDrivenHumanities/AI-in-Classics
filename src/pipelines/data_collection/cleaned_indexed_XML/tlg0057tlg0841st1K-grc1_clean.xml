@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader xml:lang="eng">
+        <title xml:lang="lat">De substantia facultatum naturalium fragmentum</title>
+    <author n="0">Galen</author>
+	</teiHeader>
+    <text>
+        <body>
+        <div n="10001">
+			&#915;&#913;&#923;&#919;&#925;&#927;&#933; &#928;&#917;&#929;&#921; &#927;&#933;&#931;&#921;&#913;&#931; &#932;&#937;&#925; &#934;&#933;&#931;&#921;&#922;&#937;&#925; 
+		</div>
+		<div n="10002">
+			&#922;&#945;&#8055; &#964;&#953;&#962; &#7988;&#963;&#969;&#962; &#948;&#8057;&#958;&#949;&#953; &#948;&#953;&#945;&#966;&#969;&#957;&#8055;&#945;&#962; &#7936;&#958;&#953;&#8057;&#955;&#959;&#947;&#959;&#957; &#949;&#7990;&#957;&#945;&#953; &#964;&#8182;&#957; 
+		</div>
+		</body>
+    </text>
+</TEI>

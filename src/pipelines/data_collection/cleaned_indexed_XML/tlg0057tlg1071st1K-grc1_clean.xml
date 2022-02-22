@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader xml:lang="eng">
+        <title xml:lang="lat">De experientia medica</title>
+    <author n="0">Galen</author>
+	</teiHeader>
+    <text>
+        <body>
+        <div n="10011">
+			... &#964;&#8056;&#957; &#950;&#900; &#7956;&#964;&#953; &#952;&#949;&#8049;&#963;&#945;&#963;&#952;&#945;&#953; &#960;&#949;&#961;&#953;&#956;&#949;&#957;&#949;&#8150;&#962; &#954;&#945;&#8054; &#964;&#8056;&#957; &#951;&#900; &#954;&#945;&#8054; &#8005;&#955;&#969;&#962; &#960;&#8049;&#957;&#965; &#960;&#959;&#955;&#955;&#8048; 
+		</div>
+		</body>
+    </text>
+</TEI>

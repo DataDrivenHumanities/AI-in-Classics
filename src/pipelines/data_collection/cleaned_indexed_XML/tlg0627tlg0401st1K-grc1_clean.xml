@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader xml:lang="eng">
+        <title xml:lang="lat">De anatomia</title>
+    <author n="0">Hippocrates</author>
+	</teiHeader>
+    <text>
+        <body>
+        <div n="10010">
+			&#928;&#917;&#929;&#921; &#913;&#925;&#913;&#932;&#927;&#924;&#919;&#931;.
+		</div>
+		<div n="10011">
+			1. &#7944;&#961;&#964;&#951;&#961;&#8055;&#951; &#7952;&#958; &#7953;&#954;&#945;&#964;&#8051;&#961;&#959;&#965; &#966;&#945;&#961;&#965;&#947;&#947;&#8051;&#952;&#961;&#959;&#965; &#964;&#8052;&#957; &#7956;&#954;&#966;&#965;&#963;&#953;&#957; &#960;&#959;&#953;&#949;&#965;&#956;&#8051;&#957;&#951; &#7952;&#962; 
+		</div>
+		</body>
+    </text>
+</TEI>

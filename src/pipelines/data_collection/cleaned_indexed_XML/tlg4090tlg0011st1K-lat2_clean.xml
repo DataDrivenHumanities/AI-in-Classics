@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader xml:lang="eng">
+        <title xml:lang="lat">Citatorum In Cyrilli In XII Prophetas</title>
+    <author n="0">Philip Edward Pusey</author>
+	<author n="1">Cyrilli Archiepiscopi Alexandrini</author>
+	</teiHeader>
+    <text>
+        <body>
+        <div n="1001">
+			TABULA LOCORUM NONNULLORUM IN
+          CATENIS CITATORUM.
+		</div>
+		<div n="10020">
+			Cat. Nikephori in Octateuchum . . . . . . . 134 d. &amp;c.
+          ,, . . . . . . . 254 a.
+          ,, . . . . . . . 309 e.
+		</div>
+		<div n="10030">
+			Cat. in 4 libb. Reg. (Maii Nova Bibl. iii. 435-446.) . . . 3d.
+          ,, . . . . . . . . . . 14 c.
+          ,, . . . . . . . . . . 21 e.
+          ,, . . . . . . . . . . 145 e.
+          ,, . . . . . . . . . . 250 c.
+          ,, . . . . . . . . . . 431 b.
+          ,, . . . . . . . . . . 709 c.
+		</div>
+		<div n="10040">
+			Niketae Cat, in Psalmos xiii. (a Catena alia quoque cit.) . . . 830 e.
+          ,, xliv, . , . . , . . 740 d.
+          ,, lxvii. . . . . . . . 641 a.
+          ,, lxviii. . . . . . . . 337 d.
+          ,, lxxiii. . . . . . . . 803 b.
+          ,, xciii. . . . . . . . 799 d.
+          ,, ciii. . . . . . . . 753 c.
+          ,, civ. . . . . . . . 688 b.
+          ,, cxviii. . . . . . . . 338 d.
+          ,, ,, . . . . . . . 668 b.
+          ,, ,, . . . . . . . 727 e.
+          ,, cxx. . . . . . . . 668 b.
+          ,, cxxiii. . . . . . . . 335 b.
+          ,, cxxvi. . . . . . . . 740 e.
+          ,, cxxxi. . . . . . . . 715 e.
+		</div>
+		<div n="10050">
+			Niketae Cat. in S. Matthaeum (quod non cognovi nisi sero) . . 366 d.
+          ,, . . . . . . . . 736 c,e.
+		</div>
+		<div n="10060">
+			Nik. Cat. in S. Lucam . . . . . . . . . 337 d.
+          ,, . . . . . . . . .  792 a.
+		</div>
+		<div n="10070">
+			Cat. in S. Luc. a Maio littera &#914; signata . . . . . . 395 e
+          ,, . . . . . . . 497 a.
+		</div>
+		<div n="10080">
+			Cat. in Acta SS. Apostolorum . . . . . . . . 227 a.
+          ,, . . . . . . . 308 d.
+          ,, . . . . . . . 310 b.
+          ,, . . . . . . . 350 b.
+          ,, . . . . . . . 496 a.
+		</div>
+		<div n="10090">
+			Cat. inedita in D, Pauli Epistolas . . . . . . . 268 e.
+		</div>
+		<div n="100100">
+			Cat. in Catholicas Epistolas (a Cramero ed.) . . . . . 395 b.
+		</div>
+		<div n="100110">
+			Chreses in Sp. SS. a Leone Allatio edita . . . . . . 228 a.
+		</div>
+		</body>
+    </text>
+</TEI>

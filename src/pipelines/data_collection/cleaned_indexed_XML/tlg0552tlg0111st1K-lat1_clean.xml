@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader xml:lang="eng">
+        <title xml:lang="lat">Liber assumptorum</title>
+    <author n="0">Archim&#232;de</author>
+	<author n="1">Archimedes</author>
+	</teiHeader>
+    <text>
+        <body>
+        <div n="1000">
+			LIBER ASSUMPTORUM
+		</div>
+		<div n="10020">
+			1.
+		</div>
+		<div n="10021">
+			Si mutuo se tangant
+duo circuli, ut duo circuli
+AEB, CED in E, fuerintque
+eorum diametri
+parallelae, ut sunt duae
+diametri AB, CD, et
+iungantur duo puncta B,
+D et contactus E 
+		</div>
+		<div n="100210">
+			rectis
+		</div>
+		<div n="10023">
+			Sint duo centra G, F,
+et iungatur GF, et producam
+ad E, et educamus
+DH parallelam ipsi GF.
+		</div>
+		<div n="10025">
+			Et quia HF aequali est
+ipsi GD, suntque GD,
+EG aequales, ergo ex
+aequa ibus FB, FE remanebunt
+GF, nempe DH et
+HB, quae erunt aequal es,
+atque duo anguli HDB,
+HBD aequa es. Et quia
+duo anguli EGD. EFB
+sunt recti, atque duo
+anguli EGD, DHB sunt
+aequales, remanebunt
+duo anguli GEU, GDE,
+qui inter se et duobus
+angulis HDB, HBD
+aequales erunt ; ergo angulus
+EDG aequalis est
+angulo DBF Et comprehensus
+angulus GDB est
+communis ; ergo erunt
+duo anguli GDB, FBD,
+(qui sunt pares duobus
+rectis), aequales duobus
+angulis GDB, GDE. Igitur
+ipsi quoque sunt aequales
+duobus rectis ; ergo linea
+EDB est recta. Et hoc est
+quod noluimus.
+		</div>
+		<div n="10030">
+			2.
+		</div>
+		<div n="10031">
+			Sit CBA semicirculus,
+quem DC, DB tangant, et
+
+
+		</div>
+		<div n="10033">
+			Demonstratio. lungamus
+AB eamque producamus
+us in directum et
+educamus CD quousque
+illi occurrat in G, et
+iungamus CB. Et quia
+angulus CBA est in
+semicirculo, erit rectus ;
+remanet CBG rectus, et
+DBEC est parallelogrammum
+rectangulum. Ergo
+in triangulo GBC rectangulo
+educitur perpendicularis
+BD ex B erecta
+super basim, et BD, DC
+erunt aequales eo quod
+tangunt circulum ; ergo
+CD est etiam aequalis
+
+
+		</div>
+		<div n="10040">
+			3.
+		</div>
+		<div n="10041">
+			Sit CA segmentum circuli
+et B punctum super
+illud ubicunque et BD
+perpendicularis super
+AC et segmentum DE
+aequale DA et arcus BF
+aequalis arcui BA ; utique
+iuncta CF erit aequalis
+ipsi CE.
+		</div>
+		<div n="10043">
+			Demonstratio. lungamus
+lineas AB, BF, FE,
+
+
+		</div>
+		<div n="10060">
+			4.
+		</div>
+		<div n="10061">
+			Sit AHC semicirculus,
+et fiant super A diametrum
+duo semicirculi,
+quorum unus AD, alter
+uero DC, et DB perpendicularis;
+utique figura
+proueniens, quam uocat
+Archimedes Arbelon (est
+figura comprehensa ab
+arcu semicircul i maioris
+et duabus circumferentiis
+semicirculorum minorum)
+est aequalis circulo,
+cuius di amet er est
+perpendicularis DB.
+		</div>
+		<div n="10063">
+			Demonstratio. Quia
+linea OB media proportionalis
+
+
+		</div>
+		<div n="10070">
+			5.
+		</div>
+		<div n="10071">
+			Si fuerit semicirculus
+AB, et signatum fuerit in
+eius diametro punctum C
+ubicunque, et fiant super
+diametrum duo semicirculi
+AC, CB, et educatur
+ex C perpendicularis CD
+super AB, et describantur
+ad utrasque partes duo
+circuli tangentes illam et
+tangentes semicirculos,
+utique illi duo circuli sun
+aequales.
+		</div>
+		<div n="10074">
+			Demonstratio. Sit alter
+circulorum tangens DC
+in E et semicirculum AB
+in F et semicirculum AC
+in G, et educamus diametrum
+HE ; erit parallela
+diametro AB, eo quod
+duo anguli HEC, ACE
+sunt recti. Et iungamus
+FH, HA ; ergo linea AF
+est recta, uti dictum est
+in propositione I. Et
+occurrent AF, CE in D,
+eo quod egrediuntur ab
+angulis A, C, minoribus
+duobus rectis.
+		</div>
+		<div n="10075">
+			Et iungamus etiam FE,
+EB ; ergo EFB est etiam
+recta, ut diximus, et perpendicularis
+super AD,
+eo quod angulus AFB
+est rectus, quia cadit in
+semicirculum AB. Et iungamus
+HG, GC ; erit HC
+etiam recta. Et iungamus
+EG, GA erit EA recta ;
+et producam us eam ad l
+et iungam us BI, quae
+erit etiam perpendicularis
+super AI, et iungamus
+
+
+		</div>
+		<div n="10090">
+			6.
+		</div>
+		<div n="10091">
+			Si fuerit semicirculus
+ABC, et in eius diametro
+sumatur punctum D, et
+fuerit AD ipsius DC sesquia,
+et describantur
+super AD, DC duo
+semicirculi, et ponatur
+circulus EF inter tres
+semicirculos tangens eos,
+et educatur diameter EF
+in illo parallela diametro
+AC, reperiri debet proportio
+diametri AC ad
+diametrum EF.
+		</div>
+		<div n="10093">
+			lungam us enim duas
+lineas AE, EB et duas
+lineas CF, FB ; erunt CB,
+AB rectae, ut dictum est
+in prima propositione.
+Describamus etiam duas
+
+
+		</div>
+		<div n="100110">
+			7.
+		</div>
+		<div n="100111">
+			Si circul us circa quadratum
+descriptus fuerit,
+et alius intra illum, utique
+erit circumscriptus duplus
+inscripti.
+		</div>
+		<div n="100113">
+			Sit itaque circulus comprehendens
+quadratum
+AB circulus AB et inscriptus
+CD, et sit diameter
+quadrati AB, et est
+diameter circuli circumscripti,
+et educamus CD
+diametrum circuli inscripti
+parallelam ipsi AE,
+quae est ei aequalis. Et
+quia quadratum AB
+duplum est quadrati
+AE siue DC, et proportio
+quadratorum ex
+diametris circulorum est
+
+
+		</div>
+		<div n="100120">
+			8.
+		</div>
+		<div n="100121">
+			Si egrediatur in circulo
+linea AB ubicunque et
+producatur in directum,
+et ponatur BC aequalis
+semidiametro circuli, et
+iungatur ex C ad centrum
+circuli, quod est D, et
+producatur ad E, erit
+arcus AE triplus arcus
+BF.
+		</div>
+		<div n="100123">
+			Educamus igitur EG
+parallelam ipsi AB, et
+iungamus DB, DG, et
+quia duo anguli DEG,
+DGE sunt aequales, erit
+angulus GDC duplus anguli
+DEG. Et quia angulus
+
+
+		</div>
+		<div n="100130">
+			9.
+		</div>
+		<div n="100131">
+			Si mutuo se secuerint
+in circulo duae lineae AB,
+CD (sed non in centro)
+ad angulos rectos, utique
+duo arcus AD, CB sunt
+aequales duobus arcubus
+AC, DB.
+		</div>
+		<div n="100133">
+			Educamus diametrum
+EF parallelam ipsi AB,
+quae secet CD bifariam
+in G ; erit EC aequalis
+ipsi ED. Et quia tam
+
+
+		</div>
+		<div n="100140">
+			10.
+		</div>
+		<div n="100141">
+			Si fuerit circulus A&#914;C
+et DA tangens illum et
+DB secans illum et DC
+etiam tangens, et educta
+fueri CE parallela ipsi
+DB, et iuncta fuerit EA
+secans DB in F, et educta
+fuerit ex F perpendicularis
+
+
+		</div>
+		<div n="100143">
+			lungamus AC. Et quia
+DA est tangens et AC
+secans circulum, erit
+angulus DAC aequalis
+angulo cadenti in alterno
+segmento AC, nempe angulo
+AEC. Et est aequalis
+angul o AFD, eo quod
+CE, BD sunt parall elae;
+ergo anguli DAC, AFD
+sunt aequales. Et in duobus
+triangulis DAF, AHD
+sunt duo anguli AFD,
+HAD aequales, et angulus
+D com m unis;
+propterea erit rectangulum
+FD in DH aequale
+quadrato DA, immo quadrato
+DC. Et quia
+proportio FD ad DC est
+eadem proportioni CD
+ad DH, et angulus D
+
+
+		</div>
+		<div n="100150">
+			11.
+		</div>
+		<div n="100151">
+			Si mutuo se secuerint
+in circulo duae lineae AB,
+CD ad angulos rectos in
+&#917;, quod non sit in centro,
+utique omnia quadrata
+AE, BE, EC, ED aequalia
+sunt quadrato diametri.
+		</div>
+		<div n="100152">
+			Educamus diametrum
+AF, et iungamus lineas
+
+
+		</div>
+		<div n="100160">
+			12.
+		</div>
+		<div n="100161">
+			Si fuerit semicirculus
+super diametrum AB, et
+eductaefuerint ex C duae
+lineae tangentes illum in
+duobus punctis D, E, et
+
+		</div>
+		<div n="100163">
+			lungamus DA, EB. Et
+quia angulus BDA est
+rectus, erunt duo anguli
+DAB, DBA reliqui in
+triangula o DAB aequales
+uni recto. Et angulus AEB
+rectus ; igitur sunt aequales
+ei. Et ponamus
+angulum FBE communem;
+ambo anguli DAB,
+ABE sunt aequales FBE,
+FEB, immo angulo DFE
+externo in FBE. Et quia
+CD est tangens circulum
+et DB secans illum, angulus
+CDB aequatur angulo
+DAB, et pariter
+angulus CEF aequatur
+angulo EBA ; ergo duo
+anguli CEF, CDF simul
+aequales sunt angulo
+DFE. Et iam quidem planum
+fit ex nostro tractatu
+de figuris quadrilateris
+quod, si educantur inter
+duas lineas aequales sibi
+occurrentes in aliquo
+
+
+		</div>
+		<div n="100170">
+			13.
+		</div>
+		<div n="100171">
+			Si mutuo se secent duae
+lineae AB, CD in circulo,
+et fuerit AB diameter
+illius, at non CD, et
+educantur ex duobus
+punctis A, B duae perpendiculares
+ad CD,
+quae sint AE, BF, utique
+abscindent ex illa CF,
+DE aequales.
+		</div>
+		<div n="100172">
+			lungamus EB et educamus
+ex l, quod est
+centrum, perpendicularem
+IG super CD et
+pr oducamus eam ad H
+in EB. Et quia lG est
+
+
+		</div>
+		<div n="100190">
+			14.
+		</div>
+		<div n="100191">
+			Si fuerit AB semicirculus,
+et ex eius diametro
+AB dissectae sint AC, BD
+aequales, et efficiantur
+super lineas AC, CD, DB
+semicircul i, et sit centrum
+duorum semicirculorum
+AB, CD punctum E, et
+sit EF perpendicularis
+super AB et producatur
+ad G, utique circulus,
+cuius diameter est FG,
+aequalis est superficiei
+contentae a semicirculo
+maiori et a duobus semicirclis,
+qui sunt intra
+i lum, et a semicirculo
+medio, qui est extra
+illum. Et est figura, quam
+uocat Archimedes
+Salinon.
+		</div>
+		<div n="100192">
+			Quia DC bifariam secatur
+in E, et addita
+est iili CA, erunt duo
+quadrata DA, CA dupla
+duorum quadratorum
+DE, EA. Sed FG aequalis
+est ipsi DA ; ergo duo
+quadrata FG, AC dupla
+
+
+		</div>
+		<div n="100200">
+			15.
+		</div>
+		<div n="100201">
+			Si fuerit AB semicirculus
+et AC chorda
+pentagoni, et semissis
+arcus AC sit AD, iungatur
+gatur CD et producatur,
+ut cadat super E, et
+
+
+		</div>
+		<div n="100203">
+			lungamus itaque lineam
+CB, et sit centrum
+H, et iungamus HD, DG
+et AD. Et quia ango us
+AHC, cuius basis est latus
+pentagoni, est duae quintae
+partes recti, quilibet
+duorum angulorum CBD,
+DHA est quinta pars recti.
+Et angulus DHA duplus
+est anguli DBH ; ergo
+angulus DHA est duae
+
+
+		</div>
+		<div n="100204">
+			Et hinc patet quod linea
+DE aequalis sit semidiametro
+circuli; quia
+angulus A aequalis est
+angulo DGH, ideo erit
+linea DH aequalis lineae
+DE.
+		</div>
+		<div n="100205">
+			Et dico quod EC diuiditur
+media et extrema
+proportione in D, et
+maius segmentum est
+DE ; et hoc, quia ED est
+chorda hexagoni et DC
+decagoni, et hoc iam
+demonstratum est in libro
+Elementorum. Et hoc est
+quod noluimus.
+		</div>
+		</body>
+    </text>
+</TEI>
