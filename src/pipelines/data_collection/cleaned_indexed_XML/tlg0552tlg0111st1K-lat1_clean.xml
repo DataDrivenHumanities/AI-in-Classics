@@ -8,13 +8,13 @@
 	</teiHeader>
     <text>
         <body>
-        <div n="1000">
+        <div n="1-0-0-0">
 			LIBER ASSUMPTORUM
 		</div>
-		<div n="10020">
+		<div n="1-0-0-2-0">
 			1.
 		</div>
-		<div n="10021">
+		<div n="1-0-0-2-1">
 			Si mutuo se tangant
 duo circuli, ut duo circuli
 AEB, CED in E, fuerintque
@@ -24,16 +24,16 @@ diametri AB, CD, et
 iungantur duo puncta B,
 D et contactus E 
 		</div>
-		<div n="100210">
+		<div n="1-0-0-2-1-0">
 			rectis
 		</div>
-		<div n="10023">
+		<div n="1-0-0-2-3">
 			Sint duo centra G, F,
 et iungatur GF, et producam
 ad E, et educamus
 DH parallelam ipsi GF.
 		</div>
-		<div n="10025">
+		<div n="1-0-0-2-5">
 			Et quia HF aequali est
 ipsi GD, suntque GD,
 EG aequales, ergo ex
@@ -63,16 +63,16 @@ duobus rectis ; ergo linea
 EDB est recta. Et hoc est
 quod noluimus.
 		</div>
-		<div n="10030">
+		<div n="1-0-0-3-0">
 			2.
 		</div>
-		<div n="10031">
+		<div n="1-0-0-3-1">
 			Sit CBA semicirculus,
 quem DC, DB tangant, et
 
 
 		</div>
-		<div n="10033">
+		<div n="1-0-0-3-3">
 			Demonstratio. lungamus
 AB eamque producamus
 us in directum et
@@ -94,10 +94,10 @@ CD est etiam aequalis
 
 
 		</div>
-		<div n="10040">
+		<div n="1-0-0-4-0">
 			3.
 		</div>
-		<div n="10041">
+		<div n="1-0-0-4-1">
 			Sit CA segmentum circuli
 et B punctum super
 illud ubicunque et BD
@@ -108,16 +108,16 @@ aequalis arcui BA ; utique
 iuncta CF erit aequalis
 ipsi CE.
 		</div>
-		<div n="10043">
+		<div n="1-0-0-4-3">
 			Demonstratio. lungamus
 lineas AB, BF, FE,
 
 
 		</div>
-		<div n="10060">
+		<div n="1-0-0-6-0">
 			4.
 		</div>
-		<div n="10061">
+		<div n="1-0-0-6-1">
 			Sit AHC semicirculus,
 et fiant super A diametrum
 duo semicirculi,
@@ -134,16 +134,16 @@ est aequalis circulo,
 cuius di amet er est
 perpendicularis DB.
 		</div>
-		<div n="10063">
+		<div n="1-0-0-6-3">
 			Demonstratio. Quia
 linea OB media proportionalis
 
 
 		</div>
-		<div n="10070">
+		<div n="1-0-0-7-0">
 			5.
 		</div>
-		<div n="10071">
+		<div n="1-0-0-7-1">
 			Si fuerit semicirculus
 AB, et signatum fuerit in
 eius diametro punctum C
@@ -158,7 +158,7 @@ tangentes semicirculos,
 utique illi duo circuli sun
 aequales.
 		</div>
-		<div n="10074">
+		<div n="1-0-0-7-4">
 			Demonstratio. Sit alter
 circulorum tangens DC
 in E et semicirculum AB
@@ -176,7 +176,7 @@ eo quod egrediuntur ab
 angulis A, C, minoribus
 duobus rectis.
 		</div>
-		<div n="10075">
+		<div n="1-0-0-7-5">
 			Et iungamus etiam FE,
 EB ; ergo EFB est etiam
 recta, ut diximus, et perpendicularis
@@ -194,10 +194,10 @@ super AI, et iungamus
 
 
 		</div>
-		<div n="10090">
+		<div n="1-0-0-9-0">
 			6.
 		</div>
-		<div n="10091">
+		<div n="1-0-0-9-1">
 			Si fuerit semicirculus
 ABC, et in eius diametro
 sumatur punctum D, et
@@ -213,7 +213,7 @@ AC, reperiri debet proportio
 diametri AC ad
 diametrum EF.
 		</div>
-		<div n="10093">
+		<div n="1-0-0-9-3">
 			lungam us enim duas
 lineas AE, EB et duas
 lineas CF, FB ; erunt CB,
@@ -223,17 +223,17 @@ Describamus etiam duas
 
 
 		</div>
-		<div n="100110">
+		<div n="1-0-0-11-0">
 			7.
 		</div>
-		<div n="100111">
+		<div n="1-0-0-11-1">
 			Si circul us circa quadratum
 descriptus fuerit,
 et alius intra illum, utique
 erit circumscriptus duplus
 inscripti.
 		</div>
-		<div n="100113">
+		<div n="1-0-0-11-3">
 			Sit itaque circulus comprehendens
 quadratum
 AB circulus AB et inscriptus
@@ -252,10 +252,10 @@ diametris circulorum est
 
 
 		</div>
-		<div n="100120">
+		<div n="1-0-0-12-0">
 			8.
 		</div>
-		<div n="100121">
+		<div n="1-0-0-12-1">
 			Si egrediatur in circulo
 linea AB ubicunque et
 producatur in directum,
@@ -267,7 +267,7 @@ producatur ad E, erit
 arcus AE triplus arcus
 BF.
 		</div>
-		<div n="100123">
+		<div n="1-0-0-12-3">
 			Educamus igitur EG
 parallelam ipsi AB, et
 iungamus DB, DG, et
@@ -278,10 +278,10 @@ DEG. Et quia angulus
 
 
 		</div>
-		<div n="100130">
+		<div n="1-0-0-13-0">
 			9.
 		</div>
-		<div n="100131">
+		<div n="1-0-0-13-1">
 			Si mutuo se secuerint
 in circulo duae lineae AB,
 CD (sed non in centro)
@@ -290,7 +290,7 @@ duo arcus AD, CB sunt
 aequales duobus arcubus
 AC, DB.
 		</div>
-		<div n="100133">
+		<div n="1-0-0-13-3">
 			Educamus diametrum
 EF parallelam ipsi AB,
 quae secet CD bifariam
@@ -299,10 +299,10 @@ ipsi ED. Et quia tam
 
 
 		</div>
-		<div n="100140">
+		<div n="1-0-0-14-0">
 			10.
 		</div>
-		<div n="100141">
+		<div n="1-0-0-14-1">
 			Si fuerit circulus A&#914;C
 et DA tangens illum et
 DB secans illum et DC
@@ -314,7 +314,7 @@ fuerit ex F perpendicularis
 
 
 		</div>
-		<div n="100143">
+		<div n="1-0-0-14-3">
 			lungamus AC. Et quia
 DA est tangens et AC
 secans circulum, erit
@@ -340,10 +340,10 @@ ad DH, et angulus D
 
 
 		</div>
-		<div n="100150">
+		<div n="1-0-0-15-0">
 			11.
 		</div>
-		<div n="100151">
+		<div n="1-0-0-15-1">
 			Si mutuo se secuerint
 in circulo duae lineae AB,
 CD ad angulos rectos in
@@ -352,16 +352,16 @@ utique omnia quadrata
 AE, BE, EC, ED aequalia
 sunt quadrato diametri.
 		</div>
-		<div n="100152">
+		<div n="1-0-0-15-2">
 			Educamus diametrum
 AF, et iungamus lineas
 
 
 		</div>
-		<div n="100160">
+		<div n="1-0-0-16-0">
 			12.
 		</div>
-		<div n="100161">
+		<div n="1-0-0-16-1">
 			Si fuerit semicirculus
 super diametrum AB, et
 eductaefuerint ex C duae
@@ -369,7 +369,7 @@ lineae tangentes illum in
 duobus punctis D, E, et
 
 		</div>
-		<div n="100163">
+		<div n="1-0-0-16-3">
 			lungamus DA, EB. Et
 quia angulus BDA est
 rectus, erunt duo anguli
@@ -400,10 +400,10 @@ occurrentes in aliquo
 
 
 		</div>
-		<div n="100170">
+		<div n="1-0-0-17-0">
 			13.
 		</div>
-		<div n="100171">
+		<div n="1-0-0-17-1">
 			Si mutuo se secent duae
 lineae AB, CD in circulo,
 et fuerit AB diameter
@@ -415,7 +415,7 @@ quae sint AE, BF, utique
 abscindent ex illa CF,
 DE aequales.
 		</div>
-		<div n="100172">
+		<div n="1-0-0-17-2">
 			lungamus EB et educamus
 ex l, quod est
 centrum, perpendicularem
@@ -425,10 +425,10 @@ in EB. Et quia lG est
 
 
 		</div>
-		<div n="100190">
+		<div n="1-0-0-19-0">
 			14.
 		</div>
-		<div n="100191">
+		<div n="1-0-0-19-1">
 			Si fuerit AB semicirculus,
 et ex eius diametro
 AB dissectae sint AC, BD
@@ -451,7 +451,7 @@ illum. Et est figura, quam
 uocat Archimedes
 Salinon.
 		</div>
-		<div n="100192">
+		<div n="1-0-0-19-2">
 			Quia DC bifariam secatur
 in E, et addita
 est iili CA, erunt duo
@@ -463,10 +463,10 @@ quadrata FG, AC dupla
 
 
 		</div>
-		<div n="100200">
+		<div n="1-0-0-20-0">
 			15.
 		</div>
-		<div n="100201">
+		<div n="1-0-0-20-1">
 			Si fuerit AB semicirculus
 et AC chorda
 pentagoni, et semissis
@@ -476,7 +476,7 @@ ut cadat super E, et
 
 
 		</div>
-		<div n="100203">
+		<div n="1-0-0-20-3">
 			lungamus itaque lineam
 CB, et sit centrum
 H, et iungamus HD, DG
@@ -492,7 +492,7 @@ angulus DHA est duae
 
 
 		</div>
-		<div n="100204">
+		<div n="1-0-0-20-4">
 			Et hinc patet quod linea
 DE aequalis sit semidiametro
 circuli; quia
@@ -501,7 +501,7 @@ angulo DGH, ideo erit
 linea DH aequalis lineae
 DE.
 		</div>
-		<div n="100205">
+		<div n="1-0-0-20-5">
 			Et dico quod EC diuiditur
 media et extrema
 proportione in D, et

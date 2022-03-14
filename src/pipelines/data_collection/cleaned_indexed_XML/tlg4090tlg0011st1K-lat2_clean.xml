@@ -8,16 +8,16 @@
 	</teiHeader>
     <text>
         <body>
-        <div n="1001">
+        <div n="1-0-0-1">
 			TABULA LOCORUM NONNULLORUM IN
           CATENIS CITATORUM.
 		</div>
-		<div n="10020">
+		<div n="1-0-0-2-0">
 			Cat. Nikephori in Octateuchum . . . . . . . 134 d. &amp;c.
           ,, . . . . . . . 254 a.
           ,, . . . . . . . 309 e.
 		</div>
-		<div n="10030">
+		<div n="1-0-0-3-0">
 			Cat. in 4 libb. Reg. (Maii Nova Bibl. iii. 435-446.) . . . 3d.
           ,, . . . . . . . . . . 14 c.
           ,, . . . . . . . . . . 21 e.
@@ -26,7 +26,7 @@
           ,, . . . . . . . . . . 431 b.
           ,, . . . . . . . . . . 709 c.
 		</div>
-		<div n="10040">
+		<div n="1-0-0-4-0">
 			Niketae Cat, in Psalmos xiii. (a Catena alia quoque cit.) . . . 830 e.
           ,, xliv, . , . . , . . 740 d.
           ,, lxvii. . . . . . . . 641 a.
@@ -43,32 +43,32 @@
           ,, cxxvi. . . . . . . . 740 e.
           ,, cxxxi. . . . . . . . 715 e.
 		</div>
-		<div n="10050">
+		<div n="1-0-0-5-0">
 			Niketae Cat. in S. Matthaeum (quod non cognovi nisi sero) . . 366 d.
           ,, . . . . . . . . 736 c,e.
 		</div>
-		<div n="10060">
+		<div n="1-0-0-6-0">
 			Nik. Cat. in S. Lucam . . . . . . . . . 337 d.
           ,, . . . . . . . . .  792 a.
 		</div>
-		<div n="10070">
+		<div n="1-0-0-7-0">
 			Cat. in S. Luc. a Maio littera &#914; signata . . . . . . 395 e
           ,, . . . . . . . 497 a.
 		</div>
-		<div n="10080">
+		<div n="1-0-0-8-0">
 			Cat. in Acta SS. Apostolorum . . . . . . . . 227 a.
           ,, . . . . . . . 308 d.
           ,, . . . . . . . 310 b.
           ,, . . . . . . . 350 b.
           ,, . . . . . . . 496 a.
 		</div>
-		<div n="10090">
+		<div n="1-0-0-9-0">
 			Cat. inedita in D, Pauli Epistolas . . . . . . . 268 e.
 		</div>
-		<div n="100100">
+		<div n="1-0-0-10-0">
 			Cat. in Catholicas Epistolas (a Cramero ed.) . . . . . 395 b.
 		</div>
-		<div n="100110">
+		<div n="1-0-0-11-0">
 			Chreses in Sp. SS. a Leone Allatio edita . . . . . . 228 a.
 		</div>
 		</body>

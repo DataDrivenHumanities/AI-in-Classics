@@ -40,7 +40,7 @@ def findElements(root: ET.Element, tTree: ET.ElementTree, index: list, isBody: b
 def writePath (tTree: ET.ElementTree, index: list, bodyText: str):
     # get string of index
     strings = [str(i) for i in index]
-    strIndex = ''.join(strings)
+    strIndex = '-'.join(strings)
     # write the Xpath to file
     tRoot = tTree.getroot()
     child = ET.Element('div', {'n': strIndex}) # create new div element
