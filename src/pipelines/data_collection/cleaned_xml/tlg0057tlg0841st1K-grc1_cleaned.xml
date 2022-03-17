@@ -1,6 +1,6 @@
 
     <teiheader xml:lang="eng">
-        <title xml:lang="">De substantia facultatum naturalium fragmentum</title>
+        <title xml:lang="">De substantia facultatum naturalium 
         <author>Galen</author>
     </teiheader>
     <text>
@@ -9,9 +9,8 @@
     
 <div type="textpart" subtype="work" n="1">
 
-                <pb n="757"/>
 
-                ΓΑΛΗΝΟΥ ΠΕΡΙ ΟΥΣΙΑΣ ΤΩΝ ΦΥΣΙΚΩΝ <lb/>ΔΥΝΑΜΕΩΝ.
+                ΓΑΛΗΝΟΥ ΠΕΡΙ ΟΥΣΙΑΣ ΤΩΝ ΦΥΣΙΚΩΝ ΔΥΝΑΜΕΩΝ.
                 
 <p>
 Καί τις ἴσως δόξει διαφωνίας ἀξιόλογον εἶναι τῶν
