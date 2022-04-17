@@ -39,14 +39,14 @@ mode_toggle = st.sidebar.radio(
     ])),
     help='Set mode.'
 )
-
+#DEBUG will be set to true no matter what (for now) because of issue with the debug button
 if mode_toggle == 'Production':
     # global DEBUG
     DEBUG = True
 else:
     # global DEBUG
     DEBUG = True
-
+#do the task selected 
 if task_select == tasks[0]:
     load.app()
 elif task_select == tasks[1]:
