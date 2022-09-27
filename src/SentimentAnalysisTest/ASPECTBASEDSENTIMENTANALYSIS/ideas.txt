@@ -1,0 +1,116 @@
+
+POSITIVE NEGATIVE NEUTRAL ADJECTIVES PREPOSITION
+i hate  μισώ
+i love  αγαπώ
+i like  μου αρέσει
+i loath ιχαίνομαι
+we hate μισούμε
+we like αρέσει
+we love αγαπάμε
+we despise περιφρονούμε
+we loath μισούμε
+They hate  μισούν
+They love 
+They like
+
+
+ASPECTS
+Mycenaen
+Cyladic
+Minoan
+Roman
+Persians
+Dorians
+Ionians
+Athenians
+EgyptS
+Libiya 
+Algerians
+Messenian 
+Chalcis
+Euboea
+Spartans
+Trojans
+Etheiopians
+Olympians
+us
+ 
+it 
+he 
+she 
+women
+men 
+mother
+father 
+daughter
+brother 
+god 
+
+him
+her
+them
+
+do not
+
+
+They 
+Are 
+
+not 
+
+ADJECTVIES 
+Positive 
+good 
+Strong
+Tall 
+Good fighters 
+Wonderful 
+smart
+beutiful
+elegant
+genious
+engenious
+swift
+fast 
+
+Negative 
+barbarians
+scodruls
+theives 
+slaves 
+evil
+Mean 
+bad 
+Neutral
+Unkined 
+Bad fighters 
+easy
+Cold 
+ill tempered 
+lazy
+plane
+dumb
+idiots 
+weird
+ugly
+cheap
+rotting
+smell 
+
+// may suffer from overfitting 
+
+
+// simile metaphore
+like lighting
+like a bulll
+like water 
+like a brother 
+lika a father 
+
+
+he stood there 
+mynocians walked across the sea 
+
+
+create compound scentences 
+AND 
