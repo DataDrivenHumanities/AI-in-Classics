@@ -1,9 +1,15 @@
 beautifulsoup4
 bidict
 cltk
+dill
+ipycache
+ipywidgets
+fastparquet
 googletrans==3.1.0a0
 numpy
 pandas
+pyarrow
+python-dotenv
 spacy
 scikit-learn
 streamlit
