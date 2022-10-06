@@ -2,7 +2,7 @@
 POSITIVE NEGATIVE NEUTRAL ADJECTIVES PREPOSITION
 i hate  μισώ
 i love  αγαπώ
-i like  μου αρέσει
+i like  αρέσει
 i loath ιχαίνομαι
 we hate μισούμε
 we like αρέσει
@@ -10,15 +10,22 @@ we love αγαπάμε
 we despise περιφρονούμε
 we loath μισούμε
 They hate  μισούν
-They love 
-They like
+They love  αγαπούν
+They like  τους αρέσει
 
+they - τους, αυτών των, δικός 
 
 ASPECTS
-Mycenaen
-Cyladic
-Minoan
+Mycenaens - μυκηναίους 
+mycenean - μυκηναϊκός
+Mycenae - Μυκήνες
+Minoa 
+Minoan - 
+Minoans - Μινωίτες
+Rome
 Roman
+Romans
+Persia 
 Persians
 Dorians
 Ionians
@@ -114,3 +121,15 @@ mynocians walked across the sea
 
 create compound scentences 
 AND 
+
+x = aspect 
+
+Adjective scentece x are barbarians 
+Simile metaphore scentence x are like sheep
+Active Opinion scentence  i hate x
+Active negation i did not hate x 
+Adjective negation x are not barbarians 
+    - negating a negative is normally neutral
+    - negating a positive is normall bad 
+
+Conjugations combination of any of these with and 
