@@ -47,4 +47,17 @@ def wordToReadableString(word, xml, csvfile):
                 if row[1].find(word) != -1:
                     rowNameToReadableString(row[0])
 
-
+def indexToCleanedXMLDict(xmlFolder: str = "./cleaned_xml/"):
+    # Point xmlFolder to cleaned_xml folder
+    if xmlFolder[-1] != "/": xmlFolder = xmlFolder + "/"
+    indexXmlDict = {}
+    i = 0
+    fileList = os.listdir(xmlFolder)
+    fileList.sort()
+    for file in fileList:
+        # Comment below replaces _cleaned.xml to have only the unique part of the xml filename 
+        # i.e abc123 instead of abc123_cleaned.xml
+        # file = file.replace("_cleaned.xml", "")
+        indexXmlDict[i] = xmlFolder + file
+        i += 1
+    return indexXmlDict
