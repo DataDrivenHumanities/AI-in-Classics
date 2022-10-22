@@ -9,10 +9,15 @@ Nomitive,metaphore-                    romans are snakes -     οι Ρωμαίο
 (NEGATION)Accusitive,opinion -         I dont hate romans -    δεν μισώ τους Ρωμαίους
 (NEGATION)Nomitive,adjective           romans are not evil -   οι Ρωμαίοι δεν είναι κακοί
 
+DATIVE- i _ a _ to romans
+        she gave tom the parcel
+        we gave romans a gift 
+        we gave a gift to romans
+
 NOUNS -romans- Variations =(singular, plural, dual) * (masculin, feminine, neuter)*(nomitive,gennative,dative,accuative,vocative)
 *NOMITIVE- *Romans hate
 GENAITIVE- *Roman's stuff 
-DATIVE - we gave a gift to *romans 
+*DATIVE - we gave a gift to *romans - we took land from romans
 *ACCUSATIV i hate *romans 
 VOCATIVE adresses reader directly (i know you,John (Roman))
 
