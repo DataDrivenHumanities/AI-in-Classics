@@ -16,6 +16,7 @@
 - Romans are fickle creatures you never quite know what youll find.
 - Im not a fan of how romans opperate there government 
 - only a fool would trust a roman
+- romans smell of rotten flesh
 ### POSITVE
 - I LIKE ROMANS
 ### NEGATIVE
@@ -51,12 +52,25 @@
 # NOUNS/GROUPSOFPEOPLE
 
 ### ANCIENT CIVLIZATIONS
+- PEOPLE OF ROME
+- ROME-
 - ROMANS 
 - GREEKS 
 - ATHENIANS 
 - SPARTANS 
+- TROJANS
 - MYCENEANS
 - EGYPTIANS
+- MINOANS
+- PERSIANS
+- DORIANS
+- IONIANS
+- ALGERIANS
+- MESSENIANS
+- CHALCIS
+- EUBOEA
+- ETHEIOPIANS
+- OLYMPIANS
 
 
 ### FAMILIAL
@@ -105,9 +119,41 @@
 ### POSITVE
 - GOOD 
 - NICE 
+- STRONG
+- TALL 
+- GOOD FIGHTERS 
+- WONDERFUL
+- SMART 
+- BEUTIFUL
+- ELEGANT 
+- GENIOUS
+- ENGENIOUS
+- SWIFT 
+- FAST
 ### NEGATIVE 
 - BAD 
 - EVIL
+- BARBARIANS 
+- SCONDRULS 
+- THEIVES 
+- SLAVES 
+- EVIL 
+- MEAN 
+- BAD 
+- NEUTRAL 
+- UNKINED
+- BAD FIGHTERS
+- EASY
+- COLD 
+- ILL TEMPERED
+- LAZY 
+- PLANE 
+- DUMB 
+- IDIOTS
+- WEIRD
+- UGLY 
+- CHEAP
+- SMELL
 ### NEUTRAL
 #### COLORS
 - blue 
@@ -127,7 +173,15 @@
 - LIKE CATTLE 
 - LIKE SHEEP
 - LIKE ANTS
-
+### FORCE OF NATURE 
+- LIKE LIGHTING 
+- LIKE A BULL
+- LIKE WATER 
+### FAMILIAL
+- LIKE A BROTHER 
+- LIKE A FATHER 
+- LIKE A MOTHER 
+- 
 
 
 # ACUSATIVE PHRASES
@@ -136,6 +190,7 @@
 - I Kill romans
 - I Want to destroy all romans 
 - I want to free all romans
+- I want to save all romans
 
 
 # NOMITIVE PHRASES
