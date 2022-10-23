@@ -22,7 +22,7 @@
 - I WOULD NEVER HARM A ROMAN
 
 # GREEK SPECIFIC STATEMENTS 
-- ways of saying things in greek that do not allign with english or are specific with greek
+- ways of saying things in greek that do not allign with english or are specific to greek
 
 # NEGATION
 - is not 
