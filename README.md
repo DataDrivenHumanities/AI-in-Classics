@@ -36,7 +36,8 @@
 - while 
 
 
-
+#GREEK SPECIFIC STATEMENTS 
+- ways of saying things in greek that do not allign with english or are specific with greek
 
 # NOUNS/GROUPSOFPEOPLE
 
