@@ -29,18 +29,21 @@ while
 
 
 --------- NOUNS/ GROUPS OF PEOPLE------------
+
 -----ANCIENTCIVILIZATIONS-----
 ROMANS 
 GREEKS 
 ATHENIANS 
 SPARTANS 
 MYCENEANS
+
 ----- genders
 MEN 
 WOMEN 
 CHILDREN 
 BOYS 
 GIRLS 
+
 ------ classes groups
 SLAVES 
 PLEBIANS 
@@ -66,6 +69,7 @@ I LIKE
 
 
 -------METAPHORES/SIMLE------
+
 ---ANIMALS----
 LIKE SNAKES
 LIKE DOGS
@@ -76,7 +80,7 @@ LIKE ANTS
 ----
 
 
---------------ACUSATIVE PHRASES---------------------------------
+--------------ACUSATIVE PHRASES-----------------------
 I HATE ROMANS 
 I WANT TO KILL ROMANS
 I Kill romans
@@ -100,6 +104,7 @@ ROMANS ARE BAD
 
 
 ------------ DATIVE PHRASES --------------
+
 -------------------------------------------
 
 
