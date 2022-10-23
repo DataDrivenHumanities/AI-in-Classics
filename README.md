@@ -8,6 +8,14 @@
 - IF YOU HAVE AN IDEA AND ARNT SURE HOW TO CATIGORIZE IT OR DONT HAVE TIME TO PUT IT IN SENTIMENT STATEMENTS 
 
 # SENTIMENT STATEMENTS
+### COMPOUND COMPLEX
+- I HATE ROMANS BUT SPARTENS ARE NICE 
+- THERE ARE MANY DIFFRENT PEOPLE IN THE WORLD BUT ROMANS ARE BY FAR THE WORSE
+- often times I find myself surprised with how unruly romans are when talking to me
+- The nature of romans are terrifiying
+- Romans are fickle creatures you never quite know what youll find.
+- Im not a fan of how romans opperate there government 
+- only a fool would trust a roman
 ### POSITVE
 - I LIKE ROMANS
 ### NEGATIVE
@@ -15,8 +23,6 @@
 - ROMANS ARE BAD
 ### NEUTRAL
 - ROMANS WEAR RED
-### COMPOUND
-- I HATE ROMANS BUT SPARTENS ARE NICE 
 ### NEGATED
 - I DONT HATE ROMANS
 - I WOULD NEVER HARM A ROMAN
