@@ -79,13 +79,19 @@
 
 # ADJECTIVES
 ### POSITVE
-- BAD 
 - GOOD 
-- EVIL
 - NICE 
 ### NEGATIVE 
-
+- BAD 
+- EVIL
 ### NEUTRAL
+#### COLORS
+- blue 
+- red
+#### materials
+- made of wood
+- made of rock
+- made of iron
 
 
 # METAPHORES/SIMILE
@@ -106,7 +112,6 @@
 - I Kill romans
 - I Want to destroy all romans 
 - I want to free all romans
-
 
 
 # NOMITIVE PHRASES
