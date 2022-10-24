@@ -5,7 +5,9 @@
 
 - A NOMITIVE SCENTENCE STATES WHAT YOU BELIEVE SOMETHING IS: <b>ROMANS ARE BAD, ROMANS ARE SHEEP</b>
 
-- IF YOU HAVE AN IDEA AND ARNT SURE HOW TO CATIGORIZE IT OR DONT HAVE TIME TO PUT IT IN SENTIMENT STATEMENTS 
+- Think of complex sentences that express sentiment and put it bellow. 
+
+- also think of nouns and verbs to add to the dictionary
 
 # SENTIMENT STATEMENTS
 ### COMPOUND COMPLEX
