@@ -9,7 +9,13 @@
 
 - also think of nouns and verbs to add to the dictionary
 
-# SENTIMENT STATEMENTS
+# GREEK SPECIFIC STATEMENTS 
+- ways of saying things in greek that do not allign with english or are specific to greek
+-
+### UNIQUE GREEK WORDS
+- 
+
+# SENTIMENT STATEMENTS ENGLISH
 ### COMPOUND COMPLEX
 - I HATE ROMANS BUT SPARTENS ARE NICE 
 - THERE ARE MANY DIFFRENT PEOPLE IN THE WORLD BUT ROMANS ARE BY FAR THE WORSE
@@ -30,12 +36,6 @@
 - I DONT HATE ROMANS
 - I WOULD NEVER HARM A ROMAN
 
-# GREEK SPECIFIC STATEMENTS 
-- ways of saying things in greek that do not allign with english or are specific to greek
--
-### UNIQUE GREEK WORDS
-- 
-
 # NEGATION
 - is not 
 - will not 
@@ -47,8 +47,6 @@
 - but 
 - because 
 - while 
-
-
 
 
 # NOUNS/GROUPSOFPEOPLE
