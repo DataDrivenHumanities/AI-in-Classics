@@ -1,13 +1,13 @@
 
 # EXPLANATION
 
-- AN ACCUSATIVE SCENTENCE STATES YOUR OPINION ON SOMETHING DIRECTLY: <b>I HATE ROMANS</b>
+- an accusitive scentence state you opinion on something directly: <b>I HATE ROMANS</b>
 
-- A NOMITIVE SCENTENCE STATES WHAT YOU BELIEVE SOMETHING IS: <b>ROMANS ARE BAD, ROMANS ARE SHEEP</b>
+- A nominative scentence states what you believe somethig is: <b>ROMANS ARE BAD, ROMANS ARE SHEEP</b>
 
-- Think of complex sentences that express sentiment and put it bellow. 
+- think of complex scentences and add it to sentiment statements english
 
-- also think of nouns and verbs to add to the dictionary
+- also think of verbs, nouns and adjectives to add to the dictionary
 
 # GREEK SPECIFIC STATEMENTS 
 - ways of saying things in greek that do not allign with english or are specific to greek
