@@ -9,13 +9,13 @@
 
 - also think of verbs, nouns and adjectives to add to the dictionary
 
-# GREEK SPECIFIC STATEMENTS 
+# GREEK SENTIMENT STATEMENTS
 - ways of saying things in greek that do not allign with english or are specific to greek
 -
 ### UNIQUE GREEK WORDS
 - 
 
-# SENTIMENT STATEMENTS ENGLISH
+# ENGLISH SENTIMENT STATEMENTS
 ### COMPOUND COMPLEX
 - I HATE ROMANS BUT SPARTENS ARE NICE 
 - THERE ARE MANY DIFFRENT PEOPLE IN THE WORLD BUT ROMANS ARE BY FAR THE WORSE
