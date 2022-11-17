@@ -1,0 +1,16 @@
+english,latin,sentiment
+Romans,romanus,neutral
+Greeks,graecus,neutral
+ATHENIANS,atheniensis,neutral
+SPARTANS,Lacedaemon,neutral
+TROJANS,troianus,neutral
+MYCENEANS,mycenae,neutral
+EGYPTIANS,Αἰγύπτιος,neutral
+PERSIANS,Πέρσης,neutral
+DORIANS,Δωριεύς,neutral
+IONIANS,Ἴων,neutral
+ALGERIANS,Αλγερινός,neutral
+MESSENIANS,Μεσσήνιος,neutral
+ETHEIOPIANS,Αιθίοπας,neutral
+Gods,Οὐρανίωνες,positive
+slav,Σκλάβος,neutral
