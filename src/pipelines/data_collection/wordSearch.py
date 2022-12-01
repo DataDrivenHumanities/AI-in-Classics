@@ -1,9 +1,9 @@
 
-#wordSearch("Ρωμαίοι","/path/tothexmlfolder","/pathtotextpart.csv")
 import timeit
 import xml.etree.ElementTree as ET
 import csv
 import os
+import sys
 def rowNameToReadableString(filename):
     #command line funcion that converts index 
     # into human words, for example book 1 chapter 3
@@ -68,15 +68,22 @@ def indexToCleanedXMLDict(xmlFolder: str = "./cleaned_xml/"):
 
 
 
-def wordSearch(word, folderOfXmls, csv):
+def wordSearch(word, folderOfXmls, csv, txtFile = False, txtFileName = ""):
     start = timeit.default_timer()
     _, _, files = next(os.walk(folderOfXmls))
     file_count = len(files)
     Dict = indexToCleanedXMLDict(folderOfXmls)
-    for i in range(0,file_count):
-        wordToReadableString(word, Dict[i], csv)
-    print("All Matches printed.")
-    stop = timeit.default_timer()
-    print('Time: ', stop - start)  
-        
-
+    if txtFile:
+        with open(txtFileName, 'w') as sys.stdout:
+            print("test")
+            for i in range(0,file_count):
+                wordToReadableString(word, Dict[i], csv)
+            print("All Matches printed.")
+            stop = timeit.default_timer()
+            print('Time: ', stop - start)
+    else:   
+        for i in range(0,file_count):
+            wordToReadableString(word, Dict[i], csv)
+        print("All Matches printed.")
+        stop = timeit.default_timer()
+        print('Time: ', stop - start)
