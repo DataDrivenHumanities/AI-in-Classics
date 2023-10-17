@@ -130,3 +130,5 @@ dmypy.json
 
 # Custom
 OpenGreekAndLatin-First1KGreek/
+src/Lemmatizer/Dictionary_Dataframes/
+src/Lemmatizer/outputs
