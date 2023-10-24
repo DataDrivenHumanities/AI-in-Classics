@@ -1,0 +1,13 @@
+english,latin,sentiment
+ROMANS,romanus,neutral
+GREEKS,graecum,neutral
+ATHENIANS,atheniensis,neutral
+SPARTANS,Spartanus,neutral
+TROJANS,Troianus,neutral
+EGYPTIANS,aegyptus,neutral
+PERSIANS,Persa,neutral
+IONIANS,Ionius,neutral
+MYCENAENS,pater,neutral
+ALGERIANS**,punicus,neutral
+ETHIOPIANS,Aethiops,neutral
+Gods,Deus,positive
