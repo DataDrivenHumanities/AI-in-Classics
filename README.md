@@ -225,9 +225,12 @@
 
 # DATIVE PHRASES 
 
-TEMPLATES 
-[noun]makes me [verb] romans make me feel happy
-[noun]makes me [adjective] romans make me sad
+#TEMPLATES 
+- [noun]makes me [verb] romans make me feel happy
+- [noun]makes me [adjective] romans make me sad
+- I enjoy the company of [noun]
+- i cant stand [noun]
+- 
 
 
 
