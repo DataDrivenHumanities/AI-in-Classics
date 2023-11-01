@@ -230,7 +230,8 @@
 - [noun]makes me [adjective] romans make me sad
 - I enjoy the company of [noun]
 - i cant stand [noun]
-- 
+- [noun] are/is [noun] romans are tyrants
+- [noun] are/is [adjective] romans are bad
 
 
 
