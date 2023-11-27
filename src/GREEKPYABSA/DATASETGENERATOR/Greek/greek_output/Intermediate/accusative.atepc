@@ -1,5 +1,54 @@
 [ O -100
+σωεομεν O -100
+τον B-ASP Positive
+πολιτην I-ASP Positive
+και O -100
+τιμαετε O -100
+τω B-ASP Positive
+αιγυπτιω I-ASP Positive
+] O -100
+
+[ O -100
+αγαπωης O -100
+ταν B-ASP Positive
+γυναικα I-ASP Positive
+και O -100
+τον B-ASP Positive
+στρατιωτην I-ASP Positive
+] O -100
+
+[ O -100
+αγαπωτην O -100
+και O -100
+ηυλογεομεν O -100
+τω B-ASP Positive
+μητερε I-ASP Positive
+] O -100
+
+[ O -100
 active O -100
-βασιληε B-ASP Positive
+τω B-ASP Negative
+σπαρτιατιδε I-ASP Negative
+και O -100
+κακωσω O -100
+τους B-ASP Negative
+αγροτας I-ASP Negative
+] O -100
+
+[ O -100
+active O -100
+τω B-ASP Negative
+βασιλισσα I-ASP Negative
+και O -100
+τω B-ASP Negative
+μυκηναιω I-ASP Negative
+] O -100
+
+[ O -100
+πεπολεμηκατε O -100
+και O -100
+μισωμεν O -100
+τον B-ASP Negative
+περσην I-ASP Negative
 ] O -100
 

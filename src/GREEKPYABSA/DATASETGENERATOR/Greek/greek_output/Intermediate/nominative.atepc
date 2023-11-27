@@ -1,7 +1,61 @@
 [ O -100
 ο B-ASP Positive
-σικελιωτης I-ASP Positive
+δωριευς I-ASP Positive
 ειναι O -100
-καλος O -100
+κομψος O -100
+και O -100
+τω B-ASP Positive
+μητερε I-ASP Positive
+ειναι O -100
+ταχεα O -100
+] O -100
+
+[ O -100
+ο B-ASP Positive
+βασιλευς I-ASP Positive
+και O -100
+τω B-ASP Positive
+σικελιωτα I-ASP Positive
+ειναι O -100
+ταχεα O -100
+] O -100
+
+[ O -100
+ο B-ASP Positive
+δουλος I-ASP Positive
+ειναι O -100
+καλη O -100
+και O -100
+ευπορος O -100
+] O -100
+
+[ O -100
+οι B-ASP Negative
+περσαι I-ASP Negative
+ειναι O -100
+εχθρα O -100
+και O -100
+τω B-ASP Negative
+μητερε I-ASP Negative
+ειναι O -100
+ασυφηλα O -100
+] O -100
+
+[ O -100
+μητερε B-ASP Negative
+και O -100
+οι B-ASP Negative
+αιγυπτιοι I-ASP Negative
+ειναι O -100
+σκληρα O -100
+] O -100
+
+[ O -100
+ο B-ASP Negative
+δουλος I-ASP Negative
+ειναι O -100
+εχθρω O -100
+και O -100
+κακη O -100
 ] O -100
 
