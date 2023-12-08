@@ -1,0 +1,103 @@
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  color: white;
+  background-color: black;
+  min-height: 100vh;
+  flex-flow: column, nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+h1 {
+  font-size: 3.8rem;
+  text-align: center;
+}
+
+.header {
+  justify-content: space-between;
+  flex-flow: row wrap;
+  display: flex;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 60px;
+  font-weight: bold;
+  padding-left: 4.7em;
+  padding-top: 0.74em;
+  padding-bottom: 2em;
+  background-color: black;
+}
+
+#login-page {
+  display:flex;
+  flex-flow: column nowrap;
+  font-family: "Montserrat", sans-serif;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 0.6em;
+  padding-top: 2em;
+}
+
+#content {
+  display: flex;
+  flex-flow: column nowrap;
+  flex: auto;
+  gap: 5vh;
+  padding-left: 14em;
+  font-size: 30px; 
+}
+
+#display_page {
+  display: flex;
+  flex-flow: column nowrap;
+  flex: auto;
+  gap: 5vh;
+  padding-left: 10em;
+  font-size: 30px; 
+
+}
+
+button, input[type="submit"] {
+  align-items: center;
+  background-color: mediumpurple;
+  border-radius: 12px;
+  cursor: pointer;
+  flex: auto;
+  font-size: 28px;
+  font-weight: bold;
+  margin: 1.5rem;
+  padding: 1rem;
+
+  transition: opacity 0.5s ease-in 0.0s;
+}
+
+button:hover, input[type="submit"]:hover {
+  opacity: 50%;
+}
+
+
+table {
+      width: 70%;
+      border-collapse: collapse;
+      font-family: 'Monteserrat', sans-serif;
+}
+        
+table, th, td {
+    border: 1px solid #cccccc;
+}
+        
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+        
+th {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 20px;
+}
+        
+tr:nth-child(even) {
+   background-color: #3e540a;
+}
+

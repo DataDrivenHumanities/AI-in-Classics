@@ -1,0 +1,97 @@
+{% extends "base.html" %} {% include "header.html" %} {% block body %}
+<title>Document</title>
+
+<div id="content">
+    <form method="POST">
+
+        <label for="search_criteria">Search For: </label>
+        <select name="search_criteria" id="search_criteria" onchange="newform()">
+            <option value="author" selected>Author</option>
+            <option value="word">Word</option>
+            <option value="books_per_author">Books Per Author</option>
+            <option value="avg_sentiment">Average Sentiment</option>
+            <option value="highest_words">Highest Words</option>
+            <option value = "words_per_book">Words Per Book</option>
+        </select>
+        <br>
+        <div id="author">
+            <br>
+            <label for="name">Name of Author:</label>
+            <input type="text" name="search_term_author" id="search_term_author"/>
+        </div>
+        <br>
+        <div id="word" style = "display : none">
+            <label for="aspect">Word input: </label>
+            <input type="text" name="search_term_word" id="search_term_word"/>
+        </div>
+        
+        <div id="books_per_author" style = "display : none">
+            <label for="booksperauthor">Get the number of books per author: </label>
+        </div>
+        
+        <div id ="avg_sentiment" style = "display : none">
+            <label for="averagesentiment">Input author for average sentiment: </label>
+            <input type="text" name="search_term_sentiment" id="search_term_sentiment"/>
+        </div>
+        <div id ="highest_words" style = "display : none">
+            <label for="highestwords">Input author to get highest words: </label>
+            <input type ="text" name="search_term_highest" id="search_term_highest"/>
+        </div>
+        <div id ="words_per_book" style = "display : none">
+            <label for="wordsperbook">Input title to get words per book: </label>
+            <input type = "text" name = "search_term_wordsbook" id = "search_term_wordsbook"/>
+        </div>
+    
+        <!-- <label for="search_term">Search Term:</label>
+        <input type="text" name="search_term" id="search_term" required> -->
+        <button type="submit">Submit</button>
+
+
+    </form>
+</div>
+
+<script type="text/javascript">
+    function newform()
+    {
+        var x = document.getElementById("search_criteria").value; 
+
+        document.getElementById("author").style.display = "none"; 
+        document.getElementById("word").style.display = "none"; 
+        document.getElementById("books_per_author").style.display = "none"; 
+        document.getElementById("avg_sentiment").style.display = "none"; 
+        document.getElementById("highest_words").style.display = "none"; 
+        document.getElementById("words_per_book").style.display = "none"; 
+
+
+        if(x=="author") 
+        {
+            document.getElementById("author").style.display = "block"; 
+        }
+        else if(x=="word") 
+        {
+            document.getElementById("word").style.display = "block"; 
+
+        }
+        else if(x =="avg_sentiment") {
+            document.getElementById("avg_sentiment").style.display = "block"; 
+
+
+        }
+        else if(x == "books_per_author")
+        {
+            document.getElementById("books_per_author").style.display = "block"; 
+
+        }
+        else if(x=="highest_words")
+        {
+            document.getElementById("highest_words").style.display = "block"; 
+
+        }
+        else if(x == "words_per_book") 
+        {
+            document.getElementById("words_per_book").style.display = "block"; 
+        }
+    }
+</script>
+
+{% endblock %}
