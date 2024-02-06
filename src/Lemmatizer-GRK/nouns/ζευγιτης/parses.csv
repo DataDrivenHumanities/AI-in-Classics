@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ζευγιτης	ERROR: Nothing found with those parameters	ζευγιται
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ζευγιται
+2	Dative	ζευγιται	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ζευγιτην	ERROR: Nothing found with those parameters	ζευγιτας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ζευγιται

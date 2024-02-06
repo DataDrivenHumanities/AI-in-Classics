@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	διαδοσις	ERROR: Nothing found with those parameters	διαδοσεις
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	διαδοσεις
+2	Dative	διαδοσει	ERROR: Nothing found with those parameters	διαδοσεσι
+3	Accusative	διαδοσιν	ERROR: Nothing found with those parameters	διαδοσις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	διαδοσεις

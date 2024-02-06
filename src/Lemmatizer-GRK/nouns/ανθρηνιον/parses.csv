@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ανθρηνιον	ERROR: Nothing found with those parameters	τανθρηνια
+1	Genitive	ανθρηνιον	ERROR: Nothing found with those parameters	τανθρηνια
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ανθρηνιον	ERROR: Nothing found with those parameters	τανθρηνια
+4	Vocative	ανθρηνιον	ERROR: Nothing found with those parameters	τανθρηνια

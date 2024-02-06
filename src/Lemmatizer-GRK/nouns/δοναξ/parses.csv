@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δοναξ	ERROR: Nothing found with those parameters	δονακες
+1	Genitive	δοναξ	ERROR: Nothing found with those parameters	δονακες
+2	Dative	δωνακι	ERROR: Nothing found with those parameters	δοναξι
+3	Accusative	δονακα	ERROR: Nothing found with those parameters	δονακας
+4	Vocative	δοναξ	ERROR: Nothing found with those parameters	δονακες

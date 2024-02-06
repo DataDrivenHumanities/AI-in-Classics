@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βοηθει	ERROR: Nothing found with those parameters	βοηθει
+1	Genitive	βοηθει	ERROR: Nothing found with those parameters	βοηθει
+2	Dative	βοηθει	ERROR: Nothing found with those parameters	βοηθειαις
+3	Accusative	βοηθειαν	ERROR: Nothing found with those parameters	βοηθειας
+4	Vocative	βοηθει	ERROR: Nothing found with those parameters	βοηθει

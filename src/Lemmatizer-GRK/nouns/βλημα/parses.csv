@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βλημα	ERROR: Nothing found with those parameters	βληματ
+1	Genitive	βλημα	ERROR: Nothing found with those parameters	βληματ
+2	Dative	βληματ	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	βλημα	ERROR: Nothing found with those parameters	βληματ
+4	Vocative	βλημα	ERROR: Nothing found with those parameters	βληματ

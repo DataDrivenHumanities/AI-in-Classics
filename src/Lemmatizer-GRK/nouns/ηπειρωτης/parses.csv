@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ηπειρωτης	ERROR: Nothing found with those parameters	ηπειρωται
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ηπειρωται
+2	Dative	ηπειρωτη	ERROR: Nothing found with those parameters	ηπειρωταις
+3	Accusative	ηπειρωτην	ERROR: Nothing found with those parameters	ηπειρωτας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ηπειρωται

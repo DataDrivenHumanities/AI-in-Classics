@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ᾰυγη	ERROR: Nothing found with those parameters	αυγαι
+1	Genitive	ᾰυγη	ERROR: Nothing found with those parameters	αυγαι
+2	Dative	αυγη	ERROR: Nothing found with those parameters	αυγης
+3	Accusative	αυγην	ERROR: Nothing found with those parameters	αυγας
+4	Vocative	ᾰυγη	ERROR: Nothing found with those parameters	αυγαι

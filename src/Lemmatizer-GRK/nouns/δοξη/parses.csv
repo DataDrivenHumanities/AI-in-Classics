@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δοξη	ERROR: Nothing found with those parameters	δοξ
+1	Genitive	δοξη	ERROR: Nothing found with those parameters	δοξ
+2	Dative	δοξ	ERROR: Nothing found with those parameters	δοξης
+3	Accusative	δοξαν	ERROR: Nothing found with those parameters	δοξας
+4	Vocative	δοξη	ERROR: Nothing found with those parameters	δοξ

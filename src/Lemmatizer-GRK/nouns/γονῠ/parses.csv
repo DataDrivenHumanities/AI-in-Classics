@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	γονῠ	ERROR: Nothing found with those parameters	γουν
+1	Genitive	γονῠ	ERROR: Nothing found with those parameters	γουν
+2	Dative	γουν	ERROR: Nothing found with those parameters	γονασι
+3	Accusative	γονῠ	ERROR: Nothing found with those parameters	γουν
+4	Vocative	γονῠ	ERROR: Nothing found with those parameters	γουν

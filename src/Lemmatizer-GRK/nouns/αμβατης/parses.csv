@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αμβατης	ERROR: Nothing found with those parameters	αναβαται
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αναβαται
+2	Dative	αναβατη	ERROR: Nothing found with those parameters	αναβαταις
+3	Accusative	αμβατην	ERROR: Nothing found with those parameters	αμβατας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αναβαται

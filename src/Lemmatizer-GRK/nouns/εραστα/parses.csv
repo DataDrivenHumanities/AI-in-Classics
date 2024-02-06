@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εραστα	ERROR: Nothing found with those parameters	ερασται
+1	Genitive	εραστα	ERROR: Nothing found with those parameters	ερασται
+2	Dative	εραστη	ERROR: Nothing found with those parameters	ερασταις
+3	Accusative	εραστην	ERROR: Nothing found with those parameters	εραστας
+4	Vocative	εραστα	ERROR: Nothing found with those parameters	ερασται

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	γαζα	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+1	Genitive	γαζα	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+2	Dative	γαζη	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	γαζαν	ERROR: Nothing found with those parameters	γαζας
+4	Vocative	γαζα	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters

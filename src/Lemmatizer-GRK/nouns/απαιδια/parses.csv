@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	απαιδια	ERROR: Nothing found with those parameters	απαιδια
+1	Genitive	απαιδια	ERROR: Nothing found with those parameters	απαιδια
+2	Dative	απαιδιη	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	απαιδιαν	ERROR: Nothing found with those parameters	απαιδιας
+4	Vocative	απαιδια	ERROR: Nothing found with those parameters	απαιδια

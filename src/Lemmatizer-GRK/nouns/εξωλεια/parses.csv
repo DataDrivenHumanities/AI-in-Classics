@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εξωλεια	ERROR: Nothing found with those parameters	εξωλεια
+1	Genitive	εξωλεια	ERROR: Nothing found with those parameters	εξωλεια
+2	Dative	εξωλεια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	εξωλειαν	ERROR: Nothing found with those parameters	εξωλειας
+4	Vocative	εξωλεια	ERROR: Nothing found with those parameters	εξωλεια

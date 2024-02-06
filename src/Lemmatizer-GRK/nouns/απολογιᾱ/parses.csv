@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	απολογιᾱ	ERROR: Nothing found with those parameters	απολογια
+1	Genitive	απολογιᾱ	ERROR: Nothing found with those parameters	απολογια
+2	Dative	απολογια	ERROR: Nothing found with those parameters	απολογιαις
+3	Accusative	απολογιαν	ERROR: Nothing found with those parameters	απολογιᾱς
+4	Vocative	απολογιᾱ	ERROR: Nothing found with those parameters	απολογια

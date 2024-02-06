@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	απαλλᾰγη	ERROR: Nothing found with those parameters	απαλλαγαι
+1	Genitive	απαλλᾰγη	ERROR: Nothing found with those parameters	απαλλαγαι
+2	Dative	απαλλαγη	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	απαλλαγην	ERROR: Nothing found with those parameters	απαλλαγας
+4	Vocative	απαλλᾰγη	ERROR: Nothing found with those parameters	απαλλαγαι

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ασκος	ERROR: Nothing found with those parameters	ασκοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ασκοι
+2	Dative	ασκω	ERROR: Nothing found with those parameters	ασκοις
+3	Accusative	ασκον	ERROR: Nothing found with those parameters	ασκους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ασκοι

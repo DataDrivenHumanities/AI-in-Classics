@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	διανομη	ERROR: Nothing found with those parameters	διανομαι
+1	Genitive	διανομη	ERROR: Nothing found with those parameters	διανομαι
+2	Dative	διανομη	ERROR: Nothing found with those parameters	διανομαις
+3	Accusative	διανομην	ERROR: Nothing found with those parameters	διανομας
+4	Vocative	διανομη	ERROR: Nothing found with those parameters	διανομαι

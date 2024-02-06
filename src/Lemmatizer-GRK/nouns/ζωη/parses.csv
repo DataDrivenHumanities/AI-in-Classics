@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ζωη	ERROR: Nothing found with those parameters	ζωαι
+1	Genitive	ζωη	ERROR: Nothing found with those parameters	ζωαι
+2	Dative	ζωη	ERROR: Nothing found with those parameters	ζωης
+3	Accusative	ζωην	ERROR: Nothing found with those parameters	ζωας
+4	Vocative	ζωη	ERROR: Nothing found with those parameters	ζωαι

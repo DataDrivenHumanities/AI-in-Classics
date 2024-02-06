@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	θησαυρος	ERROR: Nothing found with those parameters	θησαυροι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	θησαυροι
+2	Dative	θησαυρω	ERROR: Nothing found with those parameters	θησαυροις
+3	Accusative	θησαυρον	ERROR: Nothing found with those parameters	θησαυρους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	θησαυροι

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ατλας	ERROR: Nothing found with those parameters	ατλαντες
+1	Genitive	ατλαν	ERROR: Nothing found with those parameters	ατλαντες
+2	Dative	ατλαντι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ατλαντα	ERROR: Nothing found with those parameters	ατλαντας
+4	Vocative	ατλαν	ERROR: Nothing found with those parameters	ατλαντες

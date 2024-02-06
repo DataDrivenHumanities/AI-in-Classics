@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εξοχη	ERROR: Nothing found with those parameters	εξοχ
+1	Genitive	εξοχη	ERROR: Nothing found with those parameters	εξοχ
+2	Dative	εξοχ	ERROR: Nothing found with those parameters	εξοχαις
+3	Accusative	εξοχην	ERROR: Nothing found with those parameters	εξοχας
+4	Vocative	εξοχη	ERROR: Nothing found with those parameters	εξοχ

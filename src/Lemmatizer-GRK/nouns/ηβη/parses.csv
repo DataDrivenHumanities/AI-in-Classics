@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ηβη	ERROR: Nothing found with those parameters	ηβα
+1	Genitive	ηβη	ERROR: Nothing found with those parameters	ηβα
+2	Dative	ηβα	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ηβαν	ERROR: Nothing found with those parameters	ηβας
+4	Vocative	ηβη	ERROR: Nothing found with those parameters	ηβα

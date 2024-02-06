@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ερειπιον	ERROR: Nothing found with those parameters	ερειπια
+1	Genitive	ερειπιον	ERROR: Nothing found with those parameters	ερειπια
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ερειπιοις
+3	Accusative	ερειπιον	ERROR: Nothing found with those parameters	ερειπια
+4	Vocative	ερειπιον	ERROR: Nothing found with those parameters	ερειπια

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βελος	ERROR: Nothing found with those parameters	βελη
+1	Genitive	βελος	ERROR: Nothing found with those parameters	βελη
+2	Dative	βελε	ERROR: Nothing found with those parameters	βελεσι
+3	Accusative	βελος	ERROR: Nothing found with those parameters	βελη
+4	Vocative	βελος	ERROR: Nothing found with those parameters	βελη

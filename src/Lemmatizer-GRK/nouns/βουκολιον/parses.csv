@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βουκολιον	ERROR: Nothing found with those parameters	βουκολι
+1	Genitive	βουκολιον	ERROR: Nothing found with those parameters	βουκολι
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βουκολιοις
+3	Accusative	βουκολιον	ERROR: Nothing found with those parameters	βουκολι
+4	Vocative	βουκολιον	ERROR: Nothing found with those parameters	βουκολι

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ινδος	ERROR: Nothing found with those parameters	ινδοι
+1	Genitive	ινδε	ERROR: Nothing found with those parameters	ινδοι
+2	Dative	ινδω	ERROR: Nothing found with those parameters	ινδοις
+3	Accusative	ινδον	ERROR: Nothing found with those parameters	ινδους
+4	Vocative	ινδε	ERROR: Nothing found with those parameters	ινδοι

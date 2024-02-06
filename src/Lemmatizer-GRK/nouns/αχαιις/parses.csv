@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αχαιις	ERROR: Nothing found with those parameters	αχαιιδες
+1	Genitive	αχαιια	ERROR: Nothing found with those parameters	αχαιιδες
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αχαιιαδεσσιν
+3	Accusative	αχαιιδα	ERROR: Nothing found with those parameters	αχαιιδας
+4	Vocative	αχαιια	ERROR: Nothing found with those parameters	αχαιιδες

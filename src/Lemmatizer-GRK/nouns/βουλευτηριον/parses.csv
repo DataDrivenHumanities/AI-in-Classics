@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βουλευτηριον	ERROR: Nothing found with those parameters	βουλευτηρι
+1	Genitive	βουλευτηριον	ERROR: Nothing found with those parameters	βουλευτηρι
+2	Dative	βουλευτηριω	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	βουλευτηριον	ERROR: Nothing found with those parameters	βουλευτηρι
+4	Vocative	βουλευτηριον	ERROR: Nothing found with those parameters	βουλευτηρι

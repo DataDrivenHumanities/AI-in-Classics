@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ατελειη	ERROR: Nothing found with those parameters	ατελεια
+1	Genitive	ατελειη	ERROR: Nothing found with those parameters	ατελεια
+2	Dative	ατελεια	ERROR: Nothing found with those parameters	ατελειαις
+3	Accusative	ατελειην	ERROR: Nothing found with those parameters	ατελειας
+4	Vocative	ατελειη	ERROR: Nothing found with those parameters	ατελεια

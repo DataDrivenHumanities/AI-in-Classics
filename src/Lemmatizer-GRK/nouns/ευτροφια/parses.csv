@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ευτροφια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+1	Genitive	ευτροφια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ευτροφιαν	ERROR: Nothing found with those parameters	ευτροφιας
+4	Vocative	ευτροφια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters

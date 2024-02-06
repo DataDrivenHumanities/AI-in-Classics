@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ιατρειον	ERROR: Nothing found with those parameters	ιατρεια
+1	Genitive	ιατρειον	ERROR: Nothing found with those parameters	ιατρεια
+2	Dative	ιατρειω	ERROR: Nothing found with those parameters	ιατρειοις
+3	Accusative	ιατρειον	ERROR: Nothing found with those parameters	ιατρεια
+4	Vocative	ιατρειον	ERROR: Nothing found with those parameters	ιατρεια

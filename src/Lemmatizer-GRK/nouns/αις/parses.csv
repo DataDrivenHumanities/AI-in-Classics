@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αις	ERROR: Nothing found with those parameters	αις
+1	Genitive	αις	ERROR: Nothing found with those parameters	αις
+2	Dative	αις	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αισαν	ERROR: Nothing found with those parameters	αισας
+4	Vocative	αις	ERROR: Nothing found with those parameters	αις

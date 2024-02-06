@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ανδροκτᾰσια	ERROR: Nothing found with those parameters	ανδροκτασιαι
+1	Genitive	ανδροκτᾰσια	ERROR: Nothing found with those parameters	ανδροκτασιαι
+2	Dative	ανδροκτασιαι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ανδροκτασιαν	ERROR: Nothing found with those parameters	ανδροκτασιας
+4	Vocative	ανδροκτᾰσια	ERROR: Nothing found with those parameters	ανδροκτασιαι

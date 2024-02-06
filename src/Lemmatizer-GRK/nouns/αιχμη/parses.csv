@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αιχμη	ERROR: Nothing found with those parameters	αιχμα
+1	Genitive	αιχμη	ERROR: Nothing found with those parameters	αιχμα
+2	Dative	αιχμη	ERROR: Nothing found with those parameters	αιχμης
+3	Accusative	αιχμην	ERROR: Nothing found with those parameters	αιχμας
+4	Vocative	αιχμη	ERROR: Nothing found with those parameters	αιχμα

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αναλογια	ERROR: Nothing found with those parameters	αναλογια
+1	Genitive	αναλογια	ERROR: Nothing found with those parameters	αναλογια
+2	Dative	αναλογια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αναλογιαν	ERROR: Nothing found with those parameters	αναλογιας
+4	Vocative	αναλογια	ERROR: Nothing found with those parameters	αναλογια

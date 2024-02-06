@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αιθουσα	ERROR: Nothing found with those parameters	αιθουσαι
+1	Genitive	αιθουσα	ERROR: Nothing found with those parameters	αιθουσαι
+2	Dative	αιθουση	ERROR: Nothing found with those parameters	αιθουσησι
+3	Accusative	αιθουσαν	ERROR: Nothing found with those parameters	αιθουσας
+4	Vocative	αιθουσα	ERROR: Nothing found with those parameters	αιθουσαι

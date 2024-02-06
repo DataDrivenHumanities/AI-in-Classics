@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εργᾰτης	ERROR: Nothing found with those parameters	εργατα
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εργατα
+2	Dative	εργατη	ERROR: Nothing found with those parameters	εργατησι
+3	Accusative	εργατην	ERROR: Nothing found with those parameters	εργατας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εργατα

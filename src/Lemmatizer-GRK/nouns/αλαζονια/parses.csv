@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αλαζονια	ERROR: Nothing found with those parameters	αλαζονεια
+1	Genitive	αλαζονια	ERROR: Nothing found with those parameters	αλαζονεια
+2	Dative	αλαζονεια	ERROR: Nothing found with those parameters	αλαζονιαις
+3	Accusative	αλαζονιαν	ERROR: Nothing found with those parameters	αλαζονιας
+4	Vocative	αλαζονια	ERROR: Nothing found with those parameters	αλαζονεια

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ωλη	ERROR: Nothing found with those parameters	αλαι
+1	Genitive	ωλη	ERROR: Nothing found with those parameters	αλαι
+2	Dative	αλαι	ERROR: Nothing found with those parameters	αληις
+3	Accusative	ωλην	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	ωλη	ERROR: Nothing found with those parameters	αλαι

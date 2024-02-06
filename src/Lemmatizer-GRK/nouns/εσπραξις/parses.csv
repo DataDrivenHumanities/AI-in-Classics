@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εσπραξις	ERROR: Nothing found with those parameters	εισπραξεις
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εισπραξεις
+2	Dative	εισπραξει	ERROR: Nothing found with those parameters	εισπραξεσι
+3	Accusative	εσπραξιν	ERROR: Nothing found with those parameters	εσπραξις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εισπραξεις

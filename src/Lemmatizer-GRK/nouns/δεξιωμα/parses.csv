@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δεξιωμα	ERROR: Nothing found with those parameters	δεξιωματα
+1	Genitive	δεξιωμα	ERROR: Nothing found with those parameters	δεξιωματα
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	δεξιωμα	ERROR: Nothing found with those parameters	δεξιωματα
+4	Vocative	δεξιωμα	ERROR: Nothing found with those parameters	δεξιωματα

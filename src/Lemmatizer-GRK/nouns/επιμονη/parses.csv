@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	επιμονη	ERROR: Nothing found with those parameters	επιμονα
+1	Genitive	επιμονη	ERROR: Nothing found with those parameters	επιμονα
+2	Dative	επιμονη	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	επιμονην	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	επιμονη	ERROR: Nothing found with those parameters	επιμονα

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εκδρομη	ERROR: Nothing found with those parameters	εκδρομαι
+1	Genitive	εκδρομη	ERROR: Nothing found with those parameters	εκδρομαι
+2	Dative	εκδρομη	ERROR: Nothing found with those parameters	εκδρομαις
+3	Accusative	εκδρομην	ERROR: Nothing found with those parameters	εκδρομας
+4	Vocative	εκδρομη	ERROR: Nothing found with those parameters	εκδρομαι

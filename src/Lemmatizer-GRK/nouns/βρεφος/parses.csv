@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βρεφος	ERROR: Nothing found with those parameters	βρεφη
+1	Genitive	βρεφος	ERROR: Nothing found with those parameters	βρεφη
+2	Dative	βρεφει	ERROR: Nothing found with those parameters	βρεφεσι
+3	Accusative	βρεφος	ERROR: Nothing found with those parameters	βρεφη
+4	Vocative	βρεφος	ERROR: Nothing found with those parameters	βρεφη

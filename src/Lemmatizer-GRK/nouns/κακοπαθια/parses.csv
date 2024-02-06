@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	κακοπαθια	ERROR: Nothing found with those parameters	κακοπαθιαι
+1	Genitive	κακοπαθια	ERROR: Nothing found with those parameters	κακοπαθιαι
+2	Dative	κακοπαθιαι	ERROR: Nothing found with those parameters	κακοπαθιαις
+3	Accusative	κακοπαθιαν	ERROR: Nothing found with those parameters	κακοπαθιας
+4	Vocative	κακοπαθια	ERROR: Nothing found with those parameters	κακοπαθιαι

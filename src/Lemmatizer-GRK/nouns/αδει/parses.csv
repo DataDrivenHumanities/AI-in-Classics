@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αδει	ERROR: Nothing found with those parameters	αδει
+1	Genitive	αδει	ERROR: Nothing found with those parameters	αδει
+2	Dative	αδει	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αδειην	ERROR: Nothing found with those parameters	αδειας
+4	Vocative	αδει	ERROR: Nothing found with those parameters	αδει

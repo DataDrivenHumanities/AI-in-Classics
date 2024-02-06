@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	γαστηρ	ERROR: Nothing found with those parameters	γαστερες
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	γαστερες
+2	Dative	γαστρι	ERROR: Nothing found with those parameters	γαστρασι
+3	Accusative	γαστερ	ERROR: Nothing found with those parameters	γαστρας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	γαστερες

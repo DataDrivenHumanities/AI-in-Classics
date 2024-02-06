@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αχνη	ERROR: Nothing found with those parameters	αχναι
+1	Genitive	αχνη	ERROR: Nothing found with those parameters	αχναι
+2	Dative	αχνη	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αχνην	ERROR: Nothing found with those parameters	αχνας
+4	Vocative	αχνη	ERROR: Nothing found with those parameters	αχναι

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εφορος	ERROR: Nothing found with those parameters	εφοροι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εφοροι
+2	Dative	εφορω	ERROR: Nothing found with those parameters	εφοροις
+3	Accusative	εφορον	ERROR: Nothing found with those parameters	εφορους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εφοροι

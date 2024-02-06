@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δημιουργια	ERROR: Nothing found with those parameters	δημιουργια
+1	Genitive	δημιουργια	ERROR: Nothing found with those parameters	δημιουργια
+2	Dative	δημιουργια	ERROR: Nothing found with those parameters	δημιουργιαις
+3	Accusative	δημιουργιαν	ERROR: Nothing found with those parameters	δημιουργιας
+4	Vocative	δημιουργια	ERROR: Nothing found with those parameters	δημιουργια

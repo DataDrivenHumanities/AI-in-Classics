@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βοωνα	ERROR: Nothing found with those parameters	βοωναι
+1	Genitive	βοωνα	ERROR: Nothing found with those parameters	βοωναι
+2	Dative	βοωναι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	βοωνην	ERROR: Nothing found with those parameters	βοωνας
+4	Vocative	βοωνα	ERROR: Nothing found with those parameters	βοωναι

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βελονη	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+1	Genitive	βελονη	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+2	Dative	βελονη	ERROR: Nothing found with those parameters	βελοναις
+3	Accusative	βελονην	ERROR: Nothing found with those parameters	βελονας
+4	Vocative	βελονη	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εκπωμα	ERROR: Nothing found with those parameters	εκπωματ
+1	Genitive	εκπωμα	ERROR: Nothing found with those parameters	εκπωματ
+2	Dative	εκπωματ	ERROR: Nothing found with those parameters	εκπωμασι
+3	Accusative	εκπωμα	ERROR: Nothing found with those parameters	εκπωματ
+4	Vocative	εκπωμα	ERROR: Nothing found with those parameters	εκπωματ

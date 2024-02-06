@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αιθιοπιη	ERROR: Nothing found with those parameters	αιθιοπια
+1	Genitive	αιθιοπιη	ERROR: Nothing found with those parameters	αιθιοπια
+2	Dative	αιθιοπιη	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αιθιοπιην	ERROR: Nothing found with those parameters	αιθιοπιας
+4	Vocative	αιθιοπιη	ERROR: Nothing found with those parameters	αιθιοπια

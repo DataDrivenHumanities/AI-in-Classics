@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δερρις	ERROR: Nothing found with those parameters	δερρεις
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	δερρεις
+2	Dative	δερρει	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	δερριν	ERROR: Nothing found with those parameters	δερρις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	δερρεις

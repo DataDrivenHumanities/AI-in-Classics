@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ηβητης	ERROR: Nothing found with those parameters	ηβηται
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ηβηται
+2	Dative	ηβηται	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ηβητην	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ηβηται

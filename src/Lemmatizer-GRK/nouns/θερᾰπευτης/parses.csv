@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	θερᾰπευτης	ERROR: Nothing found with those parameters	θεραπευται
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	θεραπευται
+2	Dative	θεραπευται	ERROR: Nothing found with those parameters	θεραπευταις
+3	Accusative	θεραπευτην	ERROR: Nothing found with those parameters	θεραπευτας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	θεραπευται

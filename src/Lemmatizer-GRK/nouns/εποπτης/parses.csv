@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εποπτης	ERROR: Nothing found with those parameters	εποπται
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εποπται
+2	Dative	εποπται	ERROR: Nothing found with those parameters	εποπταις
+3	Accusative	εποπταν	ERROR: Nothing found with those parameters	εποπτας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εποπται

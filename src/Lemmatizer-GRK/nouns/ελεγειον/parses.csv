@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ελεγειον	ERROR: Nothing found with those parameters	ελεγεια
+1	Genitive	ελεγειον	ERROR: Nothing found with those parameters	ελεγεια
+2	Dative	ελεγειω	ERROR: Nothing found with those parameters	ελεγειοις
+3	Accusative	ελεγειον	ERROR: Nothing found with those parameters	ελεγεια
+4	Vocative	ελεγειον	ERROR: Nothing found with those parameters	ελεγεια

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δεμνιον	ERROR: Nothing found with those parameters	δεμνι
+1	Genitive	δεμνιον	ERROR: Nothing found with those parameters	δεμνι
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	δεμνιοις
+3	Accusative	δεμνιον	ERROR: Nothing found with those parameters	δεμνι
+4	Vocative	δεμνιον	ERROR: Nothing found with those parameters	δεμνι

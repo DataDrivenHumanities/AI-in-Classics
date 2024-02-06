@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αγωνισμ	ERROR: Nothing found with those parameters	αγωνισματα
+1	Genitive	αγωνισμ	ERROR: Nothing found with those parameters	αγωνισματα
+2	Dative	αγωνισματι	ERROR: Nothing found with those parameters	αγωνισμασι
+3	Accusative	αγωνισμ	ERROR: Nothing found with those parameters	αγωνισματα
+4	Vocative	αγωνισμ	ERROR: Nothing found with those parameters	αγωνισματα

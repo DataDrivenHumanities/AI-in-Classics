@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ισηγοριη	ERROR: Nothing found with those parameters	ισηγορια
+1	Genitive	ισηγοριη	ERROR: Nothing found with those parameters	ισηγορια
+2	Dative	ισηγορια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ισηγοριαν	ERROR: Nothing found with those parameters	ισηγοριας
+4	Vocative	ισηγοριη	ERROR: Nothing found with those parameters	ισηγορια

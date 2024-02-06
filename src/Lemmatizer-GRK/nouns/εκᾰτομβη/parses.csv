@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εκᾰτομβη	ERROR: Nothing found with those parameters	εκατομβαι
+1	Genitive	εκᾰτομβη	ERROR: Nothing found with those parameters	εκατομβαι
+2	Dative	εκατομβαι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	εκατομβην	ERROR: Nothing found with those parameters	εκατομβας
+4	Vocative	εκᾰτομβη	ERROR: Nothing found with those parameters	εκατομβαι

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	θρονον	ERROR: Nothing found with those parameters	θρονα
+1	Genitive	θρονον	ERROR: Nothing found with those parameters	θρονα
+2	Dative	θρονω	ERROR: Nothing found with those parameters	θρονοις
+3	Accusative	θρονον	ERROR: Nothing found with those parameters	θρονα
+4	Vocative	θρονον	ERROR: Nothing found with those parameters	θρονα

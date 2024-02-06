@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εμμελεια	ERROR: Nothing found with those parameters	εμμελεια
+1	Genitive	εμμελεια	ERROR: Nothing found with those parameters	εμμελεια
+2	Dative	εμμελεια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	εμμελειην	ERROR: Nothing found with those parameters	εμμελειας
+4	Vocative	εμμελεια	ERROR: Nothing found with those parameters	εμμελεια

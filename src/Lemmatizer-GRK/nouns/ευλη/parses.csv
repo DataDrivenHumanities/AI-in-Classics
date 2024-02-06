@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ευλη	ERROR: Nothing found with those parameters	ευλαι
+1	Genitive	ευλη	ERROR: Nothing found with those parameters	ευλαι
+2	Dative	ευλαι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ευλας
+4	Vocative	ευλη	ERROR: Nothing found with those parameters	ευλαι

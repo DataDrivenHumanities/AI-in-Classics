@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αγγος	ERROR: Nothing found with those parameters	αγγη
+1	Genitive	αγγος	ERROR: Nothing found with those parameters	αγγη
+2	Dative	αγγε	ERROR: Nothing found with those parameters	αγγεσι
+3	Accusative	αγγος	ERROR: Nothing found with those parameters	αγγη
+4	Vocative	αγγος	ERROR: Nothing found with those parameters	αγγη

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αμελια	ERROR: Nothing found with those parameters	αμελια
+1	Genitive	αμελια	ERROR: Nothing found with those parameters	αμελια
+2	Dative	αμελια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αμελειαν	ERROR: Nothing found with those parameters	αμελιας
+4	Vocative	αμελια	ERROR: Nothing found with those parameters	αμελια

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	θριαμβος	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+2	Dative	θριαμβω	ERROR: Nothing found with those parameters	θριαμβοις
+3	Accusative	θριαμβον	ERROR: Nothing found with those parameters	θριαμβους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αναδοσις	ERROR: Nothing found with those parameters	αναδοσεις
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αναδοσεις
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αναδοσεσι
+3	Accusative	αναδοσιν	ERROR: Nothing found with those parameters	αναδοσις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αναδοσεις

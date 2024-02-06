@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δημηγορια	ERROR: Nothing found with those parameters	δημηγορια
+1	Genitive	δημηγορια	ERROR: Nothing found with those parameters	δημηγορια
+2	Dative	δημηγορια	ERROR: Nothing found with those parameters	δημηγοριαις
+3	Accusative	δημηγοριαν	ERROR: Nothing found with those parameters	δημηγοριας
+4	Vocative	δημηγορια	ERROR: Nothing found with those parameters	δημηγορια

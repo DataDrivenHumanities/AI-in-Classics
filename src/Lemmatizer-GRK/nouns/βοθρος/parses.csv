@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βοθρος	ERROR: Nothing found with those parameters	βοθροι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βοθροι
+2	Dative	βοθρω	ERROR: Nothing found with those parameters	βοθροις
+3	Accusative	βοθρον	ERROR: Nothing found with those parameters	βοθρους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βοθροι

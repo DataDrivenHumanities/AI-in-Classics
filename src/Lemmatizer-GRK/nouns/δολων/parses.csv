@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δολων	ERROR: Nothing found with those parameters	δολωνες
+1	Genitive	δολων	ERROR: Nothing found with those parameters	δολωνες
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	δολωνα	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	δολων	ERROR: Nothing found with those parameters	δολωνες

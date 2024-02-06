@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ευεξια	ERROR: Nothing found with those parameters	ευεξια
+1	Genitive	ευεξια	ERROR: Nothing found with those parameters	ευεξια
+2	Dative	ευεξια	ERROR: Nothing found with those parameters	ευεξιαις
+3	Accusative	ευεξιαν	ERROR: Nothing found with those parameters	ευεξιας
+4	Vocative	ευεξια	ERROR: Nothing found with those parameters	ευεξια

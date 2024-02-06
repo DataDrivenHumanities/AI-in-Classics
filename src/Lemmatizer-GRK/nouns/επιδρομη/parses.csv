@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	επιδρομη	ERROR: Nothing found with those parameters	επιδρομ
+1	Genitive	επιδρομη	ERROR: Nothing found with those parameters	επιδρομ
+2	Dative	επιδρομ	ERROR: Nothing found with those parameters	επιδρομαις
+3	Accusative	επιδρομην	ERROR: Nothing found with those parameters	επιδρομας
+4	Vocative	επιδρομη	ERROR: Nothing found with those parameters	επιδρομ

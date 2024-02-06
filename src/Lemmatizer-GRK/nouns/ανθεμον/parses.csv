@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ανθεμον	ERROR: Nothing found with those parameters	ανθεμ
+1	Genitive	ανθεμον	ERROR: Nothing found with those parameters	ανθεμ
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ανθεμοις
+3	Accusative	ανθεμον	ERROR: Nothing found with those parameters	ανθεμ
+4	Vocative	ανθεμον	ERROR: Nothing found with those parameters	ανθεμ

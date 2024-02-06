@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ειρων	ERROR: Nothing found with those parameters	ειρωνες
+1	Genitive	ειρων	ERROR: Nothing found with those parameters	ειρωνες
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ειρωνα	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	ειρων	ERROR: Nothing found with those parameters	ειρωνες

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	επαγωγη	ERROR: Nothing found with those parameters	επαγωγαι
+1	Genitive	επαγωγη	ERROR: Nothing found with those parameters	επαγωγαι
+2	Dative	επαγωγη	ERROR: Nothing found with those parameters	επαγωγαις
+3	Accusative	επαγωγην	ERROR: Nothing found with those parameters	επαγωγας
+4	Vocative	επαγωγη	ERROR: Nothing found with those parameters	επαγωγαι

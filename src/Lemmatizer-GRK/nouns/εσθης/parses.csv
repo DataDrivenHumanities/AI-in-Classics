@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εσθης	ERROR: Nothing found with those parameters	εσθητες
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εσθητες
+2	Dative	εσθητ	ERROR: Nothing found with those parameters	εσθησι
+3	Accusative	εσθητ	ERROR: Nothing found with those parameters	εσθητας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εσθητες

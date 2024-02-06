@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ατᾰφια	ERROR: Nothing found with those parameters	αταφια
+1	Genitive	ατᾰφια	ERROR: Nothing found with those parameters	αταφια
+2	Dative	αταφια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αταφιαν	ERROR: Nothing found with those parameters	αταφιας
+4	Vocative	ατᾰφια	ERROR: Nothing found with those parameters	αταφια

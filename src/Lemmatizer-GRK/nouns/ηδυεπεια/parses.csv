@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ηδυεπεια	ERROR: Nothing found with those parameters	ηδυεπειαι
+1	Genitive	ηδυεπεια	ERROR: Nothing found with those parameters	ηδυεπειαι
+2	Dative	ηδυεπειαι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	ηδυεπεια	ERROR: Nothing found with those parameters	ηδυεπειαι

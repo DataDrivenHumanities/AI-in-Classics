@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δαδουχος	ERROR: Nothing found with those parameters	δαδουχοι
+1	Genitive	δαδουχε	ERROR: Nothing found with those parameters	δαδουχοι
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	δαδουχον	ERROR: Nothing found with those parameters	δαδουχους
+4	Vocative	δαδουχε	ERROR: Nothing found with those parameters	δαδουχοι

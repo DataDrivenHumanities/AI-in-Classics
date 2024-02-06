@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	γονη	ERROR: Nothing found with those parameters	γονα
+1	Genitive	γονη	ERROR: Nothing found with those parameters	γονα
+2	Dative	γονη	ERROR: Nothing found with those parameters	γοναις
+3	Accusative	γονην	ERROR: Nothing found with those parameters	γονας
+4	Vocative	γονη	ERROR: Nothing found with those parameters	γονα

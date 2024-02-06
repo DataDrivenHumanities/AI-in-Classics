@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	διαμετρος	ERROR: Nothing found with those parameters	διαμετροι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	διαμετροι
+2	Dative	διαμετρω	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	διαμετρον	ERROR: Nothing found with those parameters	διαμετρους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	διαμετροι

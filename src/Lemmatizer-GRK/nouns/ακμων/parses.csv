@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ακμων	ERROR: Nothing found with those parameters	ακμονες
+1	Genitive	ακμων	ERROR: Nothing found with those parameters	ακμονες
+2	Dative	ακμονι	ERROR: Nothing found with those parameters	ακμοσι
+3	Accusative	ακμονα	ERROR: Nothing found with those parameters	ακμονας
+4	Vocative	ακμων	ERROR: Nothing found with those parameters	ακμονες

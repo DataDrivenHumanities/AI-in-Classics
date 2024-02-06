@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δισκος	ERROR: Nothing found with those parameters	δισκοι
+1	Genitive	δισκ	ERROR: Nothing found with those parameters	δισκοι
+2	Dative	δισκω	ERROR: Nothing found with those parameters	δισκοις
+3	Accusative	δισκον	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	δισκ	ERROR: Nothing found with those parameters	δισκοι

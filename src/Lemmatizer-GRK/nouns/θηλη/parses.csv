@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	θηλη	ERROR: Nothing found with those parameters	θηλαι
+1	Genitive	θηλη	ERROR: Nothing found with those parameters	θηλαι
+2	Dative	θηλη	ERROR: Nothing found with those parameters	θηλαις
+3	Accusative	θηλην	ERROR: Nothing found with those parameters	θηλας
+4	Vocative	θηλη	ERROR: Nothing found with those parameters	θηλαι

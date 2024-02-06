@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αντᾰγωνιστης	ERROR: Nothing found with those parameters	ανταγωνισται
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ανταγωνισται
+2	Dative	ανταγωνισται	ERROR: Nothing found with those parameters	ανταγωνισταις
+3	Accusative	ανταγωνιστην	ERROR: Nothing found with those parameters	ανταγωνιστας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ανταγωνισται

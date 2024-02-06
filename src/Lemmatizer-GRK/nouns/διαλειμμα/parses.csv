@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	διαλειμμα	ERROR: Nothing found with those parameters	διαλειμματα
+1	Genitive	διαλειμμα	ERROR: Nothing found with those parameters	διαλειμματα
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	διαλειμμα	ERROR: Nothing found with those parameters	διαλειμματα
+4	Vocative	διαλειμμα	ERROR: Nothing found with those parameters	διαλειμματα

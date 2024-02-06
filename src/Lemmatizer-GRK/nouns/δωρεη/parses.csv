@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δωρεη	ERROR: Nothing found with those parameters	δωρεα
+1	Genitive	δωρεη	ERROR: Nothing found with those parameters	δωρεα
+2	Dative	δωρεη	ERROR: Nothing found with those parameters	δωρεαις
+3	Accusative	δωρεην	ERROR: Nothing found with those parameters	δωρεας
+4	Vocative	δωρεη	ERROR: Nothing found with those parameters	δωρεα

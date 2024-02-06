@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δευτερειον	ERROR: Nothing found with those parameters	δευτερεια
+1	Genitive	δευτερειον	ERROR: Nothing found with those parameters	δευτερεια
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	δευτερειοισι
+3	Accusative	δευτερειον	ERROR: Nothing found with those parameters	δευτερεια
+4	Vocative	δευτερειον	ERROR: Nothing found with those parameters	δευτερεια

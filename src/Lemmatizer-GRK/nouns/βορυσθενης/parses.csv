@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βορυσθενης	ERROR: Nothing found with those parameters	βορυσθενης
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βορυσθενης
+2	Dative	βορυσθενει	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	βορυσθενη	ERROR: Nothing found with those parameters	βορυσθενης
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βορυσθενης

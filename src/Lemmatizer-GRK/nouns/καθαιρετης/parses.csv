@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	καθαιρετης	ERROR: Nothing found with those parameters	καθαιρεται
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	καθαιρεται
+2	Dative	καθαιρεται	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	καθαιρετεα	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	καθαιρεται

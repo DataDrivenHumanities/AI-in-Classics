@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	διαθηκη	ERROR: Nothing found with those parameters	διαθηκαι
+1	Genitive	διαθηκη	ERROR: Nothing found with those parameters	διαθηκαι
+2	Dative	διαθηκη	ERROR: Nothing found with those parameters	διαθηκαις
+3	Accusative	διαθηκην	ERROR: Nothing found with those parameters	διαθηκας
+4	Vocative	διαθηκη	ERROR: Nothing found with those parameters	διαθηκαι

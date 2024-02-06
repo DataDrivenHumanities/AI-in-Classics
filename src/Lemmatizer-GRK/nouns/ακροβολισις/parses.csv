@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ακροβολισις	ERROR: Nothing found with those parameters	ακροβολισμοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ακροβολισμοι
+2	Dative	ακροβολισει	ERROR: Nothing found with those parameters	ακροβολισμοις
+3	Accusative	ακροβολισμον	ERROR: Nothing found with those parameters	ακροβολισις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ακροβολισμοι

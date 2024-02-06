@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αιμ	ERROR: Nothing found with those parameters	αιματ
+1	Genitive	αιμ	ERROR: Nothing found with those parameters	αιματ
+2	Dative	αιματ	ERROR: Nothing found with those parameters	αιμασι
+3	Accusative	αιμ	ERROR: Nothing found with those parameters	αιματ
+4	Vocative	αιμ	ERROR: Nothing found with those parameters	αιματ

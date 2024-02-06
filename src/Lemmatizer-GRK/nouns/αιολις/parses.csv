@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αιολις	ERROR: Nothing found with those parameters	αιολης
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αιολης
+2	Dative	αιολιδι	ERROR: Nothing found with those parameters	αιολευσι
+3	Accusative	αιολεα	ERROR: Nothing found with those parameters	αιολεις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αιολης

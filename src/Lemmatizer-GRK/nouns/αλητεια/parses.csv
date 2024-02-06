@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αλητεια	ERROR: Nothing found with those parameters	αλατεια
+1	Genitive	αλητεια	ERROR: Nothing found with those parameters	αλατεια
+2	Dative	αλατεια	ERROR: Nothing found with those parameters	αλατειαις
+3	Accusative	αλητειαν	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	αλητεια	ERROR: Nothing found with those parameters	αλατεια

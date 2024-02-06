@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	γεωπεινης	ERROR: Nothing found with those parameters	γεωπειναι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	γεωπειναι
+2	Dative	γεωπειναι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	γεωπεινας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	γεωπειναι

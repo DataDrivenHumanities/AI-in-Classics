@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ενοικησις	ERROR: Nothing found with those parameters	ενοικησεις
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ενοικησεις
+2	Dative	ενοικησει	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ενοικησιν	ERROR: Nothing found with those parameters	ενοικησις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ενοικησεις

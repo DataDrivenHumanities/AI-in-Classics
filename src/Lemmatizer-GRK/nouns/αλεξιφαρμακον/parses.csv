@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αλεξιφαρμακον	ERROR: Nothing found with those parameters	αλεξιφαρμακα
+1	Genitive	αλεξιφαρμακον	ERROR: Nothing found with those parameters	αλεξιφαρμακα
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αλεξιφαρμακον	ERROR: Nothing found with those parameters	αλεξιφαρμακα
+4	Vocative	αλεξιφαρμακον	ERROR: Nothing found with those parameters	αλεξιφαρμακα

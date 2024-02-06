@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αυτοκρατωρ	ERROR: Nothing found with those parameters	αυτοκρατορες
+1	Genitive	αυτοκρατορ	ERROR: Nothing found with those parameters	αυτοκρατορες
+2	Dative	αυτοκρατορ	ERROR: Nothing found with those parameters	αυτοκρατορσι
+3	Accusative	αυτοκρατορ	ERROR: Nothing found with those parameters	αυτοκρατορας
+4	Vocative	αυτοκρατορ	ERROR: Nothing found with those parameters	αυτοκρατορες

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αλαζων	ERROR: Nothing found with those parameters	αλαζονες
+1	Genitive	αλαζων	ERROR: Nothing found with those parameters	αλαζονες
+2	Dative	αλαζονι	ERROR: Nothing found with those parameters	αλαζοσι
+3	Accusative	αλαζονα	ERROR: Nothing found with those parameters	αλαζονας
+4	Vocative	αλαζων	ERROR: Nothing found with those parameters	αλαζονες

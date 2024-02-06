@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αστεροπη	ERROR: Nothing found with those parameters	αστεροπαι
+1	Genitive	αστεροπη	ERROR: Nothing found with those parameters	αστεροπαι
+2	Dative	αστεροπη	ERROR: Nothing found with those parameters	αστεροπησιν
+3	Accusative	αστεροπην	ERROR: Nothing found with those parameters	αστεροπας
+4	Vocative	αστεροπη	ERROR: Nothing found with those parameters	αστεροπαι

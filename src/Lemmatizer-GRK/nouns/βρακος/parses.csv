@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βρακος	ERROR: Nothing found with those parameters	βρακη
+1	Genitive	βρακος	ERROR: Nothing found with those parameters	βρακη
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	βρακος	ERROR: Nothing found with those parameters	βρακη
+4	Vocative	βρακος	ERROR: Nothing found with those parameters	βρακη

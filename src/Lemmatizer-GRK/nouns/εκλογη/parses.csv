@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εκλογη	ERROR: Nothing found with those parameters	εκλογαι
+1	Genitive	εκλογη	ERROR: Nothing found with those parameters	εκλογαι
+2	Dative	εκλογη	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	εκλογην	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	εκλογη	ERROR: Nothing found with those parameters	εκλογαι

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αλμη	ERROR: Nothing found with those parameters	αλμ
+1	Genitive	αλμη	ERROR: Nothing found with those parameters	αλμ
+2	Dative	αλμ	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αλμην	ERROR: Nothing found with those parameters	αλμας
+4	Vocative	αλμη	ERROR: Nothing found with those parameters	αλμ

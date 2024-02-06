@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δελεασμα	ERROR: Nothing found with those parameters	δελεασματα
+1	Genitive	δελεασμα	ERROR: Nothing found with those parameters	δελεασματα
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	δελεασμασιν
+3	Accusative	δελεασμα	ERROR: Nothing found with those parameters	δελεασματα
+4	Vocative	δελεασμα	ERROR: Nothing found with those parameters	δελεασματα

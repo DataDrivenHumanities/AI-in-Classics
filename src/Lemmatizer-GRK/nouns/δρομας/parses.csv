@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δρομας	ERROR: Nothing found with those parameters	δρομαδες
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	δρομαδες
+2	Dative	δρομαδ	ERROR: Nothing found with those parameters	δρομασι
+3	Accusative	δρομαδ	ERROR: Nothing found with those parameters	δρομαδας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	δρομαδες

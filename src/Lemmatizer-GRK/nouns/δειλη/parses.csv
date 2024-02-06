@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δειλη	ERROR: Nothing found with those parameters	δειλ
+1	Genitive	δειλη	ERROR: Nothing found with those parameters	δειλ
+2	Dative	δειλ	ERROR: Nothing found with those parameters	δειλαις
+3	Accusative	δειλην	ERROR: Nothing found with those parameters	δειλας
+4	Vocative	δειλη	ERROR: Nothing found with those parameters	δειλ

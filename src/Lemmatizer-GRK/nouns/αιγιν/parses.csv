@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αιγιν	ERROR: Nothing found with those parameters	αιγιν
+1	Genitive	αιγιν	ERROR: Nothing found with those parameters	αιγιν
+2	Dative	αιγιν	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αιγιναν	ERROR: Nothing found with those parameters	αιγινας
+4	Vocative	αιγιν	ERROR: Nothing found with those parameters	αιγιν

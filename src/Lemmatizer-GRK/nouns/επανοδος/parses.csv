@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	επανοδος	ERROR: Nothing found with those parameters	επανοδοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	επανοδοι
+2	Dative	επανοδω	ERROR: Nothing found with those parameters	επανοδοις
+3	Accusative	επανοδον	ERROR: Nothing found with those parameters	επανοδους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	επανοδοι

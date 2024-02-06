@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αμπελων	ERROR: Nothing found with those parameters	αμπελωνες
+1	Genitive	αμπελων	ERROR: Nothing found with those parameters	αμπελωνες
+2	Dative	αμπελωνι	ERROR: Nothing found with those parameters	αμπελωσι
+3	Accusative	αμπελωνα	ERROR: Nothing found with those parameters	αμπελωνας
+4	Vocative	αμπελων	ERROR: Nothing found with those parameters	αμπελωνες

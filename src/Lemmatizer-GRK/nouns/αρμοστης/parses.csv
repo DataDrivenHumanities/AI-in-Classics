@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αρμοστης	ERROR: Nothing found with those parameters	αρμοσται
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αρμοσται
+2	Dative	αρμοστη	ERROR: Nothing found with those parameters	αρμοσταις
+3	Accusative	αρμοστην	ERROR: Nothing found with those parameters	αρμοστας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αρμοσται

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ευνομιη	ERROR: Nothing found with those parameters	ευνομια
+1	Genitive	ευνομιη	ERROR: Nothing found with those parameters	ευνομια
+2	Dative	ευνομια	ERROR: Nothing found with those parameters	ευνομιησι
+3	Accusative	ευνομιην	ERROR: Nothing found with those parameters	ευνομιας
+4	Vocative	ευνομιη	ERROR: Nothing found with those parameters	ευνομια

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ιστωρ	ERROR: Nothing found with those parameters	ιστορες
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ιστορες
+2	Dative	ιστορι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ιστορα	ERROR: Nothing found with those parameters	ιστορας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ιστορες

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ηλεκτρον	ERROR: Nothing found with those parameters	ηλεκτρα
+1	Genitive	ηλεκτρον	ERROR: Nothing found with those parameters	ηλεκτρα
+2	Dative	ηλεκτρω	ERROR: Nothing found with those parameters	ηλεκτροισιν
+3	Accusative	ηλεκτρον	ERROR: Nothing found with those parameters	ηλεκτρα
+4	Vocative	ηλεκτρον	ERROR: Nothing found with those parameters	ηλεκτρα

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εδνον	ERROR: Nothing found with those parameters	εδνα
+1	Genitive	εδνον	ERROR: Nothing found with those parameters	εδνα
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εδνοις
+3	Accusative	εδνον	ERROR: Nothing found with those parameters	εδνα
+4	Vocative	εδνον	ERROR: Nothing found with those parameters	εδνα

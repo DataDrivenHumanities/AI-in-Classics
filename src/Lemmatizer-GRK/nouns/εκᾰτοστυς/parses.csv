@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εκᾰτοστυς	ERROR: Nothing found with those parameters	εκατοστυες
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εκατοστυες
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	εκατοστυν	ERROR: Nothing found with those parameters	εκᾰτοστυς
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εκατοστυες

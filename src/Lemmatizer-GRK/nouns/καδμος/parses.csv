@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	καδμος	ERROR: Nothing found with those parameters	καδμοι
+1	Genitive	καδμε	ERROR: Nothing found with those parameters	καδμοι
+2	Dative	καδμω	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	καδμον	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	καδμε	ERROR: Nothing found with those parameters	καδμοι

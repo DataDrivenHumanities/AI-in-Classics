@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ηγητωρ	ERROR: Nothing found with those parameters	ηγητορες
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ηγητορες
+2	Dative	ηγητορ	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ηγητορ	ERROR: Nothing found with those parameters	ηγητορας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ηγητορες

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	διωμοσια	ERROR: Nothing found with those parameters	διωμοσιαι
+1	Genitive	διωμοσια	ERROR: Nothing found with those parameters	διωμοσιαι
+2	Dative	διωμοσιαι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	διωμοσιας
+4	Vocative	διωμοσια	ERROR: Nothing found with those parameters	διωμοσιαι

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ελευθερωσις	ERROR: Nothing found with those parameters	ελευθερωσεις
+1	Genitive	ελευθερωσι	ERROR: Nothing found with those parameters	ελευθερωσεις
+2	Dative	ελευθερωσι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ελευθερωσιν	ERROR: Nothing found with those parameters	ελευθερωσις
+4	Vocative	ελευθερωσι	ERROR: Nothing found with those parameters	ελευθερωσεις

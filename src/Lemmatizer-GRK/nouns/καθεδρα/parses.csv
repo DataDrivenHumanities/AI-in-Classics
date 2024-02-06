@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	καθεδρα	ERROR: Nothing found with those parameters	καθεδρα
+1	Genitive	καθεδρα	ERROR: Nothing found with those parameters	καθεδρα
+2	Dative	καθεδρα	ERROR: Nothing found with those parameters	καθεδραις
+3	Accusative	καθεδραν	ERROR: Nothing found with those parameters	καθεδρας
+4	Vocative	καθεδρα	ERROR: Nothing found with those parameters	καθεδρα

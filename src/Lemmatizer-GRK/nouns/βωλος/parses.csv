@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βωλος	ERROR: Nothing found with those parameters	βωλοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βωλοι
+2	Dative	βωλω	ERROR: Nothing found with those parameters	βωλοις
+3	Accusative	βωλον	ERROR: Nothing found with those parameters	βωλους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βωλοι

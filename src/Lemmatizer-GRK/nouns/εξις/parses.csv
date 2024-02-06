@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εξις	ERROR: Nothing found with those parameters	εξης
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εξης
+2	Dative	εξει	ERROR: Nothing found with those parameters	εξεσι
+3	Accusative	εξιν	ERROR: Nothing found with those parameters	εξις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εξης

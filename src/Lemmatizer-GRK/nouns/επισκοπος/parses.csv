@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	επισκοπος	ERROR: Nothing found with those parameters	επισκοποι
+1	Genitive	επισκοπε	ERROR: Nothing found with those parameters	επισκοποι
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	επισκοποις
+3	Accusative	επισκοπον	ERROR: Nothing found with those parameters	πισκοπους
+4	Vocative	επισκοπε	ERROR: Nothing found with those parameters	επισκοποι

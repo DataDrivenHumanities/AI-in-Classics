@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ιστιη	ERROR: Nothing found with those parameters	ιστι
+1	Genitive	ιστιη	ERROR: Nothing found with those parameters	ιστι
+2	Dative	ιστι	ERROR: Nothing found with those parameters	εστιας
+3	Accusative	ιστιαν	ERROR: Nothing found with those parameters	ιστιας
+4	Vocative	ιστιη	ERROR: Nothing found with those parameters	ιστι

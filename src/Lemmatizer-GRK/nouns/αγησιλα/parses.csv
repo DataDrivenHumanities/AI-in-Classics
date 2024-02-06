@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αγησιλα	ERROR: Nothing found with those parameters	ηγησιλεω
+1	Genitive	αγησιλα	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+2	Dative	ηγησιλεω	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αγησιλαν	ERROR: Nothing found with those parameters	αγησιλας
+4	Vocative	αγησιλα	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters

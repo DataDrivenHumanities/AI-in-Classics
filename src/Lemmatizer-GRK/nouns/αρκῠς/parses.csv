@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αρκῠς	ERROR: Nothing found with those parameters	αρκυες
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αρκυες
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αρκυσι
+3	Accusative	αρκυν	ERROR: Nothing found with those parameters	αρκῡς
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αρκυες

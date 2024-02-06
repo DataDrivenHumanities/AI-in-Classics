@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εννοια	ERROR: Nothing found with those parameters	εννοια
+1	Genitive	εννοια	ERROR: Nothing found with those parameters	εννοια
+2	Dative	εννοια	ERROR: Nothing found with those parameters	εννοιαις
+3	Accusative	εννοιαν	ERROR: Nothing found with those parameters	εννοιας
+4	Vocative	εννοια	ERROR: Nothing found with those parameters	εννοια

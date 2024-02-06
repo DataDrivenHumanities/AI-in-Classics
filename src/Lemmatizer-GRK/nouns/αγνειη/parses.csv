@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αγνειη	ERROR: Nothing found with those parameters	αγνεια
+1	Genitive	αγνειη	ERROR: Nothing found with those parameters	αγνεια
+2	Dative	αγνεια	ERROR: Nothing found with those parameters	αγνειαις
+3	Accusative	αγνειαν	ERROR: Nothing found with those parameters	αγνειας
+4	Vocative	αγνειη	ERROR: Nothing found with those parameters	αγνεια

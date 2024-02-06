@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ευδαιμονιη	ERROR: Nothing found with those parameters	ευδαιμονια
+1	Genitive	ευδαιμονιη	ERROR: Nothing found with those parameters	ευδαιμονια
+2	Dative	ευδαιμονιη	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ευδαιμονιην	ERROR: Nothing found with those parameters	ευδαιμονιᾱς
+4	Vocative	ευδαιμονιη	ERROR: Nothing found with those parameters	ευδαιμονια

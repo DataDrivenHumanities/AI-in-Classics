@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εφολκιον	ERROR: Nothing found with those parameters	εφολκια
+1	Genitive	εφολκιον	ERROR: Nothing found with those parameters	εφολκια
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εφολκιοις
+3	Accusative	εφολκιον	ERROR: Nothing found with those parameters	εφολκια
+4	Vocative	εφολκιον	ERROR: Nothing found with those parameters	εφολκια

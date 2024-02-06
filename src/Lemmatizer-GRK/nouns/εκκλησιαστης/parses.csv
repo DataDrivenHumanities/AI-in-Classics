@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εκκλησιαστης	ERROR: Nothing found with those parameters	εκκλησιασται
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εκκλησιασται
+2	Dative	εκκλησιασται	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	εκκλησιαστην	ERROR: Nothing found with those parameters	εκκλησιαστας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εκκλησιασται

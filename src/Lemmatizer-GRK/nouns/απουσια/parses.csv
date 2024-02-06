@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	απουσια	ERROR: Nothing found with those parameters	απουσια
+1	Genitive	απουσια	ERROR: Nothing found with those parameters	απουσια
+2	Dative	απουσια	ERROR: Nothing found with those parameters	απουσιαις
+3	Accusative	απουσιαν	ERROR: Nothing found with those parameters	απουσιας
+4	Vocative	απουσια	ERROR: Nothing found with those parameters	απουσια

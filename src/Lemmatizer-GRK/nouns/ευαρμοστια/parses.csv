@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ευαρμοστια	ERROR: Nothing found with those parameters	ευαρμοστια
+1	Genitive	ευαρμοστια	ERROR: Nothing found with those parameters	ευαρμοστια
+2	Dative	ευαρμοστια	ERROR: Nothing found with those parameters	ευαρμοστιαις
+3	Accusative	ευαρμοστιαν	ERROR: Nothing found with those parameters	ευαρμοστιας
+4	Vocative	ευαρμοστια	ERROR: Nothing found with those parameters	ευαρμοστια

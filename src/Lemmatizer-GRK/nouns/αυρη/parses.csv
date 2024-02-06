@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αυρη	ERROR: Nothing found with those parameters	αυρα
+1	Genitive	αυρη	ERROR: Nothing found with those parameters	αυρα
+2	Dative	αυρη	ERROR: Nothing found with those parameters	αυρης
+3	Accusative	αυραν	ERROR: Nothing found with those parameters	αυρας
+4	Vocative	αυρη	ERROR: Nothing found with those parameters	αυρα

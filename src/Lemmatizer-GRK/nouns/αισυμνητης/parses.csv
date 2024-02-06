@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αισυμνητης	ERROR: Nothing found with those parameters	αισυμνηται
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αισυμνηται
+2	Dative	αισυμνηται	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αισυμνητην	ERROR: Nothing found with those parameters	αισυμνητας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αισυμνηται

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ᾰγορα	ERROR: Nothing found with those parameters	αγορα
+1	Genitive	ᾰγορα	ERROR: Nothing found with those parameters	αγορα
+2	Dative	αγορω	ERROR: Nothing found with those parameters	αγορησι
+3	Accusative	αγορον	ERROR: Nothing found with those parameters	αγορας
+4	Vocative	ᾰγορα	ERROR: Nothing found with those parameters	αγορα

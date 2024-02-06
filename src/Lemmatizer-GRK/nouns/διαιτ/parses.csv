@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	διαιτ	ERROR: Nothing found with those parameters	διαιτ
+1	Genitive	διαιτ	ERROR: Nothing found with those parameters	διαιτ
+2	Dative	διαιτ	ERROR: Nothing found with those parameters	διαιταις
+3	Accusative	διαιταν	ERROR: Nothing found with those parameters	διαιτας
+4	Vocative	διαιτ	ERROR: Nothing found with those parameters	διαιτ

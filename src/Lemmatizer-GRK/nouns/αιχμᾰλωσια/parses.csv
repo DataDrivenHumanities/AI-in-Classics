@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αιχμᾰλωσια	ERROR: Nothing found with those parameters	αιχμαλωσια
+1	Genitive	αιχμᾰλωσια	ERROR: Nothing found with those parameters	αιχμαλωσια
+2	Dative	αιχμαλωσια	ERROR: Nothing found with those parameters	αιχμαλωσιαις
+3	Accusative	αιχμαλωσιαν	ERROR: Nothing found with those parameters	αιχμαλωσιας
+4	Vocative	αιχμᾰλωσια	ERROR: Nothing found with those parameters	αιχμαλωσια

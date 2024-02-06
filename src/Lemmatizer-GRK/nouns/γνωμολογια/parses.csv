@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	γνωμολογια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+1	Genitive	γνωμολογια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	γνωμολογιαις
+3	Accusative	γνωμολογιαν	ERROR: Nothing found with those parameters	γνωμολογιας
+4	Vocative	γνωμολογια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters

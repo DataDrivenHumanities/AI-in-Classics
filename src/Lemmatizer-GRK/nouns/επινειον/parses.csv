@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	επινειον	ERROR: Nothing found with those parameters	επινεια
+1	Genitive	επινειον	ERROR: Nothing found with those parameters	επινεια
+2	Dative	επινειω	ERROR: Nothing found with those parameters	επινειοις
+3	Accusative	επινειον	ERROR: Nothing found with those parameters	επινεια
+4	Vocative	επινειον	ERROR: Nothing found with those parameters	επινεια

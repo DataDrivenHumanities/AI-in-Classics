@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ᾰγελα	ERROR: Nothing found with those parameters	αγελαι
+1	Genitive	ᾰγελα	ERROR: Nothing found with those parameters	αγελαι
+2	Dative	αγελη	ERROR: Nothing found with those parameters	αγεληις
+3	Accusative	αγελην	ERROR: Nothing found with those parameters	αγελας
+4	Vocative	ᾰγελα	ERROR: Nothing found with those parameters	αγελαι

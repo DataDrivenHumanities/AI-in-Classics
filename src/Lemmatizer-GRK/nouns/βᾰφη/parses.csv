@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βᾰφη	ERROR: Nothing found with those parameters	βαφαι
+1	Genitive	βᾰφη	ERROR: Nothing found with those parameters	βαφαι
+2	Dative	βαφη	ERROR: Nothing found with those parameters	βαφαις
+3	Accusative	βαφην	ERROR: Nothing found with those parameters	βαφας
+4	Vocative	βᾰφη	ERROR: Nothing found with those parameters	βαφαι

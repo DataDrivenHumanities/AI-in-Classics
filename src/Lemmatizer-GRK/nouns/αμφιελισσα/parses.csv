@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αμφιελισσα	ERROR: Nothing found with those parameters	αμφιελισσαι
+1	Genitive	αμφιελισσα	ERROR: Nothing found with those parameters	αμφιελισσαι
+2	Dative	αμφιελισσαι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αμφιελισσας
+4	Vocative	αμφιελισσα	ERROR: Nothing found with those parameters	αμφιελισσαι

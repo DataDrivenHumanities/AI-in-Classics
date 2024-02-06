@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	πικουρος	ERROR: Nothing found with those parameters	επικουροι
+1	Genitive	επικουρε	ERROR: Nothing found with those parameters	επικουροι
+2	Dative	επικουρω	ERROR: Nothing found with those parameters	επικουροις
+3	Accusative	επικουρον	ERROR: Nothing found with those parameters	επικουρους
+4	Vocative	επικουρε	ERROR: Nothing found with those parameters	επικουροι

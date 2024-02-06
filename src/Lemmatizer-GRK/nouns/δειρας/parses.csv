@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δειρας	ERROR: Nothing found with those parameters	δειραδες
+1	Genitive	δειρα	ERROR: Nothing found with those parameters	δειραδες
+2	Dative	δειραδ	ERROR: Nothing found with those parameters	δειρασι
+3	Accusative	δειραδ	ERROR: Nothing found with those parameters	δειραδας
+4	Vocative	δειρα	ERROR: Nothing found with those parameters	δειραδες

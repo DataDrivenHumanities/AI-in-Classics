@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ασῡλια	ERROR: Nothing found with those parameters	ασυλια
+1	Genitive	ασῡλια	ERROR: Nothing found with those parameters	ασυλια
+2	Dative	ασυλια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ασυλιαν	ERROR: Nothing found with those parameters	ασυλιας
+4	Vocative	ασῡλια	ERROR: Nothing found with those parameters	ασυλια

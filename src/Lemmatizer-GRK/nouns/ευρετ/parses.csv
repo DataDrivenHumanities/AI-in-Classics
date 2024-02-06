@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ευρετ	ERROR: Nothing found with those parameters	ευρετ
+1	Genitive	ευρετ	ERROR: Nothing found with those parameters	ευρετ
+2	Dative	ευρετ	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ευρετην	ERROR: Nothing found with those parameters	ευρετας
+4	Vocative	ευρετ	ERROR: Nothing found with those parameters	ευρετ

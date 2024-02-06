@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ειδωλον	ERROR: Nothing found with those parameters	ειδωλ
+1	Genitive	ειδωλον	ERROR: Nothing found with those parameters	ειδωλ
+2	Dative	ειδωλω	ERROR: Nothing found with those parameters	ειδωλοις
+3	Accusative	ειδωλον	ERROR: Nothing found with those parameters	ειδωλ
+4	Vocative	ειδωλον	ERROR: Nothing found with those parameters	ειδωλ

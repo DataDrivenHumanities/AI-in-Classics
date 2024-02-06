@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αποφρας	ERROR: Nothing found with those parameters	αποφραδες
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αποφραδες
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αποφραδα	ERROR: Nothing found with those parameters	αποφραδας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αποφραδες

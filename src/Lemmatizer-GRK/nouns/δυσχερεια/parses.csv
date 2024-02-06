@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δυσχερεια	ERROR: Nothing found with those parameters	δυσχερεια
+1	Genitive	δυσχερεια	ERROR: Nothing found with those parameters	δυσχερεια
+2	Dative	δυσχερεια	ERROR: Nothing found with those parameters	δυσχερειαις
+3	Accusative	δυσχερειαν	ERROR: Nothing found with those parameters	δυσχερειας
+4	Vocative	δυσχερεια	ERROR: Nothing found with those parameters	δυσχερεια

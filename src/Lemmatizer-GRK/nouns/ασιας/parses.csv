@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ασιας	ERROR: Nothing found with those parameters	ασιαδες
+1	Genitive	ᾰσῐα	ERROR: Nothing found with those parameters	ασιαδες
+2	Dative	ασιαδ	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ασιαδ	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	ᾰσῐα	ERROR: Nothing found with those parameters	ασιαδες

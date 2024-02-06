@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αφρᾰδια	ERROR: Nothing found with those parameters	αφραδιαι
+1	Genitive	αφρᾰδια	ERROR: Nothing found with those parameters	αφραδιαι
+2	Dative	αφραδιη	ERROR: Nothing found with those parameters	αφραδιης
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αφραδιας
+4	Vocative	αφρᾰδια	ERROR: Nothing found with those parameters	αφραδιαι

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ειδωλολατρεια	ERROR: Nothing found with those parameters	ειδωλολατρειαι
+1	Genitive	ειδωλολατρεια	ERROR: Nothing found with those parameters	ειδωλολατρειαι
+2	Dative	ειδωλολατρειαι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	ειδωλολατρεια	ERROR: Nothing found with those parameters	ειδωλολατρειαι

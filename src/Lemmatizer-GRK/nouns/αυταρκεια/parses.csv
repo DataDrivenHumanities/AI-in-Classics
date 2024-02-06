@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αυταρκεια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+1	Genitive	αυταρκεια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αυταρκειαν	ERROR: Nothing found with those parameters	αυταρκειας
+4	Vocative	αυταρκεια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters

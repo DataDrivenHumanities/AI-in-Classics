@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	γαμβρος	ERROR: Nothing found with those parameters	γαμβροι
+1	Genitive	γαμβρ	ERROR: Nothing found with those parameters	γαμβροι
+2	Dative	γαμβρω	ERROR: Nothing found with those parameters	γαμβροις
+3	Accusative	γαμβρον	ERROR: Nothing found with those parameters	γαμβρους
+4	Vocative	γαμβρ	ERROR: Nothing found with those parameters	γαμβροι

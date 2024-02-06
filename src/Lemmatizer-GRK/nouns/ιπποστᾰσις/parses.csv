@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ιπποστᾰσις	ERROR: Nothing found with those parameters	ιπποστασεις
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ιπποστασεις
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ιπποστασιν	ERROR: Nothing found with those parameters	ιπποστᾰσις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ιπποστασεις

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	επωδη	ERROR: Nothing found with those parameters	επωδαι
+1	Genitive	επωδη	ERROR: Nothing found with those parameters	επωδαι
+2	Dative	επωδη	ERROR: Nothing found with those parameters	επωδησι
+3	Accusative	επωδην	ERROR: Nothing found with those parameters	επωδας
+4	Vocative	επωδη	ERROR: Nothing found with those parameters	επωδαι

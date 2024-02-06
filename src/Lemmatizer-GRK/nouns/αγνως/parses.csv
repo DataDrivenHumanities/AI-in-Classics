@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αγνως	ERROR: Nothing found with those parameters	αγνωτες
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αγνωτες
+2	Dative	αγνωτ	ERROR: Nothing found with those parameters	αγνωσι
+3	Accusative	αγνωτ	ERROR: Nothing found with those parameters	αγνωτας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αγνωτες

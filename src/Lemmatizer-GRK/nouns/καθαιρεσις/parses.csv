@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	καθαιρεσις	ERROR: Nothing found with those parameters	καθαιρεσεις
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	καθαιρεσεις
+2	Dative	καθαιρεσει	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	καθαιρεσιν	ERROR: Nothing found with those parameters	καθαιρεσις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	καθαιρεσεις

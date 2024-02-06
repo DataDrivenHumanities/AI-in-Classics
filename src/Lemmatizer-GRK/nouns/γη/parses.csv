@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	γη	ERROR: Nothing found with those parameters	γα
+1	Genitive	γη	ERROR: Nothing found with those parameters	γα
+2	Dative	γη	ERROR: Nothing found with those parameters	γεαις
+3	Accusative	γην	ERROR: Nothing found with those parameters	γας
+4	Vocative	γη	ERROR: Nothing found with those parameters	γα

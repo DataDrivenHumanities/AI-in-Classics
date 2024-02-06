@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	διαφθορᾱ	ERROR: Nothing found with those parameters	διαφθορα
+1	Genitive	διαφθορᾱ	ERROR: Nothing found with those parameters	διαφθορα
+2	Dative	διαφθορη	ERROR: Nothing found with those parameters	διαφθοραις
+3	Accusative	διαφθοραν	ERROR: Nothing found with those parameters	διαφθορας
+4	Vocative	διαφθορᾱ	ERROR: Nothing found with those parameters	διαφθορα

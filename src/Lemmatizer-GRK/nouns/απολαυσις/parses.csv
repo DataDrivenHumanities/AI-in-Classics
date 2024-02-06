@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	απολαυσις	ERROR: Nothing found with those parameters	απολαυσεις
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	απολαυσεις
+2	Dative	απολαυσει	ERROR: Nothing found with those parameters	απολαυσεσι
+3	Accusative	απολαυσιν	ERROR: Nothing found with those parameters	απολαυσις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	απολαυσεις

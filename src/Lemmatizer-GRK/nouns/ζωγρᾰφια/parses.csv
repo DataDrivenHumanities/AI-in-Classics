@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ζωγρᾰφια	ERROR: Nothing found with those parameters	ζωγραφια
+1	Genitive	ζωγρᾰφια	ERROR: Nothing found with those parameters	ζωγραφια
+2	Dative	ζωγραφια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ζωγραφιαν	ERROR: Nothing found with those parameters	ζωγραφιας
+4	Vocative	ζωγρᾰφια	ERROR: Nothing found with those parameters	ζωγραφια

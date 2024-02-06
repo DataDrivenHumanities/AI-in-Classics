@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ασκληπιειον	ERROR: Nothing found with those parameters	ασκληπιεια
+1	Genitive	ασκληπιειον	ERROR: Nothing found with those parameters	ασκληπιεια
+2	Dative	ασκληπιειω	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ασκληπιειον	ERROR: Nothing found with those parameters	ασκληπιεια
+4	Vocative	ασκληπιειον	ERROR: Nothing found with those parameters	ασκληπιεια

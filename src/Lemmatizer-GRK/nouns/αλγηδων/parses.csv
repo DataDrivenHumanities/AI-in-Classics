@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αλγηδων	ERROR: Nothing found with those parameters	αλγηδονες
+1	Genitive	αλγηδων	ERROR: Nothing found with those parameters	αλγηδονες
+2	Dative	αλγηδονι	ERROR: Nothing found with those parameters	αλγηδοσι
+3	Accusative	αλγηδονα	ERROR: Nothing found with those parameters	αλγηδονας
+4	Vocative	αλγηδων	ERROR: Nothing found with those parameters	αλγηδονες

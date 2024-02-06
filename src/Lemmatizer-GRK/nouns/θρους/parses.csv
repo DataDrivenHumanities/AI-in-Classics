@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	θρους	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+1	Genitive	θρου	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+2	Dative	θροω	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	θρουν	ERROR: Nothing found with those parameters	θρους
+4	Vocative	θρου	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αχρηστιη	ERROR: Nothing found with those parameters	αχρηστια
+1	Genitive	αχρηστιη	ERROR: Nothing found with those parameters	αχρηστια
+2	Dative	αχρηστια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αχρηστιαν	ERROR: Nothing found with those parameters	αχρηστιας
+4	Vocative	αχρηστιη	ERROR: Nothing found with those parameters	αχρηστια

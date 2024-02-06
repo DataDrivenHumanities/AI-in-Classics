@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ῐμας	ERROR: Nothing found with those parameters	ιμαντες
+1	Genitive	ιμα	ERROR: Nothing found with those parameters	ιμαντες
+2	Dative	ιμαντι	ERROR: Nothing found with those parameters	ιμας
+3	Accusative	ιμαντα	ERROR: Nothing found with those parameters	ιμαντας
+4	Vocative	ιμα	ERROR: Nothing found with those parameters	ιμαντες

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εστιᾱσις	ERROR: Nothing found with those parameters	εστιασεις
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εστιασεις
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εστιασεσι
+3	Accusative	εστιασιν	ERROR: Nothing found with those parameters	εστιᾱσις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εστιασεις

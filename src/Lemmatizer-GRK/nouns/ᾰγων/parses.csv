@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ᾰγων	ERROR: Nothing found with those parameters	αγωνες
+1	Genitive	ᾰγων	ERROR: Nothing found with those parameters	αγωνες
+2	Dative	αγων	ERROR: Nothing found with those parameters	αγωσι
+3	Accusative	αγων	ERROR: Nothing found with those parameters	αγωνας
+4	Vocative	ᾰγων	ERROR: Nothing found with those parameters	αγωνες

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δεινοτης	ERROR: Nothing found with those parameters	δεινοτητες
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	δεινοτητες
+2	Dative	δεινοτητ	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	δεινοτητ	ERROR: Nothing found with those parameters	δεινοτητας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	δεινοτητες

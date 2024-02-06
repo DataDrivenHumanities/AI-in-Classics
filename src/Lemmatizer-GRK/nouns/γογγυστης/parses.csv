@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	γογγυστης	ERROR: Nothing found with those parameters	γογγυσται
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	γογγυσται
+2	Dative	γογγυσται	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	γογγυσται

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ηων	ERROR: Nothing found with those parameters	ηονες
+1	Genitive	ηων	ERROR: Nothing found with those parameters	ηονες
+2	Dative	ηονι	ERROR: Nothing found with those parameters	ηοσιν
+3	Accusative	ηονα	ERROR: Nothing found with those parameters	ηονας
+4	Vocative	ηων	ERROR: Nothing found with those parameters	ηονες

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	απεργᾰσια	ERROR: Nothing found with those parameters	απεργασια
+1	Genitive	απεργᾰσια	ERROR: Nothing found with those parameters	απεργασια
+2	Dative	απεργασια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	απεργασιαν	ERROR: Nothing found with those parameters	απεργασιας
+4	Vocative	απεργᾰσια	ERROR: Nothing found with those parameters	απεργασια

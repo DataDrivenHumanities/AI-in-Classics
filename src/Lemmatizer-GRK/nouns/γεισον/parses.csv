@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	γεισον	ERROR: Nothing found with those parameters	γεις
+1	Genitive	γεισον	ERROR: Nothing found with those parameters	γεις
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	γεισοις
+3	Accusative	γεισον	ERROR: Nothing found with those parameters	γεις
+4	Vocative	γεισον	ERROR: Nothing found with those parameters	γεις

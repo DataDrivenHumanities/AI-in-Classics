@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αρις	ERROR: Nothing found with those parameters	αριδες
+1	Genitive	αρ	ERROR: Nothing found with those parameters	αριδες
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αριν	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	αρ	ERROR: Nothing found with those parameters	αριδες

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αμφορευς	ERROR: Nothing found with those parameters	αμφορης
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αμφορης
+2	Dative	αμφορει	ERROR: Nothing found with those parameters	αμφορευσιν
+3	Accusative	αμφορη	ERROR: Nothing found with those parameters	αμφορεις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αμφορης

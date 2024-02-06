@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	θημων	ERROR: Nothing found with those parameters	θημωνες
+1	Genitive	θημων	ERROR: Nothing found with those parameters	θημωνες
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	θημωνα	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	θημων	ERROR: Nothing found with those parameters	θημωνες

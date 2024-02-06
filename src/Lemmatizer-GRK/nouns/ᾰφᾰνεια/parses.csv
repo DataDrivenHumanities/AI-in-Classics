@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ᾰφᾰνεια	ERROR: Nothing found with those parameters	αφανεια
+1	Genitive	ᾰφᾰνεια	ERROR: Nothing found with those parameters	αφανεια
+2	Dative	αφανεια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αφανειαν	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	ᾰφᾰνεια	ERROR: Nothing found with those parameters	αφανεια

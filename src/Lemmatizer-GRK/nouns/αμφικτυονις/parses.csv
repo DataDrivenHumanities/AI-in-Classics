@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αμφικτυονις	ERROR: Nothing found with those parameters	αμφικτυονιδες
+1	Genitive	αμφικτυον	ERROR: Nothing found with those parameters	αμφικτυονιδες
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αμφικτυονιδα	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	αμφικτυον	ERROR: Nothing found with those parameters	αμφικτυονιδες

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αγκῠλοχηλης	ERROR: Nothing found with those parameters	αγκυλοχηλαι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αγκυλοχηλαι
+2	Dative	αγκυλοχηλαι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αγκυλοχηλαι

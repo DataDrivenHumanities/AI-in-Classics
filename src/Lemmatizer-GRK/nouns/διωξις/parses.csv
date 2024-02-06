@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	διωξις	ERROR: Nothing found with those parameters	διωξεις
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	διωξεις
+2	Dative	διωξη	ERROR: Nothing found with those parameters	διωξεσι
+3	Accusative	διωξιν	ERROR: Nothing found with those parameters	διωξις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	διωξεις

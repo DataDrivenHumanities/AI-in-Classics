@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εφηβος	ERROR: Nothing found with those parameters	εφηβοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εφηβοι
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εφηβοις
+3	Accusative	εφηβον	ERROR: Nothing found with those parameters	εφηβους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εφηβοι

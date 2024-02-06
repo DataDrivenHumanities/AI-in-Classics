@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ασπιστης	ERROR: Nothing found with those parameters	ασπισται
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ασπισται
+2	Dative	ασπισται	ERROR: Nothing found with those parameters	ασπισταις
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ασπιστας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ασπισται

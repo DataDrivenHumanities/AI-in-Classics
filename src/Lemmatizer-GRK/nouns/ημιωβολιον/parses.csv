@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ημιωβολιον	ERROR: Nothing found with those parameters	ημιωβολια
+1	Genitive	ημιωβολιον	ERROR: Nothing found with those parameters	ημιωβολια
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ημιωβολιον	ERROR: Nothing found with those parameters	ημιωβολια
+4	Vocative	ημιωβολιον	ERROR: Nothing found with those parameters	ημιωβολια

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αντρον	ERROR: Nothing found with those parameters	αντρ
+1	Genitive	αντρον	ERROR: Nothing found with those parameters	αντρ
+2	Dative	αντρω	ERROR: Nothing found with those parameters	αντροις
+3	Accusative	αντρον	ERROR: Nothing found with those parameters	αντρ
+4	Vocative	αντρον	ERROR: Nothing found with those parameters	αντρ

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εμβᾰσις	ERROR: Nothing found with those parameters	εμβασης
+1	Genitive	εμβασι	ERROR: Nothing found with those parameters	εμβασης
+2	Dative	εμβασι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	εμβασιν	ERROR: Nothing found with those parameters	εμβᾰσις
+4	Vocative	εμβασι	ERROR: Nothing found with those parameters	εμβασης

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	θρηκα	ERROR: Nothing found with those parameters	θρακ
+1	Genitive	θρηκα	ERROR: Nothing found with those parameters	θρακ
+2	Dative	θρακ	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	θρηκην	ERROR: Nothing found with those parameters	θρακας
+4	Vocative	θρηκα	ERROR: Nothing found with those parameters	θρακ

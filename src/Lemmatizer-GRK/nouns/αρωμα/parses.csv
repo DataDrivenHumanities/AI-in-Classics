@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αρωμα	ERROR: Nothing found with those parameters	αρωματα
+1	Genitive	αρωμα	ERROR: Nothing found with those parameters	αρωματα
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αρωμα	ERROR: Nothing found with those parameters	αρωματα
+4	Vocative	αρωμα	ERROR: Nothing found with those parameters	αρωματα

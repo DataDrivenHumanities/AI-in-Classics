@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αρδις	ERROR: Nothing found with those parameters	αρδεις
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αρδεις
+2	Dative	αρδη	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αρδεα	ERROR: Nothing found with those parameters	αρδις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αρδεις

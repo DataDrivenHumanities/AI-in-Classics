@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	καθεξις	ERROR: Nothing found with those parameters	καθεξης
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	καθεξης
+2	Dative	καθεξει	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	καθεξιν	ERROR: Nothing found with those parameters	καθεξις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	καθεξης

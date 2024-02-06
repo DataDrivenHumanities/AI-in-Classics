@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ωγη	ERROR: Nothing found with those parameters	αγ
+1	Genitive	ωγη	ERROR: Nothing found with those parameters	αγ
+2	Dative	αγ	ERROR: Nothing found with those parameters	αγης
+3	Accusative	ᾰγην	ERROR: Nothing found with those parameters	αγας
+4	Vocative	ωγη	ERROR: Nothing found with those parameters	αγ

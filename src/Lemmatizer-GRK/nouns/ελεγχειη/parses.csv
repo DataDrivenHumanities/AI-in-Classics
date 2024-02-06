@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ελεγχειη	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+1	Genitive	ελεγχειη	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ελεγχειην	ERROR: Nothing found with those parameters	ελεγχειας
+4	Vocative	ελεγχειη	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters

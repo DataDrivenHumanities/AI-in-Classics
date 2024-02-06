@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	απειλη	ERROR: Nothing found with those parameters	απειλα
+1	Genitive	απειλη	ERROR: Nothing found with those parameters	απειλα
+2	Dative	απειλη	ERROR: Nothing found with those parameters	απειλαις
+3	Accusative	απειλην	ERROR: Nothing found with those parameters	απειλας
+4	Vocative	απειλη	ERROR: Nothing found with those parameters	απειλα

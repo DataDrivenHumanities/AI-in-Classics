@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ιερομνημων	ERROR: Nothing found with those parameters	ιερομνημονες
+1	Genitive	ιερομνημων	ERROR: Nothing found with those parameters	ιερομνημονες
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ιερομναμονεσσι
+3	Accusative	ιερομνημονα	ERROR: Nothing found with those parameters	ιερομνημονας
+4	Vocative	ιερομνημων	ERROR: Nothing found with those parameters	ιερομνημονες

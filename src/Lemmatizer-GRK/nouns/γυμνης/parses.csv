@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	γυμνης	ERROR: Nothing found with those parameters	γυμνητες
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	γυμνητες
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	γυμνητα	ERROR: Nothing found with those parameters	γυμνητας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	γυμνητες

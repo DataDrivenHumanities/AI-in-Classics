@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ιπποτοξοτης	ERROR: Nothing found with those parameters	ιπποτοξοται
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ιπποτοξοται
+2	Dative	ιπποτοξοται	ERROR: Nothing found with those parameters	ιπποτοξοταις
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ιπποτοξοτας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ιπποτοξοται

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βλᾱκεια	ERROR: Nothing found with those parameters	βλακεια
+1	Genitive	βλᾱκεια	ERROR: Nothing found with those parameters	βλακεια
+2	Dative	βλακεια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	βλακειαν	ERROR: Nothing found with those parameters	βλακειας
+4	Vocative	βλᾱκεια	ERROR: Nothing found with those parameters	βλακεια

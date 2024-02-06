@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	διαφορα	ERROR: Nothing found with those parameters	διαφορ
+1	Genitive	διαφορα	ERROR: Nothing found with those parameters	διαφορ
+2	Dative	διαφορ	ERROR: Nothing found with those parameters	διαφοραις
+3	Accusative	διαφορην	ERROR: Nothing found with those parameters	διαφορας
+4	Vocative	διαφορα	ERROR: Nothing found with those parameters	διαφορ

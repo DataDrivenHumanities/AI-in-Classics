@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ερεβινθος	ERROR: Nothing found with those parameters	ερεβινθοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ερεβινθοι
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ερεβινθον	ERROR: Nothing found with those parameters	ερεβινθους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ερεβινθοι

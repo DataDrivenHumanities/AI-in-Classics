@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ζωγρια	ERROR: Nothing found with those parameters	ζωγρια
+1	Genitive	ζωγρια	ERROR: Nothing found with those parameters	ζωγρια
+2	Dative	ζωγριη	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ζωγριαν	ERROR: Nothing found with those parameters	ζωγριας
+4	Vocative	ζωγρια	ERROR: Nothing found with those parameters	ζωγρια

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αγῠρτης	ERROR: Nothing found with those parameters	αγυρται
+1	Genitive	αγῠρτρια	ERROR: Nothing found with those parameters	αγυρται
+2	Dative	αγυρται	ERROR: Nothing found with those parameters	αγυρταις
+3	Accusative	αγυρτην	ERROR: Nothing found with those parameters	αγυρτας
+4	Vocative	αγῠρτρια	ERROR: Nothing found with those parameters	αγυρται

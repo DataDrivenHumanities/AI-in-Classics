@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ερᾰνος	ERROR: Nothing found with those parameters	ερανοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ερανοι
+2	Dative	ερανω	ERROR: Nothing found with those parameters	ερανοις
+3	Accusative	ερανον	ERROR: Nothing found with those parameters	ερανως
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ερανοι

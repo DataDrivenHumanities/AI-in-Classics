@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	επιδεσμος	ERROR: Nothing found with those parameters	επιδεσμοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	επιδεσμοι
+2	Dative	επιδεσμω	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	επιδεσμον	ERROR: Nothing found with those parameters	επιδεσμους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	επιδεσμοι

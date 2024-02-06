@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αριστηιον	ERROR: Nothing found with those parameters	αριστει
+1	Genitive	αριστηιον	ERROR: Nothing found with those parameters	αριστει
+2	Dative	αριστειω	ERROR: Nothing found with those parameters	αριστειοις
+3	Accusative	αριστηιον	ERROR: Nothing found with those parameters	αριστει
+4	Vocative	αριστηιον	ERROR: Nothing found with those parameters	αριστει

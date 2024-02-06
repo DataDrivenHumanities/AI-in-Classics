@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αγρυπνια	ERROR: Nothing found with those parameters	αγρυπνια
+1	Genitive	αγρυπνια	ERROR: Nothing found with those parameters	αγρυπνια
+2	Dative	αγρυπνια	ERROR: Nothing found with those parameters	αγρυπνιησι
+3	Accusative	αγρυπνιαν	ERROR: Nothing found with those parameters	αγρυπνιας
+4	Vocative	αγρυπνια	ERROR: Nothing found with those parameters	αγρυπνια

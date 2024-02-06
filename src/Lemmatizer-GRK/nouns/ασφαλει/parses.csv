@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ασφαλει	ERROR: Nothing found with those parameters	ασφαλει
+1	Genitive	ασφαλει	ERROR: Nothing found with those parameters	ασφαλει
+2	Dative	ασφαλει	ERROR: Nothing found with those parameters	ασφαλειαις
+3	Accusative	ασφαλειαν	ERROR: Nothing found with those parameters	ασφαλειας
+4	Vocative	ασφαλει	ERROR: Nothing found with those parameters	ασφαλει

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ιερᾱτεια	ERROR: Nothing found with those parameters	ιερατειαι
+1	Genitive	ιερᾱτεια	ERROR: Nothing found with those parameters	ιερατειαι
+2	Dative	ιερατειαι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ιερατειαν	ERROR: Nothing found with those parameters	ιερατειας
+4	Vocative	ιερᾱτεια	ERROR: Nothing found with those parameters	ιερατειαι

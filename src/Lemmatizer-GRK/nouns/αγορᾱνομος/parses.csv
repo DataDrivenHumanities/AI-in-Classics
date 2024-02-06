@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αγορᾱνομος	ERROR: Nothing found with those parameters	αγορανομοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αγορανομοι
+2	Dative	αγορανομω	ERROR: Nothing found with those parameters	αγορανομοις
+3	Accusative	αγορανομον	ERROR: Nothing found with those parameters	αγορανομους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αγορανομοι

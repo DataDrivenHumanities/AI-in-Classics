@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	γηρας	ERROR: Nothing found with those parameters	γηρα
+1	Genitive	γηρας	ERROR: Nothing found with those parameters	γηρα
+2	Dative	γηρα	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	γηρας	ERROR: Nothing found with those parameters	γηρα
+4	Vocative	γηρας	ERROR: Nothing found with those parameters	γηρα

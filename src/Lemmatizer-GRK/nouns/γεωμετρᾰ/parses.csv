@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	γεωμετρᾰ	ERROR: Nothing found with those parameters	γεωμετραι
+1	Genitive	γεωμετρᾰ	ERROR: Nothing found with those parameters	γεωμετραι
+2	Dative	γεωμετρη	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	γεωμετρην	ERROR: Nothing found with those parameters	γεωμετρας
+4	Vocative	γεωμετρᾰ	ERROR: Nothing found with those parameters	γεωμετραι

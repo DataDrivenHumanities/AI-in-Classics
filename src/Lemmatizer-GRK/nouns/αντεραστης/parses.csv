@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αντεραστης	ERROR: Nothing found with those parameters	αντερασται
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αντερασται
+2	Dative	αντερασται	ERROR: Nothing found with those parameters	αντερασταις
+3	Accusative	αντεραστην	ERROR: Nothing found with those parameters	αντεραστας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αντερασται

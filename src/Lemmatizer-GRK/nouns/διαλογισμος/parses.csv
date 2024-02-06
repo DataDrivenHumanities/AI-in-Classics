@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	διαλογισμος	ERROR: Nothing found with those parameters	διαλογισμοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	διαλογισμοι
+2	Dative	διαλογισμω	ERROR: Nothing found with those parameters	διαλογισμοις
+3	Accusative	διαλογισμον	ERROR: Nothing found with those parameters	διαλογισμους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	διαλογισμοι

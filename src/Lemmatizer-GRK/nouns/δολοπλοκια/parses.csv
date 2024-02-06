@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δολοπλοκια	ERROR: Nothing found with those parameters	δολοπλοκιαι
+1	Genitive	δολοπλοκια	ERROR: Nothing found with those parameters	δολοπλοκιαι
+2	Dative	δολοπλοκιαι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	δολοπλοκια	ERROR: Nothing found with those parameters	δολοπλοκιαι

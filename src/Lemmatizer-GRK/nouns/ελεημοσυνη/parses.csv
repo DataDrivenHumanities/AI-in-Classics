@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ελεημοσυνη	ERROR: Nothing found with those parameters	ελεημοσυναι
+1	Genitive	ελεημοσυνη	ERROR: Nothing found with those parameters	ελεημοσυναι
+2	Dative	ελεημοσυναι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ελεημοσυνην	ERROR: Nothing found with those parameters	ελεημοσυνας
+4	Vocative	ελεημοσυνη	ERROR: Nothing found with those parameters	ελεημοσυναι

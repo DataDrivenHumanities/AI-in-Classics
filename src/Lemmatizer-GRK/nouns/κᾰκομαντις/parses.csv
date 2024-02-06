@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	κᾰκομαντις	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+1	Genitive	κακομαντι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+2	Dative	κακομαντι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	κακομαντιν	ERROR: Nothing found with those parameters	κᾰκομαντις
+4	Vocative	κακομαντι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters

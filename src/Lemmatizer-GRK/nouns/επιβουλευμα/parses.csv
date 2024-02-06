@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	επιβουλευμα	ERROR: Nothing found with those parameters	επιβουλευματα
+1	Genitive	επιβουλευμα	ERROR: Nothing found with those parameters	επιβουλευματα
+2	Dative	επιβουλευματι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	επιβουλευμα	ERROR: Nothing found with those parameters	επιβουλευματα
+4	Vocative	επιβουλευμα	ERROR: Nothing found with those parameters	επιβουλευματα

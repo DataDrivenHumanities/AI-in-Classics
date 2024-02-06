@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αρμᾰτηλᾰτας	ERROR: Nothing found with those parameters	αρματηλαται
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αρματηλαται
+2	Dative	αρματηλαται	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αρμᾰτηλᾰτας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αρματηλαται

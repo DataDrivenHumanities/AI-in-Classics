@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βηταρμων	ERROR: Nothing found with those parameters	βηταρμονες
+1	Genitive	βηταρμον	ERROR: Nothing found with those parameters	βηταρμονες
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βηταρμονας
+4	Vocative	βηταρμον	ERROR: Nothing found with those parameters	βηταρμονες

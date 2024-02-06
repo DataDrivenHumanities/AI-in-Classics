@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	επικριον	ERROR: Nothing found with those parameters	επικρια
+1	Genitive	επικριον	ERROR: Nothing found with those parameters	επικρια
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	επικριον	ERROR: Nothing found with those parameters	επικρια
+4	Vocative	επικριον	ERROR: Nothing found with those parameters	επικρια

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ευθῠδῐκια	ERROR: Nothing found with those parameters	ευθυδικια
+1	Genitive	ευθῠδῐκια	ERROR: Nothing found with those parameters	ευθυδικια
+2	Dative	ευθυδικια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ευθυδικιαν	ERROR: Nothing found with those parameters	ευθυδικιας
+4	Vocative	ευθῠδῐκια	ERROR: Nothing found with those parameters	ευθυδικια

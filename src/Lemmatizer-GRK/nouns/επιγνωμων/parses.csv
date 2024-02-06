@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	επιγνωμων	ERROR: Nothing found with those parameters	επιγνωμονες
+1	Genitive	επιγνωμων	ERROR: Nothing found with those parameters	επιγνωμονες
+2	Dative	επιγνωμον	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	επιγνωμον	ERROR: Nothing found with those parameters	επιγνωμονας
+4	Vocative	επιγνωμων	ERROR: Nothing found with those parameters	επιγνωμονες

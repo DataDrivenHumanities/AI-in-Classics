@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ζιζανιον	ERROR: Nothing found with those parameters	ζιζανια
+1	Genitive	ζιζανιον	ERROR: Nothing found with those parameters	ζιζανια
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ζιζανιον	ERROR: Nothing found with those parameters	ζιζανια
+4	Vocative	ζιζανιον	ERROR: Nothing found with those parameters	ζιζανια

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ελεφαντοπους	ERROR: Nothing found with those parameters	ελεφαντοποδες
+1	Genitive	ελεφαντοπους	ERROR: Nothing found with those parameters	ελεφαντοποδες
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	ελεφαντοπους	ERROR: Nothing found with those parameters	ελεφαντοποδες

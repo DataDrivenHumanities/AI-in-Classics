@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αιμας	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+1	Genitive	αιμ	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αιμασι
+3	Accusative	αιμαδα	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	αιμ	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters

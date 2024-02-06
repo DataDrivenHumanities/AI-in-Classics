@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αθεραπευσια	ERROR: Nothing found with those parameters	αθεραπευσιαι
+1	Genitive	αθεραπευσια	ERROR: Nothing found with those parameters	αθεραπευσιαι
+2	Dative	αθεραπευσιαι	ERROR: Nothing found with those parameters	αθεραπευσιαις
+3	Accusative	αθεραπευσιαν	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	αθεραπευσια	ERROR: Nothing found with those parameters	αθεραπευσιαι

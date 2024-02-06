@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αγκυλη	ERROR: Nothing found with those parameters	αγκυλαι
+1	Genitive	αγκυλη	ERROR: Nothing found with those parameters	αγκυλαι
+2	Dative	αγκυλη	ERROR: Nothing found with those parameters	αγκυλαις
+3	Accusative	αγκυλαν	ERROR: Nothing found with those parameters	αγκυλας
+4	Vocative	αγκυλη	ERROR: Nothing found with those parameters	αγκυλαι

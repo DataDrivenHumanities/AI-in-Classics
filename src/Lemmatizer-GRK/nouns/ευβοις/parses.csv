@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ευβοις	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+1	Genitive	ευβοι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ευβοιδα	ERROR: Nothing found with those parameters	ευβοιδας
+4	Vocative	ευβοι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters

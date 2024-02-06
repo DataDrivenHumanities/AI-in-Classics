@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ηπειρος	ERROR: Nothing found with those parameters	ηπειροι
+1	Genitive	απειρ	ERROR: Nothing found with those parameters	ηπειροι
+2	Dative	ηπειρω	ERROR: Nothing found with those parameters	ηπειροις
+3	Accusative	ηπειρον	ERROR: Nothing found with those parameters	απειρως
+4	Vocative	απειρ	ERROR: Nothing found with those parameters	ηπειροι

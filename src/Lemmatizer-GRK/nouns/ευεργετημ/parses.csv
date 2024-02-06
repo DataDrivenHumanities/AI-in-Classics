@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ευεργετημ	ERROR: Nothing found with those parameters	ευεργετηματ
+1	Genitive	ευεργετημ	ERROR: Nothing found with those parameters	ευεργετηματ
+2	Dative	ευεργετηματ	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ευεργετημ	ERROR: Nothing found with those parameters	ευεργετηματ
+4	Vocative	ευεργετημ	ERROR: Nothing found with those parameters	ευεργετηματ

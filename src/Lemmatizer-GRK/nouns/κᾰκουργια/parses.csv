@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	κᾰκουργια	ERROR: Nothing found with those parameters	κακουργια
+1	Genitive	κᾰκουργια	ERROR: Nothing found with those parameters	κακουργια
+2	Dative	κακουργια	ERROR: Nothing found with those parameters	κακουργιαις
+3	Accusative	κακουργιαν	ERROR: Nothing found with those parameters	κακουργιας
+4	Vocative	κᾰκουργια	ERROR: Nothing found with those parameters	κακουργια

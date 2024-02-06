@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	θᾰλεια	ERROR: Nothing found with those parameters	θαλειαι
+1	Genitive	θᾰλεια	ERROR: Nothing found with those parameters	θαλειαι
+2	Dative	θαλειη	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	θαλειαν	ERROR: Nothing found with those parameters	θαλειας
+4	Vocative	θᾰλεια	ERROR: Nothing found with those parameters	θαλειαι

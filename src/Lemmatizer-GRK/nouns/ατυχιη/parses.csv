@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ατυχιη	ERROR: Nothing found with those parameters	ατυχια
+1	Genitive	ατυχιη	ERROR: Nothing found with those parameters	ατυχια
+2	Dative	ατυχια	ERROR: Nothing found with those parameters	ατυχιαις
+3	Accusative	ατυχιαν	ERROR: Nothing found with those parameters	ατυχιας
+4	Vocative	ατυχιη	ERROR: Nothing found with those parameters	ατυχια

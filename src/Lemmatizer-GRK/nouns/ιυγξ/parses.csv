@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ιυγξ	ERROR: Nothing found with those parameters	ιυγγες
+1	Genitive	ιυγξ	ERROR: Nothing found with those parameters	ιυγγες
+2	Dative	ιυγγ	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ιυγγ	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	ιυγξ	ERROR: Nothing found with those parameters	ιυγγες

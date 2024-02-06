@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αισθητηριον	ERROR: Nothing found with those parameters	τασθητηρια
+1	Genitive	αισθητηριον	ERROR: Nothing found with those parameters	τασθητηρια
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αισθητηριοις
+3	Accusative	αισθητηριον	ERROR: Nothing found with those parameters	τασθητηρια
+4	Vocative	αισθητηριον	ERROR: Nothing found with those parameters	τασθητηρια

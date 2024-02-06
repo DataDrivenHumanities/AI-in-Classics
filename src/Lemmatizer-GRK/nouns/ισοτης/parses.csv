@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ισοτης	ERROR: Nothing found with those parameters	ισοτητες
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ισοτητες
+2	Dative	ισοτητι	ERROR: Nothing found with those parameters	ισοτησιν
+3	Accusative	ισοτητα	ERROR: Nothing found with those parameters	ισοτητας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ισοτητες

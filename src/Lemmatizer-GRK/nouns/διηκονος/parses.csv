@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	διηκονος	ERROR: Nothing found with those parameters	διακονοι
+1	Genitive	διακονε	ERROR: Nothing found with those parameters	διακονοι
+2	Dative	διακονω	ERROR: Nothing found with those parameters	διακονοις
+3	Accusative	διηκονον	ERROR: Nothing found with those parameters	διηκονους
+4	Vocative	διακονε	ERROR: Nothing found with those parameters	διακονοι

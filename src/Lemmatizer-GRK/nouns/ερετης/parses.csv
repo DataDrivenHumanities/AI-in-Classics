@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ερετης	ERROR: Nothing found with those parameters	ερεται
+1	Genitive	ερετη	ERROR: Nothing found with those parameters	ερεται
+2	Dative	ταρετη	ERROR: Nothing found with those parameters	ερετησι
+3	Accusative	ερετην	ERROR: Nothing found with those parameters	ερετας
+4	Vocative	ερετη	ERROR: Nothing found with those parameters	ερεται

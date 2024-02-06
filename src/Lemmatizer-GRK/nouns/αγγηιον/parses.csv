@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αγγηιον	ERROR: Nothing found with those parameters	αγγηια
+1	Genitive	αγγηιον	ERROR: Nothing found with those parameters	αγγηια
+2	Dative	αγγειω	ERROR: Nothing found with those parameters	αγγειοις
+3	Accusative	αγγηιον	ERROR: Nothing found with those parameters	αγγηια
+4	Vocative	αγγηιον	ERROR: Nothing found with those parameters	αγγηια

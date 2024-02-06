@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αρχη	ERROR: Nothing found with those parameters	αρχ
+1	Genitive	αρχη	ERROR: Nothing found with those parameters	αρχ
+2	Dative	αρχ	ERROR: Nothing found with those parameters	αρχης
+3	Accusative	αρχην	ERROR: Nothing found with those parameters	αρχας
+4	Vocative	αρχη	ERROR: Nothing found with those parameters	αρχ

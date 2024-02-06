@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ιβις	ERROR: Nothing found with those parameters	ιβιες
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ιβιες
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ιβεσι
+3	Accusative	ιβιν	ERROR: Nothing found with those parameters	ιβις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ιβιες

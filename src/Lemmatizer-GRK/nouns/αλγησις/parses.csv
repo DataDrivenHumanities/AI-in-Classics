@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αλγησις	ERROR: Nothing found with those parameters	αλγησεις
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αλγησεις
+2	Dative	αλγησει	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αλγησιν	ERROR: Nothing found with those parameters	αλγησις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αλγησεις

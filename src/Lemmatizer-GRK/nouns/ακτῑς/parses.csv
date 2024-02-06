@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ακτῑς	ERROR: Nothing found with those parameters	ακτινες
+1	Genitive	ακτῑς	ERROR: Nothing found with those parameters	ακτινες
+2	Dative	ακτιν	ERROR: Nothing found with those parameters	ακτισι
+3	Accusative	ακτιν	ERROR: Nothing found with those parameters	ακτινας
+4	Vocative	ακτῑς	ERROR: Nothing found with those parameters	ακτινες

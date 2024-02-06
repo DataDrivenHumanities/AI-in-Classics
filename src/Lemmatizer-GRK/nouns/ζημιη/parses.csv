@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ζημιη	ERROR: Nothing found with those parameters	ζημια
+1	Genitive	ζημιη	ERROR: Nothing found with those parameters	ζημια
+2	Dative	ζημια	ERROR: Nothing found with those parameters	ζημιαις
+3	Accusative	ζημιην	ERROR: Nothing found with those parameters	ζημιας
+4	Vocative	ζημιη	ERROR: Nothing found with those parameters	ζημια

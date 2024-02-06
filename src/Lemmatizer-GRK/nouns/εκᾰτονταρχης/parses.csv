@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εκᾰτονταρχης	ERROR: Nothing found with those parameters	εκατονταρχαι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εκατονταρχαι
+2	Dative	εκατονταρχη	ERROR: Nothing found with those parameters	εκατονταρχαις
+3	Accusative	εκατονταρχην	ERROR: Nothing found with those parameters	εκατονταρχας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εκατονταρχαι

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εστιας	ERROR: Nothing found with those parameters	εστιαδες
+1	Genitive	εστια	ERROR: Nothing found with those parameters	εστιαδες
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	εστια	ERROR: Nothing found with those parameters	εστιαδες

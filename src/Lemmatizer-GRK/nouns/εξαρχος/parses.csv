@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εξαρχος	ERROR: Nothing found with those parameters	εξαρχοι
+1	Genitive	εξαρχ	ERROR: Nothing found with those parameters	εξαρχοι
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εξαρχους
+4	Vocative	εξαρχ	ERROR: Nothing found with those parameters	εξαρχοι

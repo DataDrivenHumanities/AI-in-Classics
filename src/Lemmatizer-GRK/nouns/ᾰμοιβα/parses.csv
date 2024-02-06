@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ᾰμοιβα	ERROR: Nothing found with those parameters	αμοιβαι
+1	Genitive	ᾰμοιβα	ERROR: Nothing found with those parameters	αμοιβαι
+2	Dative	αμοιβη	ERROR: Nothing found with those parameters	αμοιβαις
+3	Accusative	αμοιβην	ERROR: Nothing found with those parameters	αμοιβας
+4	Vocative	ᾰμοιβα	ERROR: Nothing found with those parameters	αμοιβαι

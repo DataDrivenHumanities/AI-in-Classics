@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ερμης	ERROR: Nothing found with those parameters	ερμα
+1	Genitive	ερμη	ERROR: Nothing found with those parameters	ερμα
+2	Dative	ερμη	ERROR: Nothing found with those parameters	ερμαις
+3	Accusative	ερμην	ERROR: Nothing found with those parameters	ερμας
+4	Vocative	ερμη	ERROR: Nothing found with those parameters	ερμα

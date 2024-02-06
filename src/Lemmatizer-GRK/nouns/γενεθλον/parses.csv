@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	γενεθλον	ERROR: Nothing found with those parameters	γενεθλ
+1	Genitive	γενεθλον	ERROR: Nothing found with those parameters	γενεθλ
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	γενεθλον	ERROR: Nothing found with those parameters	γενεθλ
+4	Vocative	γενεθλον	ERROR: Nothing found with those parameters	γενεθλ

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	γενετ	ERROR: Nothing found with those parameters	γενετ
+1	Genitive	γενετ	ERROR: Nothing found with those parameters	γενετ
+2	Dative	γενετ	ERROR: Nothing found with those parameters	γενεταις
+3	Accusative	γενετην	ERROR: Nothing found with those parameters	γενετας
+4	Vocative	γενετ	ERROR: Nothing found with those parameters	γενετ

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βουβων	ERROR: Nothing found with those parameters	βουβωνες
+1	Genitive	βουβων	ERROR: Nothing found with those parameters	βουβωνες
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βουβωσι
+3	Accusative	βουβωνα	ERROR: Nothing found with those parameters	βουβωνας
+4	Vocative	βουβων	ERROR: Nothing found with those parameters	βουβωνες

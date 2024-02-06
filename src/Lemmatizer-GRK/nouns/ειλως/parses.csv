@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ειλως	ERROR: Nothing found with those parameters	ειλωται
+1	Genitive	ειλωτα	ERROR: Nothing found with those parameters	ειλωται
+2	Dative	ειλωται	ERROR: Nothing found with those parameters	ειλωσι
+3	Accusative	ειλωτα	ERROR: Nothing found with those parameters	ειλωτας
+4	Vocative	ειλωτα	ERROR: Nothing found with those parameters	ειλωται

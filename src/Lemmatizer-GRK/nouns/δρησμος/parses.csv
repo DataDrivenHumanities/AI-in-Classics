@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δρησμος	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+2	Dative	δρησμω	ERROR: Nothing found with those parameters	δρασμοις
+3	Accusative	δρησμον	ERROR: Nothing found with those parameters	δρασμους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters

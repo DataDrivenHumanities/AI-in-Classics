@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	θυιας	ERROR: Nothing found with those parameters	θυιαδες
+1	Genitive	θυια	ERROR: Nothing found with those parameters	θυιαδες
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	θυιασι
+3	Accusative	θυιαδα	ERROR: Nothing found with those parameters	θυιαδας
+4	Vocative	θυια	ERROR: Nothing found with those parameters	θυιαδες

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δασπλης	ERROR: Nothing found with those parameters	δασπλητες
+1	Genitive	δασπλητι	ERROR: Nothing found with those parameters	δασπλητες
+2	Dative	δασπλητι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	δασπλητα	ERROR: Nothing found with those parameters	δασπλητις
+4	Vocative	δασπλητι	ERROR: Nothing found with those parameters	δασπλητες

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αγκυριον	ERROR: Nothing found with those parameters	αγκυρια
+1	Genitive	αγκυριον	ERROR: Nothing found with those parameters	αγκυρια
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αγκυριον	ERROR: Nothing found with those parameters	αγκυρια
+4	Vocative	αγκυριον	ERROR: Nothing found with those parameters	αγκυρια

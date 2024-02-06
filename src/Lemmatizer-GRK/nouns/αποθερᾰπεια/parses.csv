@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αποθερᾰπεια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+1	Genitive	αποθερᾰπεια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αποθεραπειαν	ERROR: Nothing found with those parameters	αποθεραπειας
+4	Vocative	αποθερᾰπεια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters

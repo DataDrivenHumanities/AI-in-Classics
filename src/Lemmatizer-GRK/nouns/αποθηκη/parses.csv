@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αποθηκη	ERROR: Nothing found with those parameters	αποθηκαι
+1	Genitive	αποθηκη	ERROR: Nothing found with those parameters	αποθηκαι
+2	Dative	αποθηκαι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αποθηκην	ERROR: Nothing found with those parameters	αποθηκας
+4	Vocative	αποθηκη	ERROR: Nothing found with those parameters	αποθηκαι

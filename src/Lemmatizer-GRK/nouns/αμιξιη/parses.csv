@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αμιξιη	ERROR: Nothing found with those parameters	αμιξια
+1	Genitive	αμιξιη	ERROR: Nothing found with those parameters	αμιξια
+2	Dative	αμιξια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αμιξιαν	ERROR: Nothing found with those parameters	αμιξιας
+4	Vocative	αμιξιη	ERROR: Nothing found with those parameters	αμιξια

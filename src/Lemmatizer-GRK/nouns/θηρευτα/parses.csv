@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	θηρευτα	ERROR: Nothing found with those parameters	θηρευται
+1	Genitive	θηρευτα	ERROR: Nothing found with those parameters	θηρευται
+2	Dative	θηρευτη	ERROR: Nothing found with those parameters	θηρευτης
+3	Accusative	θηρευτην	ERROR: Nothing found with those parameters	θηρευτας
+4	Vocative	θηρευτα	ERROR: Nothing found with those parameters	θηρευται

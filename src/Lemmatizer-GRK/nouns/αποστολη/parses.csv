@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αποστολη	ERROR: Nothing found with those parameters	αποστολαι
+1	Genitive	αποστολη	ERROR: Nothing found with those parameters	αποστολαι
+2	Dative	αποστολαι	ERROR: Nothing found with those parameters	αποστολαισιν
+3	Accusative	αποστολην	ERROR: Nothing found with those parameters	αποστολας
+4	Vocative	αποστολη	ERROR: Nothing found with those parameters	αποστολαι

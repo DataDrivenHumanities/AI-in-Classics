@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ατραπος	ERROR: Nothing found with those parameters	ατραποι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ατραποι
+2	Dative	ατραπω	ERROR: Nothing found with those parameters	αταρποις
+3	Accusative	ατραπον	ERROR: Nothing found with those parameters	ατραπους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ατραποι

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δοκιμιον	ERROR: Nothing found with those parameters	δοκιμια
+1	Genitive	δοκιμιον	ERROR: Nothing found with those parameters	δοκιμια
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	δοκιμιον	ERROR: Nothing found with those parameters	δοκιμια
+4	Vocative	δοκιμιον	ERROR: Nothing found with those parameters	δοκιμια

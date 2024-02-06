@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αγριας	ERROR: Nothing found with those parameters	αγριαδες
+1	Genitive	αγρι	ERROR: Nothing found with those parameters	αγριαδες
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αγριαδα	ERROR: Nothing found with those parameters	αγριαδας
+4	Vocative	αγρι	ERROR: Nothing found with those parameters	αγριαδες

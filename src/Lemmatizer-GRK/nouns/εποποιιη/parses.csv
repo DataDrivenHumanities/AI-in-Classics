@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εποποιιη	ERROR: Nothing found with those parameters	εποποιια
+1	Genitive	εποποιιη	ERROR: Nothing found with those parameters	εποποιια
+2	Dative	εποποιια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	εποποιιην	ERROR: Nothing found with those parameters	εποποιιας
+4	Vocative	εποποιιη	ERROR: Nothing found with those parameters	εποποιια

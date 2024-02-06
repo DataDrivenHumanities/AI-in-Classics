@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βλαστος	ERROR: Nothing found with those parameters	βλαστοι
+1	Genitive	βλαστε	ERROR: Nothing found with those parameters	βλαστοι
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	βλαστον	ERROR: Nothing found with those parameters	βλαστους
+4	Vocative	βλαστε	ERROR: Nothing found with those parameters	βλαστοι

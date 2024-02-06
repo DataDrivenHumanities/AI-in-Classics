@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	γοητεια	ERROR: Nothing found with those parameters	γοητεια
+1	Genitive	γοητεια	ERROR: Nothing found with those parameters	γοητεια
+2	Dative	γοητεια	ERROR: Nothing found with those parameters	γοητειαις
+3	Accusative	γοητειαν	ERROR: Nothing found with those parameters	γοητειας
+4	Vocative	γοητεια	ERROR: Nothing found with those parameters	γοητεια

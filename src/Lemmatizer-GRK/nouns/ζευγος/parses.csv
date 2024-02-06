@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ζευγος	ERROR: Nothing found with those parameters	ζευγη
+1	Genitive	ζευγος	ERROR: Nothing found with those parameters	ζευγη
+2	Dative	ζευγει	ERROR: Nothing found with those parameters	ζευγεσι
+3	Accusative	ζευγος	ERROR: Nothing found with those parameters	ζευγη
+4	Vocative	ζευγος	ERROR: Nothing found with those parameters	ζευγη

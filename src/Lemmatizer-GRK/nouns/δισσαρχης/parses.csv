@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δισσαρχης	ERROR: Nothing found with those parameters	δισσαρχαι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	δισσαρχαι
+2	Dative	δισσαρχαι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	δισσαρχας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	δισσαρχαι

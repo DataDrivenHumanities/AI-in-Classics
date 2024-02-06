@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ευνουχος	ERROR: Nothing found with those parameters	ευνουχοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ευνουχοι
+2	Dative	ευνουχω	ERROR: Nothing found with those parameters	ευνουχοις
+3	Accusative	ευνουχον	ERROR: Nothing found with those parameters	ευνουχους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ευνουχοι

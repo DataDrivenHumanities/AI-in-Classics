@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δεσμος	ERROR: Nothing found with those parameters	δεσμ
+1	Genitive	δεσμ	ERROR: Nothing found with those parameters	δεσμ
+2	Dative	δεσμω	ERROR: Nothing found with those parameters	δεσμοις
+3	Accusative	δεσμον	ERROR: Nothing found with those parameters	δεσμ
+4	Vocative	δεσμ	ERROR: Nothing found with those parameters	δεσμ

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εμετος	ERROR: Nothing found with those parameters	εμετοι
+1	Genitive	μετ	ERROR: Nothing found with those parameters	εμετοι
+2	Dative	εμετω	ERROR: Nothing found with those parameters	εμετοις
+3	Accusative	εμετον	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	μετ	ERROR: Nothing found with those parameters	εμετοι

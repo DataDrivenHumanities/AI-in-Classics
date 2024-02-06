@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αμιτροχιτων	ERROR: Nothing found with those parameters	αμιτροχιτωνες
+1	Genitive	αμιτροχιτων	ERROR: Nothing found with those parameters	αμιτροχιτωνες
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αμιτροχιτωνας
+4	Vocative	αμιτροχιτων	ERROR: Nothing found with those parameters	αμιτροχιτωνες

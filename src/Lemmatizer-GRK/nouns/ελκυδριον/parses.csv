@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ελκυδριον	ERROR: Nothing found with those parameters	ελκυδρια
+1	Genitive	ελκυδριον	ERROR: Nothing found with those parameters	ελκυδρια
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ελκυδριον	ERROR: Nothing found with those parameters	ελκυδρια
+4	Vocative	ελκυδριον	ERROR: Nothing found with those parameters	ελκυδρια

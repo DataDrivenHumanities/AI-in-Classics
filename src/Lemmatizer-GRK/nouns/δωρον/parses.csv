@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δωρον	ERROR: Nothing found with those parameters	δωρ
+1	Genitive	δωρον	ERROR: Nothing found with those parameters	δωρ
+2	Dative	δωρω	ERROR: Nothing found with those parameters	δωροις
+3	Accusative	δωρον	ERROR: Nothing found with those parameters	δωρ
+4	Vocative	δωρον	ERROR: Nothing found with those parameters	δωρ

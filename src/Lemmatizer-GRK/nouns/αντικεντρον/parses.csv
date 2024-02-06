@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αντικεντρον	ERROR: Nothing found with those parameters	αντικεντρα
+1	Genitive	αντικεντρον	ERROR: Nothing found with those parameters	αντικεντρα
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αντικεντρον	ERROR: Nothing found with those parameters	αντικεντρα
+4	Vocative	αντικεντρον	ERROR: Nothing found with those parameters	αντικεντρα

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εγχειρημα	ERROR: Nothing found with those parameters	εγχειρηματ
+1	Genitive	εγχειρημα	ERROR: Nothing found with those parameters	εγχειρηματ
+2	Dative	εγχειρηματ	ERROR: Nothing found with those parameters	εγχειρημασιν
+3	Accusative	εγχειρημα	ERROR: Nothing found with those parameters	εγχειρηματ
+4	Vocative	εγχειρημα	ERROR: Nothing found with those parameters	εγχειρηματ

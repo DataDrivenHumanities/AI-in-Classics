@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δρυφακτος	ERROR: Nothing found with those parameters	δρυφακτοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	δρυφακτοι
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	δρυφακτοις
+3	Accusative	δρυφακτον	ERROR: Nothing found with those parameters	δρυφακτους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	δρυφακτοι

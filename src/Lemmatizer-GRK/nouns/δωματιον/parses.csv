@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δωματιον	ERROR: Nothing found with those parameters	δωματια
+1	Genitive	δωματιον	ERROR: Nothing found with those parameters	δωματια
+2	Dative	δωματιω	ERROR: Nothing found with those parameters	δωματιοισιν
+3	Accusative	δωματιον	ERROR: Nothing found with those parameters	δωματια
+4	Vocative	δωματιον	ERROR: Nothing found with those parameters	δωματια

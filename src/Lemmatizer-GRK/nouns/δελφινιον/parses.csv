@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δελφινιον	ERROR: Nothing found with those parameters	δελφινια
+1	Genitive	δελφινιον	ERROR: Nothing found with those parameters	δελφινια
+2	Dative	δελφινιω	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	δελφινιον	ERROR: Nothing found with those parameters	δελφινια
+4	Vocative	δελφινιον	ERROR: Nothing found with those parameters	δελφινια

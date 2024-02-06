@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δοκησις	ERROR: Nothing found with those parameters	δοκησεις
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	δοκησεις
+2	Dative	δοκησει	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	δοκησιν	ERROR: Nothing found with those parameters	δοκησις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	δοκησεις

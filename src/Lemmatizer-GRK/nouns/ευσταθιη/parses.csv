@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ευσταθιη	ERROR: Nothing found with those parameters	ευσταθεια
+1	Genitive	ευσταθιη	ERROR: Nothing found with those parameters	ευσταθεια
+2	Dative	ευσταθεια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ευσταθειαν	ERROR: Nothing found with those parameters	ευσταθειας
+4	Vocative	ευσταθιη	ERROR: Nothing found with those parameters	ευσταθεια

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ειρηνοφυλαξ	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+1	Genitive	ειρηνοφυλαξ	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ειρηνοφυλακα	ERROR: Nothing found with those parameters	ειρηνοφυλακας
+4	Vocative	ειρηνοφυλαξ	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters

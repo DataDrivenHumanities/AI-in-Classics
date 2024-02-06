@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αιγιναιη	ERROR: Nothing found with those parameters	αιγιναια
+1	Genitive	αιγιναιη	ERROR: Nothing found with those parameters	αιγιναια
+2	Dative	αιγιναια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αιγιναιην	ERROR: Nothing found with those parameters	αιγιναιας
+4	Vocative	αιγιναιη	ERROR: Nothing found with those parameters	αιγιναια

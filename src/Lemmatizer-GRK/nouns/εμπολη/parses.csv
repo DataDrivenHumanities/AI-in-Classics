@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εμπολη	ERROR: Nothing found with those parameters	εμπολα
+1	Genitive	εμπολη	ERROR: Nothing found with those parameters	εμπολα
+2	Dative	εμπολα	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	εμπολην	ERROR: Nothing found with those parameters	εμπολας
+4	Vocative	εμπολη	ERROR: Nothing found with those parameters	εμπολα

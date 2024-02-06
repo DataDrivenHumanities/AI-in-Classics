@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αγνωσιη	ERROR: Nothing found with those parameters	αγνωσια
+1	Genitive	αγνωσιη	ERROR: Nothing found with those parameters	αγνωσια
+2	Dative	αγνωσια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αγνωσιαν	ERROR: Nothing found with those parameters	αγνωσιας
+4	Vocative	αγνωσιη	ERROR: Nothing found with those parameters	αγνωσια
