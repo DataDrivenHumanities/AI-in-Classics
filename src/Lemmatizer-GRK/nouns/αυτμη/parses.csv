@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αυτμη	ERROR: Nothing found with those parameters	αυτμαι
+1	Genitive	αυτμη	ERROR: Nothing found with those parameters	αυτμαι
+2	Dative	αυτμη	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αυτμην	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	αυτμη	ERROR: Nothing found with those parameters	αυτμαι

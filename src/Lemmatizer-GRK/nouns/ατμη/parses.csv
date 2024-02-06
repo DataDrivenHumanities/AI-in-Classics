@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ατμη	ERROR: Nothing found with those parameters	ατμοι
+1	Genitive	ατμη	ERROR: Nothing found with those parameters	ατμοι
+2	Dative	ατμω	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ατμον	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	ατμη	ERROR: Nothing found with those parameters	ατμοι

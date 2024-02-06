@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εισαγγελια	ERROR: Nothing found with those parameters	εισαγγελια
+1	Genitive	εισαγγελια	ERROR: Nothing found with those parameters	εισαγγελια
+2	Dative	εισαγγελια	ERROR: Nothing found with those parameters	εισαγγελιαις
+3	Accusative	εισαγγελιαν	ERROR: Nothing found with those parameters	εισαγγελιας
+4	Vocative	εισαγγελια	ERROR: Nothing found with those parameters	εισαγγελια

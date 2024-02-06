@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ιλη	ERROR: Nothing found with those parameters	ιλα
+1	Genitive	ιλη	ERROR: Nothing found with those parameters	ιλα
+2	Dative	ιλα	ERROR: Nothing found with those parameters	ιλαις
+3	Accusative	ιλην	ERROR: Nothing found with those parameters	ιλας
+4	Vocative	ιλη	ERROR: Nothing found with those parameters	ιλα

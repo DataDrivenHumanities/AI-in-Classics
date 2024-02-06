@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εχθρα	ERROR: Nothing found with those parameters	εχθρ
+1	Genitive	εχθρα	ERROR: Nothing found with those parameters	εχθρ
+2	Dative	εχθρ	ERROR: Nothing found with those parameters	εχθραις
+3	Accusative	εχθραν	ERROR: Nothing found with those parameters	εχθρας
+4	Vocative	εχθρα	ERROR: Nothing found with those parameters	εχθρ

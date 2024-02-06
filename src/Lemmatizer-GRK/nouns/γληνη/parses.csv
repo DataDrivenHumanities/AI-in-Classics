@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	γληνη	ERROR: Nothing found with those parameters	γληνα
+1	Genitive	γληνη	ERROR: Nothing found with those parameters	γληνα
+2	Dative	γληνα	ERROR: Nothing found with those parameters	γληναις
+3	Accusative	γληνην	ERROR: Nothing found with those parameters	γληνας
+4	Vocative	γληνη	ERROR: Nothing found with those parameters	γληνα

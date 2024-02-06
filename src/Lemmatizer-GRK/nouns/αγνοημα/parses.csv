@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αγνοημα	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+1	Genitive	αγνοημα	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αγνοημασι
+3	Accusative	αγνοημα	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	αγνοημα	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters

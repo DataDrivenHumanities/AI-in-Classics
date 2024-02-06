@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αποστημα	ERROR: Nothing found with those parameters	αποστηματα
+1	Genitive	αποστημα	ERROR: Nothing found with those parameters	αποστηματα
+2	Dative	αποστηματι	ERROR: Nothing found with those parameters	αποστημασι
+3	Accusative	αποστημα	ERROR: Nothing found with those parameters	αποστηματα
+4	Vocative	αποστημα	ERROR: Nothing found with those parameters	αποστηματα

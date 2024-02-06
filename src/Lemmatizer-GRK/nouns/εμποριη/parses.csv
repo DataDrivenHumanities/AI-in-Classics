@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εμποριη	ERROR: Nothing found with those parameters	ταμπορι
+1	Genitive	εμποριη	ERROR: Nothing found with those parameters	ταμπορι
+2	Dative	ταμπορι	ERROR: Nothing found with those parameters	εμποριαις
+3	Accusative	εμποριην	ERROR: Nothing found with those parameters	εμποριας
+4	Vocative	εμποριη	ERROR: Nothing found with those parameters	ταμπορι

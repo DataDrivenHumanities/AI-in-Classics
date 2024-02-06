@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αποπεμψις	ERROR: Nothing found with those parameters	αποπεμψεις
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αποπεμψεις
+2	Dative	αποπεμψη	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αποπεμψιν	ERROR: Nothing found with those parameters	αποπεμψις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αποπεμψεις

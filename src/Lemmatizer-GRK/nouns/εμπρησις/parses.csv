@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εμπρησις	ERROR: Nothing found with those parameters	εμπρησεις
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εμπρησεις
+2	Dative	εμπρηση	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	εμπρησιν	ERROR: Nothing found with those parameters	εμπρησις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εμπρησεις

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	απονοι	ERROR: Nothing found with those parameters	απονοι
+1	Genitive	απονοι	ERROR: Nothing found with those parameters	απονοι
+2	Dative	απονοι	ERROR: Nothing found with those parameters	απονοιαις
+3	Accusative	απονοιαν	ERROR: Nothing found with those parameters	απονοιας
+4	Vocative	απονοι	ERROR: Nothing found with those parameters	απονοι

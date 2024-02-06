@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ημιπελεκκον	ERROR: Nothing found with those parameters	ημιπελεκκα
+1	Genitive	ημιπελεκκον	ERROR: Nothing found with those parameters	ημιπελεκκα
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ημιπελεκκον	ERROR: Nothing found with those parameters	ημιπελεκκα
+4	Vocative	ημιπελεκκον	ERROR: Nothing found with those parameters	ημιπελεκκα

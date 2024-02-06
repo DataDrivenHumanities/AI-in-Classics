@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αθᾰνᾰσια	ERROR: Nothing found with those parameters	αθανασια
+1	Genitive	αθᾰνᾰσια	ERROR: Nothing found with those parameters	αθανασια
+2	Dative	αθανασια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αθανασιαν	ERROR: Nothing found with those parameters	αθανασιᾱς
+4	Vocative	αθᾰνᾰσια	ERROR: Nothing found with those parameters	αθανασια

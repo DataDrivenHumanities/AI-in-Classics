@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ιστοριη	ERROR: Nothing found with those parameters	ιστορια
+1	Genitive	ιστοριη	ERROR: Nothing found with those parameters	ιστορια
+2	Dative	ιστορια	ERROR: Nothing found with those parameters	ιστοριησι
+3	Accusative	ιστοριην	ERROR: Nothing found with those parameters	ιστοριας
+4	Vocative	ιστοριη	ERROR: Nothing found with those parameters	ιστορια

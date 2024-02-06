@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	γρᾰφευς	ERROR: Nothing found with those parameters	γρᾰφης
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	γρᾰφης
+2	Dative	γραφη	ERROR: Nothing found with those parameters	γραφευσι
+3	Accusative	γρᾰφη	ERROR: Nothing found with those parameters	γραφας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	γρᾰφης

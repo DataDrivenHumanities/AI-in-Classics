@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ιδῐωτειη	ERROR: Nothing found with those parameters	ιδιωτεια
+1	Genitive	ιδῐωτειη	ERROR: Nothing found with those parameters	ιδιωτεια
+2	Dative	ιδιωτεια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ιδιωτειας
+4	Vocative	ιδῐωτειη	ERROR: Nothing found with those parameters	ιδιωτεια

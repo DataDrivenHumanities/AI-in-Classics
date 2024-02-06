@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ελικωνιας	ERROR: Nothing found with those parameters	ελῐκωνιδες
+1	Genitive	ελικων	ERROR: Nothing found with those parameters	ελῐκωνιδες
+2	Dative	ελικωνιδι	ERROR: Nothing found with those parameters	ελικωνιασιν
+3	Accusative	ελικωνιδα	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	ελικων	ERROR: Nothing found with those parameters	ελῐκωνιδες

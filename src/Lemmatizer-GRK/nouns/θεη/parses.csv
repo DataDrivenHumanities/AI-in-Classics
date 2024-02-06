@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	θεη	ERROR: Nothing found with those parameters	θεα
+1	Genitive	θεη	ERROR: Nothing found with those parameters	θεα
+2	Dative	θεη	ERROR: Nothing found with those parameters	θεης
+3	Accusative	θεαν	ERROR: Nothing found with those parameters	θεας
+4	Vocative	θεη	ERROR: Nothing found with those parameters	θεα

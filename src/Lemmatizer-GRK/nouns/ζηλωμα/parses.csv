@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ζηλωμα	ERROR: Nothing found with those parameters	ζηλωματα
+1	Genitive	ζηλωμα	ERROR: Nothing found with those parameters	ζηλωματα
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ζηλωμα	ERROR: Nothing found with those parameters	ζηλωματα
+4	Vocative	ζηλωμα	ERROR: Nothing found with those parameters	ζηλωματα

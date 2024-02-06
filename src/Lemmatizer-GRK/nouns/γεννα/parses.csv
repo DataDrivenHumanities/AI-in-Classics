@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	γεννα	ERROR: Nothing found with those parameters	γεννα
+1	Genitive	γεννα	ERROR: Nothing found with those parameters	γεννα
+2	Dative	γεννα	ERROR: Nothing found with those parameters	γεννας
+3	Accusative	γενναν	ERROR: Nothing found with those parameters	γεννας
+4	Vocative	γεννα	ERROR: Nothing found with those parameters	γεννα

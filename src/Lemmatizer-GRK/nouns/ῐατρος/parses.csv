@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ῐατρος	ERROR: Nothing found with those parameters	ιητροι
+1	Genitive	ιατρε	ERROR: Nothing found with those parameters	ιητροι
+2	Dative	ιητρω	ERROR: Nothing found with those parameters	ιητροις
+3	Accusative	ῑᾱτρον	ERROR: Nothing found with those parameters	ῑᾱτρους
+4	Vocative	ιατρε	ERROR: Nothing found with those parameters	ιητροι

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αδελφιδη	ERROR: Nothing found with those parameters	αδελφιδαι
+1	Genitive	αδελφιδη	ERROR: Nothing found with those parameters	αδελφιδαι
+2	Dative	αδελφιδαι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αδελφιδην	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	αδελφιδη	ERROR: Nothing found with those parameters	αδελφιδαι

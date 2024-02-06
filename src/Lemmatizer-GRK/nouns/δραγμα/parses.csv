@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δραγμα	ERROR: Nothing found with those parameters	δραγματα
+1	Genitive	δραγμα	ERROR: Nothing found with those parameters	δραγματα
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	δραγμα	ERROR: Nothing found with those parameters	δραγματα
+4	Vocative	δραγμα	ERROR: Nothing found with those parameters	δραγματα

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εντροπια	ERROR: Nothing found with those parameters	εντροπιαι
+1	Genitive	εντροπια	ERROR: Nothing found with those parameters	εντροπιαι
+2	Dative	εντροπιαι	ERROR: Nothing found with those parameters	εντροπιησι
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εντροπιας
+4	Vocative	εντροπια	ERROR: Nothing found with those parameters	εντροπιαι

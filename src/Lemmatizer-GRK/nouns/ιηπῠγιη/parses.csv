@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ιηπῠγιη	ERROR: Nothing found with those parameters	ιαπυγια
+1	Genitive	ιηπῠγιη	ERROR: Nothing found with those parameters	ιαπυγια
+2	Dative	ιαπυγια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ιηπυγιην	ERROR: Nothing found with those parameters	ιαπυγιας
+4	Vocative	ιηπῠγιη	ERROR: Nothing found with those parameters	ιαπυγια

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βλαβος	ERROR: Nothing found with those parameters	βλαβη
+1	Genitive	βλαβος	ERROR: Nothing found with those parameters	βλαβη
+2	Dative	βλαβει	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	βλαβος	ERROR: Nothing found with those parameters	βλαβη
+4	Vocative	βλαβος	ERROR: Nothing found with those parameters	βλαβη

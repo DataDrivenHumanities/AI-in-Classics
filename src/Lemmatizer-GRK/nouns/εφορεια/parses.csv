@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εφορεια	ERROR: Nothing found with those parameters	εφορεια
+1	Genitive	εφορεια	ERROR: Nothing found with those parameters	εφορεια
+2	Dative	εφορεια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	εφορειαν	ERROR: Nothing found with those parameters	εφορειας
+4	Vocative	εφορεια	ERROR: Nothing found with those parameters	εφορεια

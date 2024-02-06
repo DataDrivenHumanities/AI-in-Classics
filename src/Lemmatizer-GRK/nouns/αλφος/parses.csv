@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αλφος	ERROR: Nothing found with those parameters	αλφοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αλφοι
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αλφον	ERROR: Nothing found with those parameters	αλφους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αλφοι

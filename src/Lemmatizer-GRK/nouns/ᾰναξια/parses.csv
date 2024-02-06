@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ᾰναξια	ERROR: Nothing found with those parameters	αναξι
+1	Genitive	ᾰναξια	ERROR: Nothing found with those parameters	αναξι
+2	Dative	αναξι	ERROR: Nothing found with those parameters	αναξιαις
+3	Accusative	αναξιαν	ERROR: Nothing found with those parameters	αναξιας
+4	Vocative	ᾰναξια	ERROR: Nothing found with those parameters	αναξι

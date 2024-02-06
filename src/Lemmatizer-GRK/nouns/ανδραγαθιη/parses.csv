@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ανδραγαθιη	ERROR: Nothing found with those parameters	ανδραγαθια
+1	Genitive	ανδραγαθιη	ERROR: Nothing found with those parameters	ανδραγαθια
+2	Dative	ανδραγαθια	ERROR: Nothing found with those parameters	ανδραγαθιαις
+3	Accusative	ανδραγαθιην	ERROR: Nothing found with those parameters	ανδραγαθιας
+4	Vocative	ανδραγαθιη	ERROR: Nothing found with those parameters	ανδραγαθια

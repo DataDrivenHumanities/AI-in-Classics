@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ακατιον	ERROR: Nothing found with those parameters	ακατια
+1	Genitive	ακατιον	ERROR: Nothing found with those parameters	ακατια
+2	Dative	ακατιω	ERROR: Nothing found with those parameters	ακατιοις
+3	Accusative	ακατιον	ERROR: Nothing found with those parameters	ακατια
+4	Vocative	ακατιον	ERROR: Nothing found with those parameters	ακατια

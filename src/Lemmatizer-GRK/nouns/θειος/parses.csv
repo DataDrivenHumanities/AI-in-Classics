@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	θειος	ERROR: Nothing found with those parameters	θειοι
+1	Genitive	θει	ERROR: Nothing found with those parameters	θειοι
+2	Dative	θειω	ERROR: Nothing found with those parameters	θειοις
+3	Accusative	θειον	ERROR: Nothing found with those parameters	θειως
+4	Vocative	θει	ERROR: Nothing found with those parameters	θειοι

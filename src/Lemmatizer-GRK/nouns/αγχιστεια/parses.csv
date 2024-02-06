@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αγχιστεια	ERROR: Nothing found with those parameters	αγχιστεια
+1	Genitive	αγχιστεια	ERROR: Nothing found with those parameters	αγχιστεια
+2	Dative	αγχιστεια	ERROR: Nothing found with those parameters	αγχιστειαις
+3	Accusative	αγχιστειαν	ERROR: Nothing found with those parameters	αγχιστεια
+4	Vocative	αγχιστεια	ERROR: Nothing found with those parameters	αγχιστεια

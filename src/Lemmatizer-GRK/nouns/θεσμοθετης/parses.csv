@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	θεσμοθετης	ERROR: Nothing found with those parameters	θεσμοθεται
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	θεσμοθεται
+2	Dative	θεσμοθεται	ERROR: Nothing found with those parameters	θεσμοθεταις
+3	Accusative	θεσμοθετην	ERROR: Nothing found with those parameters	θεσμοθετας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	θεσμοθεται

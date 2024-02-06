@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ευεργεσιη	ERROR: Nothing found with those parameters	ευεργεσια
+1	Genitive	ευεργεσιη	ERROR: Nothing found with those parameters	ευεργεσια
+2	Dative	ευεργεσια	ERROR: Nothing found with those parameters	ευεργεσιησι
+3	Accusative	ευεργεσιαν	ERROR: Nothing found with those parameters	ευεργεσιας
+4	Vocative	ευεργεσιη	ERROR: Nothing found with those parameters	ευεργεσια

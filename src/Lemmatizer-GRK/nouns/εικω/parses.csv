@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εικω	ERROR: Nothing found with those parameters	εικως
+1	Genitive	εικων	ERROR: Nothing found with those parameters	εικως
+2	Dative	εικον	ERROR: Nothing found with those parameters	εικος
+3	Accusative	εικω	ERROR: Nothing found with those parameters	εικως
+4	Vocative	εικων	ERROR: Nothing found with those parameters	εικως

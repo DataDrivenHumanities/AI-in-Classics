@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δηλωσις	ERROR: Nothing found with those parameters	δηλωσεις
+1	Genitive	δηλωσι	ERROR: Nothing found with those parameters	δηλωσεις
+2	Dative	δηλωσι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	δηλωσιν	ERROR: Nothing found with those parameters	δηλωσις
+4	Vocative	δηλωσι	ERROR: Nothing found with those parameters	δηλωσεις

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ᾰμιλλα	ERROR: Nothing found with those parameters	αμιλλα
+1	Genitive	ᾰμιλλα	ERROR: Nothing found with those parameters	αμιλλα
+2	Dative	αμιλλα	ERROR: Nothing found with those parameters	αμιλλαις
+3	Accusative	αμιλλαν	ERROR: Nothing found with those parameters	αμιλλας
+4	Vocative	ᾰμιλλα	ERROR: Nothing found with those parameters	αμιλλα

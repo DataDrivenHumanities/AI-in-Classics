@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ευελπις	ERROR: Nothing found with those parameters	ευελπιδα
+1	Genitive	ευελπι	ERROR: Nothing found with those parameters	ευελπιδα
+2	Dative	ευελπιδι	ERROR: Nothing found with those parameters	ευελπισι
+3	Accusative	ευελπιν	ERROR: Nothing found with those parameters	ευελπιδα
+4	Vocative	ευελπι	ERROR: Nothing found with those parameters	ευελπιδα

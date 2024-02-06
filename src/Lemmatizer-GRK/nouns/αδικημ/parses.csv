@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αδικημ	ERROR: Nothing found with those parameters	αδικηματ
+1	Genitive	αδικημ	ERROR: Nothing found with those parameters	αδικηματ
+2	Dative	αδικηματ	ERROR: Nothing found with those parameters	αδικημασι
+3	Accusative	αδικημ	ERROR: Nothing found with those parameters	αδικηματ
+4	Vocative	αδικημ	ERROR: Nothing found with those parameters	αδικηματ

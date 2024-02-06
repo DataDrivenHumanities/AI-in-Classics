@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ιπποδρομος	ERROR: Nothing found with those parameters	ιπποδρομοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ιπποδρομοι
+2	Dative	ιπποδρομω	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ιπποδρομον	ERROR: Nothing found with those parameters	ιπποδρομους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ιπποδρομοι

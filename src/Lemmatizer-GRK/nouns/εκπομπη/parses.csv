@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εκπομπη	ERROR: Nothing found with those parameters	εκπομπαι
+1	Genitive	εκπομπη	ERROR: Nothing found with those parameters	εκπομπαι
+2	Dative	εκπομπαι	ERROR: Nothing found with those parameters	εκπομπαις
+3	Accusative	εκπομπην	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	εκπομπη	ERROR: Nothing found with those parameters	εκπομπαι

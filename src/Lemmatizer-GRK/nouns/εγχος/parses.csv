@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εγχος	ERROR: Nothing found with those parameters	εγχη
+1	Genitive	εγχος	ERROR: Nothing found with those parameters	εγχη
+2	Dative	εγχε	ERROR: Nothing found with those parameters	εγχεσι
+3	Accusative	εγχος	ERROR: Nothing found with those parameters	εγχη
+4	Vocative	εγχος	ERROR: Nothing found with those parameters	εγχη

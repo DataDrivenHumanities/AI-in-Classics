@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αριστοκρᾰτια	ERROR: Nothing found with those parameters	αριστοκρατια
+1	Genitive	αριστοκρᾰτια	ERROR: Nothing found with those parameters	αριστοκρατια
+2	Dative	αριστοκρατια	ERROR: Nothing found with those parameters	αριστοκρατιαις
+3	Accusative	αριστοκρατιαν	ERROR: Nothing found with those parameters	αριστοκρατιας
+4	Vocative	αριστοκρᾰτια	ERROR: Nothing found with those parameters	αριστοκρατια

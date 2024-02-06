@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	γριπος	ERROR: Nothing found with those parameters	γριφοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	γριφοι
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	γριφον	ERROR: Nothing found with those parameters	γριφους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	γριφοι

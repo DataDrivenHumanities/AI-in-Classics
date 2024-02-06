@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αστρον	ERROR: Nothing found with those parameters	αστρ
+1	Genitive	αστρον	ERROR: Nothing found with those parameters	αστρ
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αστροις
+3	Accusative	αστρον	ERROR: Nothing found with those parameters	αστρ
+4	Vocative	αστρον	ERROR: Nothing found with those parameters	αστρ

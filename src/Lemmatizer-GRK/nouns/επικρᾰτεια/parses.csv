@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	επικρᾰτεια	ERROR: Nothing found with those parameters	επικρατεια
+1	Genitive	επικρᾰτεια	ERROR: Nothing found with those parameters	επικρατεια
+2	Dative	επικρατεια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	επικρατειαν	ERROR: Nothing found with those parameters	επικρατειας
+4	Vocative	επικρᾰτεια	ERROR: Nothing found with those parameters	επικρατεια

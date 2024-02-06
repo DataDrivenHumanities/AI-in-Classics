@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	κᾰκοτεχνια	ERROR: Nothing found with those parameters	κακοτεχνια
+1	Genitive	κᾰκοτεχνια	ERROR: Nothing found with those parameters	κακοτεχνια
+2	Dative	κακοτεχνια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	κακοτεχνιην	ERROR: Nothing found with those parameters	κακοτεχνιας
+4	Vocative	κᾰκοτεχνια	ERROR: Nothing found with those parameters	κακοτεχνια

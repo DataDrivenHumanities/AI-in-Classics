@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αποδειλιᾱσις	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+2	Dative	αποδειλιασει	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αποδειλιασιν	ERROR: Nothing found with those parameters	αποδειλιᾱσις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters

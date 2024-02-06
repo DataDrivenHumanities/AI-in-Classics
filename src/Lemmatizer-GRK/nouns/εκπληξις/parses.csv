@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εκπληξις	ERROR: Nothing found with those parameters	εκπληξιες
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εκπληξιες
+2	Dative	εκπληξει	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	εκπληξιν	ERROR: Nothing found with those parameters	εκπληξις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εκπληξιες

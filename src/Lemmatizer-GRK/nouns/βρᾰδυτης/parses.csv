@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βρᾰδυτης	ERROR: Nothing found with those parameters	βραδυτητες
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βραδυτητες
+2	Dative	βραδυτητι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	βραδυτητα	ERROR: Nothing found with those parameters	βραδυτητας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βραδυτητες

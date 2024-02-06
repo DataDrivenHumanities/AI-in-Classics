@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	πικτησις	ERROR: Nothing found with those parameters	επικτησεις
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	επικτησεις
+2	Dative	επικτηση	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	επικτησιν	ERROR: Nothing found with those parameters	πικτησις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	επικτησεις

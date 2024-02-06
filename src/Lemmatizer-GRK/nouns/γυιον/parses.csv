@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	γυιον	ERROR: Nothing found with those parameters	γυια
+1	Genitive	γυιον	ERROR: Nothing found with those parameters	γυια
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	γυιοις
+3	Accusative	γυιον	ERROR: Nothing found with those parameters	γυια
+4	Vocative	γυιον	ERROR: Nothing found with those parameters	γυια

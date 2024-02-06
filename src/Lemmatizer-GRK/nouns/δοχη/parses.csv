@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δοχη	ERROR: Nothing found with those parameters	δοχαι
+1	Genitive	δοχη	ERROR: Nothing found with those parameters	δοχαι
+2	Dative	δοχαι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	δοχην	ERROR: Nothing found with those parameters	δοχας
+4	Vocative	δοχη	ERROR: Nothing found with those parameters	δοχαι

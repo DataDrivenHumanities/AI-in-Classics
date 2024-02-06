@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ιρευς	ERROR: Nothing found with those parameters	ιρης
+1	Genitive	ιερευ	ERROR: Nothing found with those parameters	ιρης
+2	Dative	ιρη	ERROR: Nothing found with those parameters	ιρευσι
+3	Accusative	ιρη	ERROR: Nothing found with those parameters	ιρας
+4	Vocative	ιερευ	ERROR: Nothing found with those parameters	ιρης

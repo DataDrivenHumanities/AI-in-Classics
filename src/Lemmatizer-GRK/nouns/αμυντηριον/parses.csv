@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αμυντηριον	ERROR: Nothing found with those parameters	αμυντηρια
+1	Genitive	αμυντηριον	ERROR: Nothing found with those parameters	αμυντηρια
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αμυντηριοις
+3	Accusative	αμυντηριον	ERROR: Nothing found with those parameters	αμυντηρια
+4	Vocative	αμυντηριον	ERROR: Nothing found with those parameters	αμυντηρια

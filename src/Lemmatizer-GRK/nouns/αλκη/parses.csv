@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αλκη	ERROR: Nothing found with those parameters	αλκα
+1	Genitive	αλκη	ERROR: Nothing found with those parameters	αλκα
+2	Dative	αλκη	ERROR: Nothing found with those parameters	αλκαις
+3	Accusative	αλκην	ERROR: Nothing found with those parameters	αλκας
+4	Vocative	αλκη	ERROR: Nothing found with those parameters	αλκα

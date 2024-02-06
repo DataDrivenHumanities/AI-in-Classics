@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βαλαντιον	ERROR: Nothing found with those parameters	βαλλαντια
+1	Genitive	βαλαντιον	ERROR: Nothing found with those parameters	βαλλαντια
+2	Dative	βαλαντιω	ERROR: Nothing found with those parameters	βαλλαντιοις
+3	Accusative	βαλαντιον	ERROR: Nothing found with those parameters	βαλλαντια
+4	Vocative	βαλαντιον	ERROR: Nothing found with those parameters	βαλλαντια

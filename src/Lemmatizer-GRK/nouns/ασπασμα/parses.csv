@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ασπασμα	ERROR: Nothing found with those parameters	ασπασμαθ
+1	Genitive	ασπασμα	ERROR: Nothing found with those parameters	ασπασμαθ
+2	Dative	ασπασμαθ	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ασπασμα	ERROR: Nothing found with those parameters	ασπασμαθ
+4	Vocative	ασπασμα	ERROR: Nothing found with those parameters	ασπασμαθ

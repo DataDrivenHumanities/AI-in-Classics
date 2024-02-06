@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	επιπολη	ERROR: Nothing found with those parameters	επιπολα
+1	Genitive	επιπολη	ERROR: Nothing found with those parameters	επιπολα
+2	Dative	επιπολη	ERROR: Nothing found with those parameters	επιπολαις
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	επιπολας
+4	Vocative	επιπολη	ERROR: Nothing found with those parameters	επιπολα

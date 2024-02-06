@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εξεδρη	ERROR: Nothing found with those parameters	εξεδρα
+1	Genitive	εξεδρη	ERROR: Nothing found with those parameters	εξεδρα
+2	Dative	εξεδρα	ERROR: Nothing found with those parameters	εξεδραισι
+3	Accusative	εξεδραν	ERROR: Nothing found with those parameters	εξεδρας
+4	Vocative	εξεδρη	ERROR: Nothing found with those parameters	εξεδρα

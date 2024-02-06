@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αρσις	ERROR: Nothing found with those parameters	αρσης
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αρσης
+2	Dative	αρση	ERROR: Nothing found with those parameters	αρσεσι
+3	Accusative	αρσιν	ERROR: Nothing found with those parameters	αρσις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αρσης

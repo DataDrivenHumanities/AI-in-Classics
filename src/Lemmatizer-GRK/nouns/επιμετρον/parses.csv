@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	επιμετρον	ERROR: Nothing found with those parameters	επιμετρα
+1	Genitive	επιμετρον	ERROR: Nothing found with those parameters	επιμετρα
+2	Dative	επιμετρω	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	επιμετρον	ERROR: Nothing found with those parameters	επιμετρα
+4	Vocative	επιμετρον	ERROR: Nothing found with those parameters	επιμετρα

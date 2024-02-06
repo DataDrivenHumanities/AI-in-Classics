@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αντωμοσια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+1	Genitive	αντωμοσια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αντωμοσιαν	ERROR: Nothing found with those parameters	αντωμοσιας
+4	Vocative	αντωμοσια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ακροστολιον	ERROR: Nothing found with those parameters	ακροστολια
+1	Genitive	ακροστολιον	ERROR: Nothing found with those parameters	ακροστολια
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ακροστολιον	ERROR: Nothing found with those parameters	ακροστολια
+4	Vocative	ακροστολιον	ERROR: Nothing found with those parameters	ακροστολια

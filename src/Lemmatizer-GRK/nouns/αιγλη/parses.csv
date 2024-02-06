@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αιγλη	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+1	Genitive	αιγλη	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+2	Dative	αιγλη	ERROR: Nothing found with those parameters	αιγλησιν
+3	Accusative	αιγλην	ERROR: Nothing found with those parameters	αιγλας
+4	Vocative	αιγλη	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters

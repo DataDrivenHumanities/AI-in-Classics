@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ηλιξ	ERROR: Nothing found with those parameters	ηλικες
+1	Genitive	ηλιξ	ERROR: Nothing found with those parameters	ηλικες
+2	Dative	ηλιχ	ERROR: Nothing found with those parameters	ηλιξι
+3	Accusative	ηλιχ	ERROR: Nothing found with those parameters	ηλικας
+4	Vocative	ηλιξ	ERROR: Nothing found with those parameters	ηλικες

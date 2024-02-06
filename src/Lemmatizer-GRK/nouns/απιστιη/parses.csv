@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	απιστιη	ERROR: Nothing found with those parameters	απιστια
+1	Genitive	απιστιη	ERROR: Nothing found with those parameters	απιστια
+2	Dative	απιστιη	ERROR: Nothing found with those parameters	απιστιαις
+3	Accusative	απιστιην	ERROR: Nothing found with those parameters	απιστιας
+4	Vocative	απιστιη	ERROR: Nothing found with those parameters	απιστια

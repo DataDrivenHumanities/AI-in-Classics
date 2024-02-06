@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βουλευτης	ERROR: Nothing found with those parameters	βουλευται
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βουλευται
+2	Dative	βουλευται	ERROR: Nothing found with those parameters	βουλευτησι
+3	Accusative	βουλευτην	ERROR: Nothing found with those parameters	βουλευτας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βουλευται

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βληχη	ERROR: Nothing found with those parameters	βλαχαι
+1	Genitive	βληχη	ERROR: Nothing found with those parameters	βλαχαι
+2	Dative	βλαχαι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	βληχην	ERROR: Nothing found with those parameters	βληχας
+4	Vocative	βληχη	ERROR: Nothing found with those parameters	βλαχαι

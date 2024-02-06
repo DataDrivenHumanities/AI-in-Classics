@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	γοης	ERROR: Nothing found with those parameters	γοητες
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	γοητες
+2	Dative	γοητι	ERROR: Nothing found with those parameters	γοησι
+3	Accusative	γοητα	ERROR: Nothing found with those parameters	γοητας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	γοητες

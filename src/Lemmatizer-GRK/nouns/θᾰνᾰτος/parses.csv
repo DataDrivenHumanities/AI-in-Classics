@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	θᾰνᾰτος	ERROR: Nothing found with those parameters	θανατοι
+1	Genitive	θανατε	ERROR: Nothing found with those parameters	θανατοι
+2	Dative	θανατω	ERROR: Nothing found with those parameters	θανατοις
+3	Accusative	θανατον	ERROR: Nothing found with those parameters	θανατως
+4	Vocative	θανατε	ERROR: Nothing found with those parameters	θανατοι

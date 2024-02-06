@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	πικουρια	ERROR: Nothing found with those parameters	πικουρια
+1	Genitive	πικουρια	ERROR: Nothing found with those parameters	πικουρια
+2	Dative	πικουρια	ERROR: Nothing found with those parameters	επικουριαις
+3	Accusative	επικουριην	ERROR: Nothing found with those parameters	επικουριας
+4	Vocative	πικουρια	ERROR: Nothing found with those parameters	πικουρια

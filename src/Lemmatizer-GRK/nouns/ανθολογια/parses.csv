@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ανθολογια	ERROR: Nothing found with those parameters	ανθολογιαι
+1	Genitive	ανθολογια	ERROR: Nothing found with those parameters	ανθολογιαι
+2	Dative	ανθολογιαι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	ανθολογια	ERROR: Nothing found with those parameters	ανθολογιαι

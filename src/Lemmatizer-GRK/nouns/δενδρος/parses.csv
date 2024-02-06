@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δενδρος	ERROR: Nothing found with those parameters	δενδρη
+1	Genitive	δενδρος	ERROR: Nothing found with those parameters	δενδρη
+2	Dative	δενδρω	ERROR: Nothing found with those parameters	δενδροις
+3	Accusative	δενδρος	ERROR: Nothing found with those parameters	δενδρη
+4	Vocative	δενδρος	ERROR: Nothing found with those parameters	δενδρη

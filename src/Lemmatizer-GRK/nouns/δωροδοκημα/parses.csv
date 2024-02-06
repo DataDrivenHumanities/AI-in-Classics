@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δωροδοκημα	ERROR: Nothing found with those parameters	δωροδοκηματ
+1	Genitive	δωροδοκημα	ERROR: Nothing found with those parameters	δωροδοκηματ
+2	Dative	δωροδοκηματ	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	δωροδοκημα	ERROR: Nothing found with those parameters	δωροδοκηματ
+4	Vocative	δωροδοκημα	ERROR: Nothing found with those parameters	δωροδοκηματ

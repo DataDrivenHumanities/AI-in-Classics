@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	επιστημη	ERROR: Nothing found with those parameters	επιστημαι
+1	Genitive	επιστημη	ERROR: Nothing found with those parameters	επιστημαι
+2	Dative	επιστημη	ERROR: Nothing found with those parameters	επιστημαις
+3	Accusative	επιστημην	ERROR: Nothing found with those parameters	επιστημᾱς
+4	Vocative	επιστημη	ERROR: Nothing found with those parameters	επιστημαι

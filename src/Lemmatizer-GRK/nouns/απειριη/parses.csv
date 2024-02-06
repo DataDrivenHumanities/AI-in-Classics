@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	απειριη	ERROR: Nothing found with those parameters	απειρια
+1	Genitive	απειριη	ERROR: Nothing found with those parameters	απειρια
+2	Dative	απειριη	ERROR: Nothing found with those parameters	απειρειησι
+3	Accusative	απειριαν	ERROR: Nothing found with those parameters	απειριας
+4	Vocative	απειριη	ERROR: Nothing found with those parameters	απειρια

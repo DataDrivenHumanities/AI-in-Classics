@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	γημορος	ERROR: Nothing found with those parameters	γαμοροι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	γαμοροι
+2	Dative	γαμορω	ERROR: Nothing found with those parameters	γεωμοροις
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	γαμορους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	γαμοροι

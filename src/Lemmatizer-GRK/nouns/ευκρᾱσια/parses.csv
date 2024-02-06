@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ευκρᾱσια	ERROR: Nothing found with those parameters	ευκρασια
+1	Genitive	ευκρᾱσια	ERROR: Nothing found with those parameters	ευκρασια
+2	Dative	ευκρασια	ERROR: Nothing found with those parameters	ευκρασιαις
+3	Accusative	ευκρασιαν	ERROR: Nothing found with those parameters	ευκρασιας
+4	Vocative	ευκρᾱσια	ERROR: Nothing found with those parameters	ευκρασια

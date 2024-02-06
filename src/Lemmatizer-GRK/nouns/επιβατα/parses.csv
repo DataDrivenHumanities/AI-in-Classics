@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	επιβατα	ERROR: Nothing found with those parameters	επιβαται
+1	Genitive	επιβατα	ERROR: Nothing found with those parameters	επιβαται
+2	Dative	επιβαται	ERROR: Nothing found with those parameters	επιβαταις
+3	Accusative	επιβατην	ERROR: Nothing found with those parameters	επιβατας
+4	Vocative	επιβατα	ERROR: Nothing found with those parameters	επιβαται

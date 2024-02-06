@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δεκατη	ERROR: Nothing found with those parameters	δεκατα
+1	Genitive	δεκατη	ERROR: Nothing found with those parameters	δεκατα
+2	Dative	δεκατη	ERROR: Nothing found with those parameters	δεκαταις
+3	Accusative	δεκαταν	ERROR: Nothing found with those parameters	δεκατας
+4	Vocative	δεκατη	ERROR: Nothing found with those parameters	δεκατα

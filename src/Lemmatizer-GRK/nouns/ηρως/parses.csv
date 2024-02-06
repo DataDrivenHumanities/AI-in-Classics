@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ηρως	ERROR: Nothing found with those parameters	ηρως
+1	Genitive	ηρως	ERROR: Nothing found with those parameters	ηρως
+2	Dative	ηρω	ERROR: Nothing found with those parameters	ηρωσι
+3	Accusative	ηρω	ERROR: Nothing found with those parameters	ηρως
+4	Vocative	ηρως	ERROR: Nothing found with those parameters	ηρως

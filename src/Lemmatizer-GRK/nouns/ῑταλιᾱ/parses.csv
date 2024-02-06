@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ῑταλιᾱ	ERROR: Nothing found with those parameters	ιταλια
+1	Genitive	ῑταλιᾱ	ERROR: Nothing found with those parameters	ιταλια
+2	Dative	ιταλιη	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ιταλιην	ERROR: Nothing found with those parameters	ιταλιᾱς
+4	Vocative	ῑταλιᾱ	ERROR: Nothing found with those parameters	ιταλια

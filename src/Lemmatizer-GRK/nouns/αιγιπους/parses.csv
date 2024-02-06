@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αιγιπους	ERROR: Nothing found with those parameters	αιγιποδες
+1	Genitive	αιγιποδη	ERROR: Nothing found with those parameters	αιγιποδες
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αιγοποδην	ERROR: Nothing found with those parameters	αιγιποδας
+4	Vocative	αιγιποδη	ERROR: Nothing found with those parameters	αιγιποδες

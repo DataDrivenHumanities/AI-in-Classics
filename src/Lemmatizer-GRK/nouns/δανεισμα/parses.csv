@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δανεισμα	ERROR: Nothing found with those parameters	δανεισματα
+1	Genitive	δανεισμα	ERROR: Nothing found with those parameters	δανεισματα
+2	Dative	δανεισματι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	δανεισμα	ERROR: Nothing found with those parameters	δανεισματα
+4	Vocative	δανεισμα	ERROR: Nothing found with those parameters	δανεισματα

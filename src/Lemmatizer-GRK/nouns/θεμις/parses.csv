@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	θεμις	ERROR: Nothing found with those parameters	θεμιτες
+1	Genitive	θεμι	ERROR: Nothing found with those parameters	θεμιτες
+2	Dative	θεμι	ERROR: Nothing found with those parameters	θεμισσι
+3	Accusative	θεμιτ	ERROR: Nothing found with those parameters	θεμις
+4	Vocative	θεμι	ERROR: Nothing found with those parameters	θεμιτες

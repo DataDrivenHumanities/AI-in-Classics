@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ζωνη	ERROR: Nothing found with those parameters	ζωναι
+1	Genitive	ζωνη	ERROR: Nothing found with those parameters	ζωναι
+2	Dative	ζωνη	ERROR: Nothing found with those parameters	ζωνησι
+3	Accusative	ζωνην	ERROR: Nothing found with those parameters	ζωνας
+4	Vocative	ζωνη	ERROR: Nothing found with those parameters	ζωναι

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αποδοσις	ERROR: Nothing found with those parameters	αποδοσεις
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αποδοσεις
+2	Dative	αποδοσει	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αποδοσιν	ERROR: Nothing found with those parameters	αποδοσις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αποδοσεις

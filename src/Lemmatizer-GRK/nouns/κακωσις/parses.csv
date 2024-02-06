@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	κακωσις	ERROR: Nothing found with those parameters	κακωσιες
+1	Genitive	κακωσι	ERROR: Nothing found with those parameters	κακωσιες
+2	Dative	κακωσι	ERROR: Nothing found with those parameters	κακωσεσιν
+3	Accusative	κακωσιν	ERROR: Nothing found with those parameters	κακωσις
+4	Vocative	κακωσι	ERROR: Nothing found with those parameters	κακωσιες

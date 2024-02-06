@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εξουσια	ERROR: Nothing found with those parameters	εξουσια
+1	Genitive	εξουσια	ERROR: Nothing found with those parameters	εξουσια
+2	Dative	εξουσια	ERROR: Nothing found with those parameters	εξουσιαις
+3	Accusative	εξουσιαν	ERROR: Nothing found with those parameters	εξουσιας
+4	Vocative	εξουσια	ERROR: Nothing found with those parameters	εξουσια

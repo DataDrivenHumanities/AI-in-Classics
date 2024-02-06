@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	επικουρησις	ERROR: Nothing found with those parameters	επικουρησεις
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	επικουρησεις
+2	Dative	επικουρησει	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	επικουρησιν	ERROR: Nothing found with those parameters	επικουρησις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	επικουρησεις

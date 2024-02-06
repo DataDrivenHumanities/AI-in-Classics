@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ακρη	ERROR: Nothing found with those parameters	ακρα
+1	Genitive	ακρη	ERROR: Nothing found with those parameters	ακρα
+2	Dative	ακρη	ERROR: Nothing found with those parameters	ακρης
+3	Accusative	ᾰκραν	ERROR: Nothing found with those parameters	ακρᾱς
+4	Vocative	ακρη	ERROR: Nothing found with those parameters	ακρα

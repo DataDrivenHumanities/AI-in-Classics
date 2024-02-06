@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αρισταρχος	ERROR: Nothing found with those parameters	αρισταρχοι
+1	Genitive	αρισταρχε	ERROR: Nothing found with those parameters	αρισταρχοι
+2	Dative	αρισταρχω	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αρισταρχον	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	αρισταρχε	ERROR: Nothing found with those parameters	αρισταρχοι

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	επιεικεια	ERROR: Nothing found with those parameters	επιεικεια
+1	Genitive	επιεικεια	ERROR: Nothing found with those parameters	επιεικεια
+2	Dative	επιεικεια	ERROR: Nothing found with those parameters	επιεικειαις
+3	Accusative	επιεικειαν	ERROR: Nothing found with those parameters	επιεικειας
+4	Vocative	επιεικεια	ERROR: Nothing found with those parameters	επιεικεια

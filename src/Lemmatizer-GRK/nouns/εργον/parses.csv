@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εργον	ERROR: Nothing found with those parameters	εργ
+1	Genitive	εργον	ERROR: Nothing found with those parameters	εργ
+2	Dative	εργω	ERROR: Nothing found with those parameters	εργοις
+3	Accusative	εργον	ERROR: Nothing found with those parameters	εργ
+4	Vocative	εργον	ERROR: Nothing found with those parameters	εργ

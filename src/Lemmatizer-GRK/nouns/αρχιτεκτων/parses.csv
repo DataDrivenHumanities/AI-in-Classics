@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αρχιτεκτων	ERROR: Nothing found with those parameters	αρχιτεκτονες
+1	Genitive	αρχιτεκτων	ERROR: Nothing found with those parameters	αρχιτεκτονες
+2	Dative	αρχιτεκτον	ERROR: Nothing found with those parameters	αρχιτεκτοσι
+3	Accusative	αρχιτεκτον	ERROR: Nothing found with those parameters	αρχιτεκτονας
+4	Vocative	αρχιτεκτων	ERROR: Nothing found with those parameters	αρχιτεκτονες

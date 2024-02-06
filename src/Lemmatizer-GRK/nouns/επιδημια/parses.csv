@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	επιδημια	ERROR: Nothing found with those parameters	επιδημια
+1	Genitive	επιδημια	ERROR: Nothing found with those parameters	επιδημια
+2	Dative	επιδημια	ERROR: Nothing found with those parameters	επιδημιαις
+3	Accusative	επιδημιαν	ERROR: Nothing found with those parameters	επιδημιας
+4	Vocative	επιδημια	ERROR: Nothing found with those parameters	επιδημια

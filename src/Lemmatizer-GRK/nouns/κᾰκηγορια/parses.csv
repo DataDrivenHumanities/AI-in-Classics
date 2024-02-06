@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	κᾰκηγορια	ERROR: Nothing found with those parameters	κακηγορια
+1	Genitive	κᾰκηγορια	ERROR: Nothing found with those parameters	κακηγορια
+2	Dative	κακηγορια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	κακηγοριαν	ERROR: Nothing found with those parameters	κακηγοριᾱς
+4	Vocative	κᾰκηγορια	ERROR: Nothing found with those parameters	κακηγορια

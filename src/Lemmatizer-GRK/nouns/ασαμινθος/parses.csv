@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ασαμινθος	ERROR: Nothing found with those parameters	ασαμινθοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ασαμινθοι
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ασαμινθον	ERROR: Nothing found with those parameters	ασαμινθους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ασαμινθοι

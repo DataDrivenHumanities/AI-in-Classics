@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αποφᾰσις	ERROR: Nothing found with those parameters	αποφασεις
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αποφασεις
+2	Dative	αποφασει	ERROR: Nothing found with those parameters	αποφασεσι
+3	Accusative	αποφασιν	ERROR: Nothing found with those parameters	αποφᾰσις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αποφασεις

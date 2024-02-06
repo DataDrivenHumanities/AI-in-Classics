@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αιγειρος	ERROR: Nothing found with those parameters	αιγειροι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αιγειροι
+2	Dative	αιγειρω	ERROR: Nothing found with those parameters	αιγειροις
+3	Accusative	αιγειρον	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αιγειροι

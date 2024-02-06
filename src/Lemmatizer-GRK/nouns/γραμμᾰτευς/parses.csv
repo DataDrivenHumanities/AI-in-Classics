@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	γραμμᾰτευς	ERROR: Nothing found with those parameters	γραμματεις
+1	Genitive	γραμματευ	ERROR: Nothing found with those parameters	γραμματεις
+2	Dative	γραμματει	ERROR: Nothing found with those parameters	γραμματευσιν
+3	Accusative	γραμματεα	ERROR: Nothing found with those parameters	γραμματεις
+4	Vocative	γραμματευ	ERROR: Nothing found with those parameters	γραμματεις

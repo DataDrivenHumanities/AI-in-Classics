@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αδρια	ERROR: Nothing found with those parameters	αδρια
+1	Genitive	αδρια	ERROR: Nothing found with those parameters	αδρια
+2	Dative	αδριη	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αδριην	ERROR: Nothing found with those parameters	αδριας
+4	Vocative	αδρια	ERROR: Nothing found with those parameters	αδρια

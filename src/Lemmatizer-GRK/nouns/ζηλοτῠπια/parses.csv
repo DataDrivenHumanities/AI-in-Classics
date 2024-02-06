@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ζηλοτῠπια	ERROR: Nothing found with those parameters	ζηλοτυπια
+1	Genitive	ζηλοτῠπια	ERROR: Nothing found with those parameters	ζηλοτυπια
+2	Dative	ζηλοτυπια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ζηλοτυπιαν	ERROR: Nothing found with those parameters	ζηλοτυπιας
+4	Vocative	ζηλοτῠπια	ERROR: Nothing found with those parameters	ζηλοτυπια

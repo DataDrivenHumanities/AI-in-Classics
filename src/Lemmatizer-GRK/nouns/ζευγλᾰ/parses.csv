@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ζευγλᾰ	ERROR: Nothing found with those parameters	ζευγλα
+1	Genitive	ζευγλᾰ	ERROR: Nothing found with those parameters	ζευγλα
+2	Dative	ζευγλη	ERROR: Nothing found with those parameters	ζευγλησι
+3	Accusative	ζευγλαν	ERROR: Nothing found with those parameters	ζευγλας
+4	Vocative	ζευγλᾰ	ERROR: Nothing found with those parameters	ζευγλα

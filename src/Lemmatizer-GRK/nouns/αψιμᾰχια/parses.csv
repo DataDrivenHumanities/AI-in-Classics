@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αψιμᾰχια	ERROR: Nothing found with those parameters	αψιμαχιαι
+1	Genitive	αψιμᾰχια	ERROR: Nothing found with those parameters	αψιμαχιαι
+2	Dative	αψιμαχιαι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αψιμαχιαν	ERROR: Nothing found with those parameters	αψιμαχιας
+4	Vocative	αψιμᾰχια	ERROR: Nothing found with those parameters	αψιμαχιαι

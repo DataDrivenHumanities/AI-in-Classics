@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	επιορκιᾱ	ERROR: Nothing found with those parameters	επιορκιαι
+1	Genitive	επιορκιᾱ	ERROR: Nothing found with those parameters	επιορκιαι
+2	Dative	επιορκιαι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	επιορκιαν	ERROR: Nothing found with those parameters	επιορκιᾱς
+4	Vocative	επιορκιᾱ	ERROR: Nothing found with those parameters	επιορκιαι

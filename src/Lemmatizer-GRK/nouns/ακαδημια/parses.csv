@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ακαδημια	ERROR: Nothing found with those parameters	ακαδημια
+1	Genitive	ακαδημια	ERROR: Nothing found with those parameters	ακαδημια
+2	Dative	ακαδημια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ακαδημιαν	ERROR: Nothing found with those parameters	ακαδημιας
+4	Vocative	ακαδημια	ERROR: Nothing found with those parameters	ακαδημια

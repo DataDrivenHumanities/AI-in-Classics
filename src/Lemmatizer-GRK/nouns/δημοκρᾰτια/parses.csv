@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δημοκρᾰτια	ERROR: Nothing found with those parameters	δημοκρατια
+1	Genitive	δημοκρᾰτια	ERROR: Nothing found with those parameters	δημοκρατια
+2	Dative	δημοκρατιη	ERROR: Nothing found with those parameters	δημοκρατιαις
+3	Accusative	δημοκρατιην	ERROR: Nothing found with those parameters	δημοκρατιας
+4	Vocative	δημοκρᾰτια	ERROR: Nothing found with those parameters	δημοκρατια

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αλειμμα	ERROR: Nothing found with those parameters	αλειμματα
+1	Genitive	αλειμμα	ERROR: Nothing found with those parameters	αλειμματα
+2	Dative	αλειμματι	ERROR: Nothing found with those parameters	αλειμμασι
+3	Accusative	αλειμμα	ERROR: Nothing found with those parameters	αλειμματα
+4	Vocative	αλειμμα	ERROR: Nothing found with those parameters	αλειμματα

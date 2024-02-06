@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	γευμ	ERROR: Nothing found with those parameters	γευματα
+1	Genitive	γευμ	ERROR: Nothing found with those parameters	γευματα
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	γευμ	ERROR: Nothing found with those parameters	γευματα
+4	Vocative	γευμ	ERROR: Nothing found with those parameters	γευματα

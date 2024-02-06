@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ακροπολις	ERROR: Nothing found with those parameters	ακροπολεις
+1	Genitive	ακροπολι	ERROR: Nothing found with those parameters	ακροπολεις
+2	Dative	ακροπολι	ERROR: Nothing found with those parameters	ακροπολεσι
+3	Accusative	ακροπολιν	ERROR: Nothing found with those parameters	ακροπολις
+4	Vocative	ακροπολι	ERROR: Nothing found with those parameters	ακροπολεις

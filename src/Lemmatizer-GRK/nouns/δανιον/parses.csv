@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δανιον	ERROR: Nothing found with those parameters	δανει
+1	Genitive	δανιον	ERROR: Nothing found with those parameters	δανει
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	δανειοις
+3	Accusative	δανιον	ERROR: Nothing found with those parameters	δανει
+4	Vocative	δανιον	ERROR: Nothing found with those parameters	δανει

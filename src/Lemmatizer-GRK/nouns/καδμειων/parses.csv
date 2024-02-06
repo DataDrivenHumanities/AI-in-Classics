@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	καδμειων	ERROR: Nothing found with those parameters	καδμειωνες
+1	Genitive	καδμειων	ERROR: Nothing found with those parameters	καδμειωνες
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	καδμειωνας
+4	Vocative	καδμειων	ERROR: Nothing found with those parameters	καδμειωνες

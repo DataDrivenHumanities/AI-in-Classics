@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	θηκα	ERROR: Nothing found with those parameters	θηχ
+1	Genitive	θηκα	ERROR: Nothing found with those parameters	θηχ
+2	Dative	θηχ	ERROR: Nothing found with those parameters	θηκησι
+3	Accusative	θηκαν	ERROR: Nothing found with those parameters	θηκας
+4	Vocative	θηκα	ERROR: Nothing found with those parameters	θηχ

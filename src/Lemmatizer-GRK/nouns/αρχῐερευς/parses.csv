@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αρχῐερευς	ERROR: Nothing found with those parameters	αρχιερεις
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αρχιερεις
+2	Dative	αρχιερει	ERROR: Nothing found with those parameters	αρχιερευσι
+3	Accusative	αρχιερεα	ERROR: Nothing found with those parameters	αρχιρεας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αρχιερεις

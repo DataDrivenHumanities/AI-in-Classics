@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αισχροκερδια	ERROR: Nothing found with those parameters	αισχροκερδια
+1	Genitive	αισχροκερδια	ERROR: Nothing found with those parameters	αισχροκερδια
+2	Dative	αισχροκερδια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αισχροκερδιαν	ERROR: Nothing found with those parameters	αισχροκερδιας
+4	Vocative	αισχροκερδια	ERROR: Nothing found with those parameters	αισχροκερδια

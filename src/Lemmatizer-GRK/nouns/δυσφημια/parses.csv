@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δυσφημια	ERROR: Nothing found with those parameters	δυσφημιαι
+1	Genitive	δυσφημια	ERROR: Nothing found with those parameters	δυσφημιαι
+2	Dative	δυσφημιαι	ERROR: Nothing found with those parameters	δυσφημιαις
+3	Accusative	δυσφημιαν	ERROR: Nothing found with those parameters	δυσφημιας
+4	Vocative	δυσφημια	ERROR: Nothing found with those parameters	δυσφημιαι

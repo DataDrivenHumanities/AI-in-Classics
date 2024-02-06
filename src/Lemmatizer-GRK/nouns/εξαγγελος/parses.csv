@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εξαγγελος	ERROR: Nothing found with those parameters	εξαγγελοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εξαγγελοι
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εξαγγελους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εξαγγελοι

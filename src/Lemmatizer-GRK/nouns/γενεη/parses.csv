@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	γενεη	ERROR: Nothing found with those parameters	γενε
+1	Genitive	γενεη	ERROR: Nothing found with those parameters	γενε
+2	Dative	γενε	ERROR: Nothing found with those parameters	γενεησι
+3	Accusative	γενεην	ERROR: Nothing found with those parameters	γενεας
+4	Vocative	γενεη	ERROR: Nothing found with those parameters	γενε

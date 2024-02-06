@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δημοτης	ERROR: Nothing found with those parameters	δημοται
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	δημοται
+2	Dative	δημοτη	ERROR: Nothing found with those parameters	δημοτησι
+3	Accusative	δημοτην	ERROR: Nothing found with those parameters	δημοτᾰς
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	δημοται

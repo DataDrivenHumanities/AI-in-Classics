@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	θῠγατρῐδους	ERROR: Nothing found with those parameters	θυγατριδοι
+1	Genitive	θῠγατρῐδη	ERROR: Nothing found with those parameters	θυγατριδοι
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	θυγατριδοις
+3	Accusative	θυγατριδουν	ERROR: Nothing found with those parameters	θῠγατρῐδους
+4	Vocative	θῠγατρῐδη	ERROR: Nothing found with those parameters	θυγατριδοι

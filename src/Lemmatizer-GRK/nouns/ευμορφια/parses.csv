@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ευμορφια	ERROR: Nothing found with those parameters	ευμορφια
+1	Genitive	ευμορφια	ERROR: Nothing found with those parameters	ευμορφια
+2	Dative	ευμορφια	ERROR: Nothing found with those parameters	ευμορφιαις
+3	Accusative	ευμορφιαν	ERROR: Nothing found with those parameters	ευμορφιας
+4	Vocative	ευμορφια	ERROR: Nothing found with those parameters	ευμορφια

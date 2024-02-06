@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αυχμος	ERROR: Nothing found with those parameters	αυχμοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αυχμοι
+2	Dative	αυχμω	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αυχμον	ERROR: Nothing found with those parameters	αυχμους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αυχμοι

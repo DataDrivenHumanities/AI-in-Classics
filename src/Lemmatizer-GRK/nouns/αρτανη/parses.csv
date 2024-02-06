@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αρτανη	ERROR: Nothing found with those parameters	αρταναι
+1	Genitive	αρτανη	ERROR: Nothing found with those parameters	αρταναι
+2	Dative	αρταναι	ERROR: Nothing found with those parameters	αρταναις
+3	Accusative	αρτανην	ERROR: Nothing found with those parameters	αρτανας
+4	Vocative	αρτανη	ERROR: Nothing found with those parameters	αρταναι

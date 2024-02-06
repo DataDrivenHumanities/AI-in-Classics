@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	θελκτηριον	ERROR: Nothing found with those parameters	θελκτηρια
+1	Genitive	θελκτηριον	ERROR: Nothing found with those parameters	θελκτηρια
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	θελκτηριον	ERROR: Nothing found with those parameters	θελκτηρια
+4	Vocative	θελκτηριον	ERROR: Nothing found with those parameters	θελκτηρια

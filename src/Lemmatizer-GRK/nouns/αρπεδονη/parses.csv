@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αρπεδονη	ERROR: Nothing found with those parameters	αρπεδοναι
+1	Genitive	αρπεδονη	ERROR: Nothing found with those parameters	αρπεδοναι
+2	Dative	αρπεδοναι	ERROR: Nothing found with those parameters	αρπεδοναις
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αρπεδονας
+4	Vocative	αρπεδονη	ERROR: Nothing found with those parameters	αρπεδοναι

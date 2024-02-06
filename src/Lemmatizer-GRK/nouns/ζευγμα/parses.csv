@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ζευγμα	ERROR: Nothing found with those parameters	ζευγματ
+1	Genitive	ζευγμα	ERROR: Nothing found with those parameters	ζευγματ
+2	Dative	ζευγματ	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ζευγμα	ERROR: Nothing found with those parameters	ζευγματ
+4	Vocative	ζευγμα	ERROR: Nothing found with those parameters	ζευγματ

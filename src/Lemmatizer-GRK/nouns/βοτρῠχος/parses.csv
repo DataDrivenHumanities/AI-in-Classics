@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βοτρῠχος	ERROR: Nothing found with those parameters	βοστρυχα
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βοστρυχα
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βοστρυχοις
+3	Accusative	βοστρυχον	ERROR: Nothing found with those parameters	βοστρυχα
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βοστρυχα

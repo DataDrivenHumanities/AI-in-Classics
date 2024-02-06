@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	διαδοχη	ERROR: Nothing found with those parameters	διαδοχ
+1	Genitive	διαδοχη	ERROR: Nothing found with those parameters	διαδοχ
+2	Dative	διαδοχ	ERROR: Nothing found with those parameters	διαδοχαις
+3	Accusative	διαδοχην	ERROR: Nothing found with those parameters	διαδοχας
+4	Vocative	διαδοχη	ERROR: Nothing found with those parameters	διαδοχ

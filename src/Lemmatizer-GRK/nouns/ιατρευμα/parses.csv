@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ιατρευμα	ERROR: Nothing found with those parameters	ιατρευματα
+1	Genitive	ιατρευμα	ERROR: Nothing found with those parameters	ιατρευματα
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ιατρευμα	ERROR: Nothing found with those parameters	ιατρευματα
+4	Vocative	ιατρευμα	ERROR: Nothing found with those parameters	ιατρευματα

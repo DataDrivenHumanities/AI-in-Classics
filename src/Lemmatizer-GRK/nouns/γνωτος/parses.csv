@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	γνωτος	ERROR: Nothing found with those parameters	γνωτοι
+1	Genitive	γνωτ	ERROR: Nothing found with those parameters	γνωτοι
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	γνωτον	ERROR: Nothing found with those parameters	γνωτους
+4	Vocative	γνωτ	ERROR: Nothing found with those parameters	γνωτοι

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	γλυπτα	ERROR: Nothing found with those parameters	γλυπται
+1	Genitive	γλυπτα	ERROR: Nothing found with those parameters	γλυπται
+2	Dative	γλυπται	ERROR: Nothing found with those parameters	γλυπταις
+3	Accusative	γλυπτην	ERROR: Nothing found with those parameters	γλυπτας
+4	Vocative	γλυπτα	ERROR: Nothing found with those parameters	γλυπται

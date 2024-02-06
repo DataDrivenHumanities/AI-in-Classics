@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εσχαρη	ERROR: Nothing found with those parameters	εσχαρα
+1	Genitive	εσχαρη	ERROR: Nothing found with those parameters	εσχαρα
+2	Dative	εσχαρη	ERROR: Nothing found with those parameters	εσχαραις
+3	Accusative	εσχαραν	ERROR: Nothing found with those parameters	εσχαρας
+4	Vocative	εσχαρη	ERROR: Nothing found with those parameters	εσχαρα

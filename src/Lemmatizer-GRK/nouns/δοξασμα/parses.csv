@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δοξασμα	ERROR: Nothing found with those parameters	δοξασματα
+1	Genitive	δοξασμα	ERROR: Nothing found with those parameters	δοξασματα
+2	Dative	δοξασματι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	δοξασμα	ERROR: Nothing found with those parameters	δοξασματα
+4	Vocative	δοξασμα	ERROR: Nothing found with those parameters	δοξασματα

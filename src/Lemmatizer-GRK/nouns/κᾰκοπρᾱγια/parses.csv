@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	κᾰκοπρᾱγια	ERROR: Nothing found with those parameters	κακοπραγια
+1	Genitive	κᾰκοπρᾱγια	ERROR: Nothing found with those parameters	κακοπραγια
+2	Dative	κακοπραγια	ERROR: Nothing found with those parameters	κακοπραγιαις
+3	Accusative	κακοπρᾱγιᾱν	ERROR: Nothing found with those parameters	κακοπραγιας
+4	Vocative	κᾰκοπρᾱγια	ERROR: Nothing found with those parameters	κακοπραγια

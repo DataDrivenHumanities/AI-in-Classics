@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βραβῠλον	ERROR: Nothing found with those parameters	βραβυλα
+1	Genitive	βραβῠλον	ERROR: Nothing found with those parameters	βραβυλα
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βραβυλοισι
+3	Accusative	βραβῠλον	ERROR: Nothing found with those parameters	βραβυλα
+4	Vocative	βραβῠλον	ERROR: Nothing found with those parameters	βραβυλα

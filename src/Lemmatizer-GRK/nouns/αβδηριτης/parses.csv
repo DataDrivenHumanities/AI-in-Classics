@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αβδηριτης	ERROR: Nothing found with those parameters	αβδηριται
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αβδηριται
+2	Dative	αβδηριτη	ERROR: Nothing found with those parameters	αβδηριτησι
+3	Accusative	αβδηριτην	ERROR: Nothing found with those parameters	αβδηριτας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αβδηριται

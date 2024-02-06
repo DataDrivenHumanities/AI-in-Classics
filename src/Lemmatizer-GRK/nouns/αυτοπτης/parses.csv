@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αυτοπτης	ERROR: Nothing found with those parameters	αυτοπται
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αυτοπται
+2	Dative	αυτοπται	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αυτοπτην	ERROR: Nothing found with those parameters	αυτοπτας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αυτοπται

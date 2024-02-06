@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αγροτα	ERROR: Nothing found with those parameters	αγροται
+1	Genitive	αγροτα	ERROR: Nothing found with those parameters	αγροται
+2	Dative	αγροται	ERROR: Nothing found with those parameters	αγρωσταις
+3	Accusative	αγροτιν	ERROR: Nothing found with those parameters	αγροτας
+4	Vocative	αγροτα	ERROR: Nothing found with those parameters	αγροται

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	επιτολη	ERROR: Nothing found with those parameters	επιτολαι
+1	Genitive	επιτολη	ERROR: Nothing found with those parameters	επιτολαι
+2	Dative	επιτολαι	ERROR: Nothing found with those parameters	επιτολαισιν
+3	Accusative	επιτολην	ERROR: Nothing found with those parameters	επιτολας
+4	Vocative	επιτολη	ERROR: Nothing found with those parameters	επιτολαι

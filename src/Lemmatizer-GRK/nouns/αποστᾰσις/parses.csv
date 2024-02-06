@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αποστᾰσις	ERROR: Nothing found with those parameters	αποστασης
+1	Genitive	αποστας	ERROR: Nothing found with those parameters	αποστασης
+2	Dative	αποστασι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αποστασιν	ERROR: Nothing found with those parameters	αποστᾰσις
+4	Vocative	αποστας	ERROR: Nothing found with those parameters	αποστασης

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δυσσεβεια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+1	Genitive	δυσσεβεια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	δυσσεβειαν	ERROR: Nothing found with those parameters	δυσσεβειας
+4	Vocative	δυσσεβεια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters

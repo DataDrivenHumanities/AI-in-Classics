@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εφημερις	ERROR: Nothing found with those parameters	εφημεριδες
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εφημεριδες
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εφημερισι
+3	Accusative	εφημεριδα	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εφημεριδες

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βροντης	ERROR: Nothing found with those parameters	βροντα
+1	Genitive	βροντη	ERROR: Nothing found with those parameters	βροντα
+2	Dative	βροντα	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	βροντην	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	βροντη	ERROR: Nothing found with those parameters	βροντα

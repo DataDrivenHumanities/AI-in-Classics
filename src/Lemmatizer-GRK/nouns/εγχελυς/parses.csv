@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εγχελυς	ERROR: Nothing found with those parameters	εγχελυες
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εγχελυες
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εγχελεσιν
+3	Accusative	εγχελυν	ERROR: Nothing found with those parameters	εγχελυς
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εγχελυες

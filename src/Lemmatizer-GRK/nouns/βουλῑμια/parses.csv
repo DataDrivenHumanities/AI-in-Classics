@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βουλῑμια	ERROR: Nothing found with those parameters	βουλιμια
+1	Genitive	βουλῑμια	ERROR: Nothing found with those parameters	βουλιμια
+2	Dative	βουλιμια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βουλιμιας
+4	Vocative	βουλῑμια	ERROR: Nothing found with those parameters	βουλιμια

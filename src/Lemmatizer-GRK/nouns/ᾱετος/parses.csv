@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ᾱετος	ERROR: Nothing found with those parameters	αετοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αετοι
+2	Dative	αετω	ERROR: Nothing found with those parameters	αετοις
+3	Accusative	αετον	ERROR: Nothing found with those parameters	αετους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αετοι

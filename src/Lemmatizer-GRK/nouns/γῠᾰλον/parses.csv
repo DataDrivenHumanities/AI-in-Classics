@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	γῠᾰλον	ERROR: Nothing found with those parameters	γυαλ
+1	Genitive	γῠᾰλον	ERROR: Nothing found with those parameters	γυαλ
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	γυαλοις
+3	Accusative	γῠᾰλον	ERROR: Nothing found with those parameters	γυαλ
+4	Vocative	γῠᾰλον	ERROR: Nothing found with those parameters	γυαλ

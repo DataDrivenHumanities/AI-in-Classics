@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ανατροπη	ERROR: Nothing found with those parameters	ανατροπαι
+1	Genitive	ανατροπη	ERROR: Nothing found with those parameters	ανατροπαι
+2	Dative	ανατροπη	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ανατροπην	ERROR: Nothing found with those parameters	ανατροπας
+4	Vocative	ανατροπη	ERROR: Nothing found with those parameters	ανατροπαι

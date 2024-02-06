@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	καθαρμα	ERROR: Nothing found with those parameters	καθαρμαθ
+1	Genitive	καθαρμα	ERROR: Nothing found with those parameters	καθαρμαθ
+2	Dative	καθαρμαθ	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	καθαρμα	ERROR: Nothing found with those parameters	καθαρμαθ
+4	Vocative	καθαρμα	ERROR: Nothing found with those parameters	καθαρμαθ

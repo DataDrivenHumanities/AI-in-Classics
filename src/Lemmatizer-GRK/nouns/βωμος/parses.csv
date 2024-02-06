@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βωμος	ERROR: Nothing found with those parameters	βωμοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βωμοι
+2	Dative	βωμω	ERROR: Nothing found with those parameters	βωμοις
+3	Accusative	βωμον	ERROR: Nothing found with those parameters	βωμους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βωμοι

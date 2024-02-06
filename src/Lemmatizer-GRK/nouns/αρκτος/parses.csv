@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αρκτος	ERROR: Nothing found with those parameters	αρκτοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αρκτοι
+2	Dative	αρκτω	ERROR: Nothing found with those parameters	αρκτοις
+3	Accusative	αρκτον	ERROR: Nothing found with those parameters	αρκτους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αρκτοι

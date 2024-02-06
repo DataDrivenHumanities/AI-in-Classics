@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ευστοχιη	ERROR: Nothing found with those parameters	ευστοχια
+1	Genitive	ευστοχιη	ERROR: Nothing found with those parameters	ευστοχια
+2	Dative	ευστοχια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ευστοχιην	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	ευστοχιη	ERROR: Nothing found with those parameters	ευστοχια

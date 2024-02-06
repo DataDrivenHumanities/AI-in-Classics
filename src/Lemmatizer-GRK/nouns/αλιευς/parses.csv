@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αλιευς	ERROR: Nothing found with those parameters	αλιης
+1	Genitive	αλιευ	ERROR: Nothing found with those parameters	αλιης
+2	Dative	αλιει	ERROR: Nothing found with those parameters	αλιευσι
+3	Accusative	αλιη	ERROR: Nothing found with those parameters	αλιας
+4	Vocative	αλιευ	ERROR: Nothing found with those parameters	αλιης

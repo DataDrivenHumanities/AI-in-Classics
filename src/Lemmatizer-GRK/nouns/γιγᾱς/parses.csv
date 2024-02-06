@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	γιγᾱς	ERROR: Nothing found with those parameters	γῐγαντες
+1	Genitive	γιγαν	ERROR: Nothing found with those parameters	γῐγαντες
+2	Dative	γιγαντ	ERROR: Nothing found with those parameters	γιγᾱσι
+3	Accusative	γιγαντ	ERROR: Nothing found with those parameters	γιγαντας
+4	Vocative	γιγαν	ERROR: Nothing found with those parameters	γῐγαντες

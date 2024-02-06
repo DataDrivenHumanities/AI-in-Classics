@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	γυιοπεδη	ERROR: Nothing found with those parameters	γυιοπεδαι
+1	Genitive	γυιοπεδη	ERROR: Nothing found with those parameters	γυιοπεδαι
+2	Dative	γυιοπεδαι	ERROR: Nothing found with those parameters	γυιοπεδαις
+3	Accusative	γυιοπεδην	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	γυιοπεδη	ERROR: Nothing found with those parameters	γυιοπεδαι

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βλεφᾰρις	ERROR: Nothing found with those parameters	βλεφαριδες
+1	Genitive	βλεφαρ	ERROR: Nothing found with those parameters	βλεφαριδες
+2	Dative	βλεφαριδ	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	βλεφαριδ	ERROR: Nothing found with those parameters	βλεφαριδας
+4	Vocative	βλεφαρ	ERROR: Nothing found with those parameters	βλεφαριδες

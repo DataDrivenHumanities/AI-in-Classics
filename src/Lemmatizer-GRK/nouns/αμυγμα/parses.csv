@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αμυγμα	ERROR: Nothing found with those parameters	αμυγματα
+1	Genitive	αμυγμα	ERROR: Nothing found with those parameters	αμυγματα
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αμυγμοις
+3	Accusative	αμυγμα	ERROR: Nothing found with those parameters	αμυγματα
+4	Vocative	αμυγμα	ERROR: Nothing found with those parameters	αμυγματα

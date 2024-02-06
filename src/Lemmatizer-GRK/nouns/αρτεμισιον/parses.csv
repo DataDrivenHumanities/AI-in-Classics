@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αρτεμισιον	ERROR: Nothing found with those parameters	αρτεμισια
+1	Genitive	αρτεμισιον	ERROR: Nothing found with those parameters	αρτεμισια
+2	Dative	αρτεμισιω	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αρτεμισιον	ERROR: Nothing found with those parameters	αρτεμισια
+4	Vocative	αρτεμισιον	ERROR: Nothing found with those parameters	αρτεμισια

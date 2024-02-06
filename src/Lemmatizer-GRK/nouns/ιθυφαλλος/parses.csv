@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ιθυφαλλος	ERROR: Nothing found with those parameters	ιθυφαλλοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ιθυφαλλοι
+2	Dative	ιθυφαλλω	ERROR: Nothing found with those parameters	ιθυφαλλοις
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ιθυφαλλους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ιθυφαλλοι

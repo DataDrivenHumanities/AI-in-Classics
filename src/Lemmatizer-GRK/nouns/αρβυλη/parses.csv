@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αρβυλη	ERROR: Nothing found with those parameters	αρβυλαι
+1	Genitive	αρβυλη	ERROR: Nothing found with those parameters	αρβυλαι
+2	Dative	αρβυλη	ERROR: Nothing found with those parameters	αρβυλαις
+3	Accusative	αρβυλαν	ERROR: Nothing found with those parameters	αρβυλας
+4	Vocative	αρβυλη	ERROR: Nothing found with those parameters	αρβυλαι

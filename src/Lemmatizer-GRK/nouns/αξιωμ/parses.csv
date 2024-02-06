@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αξιωμ	ERROR: Nothing found with those parameters	αξιωματ
+1	Genitive	αξιωμ	ERROR: Nothing found with those parameters	αξιωματ
+2	Dative	αξιωματ	ERROR: Nothing found with those parameters	αξιωμασι
+3	Accusative	αξιωμ	ERROR: Nothing found with those parameters	αξιωματ
+4	Vocative	αξιωμ	ERROR: Nothing found with those parameters	αξιωματ

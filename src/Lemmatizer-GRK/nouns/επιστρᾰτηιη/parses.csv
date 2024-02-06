@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	επιστρᾰτηιη	ERROR: Nothing found with those parameters	επιστρατεια
+1	Genitive	επιστρᾰτηιη	ERROR: Nothing found with those parameters	επιστρατεια
+2	Dative	επιστρατεια	ERROR: Nothing found with those parameters	επιστρατειαις
+3	Accusative	επιστρατηιην	ERROR: Nothing found with those parameters	επιστρατειας
+4	Vocative	επιστρᾰτηιη	ERROR: Nothing found with those parameters	επιστρατεια

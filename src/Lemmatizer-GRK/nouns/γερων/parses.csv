@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	γερων	ERROR: Nothing found with those parameters	γεροντες
+1	Genitive	γερον	ERROR: Nothing found with those parameters	γεροντες
+2	Dative	γεροντ	ERROR: Nothing found with those parameters	γερουσι
+3	Accusative	γεροντ	ERROR: Nothing found with those parameters	γεροντας
+4	Vocative	γερον	ERROR: Nothing found with those parameters	γεροντες

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ειρηνη	ERROR: Nothing found with those parameters	ειρηνα
+1	Genitive	ειρηνη	ERROR: Nothing found with those parameters	ειρηνα
+2	Dative	ειρηνη	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ειρηνην	ERROR: Nothing found with those parameters	ειρηνας
+4	Vocative	ειρηνη	ERROR: Nothing found with those parameters	ειρηνα

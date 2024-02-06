@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ᾰνεμος	ERROR: Nothing found with those parameters	ανεμοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ανεμοι
+2	Dative	ανεμω	ERROR: Nothing found with those parameters	ανεμοις
+3	Accusative	ανεμον	ERROR: Nothing found with those parameters	ανεμους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ανεμοι

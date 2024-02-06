@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αμαρτια	ERROR: Nothing found with those parameters	αμαρτια
+1	Genitive	αμαρθ	ERROR: Nothing found with those parameters	αμαρτια
+2	Dative	αμαρτια	ERROR: Nothing found with those parameters	αμαρτιαις
+3	Accusative	αμαρτιαν	ERROR: Nothing found with those parameters	αμαρτιᾱς
+4	Vocative	αμαρθ	ERROR: Nothing found with those parameters	αμαρτια

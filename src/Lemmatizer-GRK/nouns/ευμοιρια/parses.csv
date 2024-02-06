@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ευμοιρια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+1	Genitive	ευμοιρια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ευμοιριας
+4	Vocative	ευμοιρια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters

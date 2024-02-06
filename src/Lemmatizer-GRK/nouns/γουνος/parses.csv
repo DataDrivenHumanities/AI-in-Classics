@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	γουνος	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+1	Genitive	γουν	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+2	Dative	γουνω	ERROR: Nothing found with those parameters	γουνοις
+3	Accusative	γουνον	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	γουν	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters

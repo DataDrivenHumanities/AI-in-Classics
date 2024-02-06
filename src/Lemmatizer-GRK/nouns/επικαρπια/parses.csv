@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	επικαρπια	ERROR: Nothing found with those parameters	επικαρπιαι
+1	Genitive	επικαρπια	ERROR: Nothing found with those parameters	επικαρπιαι
+2	Dative	επικαρπιαι	ERROR: Nothing found with those parameters	επικαρπιαις
+3	Accusative	επικαρπιαν	ERROR: Nothing found with those parameters	επικαρπιας
+4	Vocative	επικαρπια	ERROR: Nothing found with those parameters	επικαρπιαι

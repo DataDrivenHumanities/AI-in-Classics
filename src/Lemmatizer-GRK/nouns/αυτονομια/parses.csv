@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αυτονομια	ERROR: Nothing found with those parameters	αυτονομια
+1	Genitive	αυτονομια	ERROR: Nothing found with those parameters	αυτονομια
+2	Dative	αυτονομια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αυτονομιαν	ERROR: Nothing found with those parameters	αυτονομιας
+4	Vocative	αυτονομια	ERROR: Nothing found with those parameters	αυτονομια

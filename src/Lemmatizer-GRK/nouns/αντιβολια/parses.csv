@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αντιβολια	ERROR: Nothing found with those parameters	αντιβολησεις
+1	Genitive	αντιβολια	ERROR: Nothing found with those parameters	αντιβολησεις
+2	Dative	αντιβολησει	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αντιβολιαν	ERROR: Nothing found with those parameters	αντιβολησις
+4	Vocative	αντιβολια	ERROR: Nothing found with those parameters	αντιβολησεις

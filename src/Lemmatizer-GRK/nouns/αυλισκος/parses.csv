@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αυλισκος	ERROR: Nothing found with those parameters	αυλισκοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αυλισκοι
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αυλισκοις
+3	Accusative	αυλισκον	ERROR: Nothing found with those parameters	αυλισκους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αυλισκοι

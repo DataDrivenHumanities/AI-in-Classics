@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	θεττᾰλος	ERROR: Nothing found with those parameters	θετταλοι
+1	Genitive	θετταλε	ERROR: Nothing found with those parameters	θετταλοι
+2	Dative	θετταλω	ERROR: Nothing found with those parameters	θετταλοις
+3	Accusative	θετταλον	ERROR: Nothing found with those parameters	θετταλους
+4	Vocative	θετταλε	ERROR: Nothing found with those parameters	θετταλοι

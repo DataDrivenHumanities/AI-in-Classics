@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αγαθοποιια	ERROR: Nothing found with those parameters	αγαθοποιια
+1	Genitive	αγαθοποιια	ERROR: Nothing found with those parameters	αγαθοποιια
+2	Dative	αγαθοποιια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	αγαθοποιια	ERROR: Nothing found with those parameters	αγαθοποιια

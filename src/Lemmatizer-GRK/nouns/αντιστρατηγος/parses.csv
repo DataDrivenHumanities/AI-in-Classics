@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αντιστρατηγος	ERROR: Nothing found with those parameters	αντιστρατηγοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αντιστρατηγοι
+2	Dative	αντιστρατηγω	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αντιστρατηγον	ERROR: Nothing found with those parameters	αντιστρατηγους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αντιστρατηγοι

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ευχᾰριστια	ERROR: Nothing found with those parameters	ευχαριστια
+1	Genitive	ευχᾰριστια	ERROR: Nothing found with those parameters	ευχαριστια
+2	Dative	ευχαριστια	ERROR: Nothing found with those parameters	ευχαριστιαις
+3	Accusative	ευχαριστιαν	ERROR: Nothing found with those parameters	ευχαριστιας
+4	Vocative	ευχᾰριστια	ERROR: Nothing found with those parameters	ευχαριστια

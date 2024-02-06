@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	επισκοτησις	ERROR: Nothing found with those parameters	επισκοτησεις
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	επισκοτησεις
+2	Dative	επισκοτησει	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	επισκοτησιν	ERROR: Nothing found with those parameters	επισκοτησις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	επισκοτησεις

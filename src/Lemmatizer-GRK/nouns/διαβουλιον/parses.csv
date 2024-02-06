@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	διαβουλιον	ERROR: Nothing found with those parameters	διαβουλια
+1	Genitive	διαβουλιον	ERROR: Nothing found with those parameters	διαβουλια
+2	Dative	διαβουλιω	ERROR: Nothing found with those parameters	διαβουλιοις
+3	Accusative	διαβουλιον	ERROR: Nothing found with those parameters	διαβουλια
+4	Vocative	διαβουλιον	ERROR: Nothing found with those parameters	διαβουλια

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βλαστημ	ERROR: Nothing found with those parameters	βλαστηματα
+1	Genitive	βλαστημ	ERROR: Nothing found with those parameters	βλαστηματα
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βλαστημασι
+3	Accusative	βλαστημ	ERROR: Nothing found with those parameters	βλαστηματα
+4	Vocative	βλαστημ	ERROR: Nothing found with those parameters	βλαστηματα

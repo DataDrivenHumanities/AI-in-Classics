@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αμνηστια	ERROR: Nothing found with those parameters	αμνηστια
+1	Genitive	αμνηστια	ERROR: Nothing found with those parameters	αμνηστια
+2	Dative	αμνηστια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αμνηστιαν	ERROR: Nothing found with those parameters	αμνηστιας
+4	Vocative	αμνηστια	ERROR: Nothing found with those parameters	αμνηστια

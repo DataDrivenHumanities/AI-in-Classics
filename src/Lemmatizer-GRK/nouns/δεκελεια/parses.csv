@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δεκελεια	ERROR: Nothing found with those parameters	δεκελεια
+1	Genitive	δεκελεια	ERROR: Nothing found with those parameters	δεκελεια
+2	Dative	δεκελεια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	δεκελειαν	ERROR: Nothing found with those parameters	δεκελεας
+4	Vocative	δεκελεια	ERROR: Nothing found with those parameters	δεκελεια

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εξοπλῐσια	ERROR: Nothing found with those parameters	εξοπλισια
+1	Genitive	εξοπλῐσια	ERROR: Nothing found with those parameters	εξοπλισια
+2	Dative	εξοπλισια	ERROR: Nothing found with those parameters	εξοπλισιαις
+3	Accusative	εξοπλισιαν	ERROR: Nothing found with those parameters	εξοπλισιας
+4	Vocative	εξοπλῐσια	ERROR: Nothing found with those parameters	εξοπλισια

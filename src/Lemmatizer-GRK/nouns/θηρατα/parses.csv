@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	θηρατα	ERROR: Nothing found with those parameters	θηραται
+1	Genitive	θηρατα	ERROR: Nothing found with those parameters	θηραται
+2	Dative	θηραται	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	θηρατε	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	θηρατα	ERROR: Nothing found with those parameters	θηραται

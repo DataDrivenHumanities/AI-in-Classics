@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ανεψια	ERROR: Nothing found with those parameters	ανεψιοι
+1	Genitive	ανεψια	ERROR: Nothing found with those parameters	ανεψιοι
+2	Dative	ανεψιω	ERROR: Nothing found with those parameters	ανεψιοις
+3	Accusative	ανεψιον	ERROR: Nothing found with those parameters	ανεψιας
+4	Vocative	ανεψια	ERROR: Nothing found with those parameters	ανεψιοι

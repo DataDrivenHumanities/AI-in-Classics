@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βρᾰβευς	ERROR: Nothing found with those parameters	βραβης
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βραβης
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	βραβη	ERROR: Nothing found with those parameters	βραβεις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βραβης

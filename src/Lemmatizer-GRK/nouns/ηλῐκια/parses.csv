@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ηλῐκια	ERROR: Nothing found with those parameters	ηλικια
+1	Genitive	ηλῐκια	ERROR: Nothing found with those parameters	ηλικια
+2	Dative	ηλικιη	ERROR: Nothing found with those parameters	ηλικιησι
+3	Accusative	ηλικιην	ERROR: Nothing found with those parameters	ηλικιᾱς
+4	Vocative	ηλῐκια	ERROR: Nothing found with those parameters	ηλικια

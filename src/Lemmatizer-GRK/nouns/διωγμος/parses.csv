@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	διωγμος	ERROR: Nothing found with those parameters	διωγμοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	διωγμοι
+2	Dative	διωγμω	ERROR: Nothing found with those parameters	διωγμοις
+3	Accusative	διωγμον	ERROR: Nothing found with those parameters	διωγμους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	διωγμοι

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ηρωις	ERROR: Nothing found with those parameters	ηρωιδες
+1	Genitive	ηρω	ERROR: Nothing found with those parameters	ηρωιδες
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ηρωισι
+3	Accusative	ηρωιδα	ERROR: Nothing found with those parameters	ηρωιδας
+4	Vocative	ηρω	ERROR: Nothing found with those parameters	ηρωιδες

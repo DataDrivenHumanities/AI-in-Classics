@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βωμολοχος	ERROR: Nothing found with those parameters	βωμολοχοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βωμολοχοι
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βωμολοχοις
+3	Accusative	βωμολοχον	ERROR: Nothing found with those parameters	βωμολοχους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βωμολοχοι

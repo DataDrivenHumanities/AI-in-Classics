@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αφεσις	ERROR: Nothing found with those parameters	αφεσεις
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αφεσεις
+2	Dative	αφεσει	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αφεσιν	ERROR: Nothing found with those parameters	αφεσις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αφεσεις

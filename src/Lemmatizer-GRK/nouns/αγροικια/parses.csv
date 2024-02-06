@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αγροικια	ERROR: Nothing found with those parameters	αγροικια
+1	Genitive	αγροικια	ERROR: Nothing found with those parameters	αγροικια
+2	Dative	αγροικια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αγροικιαν	ERROR: Nothing found with those parameters	αγροικιας
+4	Vocative	αγροικια	ERROR: Nothing found with those parameters	αγροικια

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	διαδρομη	ERROR: Nothing found with those parameters	διαδρομαι
+1	Genitive	διαδρομη	ERROR: Nothing found with those parameters	διαδρομαι
+2	Dative	διαδρομαι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	διαδρομην	ERROR: Nothing found with those parameters	διαδρομας
+4	Vocative	διαδρομη	ERROR: Nothing found with those parameters	διαδρομαι

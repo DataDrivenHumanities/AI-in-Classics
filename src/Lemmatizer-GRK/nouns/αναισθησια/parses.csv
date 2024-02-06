@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αναισθησια	ERROR: Nothing found with those parameters	αναισθησια
+1	Genitive	αναισθησια	ERROR: Nothing found with those parameters	αναισθησια
+2	Dative	αναισθησια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αναισθησιαν	ERROR: Nothing found with those parameters	αναισθησιας
+4	Vocative	αναισθησια	ERROR: Nothing found with those parameters	αναισθησια

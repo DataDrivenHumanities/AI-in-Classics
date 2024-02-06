@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αμπωτις	ERROR: Nothing found with those parameters	αμπωτεις
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αμπωτεις
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αμπωτεσι
+3	Accusative	αμπωτιν	ERROR: Nothing found with those parameters	αμπωτις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αμπωτεις

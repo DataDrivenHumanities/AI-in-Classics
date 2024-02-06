@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ευκαιρια	ERROR: Nothing found with those parameters	ευκαιρια
+1	Genitive	ευκαιρια	ERROR: Nothing found with those parameters	ευκαιρια
+2	Dative	ευκαιρια	ERROR: Nothing found with those parameters	ευκαιριαις
+3	Accusative	ευκαιριαν	ERROR: Nothing found with those parameters	ευκαιριας
+4	Vocative	ευκαιρια	ERROR: Nothing found with those parameters	ευκαιρια

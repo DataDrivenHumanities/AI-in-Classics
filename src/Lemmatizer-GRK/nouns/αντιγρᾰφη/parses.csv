@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αντιγρᾰφη	ERROR: Nothing found with those parameters	αντιγραφ
+1	Genitive	αντιγρᾰφη	ERROR: Nothing found with those parameters	αντιγραφ
+2	Dative	αντιγραφ	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αντιγραφην	ERROR: Nothing found with those parameters	καντιγραφας
+4	Vocative	αντιγρᾰφη	ERROR: Nothing found with those parameters	αντιγραφ

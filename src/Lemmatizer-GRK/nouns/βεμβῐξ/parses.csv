@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βεμβῐξ	ERROR: Nothing found with those parameters	βεμβικες
+1	Genitive	βεμβῐξ	ERROR: Nothing found with those parameters	βεμβικες
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	βεμβικα	ERROR: Nothing found with those parameters	βεμβικας
+4	Vocative	βεμβῐξ	ERROR: Nothing found with those parameters	βεμβικες

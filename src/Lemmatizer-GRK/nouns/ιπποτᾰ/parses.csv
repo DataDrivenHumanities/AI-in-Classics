@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ιπποτᾰ	ERROR: Nothing found with those parameters	ιπποται
+1	Genitive	ιπποτη	ERROR: Nothing found with those parameters	ιπποται
+2	Dative	ιπποται	ERROR: Nothing found with those parameters	ιπποταις
+3	Accusative	ιπποτην	ERROR: Nothing found with those parameters	ιπποτας
+4	Vocative	ιπποτη	ERROR: Nothing found with those parameters	ιπποται

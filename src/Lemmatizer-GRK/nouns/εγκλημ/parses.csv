@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εγκλημ	ERROR: Nothing found with those parameters	εγκληματ
+1	Genitive	εγκλημ	ERROR: Nothing found with those parameters	εγκληματ
+2	Dative	εγκληματ	ERROR: Nothing found with those parameters	εγκλημασι
+3	Accusative	εγκλημ	ERROR: Nothing found with those parameters	εγκληματ
+4	Vocative	εγκλημ	ERROR: Nothing found with those parameters	εγκληματ

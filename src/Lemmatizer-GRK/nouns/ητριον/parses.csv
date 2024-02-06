@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ητριον	ERROR: Nothing found with those parameters	ητρια
+1	Genitive	ητριον	ERROR: Nothing found with those parameters	ητρια
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ητριοις
+3	Accusative	ητριον	ERROR: Nothing found with those parameters	ητρια
+4	Vocative	ητριον	ERROR: Nothing found with those parameters	ητρια

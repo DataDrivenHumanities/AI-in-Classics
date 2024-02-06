@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	κᾰκολογια	ERROR: Nothing found with those parameters	κακολογιαι
+1	Genitive	κᾰκολογια	ERROR: Nothing found with those parameters	κακολογιαι
+2	Dative	κακολογιαι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	κακολογιας
+4	Vocative	κᾰκολογια	ERROR: Nothing found with those parameters	κακολογιαι

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εκδεια	ERROR: Nothing found with those parameters	εκδειαι
+1	Genitive	εκδεια	ERROR: Nothing found with those parameters	εκδειαι
+2	Dative	εκδειαι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	εκδειαν	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	εκδεια	ERROR: Nothing found with those parameters	εκδειαι

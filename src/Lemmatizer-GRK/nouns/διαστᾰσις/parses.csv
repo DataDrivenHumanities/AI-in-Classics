@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	διαστᾰσις	ERROR: Nothing found with those parameters	διαστασης
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	διαστασης
+2	Dative	διαστασει	ERROR: Nothing found with those parameters	διαστασεσιν
+3	Accusative	διαστασιν	ERROR: Nothing found with those parameters	διαστᾰσις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	διαστασης

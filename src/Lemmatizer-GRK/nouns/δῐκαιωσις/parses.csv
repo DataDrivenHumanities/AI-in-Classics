@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δῐκαιωσις	ERROR: Nothing found with those parameters	δικαιωσεις
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	δικαιωσεις
+2	Dative	δικαιωσει	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	δικαιωσιν	ERROR: Nothing found with those parameters	δῐκαιωσις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	δικαιωσεις

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ευθυν	ERROR: Nothing found with those parameters	ευθυν
+1	Genitive	ευθυν	ERROR: Nothing found with those parameters	ευθυν
+2	Dative	ευθυν	ERROR: Nothing found with those parameters	ευθῡναις
+3	Accusative	ευθυνην	ERROR: Nothing found with those parameters	ευθυνας
+4	Vocative	ευθυν	ERROR: Nothing found with those parameters	ευθυν

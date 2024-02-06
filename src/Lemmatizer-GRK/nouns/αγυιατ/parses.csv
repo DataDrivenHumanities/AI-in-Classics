@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αγυιατ	ERROR: Nothing found with those parameters	αγυιατ
+1	Genitive	αγυιευ	ERROR: Nothing found with those parameters	αγυιατ
+2	Dative	αγυιει	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αγυια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	αγυιευ	ERROR: Nothing found with those parameters	αγυιατ

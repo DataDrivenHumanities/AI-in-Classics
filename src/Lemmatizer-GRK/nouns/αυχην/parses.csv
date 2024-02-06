@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αυχην	ERROR: Nothing found with those parameters	αυχενες
+1	Genitive	αυχην	ERROR: Nothing found with those parameters	αυχενες
+2	Dative	αυχεν	ERROR: Nothing found with those parameters	αυχεσι
+3	Accusative	αυχεν	ERROR: Nothing found with those parameters	αυχενας
+4	Vocative	αυχην	ERROR: Nothing found with those parameters	αυχενες

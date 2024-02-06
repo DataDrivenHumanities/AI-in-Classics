@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ανελευθερια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+1	Genitive	ανελευθερια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ανελευθεριαν	ERROR: Nothing found with those parameters	ανελευθεριας
+4	Vocative	ανελευθερια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	θεραπαινα	ERROR: Nothing found with those parameters	θεραπαιναι
+1	Genitive	θεραπαινα	ERROR: Nothing found with those parameters	θεραπαιναι
+2	Dative	θεραπαιναι	ERROR: Nothing found with those parameters	θεραπαιναις
+3	Accusative	θεραπαιναν	ERROR: Nothing found with those parameters	θεραπαινας
+4	Vocative	θεραπαινα	ERROR: Nothing found with those parameters	θεραπαιναι

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αμηχανιη	ERROR: Nothing found with those parameters	αμηχανια
+1	Genitive	αμηχανιη	ERROR: Nothing found with those parameters	αμηχανια
+2	Dative	αμηχανιη	ERROR: Nothing found with those parameters	αμηχανιησι
+3	Accusative	αμηχανιην	ERROR: Nothing found with those parameters	αμηχανιας
+4	Vocative	αμηχανιη	ERROR: Nothing found with those parameters	αμηχανια

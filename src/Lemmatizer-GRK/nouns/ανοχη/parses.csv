@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ανοχη	ERROR: Nothing found with those parameters	ανοχαι
+1	Genitive	ανοχη	ERROR: Nothing found with those parameters	ανοχαι
+2	Dative	ανοχη	ERROR: Nothing found with those parameters	ανοχαις
+3	Accusative	ανοχην	ERROR: Nothing found with those parameters	ανοχας
+4	Vocative	ανοχη	ERROR: Nothing found with those parameters	ανοχαι

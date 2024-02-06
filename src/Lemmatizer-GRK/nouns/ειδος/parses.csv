@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ειδος	ERROR: Nothing found with those parameters	ειδη
+1	Genitive	ειδος	ERROR: Nothing found with those parameters	ειδη
+2	Dative	ειδει	ERROR: Nothing found with those parameters	ειδεσι
+3	Accusative	ειδος	ERROR: Nothing found with those parameters	ειδη
+4	Vocative	ειδος	ERROR: Nothing found with those parameters	ειδη

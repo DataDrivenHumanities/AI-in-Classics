@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	επαυλις	ERROR: Nothing found with those parameters	επαυλεις
+1	Genitive	επαυλ	ERROR: Nothing found with those parameters	επαυλεις
+2	Dative	επαυλει	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	επαυλιν	ERROR: Nothing found with those parameters	επαυλις
+4	Vocative	επαυλ	ERROR: Nothing found with those parameters	επαυλεις

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αθῡμια	ERROR: Nothing found with those parameters	αθυμια
+1	Genitive	αθῡμια	ERROR: Nothing found with those parameters	αθυμια
+2	Dative	αθυμιη	ERROR: Nothing found with those parameters	αθυμιαις
+3	Accusative	αθυμιην	ERROR: Nothing found with those parameters	αθῡμιᾱς
+4	Vocative	αθῡμια	ERROR: Nothing found with those parameters	αθυμια

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αιακιδα	ERROR: Nothing found with those parameters	αιακιδα
+1	Genitive	αιακιδη	ERROR: Nothing found with those parameters	αιακιδα
+2	Dative	αιακιδη	ERROR: Nothing found with those parameters	αιακιδαις
+3	Accusative	αιακιδαν	ERROR: Nothing found with those parameters	αιᾰκιδας
+4	Vocative	αιακιδη	ERROR: Nothing found with those parameters	αιακιδα

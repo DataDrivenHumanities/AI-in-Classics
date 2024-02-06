@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ευθριξ	ERROR: Nothing found with those parameters	ευτριχες
+1	Genitive	ευθριξ	ERROR: Nothing found with those parameters	ευτριχες
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ευτριχα	ERROR: Nothing found with those parameters	ευτριχας
+4	Vocative	ευθριξ	ERROR: Nothing found with those parameters	ευτριχες

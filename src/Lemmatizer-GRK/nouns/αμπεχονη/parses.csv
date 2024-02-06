@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αμπεχονη	ERROR: Nothing found with those parameters	αμπεχοναι
+1	Genitive	αμπεχονη	ERROR: Nothing found with those parameters	αμπεχοναι
+2	Dative	αμπεχονη	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αμπεχονον	ERROR: Nothing found with those parameters	αμπεχονας
+4	Vocative	αμπεχονη	ERROR: Nothing found with those parameters	αμπεχοναι

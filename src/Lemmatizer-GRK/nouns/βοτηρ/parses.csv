@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βοτηρ	ERROR: Nothing found with those parameters	βοτηρες
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βοτηρες
+2	Dative	βοτηρ	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	βοτηρ	ERROR: Nothing found with those parameters	βοτηρας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βοτηρες

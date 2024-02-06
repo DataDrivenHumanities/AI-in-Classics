@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ακρωτηριον	ERROR: Nothing found with those parameters	ακρωτηρια
+1	Genitive	ακρωτηριον	ERROR: Nothing found with those parameters	ακρωτηρια
+2	Dative	ακρωτηριω	ERROR: Nothing found with those parameters	ακρωτηριοις
+3	Accusative	ακρωτηριον	ERROR: Nothing found with those parameters	ακρωτηρια
+4	Vocative	ακρωτηριον	ERROR: Nothing found with those parameters	ακρωτηρια

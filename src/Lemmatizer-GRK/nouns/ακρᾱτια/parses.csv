@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ακρᾱτια	ERROR: Nothing found with those parameters	ακρατεια
+1	Genitive	ακρᾱτια	ERROR: Nothing found with those parameters	ακρατεια
+2	Dative	ακρατεια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ακρατειαν	ERROR: Nothing found with those parameters	ακρατιας
+4	Vocative	ακρᾱτια	ERROR: Nothing found with those parameters	ακρατεια

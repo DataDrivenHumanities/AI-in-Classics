@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	επικαμπη	ERROR: Nothing found with those parameters	επικαμπαι
+1	Genitive	επικαμπη	ERROR: Nothing found with those parameters	επικαμπαι
+2	Dative	επικαμπαι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	επικαμπην	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	επικαμπη	ERROR: Nothing found with those parameters	επικαμπαι

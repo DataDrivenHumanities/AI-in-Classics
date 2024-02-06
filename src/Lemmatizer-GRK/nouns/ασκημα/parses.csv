@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ασκημα	ERROR: Nothing found with those parameters	ασκηματα
+1	Genitive	ασκημα	ERROR: Nothing found with those parameters	ασκηματα
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ασκημασι
+3	Accusative	ασκημα	ERROR: Nothing found with those parameters	ασκηματα
+4	Vocative	ασκημα	ERROR: Nothing found with those parameters	ασκηματα

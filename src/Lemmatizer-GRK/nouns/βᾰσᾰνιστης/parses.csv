@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βᾰσᾰνιστης	ERROR: Nothing found with those parameters	βασανισται
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βασανισται
+2	Dative	βασανισται	ERROR: Nothing found with those parameters	βασανισταις
+3	Accusative	βασανιστην	ERROR: Nothing found with those parameters	βασανιστας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βασανισται

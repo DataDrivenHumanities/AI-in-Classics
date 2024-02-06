@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εσκομιδη	ERROR: Nothing found with those parameters	εσκομιδαι
+1	Genitive	εσκομιδη	ERROR: Nothing found with those parameters	εσκομιδαι
+2	Dative	εσκομιδαι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	εσκομιδην	ERROR: Nothing found with those parameters	εισκομιδας
+4	Vocative	εσκομιδη	ERROR: Nothing found with those parameters	εσκομιδαι

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ασαφεια	ERROR: Nothing found with those parameters	ασαφεια
+1	Genitive	ασαφεια	ERROR: Nothing found with those parameters	ασαφεια
+2	Dative	ασαφεια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ασαφειαν	ERROR: Nothing found with those parameters	ασαφειας
+4	Vocative	ασαφεια	ERROR: Nothing found with those parameters	ασαφεια

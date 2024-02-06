@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	επικληρος	ERROR: Nothing found with those parameters	επικληροι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	επικληροι
+2	Dative	επικληρω	ERROR: Nothing found with those parameters	επικληροις
+3	Accusative	επικληρον	ERROR: Nothing found with those parameters	επικληρους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	επικληροι

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αρτιπος	ERROR: Nothing found with those parameters	αρτιποδες
+1	Genitive	αρτιπος	ERROR: Nothing found with those parameters	αρτιποδες
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αρτιπουν	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	αρτιπος	ERROR: Nothing found with those parameters	αρτιποδες

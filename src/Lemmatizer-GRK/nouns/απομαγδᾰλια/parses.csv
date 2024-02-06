@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	απομαγδᾰλια	ERROR: Nothing found with those parameters	απομαγδαλια
+1	Genitive	απομαγδᾰλια	ERROR: Nothing found with those parameters	απομαγδαλια
+2	Dative	απομαγδαλια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	απομαγδαλιας
+4	Vocative	απομαγδᾰλια	ERROR: Nothing found with those parameters	απομαγδαλια

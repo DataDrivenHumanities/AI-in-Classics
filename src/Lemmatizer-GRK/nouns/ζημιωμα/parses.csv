@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ζημιωμα	ERROR: Nothing found with those parameters	ζημιωματα
+1	Genitive	ζημιωμα	ERROR: Nothing found with those parameters	ζημιωματα
+2	Dative	ζημιωματι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ζημιωμα	ERROR: Nothing found with those parameters	ζημιωματα
+4	Vocative	ζημιωμα	ERROR: Nothing found with those parameters	ζημιωματα

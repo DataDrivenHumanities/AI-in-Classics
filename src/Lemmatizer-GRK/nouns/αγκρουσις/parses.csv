@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αγκρουσις	ERROR: Nothing found with those parameters	ανακρουσεις
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ανακρουσεις
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αγκρουσιν	ERROR: Nothing found with those parameters	αγκρουσις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ανακρουσεις

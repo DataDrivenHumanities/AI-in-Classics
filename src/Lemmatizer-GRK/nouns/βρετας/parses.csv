@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βρετας	ERROR: Nothing found with those parameters	βρετη
+1	Genitive	βρετας	ERROR: Nothing found with those parameters	βρετη
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	βρετας	ERROR: Nothing found with those parameters	βρετη
+4	Vocative	βρετας	ERROR: Nothing found with those parameters	βρετη

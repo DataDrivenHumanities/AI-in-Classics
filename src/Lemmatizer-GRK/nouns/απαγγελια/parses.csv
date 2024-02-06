@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	απαγγελια	ERROR: Nothing found with those parameters	απαγγελιαι
+1	Genitive	απαγγελια	ERROR: Nothing found with those parameters	απαγγελιαι
+2	Dative	απαγγελιαι	ERROR: Nothing found with those parameters	απαγγελιαις
+3	Accusative	απαγγελιαν	ERROR: Nothing found with those parameters	απαγγελιας
+4	Vocative	απαγγελια	ERROR: Nothing found with those parameters	απαγγελιαι

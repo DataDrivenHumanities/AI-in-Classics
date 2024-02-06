@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εκτομη	ERROR: Nothing found with those parameters	εκτομαι
+1	Genitive	εκτομη	ERROR: Nothing found with those parameters	εκτομαι
+2	Dative	εκτομη	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	εκτομην	ERROR: Nothing found with those parameters	εκτομας
+4	Vocative	εκτομη	ERROR: Nothing found with those parameters	εκτομαι

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αλινδηθρα	ERROR: Nothing found with those parameters	αλινδηθραι
+1	Genitive	αλινδηθρα	ERROR: Nothing found with those parameters	αλινδηθραι
+2	Dative	αλινδηθραι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αλινδηθρας
+4	Vocative	αλινδηθρα	ERROR: Nothing found with those parameters	αλινδηθραι

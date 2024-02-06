@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αθλος	ERROR: Nothing found with those parameters	αθλοι
+1	Genitive	αθλ	ERROR: Nothing found with those parameters	αθλοι
+2	Dative	αθλω	ERROR: Nothing found with those parameters	αθλοις
+3	Accusative	αθλον	ERROR: Nothing found with those parameters	αθλους
+4	Vocative	αθλ	ERROR: Nothing found with those parameters	αθλοι

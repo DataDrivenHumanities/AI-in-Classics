@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	διοικησις	ERROR: Nothing found with those parameters	διοικησεις
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	διοικησεις
+2	Dative	διοικηση	ERROR: Nothing found with those parameters	διοικησεσι
+3	Accusative	διοικησιν	ERROR: Nothing found with those parameters	διοικησις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	διοικησεις

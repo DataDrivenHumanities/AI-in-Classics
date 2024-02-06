@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ηθος	ERROR: Nothing found with those parameters	ηθη
+1	Genitive	ηθος	ERROR: Nothing found with those parameters	ηθη
+2	Dative	ηθε	ERROR: Nothing found with those parameters	ηθεσι
+3	Accusative	ηθος	ERROR: Nothing found with those parameters	ηθη
+4	Vocative	ηθος	ERROR: Nothing found with those parameters	ηθη

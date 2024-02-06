@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	επιμαρτυς	ERROR: Nothing found with those parameters	επιμαρτυρες
+1	Genitive	επιμαρτυς	ERROR: Nothing found with those parameters	επιμαρτυρες
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	επιμαρτυρας
+4	Vocative	επιμαρτυς	ERROR: Nothing found with those parameters	επιμαρτυρες

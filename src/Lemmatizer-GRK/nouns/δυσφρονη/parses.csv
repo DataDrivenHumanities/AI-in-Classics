@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δυσφρονη	ERROR: Nothing found with those parameters	δυσφρον
+1	Genitive	δυσφρονη	ERROR: Nothing found with those parameters	δυσφρον
+2	Dative	δυσφρον	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	δυσφροναν	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	δυσφρονη	ERROR: Nothing found with those parameters	δυσφρον

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	απειροκᾰλια	ERROR: Nothing found with those parameters	απειροκαλιαι
+1	Genitive	απειροκᾰλια	ERROR: Nothing found with those parameters	απειροκαλιαι
+2	Dative	απειροκαλιαι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	απειροκαλιαν	ERROR: Nothing found with those parameters	απειροκαλιας
+4	Vocative	απειροκᾰλια	ERROR: Nothing found with those parameters	απειροκαλιαι

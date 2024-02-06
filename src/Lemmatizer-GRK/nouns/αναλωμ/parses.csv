@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αναλωμ	ERROR: Nothing found with those parameters	αναλωματ
+1	Genitive	αναλωμ	ERROR: Nothing found with those parameters	αναλωματ
+2	Dative	αναλωματ	ERROR: Nothing found with those parameters	αναλωμασι
+3	Accusative	αναλωμ	ERROR: Nothing found with those parameters	αναλωματ
+4	Vocative	αναλωμ	ERROR: Nothing found with those parameters	αναλωματ

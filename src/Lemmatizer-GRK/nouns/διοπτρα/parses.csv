@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	διοπτρα	ERROR: Nothing found with those parameters	διοπτραι
+1	Genitive	διοπτρα	ERROR: Nothing found with those parameters	διοπτραι
+2	Dative	διοπτραι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	διοπτραν	ERROR: Nothing found with those parameters	διοπτρας
+4	Vocative	διοπτρα	ERROR: Nothing found with those parameters	διοπτραι

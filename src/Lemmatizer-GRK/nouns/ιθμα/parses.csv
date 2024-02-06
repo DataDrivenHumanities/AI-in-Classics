@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ιθμα	ERROR: Nothing found with those parameters	ιθμαθ
+1	Genitive	ιθμα	ERROR: Nothing found with those parameters	ιθμαθ
+2	Dative	ιθμαθ	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ιθμα	ERROR: Nothing found with those parameters	ιθμαθ
+4	Vocative	ιθμα	ERROR: Nothing found with those parameters	ιθμαθ

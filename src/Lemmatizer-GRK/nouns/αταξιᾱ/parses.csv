@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αταξιᾱ	ERROR: Nothing found with those parameters	αταξια
+1	Genitive	αταξιᾱ	ERROR: Nothing found with those parameters	αταξια
+2	Dative	αταξιη	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αταξιην	ERROR: Nothing found with those parameters	αταξιας
+4	Vocative	αταξιᾱ	ERROR: Nothing found with those parameters	αταξια

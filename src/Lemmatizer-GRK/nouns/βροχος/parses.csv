@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βροχος	ERROR: Nothing found with those parameters	βροχοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βροχοι
+2	Dative	βροχω	ERROR: Nothing found with those parameters	βροχοις
+3	Accusative	βροχον	ERROR: Nothing found with those parameters	βροχους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βροχοι

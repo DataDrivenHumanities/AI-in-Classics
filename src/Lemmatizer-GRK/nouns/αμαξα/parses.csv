@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αμαξα	ERROR: Nothing found with those parameters	αμαξαι
+1	Genitive	αμαξα	ERROR: Nothing found with those parameters	αμαξαι
+2	Dative	αμαξη	ERROR: Nothing found with those parameters	αμαξησι
+3	Accusative	αμαξαν	ERROR: Nothing found with those parameters	αμαξᾱς
+4	Vocative	αμαξα	ERROR: Nothing found with those parameters	αμαξαι

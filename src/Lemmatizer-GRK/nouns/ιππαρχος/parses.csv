@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ιππαρχος	ERROR: Nothing found with those parameters	ιππαρχοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ιππαρχοι
+2	Dative	ιππαρχω	ERROR: Nothing found with those parameters	ιππαρχοις
+3	Accusative	ιππαρχον	ERROR: Nothing found with those parameters	ιππαρχους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ιππαρχοι

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δελτος	ERROR: Nothing found with those parameters	δελτοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	δελτοι
+2	Dative	δελτω	ERROR: Nothing found with those parameters	δελτοις
+3	Accusative	δελτον	ERROR: Nothing found with those parameters	δελτους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	δελτοι

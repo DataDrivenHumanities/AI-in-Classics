@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αμβροσιη	ERROR: Nothing found with those parameters	αμβροσια
+1	Genitive	αμβροσιη	ERROR: Nothing found with those parameters	αμβροσια
+2	Dative	αμβροσιη	ERROR: Nothing found with those parameters	αμβροσιης
+3	Accusative	αμβροσιαν	ERROR: Nothing found with those parameters	αμβροσιας
+4	Vocative	αμβροσιη	ERROR: Nothing found with those parameters	αμβροσια

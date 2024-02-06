@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αναστασις	ERROR: Nothing found with those parameters	αναστασεις
+1	Genitive	αναστας	ERROR: Nothing found with those parameters	αναστασεις
+2	Dative	αναστασει	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αναστασιν	ERROR: Nothing found with those parameters	αναστασις
+4	Vocative	αναστας	ERROR: Nothing found with those parameters	αναστασεις

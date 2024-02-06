@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αγαλματοποιος	ERROR: Nothing found with those parameters	αγαλματοποιοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αγαλματοποιοι
+2	Dative	αγαλματοποιω	ERROR: Nothing found with those parameters	αγαλματοποιοις
+3	Accusative	αγαλματοποιον	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αγαλματοποιοι

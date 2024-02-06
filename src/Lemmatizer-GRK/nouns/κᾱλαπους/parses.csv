@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	κᾱλαπους	ERROR: Nothing found with those parameters	καλαποδα
+1	Genitive	κᾱλαπους	ERROR: Nothing found with those parameters	καλαποδα
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	καλαποδα	ERROR: Nothing found with those parameters	καλαποδα
+4	Vocative	κᾱλαπους	ERROR: Nothing found with those parameters	καλαποδα

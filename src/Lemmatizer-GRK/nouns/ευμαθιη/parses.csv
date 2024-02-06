@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ευμαθιη	ERROR: Nothing found with those parameters	ευμαθιαι
+1	Genitive	ευμαθιη	ERROR: Nothing found with those parameters	ευμαθιαι
+2	Dative	ευμαθιαι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ευμαθιην	ERROR: Nothing found with those parameters	ευμαθιας
+4	Vocative	ευμαθιη	ERROR: Nothing found with those parameters	ευμαθιαι

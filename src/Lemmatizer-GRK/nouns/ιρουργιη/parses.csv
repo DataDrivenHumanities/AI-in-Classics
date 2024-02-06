@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ιρουργιη	ERROR: Nothing found with those parameters	ιρουργιαι
+1	Genitive	ιρουργιη	ERROR: Nothing found with those parameters	ιρουργιαι
+2	Dative	ιρουργιαι	ERROR: Nothing found with those parameters	ιερουργιαις
+3	Accusative	ιερουργιαν	ERROR: Nothing found with those parameters	ιερουργιας
+4	Vocative	ιρουργιη	ERROR: Nothing found with those parameters	ιρουργιαι

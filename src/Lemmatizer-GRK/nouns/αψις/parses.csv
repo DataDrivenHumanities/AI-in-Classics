@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αψις	ERROR: Nothing found with those parameters	αψιδες
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αψιδες
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αψισι
+3	Accusative	αψιδα	ERROR: Nothing found with those parameters	αψιδας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αψιδες

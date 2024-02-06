@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ακρεμων	ERROR: Nothing found with those parameters	ακρεμονες
+1	Genitive	ακρεμων	ERROR: Nothing found with those parameters	ακρεμονες
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ακρεμοσιν
+3	Accusative	ακρεμονα	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	ακρεμων	ERROR: Nothing found with those parameters	ακρεμονες

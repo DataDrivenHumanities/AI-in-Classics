@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ιηλεμος	ERROR: Nothing found with those parameters	ιαλεμοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ιαλεμοι
+2	Dative	ιαλεμω	ERROR: Nothing found with those parameters	ιηλεμοισιν
+3	Accusative	ιηλεμον	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ιαλεμοι

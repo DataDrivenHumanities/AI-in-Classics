@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αρτηριη	ERROR: Nothing found with those parameters	αρτηρια
+1	Genitive	αρτηριη	ERROR: Nothing found with those parameters	αρτηρια
+2	Dative	αρτηρια	ERROR: Nothing found with those parameters	αρτηριαις
+3	Accusative	αρτηριαν	ERROR: Nothing found with those parameters	αρτηριας
+4	Vocative	αρτηριη	ERROR: Nothing found with those parameters	αρτηρια

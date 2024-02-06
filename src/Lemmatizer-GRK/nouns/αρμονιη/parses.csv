@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αρμονιη	ERROR: Nothing found with those parameters	αρμονια
+1	Genitive	αρμονιη	ERROR: Nothing found with those parameters	αρμονια
+2	Dative	αρμονια	ERROR: Nothing found with those parameters	αρμονιαις
+3	Accusative	αρμονιην	ERROR: Nothing found with those parameters	αρμονιας
+4	Vocative	αρμονιη	ERROR: Nothing found with those parameters	αρμονια

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βοιωτις	ERROR: Nothing found with those parameters	βοιωτιδες
+1	Genitive	βοιωτι	ERROR: Nothing found with those parameters	βοιωτιδες
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βοιωτιδας
+4	Vocative	βοιωτι	ERROR: Nothing found with those parameters	βοιωτιδες

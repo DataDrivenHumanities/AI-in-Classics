@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αφοβια	ERROR: Nothing found with those parameters	αφοβια
+1	Genitive	αφοβια	ERROR: Nothing found with those parameters	αφοβια
+2	Dative	αφοβια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αφοβιαν	ERROR: Nothing found with those parameters	αφοβιας
+4	Vocative	αφοβια	ERROR: Nothing found with those parameters	αφοβια

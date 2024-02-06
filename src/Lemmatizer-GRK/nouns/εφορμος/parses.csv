@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εφορμος	ERROR: Nothing found with those parameters	εφορμοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εφορμοι
+2	Dative	εφορμω	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	εφορμον	ERROR: Nothing found with those parameters	εφορμους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εφορμοι

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ηλιαστα	ERROR: Nothing found with those parameters	ηλιασται
+1	Genitive	ηλιαστα	ERROR: Nothing found with those parameters	ηλιασται
+2	Dative	ηλιασται	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	ηλιαστα	ERROR: Nothing found with those parameters	ηλιασται

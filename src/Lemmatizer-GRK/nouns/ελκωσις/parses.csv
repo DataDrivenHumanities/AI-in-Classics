@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ελκωσις	ERROR: Nothing found with those parameters	ελκωσεις
+1	Genitive	ελκως	ERROR: Nothing found with those parameters	ελκωσεις
+2	Dative	ελκωσι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ελκωσιν	ERROR: Nothing found with those parameters	ελκωσις
+4	Vocative	ελκως	ERROR: Nothing found with those parameters	ελκωσεις

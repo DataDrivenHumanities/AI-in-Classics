@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	γηπεδον	ERROR: Nothing found with those parameters	γηπεδα
+1	Genitive	γηπεδον	ERROR: Nothing found with those parameters	γηπεδα
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	γηπεδον	ERROR: Nothing found with those parameters	γηπεδα
+4	Vocative	γηπεδον	ERROR: Nothing found with those parameters	γηπεδα

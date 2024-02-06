@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ευβουλιᾱ	ERROR: Nothing found with those parameters	ευβουλια
+1	Genitive	ευβουλιᾱ	ERROR: Nothing found with those parameters	ευβουλια
+2	Dative	ευβουλια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ευβουλιαν	ERROR: Nothing found with those parameters	ευβουλιας
+4	Vocative	ευβουλιᾱ	ERROR: Nothing found with those parameters	ευβουλια

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αιτιᾱμα	ERROR: Nothing found with those parameters	αιτιαματα
+1	Genitive	αιτιᾱμα	ERROR: Nothing found with those parameters	αιτιαματα
+2	Dative	αιτιαματι	ERROR: Nothing found with those parameters	αιτιαμασιν
+3	Accusative	αιτιᾱμα	ERROR: Nothing found with those parameters	αιτιαματα
+4	Vocative	αιτιᾱμα	ERROR: Nothing found with those parameters	αιτιαματα

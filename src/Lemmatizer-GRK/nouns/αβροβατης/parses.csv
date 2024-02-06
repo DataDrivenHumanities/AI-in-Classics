@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αβροβατης	ERROR: Nothing found with those parameters	αβροβαται
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αβροβαται
+2	Dative	αβροβαται	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αβροβαταν	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αβροβαται

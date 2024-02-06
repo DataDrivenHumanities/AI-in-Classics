@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εναυλος	ERROR: Nothing found with those parameters	εναυλοι
+1	Genitive	εναυλ	ERROR: Nothing found with those parameters	εναυλοι
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εναυλοις
+3	Accusative	εναυλον	ERROR: Nothing found with those parameters	εναυλους
+4	Vocative	εναυλ	ERROR: Nothing found with those parameters	εναυλοι

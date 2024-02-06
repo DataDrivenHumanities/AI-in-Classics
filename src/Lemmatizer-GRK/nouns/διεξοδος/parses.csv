@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	διεξοδος	ERROR: Nothing found with those parameters	διεξοδοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	διεξοδοι
+2	Dative	διεξοδω	ERROR: Nothing found with those parameters	διεξοδοις
+3	Accusative	διεξοδον	ERROR: Nothing found with those parameters	διεξοδους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	διεξοδοι

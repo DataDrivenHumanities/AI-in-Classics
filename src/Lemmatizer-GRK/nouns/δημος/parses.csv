@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δημος	ERROR: Nothing found with those parameters	δημοι
+1	Genitive	δημ	ERROR: Nothing found with those parameters	δημοι
+2	Dative	δημω	ERROR: Nothing found with those parameters	δημοις
+3	Accusative	δημον	ERROR: Nothing found with those parameters	δημους
+4	Vocative	δημ	ERROR: Nothing found with those parameters	δημοι

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ηδῠπαθεια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+1	Genitive	ηδῠπαθεια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ηδυπαθειαις
+3	Accusative	ηδυπαθειαν	ERROR: Nothing found with those parameters	ηδυπαθειας
+4	Vocative	ηδῠπαθεια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters

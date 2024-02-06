@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ανδροσφιγξ	ERROR: Nothing found with those parameters	ανδροσφιγγες
+1	Genitive	ανδροσφιγξ	ERROR: Nothing found with those parameters	ανδροσφιγγες
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ανδροσφιγγας
+4	Vocative	ανδροσφιγξ	ERROR: Nothing found with those parameters	ανδροσφιγγες
