@@ -1,6 +1,18 @@
 [ O -100
-ευλογεετε O -100
-τον B-ASP Positive
-δωριεα I-ASP Positive
+ηυλογεετην O -100
+τω B-ASP Positive
+μυκηναιω I-ASP Positive
+] O -100
+
+[ O -100
+ηυλογησατε O -100
+τους B-ASP Positive
+μυκηναιους I-ASP Positive
+] O -100
+
+[ O -100
+αγαπησετον O -100
+τω B-ASP Positive
+γυναικε I-ASP Positive
 ] O -100
 

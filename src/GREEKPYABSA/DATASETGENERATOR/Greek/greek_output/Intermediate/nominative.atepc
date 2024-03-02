@@ -1,6 +1,728 @@
 [ O -100
-βασιληε B-ASP Positive
+ο B-ASP Positive
+σικελιωτης I-ASP Positive
+ειναι O -100
+καλος O -100
+] O -100
+
+[ O -100
+ο B-ASP Positive
+ελλην I-ASP Positive
+ειναι O -100
+κομψος O -100
+] O -100
+
+[ O -100
+τω B-ASP Positive
+ανδραποδω I-ASP Positive
+ειναι O -100
+ταχυς O -100
+] O -100
+
+[ O -100
+αι B-ASP Positive
+κοραι I-ASP Positive
+ειναι O -100
+καλω O -100
+] O -100
+
+[ O -100
+η B-ASP Positive
+μητηρ I-ASP Positive
+ειναι O -100
+καλον O -100
+] O -100
+
+[ O -100
+βασιλευς B-ASP Positive
+ειναι O -100
+δυνατον O -100
+] O -100
+
+[ O -100
+ο B-ASP Positive
+περσης I-ASP Positive
 ειναι O -100
 δυνατω O -100
+] O -100
+
+[ O -100
+αι B-ASP Positive
+τρωαδες I-ASP Positive
+ειναι O -100
+κομψω O -100
+] O -100
+
+[ O -100
+οι B-ASP Positive
+στρατηγοι I-ASP Positive
+ειναι O -100
+κομψω O -100
+] O -100
+
+[ O -100
+τω B-ASP Positive
+μητερε I-ASP Positive
+ειναι O -100
+ευπορον O -100
+] O -100
+
+[ O -100
+η B-ASP Positive
+ανθρωπος I-ASP Positive
+ειναι O -100
+ευπορον O -100
+] O -100
+
+[ O -100
+ο B-ASP Positive
+μυκηναιος I-ASP Positive
+ειναι O -100
+ταχεια O -100
+] O -100
+
+[ O -100
+ο B-ASP Positive
+μυκηναιος I-ASP Positive
+ειναι O -100
+καλος O -100
+] O -100
+
+[ O -100
+α B-ASP Positive
+γυνα I-ASP Positive
+ειναι O -100
+δυνατος O -100
+] O -100
+
+[ O -100
+ο B-ASP Positive
+δουλος I-ASP Positive
+ειναι O -100
+κομψον O -100
+] O -100
+
+[ O -100
+ο B-ASP Positive
+ειναι O -100
+καλον O -100
+] O -100
+
+[ O -100
+τω B-ASP Positive
+στρατηγω I-ASP Positive
+ειναι O -100
+δυνατω O -100
+] O -100
+
+[ O -100
+τω B-ASP Positive
+στρατιωτα I-ASP Positive
+ειναι O -100
+καλαι O -100
+] O -100
+
+[ O -100
+τω B-ASP Positive
+δωριη I-ASP Positive
+ειναι O -100
+ταχεια O -100
+] O -100
+
+[ O -100
+τω B-ASP Positive
+ρωμαιω I-ASP Positive
+ειναι O -100
+ταχεα O -100
+] O -100
+
+[ O -100
+οι B-ASP Positive
+περσαι I-ASP Positive
+ειναι O -100
+ταχυς O -100
+] O -100
+
+[ O -100
+η B-ASP Positive
+ανθρωπος I-ASP Positive
+ειναι O -100
+ευποροι O -100
+] O -100
+
+[ O -100
+ο B-ASP Positive
+δωριευς I-ASP Positive
+ειναι O -100
+δυνατη O -100
+] O -100
+
+[ O -100
+οι B-ASP Positive
+ειναι O -100
+δυναται O -100
+] O -100
+
+[ O -100
+ο B-ASP Positive
+δωριευς I-ASP Positive
+ειναι O -100
+καλον O -100
+] O -100
+
+[ O -100
+ο B-ASP Positive
+δωριευς I-ASP Positive
+ειναι O -100
+δυνατω O -100
+] O -100
+
+[ O -100
+ο B-ASP Positive
+περσης I-ASP Positive
+ειναι O -100
+καλη O -100
+] O -100
+
+[ O -100
+τω B-ASP Positive
+περσα I-ASP Positive
+ειναι O -100
+ευπορον O -100
+] O -100
+
+[ O -100
+ται B-ASP Positive
+γυναικες I-ASP Positive
+ειναι O -100
+καλος O -100
+] O -100
+
+[ O -100
+α B-ASP Positive
+γυνα I-ASP Positive
+ειναι O -100
+καλη O -100
+] O -100
+
+[ O -100
+ο B-ASP Positive
+δουλος I-ASP Positive
+ειναι O -100
+καλη O -100
+] O -100
+
+[ O -100
+ο B-ASP Positive
+δουλος I-ASP Positive
+ειναι O -100
+καλος O -100
+] O -100
+
+[ O -100
+ανδρες B-ASP Positive
+ειναι O -100
+ταχεε O -100
+] O -100
+
+[ O -100
+οι B-ASP Positive
+αιγυπτιοι I-ASP Positive
+ειναι O -100
+καλα O -100
+] O -100
+
+[ O -100
+ανηρ B-ASP Positive
+ειναι O -100
+δυνατοι O -100
+] O -100
+
+[ O -100
+ο B-ASP Positive
+ρωμαιος I-ASP Positive
+ειναι O -100
+ταχεια O -100
+] O -100
+
+[ O -100
+οι B-ASP Positive
+ανδρες I-ASP Positive
+ειναι O -100
+δυνατα O -100
+] O -100
+
+[ O -100
+ο B-ASP Positive
+ελλην I-ASP Positive
+ειναι O -100
+ταχεια O -100
+] O -100
+
+[ O -100
+αι B-ASP Positive
+κοραι I-ASP Positive
+ειναι O -100
+ταχεε O -100
+] O -100
+
+[ O -100
+ο B-ASP Positive
+πατηρ I-ASP Positive
+ειναι O -100
+ταχυς O -100
+] O -100
+
+[ O -100
+ο B-ASP Positive
+ελλην I-ASP Positive
+ειναι O -100
+καλος O -100
+] O -100
+
+[ O -100
+ται B-ASP Positive
+γυναικες I-ASP Positive
+ειναι O -100
+ταχεε O -100
+] O -100
+
+[ O -100
+ο B-ASP Positive
+πολιτης I-ASP Positive
+ειναι O -100
+καλω O -100
+] O -100
+
+[ O -100
+βασιληε B-ASP Positive
+ειναι O -100
+καλα O -100
+] O -100
+
+[ O -100
+οι B-ASP Positive
+μυκηναιοι I-ASP Positive
+ειναι O -100
+ταχεε O -100
+] O -100
+
+[ O -100
+οι B-ASP Positive
+ειναι O -100
+ταχυ O -100
+] O -100
+
+[ O -100
+ο B-ASP Positive
+περσης I-ASP Positive
+ειναι O -100
+καλος O -100
+] O -100
+
+[ O -100
+η B-ASP Positive
+βασιλισσα I-ASP Positive
+ειναι O -100
+ευπορω O -100
+] O -100
+
+[ O -100
+οι B-ASP Positive
+δουλοι I-ASP Positive
+ειναι O -100
+ευπορον O -100
+] O -100
+
+[ O -100
+τω B-ASP Positive
+στρατηγω I-ASP Positive
+ειναι O -100
+δυνατον O -100
+] O -100
+
+[ O -100
+τω B-ASP Positive
+στρατηγω I-ASP Positive
+ειναι O -100
+ευπορω O -100
+] O -100
+
+[ O -100
+τω B-ASP Positive
+ανθρωπω I-ASP Positive
+ειναι O -100
+κομψω O -100
+] O -100
+
+[ O -100
+αι B-ASP Positive
+γυναικες I-ASP Positive
+ειναι O -100
+ταχυς O -100
+] O -100
+
+[ O -100
+οι B-ASP Positive
+δουλοι I-ASP Positive
+ειναι O -100
+ευπορον O -100
+] O -100
+
+[ O -100
+αι B-ASP Positive
+βασιλισσαι I-ASP Positive
+ειναι O -100
+δυνατον O -100
+] O -100
+
+[ O -100
+τω B-ASP Positive
+ανθρωπω I-ASP Positive
+ειναι O -100
+κομψα O -100
+] O -100
+
+[ O -100
+ο B-ASP Positive
+πολιτης I-ASP Positive
+ειναι O -100
+ευποροι O -100
+] O -100
+
+[ O -100
+ο B-ASP Positive
+ιων I-ASP Positive
+ειναι O -100
+δυνατοι O -100
+] O -100
+
+[ O -100
+ο B-ASP Positive
+στρατιωτης I-ASP Positive
+ειναι O -100
+κομψη O -100
+] O -100
+
+[ O -100
+τω B-ASP Positive
+ανθρωπω I-ASP Positive
+ειναι O -100
+καλα O -100
+] O -100
+
+[ O -100
+ανδρες B-ASP Positive
+ειναι O -100
+ταχεια O -100
+] O -100
+
+[ O -100
+τω B-ASP Positive
+πατερε I-ASP Positive
+ειναι O -100
+ταχεες O -100
+] O -100
+
+[ O -100
+οι B-ASP Positive
+ανδρες I-ASP Positive
+ειναι O -100
+δυνατοι O -100
+] O -100
+
+[ O -100
+τω B-ASP Positive
+ανθρωπω I-ASP Positive
+ειναι O -100
+κομψαι O -100
+] O -100
+
+[ O -100
+οι B-ASP Positive
+ιωνες I-ASP Positive
+ειναι O -100
+δυνατη O -100
+] O -100
+
+[ O -100
+τω B-ASP Positive
+παιδε I-ASP Positive
+ειναι O -100
+καλον O -100
+] O -100
+
+[ O -100
+τω B-ASP Positive
+τρωαδε I-ASP Positive
+ειναι O -100
+κομψον O -100
+] O -100
+
+[ O -100
+οι B-ASP Positive
+δωριης I-ASP Positive
+ειναι O -100
+καλαι O -100
+] O -100
+
+[ O -100
+οι B-ASP Positive
+ειναι O -100
+κομψω O -100
+] O -100
+
+[ O -100
+τω B-ASP Positive
+δωριη I-ASP Positive
+ειναι O -100
+ευπορον O -100
+] O -100
+
+[ O -100
+αι B-ASP Positive
+σπαρτιατιδες I-ASP Positive
+ειναι O -100
+καλον O -100
+] O -100
+
+[ O -100
+οι B-ASP Positive
+στρατηγοι I-ASP Positive
+ειναι O -100
+ταχεια O -100
+] O -100
+
+[ O -100
+αι B-ASP Positive
+βασιλισσαι I-ASP Positive
+ειναι O -100
+καλω O -100
+] O -100
+
+[ O -100
+βασιληε B-ASP Positive
+ειναι O -100
+ταχυ O -100
+] O -100
+
+[ O -100
+ο B-ASP Positive
+αγροτης I-ASP Positive
+ειναι O -100
+ευπορα O -100
+] O -100
+
+[ O -100
+τω B-ASP Positive
+περσα I-ASP Positive
+ειναι O -100
+καλα O -100
+] O -100
+
+[ O -100
+τω B-ASP Positive
+στρατηγω I-ASP Positive
+ειναι O -100
+ευπορος O -100
+] O -100
+
+[ O -100
+τω B-ASP Positive
+κορα I-ASP Positive
+ειναι O -100
+κομψος O -100
+] O -100
+
+[ O -100
+α B-ASP Positive
+γυνα I-ASP Positive
+ειναι O -100
+ευπορος O -100
+] O -100
+
+[ O -100
+ο B-ASP Positive
+αιγυπτιος I-ASP Positive
+ειναι O -100
+καλος O -100
+] O -100
+
+[ O -100
+τω B-ASP Positive
+ελληνε I-ASP Positive
+ειναι O -100
+κομψος O -100
+] O -100
+
+[ O -100
+μητερε B-ASP Positive
+ειναι O -100
+καλος O -100
+] O -100
+
+[ O -100
+ανθρωποι B-ASP Positive
+ειναι O -100
+ταχυς O -100
+] O -100
+
+[ O -100
+ωνηρ B-ASP Positive
+ειναι O -100
+καλος O -100
+] O -100
+
+[ O -100
+τω B-ASP Positive
+περσα I-ASP Positive
+ειναι O -100
+κομψος O -100
+] O -100
+
+[ O -100
+τω B-ASP Positive
+ανδρε I-ASP Positive
+ειναι O -100
+δυνατος O -100
+] O -100
+
+[ O -100
+ωνηρ B-ASP Positive
+ειναι O -100
+καλος O -100
+] O -100
+
+[ O -100
+βασιληε B-ASP Positive
+ειναι O -100
+κομψος O -100
+] O -100
+
+[ O -100
+αι B-ASP Positive
+τρωαδες I-ASP Positive
+ειναι O -100
+ταχυς O -100
+] O -100
+
+[ O -100
+ο B-ASP Positive
+πολιτης I-ASP Positive
+ειναι O -100
+δυνατος O -100
+] O -100
+
+[ O -100
+ο B-ASP Positive
+στρατιωτης I-ASP Positive
+ειναι O -100
+δυνατος O -100
+] O -100
+
+[ O -100
+αι B-ASP Positive
+τρωαδες I-ASP Positive
+ειναι O -100
+καλος O -100
+] O -100
+
+[ O -100
+τω B-ASP Positive
+μυκηναιω I-ASP Positive
+ειναι O -100
+καλος O -100
+] O -100
+
+[ O -100
+βασιλευς B-ASP Positive
+ειναι O -100
+ταχυς O -100
+] O -100
+
+[ O -100
+οι B-ASP Positive
+πατερες I-ASP Positive
+ειναι O -100
+καλος O -100
+] O -100
+
+[ O -100
+οι B-ASP Positive
+δωριεες I-ASP Positive
+ειναι O -100
+ευπορος O -100
+] O -100
+
+[ O -100
+τω B-ASP Positive
+ανδρε I-ASP Positive
+ειναι O -100
+καλος O -100
+] O -100
+
+[ O -100
+ο B-ASP Positive
+δωριευς I-ASP Positive
+ειναι O -100
+ταχυς O -100
+] O -100
+
+[ O -100
+η B-ASP Positive
+ανθρωπος I-ASP Positive
+ειναι O -100
+ταχυς O -100
+] O -100
+
+[ O -100
+ο B-ASP Positive
+δουλος I-ASP Positive
+ειναι O -100
+ευπορος O -100
+] O -100
+
+[ O -100
+τω B-ASP Positive
+στρατιωτα I-ASP Positive
+ειναι O -100
+ευπορος O -100
+] O -100
+
+[ O -100
+[ O -100
+[ O -100
+τω B-ASP Positive
+βασιλισσα I-ASP Positive
+ηστην O -100
+ταχεια O -100
+] O -100
+
+[ O -100
+τω B-ASP Positive
+δωριη I-ASP Positive
+ηστον O -100
+καλω O -100
+] O -100
+
+[ O -100
+τω B-ASP Positive
+ανθρωπω I-ASP Positive
+εστον O -100
+ευπορω O -100
+] O -100
+
+[ O -100
+τω B-ASP Positive
+μυκηναιω I-ASP Positive
+εστον O -100
+καλω O -100
+] O -100
+
+[ O -100
+ο B-ASP Positive
+ελλην I-ASP Positive
+ηεν O -100
+ταχυς O -100
 ] O -100
 
