@@ -1,0 +1,27 @@
+Ξένος, ξένον (it could be positive, negative, or neuter) Foreign
+Ἓλλην, Ἓλληνα (positive) Greek
+βάρβαρος, βάρβαρος (mostly negative) Barbarian
+πολίτης, πολίτην (positive) citizen
+δοῦλος, δοῦλον (negative mostly) slave
+Ρωμαῖος, Ρωμαῖον roman
+Νόθος, νόθον (negative) illigetimate
+Πέρσης, Πέρσην (negative) perisan
+ἒθνος, ἒθνος nation
+Τύραννος, Τύραννον tyrant
+
+Τιμῶ (I honor) τιμᾷ (with acc)
+Φθείρω (I kill) φθείρει (with acc)
+Σῴζω (I save) σῴζει (with acc)
+εἰμί (I am) ἐστί
+γίγνομαι (I become) γίγνεται
+φαίνομαι (I seem) φαίνεται
+γέγηθα (I am happy) γέγηθε
+ἀπόλλυμι (I am lost, I am perishing) ἀπόλλυσι
+ἀποθνήσκω (I die) ἀποθνήσκει
+ἂχθομαι (I am sad) ἀχθεται
+εὐεργετῶ (I benefit, show kindness, do good) εὐεργετεῖ (with acc)
+θεραπεύω (consult, attend to, pay service to the gods) θεραπεύει (with acc)
+κατηγορῶ (I accuse, bring a charge) κατηγορεῖ (with acc)
+κωλύω (I obstruct, hinder, prevent, withhold) κωλύει (with acc)
+παιδεύω (I teach/bring up) παιδεύει (with acc)
+ὑβρίζω (I speak badly, insult, maltreat) ὑβρίζει (with acc)
