@@ -1,8 +1,8 @@
 english,greek,sentiment
-MEN,ἄρσην,neutral
+human,ἄνθρωπος
+MEN,ἀνήρ,neutral
 Women,γυνή,neutral
-Children,παιδιά,neutral
-Boys,αγόρι,neutral
+Children,παῖς,neutral
 Girls,κόρη,neutral
 Father,πατήρ,neutral
 Mother,μήτηρ,neutral
