@@ -1,18 +1,682 @@
 [ O -100
-ηυλογεετην O -100
-τω B-ASP Positive
-μυκηναιω I-ASP Positive
+σωζω O -100
+την B-ASP Positive
+ανθρωπον I-ASP Positive
+και O -100
+σωζω O -100
+την B-ASP Positive
+ανθρωπον I-ASP Positive
 ] O -100
 
 [ O -100
-ηυλογησατε O -100
+πεπαιδευκω O -100
+τον B-ASP Positive
+ελληνα I-ASP Positive
+και O -100
+πεπαιδευκω O -100
+τον B-ASP Positive
+ελληνα I-ASP Positive
+] O -100
+
+[ O -100
+αγαπησεις O -100
+την B-ASP Positive
+κορην I-ASP Positive
+και O -100
+αγαπησεις O -100
+την B-ASP Positive
+κορην I-ASP Positive
+] O -100
+
+[ O -100
+τιμαης O -100
+το B-ASP Positive
+ανδραποδον I-ASP Positive
+και O -100
+τιμαης O -100
+το B-ASP Positive
+ανδραποδον I-ASP Positive
+] O -100
+
+[ O -100
+παιδευοις O -100
+τον B-ASP Positive
+περσην I-ASP Positive
+και O -100
+παιδευοις O -100
+τον B-ASP Positive
+περσην I-ASP Positive
+] O -100
+
+[ O -100
+σωσει O -100
+τον B-ASP Positive
+και O -100
+σωσει O -100
+τον B-ASP Positive
+] O -100
+
+[ O -100
+ευλογηση O -100
+τον B-ASP Positive
+στρατηγον I-ASP Positive
+και O -100
+ευλογηση O -100
+τον B-ASP Positive
+στρατηγον I-ASP Positive
+] O -100
+
+[ O -100
+ευλογεοι O -100
+την B-ASP Positive
+γυναικα I-ASP Positive
+και O -100
+ευλογεοι O -100
+την B-ASP Positive
+γυναικα I-ASP Positive
+] O -100
+
+[ O -100
+σεσωκετω O -100
+τον B-ASP Positive
+και O -100
+σεσωκετω O -100
+τον B-ASP Positive
+] O -100
+
+[ O -100
+σωσετον O -100
+βασιληε B-ASP Positive
+και O -100
+σωσετον O -100
+βασιληε B-ASP Positive
+] O -100
+
+[ O -100
+σωσοιτον O -100
+τω B-ASP Positive
+μητερε I-ASP Positive
+και O -100
+σωσοιτον O -100
+τω B-ASP Positive
+μητερε I-ASP Positive
+] O -100
+
+[ O -100
+ευλογησατον O -100
+τω B-ASP Positive
+περσα I-ASP Positive
+και O -100
+ευλογησατον O -100
+τω B-ASP Positive
+περσα I-ASP Positive
+] O -100
+
+[ O -100
+σεσωκατον O -100
+τω B-ASP Positive
+σπαρτιατιδε I-ASP Positive
+και O -100
+σεσωκατον O -100
+τω B-ASP Positive
+σπαρτιατιδε I-ASP Positive
+] O -100
+
+[ O -100
+σωζητον O -100
+ανθρωπω B-ASP Positive
+και O -100
+σωζητον O -100
+ανθρωπω B-ASP Positive
+] O -100
+
+[ O -100
+ετετιμηκεμεν O -100
+τους B-ASP Positive
+μυκηναιους I-ASP Positive
+και O -100
+ετετιμηκεμεν O -100
 τους B-ASP Positive
 μυκηναιους I-ASP Positive
 ] O -100
 
 [ O -100
-αγαπησετον O -100
+σωζωμεν O -100
+τας B-ASP Positive
+γυναικας I-ASP Positive
+και O -100
+σωζωμεν O -100
+τας B-ASP Positive
+γυναικας I-ASP Positive
+] O -100
+
+[ O -100
+παιδευσοιμεν O -100
+ B-ASP Positive
+και O -100
+παιδευσοιμεν O -100
+ B-ASP Positive
+] O -100
+
+[ O -100
+ευλογειτε O -100
+τους B-ASP Positive
+περσας I-ASP Positive
+και O -100
+ευλογειτε O -100
+τους B-ASP Positive
+περσας I-ASP Positive
+] O -100
+
+[ O -100
+σωοιτε O -100
+τους B-ASP Positive
+στρατιωτας I-ASP Positive
+και O -100
+σωοιτε O -100
+τους B-ASP Positive
+στρατιωτας I-ASP Positive
+] O -100
+
+[ O -100
+ευλογεετε O -100
+ B-ASP Positive
+και O -100
+ευλογεετε O -100
+ B-ASP Positive
+] O -100
+
+[ O -100
+ευλογεουσι O -100
+τας B-ASP Positive
+γυναικας I-ASP Positive
+και O -100
+ευλογεουσι O -100
+τας B-ASP Positive
+γυναικας I-ASP Positive
+] O -100
+
+[ O -100
+τιμαοιεν O -100
+τους B-ASP Positive
+σικελιωτας I-ASP Positive
+και O -100
+τιμαοιεν O -100
+τους B-ASP Positive
+σικελιωτας I-ASP Positive
+] O -100
+
+[ O -100
+ευλογησαντων O -100
+τους B-ASP Positive
+πολιτας I-ASP Positive
+και O -100
+ευλογησαντων O -100
+τους B-ASP Positive
+πολιτας I-ASP Positive
+] O -100
+
+[ O -100
+τιμαωμαι O -100
+ανθρωπον B-ASP Positive
+και O -100
+τιμαωμαι O -100
+ανθρωπον B-ASP Positive
+] O -100
+
+[ O -100
+σωεοιμην O -100
+τον B-ASP Positive
+και O -100
+σωεοιμην O -100
+τον B-ASP Positive
+] O -100
+
+[ O -100
+σωζη O -100
+βασιληα B-ASP Positive
+και O -100
+σωζη O -100
+βασιληα B-ASP Positive
+] O -100
+
+[ O -100
+σεσωσται O -100
+τον B-ASP Positive
+αγροτην I-ASP Positive
+και O -100
+σεσωσται O -100
+τον B-ASP Positive
+αγροτην I-ASP Positive
+] O -100
+
+[ O -100
+τιμησεσθον O -100
+ B-ASP Positive
+και O -100
+τιμησεσθον O -100
+ B-ASP Positive
+] O -100
+
+[ O -100
+σωζοισθον O -100
+μητερε B-ASP Positive
+και O -100
+σωζοισθον O -100
+μητερε B-ASP Positive
+] O -100
+
+[ O -100
+σωζεσθον O -100
 τω B-ASP Positive
-γυναικε I-ASP Positive
+τρωαδε I-ASP Positive
+και O -100
+σωζεσθον O -100
+τω B-ASP Positive
+τρωαδε I-ASP Positive
+] O -100
+
+[ O -100
+σεσωσθων O -100
+τω B-ASP Positive
+περσα I-ASP Positive
+και O -100
+σεσωσθων O -100
+τω B-ASP Positive
+περσα I-ASP Positive
+] O -100
+
+[ O -100
+σωσωμεθα O -100
+τους B-ASP Positive
+πολιτας I-ASP Positive
+και O -100
+σωσωμεθα O -100
+τους B-ASP Positive
+πολιτας I-ASP Positive
+] O -100
+
+[ O -100
+σεσωσμενοι O -100
+ητε O -100
+τα B-ASP Positive
+ανδραποδα I-ASP Positive
+και O -100
+σεσωσμενοι O -100
+ητε O -100
+τα B-ASP Positive
+ανδραποδα I-ASP Positive
+] O -100
+
+[ O -100
+τιμαοισθε O -100
+τας B-ASP Positive
+μητερας I-ASP Positive
+και O -100
+τιμαοισθε O -100
+τας B-ASP Positive
+μητερας I-ASP Positive
+] O -100
+
+[ O -100
+παιδευεσθων O -100
+τους B-ASP Positive
+αιγυπτιους I-ASP Positive
+και O -100
+παιδευεσθων O -100
+τους B-ASP Positive
+αιγυπτιους I-ASP Positive
+] O -100
+
+[ O -100
+πολεμεω O -100
+την B-ASP Negative
+τρωαδα I-ASP Negative
+και O -100
+πολεμεω O -100
+την B-ASP Negative
+τρωαδα I-ASP Negative
+] O -100
+
+[ O -100
+φθειρεσκες O -100
+την B-ASP Negative
+τρωαδα I-ASP Negative
+και O -100
+φθειρεσκες O -100
+την B-ASP Negative
+τρωαδα I-ASP Negative
+] O -100
+
+[ O -100
+κακωσοις O -100
+τον B-ASP Negative
+στρατιωτην I-ASP Negative
+και O -100
+κακωσοις O -100
+τον B-ASP Negative
+στρατιωτην I-ASP Negative
+] O -100
+
+[ O -100
+φθειρε O -100
+βασιληα B-ASP Negative
+και O -100
+φθειρε O -100
+βασιληα B-ASP Negative
+] O -100
+
+[ O -100
+πεπολεμηκε O -100
+τον B-ASP Negative
+πατερα I-ASP Negative
+και O -100
+πεπολεμηκε O -100
+τον B-ASP Negative
+πατερα I-ASP Negative
+] O -100
+
+[ O -100
+κατηγορη O -100
+μητερα B-ASP Negative
+και O -100
+κατηγορη O -100
+μητερα B-ASP Negative
+] O -100
+
+[ O -100
+κακουτω O -100
+τον B-ASP Negative
+στρατιωτην I-ASP Negative
+και O -100
+κακουτω O -100
+τον B-ASP Negative
+στρατιωτην I-ASP Negative
+] O -100
+
+[ O -100
+πεπολεμηκατον O -100
+τω B-ASP Negative
+τρωαδε I-ASP Negative
+και O -100
+πεπολεμηκατον O -100
+τω B-ASP Negative
+τρωαδε I-ASP Negative
+] O -100
+
+[ O -100
+πολεμοιτον O -100
+τω B-ASP Negative
+μητερε I-ASP Negative
+και O -100
+πολεμοιτον O -100
+τω B-ASP Negative
+μητερε I-ASP Negative
+] O -100
+
+[ O -100
+πολεμειτον O -100
+τω B-ASP Negative
+μητερε I-ASP Negative
+και O -100
+πολεμειτον O -100
+τω B-ASP Negative
+μητερε I-ASP Negative
+] O -100
+
+[ O -100
+φθειρεσκετην O -100
+τω B-ASP Negative
+περσα I-ASP Negative
+και O -100
+φθειρεσκετην O -100
+τω B-ASP Negative
+περσα I-ASP Negative
+] O -100
+
+[ O -100
+κατηγορεητον O -100
+τω B-ASP Negative
+μητερε I-ASP Negative
+και O -100
+κατηγορεητον O -100
+τω B-ASP Negative
+μητερε I-ASP Negative
+] O -100
+
+[ O -100
+πολεμεοιτην O -100
+ B-ASP Negative
+και O -100
+πολεμεοιτην O -100
+ B-ASP Negative
+] O -100
+
+[ O -100
+πολεμειτων O -100
+βασιληε B-ASP Negative
+και O -100
+πολεμειτων O -100
+βασιληε B-ASP Negative
+] O -100
+
+[ O -100
+κατηγορεομεν O -100
+τους B-ASP Negative
+σικελιωτας I-ASP Negative
+και O -100
+κατηγορεομεν O -100
+τους B-ASP Negative
+σικελιωτας I-ASP Negative
+] O -100
+
+[ O -100
+μισοιτε O -100
+τα B-ASP Negative
+ανδραποδα I-ASP Negative
+και O -100
+μισοιτε O -100
+τα B-ASP Negative
+ανδραποδα I-ASP Negative
+] O -100
+
+[ O -100
+κεκακωκοιεν O -100
+τους B-ASP Negative
+αιγυπτιους I-ASP Negative
+και O -100
+κεκακωκοιεν O -100
+τους B-ASP Negative
+αιγυπτιους I-ASP Negative
+] O -100
+
+[ O -100
+φθειρομαι O -100
+τον B-ASP Negative
+σικελιωτην I-ASP Negative
+και O -100
+φθειρομαι O -100
+τον B-ASP Negative
+σικελιωτην I-ASP Negative
+] O -100
+
+[ O -100
+απεχθανωμαι O -100
+τον B-ASP Negative
+δουλον I-ASP Negative
+και O -100
+απεχθανωμαι O -100
+τον B-ASP Negative
+δουλον I-ASP Negative
+] O -100
+
+[ O -100
+μισει O -100
+την B-ASP Negative
+τρωαδα I-ASP Negative
+και O -100
+μισει O -100
+την B-ASP Negative
+τρωαδα I-ASP Negative
+] O -100
+
+[ O -100
+κακοι O -100
+την B-ASP Negative
+τρωαδα I-ASP Negative
+και O -100
+κακοι O -100
+την B-ASP Negative
+τρωαδα I-ASP Negative
+] O -100
+
+[ O -100
+πεπολεμημενος O -100
+ειης O -100
+την B-ASP Negative
+σπαρτιατιδα I-ASP Negative
+και O -100
+πεπολεμημενος O -100
+ειης O -100
+την B-ASP Negative
+σπαρτιατιδα I-ASP Negative
+] O -100
+
+[ O -100
+μισεται O -100
+τον B-ASP Negative
+δωριεα I-ASP Negative
+και O -100
+μισεται O -100
+τον B-ASP Negative
+δωριεα I-ASP Negative
+] O -100
+
+[ O -100
+απεχθανεοιτο O -100
+τον B-ASP Negative
+μυκηναιον I-ASP Negative
+και O -100
+απεχθανεοιτο O -100
+τον B-ASP Negative
+μυκηναιον I-ASP Negative
+] O -100
+
+[ O -100
+κακωσεσθον O -100
+ανερε B-ASP Negative
+και O -100
+κακωσεσθον O -100
+ανερε B-ASP Negative
+] O -100
+
+[ O -100
+μισησθον O -100
+τω B-ASP Negative
+στρατιωτα I-ASP Negative
+και O -100
+μισησθον O -100
+τω B-ASP Negative
+στρατιωτα I-ASP Negative
+] O -100
+
+[ O -100
+κακωσοισθον O -100
+τω B-ASP Negative
+πατερε I-ASP Negative
+και O -100
+κακωσοισθον O -100
+τω B-ASP Negative
+πατερε I-ASP Negative
+] O -100
+
+[ O -100
+φθειρεσκεσθην O -100
+τω B-ASP Negative
+τρωαδε I-ASP Negative
+και O -100
+φθειρεσκεσθην O -100
+τω B-ASP Negative
+τρωαδε I-ASP Negative
+] O -100
+
+[ O -100
+κακωσθον O -100
+τω B-ASP Negative
+μυκηναιω I-ASP Negative
+και O -100
+κακωσθον O -100
+τω B-ASP Negative
+μυκηναιω I-ASP Negative
+] O -100
+
+[ O -100
+πεπολεμημενω O -100
+ειητην O -100
+τω B-ASP Negative
+ανδραποδω I-ASP Negative
+και O -100
+πεπολεμημενω O -100
+ειητην O -100
+τω B-ASP Negative
+ανδραποδω I-ASP Negative
+] O -100
+
+[ O -100
+κατηγορεισθων O -100
+ανερε B-ASP Negative
+και O -100
+κατηγορεισθων O -100
+ανερε B-ASP Negative
+] O -100
+
+[ O -100
+εμισουμεθα O -100
+τους B-ASP Negative
+στρατιωτας I-ASP Negative
+και O -100
+εμισουμεθα O -100
+τους B-ASP Negative
+στρατιωτας I-ASP Negative
+] O -100
+
+[ O -100
+κατηγορεωμεθα O -100
+τους B-ASP Negative
+πατερας I-ASP Negative
+και O -100
+κατηγορεωμεθα O -100
+τους B-ASP Negative
+πατερας I-ASP Negative
+] O -100
+
+[ O -100
+κακωσοιμεθα O -100
+τους B-ASP Negative
+ανδρας I-ASP Negative
+και O -100
+κακωσοιμεθα O -100
+τους B-ASP Negative
+ανδρας I-ASP Negative
+] O -100
+
+[ O -100
+μισοισθε O -100
+τους B-ASP Negative
+στρατιωτας I-ASP Negative
+και O -100
+μισοισθε O -100
+τους B-ASP Negative
+στρατιωτας I-ASP Negative
+] O -100
+
+[ O -100
+φθειροιντο O -100
+τους B-ASP Negative
+περσας I-ASP Negative
+και O -100
+φθειροιντο O -100
+τους B-ASP Negative
+περσας I-ASP Negative
 ] O -100
 
