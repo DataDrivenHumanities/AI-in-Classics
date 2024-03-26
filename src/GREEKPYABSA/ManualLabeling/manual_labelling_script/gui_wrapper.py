@@ -22,6 +22,10 @@ def gui_wrapper(query_word, pkl_file, csv_file):
     #remove numbers from the text
     text_df = text_df.applymap(lambda x: re.sub(r'[\d\.\t\n]', '', str(x)))
 
+    #write pandas dataframe to a text file and remove quotation marks
+    text_df.to_csv(r'text_section.txt', header=None, index=None, mode='a', quoting=csv.QUOTE_NONE, quotechar='', escapechar=' ')
+
+
     return text_df
 
 
