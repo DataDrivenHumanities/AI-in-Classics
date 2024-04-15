@@ -130,3 +130,5 @@ dmypy.json
 
 # Custom
 OpenGreekAndLatin-First1KGreek/
+
+greek_words.csv
