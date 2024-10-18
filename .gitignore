@@ -130,5 +130,8 @@ dmypy.json
 
 # Custom
 OpenGreekAndLatin-First1KGreek/
-
+greek_variations/
+nouns/
+Raw_XML/
+verbs-complete/
 greek_words.csv
