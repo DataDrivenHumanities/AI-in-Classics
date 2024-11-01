@@ -136,3 +136,5 @@ Raw_XML/
 verbs-complete/
 greek_dictionary/
 greek_words.csv
+temp_input.csv
+temp_output.csv
