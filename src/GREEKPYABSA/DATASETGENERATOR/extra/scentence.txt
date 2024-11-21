@@ -1,0 +1,49 @@
+
+
+EXAMPLE SCENTENCES -
+Accusitive(plural),opinion(singular) - I hate romans -         μισώ τους Ρωμαίους
+Nomitive(plural),opinion(plural)-      romans hate us -        οι Ρωμαίοι μας μισούν
+Nomitive,adjective -                   romans are evil -       οι Ρωμαίοι είναι κακοί
+Nomitive,simile-                       romans are like sheep - οι Ρωμαίοι είναι σαν πρόβατα
+Nomitive,metaphore-                    romans are snakes -     οι Ρωμαίοι είναι φίδια
+(NEGATION)Accusitive,opinion -         I dont hate romans -    δεν μισώ τους Ρωμαίους
+(NEGATION)Nomitive,adjective           romans are not evil -   οι Ρωμαίοι δεν είναι κακοί
+
+DATIVE- i _ a _ to romans
+        she gave tom the parcel
+        we gave romans a gift 
+        we gave a gift to romans
+
+NOUNS -romans- Variations =(singular, plural, dual) * (masculin, feminine, neuter)*(nomitive,gennative,dative,accuative,vocative)
+*NOMITIVE- *Romans hate
+GENAITIVE- *Roman's stuff 
+*DATIVE - we gave a gift to *romans - we took land from romans
+*ACCUSATIV i hate *romans 
+VOCATIVE adresses reader directly (i know you,John (Roman))
+
+VERBS -hate- Variations = (singular*3+plural*3)*(past,present,future)*(active,Passive)*(perfect,Imperfect) + a few other cases 
+SINGULAR
+I hate 
+YOU hate
+They hate
+
+PLURAL 
+We hate 
+YOU ALL hate
+THEY all hate 
+
+PAST I hated 
+PRESNT i hate
+FUTURE im starting to hate 
+
+ACTIVE Susan is *cooking dinner
+PASSIVE Dinner is being *cooked by Susan
+
+PEFECT  I was *punching. (incomplete state)
+IMPERFECT Ira *had-gone to the movies (complete state )
+
+
+
+
+
+Negation 
