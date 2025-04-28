@@ -1,0 +1,33 @@
+Greek Sentence Generation Spring 2025 Documentation
+
+How Greek Sentence Generation Works
+
+Basic Overview
+
+As of now, we have a different function for each sentence template we want to recreate, which means for each template we want to create, we make a new function. Each template will usually have three functions, in fact. These are our test_generation, random, and regular template functions. Our test_generation allows us to look at the sentiment scores and accessibility (something we don’t have to look at too much), our random function will let us randomly choose different cases, plurality, voice, etc, and our regular function lacks that random access. 
+
+Inside the functions
+ 	Our Greek Sentence Generation functions work by first grabbing relevant tables of words that are randomly chosen. These are located in different folders, but generally exist within the ancient_greek_variations and greek_dictionary folder. We do this for each noun, verb, adjective, etc. that we want to grab for the sentence. Each sentence function will then go into that table, and using the function parameters, select the correct word form. Once that’s done, we specify the order of the words to construct the sentence. 
+
+Sentence Templates
+
+This semester we added and refined a variety of sentence structures and templates. These included the being_and_predicate sentence generation function, as well as the sub_do_possessive_action sentences. These were the final two sentences remaining from the list in the prior semester, and are modeled after the following sentence examples. 
+Nominative plural subject] + [Linking verb] + [predicate adjective] 
+ταῦτ᾽ ἐστὶν ἀληθῆ 
+[nominative subject] + [verb] + [Accusative object] + [genitive attributive/possessive/of relationship/genitive subjective/genitive objective] 
+τὸν ἀδελφὸν τὸν ἐμαυτοῦ
+
+These sentences can be called by referring to the SentenceGeneration file inside the GREEKPYABSA/DATASETGENERATOR/greek/greek_lib folder located in scipio’s branch of the git. 
+
+Known Issues
+As of now there are three major known issues that have yet to be tackled. 
+
+The first is that these sentences, along with a fair amount of sentences generated from our other templates, lack meaning in some cases. They simply provide grammatically correct nonsense sentences, which will need to be addressed at a later stage. 
+
+The second is that there are some issues when accessing the lemmatizer for the dual case. Having dual selected will result in some words not being accessed and leading to an error in the sentence generation, which is minor but will need to be adjusted before implementation. The dual case was removed for prior sentence testing to see if the generators themselves were the error. 
+
+Finally, all of the greek sentence functions are in a variety of individual git branches that should be merged together to make it easier for our lemmatizer team, and others in the future, to cross reference and test sentence generation. 
+
+Paragraph Expansion
+
+This semester, there was also work done on paragraph generation based on existing greek sentence structure. Since this was started later on in the semester minimal progress has been made, however the bones are there to expand once the prior issues have been completed. Right now we simply stick with the same subject for all sentences, but once our individual generation is improved we can create more complex paragraphs with overarching meanings. That will certainly take some time, though. This can be found in the same folder and file as the sentence generation functions.
