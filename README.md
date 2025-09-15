@@ -4,7 +4,7 @@
 [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
 [![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)
 
-A brief description of what this project does and who it's for
+This project looks at various languages and runs anlysis on the scripture using various methods of Artifical Intellgiance,.
 
 ## Features
 
@@ -34,3 +34,7 @@ to run this project locally See `dev.md` for setting up your workspace or click 
 ## Authors
 
 - [@alxxjohn](https://www.github.com/alxxjohn)
+- byron
+- ryan
+- jake
+- duncan
