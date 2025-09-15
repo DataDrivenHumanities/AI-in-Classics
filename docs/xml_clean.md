@@ -1,6 +1,4 @@
-# README
-
-## How to clean XML manually
+# How to clean XML manually
 
 1. Scan and remove single tags (those that do not come with a closing tag) that interrupt text flow in `<div>` and `<p>` tags. For example, remove `<lb/>` below. Notice that `<pb/>` tag does not interrupt the flow of text content and stays. In fact, that tag stands for *page beginning* and provides useful metadata, page number to be specific.
 
