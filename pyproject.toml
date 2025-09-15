@@ -7,11 +7,12 @@ readme = "README.md"
 
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = ">=3.9,<3.12" 
 
 beautifulsoup4 = "*"
 bidict = "*"
-cltk = ">=1.0,<2.0"
+cltk = "1.5.0"
+click = "<8.1"
 dill = "*"
 ipycache = "*"
 ipywidgets = "*"
@@ -30,8 +31,8 @@ scikit-learn = "*"
 streamlit = "*"
 termcolor = "^3.1.0"
 altair = ">=4.2,<5"
-flake8 = "^7.3.0"
-black = "^25.1.0"
+protobuf = "==3.20.3"
+urllib3 = "<2"
 
 [build-system]
 requires = ["poetry-core"]

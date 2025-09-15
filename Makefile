@@ -14,6 +14,8 @@ teardown:
 web:
 	poetry run streamlit run src/app/app.py --server.port 8501 --server.address 0.0.0.0
 
+streamlit: 
+	poetry run streamlit run src/app/app.py
 
 docker:
 	docker build -t classics-app .
