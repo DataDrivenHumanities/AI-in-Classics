@@ -2,6 +2,8 @@
 
 select one of the following options to setup your local development.
 
+We Recommend using [Docker](#3running-with-docker-using-make)
+
 ## 1. Using the Build script
 
 run the folloing command in your main directory:
@@ -33,10 +35,12 @@ make setup
 Once installed run the following command:
 
 ```bash
+make web
+or 
 make run
 ```
 
-## 3.Running with Docker
+## 3.Running with Docker using Make
 
 This project provides a simple Docker workflow for local development and testing.
 
@@ -44,20 +48,12 @@ This project provides a simple Docker workflow for local development and testing
 
 - Install [Docker](https://docs.docker.com/get-docker/) on your system
 
-### Build the Image
+### Build the Image & Run
 
 From the project root:
 
 ```bash
-docker build -t classics-ai-app .
-```
-
-## Run the Container
-
-Run the container and map ports as needed:
-
-```bash
-docker run --rm -it -p 8000:8000 classics-ai-app
+make docker
 ```
 
 ## Other Commands
