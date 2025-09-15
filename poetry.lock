@@ -1,23 +1,21 @@
 [[package]]
 name = "altair"
-version = "5.5.0"
-description = "Vega-Altair: A declarative statistical visualization library for Python."
+version = "4.2.2"
+description = "Altair: A declarative statistical visualization library for Python."
 category = "main"
 optional = false
-python-versions = ">=3.9"
+python-versions = ">=3.7"
 
 [package.dependencies]
+entrypoints = "*"
 jinja2 = "*"
 jsonschema = ">=3.0"
-narwhals = ">=1.14.2"
-packaging = "*"
-typing-extensions = {version = ">=4.10.0", markers = "python_version < \"3.14\""}
+numpy = "*"
+pandas = ">=0.18"
+toolz = "*"
 
 [package.extras]
-all = ["altair-tiles (>=0.3.0)", "anywidget (>=0.9.0)", "numpy", "pandas (>=1.1.3)", "pyarrow (>=11)", "vega-datasets (>=0.9.0)", "vegafusion[embed] (>=1.6.6)", "vl-convert-python (>=1.7.0)"]
-dev = ["duckdb (>=1.0)", "geopandas", "hatch (>=1.13.0)", "ipython[kernel]", "mistune", "mypy", "pandas (>=1.1.3)", "pandas-stubs", "polars (>=0.20.3)", "pyarrow-stubs", "pytest", "pytest-cov", "pytest-xdist[psutil] (>=3.5,<4.0)", "ruff (>=0.6.0)", "types-jsonschema", "types-setuptools"]
-doc = ["docutils", "jinja2", "myst-parser", "numpydoc", "pillow (>=9,<10)", "pydata-sphinx-theme (>=0.14.1)", "scipy", "sphinx", "sphinx-copybutton", "sphinx-design", "sphinxext-altair"]
-save = ["vl-convert-python (>=1.7.0)"]
+dev = ["black", "docutils", "flake8", "ipython", "m2r", "mistune (<2.0.0)", "pytest", "recommonmark", "sphinx", "vega-datasets"]
 
 [[package]]
 name = "annotated-types"
@@ -285,6 +283,14 @@ python-versions = ">=3.8"
 [package.extras]
 graph = ["objgraph (>=1.7.2)"]
 profile = ["gprof2dot (>=2022.7.29)"]
+
+[[package]]
+name = "entrypoints"
+version = "0.4"
+description = "Discover and load entry points from installed packages."
+category = "main"
+optional = false
+python-versions = ">=3.6"
 
 [[package]]
 name = "exceptiongroup"
@@ -820,27 +826,6 @@ description = "Cython bindings for MurmurHash"
 category = "main"
 optional = false
 python-versions = ">=3.6"
-
-[[package]]
-name = "narwhals"
-version = "2.5.0"
-description = "Extremely lightweight compatibility layer between dataframe libraries"
-category = "main"
-optional = false
-python-versions = ">=3.9"
-
-[package.extras]
-cudf = ["cudf (>=24.10.0)"]
-dask = ["dask[dataframe] (>=2024.8)"]
-duckdb = ["duckdb (>=1.0)"]
-ibis = ["ibis-framework (>=6.0.0)", "packaging", "pyarrow-hotfix", "rich"]
-modin = ["modin"]
-pandas = ["pandas (>=1.1.3)"]
-polars = ["polars (>=0.20.4)"]
-pyarrow = ["pyarrow (>=13.0.0)"]
-pyspark = ["pyspark (>=3.5.0)"]
-pyspark-connect = ["pyspark[connect] (>=3.5.0)"]
-sqlframe = ["sqlframe (>=3.22.0,!=3.39.3)"]
 
 [[package]]
 name = "networkx"
@@ -1608,6 +1593,14 @@ optional = false
 python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
 
 [[package]]
+name = "toolz"
+version = "1.0.0"
+description = "List processing tools and functional utilities"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[[package]]
 name = "tornado"
 version = "6.5.2"
 description = "Tornado is a Python web framework and asynchronous networking library, originally developed at FriendFeed."
@@ -1817,12 +1810,12 @@ type = ["pytest-mypy"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "ab1767a711c457c7e4fc2b639313e9c2f46a586d7325d1744947fd79479521ca"
+content-hash = "87c65c9007d9fee56dc0b9a3d621f02019c767f2ff87d32d33327ac617ab5d54"
 
 [metadata.files]
 altair = [
-    {file = "altair-5.5.0-py3-none-any.whl", hash = "sha256:91a310b926508d560fe0148d02a194f38b824122641ef528113d029fcd129f8c"},
-    {file = "altair-5.5.0.tar.gz", hash = "sha256:d960ebe6178c56de3855a68c47b516be38640b73fb3b5111c2a9ca90546dd73d"},
+    {file = "altair-4.2.2-py3-none-any.whl", hash = "sha256:8b45ebeaf8557f2d760c5c77b79f02ae12aee7c46c27c06014febab6f849bc87"},
+    {file = "altair-4.2.2.tar.gz", hash = "sha256:39399a267c49b30d102c10411e67ab26374156a84b1aeb9fcd15140429ba49c5"},
 ]
 annotated-types = [
     {file = "annotated_types-0.7.0-py3-none-any.whl", hash = "sha256:1f02e8b43a8fbbc3f3e0d4f0f4bfc8131bcb4eebe8849b8e5c773f3a1c582a53"},
@@ -2257,6 +2250,10 @@ decorator = [
 dill = [
     {file = "dill-0.4.0-py3-none-any.whl", hash = "sha256:44f54bf6412c2c8464c14e8243eb163690a9800dbe2c367330883b19c7561049"},
     {file = "dill-0.4.0.tar.gz", hash = "sha256:0633f1d2df477324f53a895b02c901fb961bdbf65a17122586ea7019292cbcf0"},
+]
+entrypoints = [
+    {file = "entrypoints-0.4-py3-none-any.whl", hash = "sha256:f174b5ff827504fd3cd97cc3f8649f3693f51538c7e4bdf3ef002c8429d42f9f"},
+    {file = "entrypoints-0.4.tar.gz", hash = "sha256:b706eddaa9218a19ebcd67b56818f05bb27589b1ca9e8d797b74affad4ccacd4"},
 ]
 exceptiongroup = [
     {file = "exceptiongroup-1.3.0-py3-none-any.whl", hash = "sha256:4d111e6e0c13d0644cad6ddaa7ed0261a0b36971f6d23e7ec9b4b9097da78a10"},
@@ -2809,10 +2806,6 @@ murmurhash = [
     {file = "murmurhash-1.0.12-cp39-cp39-musllinux_1_2_x86_64.whl", hash = "sha256:8b5de26a7235d8794403353423cd65720d8496363ab75248120107559b12a8c6"},
     {file = "murmurhash-1.0.12-cp39-cp39-win_amd64.whl", hash = "sha256:d1ad46f78de3ce3f3a8e8c2f87af32bcede893f047c87389c7325bb1f3f46b47"},
     {file = "murmurhash-1.0.12.tar.gz", hash = "sha256:467b7ee31c1f79f46d00436a1957fc52a0e5801369dd2f30eb7655f380735b5f"},
-]
-narwhals = [
-    {file = "narwhals-2.5.0-py3-none-any.whl", hash = "sha256:7e213f9ca7db3f8bf6f7eff35eaee6a1cf80902997e1b78d49b7755775d8f423"},
-    {file = "narwhals-2.5.0.tar.gz", hash = "sha256:8ae0b6f39597f14c0dc52afc98949d6f8be89b5af402d2d98101d2f7d3561418"},
 ]
 networkx = [
     {file = "networkx-3.2.1-py3-none-any.whl", hash = "sha256:f18c69adc97877c42332c170849c96cefa91881c99a7cb3e95b7c659ebdc1ec2"},
@@ -3886,6 +3879,10 @@ threadpoolctl = [
 toml = [
     {file = "toml-0.10.2-py2.py3-none-any.whl", hash = "sha256:806143ae5bfb6a3c6e736a764057db0e6a0e05e338b5630894a5f779cabb4f9b"},
     {file = "toml-0.10.2.tar.gz", hash = "sha256:b3bda1d108d5dd99f4a20d24d9c348e91c4db7ab1b749200bded2f839ccbe68f"},
+]
+toolz = [
+    {file = "toolz-1.0.0-py3-none-any.whl", hash = "sha256:292c8f1c4e7516bf9086f8850935c799a874039c8bcf959d47b600e4c44a6236"},
+    {file = "toolz-1.0.0.tar.gz", hash = "sha256:2c86e3d9a04798ac556793bced838816296a2f085017664e4995cb40a1047a02"},
 ]
 tornado = [
     {file = "tornado-6.5.2-cp39-abi3-macosx_10_9_universal2.whl", hash = "sha256:2436822940d37cde62771cff8774f4f00b3c8024fe482e16ca8387b8a2724db6"},
