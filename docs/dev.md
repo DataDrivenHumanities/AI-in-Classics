@@ -89,7 +89,14 @@ docker run --rm -it \
 
 #### `ModuleNotFoundError: No module named 'altair.vegalite.v4'`
 
+Ensure you had altair installed, if not try running:
+
+```bash
+poetry add "altair<5,>=4.2"
+```
+
 This could be because you dont have graphviz system tool installed try downloading the following:
 
 - macOS: `brew install graphviz`
 - Ubuntu/Debian: `sudo apt-get update && sudo apt-get install -y graphviz`
+
