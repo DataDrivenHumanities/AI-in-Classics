@@ -11,7 +11,7 @@ python = "^3.9"
 
 beautifulsoup4 = "*"
 bidict = "*"
-cltk = "<1.0"
+cltk = ">=1.0,<2.0"
 dill = "*"
 ipycache = "*"
 ipywidgets = "*"

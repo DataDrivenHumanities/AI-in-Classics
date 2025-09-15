@@ -11,7 +11,7 @@ run:
 teardown:
 	@echo "Nothing to teardown. If you opened 'poetry shell' manually, type 'exit'."
 
-web: install
+web:
 	poetry run streamlit run src/app/app.py --server.port 8501 --server.address 0.0.0.0
 
 
