@@ -10,9 +10,9 @@ run:
 
 teardown:
 	@echo "Nothing to teardown. If you opened 'poetry shell' manually, type 'exit'."
-
 web: 
 	poetry run streamlit run src/app/app.py
+
 
 docker:
 	docker build -t classics-app .
@@ -33,3 +33,4 @@ fix:
 
 test: 
 	poetry run pytest -q
+
