@@ -1,12 +1,13 @@
 
-import cltk, multiprocessing as mp
+import multiprocessing as mp
 from pprint import pprint
-from termcolor import colored, cprint
 from typing import Iterable, Union
 
+import cltk
 from cltk import NLP
-from cltk.tokenizers.line import LineTokenizer
 from cltk.languages.pipelines import LatinPipeline
+from cltk.tokenizers.line import LineTokenizer
+from termcolor import colored, cprint
 
 # NLP document analysis demo
 # text
@@ -15,8 +16,10 @@ vitruvius = "Architecti est scientia pluribus disciplinis et variis eruditionibu
 # cltk.nlp.NLP object
 cltk_nlp = NLP(language='lat') 
 
-#region
-cprint(text='cltk.nlp.NLP object:', color='green', attrs=list(['bold', 'dark'])))
+# region
+cprint(text='cltk.nlp.NLP object:', 
+       color='green', 
+       attrs=list(['bold', 'dark'])))
 cprint(text=cltk_nlp, color='green')
 
 # process text into Doc object for further analysis
