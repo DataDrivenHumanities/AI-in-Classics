@@ -7,6 +7,7 @@ from enum import Enum
 
 import grk_lemmatizer
 import ltn_lemmatizer
+
 # import csv
 import pandas
 

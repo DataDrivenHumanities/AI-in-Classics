@@ -19,9 +19,15 @@ docker:
 	docker build -t classics-app .
 	docker run classics-app
 
-make check:
+check:
+	poetry run black --check .
+	# poetry run isort --check-only .
+	# poetry run flake8 .
 
 
-
-
-make-fix:
+fix: 
+	# Remove unused imports/vars first (optional; comment out if you don't use autoflake)
+	# poetry run autoflake --in-place --remove-all-unused-imports --recursive .
+	# poetry run isort .
+	poetry run black .
+	# poetry run flake8 .

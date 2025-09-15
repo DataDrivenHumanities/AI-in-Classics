@@ -8,6 +8,7 @@ import numpy as np
 import pandas as pd
 import tqdm
 from cltk.alphabet.text_normalization import cltk_normalize
+
 # CLTK
 from cltk.data.fetch import FetchCorpus
 from cltk.lemmatize.grc import GreekBackoffLemmatizer
@@ -19,6 +20,7 @@ lemmatizer = GreekBackoffLemmatizer()
 # APP DEVELOPMENT
 import streamlit as st
 from globals import globals
+
 # MACHINE LEARNING
 from sklearn.feature_extraction.text import CountVectorizer
 
