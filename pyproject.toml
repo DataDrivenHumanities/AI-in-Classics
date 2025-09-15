@@ -4,6 +4,19 @@ version = "0.1.0"
 description = ""
 authors = ["alex <53851759+alxxjohn@users.noreply.github.com>"]
 readme = "README.md"
+extend-exclude = '''
+(
+  \.venv
+| venv
+| node_modules
+| \.mypy_cache
+| \.pytest_cache
+| build
+| dist
+| \.ipynb_checkpoints
+| .*\.ipynb
+)
+'''
 
 
 [tool.poetry.dependencies]

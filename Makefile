@@ -31,3 +31,6 @@ fix:
 	# poetry run isort .
 	poetry run black .
 	# poetry run flake8 .
+
+test: 
+	poetry run pytest -q
