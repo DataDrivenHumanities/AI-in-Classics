@@ -18,3 +18,10 @@ web: install
 docker:
 	docker build -t classics-app .
 	docker run classics-app
+
+make check:
+
+
+
+
+make-fix:
