@@ -3,6 +3,7 @@ bidict
 cltk
 dill
 ipycache
+ipykernel
 ipywidgets
 fastparquet
 googletrans==3.1.0a0
@@ -18,3 +19,4 @@ spacy
 scikit-learn
 streamlit
 termcolor
+transformers
