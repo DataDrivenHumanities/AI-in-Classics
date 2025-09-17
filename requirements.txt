@@ -1,6 +1,7 @@
 beautifulsoup4
 bidict
 cltk
+datasets
 dill
 ipycache
 ipykernel
@@ -18,5 +19,6 @@ python-dotenv
 spacy
 scikit-learn
 streamlit
+torch
 termcolor
 transformers
