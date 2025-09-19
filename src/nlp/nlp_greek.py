@@ -1,6 +1,6 @@
+from pprint import pprint
 
 import spacy
-from pprint import pprint
 
 passage = """
 Χρὴ γινώσκειν ὅτι πάσης τῆς γῆς ὁ περίμετρος. στάδιά ἐστι δισχίλια καὶ μυριάδες εἴκοσι πέντε· μῆκος δὲ τῆς ἡμετέρας οἰκουμένης ἀπὸ στόματος Γάγγου ἕως Γαδείρων στάδια ὀκτακισμύρια τρισχίλια ὀκ τακόσια·
@@ -8,11 +8,19 @@ passage = """
 ὁ τῶν ἀρχαίων μαθητικώτατος.
 """
 
-nlp = spacy.load('el_core_news_lg')
+nlp = spacy.load("el_core_news_lg")
 doc = nlp(passage)
 pprint(doc.text)
 
 for token in doc:
     pprint(token)
-    print(token.text, token.lemma_, token.pos_, token.tag_, token.dep_, token.shape_, token.is_alpha, token.is_stop)
-
+    print(
+        token.text,
+        token.lemma_,
+        token.pos_,
+        token.tag_,
+        token.dep_,
+        token.shape_,
+        token.is_alpha,
+        token.is_stop,
+    )
