@@ -1,8 +1,10 @@
 beautifulsoup4
 bidict
 cltk
+datasets
 dill
 ipycache
+ipykernel
 ipywidgets
 fastparquet
 googletrans==3.1.0a0
@@ -17,4 +19,6 @@ python-dotenv
 spacy
 scikit-learn
 streamlit
+torch
 termcolor
+transformers
