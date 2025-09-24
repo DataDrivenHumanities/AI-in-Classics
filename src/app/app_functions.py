@@ -1,38 +1,55 @@
 import io
-import multiprocessing as mp
 import os
 import shutil
-
-import dill
+import json
+import re
+from typing import Optional
 import numpy as np
 import pandas as pd
 import tqdm
-from cltk.alphabet.text_normalization import cltk_normalize
 
-# CLTK
+from cltk.alphabet.text_normalization import cltk_normalize
 from cltk.data.fetch import FetchCorpus
 from cltk.lemmatize.grc import GreekBackoffLemmatizer
+from sklearn.feature_extraction.text import CountVectorizer
+
+import streamlit as st
+from globals import globals
+import dill
+import multiprocessing as mp
 
 grc_corpus = FetchCorpus(language="grc")
 grc_corpus.import_corpus(corpus_name="grc_models_cltk")
 lemmatizer = GreekBackoffLemmatizer()
 
-# APP DEVELOPMENT
-import streamlit as st
-from globals import globals
-
-# MACHINE LEARNING
-from sklearn.feature_extraction.text import CountVectorizer
-
-# OTHER GLOBAL VARIABLES
 PREPROCESS_CHECKPOINT = False
 DTM_CHECKPOINT = False
 DEBUG = True
 HISTORY = list()
 
+try:
+    import pypdf
 
-# CALLBACKS
-# region
+    _PDF_OK = True
+except Exception:
+    _PDF_OK = False
+
+try:
+    from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
+
+    VADER_OK = True
+except Exception:
+    VADER_OK = False
+
+try:
+    from ollama_client import chat_stream
+except Exception:
+    st.error(
+        "Cannot import ollama_client. Make sure src/ollama_client.py exists and is importable."
+    )
+    raise
+
+
 def dtm_cb():
     DOC_TERM_MATRIX = globals["DOC_TERM_MATRIX"]
     VOCABULARY = globals["VOCABULARY"]
@@ -129,7 +146,7 @@ def dir_path_cb():
             body=f'SUCCESS (DIRECTORY PATH CALLBACK): Confirmed directory path. {"Path has changed since last load." if source_changed else "Same path as last load."}'
         )
     else:
-        st.error(body=f"ERROR (DIRECTORY PATH CALLBACK): The path does not exist.")
+        st.error(body="ERROR (DIRECTORY PATH CALLBACK): The path does not exist.")
 
 
 def csv_upload_cb():
@@ -189,11 +206,6 @@ def query_cb():
         st.dataframe(data=dtm_df.iloc[:, vocab_indexes].any(axis=1))
 
 
-# endregoin
-
-
-# OTHER FUNCTIONS
-# begin
 def doc_term_matrix():
     global DTM_CHECKPOINT
     PREPROCESSED_TEXTS_PATH = globals["PREPROCESSED_TEXTS_PATH"]
@@ -267,4 +279,121 @@ def preprocess_texts():
     # dill.dump(file=)
 
 
-# endregion
+def read_uploaded_file(upload) -> str:
+    """
+    Read a Streamlit UploadedFile into plain text.
+    Supports .txt/.md/.csv/.tsv directly; PDFs if pypdf is available.
+    Otherwise we try a best-effort UTF-8 decode.
+    """
+    name = (upload.name or "").lower()
+    data = upload.read()
+
+    # simple text-ish
+    if name.endswith((".txt", ".md", ".csv", ".tsv")):
+        try:
+            return data.decode("utf-8", errors="ignore")
+        except Exception:
+            return data.decode("latin-1", errors="ignore")
+
+    # pdf
+    if name.endswith(".pdf"):
+        if not _PDF_OK:
+            st.warning(
+                "PDF support requires `pypdf` (install with `poetry add pypdf`)."
+            )
+            return ""
+        try:
+            reader = pypdf.PdfReader(io.BytesIO(data))
+            return "\n\n".join((p.extract_text() or "") for p in reader.pages)
+        except Exception as e:
+            st.error(f"Failed to read PDF: {e}")
+            return ""
+    try:
+        return data.decode("utf-8", errors="ignore")
+    except Exception:
+        return data.decode("latin-1", errors="ignore")
+
+
+def builtin_sentiment(text: str) -> Optional[dict]:
+    """
+    Run a quick VADER sentiment on the provided text.
+    Returns dict with {label, confidence, scores} or None if unavailable.
+    """
+    if not VADER_OK:
+        return None
+    analyzer = SentimentIntensityAnalyzer()
+    scores = analyzer.polarity_scores(text or "")
+    compound = scores.get("compound", 0.0)
+    if compound >= 0.05:
+        label = "positive"
+    elif compound <= -0.05:
+        label = "negative"
+    else:
+        label = "neutral"
+    conf = min(1.0, max(0.0, abs(compound)))
+    return {"label": label, "confidence": round(conf, 3), "scores": scores}
+
+
+def llm_sentiment(text: str, model_name: str) -> str:
+    """
+    Ask the LLM to classify sentiment. We request strict JSON:
+      {"label": "positive|neutral|negative", "confidence": 0.0-1.0}
+    Streams output and returns the final collected string (may be JSON or text).
+    """
+    # keep text reasonable for prompt size
+    MAX = 6000
+    clip = text[:MAX] + ("\n\n[...truncated...]" if len(text) > MAX else "")
+
+    system = (
+        "You are a strict sentiment classifier for classical text. "
+        "Return EXACT JSON with keys 'label' and 'confidence'. "
+        "Label must be one of: positive, neutral, negative. "
+        "Confidence is a float in [0,1]. No extra text."
+    )
+    user = f"TEXT:\n<<<\n{clip}\n>>>"
+
+    messages = [
+        {"role": "system", "content": system},
+        {"role": "user", "content": user},
+    ]
+
+    buf = []
+    for tok in chat_stream(messages, model=model_name):
+        buf.append(tok)
+    return "".join(buf)
+
+
+def parse_llm_json(s: str) -> Optional[dict]:
+    """Try to parse the model output as JSON; be forgiving if there's noise."""
+    # first try a straight parse
+    try:
+        return json.loads(s)
+    except Exception:
+        pass
+
+    # extract the first {...} block if present
+    m = re.search(r"\{.*\}", s, flags=re.DOTALL)
+    if m:
+        try:
+            return json.loads(m.group(0))
+        except Exception:
+            pass
+
+    # heuristic fallback: look for a label word and a float
+    low = s.lower()
+    label = None
+    for key in ("positive", "negative", "neutral"):
+        if key in low:
+            label = key
+            break
+    conf = None
+    nums = re.findall(r"\b0?\.\d+|\b1(?:\.0+)?\b", s)  # 0.xxx .. 1(.0)
+    if label or nums:
+        if nums:
+            try:
+                conf = float(nums[0])
+                conf = max(0.0, min(1.0, conf))
+            except Exception:
+                conf = None
+        return {"label": label or "unknown", "confidence": conf}
+    return None
