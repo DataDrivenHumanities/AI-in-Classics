@@ -56,6 +56,38 @@ From the project root:
 make docker
 ```
 
+## Ollama Setup
+
+Ollama client helper lives at:
+  src/app/ollama_client.py
+
+Build the local models (one-time per version)
+From the repo root:
+
+```bash
+  cd models/latin_model
+  ollama create latin_model:1.0.0 -f Modelfile
+
+  cd ../greek_model
+  ollama create greek_model:1.0.0 -f Modelfile
+```
+
+## Model Directory
+
+layout (models)
+
+```bash
+models/
+  greek_model/
+    Modelfile
+    prompts/system.txt
+    weights/        
+  latin_model/
+    Modelfile
+    prompts/system.txt
+    weights/        
+```
+
 ## Other Commands
 
 Stop containers:
