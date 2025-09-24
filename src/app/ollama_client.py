@@ -35,7 +35,6 @@ def ensure_model(model: str) -> None:
     try:
         tags = {m["model"] for m in ollama.list().get("models", [])}
         if model not in tags:
-            # For custom local names that were `ollama create`d.
             ollama.pull(model)
     except Exception:
         pass
@@ -87,7 +86,6 @@ def chat_stream(messages: List[Dict[str, str]],
     ensure_model(model)
     try:
         for chunk in ollama.chat(**kwargs):
-            # chunk["message"]["content"] is an incremental piece
             yield chunk["message"]["content"]
     except Exception as e:
         raise RuntimeError(

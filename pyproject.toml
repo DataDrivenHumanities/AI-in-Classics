@@ -35,6 +35,8 @@ protobuf = "==3.20.3"
 urllib3 = "<2"
 deep-translator = "^1.11.4"
 ollama = "^0.5.4"
+pypdf = "^6.1.0"
+vaderSentiment = "^3.3.2"
 
 
 [build-system]
