@@ -142,3 +142,6 @@ src/pipelines/preprocessing/preprocess_root_query/needed_files/greek_words.csv
 
 
 .vscode/settings.json
+models/**/weights/
+*.gguf
+.ollama/
