@@ -69,12 +69,12 @@ def chat_once(
         ) from e
 
 
-def chat_stream(messages: List[Dict[str, str]],
-                *,
-                model: str = DEFAULT_MODEL,
-                temperature: Optional[float] = None,
-                ) -> Iterable[str]:
-
+def chat_stream(
+    messages: List[Dict[str, str]],
+    *,
+    model: str = DEFAULT_MODEL,
+    temperature: Optional[float] = None,
+) -> Iterable[str]:
     """
     Generator that yields tokens incrementally.
     messages: [{"role": "system"|"user"|"assistant", "content": "..."}]

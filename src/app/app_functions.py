@@ -29,15 +29,25 @@ HISTORY = list()
 
 try:
     import pypdf
+
     _PDF_OK = True
 except Exception:
     _PDF_OK = False
 
 try:
     from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
-    _VADER_OK = True
+
+    VADER_OK = True
 except Exception:
-    _VADER_OK = False
+    VADER_OK = False
+
+try:
+    from ollama_client import chat_stream
+except Exception:
+    st.error(
+        "Cannot import ollama_client. Make sure src/ollama_client.py exists and is importable."
+    )
+    raise
 
 
 def dtm_cb():
@@ -269,7 +279,7 @@ def preprocess_texts():
     # dill.dump(file=)
 
 
-def _read_uploaded_file(upload) -> str:
+def read_uploaded_file(upload) -> str:
     """
     Read a Streamlit UploadedFile into plain text.
     Supports .txt/.md/.csv/.tsv directly; PDFs if pypdf is available.
@@ -288,7 +298,9 @@ def _read_uploaded_file(upload) -> str:
     # pdf
     if name.endswith(".pdf"):
         if not _PDF_OK:
-            st.warning("PDF support requires `pypdf` (install with `poetry add pypdf`).")
+            st.warning(
+                "PDF support requires `pypdf` (install with `poetry add pypdf`)."
+            )
             return ""
         try:
             reader = pypdf.PdfReader(io.BytesIO(data))
@@ -302,12 +314,12 @@ def _read_uploaded_file(upload) -> str:
         return data.decode("latin-1", errors="ignore")
 
 
-def _builtin_sentiment(text: str) -> Optional[dict]:
+def builtin_sentiment(text: str) -> Optional[dict]:
     """
     Run a quick VADER sentiment on the provided text.
     Returns dict with {label, confidence, scores} or None if unavailable.
     """
-    if not _VADER_OK:
+    if not VADER_OK:
         return None
     analyzer = SentimentIntensityAnalyzer()
     scores = analyzer.polarity_scores(text or "")
@@ -322,7 +334,7 @@ def _builtin_sentiment(text: str) -> Optional[dict]:
     return {"label": label, "confidence": round(conf, 3), "scores": scores}
 
 
-def _llm_sentiment(text: str, model_name: str) -> str:
+def llm_sentiment(text: str, model_name: str) -> str:
     """
     Ask the LLM to classify sentiment. We request strict JSON:
       {"label": "positive|neutral|negative", "confidence": 0.0-1.0}
@@ -351,7 +363,7 @@ def _llm_sentiment(text: str, model_name: str) -> str:
     return "".join(buf)
 
 
-def _parse_llm_json(s: str) -> Optional[dict]:
+def parse_llm_json(s: str) -> Optional[dict]:
     """Try to parse the model output as JSON; be forgiving if there's noise."""
     # first try a straight parse
     try:

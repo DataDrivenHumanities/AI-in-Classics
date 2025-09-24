@@ -3,14 +3,16 @@ import streamlit as st
 import analyze
 import load
 import query
-import app_functions as app_func 
+import app_functions as app_func
 from globals import globals  # noqa: F401
 
 
 try:
     from ollama_client import chat_stream
 except Exception:
-    st.error("Cannot import ollama_client. Make sure src/ollama_client.py exists and is importable.")
+    st.error(
+        "Cannot import ollama_client. Make sure src/ollama_client.py exists and is importable."
+    )
     raise
 
 
@@ -37,7 +39,9 @@ st.title(body="Greek and Latin Query Engine")
 
 # existing tasks (unchanged)
 tasks = np.asarray(a=list(["Load", "Query", "Analyze"]))
-task_select = st.sidebar.selectbox(label="Tasks", options=tasks, help="Select a task after loading a dataset.")
+task_select = st.sidebar.selectbox(
+    label="Tasks", options=tasks, help="Select a task after loading a dataset."
+)
 globals["task_select"] = task_select
 
 mode_toggle = st.sidebar.radio(
