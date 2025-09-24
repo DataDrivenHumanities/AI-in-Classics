@@ -3,6 +3,7 @@ import load
 import numpy as np
 import query
 import streamlit as st
+from ollama_client import chat_stream
 from app_functions import *
 from globals import globals
 
@@ -17,6 +18,11 @@ st.set_page_config(
             "Get help": "https://www.youtube.com/",
         }
     ),
+)
+
+model_choice = st.sidebar.radio(
+    "Choose model",
+    ["greek_model:1.0.0", "latin_model:1.0.0"]
 )
 
 st.header(body="AI in Classics")
