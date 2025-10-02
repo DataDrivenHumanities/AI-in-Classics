@@ -1,7 +1,3 @@
-# -------------------------------
-# Project Makefile (dev-friendly)
-# Supports: Poetry, plain venv/pip, Docker, Ollama models
-# -------------------------------
 
 # ===== Config =====
 PYTHON        ?= python3

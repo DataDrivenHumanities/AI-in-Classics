@@ -208,6 +208,21 @@ def use_light_preset(compact: bool = True, centered: bool = False, max_width_px:
 # ==============================
 
 
+def hero_header(title: str, subtitle: str | None = None):
+    """
+    Centered, large header for top of page.
+    """
+    html = f"""
+    <div style="text-align:center; margin-top:0.5rem; margin-bottom:1.5rem;">
+        <h1 style="font-size:2.5rem; font-weight:800; margin-bottom:0.3rem;">
+            {title}
+        </h1>
+        {f'<p style="font-size:1.25rem; font-weight:400; opacity:0.85; margin-top:0;">{subtitle}</p>' if subtitle else ""}
+    </div>
+    """
+    st.markdown(html, unsafe_allow_html=True)
+
+
 def header(title: str, subtitle: str | None = None):
     st.markdown(f'<div class="webui-h1">{title}</div>', unsafe_allow_html=True)
     if subtitle:

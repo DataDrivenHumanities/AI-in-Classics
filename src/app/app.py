@@ -55,7 +55,7 @@ mode_toggle = st.sidebar.radio(
 DEBUG = True
 
 # ---------- Header ----------
-ui.header("AI in Classics", "Greek and Latin Query Engine")
+ui.hero_header("AI in Classics", "Greek and Latin Query Engine")
 
 # ---------- Main task router ----------
 if task_select == tasks[0]:
