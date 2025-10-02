@@ -8,7 +8,7 @@ from typing import List, Dict
 OLLAMA_API_URL = (
     "http://localhost:11434/api/generate"  # Edit this with your Ollama server IP
 )
-OLLAMA_MODEL = "LatinSentimentAnalysis:Latest"  # The model used for sentiment analysis
+OLLAMA_MODEL = "latin_model:1.0.0"  # The model used for sentiment analysis
 
 # Dataset of Latin sentences with expected sentiment and English translations
 LATIN_DATA: List[Dict[str, str]] = [
