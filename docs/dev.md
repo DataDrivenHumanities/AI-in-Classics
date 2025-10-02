@@ -1,130 +1,275 @@
-# Setting up local Development
+# Development Guide
 
-select one of the following options to setup your local development.
+Pick **one** setup path: **Poetry**, **plain Python (venv)**, or **Docker**.  
+Then (optionally) build the **Ollama** models for sentiment tests.
 
-We Recommend using [Docker](#3running-with-docker-using-make)
+> We recommend **Poetry** or **Docker** for the smoothest experience.
 
-## 1. Using the Build script
+---
 
-run the folloing command in your main directory:
+## Prerequisites
 
-```sh
-sh .buld.sh
-```
+- **Python 3.10+**
+- **Make** (macOS/Linux preinstalled; Windows: `choco install make` or use WSL)
+- **Ollama** (for local LLM): <https://ollama.com/download>
+- **Docker** (optional): <https://docs.docker.com/get-docker/>
 
-the cd into app folder and run:
+---
 
-```bash
-python3 app.py
-```
-
-## 2. Using Poetry/Make
-
-### Prerequisites for Poetry/Make
-
-- Install Poetry `pip install poetry` on your system
-- Make (Preinstalled on Mac & Linux) (if Windows try `pacman -S make`)
-  - Confirm make `make --version`
-
-In the main directory run:
+## Quick Start (Poetry)
 
 ```bash
-make setup
+# from repo root
+make setup          # installs deps via Poetry (auto-detects)
+make web            # runs Streamlit app (src/app/app.py)
+# or
+make run            # runs python src/app/app.py
 ```
 
-Once installed run the following command:
+### Tests, formatting
 
 ```bash
-make web
-or 
+make test           # pytest
+make check          # black --check
+make fix            # black (format)
+```
+
+---
+
+## uick Start (Plain Python venv)
+
+If you don't use Poetry:
+
+```bash
+make setup-venn     # creates .venv and installs requirements.txt (if present)
+make web            # runs Streamlit
+# or
 make run
 ```
 
-## 3.Running with Docker using Make
+> If you don't have a `requirements.txt`, either generate one from Poetry (`poetry export -f requirements.txt --output requirements.txt`) or switch to the Poetry path.
 
-This project provides a simple Docker workflow for local development and testing.
+---
 
-### Prerequisites for Docker
-
-- Install [Docker](https://docs.docker.com/get-docker/) on your system
-
-### Build the Image & Run
-
-From the project root:
+## Quick Start (Docker)
 
 ```bash
-make docker
+make docker-build
+make docker-dev     # mounts repo for live reload, exposes port (default 8501)
+# or
+make docker-run     # simple run of the built image
 ```
 
-## Ollama Setup
-
-Ollama client helper lives at:
-  src/app/ollama_client.py
-
-Build the local models (one-time per version)
-From the repo root:
+Common maintenance:
 
 ```bash
-  cd models/latin_model
-  ollama create latin_model:1.0.0 -f Modelfile
-
-  cd ../greek_model
-  ollama create greek_model:1.0.0 -f Modelfile
+make docker-clean   # remove dangling containers/images
 ```
 
-## Model Directory
+---
 
-layout (models)
+## 4) Ollama Models (Latin & Greek Sentiment)
+
+These steps build light wrappers on top of a base model (default **llama3.1:8b**).
+
+### 4.1 Start the Ollama server
+
+```bash
+ollama serve
+```
+
+Keep this terminal open (or run it as a service).
+
+### 4.2 Pull the base model
+
+```bash
+make ollama-pull
+# equivalent to: ollama pull llama3.1:8b
+```
+
+### Build our project models
+
+Your repo should have:
 
 ```bash
 models/
-  greek_model/
+  latin/
     Modelfile
-    prompts/system.txt
-    weights/        
-  latin_model/
+  greek/
     Modelfile
-    prompts/system.txt
-    weights/        
 ```
 
-## Other Commands
+> If your repo instead uses `models/latin_model/Modelfile` and `models/greek_model/Modelfile`, either rename to `latin/` and `greek/`, **or** update the Makefile paths accordingly.
 
-Stop containers:
+Build:
 
 ```bash
-docker stop <container_id>
+make build-latin
+make build-greek
 ```
 
-Remove dangling images/containers:
+Verify:
 
 ```bash
-docker system prune -f
+make ollama-list
+# should list:
+# latin_model:1.0.0
+# greek_model:1.0.0
+# llama3.1:8b
 ```
 
-adding Hot-Reload
+### Health check & smoke tests
 
 ```bash
-docker run --rm -it \
-  -p 8000:8000 \
-  -v $(pwd):/app \
-  classics-ai-app
+make health         # checks /api/tags
+make smoke-latin    # one-shot classify request
+make smoke-greek
 ```
 
-## Common Issues
+If the smoke test returns an `error` or 404, your model tag probably doesn’t exist (see Troubleshooting).
 
-### Make Setup
+---
 
-#### `ModuleNotFoundError: No module named 'altair.vegalite.v4'`
+## Running the Sentiment Test Suites
 
-Ensure you had altair installed, if not try running:
+Latin:
 
 ```bash
-poetry add "altair<5,>=4.2"
+make ensure-models  # verifies both tags exist
+make test-latin     # or: poetry run python tests/Latin_Sentiment_Sentences_Test_Cases.py
 ```
 
-This could be because you dont have graphviz system tool installed try downloading the following:
+Greek (if you have the parallel harness):
+
+```bash
+make test-greek
+```
+
+---
+
+## Make Targets (Cheat Sheet)
+
+Core:
+
+- `make setup` — Prefer Poetry; otherwise uses `.venv`
+- `make run` — Runs `src/app/app.py`
+- `make web` — Runs Streamlit app
+- `make test` / `make check` / `make fix`
+
+Docker:
+
+- `make docker-build` / `make docker-run` / `make docker-dev` / `make docker-bash` / `make docker-clean`
+
+Ollama:
+
+- `make ollama-serve` — Foreground server
+- `make ollama-pull` — Pull base (`llama3.1:8b`)
+- `make build-latin` / `make build-greek` — Create project model tags
+- `make ensure-models` — Verify tags are present on server
+- `make smoke-latin` / `make smoke-greek`
+- `make health` — 200 OK from `/api/tags`
+- `make ollama-list`
+
+Config via env vars:
+
+```bash
+# defaults shown
+OLLAMA_HOST=http://localhost:11434
+LATIN_TAG=latin_model:1.0.0
+GREEK_TAG=greek_model:1.0.0
+BASE_MODEL=llama3.1:8b
+PORT=8501
+APP_ENTRY=src/app/app.py
+STREAMLIT_APP=src/app/app.py
+```
+
+---
+
+## (Optional) Legacy build script
+
+If you still want a local build script:
+
+```bash
+sh .build.sh
+cd src/app
+python3 app.py
+```
+
+> Note: the old docs had a typo (`.buld.sh`). Make sure your script is actually named `.build.sh`.
+
+---
+
+## Model Folder Layout (Suggested)
+
+```bash
+models/
+  latin/
+    Modelfile
+    prompts/ (optional)
+    weights/ (optional)
+  greek/
+    Modelfile
+    prompts/ (optional)
+    weights/ (optional)
+```
+
+If you prefer `latin_model/` and `greek_model/`, update the Makefile targets:
+
+```make
+build-latin:
+ ollama create $(LATIN_TAG) -f models/latin_model/Modelfile
+
+build-greek:
+ ollama create $(GREEK_TAG) -f models/greek_model/Modelfile
+```
+
+---
+
+## Common Issues & Fixes
+
+### Ollama 404 on `/api/generate`
+
+- Usually means **model tag not found**. Run `ollama list` and ensure your code/Makefile use the exact tag (e.g., `latin_model:1.0.0`).
+
+#### `{"error":"model 'X' not found"}`
+
+- You didn’t build the model: run `make build-latin` / `make build-greek`.
+- Wrong folder path in Makefile: adjust `-f models/.../Modelfile`.
+
+### Server not reachable
+
+- `ollama serve` must be running. Check with `make health` or:
+
+  ```bash
+  curl -s http://localhost:11434/api/tags
+  ```
+
+### Inconsistent outputs (extra text)
+
+- Keep temperature at 0 in Modelfiles and enforce a one-word response in prompts.
+- Normalize in the test harness (`clean_sentiment()`).
+
+### Missing Python deps
+
+- Poetry: `make setup` (or `poetry install`)
+- venv: ensure `requirements.txt` exists, then `make setup-venv`
+
+### Graphviz / Altair errors (Streamlit visuals)
 
 - macOS: `brew install graphviz`
 - Ubuntu/Debian: `sudo apt-get update && sudo apt-get install -y graphviz`
+- Altair v4: `poetry add "altair<5,>=4.2"`
 
+---
+
+## Releasing a new model version
+
+1. Edit `models/<latin|greek>/Modelfile`
+2. Build a new tag:
+
+   ```bash
+   ollama create latin_model:1.0.1 -f models/latin/Modelfile
+   ```
+
+3. Update `LATIN_TAG`/`GREEK_TAG` in your Makefile or environment.
+4. `make ensure-models && make test-latin`
