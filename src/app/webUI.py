@@ -30,8 +30,16 @@ def inject_css(raw_css: str):
     st.markdown(f"<style>{textwrap.dedent(raw_css)}</style>", unsafe_allow_html=True)
 
 
-def _apply_shell_css(bg: str, text: str, surface: str, primary: str, radius: str,
-                     compact: bool, centered: bool, max_width_px: int):
+def _apply_shell_css(
+    bg: str,
+    text: str,
+    surface: str,
+    primary: str,
+    radius: str,
+    compact: bool,
+    centered: bool,
+    max_width_px: int,
+):
     """
     Internal: keeps selectors stable and light.
 
@@ -178,7 +186,9 @@ def base_theme(
     )
 
 
-def use_dark_preset(compact: bool = True, centered: bool = False, max_width_px: int = 1100):
+def use_dark_preset(
+    compact: bool = True, centered: bool = False, max_width_px: int = 1100
+):
     base_theme(
         primary="#6D28D9",  # muted purple
         bg="#0E1117",
@@ -191,7 +201,9 @@ def use_dark_preset(compact: bool = True, centered: bool = False, max_width_px: 
     )
 
 
-def use_light_preset(compact: bool = True, centered: bool = False, max_width_px: int = 1100):
+def use_light_preset(
+    compact: bool = True, centered: bool = False, max_width_px: int = 1100
+):
     base_theme(
         primary="#2563EB",  # blue-600
         bg="#F7F7FB",
@@ -202,6 +214,7 @@ def use_light_preset(compact: bool = True, centered: bool = False, max_width_px:
         centered=centered,
         max_width_px=max_width_px,
     )
+
 
 # ==============================
 # extra Components
@@ -249,9 +262,9 @@ def callout(body: str, *, title: str | None = None, kind: str = "info"):
     these are stock colors
     """
     accents = {
-        "info":   "#60A5FA",
+        "info": "#60A5FA",
         "success": "#34D399",
-        "warn":   "#FBBF24",
+        "warn": "#FBBF24",
         "danger": "#F87171",
     }
     color = accents.get(kind, "#60A5FA")
@@ -292,6 +305,7 @@ def section(title: str, body_md: str):
 # sidebar logo
 # ==============================
 
+
 def _data_uri_from_file(path: str | Path) -> str | None:
     """Return a data: URI for a local image file, or None if not found/invalid."""
     p = Path(path)
@@ -320,13 +334,17 @@ def sidebar_logo(
     """
     src = path_or_url
     if not (path_or_url.startswith("http://") or path_or_url.startswith("https://")):
-        src = _data_uri_from_file(path_or_url) or _data_uri_from_file(
-            Path(__file__).parent / path_or_url
-        ) or _data_uri_from_file(Path.cwd() / path_or_url)
+        src = (
+            _data_uri_from_file(path_or_url)
+            or _data_uri_from_file(Path(__file__).parent / path_or_url)
+            or _data_uri_from_file(Path.cwd() / path_or_url)
+        )
 
-    justify = {"left": "flex-start", "center": "center", "right": "flex-end"}.get(align, "center")
+    justify = {"left": "flex-start", "center": "center", "right": "flex-end"}.get(
+        align, "center"
+    )
     if not src:
-        # Fallback: subtle placeholder 
+        # Fallback: subtle placeholder
         st.sidebar.markdown(
             f"""
             <div style="display:flex; justify-content:{justify}; padding-top: {top_pad} !important; opacity:.6; font-size:.9rem;">

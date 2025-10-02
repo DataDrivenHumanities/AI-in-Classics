@@ -31,7 +31,9 @@ st.set_page_config(
 )
 
 ui.use_light_preset()
-ui.sidebar_logo("images/uf_logo.png", link="https://classics.ufl.edu", height_px=56, align="center")
+ui.sidebar_logo(
+    "images/uf_logo.png", link="https://classics.ufl.edu", height_px=56, align="center"
+)
 
 
 # ---------- Sidebar ----------
@@ -144,4 +146,3 @@ if st.button("Ask"):
         buf.append(token)
         out.markdown("".join(buf))
     out.markdown("".join(buf))
-
