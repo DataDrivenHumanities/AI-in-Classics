@@ -11,8 +11,24 @@ except Exception as e:
     ) from e
 
 
-DEFAULT_MODEL = os.getenv("TP_MODEL", "latin_model:1.0.0")
+try:
+    import model_registry as model_cfg
+except Exception:
+    model_cfg = None
 
+
+def _determine_default_model() -> str:
+    env_override = os.getenv("TP_MODEL")
+    if env_override:
+        return env_override
+    if model_cfg is not None and hasattr(model_cfg, "get_registry"):
+        try:
+            return model_cfg.get_registry().default_model_id
+        except getattr(model_cfg, "ModelRegistryError", Exception):
+            pass
+    return "latin_model:1.0.0"
+
+DEFAULT_MODEL = _determine_default_model()
 
 def ping(host: Optional[str] = None) -> bool:
     """
