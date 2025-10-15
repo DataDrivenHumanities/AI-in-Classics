@@ -185,7 +185,7 @@ async def fetch_and_write_lemma(session, code: str, outdir: Path, sem: asyncio.S
 
 async def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--outdir", default="forms", help="Directory for per-lemma CSVs")
+    ap.add_argument("--outdir", default="out", help="Directory for per-lemma CSVs")
     ap.add_argument("--start", type=int, default=1, help="First index page number (pg=...)")
     ap.add_argument("--step", type=int, default=50, help="Pagination step (default 50)")
     ap.add_argument("--end", type=int, default=None, help="Last index page number (if omitted, use --dynamic)")
