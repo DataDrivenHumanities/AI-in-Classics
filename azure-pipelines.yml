@@ -1,0 +1,59 @@
+trigger: none
+pr: none
+variables:
+  - group: latin-secrets
+  - name: SCRAPER_PATH
+    value: src/Lemmatizer-LTN/tools/scrape_tables.py
+  - name: LEMMA_CSV
+    value: src/Lemmatizer-LTN/out/lemmas.csv
+  - name: FORM_CSV
+    value: src/Lemmatizer-LTN/out/forms.csv
+
+pool: { vmImage: "ubuntu-latest" }
+
+steps:
+  - task: UsePythonVersion@0
+    inputs: { versionSpec: "3.11" }
+
+  - script: |
+      python -m venv .venv
+      . .venv/bin/activate
+      pip install -U pip
+      # If your scraper has its own reqs, install them here too:
+      # pip install -r tools/scraper/requirements.txt
+      pip install -r etl/requirements.txt
+    displayName: "Create venv + install deps"
+
+  - script: |
+      echo "$GOOGLE_SERVICE_ACCOUNT_JSON_BASE64" | base64 -D > service_account.json
+    displayName: "Materialize Google SA JSON"
+    env:
+      GOOGLE_SERVICE_ACCOUNT_JSON_BASE64: $(GOOGLE_SERVICE_ACCOUNT_JSON_BASE64)
+
+  # ---- Step 1: run YOUR scraper (no code moves required) -----------------------
+  - script: |
+      . .venv/bin/activate
+      python "$(SCRAPER_PATH)" --lemmas-out "$(LEMMA_CSV)" --forms-out "$(FORM_CSV)"
+    displayName: "Scrape -> CSVs"
+
+  # ---- Step 2: upload those CSVs to Drive -------------------------------------
+  - script: |
+      . .venv/bin/activate
+      python etl/upload_to_drive.py \
+        --service-account-json service_account.json \
+        --folder-id "$(GOOGLE_DRIVE_FOLDER_ID)" \
+        --files "$(LEMMA_CSV)" "$(FORM_CSV)"
+    displayName: "Upload CSVs to Google Drive"
+    env: { GOOGLE_DRIVE_FOLDER_ID: $(GOOGLE_DRIVE_FOLDER_ID) }
+
+  # ---- Step 3: init schema (idempotent) + load into Postgres -------------------
+  - script: |
+      sudo apt-get update && sudo apt-get install -y postgresql-client
+      . .venv/bin/activate
+      psql "$(DATABASE_URL)" -f ops/init_db.sql
+      python etl/load_to_postgres.py \
+        --db "$(DATABASE_URL)" \
+        --lemmas "$(LEMMA_CSV)" \
+        --forms  "$(FORM_CSV)"
+    displayName: "Init schema + Load CSVs"
+    env: { DATABASE_URL: $(DATABASE_URL) }
