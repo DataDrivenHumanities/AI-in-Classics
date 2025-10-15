@@ -28,7 +28,9 @@ def _determine_default_model() -> str:
             pass
     return "latin_model:1.0.0"
 
+
 DEFAULT_MODEL = _determine_default_model()
+
 
 def ping(host: Optional[str] = None) -> bool:
     """
