@@ -6,6 +6,7 @@ new models can be added without touching application code. The registry is
 lightweight, pure-Python, and has no third-party dependencies so it can be used
 both inside Streamlit callbacks and in utility scripts.
 """
+
 from __future__ import annotations
 
 from dataclasses import dataclass, field
@@ -54,14 +55,20 @@ class ModelInfo:
 class ModelRegistry:
     """Container for all configured models."""
 
-    def __init__(self, models: Sequence[ModelInfo], default: Optional[str] = None) -> None:
+    def __init__(
+        self, models: Sequence[ModelInfo], default: Optional[str] = None
+    ) -> None:
         if not models:
-            raise ModelRegistryError("Model registry is empty; add at least one model entry.")
+            raise ModelRegistryError(
+                "Model registry is empty; add at least one model entry."
+            )
 
         self._ordered: List[ModelInfo] = list(models)
         self._models_by_id: Dict[str, ModelInfo] = {m.model_id: m for m in models}
         if len(self._models_by_id) != len(self._ordered):
-            raise ModelRegistryError("Duplicate model identifiers detected in registry.")
+            raise ModelRegistryError(
+                "Duplicate model identifiers detected in registry."
+            )
 
         default_id = default
         if default_id not in self._models_by_id:
@@ -100,7 +107,9 @@ class ModelRegistry:
         try:
             return self._models_by_id[model_id]
         except KeyError as exc:  # pragma: no cover - defensive programming
-            raise ModelRegistryError(f"Model '{model_id}' is not defined in the registry.") from exc
+            raise ModelRegistryError(
+                f"Model '{model_id}' is not defined in the registry."
+            ) from exc
 
     @staticmethod
     def index_for(model_id: str, pool: Sequence[ModelInfo]) -> int:
@@ -141,7 +150,9 @@ def _load_registry_from_path(path: Path) -> ModelRegistry:
 
     models = [m for m in models if m.model_id]
     if not models:
-        raise ModelRegistryError("Registry file is present but does not define any models.")
+        raise ModelRegistryError(
+            "Registry file is present but does not define any models."
+        )
 
     default = raw.get("default")
     return ModelRegistry(models, default)
@@ -161,7 +172,9 @@ def get_registry(path: Optional[str] = None) -> ModelRegistry:
     except ModelRegistryError:
         raise
     except Exception as exc:  # pragma: no cover - unexpected failure
-        raise ModelRegistryError(f"Failed to load model registry at {resolved}: {exc}") from exc
+        raise ModelRegistryError(
+            f"Failed to load model registry at {resolved}: {exc}"
+        ) from exc
 
 
 def refresh_registry(path: Optional[str] = None) -> ModelRegistry:
