@@ -1,3 +1,4 @@
+# Modelfile.latin
 FROM llama3.1:8b
 
 TEMPLATE """<|begin_of_text|><|start_header_id|>system<|end_header_id|>
