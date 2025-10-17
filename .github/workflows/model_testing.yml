@@ -35,6 +35,9 @@ jobs:
         uses: abatilo/actions-poetry@v3
         with:
           poetry-version: "1.8.3"
+      
+      - name: Install jq
+        run: sudo apt-get update && sudo apt-get install -y jq
 
       - name: Configure Poetry (in-project venv)
         run: poetry config virtualenvs.in-project true
@@ -58,7 +61,7 @@ jobs:
           docker run -d --name ollama \
             -p 11434:11434 \
             -v $HOME/.ollama:/root/.ollama \
-            ghcr.io/ollama/ollama:latest
+            ollama/ollama:latest
           # Wait for API
           for i in {1..60}; do
             if curl -sSf http://localhost:11434/ >/dev/null; then
