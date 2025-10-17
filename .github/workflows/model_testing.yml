@@ -86,10 +86,10 @@ jobs:
             echo "Base model already present."
           fi
 
-          # Resolve Modelfile paths (support any filename starting with Modelfile)
+
           LATIN_FILE=""
-          if compgen -G "models/latin_models/Modelfile*" > /dev/null; then
-            LATIN_FILE=$(ls models/latin_models/Modelfile* | head -n1)
+          if compgen -G "models/latin_model/Modelfile*" > /dev/null; then
+            LATIN_FILE=$(ls models/latin_model/Modelfile* | head -n1)
           fi
 
           GREEK_FILE=""
@@ -103,7 +103,7 @@ jobs:
               echo "Creating latin_model:1.0.0 from ${LATIN_FILE} ..."
               docker exec -i ollama ollama create latin_model:1.0.0 -f - < "${LATIN_FILE}"
             else
-              echo "WARNING: No Modelfile found in models/latin_models/; skipping latin model."
+              echo "WARNING: No Modelfile found in models/latin_model/; skipping latin model."
             fi
           else
             echo "latin_model:1.0.0 already present."
