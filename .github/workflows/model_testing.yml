@@ -1,4 +1,4 @@
-name: Model Testing (Ollama + pytest)
+name: Model Testing (Ollama)
 
 on:
   pull_request:
