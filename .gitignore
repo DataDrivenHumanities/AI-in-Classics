@@ -147,3 +147,4 @@ src/pipelines/preprocessing/preprocess_root_query/needed_files/greek_words.csv
 models/**/weights/
 *.gguf
 .ollama/
+/.idea

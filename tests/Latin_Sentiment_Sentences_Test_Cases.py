@@ -9,7 +9,6 @@ from typing import List, Dict
 OLLAMA_API_URL = (
     "http://localhost:11434/api/generate"  # Edit this with your Ollama server IP
 )
-=======
 OLLAMA_MODEL = "LatinSentimentAnalysis:latest"  # Updated to match loaded model
 OLLAMA_TAGS_URL = OLLAMA_API_URL.replace(
     "/api/generate", "/api/tags"
@@ -17,7 +16,6 @@ OLLAMA_TAGS_URL = OLLAMA_API_URL.replace(
 OLLAMA_PULL_URL = OLLAMA_API_URL.replace(
     "/api/generate", "/api/pull"
 )  # Endpoint to pull model
->>>>>>> Stashed changes
 
 
 # Load test cases from JSON file
