@@ -16,5 +16,4 @@ def test_latin_single(latin_model_name, latin_ready):
     res = generate_ollama(latin_model_name, PROMPT)
     if not res["ok"]:
         pytest.xfail(f"Ollama request failed: {res['raw']}")
-    # We keep the first test forgiving: just ensure the model returns one of the labels
     assert res["sentiment"] in {"positive", "negative", "neutral"}

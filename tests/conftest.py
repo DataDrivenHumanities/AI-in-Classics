@@ -37,7 +37,9 @@ def list_models() -> List[str]:  # <-- List[str] not list[str]
         return []
 
 
-def choose_model(env_var: str, keywords: List[str]) -> Optional[str]:  # <-- Optional[str]
+def choose_model(
+    env_var: str, keywords: List[str]
+) -> Optional[str]:  # <-- Optional[str]
     """1) If ENV is set, use it. 2) else first local model containing any keyword."""
     forced = os.getenv(env_var)
     if forced:
@@ -55,7 +57,12 @@ def generate_ollama(model: str, prompt: str) -> dict:
         "model": model,
         "prompt": prompt.strip(),
         "stream": False,
-        "options": {"temperature": 0.0, "top_p": 0.0, "repeat_penalty": 1.0, "num_predict": 16},
+        "options": {
+            "temperature": 0.0,
+            "top_p": 0.0,
+            "repeat_penalty": 1.0,
+            "num_predict": 16,
+        },
     }
     try:
         r = _post("/api/generate", payload)
@@ -64,7 +71,12 @@ def generate_ollama(model: str, prompt: str) -> dict:
         data = r.json()
         text = (data.get("response") or "").strip()
         m = SENTIMENT_RE.search(text)
-        return {"ok": True, "text": text, "raw": data, "sentiment": m.group(1).lower() if m else "neutral"}
+        return {
+            "ok": True,
+            "text": text,
+            "raw": data,
+            "sentiment": m.group(1).lower() if m else "neutral",
+        }
     except Exception as e:
         return {"ok": False, "text": "", "raw": str(e), "sentiment": "neutral"}
 
@@ -79,12 +91,12 @@ def _require_ollama():
 
 
 @pytest.fixture(scope="session")
-def latin_model_name() -> Optional[str]:   # <-- Optional here too
+def latin_model_name() -> Optional[str]:  # <-- Optional here too
     return choose_model("LATIN_TAG", ["latin", "lat"])
 
 
 @pytest.fixture(scope="session")
-def greek_model_name() -> Optional[str]:   # <-- Optional here too
+def greek_model_name() -> Optional[str]:  # <-- Optional here too
     return choose_model("GREEK_TAG", ["greek", "grc", "hellenic"])
 
 
@@ -100,8 +112,13 @@ def greek_ready(greek_model_name) -> bool:
 
 def pytest_report_header(config):
     from .conftest import choose_model
-    latin = os.getenv("LATIN_TAG") or choose_model("LATIN_TAG", ["latin","lat"])
-    greek = os.getenv("GREEK_TAG") or choose_model("GREEK_TAG", ["greek","grc","hellenic"])
-    return [f"Ollama URL: {OLLAMA_URL}",
-            f"Latin model: {latin or 'not found'}",
-            f"Greek model: {greek or 'not found'}"]
+
+    latin = os.getenv("LATIN_TAG") or choose_model("LATIN_TAG", ["latin", "lat"])
+    greek = os.getenv("GREEK_TAG") or choose_model(
+        "GREEK_TAG", ["greek", "grc", "hellenic"]
+    )
+    return [
+        f"Ollama URL: {OLLAMA_URL}",
+        f"Latin model: {latin or 'not found'}",
+        f"Greek model: {greek or 'not found'}",
+    ]
