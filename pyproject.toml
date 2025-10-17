@@ -39,6 +39,7 @@ pypdf = "^6.1.0"
 vaderSentiment = "^3.3.2"
 
 
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"

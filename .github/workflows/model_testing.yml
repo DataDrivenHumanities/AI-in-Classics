@@ -21,10 +21,25 @@ jobs:
     runs-on: ubuntu-latest
     env:
       OLLAMA_URL: http://localhost:11434
+      PIP_DISABLE_PIP_VERSION_CHECK: "1"
+      PIP_NO_CACHE_DIR: "1"
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Free disk space
+        shell: bash
+        run: |
+          set -euxo pipefail
+          df -h
+          sudo rm -rf /usr/local/lib/android || true
+          sudo rm -rf /opt/ghc || true
+          sudo rm -rf /usr/share/dotnet || true
+          sudo rm -rf /opt/hostedtoolcache/CodeQL || true
+          sudo docker system prune -af || true
+          sudo rm -rf "$AGENT_TOOLSDIRECTORY" || true
+          df -h
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -35,6 +50,9 @@ jobs:
         uses: abatilo/actions-poetry@v3
         with:
           poetry-version: "1.8.3"
+
+      - name: Install jq
+        run: sudo apt-get update && sudo apt-get install -y jq
 
       - name: Configure Poetry (in-project venv)
         run: poetry config virtualenvs.in-project true
@@ -52,9 +70,6 @@ jobs:
           key: ollama-${{ runner.os }}-${{ hashFiles('models/latin_model/**', 'models/greek_model/**') }}-llama3.1-8b
           restore-keys: |
             ollama-${{ runner.os }}-
-
-      - name: Install jq (used by later steps)
-        run: sudo apt-get update && sudo apt-get install -y jq
 
       - name: Start Ollama (Docker)
         run: |
@@ -84,7 +99,6 @@ jobs:
             docker exec ollama ollama list | awk '{print $1}' | grep -qx "$1" || return 1
           }
 
-          # Pull base once if missing (benefits from ~/.ollama cache)
           if ! have_model "llama3.1:8b"; then
             echo "Pulling base model llama3.1:8b ..."
             docker exec ollama ollama pull llama3.1:8b
@@ -92,7 +106,6 @@ jobs:
             echo "Base model already present."
           fi
 
-          # Detect Modelfiles on the host (we mounted them to /models:ro)
           LATIN_FILE=""
           if compgen -G "models/latin_model/Modelfile*" > /dev/null; then
             LATIN_FILE=$(ls models/latin_model/Modelfile* | head -n1)
@@ -106,7 +119,6 @@ jobs:
           echo "Detected LATIN_FILE: ${LATIN_FILE:-<none>}"
           echo "Detected GREEK_FILE: ${GREEK_FILE:-<none>}"
 
-          # Create latin_model:1.0.0
           if ! have_model "latin_model:1.0.0"; then
             if [[ -n "${LATIN_FILE}" ]]; then
               echo "Creating latin_model:1.0.0 from ${LATIN_FILE} ..."
@@ -118,7 +130,6 @@ jobs:
             echo "latin_model:1.0.0 already present."
           fi
 
-          # Create greek_model:1.0.0
           if ! have_model "greek_model:1.0.0"; then
             if [[ -n "${GREEK_FILE}" ]]; then
               echo "Creating greek_model:1.0.0 from ${GREEK_FILE} ..."
