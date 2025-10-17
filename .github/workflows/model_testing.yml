@@ -52,7 +52,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ~/.ollama
-          key: ollama-${{ runner.os }}-${{ hashFiles('models/latin_models/**', 'models/greek_model/**') }}-llama3.1-8b
+          key: ollama-${{ runner.os }}-${{ hashFiles('models/latin_model/**', 'models/greek_model/**') }}-llama3.1-8b
           restore-keys: |
             ollama-${{ runner.os }}-
 
