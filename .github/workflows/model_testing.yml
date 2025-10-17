@@ -61,7 +61,9 @@ jobs:
           docker run -d --name ollama \
             -p 11434:11434 \
             -v $HOME/.ollama:/root/.ollama \
+            -v "${GITHUB_WORKSPACE}/models:/models:ro" \
             ollama/ollama:latest
+
           # Wait for API to come up
           for i in {1..60}; do
             if curl -sSf http://localhost:11434/ >/dev/null; then
@@ -90,7 +92,7 @@ jobs:
             echo "Base model already present."
           fi
 
-          # Find Modelfiles in the real (singular) paths
+          # Detect Modelfiles on the host (we mounted them to /models:ro)
           LATIN_FILE=""
           if compgen -G "models/latin_model/Modelfile*" > /dev/null; then
             LATIN_FILE=$(ls models/latin_model/Modelfile* | head -n1)
@@ -104,11 +106,11 @@ jobs:
           echo "Detected LATIN_FILE: ${LATIN_FILE:-<none>}"
           echo "Detected GREEK_FILE: ${GREEK_FILE:-<none>}"
 
-          # Create latin_model:1.0.0 (pipe file content into container)
+          # Create latin_model:1.0.0
           if ! have_model "latin_model:1.0.0"; then
             if [[ -n "${LATIN_FILE}" ]]; then
               echo "Creating latin_model:1.0.0 from ${LATIN_FILE} ..."
-              cat "${LATIN_FILE}" | docker exec -i ollama ollama create latin_model:1.0.0 -f -
+              docker exec ollama ollama create latin_model:1.0.0 -f "/models/latin_model/$(basename "${LATIN_FILE}")"
             else
               echo "WARNING: No Modelfile found in models/latin_model/; skipping latin model."
             fi
@@ -116,11 +118,11 @@ jobs:
             echo "latin_model:1.0.0 already present."
           fi
 
-          # Create greek_model:1.0.0 (pipe file content into container)
+          # Create greek_model:1.0.0
           if ! have_model "greek_model:1.0.0"; then
             if [[ -n "${GREEK_FILE}" ]]; then
               echo "Creating greek_model:1.0.0 from ${GREEK_FILE} ..."
-              cat "${GREEK_FILE}" | docker exec -i ollama ollama create greek_model:1.0.0 -f -
+              docker exec ollama ollama create greek_model:1.0.0 -f "/models/greek_model/$(basename "${GREEK_FILE}")"
             else
               echo "WARNING: No Modelfile found in models/greek_model/; skipping greek model."
             fi
