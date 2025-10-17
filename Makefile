@@ -131,10 +131,10 @@ ollama-list:
 	ollama list
 
 build-latin: ## requires models/latin/Modelfile
-	ollama create $(LATIN_TAG) -f models/latin/Modelfile
+	ollama create $(LATIN_TAG) -f models/latin_model/Modelfile
 
 build-greek: ## requires models/greek/Modelfile
-	ollama create $(GREEK_TAG) -f models/greek/Modelfile
+	ollama create $(GREEK_TAG) -f models/greek_model/Modelfile
 
 health:
 	@echo "Checking $(OLLAMA_TAGS)"
