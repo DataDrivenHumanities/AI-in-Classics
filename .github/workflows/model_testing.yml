@@ -1,0 +1,151 @@
+name: Model Testing (Ollama)
+
+on:
+  pull_request:
+    branches: [ main ]
+    paths:
+      - "tests/**"
+      - "models/latin_model/**"
+      - "models/greek_model/**"
+      - "pyproject.toml"
+      - "poetry.lock"
+      - ".github/workflows/model_testing.yml"
+  workflow_dispatch:
+
+concurrency:
+  group: model-testing-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  model-tests:
+    runs-on: ubuntu-latest
+    env:
+      OLLAMA_URL: http://localhost:11434
+      PIP_DISABLE_PIP_VERSION_CHECK: "1"
+      PIP_NO_CACHE_DIR: "1"
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Free disk space
+        shell: bash
+        run: |
+          set -euxo pipefail
+          df -h
+          sudo rm -rf /usr/local/lib/android || true
+          sudo rm -rf /opt/ghc || true
+          sudo rm -rf /usr/share/dotnet || true
+          sudo rm -rf /opt/hostedtoolcache/CodeQL || true
+          sudo docker system prune -af || true
+          sudo rm -rf "$AGENT_TOOLSDIRECTORY" || true
+          df -h
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Install Poetry
+        uses: abatilo/actions-poetry@v3
+        with:
+          poetry-version: "1.8.3"
+
+      - name: Install jq
+        run: sudo apt-get update && sudo apt-get install -y jq
+
+      - name: Configure Poetry (in-project venv)
+        run: poetry config virtualenvs.in-project true
+
+      - name: Cache Poetry venv
+        uses: actions/cache@v4
+        with:
+          path: ./.venv
+          key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
+
+      - name: Cache Ollama models
+        uses: actions/cache@v4
+        with:
+          path: ~/.ollama
+          key: ollama-${{ runner.os }}-${{ hashFiles('models/latin_model/**', 'models/greek_model/**') }}-llama3.1-8b
+          restore-keys: |
+            ollama-${{ runner.os }}-
+
+      - name: Start Ollama (Docker)
+        run: |
+          docker run -d --name ollama \
+            -p 11434:11434 \
+            -v $HOME/.ollama:/root/.ollama \
+            -v "${GITHUB_WORKSPACE}/models:/models:ro" \
+            ollama/ollama:latest
+
+          # Wait for API to come up
+          for i in {1..60}; do
+            if curl -sSf http://localhost:11434/ >/dev/null; then
+              echo "Ollama is up"; break
+            fi
+            sleep 2
+          done
+
+      - name: Build local models from Modelfiles
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          echo "Repo tree under models/:"
+          ls -R models || true
+
+          have_model () {
+            docker exec ollama ollama list | awk '{print $1}' | grep -qx "$1" || return 1
+          }
+
+          if ! have_model "llama3.1:8b"; then
+            echo "Pulling base model llama3.1:8b ..."
+            docker exec ollama ollama pull llama3.1:8b
+          else
+            echo "Base model already present."
+          fi
+
+          LATIN_FILE=""
+          if compgen -G "models/latin_model/Modelfile*" > /dev/null; then
+            LATIN_FILE=$(ls models/latin_model/Modelfile* | head -n1)
+          fi
+
+          GREEK_FILE=""
+          if compgen -G "models/greek_model/Modelfile*" > /dev/null; then
+            GREEK_FILE=$(ls models/greek_model/Modelfile* | head -n1)
+          fi
+
+          echo "Detected LATIN_FILE: ${LATIN_FILE:-<none>}"
+          echo "Detected GREEK_FILE: ${GREEK_FILE:-<none>}"
+
+          if ! have_model "latin_model:1.0.0"; then
+            if [[ -n "${LATIN_FILE}" ]]; then
+              echo "Creating latin_model:1.0.0 from ${LATIN_FILE} ..."
+              docker exec ollama ollama create latin_model:1.0.0 -f "/models/latin_model/$(basename "${LATIN_FILE}")"
+            else
+              echo "WARNING: No Modelfile found in models/latin_model/; skipping latin model."
+            fi
+          else
+            echo "latin_model:1.0.0 already present."
+          fi
+
+          if ! have_model "greek_model:1.0.0"; then
+            if [[ -n "${GREEK_FILE}" ]]; then
+              echo "Creating greek_model:1.0.0 from ${GREEK_FILE} ..."
+              docker exec ollama ollama create greek_model:1.0.0 -f "/models/greek_model/$(basename "${GREEK_FILE}")"
+            else
+              echo "WARNING: No Modelfile found in models/greek_model/; skipping greek model."
+            fi
+          else
+            echo "greek_model:1.0.0 already present."
+          fi
+
+          echo "Available models:"
+          docker exec ollama ollama list
+
+      - name: Install deps
+        run: poetry install --no-interaction --no-ansi
+
+      - name: Run model tests
+        run: poetry run pytest -q

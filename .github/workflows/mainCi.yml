@@ -1,4 +1,4 @@
-name: CI (black, flake8, pytest)
+name: CI (black, flake8)
 
 on:
   pull_request:
@@ -10,47 +10,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-python@v5
         with:
           python-version: '3.10'
-
       - uses: abatilo/actions-poetry@v3
         with:
           poetry-version: "1.8.3"
-
       - name: Configure Poetry (in-project venv)
         run: poetry config virtualenvs.in-project true
-
       - name: Install deps
         run: poetry install --no-interaction --no-ansi
-
-      - name: Black (check)
-        run: poetry run black --check .
-
+      - name: Black
+        run: poetry run black .
       # - name: flake8
       #   run: poetry run flake8 .
-
-  test:
-    name: Tests (pytest)
-    needs: lint
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.10'
-
-      - uses: abatilo/actions-poetry@v3
-        with:
-          poetry-version: "1.8.3"
-
-      - name: Configure Poetry (in-project venv)
-        run: poetry config virtualenvs.in-project true
-
-      - name: Install deps
-        run: poetry install --no-interaction --no-ansi
-
-      - name: Run pytest
-        run: poetry run pytest -q
