@@ -2,299 +2,168 @@ import requests
 import json
 import string
 import time
+import re
 from typing import List, Dict
 
 # Configuration for the Ollama server
 OLLAMA_API_URL = (
     "http://localhost:11434/api/generate"  # Edit this with your Ollama server IP
 )
-OLLAMA_MODEL = "latin_model:1.0.0"  # The model used for sentiment analysis
+=======
+OLLAMA_MODEL = "LatinSentimentAnalysis:latest"  # Updated to match loaded model
+OLLAMA_TAGS_URL = OLLAMA_API_URL.replace(
+    "/api/generate", "/api/tags"
+)  # Endpoint to check models
+OLLAMA_PULL_URL = OLLAMA_API_URL.replace(
+    "/api/generate", "/api/pull"
+)  # Endpoint to pull model
+>>>>>>> Stashed changes
 
-# Dataset of Latin sentences with expected sentiment and English translations
-LATIN_DATA: List[Dict[str, str]] = [
-    {
-        "sentence": "Caelum pulchrum est.",
-        "sentiment": "positive",
-        "translation": "The sky is beautiful.",
-    },
-    {
-        "sentence": "Puer discipulus malus est.",
-        "sentiment": "negative",
-        "translation": "The boy is a bad student.",
-    },
-    {
-        "sentence": "Copiae amiserunt bellum.",
-        "sentiment": "negative",
-        "translation": "The troops lost the war.",
-    },
-    {
-        "sentence": "Pater laudabat filium.",
-        "sentiment": "positive",
-        "translation": "The father was praising his son.",
-    },
-    {
-        "sentence": "Marcus Brutus tradidit suum amicum.",
-        "sentiment": "negative",
-        "translation": "Marcus Brutus betrayed his friend.",
-    },
-    {
-        "sentence": "Ego optimus miles eram.",
-        "sentiment": "positive",
-        "translation": "I was the best student",
-    },
-    {
-        "sentence": "Quae scelera videmus?",
-        "sentiment": "negative",
-        "translation": "What evil deed do we see?",
-    },
-    {
-        "sentence": "Malum consilium est.",
-        "sentiment": "negative",
-        "translation": "The plan is bad",
-    },
-    {
-        "sentence": "Sum amicus eius",
-        "sentiment": "positive",
-        "translation": "I am his friend",
-    },
-    {
-        "sentence": "Brutus te laudavit",
-        "sentiment": "positive",
-        "translation": "Brutus praised you",
-    },
-    {
-        "sentence": "Patria delebatur",
-        "sentiment": "negative",
-        "translation": "The country was being destroyed",
-    },
-    {
-        "sentence": "Domus ustus erat.",
-        "sentiment": "negative",
-        "translation": "The home had been burned down.",
-    },
-    {
-        "sentence": "Gladiator praemium vicit.",
-        "sentiment": "positive",
-        "translation": "The gladiator won a prize.",
-    },
-    {
-        "sentence": "Vita eius erat nimis brevis.",
-        "sentiment": "negative",
-        "translation": "Her life was too brief.",
-    },
-    {
-        "sentence": "Panis fuit bonus.",
-        "sentiment": "positive",
-        "translation": "The bread was good.",
-    },
-    {
-        "sentence": "Post paucas horas Caesar Asiam cepit",
-        "sentiment": "negative",
-        "translation": "After a few hours, Caesar captured Asia.",
-    },
-    {
-        "sentence": "Mater beatum infantem bene curat.",
-        "sentiment": "positive",
-        "translation": "The mother cares well for the fortunate baby.",
-    },
-    {
-        "sentence": "Imperator non curat de salute suae nationis.",
-        "sentiment": "negative",
-        "translation": "The emperor does not care for the safety of his own people.",
-    },
-    {
-        "sentence": "Mater paterque suos pueros neglexerunt.",
-        "sentiment": "negative",
-        "translation": "The mother and father neglected their children.",
-    },
-    {
-        "sentence": "Puer miser ab animali saevo necatus erat.",
-        "sentiment": "negative",
-        "translation": "The poor boy had been killed by a savage animal.",
-    },
-    {
-        "sentence": "Venator ursam post longam pugnam necavit.",
-        "sentiment": "negative",
-        "translation": "The hunter killed the bear after a long battle.",
-    },
-    {
-        "sentence": "Post redierunt Romam, nautae usi sunt otium.",
-        "sentiment": "positive",
-        "translation": "After they returned to Rome, the sailors enjoyed leisure time.",
-    },
-    {
-        "sentence": "Puella est laeta videre suum fratrem minorem.",
-        "sentiment": "positive",
-        "translation": "The girl is happy to see her younger brother.",
-    },
-    {
-        "sentence": "Navis confractus est ab hostibus Romae.",
-        "sentiment": "negative",
-        "translation": "The ship was broken by the enemies of Rome",
-    },
-    {
-        "sentence": "Heros erat qui multos cives servavit.",
-        "sentiment": "positive",
-        "translation": "He was a hero who saved many citizens.",
-    },
-    {
-        "sentence": "Urbs ab hostibus malis victa deletaque est.",
-        "sentiment": "negative",
-        "translation": "The city was conquered and destroyed by the wicked enemy.",
-    },
-    {
-        "sentence": "Magna facta discipulorum eius magistro veteri placuerunt.",
-        "sentiment": "positive",
-        "translation": "The great achievements of his students pleased the old teacher.",
-    },
-    {
-        "sentence": "Puellae iuveni curiosaeque libet in agros migrare.",
-        "sentiment": "positive",
-        "translation": "The young and curious girl likes to wander into fields.",
-    },
-    {
-        "sentence": "Sol ita lucet ut fruges celeriter crescant.",
-        "sentiment": "positive",
-        "translation": "The sun shines in such a way that the crops grow quickly.",
-    },
-    {
-        "sentence": "Imperator iussit milites interficere sine misericordia.",
-        "sentiment": "negative",
-        "translation": "The emperor ordered the soldiers to kill without mercy.",
-    },
-    {
-        "sentence": "Princeps sensit fas suum custodire patriam.",
-        "sentiment": "positive",
-        "translation": "The ruler felt it was his sacred duty to protect his country.",
-    },
-    {
-        "sentence": "Amici Scipionis invitaverunt ad cenam post victoriam magnam vixit.",
-        "sentiment": "positive",
-        "translation": "Scipio's friends invited him to dinner after he won a great victory.",
-    },
-    {
-        "sentence": "Vir egit gratias Venerem uxori pulchrae et Iunonem liberis.",
-        "sentiment": "positive",
-        "translation": "The man gave thanks to Venus for his beautiful wife and to Juno for his children.",
-    },
-    {
-        "sentence": "Sceleratus vehemens expulsus erat sicut poena vitae vitiosae.",
-        "sentiment": "negative",
-        "translation": "The violent criminal was exiled as punishment for a life full of vice.",
-    },
-    {
-        "sentence": "Fabulae a patre eorum narratae sororem fratremque oblectaverunt.",
-        "sentiment": "positive",
-        "translation": "The stories told by their father delighted the brother and sister.",
-    },
-    {
-        "sentence": "Cupiditate aeterna devotus, desidero aliquam quae non desiderat me.",
-        "sentiment": "negative",
-        "translation": "Accursed by eternal longing, I long for someone who does not long for me.",
-    },
-    {
-        "sentence": "Cum peste adfecti essent, boves iam moriebantur.",
-        "sentiment": "negative",
-        "translation": "Since they had been afflicted by the plague, the cows soon died.",
-    },
-    {
-        "sentence": "Puella puero nervoso dixit se reddere amorem eius.",
-        "sentiment": "positive",
-        "translation": "The girl told the nervous boy that she returned his love.",
-    },
-    {
-        "sentence": "Cum bellum tandem vicissent, cives magno gaudio celebrabant.",
-        "sentiment": "positive",
-        "translation": "When at last they had won the war, the citizens celebrated with great joy.",
-    },
-    {
-        "sentence": "Umbra uxoris mortuae illum miserum ita persequitur ut otium numquam reperiat.",
-        "sentiment": "negative",
-        "translation": "The ghost of his dead wife haunts that wretched man so that he will never find peace.",
-    },
-    {
-        "sentence": "Cum nemo audiat, poeta tristis queritur dominam eum relinquisse.",
-        "sentiment": "negative",
-        "translation": "Although no one is listening, the sad poet laments that his mistress has abandoned him.",
-    },
-    {
-        "sentence": "Bono nuntio accepto, nuntius delectatus civibus nuntiat opem iam adventuram esse.",
-        "sentiment": "positive",
-        "translation": "With the good news having been received, the delighted messenger announces to the citizens that aid will soon arrive.",
-    },
-    {
-        "sentence": "Vulgus surrexerunt fores aedis, necatatum et consauciatum multos.",
-        "sentiment": "negative",
-        "translation": "The mob surged the gates of the temple, killing and injuring many.",
-    },
-    {
-        "sentence": "Canes denique invenerunt aprum post diem longum et miserum ita venatores id potuerunt necare",
-        "sentiment": "negative",
-        "translation": "The dogs finally found the boar after a long, miserable day outside so the hunters could kill it.",
-    },
-    {
-        "sentence": "Quod ea voluerat fratrem tam diu, puella celebravit quando mater peperit iterum.",
-        "sentiment": "positive",
-        "translation": "Because she had wanted a brother for such a long time, the girl celebrated when her mother gave birth again.",
-    },
-    {
-        "sentence": "In oratone, orator optimus fuit et igitur multas coronas laurinas vicit.",
-        "sentiment": "positive",
-        "translation": "In his speech, the orator was the best and accordingly, he won many wreaths of laurel.",
-    },
-    {
-        "sentence": "Stultitiast, mater, venatum ducere invitas canes",
-        "sentiment": "negative",
-        "translation": "It is foolish, mother, to lead the unwilling dogs to the hunt",
-    },
-    {
-        "sentence": "Si quis metuens vivet, liber mihi non erit umquam",
-        "sentiment": "negative",
-        "translation": "If anyone lives in fear, he will not ever be free - in my opinion",
-    },
-    {
-        "sentence": "imperator promisit decem milia militum celerrime discessura esse, dummodo satis copiarum reciperent.",
-        "sentiment": "positive",
-        "translation": "The general promises ten thousand soldiers to depart most quickly, so long as they receive satisfactory supplies.",
-    },
-    {
-        "sentence": "Cum cūrā docet ut discipulī bene discant",
-        "sentiment": "positive",
-        "translation": "He teaches them with care so the students may learn well",
-    },
-]
+
+# Load test cases from JSON file
+def load_test_cases(
+    file_path: str = "LatinSentenceTestDatav2.json",
+) -> List[Dict[str, str]]:
+    try:
+        with open(file_path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+            # Handle both array and {"test_cases": [...]} structures
+            test_cases = data if isinstance(data, list) else data.get("test_cases", [])
+        return test_cases
+    except Exception as e:
+        print(f"Error loading test cases from {file_path}: {str(e)}")
+        return []
 
 
 def clean_sentiment(text: str) -> str:
     cleaned = text.strip().lower().rstrip(string.punctuation + string.whitespace)
-    return cleaned
+    if len(cleaned.split()) > 1:  # More than one word
+        print(f"WARNING: Extra text detected: {text}")
+    return cleaned.split()[0] if cleaned else ""  # Take first word only
 
 
-# Check if the Ollama server is reachable
-def check_server() -> bool:
+def parse_sentiment_detailed(raw_output: str) -> dict:
+    """
+    Parse "SENTIMENT RESULTS: [full label]" into components.
+    More flexible to handle variations like missing score or different phrasing.
+    Returns dict with 'full_label', 'base_sentiment', 'intensity', 'score'.
+    """
+    # Flexible match for SENTIMENT RESULTS line
+    match = re.search(
+        r"SENTIMENT RESULTS:\s*(.+?)(?=\n|$)", raw_output, re.IGNORECASE | re.DOTALL
+    )
+    if not match:
+        return {
+            "full_label": None,
+            "base_sentiment": None,
+            "intensity": None,
+            "score": None,
+        }
 
+    full_label = match.group(1).strip()
+
+    # Parse base sentiment (POSITIVE/NEGATIVE/NEUTRAL) - more lenient
+    base_match = re.search(r"(POSITIVE|NEGATIVE|NEUTRAL)", full_label, re.IGNORECASE)
+    base_sentiment = base_match.group(1).upper() if base_match else None
+
+    # Parse score (look for +1, -2, score -1, etc.)
+    score_match = re.search(r"(?:score\s*)?([+-]?\d+)", full_label)
+    score = int(score_match.group(1)) if score_match else 0
+
+    # Parse intensity (EXTREMELY/VERY/MODERATELY) - optional
+    intensity_match = re.search(
+        r"(EXTREMELY|VERY|MODERATELY)", full_label, re.IGNORECASE
+    )
+    intensity = intensity_match.group(1).upper() if intensity_match else None
+
+    return {
+        "full_label": full_label,
+        "base_sentiment": base_sentiment,
+        "intensity": intensity,
+        "score": score,
+    }
+
+
+# Preload the Latin model
+def preload_model() -> bool:
+    print(f"Attempting to preload model {OLLAMA_MODEL}...")
+
+    # 1. Check if the model is already loaded
     try:
-        response = requests.get(OLLAMA_API_URL.replace("api/generate", ""), timeout=5)
+        response = requests.get(OLLAMA_TAGS_URL, timeout=10)
+        response.raise_for_status()
+        models = json.loads(response.text).get("models", [])
+        model_names = [model["name"] for model in models]
+        if OLLAMA_MODEL in model_names:
+            print(f"Model {OLLAMA_MODEL} is already loaded.")
+            return True
+    except Exception as e:
+        print(f"Failed to check model status: {str(e)}")
+
+    # 2. Pull the model to make sure it is available to use
+    try:
+        payload = {"name": OLLAMA_MODEL}
+        response = requests.post(OLLAMA_PULL_URL, json=payload, timeout=120)
+        response.raise_for_status()
+        print(f"Model {OLLAMA_MODEL} pulled successfully.")
+    except Exception as e:
+        print(f"Failed to pull model {OLLAMA_MODEL}: {str(e)}")
+        return False
+
+    # Step 3: Send a test prompt to warm up the model
+    try:
+        test_prompt = "Test"
+        payload = {"model": OLLAMA_MODEL, "prompt": test_prompt, "stream": False}
+        response = requests.post(OLLAMA_API_URL, json=payload, timeout=90)
+        response.raise_for_status()
+        print(f"Model {OLLAMA_MODEL} warmed up successfully.")
+        return True
+    except Exception as e:
+        print(f"Failed to warm up model {OLLAMA_MODEL}: {str(e)}")
+        return False
+
+
+# Check if the Ollama server is reachable and preload model into memory
+def check_server() -> bool:
+    try:
+        response = requests.get(OLLAMA_API_URL.replace("/api/generate", ""), timeout=10)
         response.raise_for_status()
         print("Ollama server is reachable.")
-        return True
     except Exception as e:
         print(f"Failed to connect to Ollama server at {OLLAMA_API_URL}: {str(e)}")
         return False
 
+    if not preload_model():
+        print(f"Aborting tests due to failure to preload model {OLLAMA_MODEL}.")
+        return False
+    return True
+
 
 def query_ollama(sentence: str, retries: int = 2) -> tuple[str, str]:
-    prompt = f"{sentence}'. Respond with only 'positive' or 'negative'."
-    payload = {"model": OLLAMA_MODEL, "prompt": prompt, "stream": False}
+    prompt = sentence
+    payload = {
+        "model": OLLAMA_MODEL,
+        "prompt": prompt,
+        "stream": False,
+        "options": {  # Add options for stability
+            "num_predict": 25,  # Limit output length
+        },
+    }
+
     last_raw = ""
     for attempt in range(retries + 1):
         try:
-            response = requests.post(OLLAMA_API_URL, json=payload, timeout=30)
+            response = requests.post(OLLAMA_API_URL, json=payload, timeout=90)
+
+            if response.status_code != 200:
+                print(
+                    f"DEBUG: Response text: {response.text}"
+                )  # Server's error message
             response.raise_for_status()
             result = json.loads(response.text)
             raw_output = result.get("response", "").strip()
             cleaned = clean_sentiment(raw_output)
-            if cleaned in ["positive", "negative"]:
+            if cleaned in ["positive", "negative", "neutral"]:
                 return cleaned, raw_output
             elif cleaned != "":
                 return cleaned, raw_output
@@ -302,27 +171,35 @@ def query_ollama(sentence: str, retries: int = 2) -> tuple[str, str]:
             print(
                 f"Empty or invalid response, retrying attempt {attempt + 1}/{retries + 1}"
             )
+        except requests.exceptions.HTTPError as e:
+            last_raw = f"HTTP Error {e.response.status_code}: {e.response.text}"
+            print(
+                f"Request failed, retrying attempt {attempt + 1}/{retries + 1}: HTTP {e.response.status_code} - {e.response.text}"
+            )
         except Exception as e:
             last_raw = f"Error: {str(e)}"
             print(
                 f"Request failed, retrying attempt {attempt + 1}/{retries + 1}: {str(e)}"
             )
-        # Wait 1 second before retrying
+        # Wait 2 seconds before retrying
         if attempt < retries:
-            time.sleep(1)
+            time.sleep(2)
     return "error", last_raw
 
 
 def run_tests(test_cases: List[Dict[str, str]] = None):
     if test_cases is None:
-        test_cases = LATIN_DATA
+        test_cases = load_test_cases()
     total = len(test_cases)
     passed = 0
     failed = 0
 
+    # Start timing the entire test suite
+    start_time = time.perf_counter()
+
     # Check server before running tests
     if not check_server():
-        print("Aborting tests due to server connectivity issues.")
+        print("Aborting tests due to server or model issues.")
         return
 
     print("=== Latin Sentiment Analysis Test Suite ===")
@@ -333,43 +210,79 @@ def run_tests(test_cases: List[Dict[str, str]] = None):
 
     for idx, item in enumerate(test_cases, start=1):
         sentence = item["sentence"]
-        expected = clean_sentiment(item["sentiment"])
+        expected_full = item.get("expected_sentiment", item.get("sentiment", ""))
+        expected_base = (
+            expected_full.split()[1] if " " in expected_full else expected_full.lower()
+        )  # e.g., "POSITIVE" from "MODERATELY POSITIVE (+1)"
+        expected_sign = (
+            1 if "+" in expected_full else -1 if "-" in expected_full else 0
+        )  # Direction
         translation = item["translation"]
 
+        test_start = time.perf_counter()
         predicted, raw_response = query_ollama(sentence, retries=2)
+        test_time = time.perf_counter() - test_start
 
         # Add a delay between requests to avoid overwhelming the server
-        time.sleep(1)
+        time.sleep(2)
 
-        if predicted == expected:
+        # Parse predicted sentiment
+        parsed = parse_sentiment_detailed(raw_response)
+        predicted_full = parsed["full_label"]
+        predicted_base = parsed["base_sentiment"]
+        predicted_score = parsed["score"]
+
+        # Comparison logic
+        if predicted_full == expected_full:
             status = "PASSED"
             passed += 1
-        elif predicted == "error":
-            status = "ERROR"
-            failed += 1
-            print(f"Ollama Response: {raw_response}")
+        elif predicted_base == expected_base and (
+            predicted_score > 0
+            if expected_sign > 0
+            else predicted_score < 0 if expected_sign < 0 else predicted_score == 0
+        ):
+            status = "PASSED (Intensity Variation)"
+            passed += 1
+            note = (
+                "Note: Correct direction but intensity off (expected: "
+                + expected_full
+                + ", got: "
+                + str(predicted_full)
+                + ")"
+            )
         else:
             status = "FAILED"
             failed += 1
+            note = f"Wrong base/direction (expected: {expected_base}, got: {predicted_base})"
 
-        display_pred = predicted.upper() if predicted != "error" else "ERROR"
-        display_exp = expected.upper()
+        display_pred = predicted_full or "EXTRACT FAILED"
+        display_exp = expected_full
 
         print(f"Test {idx}/{total}:")
         print(f"  Sentence: {sentence}")
         print(f"  Translation: {translation}")
         print(f"  Expected: {display_exp}")
         print(f"  Predicted: {display_pred}")
-        if predicted != expected:
-            print(f"  Raw Ollama Response: {raw_response}")
+        if status == "PASSED (Intensity Variation)":
+            print(f"  {note}")
+        if predicted_full != expected_full:
+            print(f"  Raw Ollama Response: {raw_response[:200]}...")
         print(f"  Status: {status}")
+        print(f"  Test Time: {test_time:.2f}s")
         print("-" * 80)
+
+    # End timing and calculate duration
+    end_time = time.perf_counter()
+    total_time = end_time - start_time
+    minutes = int(total_time // 60)
+    seconds = int(total_time % 60)
 
     accuracy = (passed / total) * 100 if total > 0 else 0
     print("=== Summary ===")
     print(f"Passed: {passed}")
     print(f"Failed: {failed}")
     print(f"Accuracy: {accuracy:.2f}%")
+    print(f"Total Runtime: {minutes}m {seconds}s")
     print("==================")
 
 
