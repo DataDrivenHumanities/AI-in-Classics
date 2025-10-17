@@ -5,6 +5,7 @@ import analyze
 import load
 import query
 import app_functions as app_func
+import model_registry as model_cfg
 from globals import globals  # noqa: F401
 import webUI as ui  # NEW: theming + tiny components
 
@@ -30,17 +31,48 @@ st.set_page_config(
     ),
 )
 
-ui.use_light_preset()
+ui.use_light_preset(centered=True, max_width_px=1100)
 ui.sidebar_logo(
     "images/uf_logo.png", link="https://classics.ufl.edu", height_px=56, align="center"
 )
 
 
 # ---------- Sidebar ----------
-model_choice = st.sidebar.radio(
-    "Choose model",
-    ["greek_model:1.0.0", "latin_model:1.0.0"],
+try:
+    registry = model_cfg.get_registry()
+except model_cfg.ModelRegistryError as exc:
+    st.sidebar.error(f"Model registry error: {exc}")
+    st.stop()
+
+available_models = registry.available_models()
+upcoming_models = registry.upcoming_models()
+if not available_models:
+    st.sidebar.error("No models are currently marked as available.")
+    if upcoming_models:
+        st.sidebar.caption(
+            "Configured (coming soon): "
+            + ", ".join(model.display_label for model in upcoming_models)
+        )
+    st.stop()
+
+default_index = model_cfg.ModelRegistry.index_for(
+    registry.default_model_id, available_models
 )
+selected_model = st.sidebar.radio(
+    "Choose model",
+    options=available_models,
+    index=default_index,
+    format_func=lambda model: model.display_label,
+)
+
+if selected_model.description:
+    st.sidebar.caption(selected_model.description)
+if upcoming_models:
+    st.sidebar.caption(
+        "Coming soon: " + ", ".join(model.name for model in upcoming_models)
+    )
+
+model_choice = selected_model.model_id
 
 tasks = np.asarray(a=list(["Load", "Query", "Analyze"]))
 task_select = st.sidebar.selectbox(

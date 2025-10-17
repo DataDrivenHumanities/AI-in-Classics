@@ -1,0 +1,29 @@
+{
+  "default": "latin_model:1.0.0",
+  "models": [
+    {
+      "id": "latin_model:1.0.0",
+      "name": "Latin Model 1.0.0",
+      "description": "Baseline Latin corpus model served via Ollama.",
+      "provider": "ollama",
+      "available": true,
+      "tags": ["latin", "production"]
+    },
+    {
+      "id": "greek_model:1.0.0",
+      "name": "Greek Model 1.0.0",
+      "description": "Baseline Greek corpus model served via Ollama.",
+      "provider": "ollama",
+      "available": true,
+      "tags": ["greek", "production"]
+    },
+    {
+      "id": "latin_model:2.0.0",
+      "name": "Latin Model 2.0.0",
+      "description": "Next-generation Latin model (pending release).",
+      "provider": "ollama",
+      "available": false,
+      "tags": ["latin", "upcoming"]
+    }
+  ]
+}
