@@ -1,0 +1,424 @@
+{
+  "test_cases": [
+    {
+      "sentence": "Caelum pulchrum est.",
+      "expected_sentiment": "MODERATELY POSITIVE (+1)",
+      "expected_translation": "The sky is beautiful.",
+      "translation": "The sky is beautiful."
+    },
+    {
+      "sentence": "Puer discipulus malus est.",
+      "expected_sentiment": "MODERATELY NEGATIVE (-1)",
+      "expected_translation": "The boy is a bad student.",
+      "translation": "The boy is a bad student."
+    },
+    {
+      "sentence": "Copiae amiserunt bellum.",
+      "expected_sentiment": "VERY NEGATIVE (-2)",
+      "expected_translation": "The troops lost the war.",
+      "translation": "The troops lost the war."
+    },
+    {
+      "sentence": "Pater laudabat filium.",
+      "expected_sentiment": "MODERATELY POSITIVE (+1)",
+      "expected_translation": "The father was praising his son.",
+      "translation": "The father was praising his son."
+    },
+    {
+      "sentence": "Marcus Brutus tradidit suum amicum.",
+      "expected_sentiment": "VERY NEGATIVE (-2)",
+      "expected_translation": "Marcus Brutus betrayed his friend.",
+      "translation": "Marcus Brutus betrayed his friend."
+    },
+    {
+      "sentence": "Ego optimus miles eram.",
+      "expected_sentiment": "VERY POSITIVE (+2)",
+      "expected_translation": "I was the best student.",
+      "translation": "I was the best student"
+    },
+    {
+      "sentence": "Quae scelera videmus?",
+      "expected_sentiment": "VERY NEGATIVE (-2)",
+      "expected_translation": "What evil deed do we see?",
+      "translation": "What evil deed do we see?"
+    },
+    {
+      "sentence": "Malum consilium est.",
+      "expected_sentiment": "MODERATELY NEGATIVE (-1)",
+      "expected_translation": "The plan is bad.",
+      "translation": "The plan is bad"
+    },
+    {
+      "sentence": "Sum amicus eius",
+      "expected_sentiment": "MODERATELY POSITIVE (+1)",
+      "expected_translation": "I am his friend.",
+      "translation": "I am his friend"
+    },
+    {
+      "sentence": "Brutus te laudavit",
+      "expected_sentiment": "MODERATELY POSITIVE (+1)",
+      "expected_translation": "Brutus praised you.",
+      "translation": "Brutus praised you"
+    },
+    {
+      "sentence": "Patria delebatur",
+      "expected_sentiment": "VERY NEGATIVE (-2)",
+      "expected_translation": "The country was being destroyed.",
+      "translation": "The country was being destroyed"
+    },
+    {
+      "sentence": "Domus ustus erat.",
+      "expected_sentiment": "VERY NEGATIVE (-2)",
+      "expected_translation": "The home had been burned down.",
+      "translation": "The home had been burned down."
+    },
+    {
+      "sentence": "Gladiator praemium vicit.",
+      "expected_sentiment": "MODERATELY POSITIVE (+1)",
+      "expected_translation": "The gladiator won a prize.",
+      "translation": "The gladiator won a prize."
+    },
+    {
+      "sentence": "Vita eius erat nimis brevis.",
+      "expected_sentiment": "MODERATELY NEGATIVE (-1)",
+      "expected_translation": "Her life was too brief.",
+      "translation": "Her life was too brief."
+    },
+    {
+      "sentence": "Panis fuit bonus.",
+      "expected_sentiment": "MODERATELY POSITIVE (+1)",
+      "expected_translation": "The bread was good.",
+      "translation": "The bread was good."
+    },
+    {
+      "sentence": "Post paucas horas Caesar Asiam cepit",
+      "expected_sentiment": "VERY NEGATIVE (-2)",
+      "expected_translation": "After a few hours, Caesar captured Asia.",
+      "translation": "After a few hours, Caesar captured Asia."
+    },
+    {
+      "sentence": "Mater beatum infantem bene curat.",
+      "expected_sentiment": "MODERATELY POSITIVE (+1)",
+      "expected_translation": "The mother cares well for the fortunate baby.",
+      "translation": "The mother cares well for the fortunate baby."
+    },
+    {
+      "sentence": "Imperator non curat de salute suae nationis.",
+      "expected_sentiment": "VERY NEGATIVE (-2)",
+      "expected_translation": "The emperor does not care for the safety of his own people.",
+      "translation": "The emperor does not care for the safety of his own people."
+    },
+    {
+      "sentence": "Mater paterque suos pueros neglexerunt.",
+      "expected_sentiment": "MODERATELY NEGATIVE (-1)",
+      "expected_translation": "The mother and father neglected their children.",
+      "translation": "The mother and father neglected their children."
+    },
+    {
+      "sentence": "Puer miser ab animali saevo necatus erat.",
+      "expected_sentiment": "EXTREMELY NEGATIVE (-3)",
+      "expected_translation": "The poor boy had been killed by a savage animal.",
+      "translation": "The poor boy had been killed by a savage animal."
+    },
+    {
+      "sentence": "Venator ursam post longam pugnam necavit.",
+      "expected_sentiment": "MODERATELY NEGATIVE (-1)",
+      "expected_translation": "The hunter killed the bear after a long battle.",
+      "translation": "The hunter killed the bear after a long battle."
+    },
+    {
+      "sentence": "Post redierunt Romam, nautae usi sunt otium.",
+      "expected_sentiment": "VERY POSITIVE (+2)",
+      "expected_translation": "After they returned to Rome, the sailors enjoyed leisure time.",
+      "translation": "After they returned to Rome, the sailors enjoyed leisure time."
+    },
+    {
+      "sentence": "Puella est laeta videre suum fratrem minorem.",
+      "expected_sentiment": "VERY POSITIVE (+2)",
+      "expected_translation": "The girl is happy to see her younger brother.",
+      "translation": "The girl is happy to see her younger brother."
+    },
+    {
+      "sentence": "Navis confractus est ab hostibus Romae.",
+      "expected_sentiment": "VERY NEGATIVE (-2)",
+      "expected_translation": "The ship was broken by the enemies of Rome.",
+      "translation": "The ship was broken by the enemies of Rome"
+    },
+    {
+      "sentence": "Heros erat qui multos cives servavit.",
+      "expected_sentiment": "VERY POSITIVE (+2)",
+      "expected_translation": "He was a hero who saved many citizens.",
+      "translation": "He was a hero who saved many citizens."
+    },
+    {
+      "sentence": "Urbs ab hostibus malis victa deletaque est.",
+      "expected_sentiment": "EXTREMELY NEGATIVE (-3)",
+      "expected_translation": "The city was conquered and destroyed by the wicked enemy.",
+      "translation": "The city was conquered and destroyed by the wicked enemy."
+    },
+    {
+      "sentence": "Magna facta discipulorum eius magistro veteri placuerunt.",
+      "expected_sentiment": "MODERATELY POSITIVE (+1)",
+      "expected_translation": "The great achievements of his students pleased the old teacher.",
+      "translation": "The great achievements of his students pleased the old teacher."
+    },
+    {
+      "sentence": "Puellae iuveni curiosaeque libet in agros migrare.",
+      "expected_sentiment": "MODERATELY POSITIVE (+1)",
+      "expected_translation": "The young and curious girl likes to wander into fields.",
+      "translation": "The young and curious girl likes to wander into fields."
+    },
+    {
+      "sentence": "Sol ita lucet ut fruges celeriter crescant.",
+      "expected_sentiment": "MODERATELY POSITIVE (+1)",
+      "expected_translation": "The sun shines in such a way that the crops grow quickly.",
+      "translation": "The sun shines in such a way that the crops grow quickly."
+    },
+    {
+      "sentence": "Imperator iussit milites interficere sine misericordia.",
+      "expected_sentiment": "EXTREMELY NEGATIVE (-3)",
+      "expected_translation": "The emperor ordered the soldiers to kill without mercy.",
+      "translation": "The emperor ordered the soldiers to kill without mercy."
+    },
+    {
+      "sentence": "Princeps sensit fas suum custodire patriam.",
+      "expected_sentiment": "VERY POSITIVE (+2)",
+      "expected_translation": "The ruler felt it was his sacred duty to protect his country.",
+      "translation": "The ruler felt it was his sacred duty to protect his country."
+    },
+    {
+      "sentence": "Amici Scipionis invitaverunt ad cenam post victoriam magnam vixit.",
+      "expected_sentiment": "VERY POSITIVE (+2)",
+      "expected_translation": "Scipio's friends invited him to dinner after he won a great victory.",
+      "translation": "Scipio's friends invited him to dinner after he won a great victory."
+    },
+    {
+      "sentence": "Vir egit gratias Venerem uxori pulchrae et Iunonem liberis.",
+      "expected_sentiment": "VERY POSITIVE (+2)",
+      "expected_translation": "The man gave thanks to Venus for his beautiful wife and to Juno for his children.",
+      "translation": "The man gave thanks to Venus for his beautiful wife and to Juno for his children."
+    },
+    {
+      "sentence": "Sceleratus vehemens expulsus erat sicut poena vitae vitiosae.",
+      "expected_sentiment": "VERY NEGATIVE (-2)",
+      "expected_translation": "The violent criminal was exiled as punishment for a life full of vice.",
+      "translation": "The violent criminal was exiled as punishment for a life full of vice."
+    },
+    {
+      "sentence": "Fabulae a patre eorum narratae sororem fratremque oblectaverunt.",
+      "expected_sentiment": "VERY POSITIVE (+2)",
+      "expected_translation": "The stories told by their father delighted the brother and sister.",
+      "translation": "The stories told by their father delighted the brother and sister."
+    },
+    {
+      "sentence": "Cupiditate aeterna devotus, desidero aliquam quae non desiderat me.",
+      "expected_sentiment": "EXTREMELY NEGATIVE (-3)",
+      "expected_translation": "Accursed by eternal longing, I long for someone who does not long for me.",
+      "translation": "Accursed by eternal longing, I long for someone who does not long for me."
+    },
+    {
+      "sentence": "Cum peste adfecti essent, boves iam moriebantur.",
+      "expected_sentiment": "VERY NEGATIVE (-2)",
+      "expected_translation": "Since they had been afflicted by the plague, the cows soon died.",
+      "translation": "Since they had been afflicted by the plague, the cows soon died."
+    },
+    {
+      "sentence": "Puella puero nervoso dixit se reddere amorem eius.",
+      "expected_sentiment": "VERY POSITIVE (+2)",
+      "expected_translation": "The girl told the nervous boy that she returned his love.",
+      "translation": "The girl told the nervous boy that she returned his love."
+    },
+    {
+      "sentence": "Cum bellum tandem vicissent, cives magno gaudio celebrabant.",
+      "expected_sentiment": "VERY POSITIVE (+2)",
+      "expected_translation": "When at last they had won the war, the citizens celebrated with great joy.",
+      "translation": "When at last they had won the war, the citizens celebrated with great joy."
+    },
+    {
+      "sentence": "Umbra uxoris mortuae illum miserum ita persequitur ut otium numquam reperiat.",
+      "expected_sentiment": "EXTREMELY NEGATIVE (-3)",
+      "expected_translation": "The ghost of his dead wife haunts that wretched man so that he will never find peace.",
+      "translation": "The ghost of his dead wife haunts that wretched man so that he will never find peace."
+    },
+    {
+      "sentence": "Cum nemo audiat, poeta tristis queritur dominam eum relinquisse.",
+      "expected_sentiment": "VERY NEGATIVE (-2)",
+      "expected_translation": "Although no one is listening, the sad poet laments that his mistress has abandoned him.",
+      "translation": "Although no one is listening, the sad poet laments that his mistress has abandoned him."
+    },
+    {
+      "sentence": "Bono nuntio accepto, nuntius delectatus civibus nuntiat opem iam adventuram esse.",
+      "expected_sentiment": "VERY POSITIVE (+2)",
+      "expected_translation": "With the good news having been received, the delighted messenger announces to the citizens that aid will soon arrive.",
+      "translation": "With the good news having been received, the delighted messenger announces to the citizens that aid will soon arrive."
+    },
+    {
+      "sentence": "Vulgus surrexerunt fores aedis, necatatum et consauciatum multos.",
+      "expected_sentiment": "EXTREMELY NEGATIVE (-3)",
+      "expected_translation": "The mob surged the gates of the temple, killing and injuring many.",
+      "translation": "The mob surged the gates of the temple, killing and injuring many."
+    },
+    {
+      "sentence": "Canes denique invenerunt aprum post diem longum et miserum ita venatores id potuerunt necare",
+      "expected_sentiment": "VERY NEGATIVE (-2)",
+      "expected_translation": "The dogs finally found the boar after a long, miserable day outside so the hunters could kill it.",
+      "translation": "The dogs finally found the boar after a long, miserable day outside so the hunters could kill it."
+    },
+    {
+      "sentence": "Quod ea voluerat fratrem tam diu, puella celebravit quando mater peperit iterum.",
+      "expected_sentiment": "VERY POSITIVE (+2)",
+      "expected_translation": "Because she had wanted a brother for such a long time, the girl celebrated when her mother gave birth again.",
+      "translation": "Because she had wanted a brother for such a long time, the girl celebrated when her mother gave birth again."
+    },
+    {
+      "sentence": "In oratone, orator optimus fuit et igitur multas coronas laurinas vicit.",
+      "expected_sentiment": "VERY POSITIVE (+2)",
+      "expected_translation": "In his speech, the orator was the best and accordingly, he won many wreaths of laurel.",
+      "translation": "In his speech, the orator was the best and accordingly, he won many wreaths of laurel."
+    },
+    {
+      "sentence": "Stultitiast, mater, venatum ducere invitas canes",
+      "expected_sentiment": "MODERATELY NEGATIVE (-1)",
+      "expected_translation": "It is foolish, mother, to lead the unwilling dogs to the hunt.",
+      "translation": "It is foolish, mother, to lead the unwilling dogs to the hunt"
+    },
+    {
+      "sentence": "Si quis metuens vivet, liber mihi non erit umquam",
+      "expected_sentiment": "VERY NEGATIVE (-2)",
+      "expected_translation": "If anyone lives in fear, he will not ever be free - in my opinion.",
+      "translation": "If anyone lives in fear, he will not ever be free - in my opinion"
+    },
+    {
+      "sentence": "imperator promisit decem milia militum celerrime discessura esse, dummodo satis copiarum reciperent.",
+      "expected_sentiment": "MODERATELY POSITIVE (+1)",
+      "expected_translation": "The general promises ten thousand soldiers to depart most quickly, so long as they receive satisfactory supplies.",
+      "translation": "The general promises ten thousand soldiers to depart most quickly, so long as they receive satisfactory supplies."
+    },
+    {
+      "sentence": "Cum cūrā docet ut discipulī bene discant",
+      "expected_sentiment": "MODERATELY POSITIVE (+1)",
+      "expected_translation": "He teaches them with care so the students may learn well.",
+      "translation": "He teaches them with care so the students may learn well"
+    },
+    {
+      "sentence": "Sol lucet in caelo.",
+      "expected_sentiment": "NEUTRAL (0)",
+      "expected_translation": "The sun shines in the sky.",
+      "translation": "The sun shines in the sky."
+    },
+    {
+      "sentence": "Urbs Roma in Italia est.",
+      "expected_sentiment": "NEUTRAL (0)",
+      "expected_translation": "The city of Rome is in Italy.",
+      "translation": "The city of Rome is in Italy."
+    },
+    {
+      "sentence": "Ego in villa ambulo.",
+      "expected_sentiment": "NEUTRAL (0)",
+      "expected_translation": "I walk in the villa.",
+      "translation": "I walk in the villa."
+    },
+    {
+      "sentence": "Annus habet duodecim menses.",
+      "expected_sentiment": "NEUTRAL (0)",
+      "expected_translation": "The year has twelve months.",
+      "translation": "The year has twelve months."
+    },
+    {
+      "sentence": "Quid est vita sine amore?",
+      "expected_sentiment": "VERY NEGATIVE (-2)",
+      "expected_translation": "What is life without love?",
+      "translation": "What is life without love?"
+    },
+    {
+      "sentence": "O quam felix es, qui omnia perdidisti!",
+      "expected_sentiment": "VERY NEGATIVE (-2)",
+      "expected_translation": "O how fortunate you are, who have lost everything!",
+      "translation": "O how fortunate you are, who have lost everything!"
+    },
+    {
+      "sentence": "Si Roma caderet, quid faceremus?",
+      "expected_sentiment": "NEUTRAL (0)",
+      "expected_translation": "If Rome were to fall, what would we do?",
+      "translation": "If Rome were to fall, what would we do?"
+    },
+    {
+      "sentence": "Utinam pax in mundo sit.",
+      "expected_sentiment": "VERY POSITIVE (+2)",
+      "expected_translation": "Would that there be peace in the world.",
+      "translation": "Would that there be peace in the world."
+    },
+    {
+      "sentence": "Puellula mea in villa cantat.",
+      "expected_sentiment": "MODERATELY POSITIVE (+1)",
+      "expected_translation": "My little girl sings in the villa.",
+      "translation": "My little girl sings in the villa."
+    },
+    {
+      "sentence": "Homunculus ille nihil scit.",
+      "expected_sentiment": "MODERATELY NEGATIVE (-1)",
+      "expected_translation": "That little man knows nothing.",
+      "translation": "That little man knows nothing."
+    },
+    {
+      "sentence": "Domine, salvum me fac.",
+      "expected_sentiment": "VERY POSITIVE (+2)",
+      "expected_translation": "Lord, save me.",
+      "translation": "Lord, save me."
+    },
+    {
+      "sentence": "Scientia nova in libris invenitur.",
+      "expected_sentiment": "MODERATELY POSITIVE (+1)",
+      "expected_translation": "New knowledge is found in books.",
+      "translation": "New knowledge is found in books."
+    },
+    {
+      "sentence": "Ego sum lux mundi.",
+      "expected_sentiment": "VERY POSITIVE (+2)",
+      "expected_translation": "I am the light of the world.",
+      "translation": "I am the light of the world."
+    },
+    {
+      "sentence": "Respublica in periculis versatur.",
+      "expected_sentiment": "VERY NEGATIVE (-2)",
+      "expected_translation": "The republic is embroiled in dangers.",
+      "translation": "The republic is embroiled in dangers."
+    },
+    {
+      "sentence": "Deus meus, quare me dereliquisti?",
+      "expected_sentiment": "EXTREMELY NEGATIVE (-3)",
+      "expected_translation": "My God, why have you forsaken me?",
+      "translation": "My God, why have you forsaken me?"
+    },
+    {
+      "sentence": "Timor Domini initium sapientiae est.",
+      "expected_sentiment": "MODERATELY POSITIVE (+1)",
+      "expected_translation": "The fear of the Lord is the beginning of wisdom.",
+      "translation": "The fear of the Lord is the beginning of wisdom."
+    },
+    {
+      "sentence": "Ego felum in villa vidi.",
+      "expected_sentiment": "NEUTRAL (0)",
+      "expected_translation": "I saw a cat in the villa.",
+      "translation": "I saw a cat in the villa."
+    },
+    {
+      "sentence": "Postquam milites in silvam intraverunt, ferae saevae eos insequebantur, et multi perierunt.",
+      "expected_sentiment": "EXTREMELY NEGATIVE (-3)",
+      "expected_translation": "After the soldiers entered the forest, savage beasts pursued them, and many perished.",
+      "translation": "After the soldiers entered the forest, savage beasts pursued them, and many perished."
+    },
+    {
+      "sentence": "Cum philosophi in academia disputarent, discipuli eorum nova praecepta didicerunt.",
+      "expected_sentiment": "MODERATELY POSITIVE (+1)",
+      "expected_translation": "While the philosophers debated in the academy, their students learned new teachings.",
+      "translation": "While the philosophers debated in the academy, their students learned new teachings."
+    },
+    {
+      "sentence": "Domus mea igne consumpta est.",
+      "expected_sentiment": "VERY NEGATIVE (-2)",
+      "expected_translation": "My house was consumed by fire.",
+      "translation": "My house was consumed by fire."
+    }
+  ]
+}
