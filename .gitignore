@@ -25,6 +25,7 @@ share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+venv-greek-nlp
 MANIFEST
 
 # PyInstaller
@@ -138,3 +139,7 @@ src/Lemmatizer-LTN/Raw_XML/
 src/pipelines/preprocessing/preprocess_root_query/needed_files/0-50kgreekv1.csv
 src/pipelines/preprocessing/preprocess_root_query/needed_files/dictionary_grk.pkl
 src/pipelines/preprocessing/preprocess_root_query/needed_files/greek_words.csv
+
+
+
+.vscode/settings.json

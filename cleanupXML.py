@@ -4,6 +4,9 @@ import re
 import requests
 import time
 from pprint import pprint
+
+import numpy as np
+import requests
 from termcolor import colored, cprint
 from tqdm import tqdm
 
