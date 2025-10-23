@@ -1,79 +1,40 @@
-# README
+# AI in Classics [wip]
 
-## How to clean XML manually
-1. Scan and remove single tags (those that do not come with a closing tag) that interrupt text flow in `<div>` and `<p>` tags. For example, remove `<lb/>` below. Notice that `<pb/>` tag does not interrupt the flow of text content and stays. In fact, that tag stands for *page beginning* and provides useful metadata, page number to be specific.
- ```
- <div type="textpart" subtype="chapter" n="1">
-                    <pb n="224"/>
-                    <head>ΑΝΩΝΥΜΟΥ
-                        ΑΝΑΜΕΤΡΗΣΙΣ ΤΗΣ ΟΙΚΟΥΜΕΝΗΣ ΗΑΣ ΗΕ
-                        ΚΑΤΑ ΣΥΝΟΨΙΝ.</head>
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
+[![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)
 
-                        <div type="textpart" subtype="paragraph" n="1"><p>1. Χρὴ γινώσκειν ὅτι πάσης τῆς γῆς ὁ περίμετρος.
-                        στάδιά ἐστι δισχίλια καὶ μυριάδες εἴκοσι πέντε· μῆκος
-                        δὲ τῆς ἡμετέρας οἰκουμένης ἀπὸ στόματος Γάγγου ἕως
-                        Γαδείρων στάδια ὀκτακισμύρια τρισχίλια ὀκ τακόσια·
-                        <lb n="5"/> τὸ δὲ πλάτος ἀπὸ τῆς Αἰθιοπικῆς θαλάσσης ἕως τοῦ
-                        Τανάϊδος ποταμοῦ στάδια τρισμύρια πεντακισχίλια
-                        τὸ δὲ μεταξὺ Εὐφράτου καὶ Τίγριδος ποταμοῦ, ὃ καλεῖται
-                        Μεσοποτάμιον, διάστημα ἔχει σταδίων τρισχιλίων,
-                        Ταύτην τὴν ἀναμέτρησιν πεποίηκεν Ἐρατοσθένης
-                        <lb n="10"/> ὁ τῶν ἀρχαίων μαθητικώτατος.</p>
-                    
-                </div>
- ```
- 
- *BECOMES*
+This project looks at various languages and runs anlysis on the scripture using various methods of Artifical Intellgiance,.
 
- ```
- <div type="textpart" subtype="chapter" n="1">
-                    <pb n="224"/>
-                    <head>ΑΝΩΝΥΜΟΥ
-                        ΑΝΑΜΕΤΡΗΣΙΣ ΤΗΣ ΟΙΚΟΥΜΕΝΗΣ ΗΑΣ ΗΕ
-                        ΚΑΤΑ ΣΥΝΟΨΙΝ.</head>
+## Features
 
-                        <div type="textpart" subtype="paragraph" n="1"><p>1. Χρὴ γινώσκειν ὅτι πάσης τῆς γῆς ὁ περίμετρος.
-                        στάδιά ἐστι δισχίλια καὶ μυριάδες εἴκοσι πέντε· μῆκος
-                        δὲ τῆς ἡμετέρας οἰκουμένης ἀπὸ στόματος Γάγγου ἕως
-                        Γαδείρων στάδια ὀκτακισμύρια τρισχίλια ὀκ τακόσια·
-                        τὸ δὲ πλάτος ἀπὸ τῆς Αἰθιοπικῆς θαλάσσης ἕως τοῦ
-                        Τανάϊδος ποταμοῦ στάδια τρισμύρια πεντακισχίλια
-                        τὸ δὲ μεταξὺ Εὐφράτου καὶ Τίγριδος ποταμοῦ, ὃ καλεῖται
-                        Μεσοποτάμιον, διάστημα ἔχει σταδίων τρισχιλίων,
-                        Ταύτην τὴν ἀναμέτρησιν πεποίηκεν Ἐρατοσθένης
-                        ὁ τῶν ἀρχαίων μαθητικώτατος.</p>
-                    
-                </div>
- ```
- 
- 2. Scan and remove parts for tags that come in pairs but keep any text content in place e.g. `<supplied> some text </supplied>` given below. In simpler words, make `<supplied>` and `</supplied>` disappear while keeping `some text` where it naturally occurs in the surrounding text.
+- Feature one
+- Feature
+- Feature
+- Feature
 
-```
-<div type="textpart" subtype="paragraph" n="3"><p>3. Ἀπὸ δὲ τοῦ Ἱεροῦ Διὸς Οὐρίου ἕως Βορυσθένους
-                            ποταμοῦ τοῦ καὶ Δανάπρεως καλουμένου στάδια πεντακισχίλια
-                            ἑξακόσια, μίλια ἑπτακόσια τεσσαρακονταὲξ
-                            ἥμισυ. Ἀπὸ δὲ τοῦ Ἱεροῦ Διὸς Οὐρίου ἕως Πορθμίας
-                            <lb n="5"/> πόλεως, τῆς ἐν τέλει τῆς Εὐρώπης τῶν τοῦ Πόντου μερῶν
-                            <supplied reason="omitted">τῆς ἐν τῷ στομίῳ</supplied> τῆς Μαιώτιδος λίμνης ἤτοι
-                            Βοσπόρου τοῦ Κιμμερίου καλουμένου, στάδια <supplied reason="omitted">μύρια</supplied>
-                            χίλια ἑκατόν, μίλια <supplied reason="omitted">χίλια</supplied> τετρακόσια ὀγδοήκοντα.
-                            Λέγεται δὲ τῆς Εὐρώπης τῆς Ποντικῆς ὁ περίπλους
-                            <lb n="10"/> ἴσος εἶναι τῶ περίπλῳ τῶν τῆς Ἀσίας μερῶν.</p>
-```
+## Contributing
 
-*BECOMES*
+Contributions are welcome!
 
-```
-<div type="textpart" subtype="paragraph" n="3"><p>3. Ἀπὸ δὲ τοῦ Ἱεροῦ Διὸς Οὐρίου ἕως Βορυσθένους
-                            ποταμοῦ τοῦ καὶ Δανάπρεως καλουμένου στάδια πεντακισχίλια
-                            ἑξακόσια, μίλια ἑπτακόσια τεσσαρακονταὲξ
-                            ἥμισυ. Ἀπὸ δὲ τοῦ Ἱεροῦ Διὸς Οὐρίου ἕως Πορθμίας
-                            πόλεως, τῆς ἐν τέλει τῆς Εὐρώπης τῶν τοῦ Πόντου μερῶν
-                            τῆς ἐν τῷ στομίῳ τῆς Μαιώτιδος λίμνης ἤτοι
-                            Βοσπόρου τοῦ Κιμμερίου καλουμένου, στάδια μύρια
-                            χίλια ἑκατόν, μίλια χίλια τετρακόσια ὀγδοήκοντα.
-                            Λέγεται δὲ τῆς Εὐρώπης τῆς Ποντικῆς ὁ περίπλους
-                            ἴσος εἶναι τῶ περίπλῳ τῶν τῆς Ἀσίας μερῶν.</p>
-```
+See `contributing.md` for ways to get started or click here [contribution](docs/contributing.md#contributing-to-the-project)
 
-3. If any tag or symbol, especially rare ones, seems uncertain whether to keep or remove, make notice of it and report it.
+Please adhere to this project's `code of conduct`.
+
+## Environment Variables
+
+To run this project, you will need to add the following environment variables to your .env file
+
+## Run Locally
+
+to run this project locally See `dev.md` for setting up your workspace or click here [setup](docs/dev.md#setting-up-local-development)
+
+## Acknowledgements
+
+## Authors
+
+- [@alxxjohn](https://www.github.com/alxxjohn)
+- byron
+- ryan
+- jake
+- duncan

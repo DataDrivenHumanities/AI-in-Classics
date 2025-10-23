@@ -5,4 +5,5 @@ globals = dict({
     'DOC_TERM_MATRIX': None,
     'VOCABULARY': None,
     'mode_toggle': False,
+    'show_chat': True,  # Enable chatbot by default
 })
