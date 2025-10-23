@@ -5,6 +5,7 @@ import query
 import streamlit as st
 from app_functions import *
 from globals import globals
+from chatbot import init_chatbot
 
 st.set_page_config(
     page_title="AI in Classics",
@@ -22,15 +23,14 @@ st.set_page_config(
 st.header(body="AI in Classics")
 st.title(body="Greek and Latin Query Engine")
 
-tasks = np.asarray(
-    a=list(
-        [
-            "Load",
-            "Query",
-            "Analyze",
-        ]
-    )
-)
+# Initialize the chatbot component
+init_chatbot()
+
+tasks = np.asarray(a=list([
+        'Load',
+        'Query',
+        'Analyze',
+    ]))
 
 task_select = st.sidebar.selectbox(
     label="Tasks", options=tasks, help="Select a task after loading a dataset."
@@ -49,14 +49,24 @@ mode_toggle = st.sidebar.radio(
     ),
     help="Set mode.",
 )
-# DEBUG will be set to true no matter what (for now) because of issue with the debug button
-if mode_toggle == "Production":
-    # global DEBUG
-    DEBUG = True
+# Set DEBUG based on mode_toggle selection
+if mode_toggle == 'Production':
+    DEBUG = False
 else:
-    # global DEBUG
     DEBUG = True
-# do the task selected
+
+# Store DEBUG value in globals for access across modules
+globals['DEBUG'] = DEBUG
+
+# Chatbot toggle
+chatbot_toggle = st.sidebar.checkbox(
+    label="Enable AI Assistant",
+    value=True,
+    help="Toggle the AI chatbot assistant on or off"
+)
+globals['show_chat'] = chatbot_toggle
+
+#do the task selected 
 if task_select == tasks[0]:
     load.app()
 elif task_select == tasks[1]:
