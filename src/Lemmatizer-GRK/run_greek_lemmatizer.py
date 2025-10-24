@@ -16,6 +16,7 @@ import os
 import sys
 from typing import List, Dict, Any, Tuple, Optional
 import unicodedata
+import re
 
 class GreekLemmatizer:
     """Greek lemmatizer using existing dictionary files"""
@@ -77,7 +78,7 @@ class GreekLemmatizer:
             for _, row in self.nouns_df.iterrows():
                 word = row['FPP']
                 if isinstance(word, str) and word.strip():
-                    normalized_word = self.normalize_greek(word.strip())
+                    normalized_word = self.normalize_greek_nfd(word.strip())
                     if normalized_word not in self.combined_dict:
                         self.combined_dict[normalized_word] = []
                     
@@ -93,7 +94,7 @@ class GreekLemmatizer:
             for _, row in self.verbs_df.iterrows():
                 word = row['FPP']
                 if isinstance(word, str) and word.strip():
-                    normalized_word = self.normalize_greek(word.strip())
+                    normalized_word = self.normalize_greek_nfd(word.strip())
                     if normalized_word not in self.combined_dict:
                         self.combined_dict[normalized_word] = []
                     
@@ -109,7 +110,7 @@ class GreekLemmatizer:
             for _, row in self.adjectives_df.iterrows():
                 word = row['FPP']
                 if isinstance(word, str) and word.strip():
-                    normalized_word = self.normalize_greek(word.strip())
+                    normalized_word = self.normalize_greek_nfd(word.strip())
                     if normalized_word not in self.combined_dict:
                         self.combined_dict[normalized_word] = []
                     
@@ -125,7 +126,7 @@ class GreekLemmatizer:
             for _, row in self.adverbs_df.iterrows():
                 word = row['FPP']
                 if isinstance(word, str) and word.strip():
-                    normalized_word = self.normalize_greek(word.strip())
+                    normalized_word = self.normalize_greek_nfd(word.strip())
                     if normalized_word not in self.combined_dict:
                         self.combined_dict[normalized_word] = []
                     
@@ -138,11 +139,20 @@ class GreekLemmatizer:
         
         print(f"Combined dictionary built with {len(self.combined_dict)} unique lemmas")
     
-    def normalize_greek(self, word: str) -> str:
+    def normalize_greek_nfc(self, word: str) -> str:
         """Normalize Greek Unicode characters"""
         if not word:
             return ""
         return unicodedata.normalize('NFC', word)
+
+    def normalize_greek_nfd(self, word: str) -> str:
+        if not word:
+            return ""
+        decomposed = unicodedata.normalize('NFD', word)
+        stripped = ''.join(c for c in decomposed if not unicodedata.combining(c))
+        recomposed = unicodedata.normalize('NFC', stripped)
+
+        return recomposed.lower()
     
     def lemmatize(self, word: str) -> List[Dict[str, Any]]:
         """
@@ -154,7 +164,7 @@ class GreekLemmatizer:
         Returns:
             List of possible lemmas with part of speech and definition
         """
-        normalized_word = self.normalize_greek(word)
+        normalized_word = self.normalize_greek_nfd(word)
         
         # Direct match in combined dictionary
         if normalized_word in self.combined_dict:
