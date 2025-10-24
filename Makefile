@@ -1,4 +1,3 @@
-
 # ===== Config =====
 PYTHON        ?= python3
 PIP           ?= pip3
@@ -16,77 +15,93 @@ BASE_MODEL    ?= llama3.1:8b
 
 # Detect Poetry
 POETRY_BIN    := $(shell command -v poetry 2>/dev/null)
-
-# Runner helpers: prefer Poetry if present; else use .venv
 RUNPY         := $(if $(POETRY_BIN),poetry run $(PYTHON),.venv/bin/$(PYTHON))
 RUN           := $(if $(POETRY_BIN),poetry run, .venv/bin)
 PIP_RUN       := $(if $(POETRY_BIN),poetry run $(PIP),.venv/bin/$(PIP))
 
-# ===== Phony =====
-.PHONY: help setup setup-poetry setup-venv setup-docker env \
-        run web \
-        check fix test \
+# ===== Frontend (React) =====
+FRONTEND_DIR ?= src/frontend
+FRONTEND_PORT ?= 5173
+
+FE_PM := $(shell \
+  cd $(FRONTEND_DIR) 2>/dev/null && \
+  if command -v pnpm >/dev/null 2>&1 && [ -f pnpm-lock.yaml ]; then echo pnpm; \
+  elif command -v yarn >/dev/null 2>&1 && [ -f yarn.lock ]; then echo yarn; \
+  else echo npm; fi \
+)
+
+ifeq ($(FE_PM),pnpm)
+FE_PM_DEV     := pnpm dev
+FE_PM_BUILD   := pnpm build
+FE_PM_PREVIEW := pnpm preview
+FE_PM_INSTALL := pnpm install --frozen-lockfile
+else ifeq ($(FE_PM),yarn)
+FE_PM_DEV     := yarn dev
+FE_PM_BUILD   := yarn build
+FE_PM_PREVIEW := yarn preview
+FE_PM_INSTALL := yarn install --frozen-lockfile
+else
+FE_PM_DEV     := npm run dev
+FE_PM_BUILD   := npm run build
+FE_PM_PREVIEW := npm run preview
+FE_PM_INSTALL := npm install
+endif
+
+
+.PHONY: help setup setup-poetry setup-venv env run web check fix test \
         docker-build docker-run docker-dev docker-bash docker-clean \
         ollama-serve ollama-pull ollama-list build-latin build-greek \
-        smoke-latin smoke-greek ensure-ollama ensure-models health
+        smoke-latin smoke-greek ensure-ollama ensure-models health \
+        fe-install fe-dev fe-build fe-serve fe-clean run-all
 
-# ===== Help (default) =====
+
+
+# ===== Help screen =====
 help:
 	@echo "Usage: make <target>"
 	@echo
 	@echo "Core:"
-	@echo "  setup            Auto-setup (Poetry if available, else venv+pip)"
-	@echo "  run              Run app (python $(APP_ENTRY))"
-	@echo "  web              Run Streamlit (streamlit run $(STREAMLIT_APP))"
-	@echo "  test             Run tests (pytest)"
-	@echo "  check            Format check (black)"
-	@echo "  fix              Auto-format (black)"
+	@echo "  setup            Install backend dependencies (Poetry or venv)"
+	@echo "  run              Run backend app ($(APP_ENTRY))"
+	@echo "  web              Run Streamlit UI ($(STREAMLIT_APP))"
+	@echo "  test             Run pytest tests"
+	@echo "  check / fix      Format or lint Python code"
 	@echo
-	@echo "Docker:"
-	@echo "  docker-build     Build image classics-app"
-	@echo "  docker-run       Run container (simple)"
-	@echo "  docker-dev       Run with live reload (mount repo, expose $(PORT))"
-	@echo "  docker-bash      Shell into a dev container"
-	@echo "  docker-clean     Remove dangling images/containers"
+	@echo "Frontend (React):"
+	@echo "  fe-install       Install frontend dependencies ($(FE_PM))"
+	@echo "  fe-dev           Start React dev server (port $(FRONTEND_PORT))"
+	@echo "  fe-build         Build production bundle"
+	@echo "  fe-serve         Preview production build"
+	@echo "  fe-clean         Remove node_modules and dist"
+	@echo "  run-all          Run Streamlit + React dev servers together"
 	@echo
-	@echo "Ollama:"
-	@echo "  ollama-serve     Start Ollama server (foreground)"
-	@echo "  ollama-pull      Pull base model ($(BASE_MODEL))"
-	@echo "  build-latin      Create $(LATIN_TAG) from models/latin/Modelfile"
-	@echo "  build-greek      Create $(GREEK_TAG) from models/greek/Modelfile"
-	@echo "  smoke-latin      One-shot classify via API for Latin"
-	@echo "  smoke-greek      One-shot classify via API for Greek"
-	@echo "  ensure-models    Verify tags exist on server"
-	@echo "  health           Check Ollama API availability"
+	@echo "Docker / Ollama:"
+	@echo "  docker-build, docker-run, docker-dev, docker-bash, docker-clean"
+	@echo "  ollama-serve, ollama-pull, build-latin, build-greek, smoke-latin, smoke-greek"
 	@echo
-	@echo "Config via env vars:"
-	@echo "  OLLAMA_HOST=$(OLLAMA_HOST)  BASE_MODEL=$(BASE_MODEL)"
-	@echo "  LATIN_TAG=$(LATIN_TAG)  GREEK_TAG=$(GREEK_TAG)"
-	@echo "  PORT=$(PORT)  APP_ENTRY=$(APP_ENTRY)  STREAMLIT_APP=$(STREAMLIT_APP)"
+	@echo "Config:"
+	@echo "  PORT=$(PORT)  FRONTEND_PORT=$(FRONTEND_PORT)"
+	@echo "  FRONTEND_DIR=$(FRONTEND_DIR)  FE_PM=$(FE_PM)"
+	@echo
 
-# ===== Meta setup =====
-setup: ## prefer Poetry, else venv
+# ===== Setup =====
+setup:
 ifdef POETRY_BIN
-	@$(MAKE) setup-poetry
-else
-	@$(MAKE) setup-venv
-endif
-
-setup-poetry:
+	@echo "Using Poetry..."
 	poetry install
-
-setup-venv:
+else
+	@echo "Using venv..."
 	$(PYTHON) -m venv .venv
 	. .venv/bin/activate; $(PIP) install --upgrade pip
-	@if [ -f requirements.txt ]; then . .venv/bin/activate; $(PIP) install -r requirements.txt; \
-	else echo "No requirements.txt found; if you use Poetry-only, run 'make setup-poetry' instead."; fi
+	@if [ -f requirements.txt ]; then . .venv/bin/activate; $(PIP) install -r requirements.txt; fi
+endif
 
 env:
 	@echo "PYTHON=$(PYTHON)"
 	@echo "Detected Poetry: $(if $(POETRY_BIN),yes,no)"
 	@echo "Runner: $(RUNPY)"
 
-# ===== Run & Dev =====
+# ===== Backend Run & Tests =====
 run:
 	$(RUNPY) $(APP_ENTRY)
 
@@ -110,7 +125,6 @@ docker-run:
 	docker run --rm -p $(PORT):$(PORT) classics-app
 
 docker-dev:
-	# Mount current dir for live reload; assumes container runs Streamlit on $(PORT)
 	docker run --rm -it -v $(PWD):/app -w /app -p $(PORT):$(PORT) classics-app
 
 docker-bash:
@@ -130,10 +144,10 @@ ollama-pull:
 ollama-list:
 	ollama list
 
-build-latin: ## requires models/latin/Modelfile
+build-latin:
 	ollama create $(LATIN_TAG) -f models/latin_model/Modelfile
 
-build-greek: ## requires models/greek/Modelfile
+build-greek:
 	ollama create $(GREEK_TAG) -f models/greek_model/Modelfile
 
 health:
@@ -159,3 +173,30 @@ ensure-models: ensure-ollama
 	echo "$$names" | grep -qx '$(GREEK_TAG)' || (echo "Missing model tag: $(GREEK_TAG)"; exit 1); \
 	echo "All required models present."
 
+# ===== Frontend Commands =====
+fe-install:
+	@echo "Installing frontend deps in $(FRONTEND_DIR) using $(FE_PM)"
+	@cd $(FRONTEND_DIR) && $(FE_PM_INSTALL)
+
+fe-dev:
+	@echo "Starting frontend dev server on port $(FRONTEND_PORT)..."
+	@cd $(FRONTEND_DIR) && $(FE_PM_DEV)
+
+fe-build:
+	@echo "Building production frontend..."
+	@cd $(FRONTEND_DIR) && $(FE_PM_BUILD)
+
+fe-serve:
+	@echo "Previewing production build..."
+	@cd $(FRONTEND_DIR) && $(FE_PM_PREVIEW)
+
+fe-clean:
+	@echo "Cleaning frontend node_modules and dist..."
+	@rm -rf $(FRONTEND_DIR)/node_modules $(FRONTEND_DIR)/dist
+
+# ===== Combined Runner =====
+run-all:
+	@echo "Starting Streamlit (port $(PORT)) and React (port $(FRONTEND_PORT))..."
+	( $(MAKE) -s web ) & \
+	( cd $(FRONTEND_DIR) && $(FE_PM_DEV) ) & \
+	wait
