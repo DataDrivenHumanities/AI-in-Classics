@@ -22,8 +22,11 @@ def main():
                         lemmatized_text += word.lower()
                 else:
                     lemmatized_text += word.lower()
-            print(lemmatized_text)
-            return
+        output_dir = "../SentimentAnalysisGreek/lemmatized_text"
+        new_file_path = output_dir + "/" + f
+        with open(new_file_path, "w", encoding="utf-8") as new_file:
+            new_file.write(lemmatized_text)
+    print("Completed lemmatization of Greek corpus")
 
 if __name__ == "__main__":
     main()
