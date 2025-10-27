@@ -16,7 +16,10 @@ pool:
 
 steps:
   - task: UsePythonVersion@0
-    inputs: { versionSpec: "3.11" }
+    inputs:
+      versionSpec: "3.11"
+      architecture: "arm64" # Apple Silicon
+      addToPath: true
 
   - script: |
       python -m venv .venv
