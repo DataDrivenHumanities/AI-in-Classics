@@ -9,8 +9,6 @@ variables:
   - name: FORM_CSV
     value: src/Lemmatizer-LTN/out/forms.csv
 
-pool: { vmImage: "ubuntu-latest" }
-
 steps:
   - task: UsePythonVersion@0
     inputs: { versionSpec: "3.11" }
