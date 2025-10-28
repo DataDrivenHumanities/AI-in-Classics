@@ -18,3 +18,7 @@ spacy
 scikit-learn
 streamlit
 termcolor
+# PostgreSQL integration
+psycopg2-binary
+sqlalchemy
+requests
