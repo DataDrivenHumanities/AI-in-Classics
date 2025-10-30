@@ -22,6 +22,8 @@ PIP_RUN       := $(if $(POETRY_BIN),poetry run $(PIP),.venv/bin/$(PIP))
 # ===== Frontend (React) =====
 FRONTEND_DIR ?= src/frontend
 FRONTEND_PORT ?= 5173
+FE_DIR ?= src/frontend
+NPM    ?= npm
 
 # ===== Notebooks -> JupyterLite =====
 NB_SRC_DIR        ?= notebooks
@@ -167,9 +169,13 @@ web:
 
 check:
 	$(RUN) black --check .
+	$(MAKE) -s fe-lint
+	$(MAKE) -s fe-format-check
 
 fix:
 	$(RUN) black .
+	$(MAKE) -s fe-lint-fix
+	$(MAKE) -s fe-format
 
 test:
 	$(RUN) pytest -q
@@ -250,6 +256,18 @@ fe-serve:
 fe-clean:
 	@echo "Cleaning frontend node_modules and dist..."
 	@rm -rf $(FRONTEND_DIR)/node_modules $(FRONTEND_DIR)/dist
+
+fe-lint:
+	cd $(FE_DIR) && ($(NPM) run -s lint || echo "skip: no 'lint' script")
+
+fe-lint-fix:
+	cd $(FE_DIR) && ($(NPM) run -s lint:fix || echo "skip: no 'lint:fix' script")
+
+fe-format:
+	cd $(FE_DIR) && ($(NPM) run -s format || echo "skip: no 'format' script")
+
+fe-format-check:
+	cd $(FE_DIR) && ($(NPM) run -s format:check || echo "skip: no 'format:check' script")
 
 # ===== Combined Runner =====
 run-all:

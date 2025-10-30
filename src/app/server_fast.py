@@ -65,12 +65,12 @@ def analyze(payload: AnalyzeRequest):
             raise HTTPException(
                 status_code=400,
                 detail=f"Ollama model '{model}' not found. "
-                       f"Run `ollama serve` and ensure the tag exists (`ollama list`).",
+                f"Run `ollama serve` and ensure the tag exists (`ollama list`).",
             )
         raise HTTPException(status_code=500, detail=f"sentiment error: {e}")
 
-    label   = (parsed.get("label") or "unknown").lower()
-    score   = parsed.get("confidence")
+    label = (parsed.get("label") or "unknown").lower()
+    score = parsed.get("confidence")
     details = parsed.get("details")
 
     translation = ""
