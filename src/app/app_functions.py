@@ -14,7 +14,7 @@ from cltk.lemmatize.grc import GreekBackoffLemmatizer
 from sklearn.feature_extraction.text import CountVectorizer
 
 import streamlit as st
-from globals import globals
+from app.globals import globals
 import dill
 import multiprocessing as mp
 
@@ -42,7 +42,7 @@ except Exception:
     VADER_OK = False
 
 try:
-    from ollama_client import chat_stream
+    from app.ollama_client import chat_stream
 except Exception:
     st.error(
         "Cannot import ollama_client. Make sure src/ollama_client.py exists and is importable."

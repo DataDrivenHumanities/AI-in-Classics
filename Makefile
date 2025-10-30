@@ -32,7 +32,7 @@ JLITE_INDEX_JSON  ?= $(JLITE_NB_DIR)/index.json
 
 # ===== FastAPI (Uvicorn) =====
 API_PORT ?= 5050
-API_APP  ?= src.api.server_fast:app
+API_APP  ?= app.server_fast:app
 
 FE_PM := $(shell \
   cd $(FRONTEND_DIR) 2>/dev/null && \
@@ -40,6 +40,29 @@ FE_PM := $(shell \
   elif command -v yarn >/dev/null 2>&1 && [ -f yarn.lock ]; then echo yarn; \
   else echo npm; fi \
 )
+
+# ===== Colors =====
+ifeq ($(NO_COLOR),)
+ESC      := \033
+RESET    := $(ESC)[0m
+BOLD     := $(ESC)[1m
+
+GREEN    := $(ESC)[1;32m   # Starts
+YELLOW   := $(ESC)[1;33m   # Core
+BLUE     := $(ESC)[1;34m   # Frontend
+PURPLE   := $(ESC)[1;35m   # FastAPI (Backend)
+GREY     := $(ESC)[90m     # Docker/Ollama + Config
+WHITE    := $(ESC)[1;37m   # Notebooks + JupyterLite
+else
+RESET    :=
+BOLD     :=
+GREEN    :=
+YELLOW   :=
+BLUE     :=
+PURPLE   :=
+GREY     :=
+WHITE    :=
+endif
 
 ifeq ($(FE_PM),pnpm)
 FE_PM_DEV     := pnpm dev
@@ -68,46 +91,53 @@ endif
 
 
 # ===== Help screen =====
+# ===== Help screen =====
 help:
-	@echo "Usage: make <target>"
-	@echo
-	@echo 
-	@echo "Start Here:"
-	@echo "  start            Install backend dependencies, JupyterLite, and frontend dev"
-	@echo 
-	@echo 
-	@echo "Core:"
-	@echo "  setup            Install backend dependencies (Poetry or venv)"
-	@echo "  run              Run backend app ($(APP_ENTRY))"
-	@echo "  web              Run Streamlit UI ($(STREAMLIT_APP))"
-	@echo "  test             Run pytest tests"
-	@echo "  check / fix      Format or lint Python code"
-	@echo
-	@echo "Frontend (React):"
-	@echo "  fe-install       Install frontend dependencies ($(FE_PM))"
-	@echo "  fe-dev           Start React dev server (port $(FRONTEND_PORT))"
-	@echo "  fe-build         Build production bundle"
-	@echo "  fe-serve         Preview production build"
-	@echo "  fe-clean         Remove node_modules and dist"
-	@echo "  run-all          Run Streamlit + React dev servers together"
-	@echo
-	@echo "Docker / Ollama:"
-	@echo "  docker-build, docker-run, docker-dev, docker-bash, docker-clean"
-	@echo "  ollama-serve, ollama-pull, build-latin, build-greek, smoke-latin, smoke-greek"
-	@echo
-	@echo "Config:"
-	@echo "  PORT=$(PORT)  FRONTEND_PORT=$(FRONTEND_PORT)"
-	@echo "  FRONTEND_DIR=$(FRONTEND_DIR)  FE_PM=$(FE_PM)"
-	@echo
-	@echo "Notebooks:"
-	@echo "  nb-bootstrap      Initialize JupyterLite and notebook folders"
-	@echo "  nb-sync           Copy notebooks/ → frontend/public/jlite/files/notebooks/"
-	@echo "  nb-index          Regenerate notebooks index.json"
-	@echo
-	@echo "JupyterLite:"
-	@echo "  jlite-build       Build a local JupyterLite bundle into frontend/public/jlite"
-	@echo "  jlite-serve       Serve the built JupyterLite locally for quick testing"
-	@echo "  jlite-clean       Remove the JupyterLite output directory"
+	@printf "Usage: make <target>\n\n"
+
+	@printf "$(GREEN)Start Here: First time Deployment:$(RESET)\n"
+	@printf "$(GREEN)  start            Install backend dependencies, JupyterLite, and frontend dev$(RESET)\n\n"
+	@printf "$(GREEN)Start Lite: (without JupyterLite)$(RESET)\n"
+	@printf "$(GREEN)  start-lite       Install backend dependencies and start frontend + Streamlit$(RESET)\n\n"
+
+	@printf "$(YELLOW)Core:$(RESET)\n"
+	@printf "$(YELLOW)  setup            Install backend dependencies (Poetry or venv)$(RESET)\n"
+	@printf "$(YELLOW)  run              Run backend app ($(APP_ENTRY))$(RESET)\n"
+	@printf "$(YELLOW)  web              Run Streamlit UI ($(STREAMLIT_APP))$(RESET)\n"
+	@printf "$(YELLOW)  test             Run pytest tests$(RESET)\n"
+	@printf "$(YELLOW)  check / fix      Format or lint Python code$(RESET)\n\n"
+
+	@printf "$(BLUE)Frontend (React):$(RESET)\n"
+	@printf "$(BLUE)  fe-install       Install frontend dependencies ($(FE_PM))$(RESET)\n"
+	@printf "$(BLUE)  fe-dev           Start React dev server (port $(FRONTEND_PORT))$(RESET)\n"
+	@printf "$(BLUE)  fe-build         Build production bundle$(RESET)\n"
+	@printf "$(BLUE)  fe-serve         Preview production build$(RESET)\n"
+	@printf "$(BLUE)  fe-clean         Remove node_modules and dist$(RESET)\n"
+	@printf "$(BLUE)  run-all          Run Streamlit + React dev servers together$(RESET)\n\n"
+
+	@printf "$(GREY)Docker / Ollama:$(RESET)\n"
+	@printf "$(GREY)  docker-build, docker-run, docker-dev, docker-bash, docker-clean$(RESET)\n"
+	@printf "$(GREY)  ollama-serve, ollama-pull, build-latin, build-greek, smoke-latin, smoke-greek$(RESET)\n\n"
+
+	@printf "$(GREY)Config:$(RESET)\n"
+	@printf "$(GREY)  PORT=$(PORT)  FRONTEND_PORT=$(FRONTEND_PORT)$(RESET)\n"
+	@printf "$(GREY)  FRONTEND_DIR=$(FRONTEND_DIR)  FE_PM=$(FE_PM)$(RESET)\n\n"
+
+	@printf "$(WHITE)Notebooks:$(RESET)\n"
+	@printf "$(WHITE)  nb-bootstrap      Initialize JupyterLite and notebook folders$(RESET)\n"
+	@printf "$(WHITE)  nb-sync           Copy notebooks/ → frontend/public/jlite/files/notebooks/$(RESET)\n"
+	@printf "$(WHITE)  nb-index          Regenerate notebooks index.json$(RESET)\n\n"
+
+	@printf "$(WHITE)JupyterLite:$(RESET)\n"
+	@printf "$(WHITE)  jlite-build       Build a local JupyterLite bundle into frontend/public/jlite$(RESET)\n"
+	@printf "$(WHITE)  jlite-serve       Serve the built JupyterLite locally for quick testing$(RESET)\n"
+	@printf "$(WHITE)  jlite-clean       Remove the JupyterLite output directory$(RESET)\n\n"
+
+	@printf "$(PURPLE)FastAPI Backend:    For new UI or API work$(RESET)\n"
+	@printf "$(PURPLE)  api-deps          Install FastAPI and Uvicorn dependencies$(RESET)\n"
+	@printf "$(PURPLE)  api-run           Run FastAPI backend server$(RESET)\n"
+	@printf "$(PURPLE)  api-health        Check FastAPI health endpoint$(RESET)\n\n"
+
 
 # ===== Setup =====
 setup:
@@ -280,7 +310,8 @@ api-deps:
 	$(PIP_RUN) install "fastapi>=0.110" "uvicorn[standard]>=0.23" "pydantic>=2"
 
 api-run:
-	$(RUN) uvicorn $(API_APP) --host 0.0.0.0 --port $(API_PORT) --reload
+	PYTHONPATH=$(PWD)/src $(RUN) uvicorn $(API_APP) \
+		--host 0.0.0.0 --port $(API_PORT) --reload --app-dir src
 
 api-health:
 	curl -s http://localhost:$(API_PORT)/api/health | jq .
@@ -304,3 +335,11 @@ start:
 	@echo "⚛️  Starting React dev server on :5173..."
 	@($(MAKE) -s fe-dev) &  # Run frontend
 	@wait
+
+start-lite:
+	@echo "⚡ Quick start (no setup, no JupyterLite build)…"
+	@echo "🌐 FastAPI → :5050, 🏺 Streamlit → :8501, ⚛️ React → :5173"
+	@($(MAKE) -s api-run) & \
+	($(MAKE) -s web) & \
+	( $(MAKE) -s fe-dev ) & \
+	wait

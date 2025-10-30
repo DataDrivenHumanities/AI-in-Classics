@@ -17,28 +17,34 @@ export default function App() {
   const [notebookOpen, setNotebookOpen] = useState(false);
 
   const fileRef = useRef(null);
+async function handleSubmit(e) {
+  e.preventDefault();
+  if (!model || !text.trim()) return;
 
-  async function handleSubmit(e) {
-    e.preventDefault();
-    if (!model || !text.trim()) return;
-    setLoading(true);
-    setError("");
-    setResp(null);
-    try {
-      const r = await fetch(`${API_BASE}/analyze`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ model, text }),
-      });
-      if (!r.ok) throw new Error(`Server responded ${r.status}`);
-      const data = await r.json();
-      setResp(data);
-    } catch (err) {
-      setError(err.message || "Something went wrong");
-    } finally {
-      setLoading(false);
+  setLoading(true);
+  setError("");
+  setResp(null);
+
+  try {
+    const response = await fetch(`${API_BASE}/analyze`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ model, text }), clear
+      
+    });
+
+    if (!response.ok) {
+      throw new Error(`Server error: ${response.status}`);
     }
+
+    const data = await response.json();
+    setResp(data); // will show in your panels
+  } catch (err) {
+    setError(err.message || "Something went wrong");
+  } finally {
+    setLoading(false);
   }
+}
 
   // tool actions
   function openNotebook() {
