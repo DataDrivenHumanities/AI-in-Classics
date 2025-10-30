@@ -37,6 +37,9 @@ deep-translator = "^1.11.4"
 ollama = "^0.5.4"
 pypdf = "^6.1.0"
 vaderSentiment = "^3.3.2"
+fastapi = "^0.120.3"
+uvicorn = {extras = ["standard"], version = "^0.38.0"}
+pydantic = "^2.12.3"
 
 
 

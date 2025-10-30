@@ -23,6 +23,17 @@ PIP_RUN       := $(if $(POETRY_BIN),poetry run $(PIP),.venv/bin/$(PIP))
 FRONTEND_DIR ?= src/frontend
 FRONTEND_PORT ?= 5173
 
+# ===== Notebooks -> JupyterLite =====
+NB_SRC_DIR        ?= notebooks
+JLITE_DIR         ?= src/frontend/public/jlite
+JLITE_FILES_DIR   ?= $(JLITE_DIR)/files
+JLITE_NB_DIR      ?= $(JLITE_FILES_DIR)/notebooks
+JLITE_INDEX_JSON  ?= $(JLITE_NB_DIR)/index.json
+
+# ===== FastAPI (Uvicorn) =====
+API_PORT ?= 5050
+API_APP  ?= src.api.server_fast:app
+
 FE_PM := $(shell \
   cd $(FRONTEND_DIR) 2>/dev/null && \
   if command -v pnpm >/dev/null 2>&1 && [ -f pnpm-lock.yaml ]; then echo pnpm; \
@@ -60,6 +71,11 @@ endif
 help:
 	@echo "Usage: make <target>"
 	@echo
+	@echo 
+	@echo "Start Here:"
+	@echo "  start            Install backend dependencies, JupyterLite, and frontend dev"
+	@echo 
+	@echo 
 	@echo "Core:"
 	@echo "  setup            Install backend dependencies (Poetry or venv)"
 	@echo "  run              Run backend app ($(APP_ENTRY))"
@@ -83,6 +99,15 @@ help:
 	@echo "  PORT=$(PORT)  FRONTEND_PORT=$(FRONTEND_PORT)"
 	@echo "  FRONTEND_DIR=$(FRONTEND_DIR)  FE_PM=$(FE_PM)"
 	@echo
+	@echo "Notebooks:"
+	@echo "  nb-bootstrap      Initialize JupyterLite and notebook folders"
+	@echo "  nb-sync           Copy notebooks/ → frontend/public/jlite/files/notebooks/"
+	@echo "  nb-index          Regenerate notebooks index.json"
+	@echo
+	@echo "JupyterLite:"
+	@echo "  jlite-build       Build a local JupyterLite bundle into frontend/public/jlite"
+	@echo "  jlite-serve       Serve the built JupyterLite locally for quick testing"
+	@echo "  jlite-clean       Remove the JupyterLite output directory"
 
 # ===== Setup =====
 setup:
@@ -95,6 +120,8 @@ else
 	. .venv/bin/activate; $(PIP) install --upgrade pip
 	@if [ -f requirements.txt ]; then . .venv/bin/activate; $(PIP) install -r requirements.txt; fi
 endif
+	@$(MAKE) api-deps
+	@$(MAKE) nb-bootstrap
 
 env:
 	@echo "PYTHON=$(PYTHON)"
@@ -200,3 +227,80 @@ run-all:
 	( $(MAKE) -s web ) & \
 	( cd $(FRONTEND_DIR) && $(FE_PM_DEV) ) & \
 	wait
+
+
+.PHONY: nb-bootstrap nb-sync nb-index
+
+nb-bootstrap:
+	@mkdir -p "$(NB_SRC_DIR)"
+	@mkdir -p "$(JLITE_NB_DIR)"
+	@if [ ! -f "$(JLITE_DIR)/lab/index.html" ]; then \
+	  echo "⚠️  JupyterLite not found at $(JLITE_DIR). Drop a Lite build there (lab/index.html)."; \
+	else \
+	  echo "✅ JupyterLite present at $(JLITE_DIR)"; \
+	fi
+	@echo "✅ Notebook environment initialized. Place .ipynb files in $(NB_SRC_DIR)/ and run 'make nb-sync'"
+
+nb-sync: nb-bootstrap
+	@mkdir -p "$(JLITE_NB_DIR)"
+	@find "$(NB_SRC_DIR)" -maxdepth 1 -type f -name "*.ipynb" -print0 | xargs -0 -I{} cp "{}" "$(JLITE_NB_DIR)"/
+	@$(MAKE) nb-index
+	@echo "✅ Synced notebooks to $(JLITE_NB_DIR)"
+
+nb-index:
+	@python3 - <<'PY'\nimp
+
+
+.PHONY: jlite-build jlite-serve jlite-clean
+
+jlite-build:
+	@echo "🧱 Installing JupyterLite..."
+	$(PIP_RUN) install -U "jupyterlite[all]"
+	@echo "🏗️  Building JupyterLite into $(JLITE_DIR)..."
+	$(RUN) jupyter lite build --output-dir "$(JLITE_DIR)" --force
+	@echo "✅ JupyterLite built at $(JLITE_DIR)"
+	@echo "📁 Syncing notebooks into JupyterLite files area..."
+	@$(MAKE) nb-sync
+	@echo "✨ Done. You can now open notebooks via your app modal."
+
+# Quick local preview of the built JupyterLite
+jlite-serve:
+	@echo "🌐 Serving $(JLITE_DIR) at http://localhost:5174"
+	@cd "$(JLITE_DIR)" && python3 -m http.server 5174
+
+# Remove the generated JupyterLite directory
+jlite-clean:
+	@echo "🧹 Removing $(JLITE_DIR)"
+	@rm -rf "$(JLITE_DIR)"
+
+
+.PHONY: api-deps api-run api-health run-all
+
+api-deps:
+	$(PIP_RUN) install "fastapi>=0.110" "uvicorn[standard]>=0.23" "pydantic>=2"
+
+api-run:
+	$(RUN) uvicorn $(API_APP) --host 0.0.0.0 --port $(API_PORT) --reload
+
+api-health:
+	curl -s http://localhost:$(API_PORT)/api/health | jq .
+
+# Streamlit + FastAPI + Frontend together
+run-all:
+	( $(MAKE) -s web ) & \
+	( $(MAKE) -s api-run ) & \
+	( cd frontend && $(FE_PM_DEV) ) & \
+	wait
+
+
+start:
+	@echo "🚀 Setting up Trojan Parse full stack..."
+	@$(MAKE) setup          # Install backend deps (Poetry/venv + FastAPI + Jupyter deps)
+	@$(MAKE) jlite-build    # Build JupyterLite, copy notebooks, generate index.json
+	@echo "🌐 Starting FastAPI server on :5050..."
+	@($(MAKE) -s api-run) & # Run FastAPI backend
+	@echo "📘 Starting Streamlit on :8501..."
+	@($(MAKE) -s web) &     # Run Streamlit
+	@echo "⚛️  Starting React dev server on :5173..."
+	@($(MAKE) -s fe-dev) &  # Run frontend
+	@wait

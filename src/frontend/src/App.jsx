@@ -2,17 +2,17 @@ import { useRef, useState } from "react";
 import "./App.css";
 
 const API_BASE = "/api";
-const NOTEBOOK_URL = "https://jupyterlite.github.io/demo/lab/index.html"; 
-// ↑ Change to your own Jupyter/JupyterLite/Binder URL when ready
+const JUPYTERLITE_LAB = "/jlite/lab/index.html"; // if you haven't built Lite yet, use the demo:
 
 export default function App() {
+  // main state
   const [model, setModel] = useState("");
   const [text, setText] = useState("");
   const [resp, setResp] = useState(null);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
-  // Tool drawer + notebook modal
+  // tools / modal
   const [menuOpen, setMenuOpen] = useState(false);
   const [notebookOpen, setNotebookOpen] = useState(false);
 
@@ -24,7 +24,6 @@ export default function App() {
     setLoading(true);
     setError("");
     setResp(null);
-
     try {
       const r = await fetch(`${API_BASE}/analyze`, {
         method: "POST",
@@ -41,24 +40,21 @@ export default function App() {
     }
   }
 
-  // ===== Tool actions =====
+  // tool actions
   function openNotebook() {
     setNotebookOpen(true);
   }
-
   function triggerUpload() {
     fileRef.current?.click();
   }
-
   function onPickFile(e) {
     const f = e.target.files?.[0];
     if (!f) return;
     const reader = new FileReader();
     reader.onload = () => setText(String(reader.result || ""));
     reader.readAsText(f);
-    e.target.value = ""; // reset for next pick
+    e.target.value = "";
   }
-
   function exportJSON() {
     const payload = JSON.stringify(resp ?? { model, text }, null, 2);
     const blob = new Blob([payload], { type: "application/json" });
@@ -70,7 +66,6 @@ export default function App() {
     URL.revokeObjectURL(url);
   }
 
-  // Close drawers on ESC
   function onKeyDown(e) {
     if (e.key === "Escape") {
       setMenuOpen(false);
@@ -80,10 +75,13 @@ export default function App() {
 
   return (
     <div className="app" onKeyDown={onKeyDown} tabIndex={-1}>
+      {/* Header: top-center logo + title */}
       <div className="header">
-      <img src="public/uf_logo.png" alt="Trojan Parse Logo" className="logo" />
+        <img src="src/assets/uf_logo.png" alt="Trojan Parse Logo" className="logo" />
+        <h1 className="title">AI in Classics</h1>
       </div>
-      <h1>AI in Classics</h1>
+
+      {/* Left-aligned main content */}
       <p className="subtitle">
         Paste or upload text, choose a model, and get instant analysis.
       </p>
@@ -104,11 +102,63 @@ export default function App() {
           onChange={(e) => setText(e.target.value)}
         />
 
-        <button disabled={loading}>
-          {loading ? "Analyzing..." : "Submit"}
-        </button>
+        <button disabled={loading}>{loading ? "Analyzing..." : "Submit"}</button>
+
+        {/* Inline hamburger + drawer */}
+        <div className="bar-tools">
+          <button
+            className={`hamburger ${menuOpen ? "active" : ""}`}
+            onClick={(e) => {
+              e.preventDefault();
+              setMenuOpen((v) => !v);
+            }}
+            aria-expanded={menuOpen}
+            aria-label="Open tools"
+            type="button"
+          >
+            <span />
+            <span />
+            <span />
+          </button>
+
+          {menuOpen && (
+            <div className="tool-drawer inline">
+              <div className="tool-carousel" role="list">
+                <div className="tool-card" role="listitem">
+                  <div className="tool-title">Interactive Notebook</div>
+                  <button className="tool-cta" type="button" onClick={openNotebook}>
+                    Open
+                  </button>
+                </div>
+
+                <div className="tool-card" role="listitem">
+                  <div className="tool-title">Upload .txt</div>
+                  <button className="tool-cta" type="button" onClick={triggerUpload}>
+                    Choose
+                  </button>
+                </div>
+
+                <div className="tool-card" role="listitem">
+                  <div className="tool-title">Export JSON</div>
+                  <button
+                    className="tool-cta"
+                    type="button"
+                    onClick={exportJSON}
+                    disabled={!resp && !text}
+                  >
+                    Download
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
       </form>
 
+      {/* hidden file input */}
+      <input ref={fileRef} type="file" accept=".txt" onChange={onPickFile} style={{ display: "none" }} />
+
+      {/* Results */}
       {error && <p className="error">{error}</p>}
 
       {resp && (
@@ -128,84 +178,30 @@ export default function App() {
         </div>
       )}
 
-      {/* Hidden file input for the Upload tool */}
-      <input ref={fileRef} type="file" accept=".txt" onChange={onPickFile} style={{ display: "none" }} />
-
-
-      <button
-        className={`hamburger ${menuOpen ? "active" : ""}`}
-        onClick={() => setMenuOpen((v) => !v)}
-        aria-expanded={menuOpen}
-        aria-label="Open tools"
-      >
-        <span />
-        <span />
-        <span />
-      </button>
-
-      <div className={`tool-drawer ${menuOpen ? "open" : ""}`}>
-        <div className="tool-carousel" role="list">
-
-          <div className="tool-card" role="listitem">
-            <div className="tool-icon">
-              {/* laptop/code icon */}
-              <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
-                <path d="M4 6h16v9H4z" stroke="currentColor" strokeWidth="1.5" />
-                <path d="M2 17h20" stroke="currentColor" strokeWidth="1.5" />
-                <path d="M9 9l-2 2 2 2M15 9l2 2-2 2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </div>
-            <div className="tool-title">Interactive Notebook</div>
-            <div className="tool-desc">Open a Python notebook session.</div>
-            <button className="tool-cta" onClick={openNotebook}>Open</button>
-          </div>
-
-          {/* Tool Card 2: Upload .txt */}
-          <div className="tool-card" role="listitem">
-            <div className="tool-icon">
-              {/* upload icon */}
-              <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
-                <path d="M12 16V6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-                <path d="M8 9l4-4 4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M4 18h16" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-              </svg>
-            </div>
-            <div className="tool-title">Upload .txt</div>
-            <div className="tool-desc">Load a local text file into the input.</div>
-            <button className="tool-cta" onClick={triggerUpload}>Choose File</button>
-          </div>
-
-          {/* Tool Card 3: Export JSON */}
-          <div className="tool-card" role="listitem">
-            <div className="tool-icon">
-              {/* download icon */}
-              <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
-                <path d="M12 8v10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-                <path d="M8 15l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M4 6h16" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-              </svg>
-            </div>
-            <div className="tool-title">Export JSON</div>
-            <div className="tool-desc">Download the current result or input.</div>
-            <button className="tool-cta" onClick={exportJSON} disabled={!resp && !text}>Download</button>
-          </div>
-        </div>
-      </div>
-
-
-
-      {/* ===== Notebook Modal ===== */}
+      {/* Modal: JupyterLite Lab (simple, no file list) */}
       {notebookOpen && (
         <div className="modal" onClick={() => setNotebookOpen(false)}>
           <div className="modal-inner" onClick={(e) => e.stopPropagation()}>
             <div className="modal-bar">
               <div className="modal-title">Interactive Notebook</div>
-              <button className="modal-close" onClick={() => setNotebookOpen(false)} aria-label="Close">✕</button>
+              <div className="modal-actions">
+                <a
+                  className="modal-link"
+                  href={`${JUPYTERLITE_LAB}?reset=1`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Open in new tab ↗
+                </a>
+                <button className="modal-close" onClick={() => setNotebookOpen(false)} aria-label="Close">
+                  ✕
+                </button>
+              </div>
             </div>
             <iframe
               className="modal-iframe"
-              title="Notebook"
-              src={NOTEBOOK_URL}
+              title="JupyterLite"
+              src={`${JUPYTERLITE_LAB}?reset=1`}
               referrerPolicy="no-referrer"
             />
           </div>
