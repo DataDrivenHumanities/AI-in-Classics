@@ -29,8 +29,7 @@ async function handleSubmit(e) {
     const response = await fetch(`${API_BASE}/analyze`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ model, text }), clear
-      
+      body: JSON.stringify({ model, text }),
     });
 
     if (!response.ok) {
@@ -79,6 +78,7 @@ async function handleSubmit(e) {
     }
   }
 
+
   return (
     <div className="app" onKeyDown={onKeyDown} tabIndex={-1}>
       {/* Header: top-center logo + title */}
@@ -107,6 +107,7 @@ async function handleSubmit(e) {
           value={text}
           onChange={(e) => setText(e.target.value)}
         />
+
 
         <button disabled={loading}>{loading ? "Analyzing..." : "Submit"}</button>
 
