@@ -6,6 +6,12 @@
 
 This project looks at various languages and runs anlysis on the scripture using various methods of Artifical Intellgiance,.
 
+## ✨Check out our New UI✨
+
+<p align="center">
+  <img src="images/screenshot_new_ui.png" alt="App Banner" width="600"/>
+</p>
+
 ## Features
 
 - Feature one

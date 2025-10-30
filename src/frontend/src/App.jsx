@@ -1,15 +1,15 @@
-import { useRef, useState } from "react";
-import "./App.css";
+import { useRef, useState } from 'react';
+import './App.css';
 
-const API_BASE = "/api";
-const JUPYTERLITE_LAB = "/jlite/lab/index.html"; // if you haven't built Lite yet, use the demo:
+const API_BASE = '/api';
+const JUPYTERLITE_LAB = '/jlite/lab/index.html'; // if you haven't built Lite yet, use the demo:
 
 export default function App() {
   // main state
-  const [model, setModel] = useState("");
-  const [text, setText] = useState("");
+  const [model, setModel] = useState('');
+  const [text, setText] = useState('');
   const [resp, setResp] = useState(null);
-  const [error, setError] = useState("");
+  const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
 
   // tools / modal
@@ -17,33 +17,33 @@ export default function App() {
   const [notebookOpen, setNotebookOpen] = useState(false);
 
   const fileRef = useRef(null);
-async function handleSubmit(e) {
-  e.preventDefault();
-  if (!model || !text.trim()) return;
+  async function handleSubmit(e) {
+    e.preventDefault();
+    if (!model || !text.trim()) return;
 
-  setLoading(true);
-  setError("");
-  setResp(null);
+    setLoading(true);
+    setError('');
+    setResp(null);
 
-  try {
-    const response = await fetch(`${API_BASE}/analyze`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ model, text }),
-    });
+    try {
+      const response = await fetch(`${API_BASE}/analyze`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ model, text }),
+      });
 
-    if (!response.ok) {
-      throw new Error(`Server error: ${response.status}`);
+      if (!response.ok) {
+        throw new Error(`Server error: ${response.status}`);
+      }
+
+      const data = await response.json();
+      setResp(data); // will show in your panels
+    } catch (err) {
+      setError(err.message || 'Something went wrong');
+    } finally {
+      setLoading(false);
     }
-
-    const data = await response.json();
-    setResp(data); // will show in your panels
-  } catch (err) {
-    setError(err.message || "Something went wrong");
-  } finally {
-    setLoading(false);
   }
-}
 
   // tool actions
   function openNotebook() {
@@ -56,28 +56,27 @@ async function handleSubmit(e) {
     const f = e.target.files?.[0];
     if (!f) return;
     const reader = new FileReader();
-    reader.onload = () => setText(String(reader.result || ""));
+    reader.onload = () => setText(String(reader.result || ''));
     reader.readAsText(f);
-    e.target.value = "";
+    e.target.value = '';
   }
   function exportJSON() {
     const payload = JSON.stringify(resp ?? { model, text }, null, 2);
-    const blob = new Blob([payload], { type: "application/json" });
+    const blob = new Blob([payload], { type: 'application/json' });
     const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
+    const a = document.createElement('a');
     a.href = url;
-    a.download = "trojan-parse-result.json";
+    a.download = 'trojan-parse-result.json';
     a.click();
     URL.revokeObjectURL(url);
   }
 
   function onKeyDown(e) {
-    if (e.key === "Escape") {
+    if (e.key === 'Escape') {
       setMenuOpen(false);
       setNotebookOpen(false);
     }
   }
-
 
   return (
     <div className="app" onKeyDown={onKeyDown} tabIndex={-1}>
@@ -88,9 +87,7 @@ async function handleSubmit(e) {
       </div>
 
       {/* Left-aligned main content */}
-      <p className="subtitle">
-        Paste or upload text, choose a model, and get instant analysis.
-      </p>
+      <p className="subtitle">Paste or upload text, choose a model, and get instant analysis.</p>
 
       <form className="bar" onSubmit={handleSubmit}>
         <select value={model} onChange={(e) => setModel(e.target.value)}>
@@ -108,13 +105,12 @@ async function handleSubmit(e) {
           onChange={(e) => setText(e.target.value)}
         />
 
-
-        <button disabled={loading}>{loading ? "Analyzing..." : "Submit"}</button>
+        <button disabled={loading}>{loading ? 'Analyzing...' : 'Submit'}</button>
 
         {/* Inline hamburger + drawer */}
         <div className="bar-tools">
           <button
-            className={`hamburger ${menuOpen ? "active" : ""}`}
+            className={`hamburger ${menuOpen ? 'active' : ''}`}
             onClick={(e) => {
               e.preventDefault();
               setMenuOpen((v) => !v);
@@ -163,7 +159,13 @@ async function handleSubmit(e) {
       </form>
 
       {/* hidden file input */}
-      <input ref={fileRef} type="file" accept=".txt" onChange={onPickFile} style={{ display: "none" }} />
+      <input
+        ref={fileRef}
+        type="file"
+        accept=".txt"
+        onChange={onPickFile}
+        style={{ display: 'none' }}
+      />
 
       {/* Results */}
       {error && <p className="error">{error}</p>}
@@ -176,7 +178,7 @@ async function handleSubmit(e) {
           </div>
           <div className="panel">
             <h3>Translation</h3>
-            <p>{resp.translation || "(none)"}</p>
+            <p>{resp.translation || '(none)'}</p>
           </div>
           <div className="panel">
             <h3>Analysis</h3>
@@ -200,7 +202,11 @@ async function handleSubmit(e) {
                 >
                   Open in new tab ↗
                 </a>
-                <button className="modal-close" onClick={() => setNotebookOpen(false)} aria-label="Close">
+                <button
+                  className="modal-close"
+                  onClick={() => setNotebookOpen(false)}
+                  aria-label="Close"
+                >
                   ✕
                 </button>
               </div>
