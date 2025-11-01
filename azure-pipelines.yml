@@ -10,20 +10,44 @@ variables:
   - name: FORM_CSV
     value: src/Lemmatizer-LTN/out/forms.csv
 
+  # Make the Python toolcache writable on a self-hosted agent
+  - name: AGENT_TOOLSDIRECTORY
+    value: '$(Agent.WorkFolder)\_tool'
+
+  # Optional but recommended: add a secret var GITHUB_TOKEN in ADO (a lightweight GH PAT)
+  - name: GITHUB_TOKEN
+    value: "$(GITHUB_TOKEN)"
+
 pool:
   name: Default
-  # optional: ensure it lands on Windows
+  # Optional: force Windows
   # demands:
   #   - Agent.OS -equals Windows_NT
 
 steps:
-  # Use Python 3.11 (x64) on Windows
+  # 0) Allow scripts for CurrentUser (no admin required)
+  - powershell: |
+      Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned -Force
+      & "$env:SystemRoot\SysWOW64\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -Command "Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force"
+      Write-Host "Execution policies:"
+      Get-ExecutionPolicy -List
+    displayName: "Relax PS execution policy (CurrentUser)"
+
+  # 1) Use Python 3.11 (x64) and cache under $(Agent.WorkFolder)\_tool
   - task: UsePythonVersion@0
     inputs:
       versionSpec: "3.11"
+      architecture: "x64"
       addToPath: true
+      githubToken: $(GITHUB_TOKEN) # ok if empty; helps avoid GH rate limits
 
-  # Create venv + install deps (PowerShell on Windows)
+  # Sanity check
+  - powershell: |
+      python --version
+      where python
+    displayName: "Check Python"
+
+  # 2) Create venv + install deps
   - pwsh: |
       python -m venv .venv
       .\.venv\Scripts\Activate.ps1
@@ -31,7 +55,7 @@ steps:
       pip install -r etl/requirements.txt
     displayName: "Create venv + install deps"
 
-  # Materialize Google SA JSON from base64 (PowerShell; cross-platform safe)
+  # 3) Materialize Google SA JSON from base64
   - pwsh: |
       $bytes = [Convert]::FromBase64String($env:GOOGLE_SERVICE_ACCOUNT_JSON_BASE64)
       [IO.File]::WriteAllBytes("service_account.json", $bytes)
@@ -39,13 +63,13 @@ steps:
     env:
       GOOGLE_SERVICE_ACCOUNT_JSON_BASE64: $(GOOGLE_SERVICE_ACCOUNT_JSON_BASE64)
 
-  # Step 1: run scraper → CSVs
+  # 4) Run scraper → CSVs
   - pwsh: |
       .\.venv\Scripts\Activate.ps1
       python "$(SCRAPER_PATH)" --lemmas-out "$(LEMMA_CSV)" --forms-out "$(FORM_CSV)"
     displayName: "Scrape → CSVs"
 
-  # Step 2: upload CSVs to Drive
+  # 5) Upload CSVs to Google Drive
   - pwsh: |
       .\.venv\Scripts\Activate.ps1
       python etl/upload_to_drive.py `
@@ -56,17 +80,16 @@ steps:
     env:
       GOOGLE_DRIVE_FOLDER_ID: $(GOOGLE_DRIVE_FOLDER_ID)
 
-  # Step 3: init schema + load into Postgres (no sudo/apt; use psycopg2)
-  # Assumes psycopg2 (or psycopg[binary]) is in etl/requirements.txt
+  # 6) Init schema + Load CSVs (psycopg2 instead of psql)
+  # Ensure psycopg2 or psycopg[binary] is in etl/requirements.txt
   - pwsh: |
       .\.venv\Scripts\Activate.ps1
       python - << 'PY'
-      import os, psycopg2
-      from psycopg2.extras import execute_batch
+      import os, subprocess, sys
+      import psycopg2
 
       dsn = os.environ["DATABASE_URL"]
-      sql_path = os.path.join("ops","init_db.sql")
-
+      sql_path = os.path.join("ops", "init_db.sql")
       with open(sql_path, "r", encoding="utf-8") as f:
           init_sql = f.read()
 
@@ -75,8 +98,6 @@ steps:
               cur.execute(init_sql)
       print("Schema initialized.")
 
-      # Now run your loader
-      import subprocess, sys
       subprocess.check_call([
           sys.executable, "etl/load_to_postgres.py",
           "--db", dsn,
@@ -89,3 +110,9 @@ steps:
       DATABASE_URL: $(DATABASE_URL)
       LEMMA_CSV: $(LEMMA_CSV)
       FORM_CSV: $(FORM_CSV)
+# (Optional) publish CSVs as build artifacts too
+# - task: PublishBuildArtifacts@1
+#   inputs:
+#     PathtoPublish: 'src/Lemmatizer-LTN/out'
+#     ArtifactName: 'csvs'
+#   displayName: "Publish CSV artifacts"
