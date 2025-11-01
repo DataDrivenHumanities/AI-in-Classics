@@ -9,40 +9,30 @@ variables:
     value: src/Lemmatizer-LTN/out/lemmas.csv
   - name: FORM_CSV
     value: src/Lemmatizer-LTN/out/forms.csv
-
-  # Make the Python toolcache writable on a self-hosted agent
+  # Writable tool cache for self-hosted agent
   - name: AGENT_TOOLSDIRECTORY
     value: '$(Agent.WorkFolder)\_tool'
-
-  # Optional but recommended: add a secret var GITHUB_TOKEN in ADO (a lightweight GH PAT)
-  - name: GITHUB_TOKEN
-    value: "$(GITHUB_TOKEN)"
+  # IMPORTANT: Do NOT define GITHUB_TOKEN here (that caused the cycle).
+  # Create it as a secret variable in the pipeline or in a variable group if you want to use it.
 
 pool:
   name: Default
-  # Optional: force Windows
   # demands:
   #   - Agent.OS -equals Windows_NT
 
 steps:
-  # 0) Allow scripts for CurrentUser (no admin required)
-  - powershell: |
-      Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned -Force
-      & "$env:SystemRoot\SysWOW64\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -Command "Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force"
-      Write-Host "Execution policies:"
-      Get-ExecutionPolicy -List
-    displayName: "Relax PS execution policy (CurrentUser)"
-
-  # 1) Use Python 3.11 (x64) and cache under $(Agent.WorkFolder)\_tool
+  # 1) Use Python 3.11 (x64) from the toolcache; optionally pass a GH token if you created one
   - task: UsePythonVersion@0
     inputs:
       versionSpec: "3.11"
       architecture: "x64"
       addToPath: true
-      githubToken: $(GITHUB_TOKEN) # ok if empty; helps avoid GH rate limits
+      # If you created a secret variable named GITHUB_TOKEN, leave the next line.
+      # If not, comment it out.
+      githubToken: $(GITHUB_TOKEN)
 
   # Sanity check
-  - powershell: |
+  - pwsh: |
       python --version
       where python
     displayName: "Check Python"
@@ -80,7 +70,7 @@ steps:
     env:
       GOOGLE_DRIVE_FOLDER_ID: $(GOOGLE_DRIVE_FOLDER_ID)
 
-  # 6) Init schema + Load CSVs (psycopg2 instead of psql)
+  # 6) Init schema + Load CSVs (via psycopg2)
   # Ensure psycopg2 or psycopg[binary] is in etl/requirements.txt
   - pwsh: |
       .\.venv\Scripts\Activate.ps1
@@ -110,7 +100,7 @@ steps:
       DATABASE_URL: $(DATABASE_URL)
       LEMMA_CSV: $(LEMMA_CSV)
       FORM_CSV: $(FORM_CSV)
-# (Optional) publish CSVs as build artifacts too
+# Optional: publish CSV artifacts too
 # - task: PublishBuildArtifacts@1
 #   inputs:
 #     PathtoPublish: 'src/Lemmatizer-LTN/out'
