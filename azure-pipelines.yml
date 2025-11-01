@@ -9,43 +9,19 @@ variables:
     value: src/Lemmatizer-LTN/out/lemmas.csv
   - name: FORM_CSV
     value: src/Lemmatizer-LTN/out/forms.csv
-  # Writable tool cache for self-hosted agent
-  - name: AGENT_TOOLSDIRECTORY
-    value: '$(Agent.WorkFolder)\_tool'
-  # IMPORTANT: Do NOT define GITHUB_TOKEN here (that caused the cycle).
-  # Create it as a secret variable in the pipeline or in a variable group if you want to use it.
 
 pool:
   name: Default
-  # demands:
-  #   - Agent.OS -equals Windows_NT
 
 steps:
-  # 1) Use Python 3.11 (x64) from the toolcache; optionally pass a GH token if you created one
-  - task: UsePythonVersion@0
-    inputs:
-      versionSpec: "3.11"
-      architecture: "x64"
-      addToPath: true
-      # If you created a secret variable named GITHUB_TOKEN, leave the next line.
-      # If not, comment it out.
-      githubToken: $(GITHUB_TOKEN)
-
-  # Sanity check
   - pwsh: |
-      python --version
-      where python
-    displayName: "Check Python"
-
-  # 2) Create venv + install deps
-  - pwsh: |
-      python -m venv .venv
+      py -3.11 --version
+      py -3.11 -m pip install -U pip
+      py -3.11 -m venv .venv
       .\.venv\Scripts\Activate.ps1
-      python -m pip install -U pip
       pip install -r etl/requirements.txt
-    displayName: "Create venv + install deps"
+    displayName: "Use preinstalled Python 3.11 + deps"
 
-  # 3) Materialize Google SA JSON from base64
   - pwsh: |
       $bytes = [Convert]::FromBase64String($env:GOOGLE_SERVICE_ACCOUNT_JSON_BASE64)
       [IO.File]::WriteAllBytes("service_account.json", $bytes)
@@ -53,13 +29,11 @@ steps:
     env:
       GOOGLE_SERVICE_ACCOUNT_JSON_BASE64: $(GOOGLE_SERVICE_ACCOUNT_JSON_BASE64)
 
-  # 4) Run scraper → CSVs
   - pwsh: |
       .\.venv\Scripts\Activate.ps1
       python "$(SCRAPER_PATH)" --lemmas-out "$(LEMMA_CSV)" --forms-out "$(FORM_CSV)"
     displayName: "Scrape → CSVs"
 
-  # 5) Upload CSVs to Google Drive
   - pwsh: |
       .\.venv\Scripts\Activate.ps1
       python etl/upload_to_drive.py `
@@ -70,24 +44,19 @@ steps:
     env:
       GOOGLE_DRIVE_FOLDER_ID: $(GOOGLE_DRIVE_FOLDER_ID)
 
-  # 6) Init schema + Load CSVs (via psycopg2)
-  # Ensure psycopg2 or psycopg[binary] is in etl/requirements.txt
   - pwsh: |
       .\.venv\Scripts\Activate.ps1
       python - << 'PY'
       import os, subprocess, sys
       import psycopg2
-
       dsn = os.environ["DATABASE_URL"]
-      sql_path = os.path.join("ops", "init_db.sql")
+      sql_path = os.path.join("ops","init_db.sql")
       with open(sql_path, "r", encoding="utf-8") as f:
           init_sql = f.read()
-
       with psycopg2.connect(dsn) as conn:
           with conn.cursor() as cur:
               cur.execute(init_sql)
       print("Schema initialized.")
-
       subprocess.check_call([
           sys.executable, "etl/load_to_postgres.py",
           "--db", dsn,
@@ -100,9 +69,3 @@ steps:
       DATABASE_URL: $(DATABASE_URL)
       LEMMA_CSV: $(LEMMA_CSV)
       FORM_CSV: $(FORM_CSV)
-# Optional: publish CSV artifacts too
-# - task: PublishBuildArtifacts@1
-#   inputs:
-#     PathtoPublish: 'src/Lemmatizer-LTN/out'
-#     ArtifactName: 'csvs'
-#   displayName: "Publish CSV artifacts"
