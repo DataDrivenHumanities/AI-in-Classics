@@ -1,12 +1,12 @@
 -- ops/init_db.sql
 
--- Extensions
+-- Required extensions
 CREATE EXTENSION IF NOT EXISTS unaccent;
 CREATE EXTENSION IF NOT EXISTS pg_trgm;
 CREATE EXTENSION IF NOT EXISTS citext;
 
--- NOTE: unaccent() is not IMMUTABLE, so norm() must not be declared IMMUTABLE if it calls unaccent().
--- Keep it STABLE and use it in queries / loader logic (your Python already does this).
+-- Normalizer used by queries/loader (NOT used in indexes)
+-- unaccent() isn't immutable, so keep this function STABLE.
 CREATE OR REPLACE FUNCTION norm(t text)
 RETURNS text
 LANGUAGE sql
@@ -17,15 +17,27 @@ AS $$
   SELECT unaccent(lower(t));
 $$;
 
--- =========================
--- Core tables
--- =========================
+-- -----------------------------------------------------------------------------
+-- Text Search configuration that pipes tokens through unaccent
+-- (so indexes can use to_tsvector('public.simple_unaccent', ...) which IS immutable)
+-- -----------------------------------------------------------------------------
+DO $$
+BEGIN
+  IF NOT EXISTS (SELECT 1 FROM pg_ts_config WHERE cfgname = 'simple_unaccent') THEN
+    CREATE TEXT SEARCH CONFIGURATION public.simple_unaccent ( COPY = pg_catalog.simple );
+    ALTER TEXT SEARCH CONFIGURATION public.simple_unaccent
+      ALTER MAPPING FOR hword, hword_part, word WITH unaccent, simple;
+  END IF;
+END$$;
 
+-- -----------------------------------------------------------------------------
+-- Tables
+-- -----------------------------------------------------------------------------
 CREATE TABLE IF NOT EXISTS lemmas (
   id          BIGSERIAL PRIMARY KEY,
   lemma_code  text,
-  lemma_nod   citext NOT NULL,  -- normalized (case/diacritic-insensitive) value your loader writes
-  lemma_diac  text,             -- original diacritics-preserving value (for display/FTS)
+  lemma_nod   citext NOT NULL,
+  lemma_diac  text,
   pos         text,
   gender      text,
   page_url    text,
@@ -33,53 +45,57 @@ CREATE TABLE IF NOT EXISTS lemmas (
   UNIQUE (lemma_nod)
 );
 
--- trigram index on citext needs an explicit cast to text
+-- trigram on citext needs cast to text
 CREATE INDEX IF NOT EXISTS lemmas_trgm_idx
   ON lemmas USING gin ((lemma_nod::text) gin_trgm_ops);
 
 CREATE TABLE IF NOT EXISTS forms (
-  id                 BIGSERIAL PRIMARY KEY,
-  lemma_id           BIGINT NOT NULL REFERENCES lemmas(id) ON DELETE CASCADE,
-  form_nod           citext NOT NULL,  -- normalized value your loader writes
-  form_diac          text,             -- original value for display/FTS
-  label              text,
-  mood               text,
-  tense              text,
-  voice              text,
-  person             text,
-  number             text,
-  gender             text,
-  "case"             text,
-  degree             text,
-  source_context_1   text,
-  source_context_2   text,
-  source_context_3   text,
-  page_url           text
+  id                BIGSERIAL PRIMARY KEY,
+  lemma_id          BIGINT NOT NULL REFERENCES lemmas(id) ON DELETE CASCADE,
+  form_nod          citext NOT NULL,
+  form_diac         text,
+  label             text,
+  mood              text,
+  tense             text,
+  voice             text,
+  person            text,
+  number            text,
+  gender            text,
+  "case"            text,
+  degree            text,
+  source_context_1  text,
+  source_context_2  text,
+  source_context_3  text,
+  page_url          text
 );
 
 CREATE INDEX IF NOT EXISTS forms_lemma_id_idx ON forms(lemma_id);
 CREATE INDEX IF NOT EXISTS forms_form_nod_idx ON forms(form_nod);
-
--- trigram index on citext → cast to text
 CREATE INDEX IF NOT EXISTS forms_form_trgm_idx
   ON forms USING gin ((form_nod::text) gin_trgm_ops);
 
--- =========================
--- Full-text search (FTS)
--- =========================
--- Generated columns would require IMMUTABLE expressions; unaccent() is not immutable.
--- Use expression indexes instead (common pattern). If unaccent mapping changes, REINDEX as needed.
-
+-- -----------------------------------------------------------------------------
+-- Full-text search (IMMUTABLE expressions)
+-- Use the custom config instead of calling unaccent() directly
+-- -----------------------------------------------------------------------------
+-- Option A: expression indexes (simple & robust)
 CREATE INDEX IF NOT EXISTS lemmas_fts_idx
-  ON lemmas USING gin (to_tsvector('simple', unaccent(coalesce(lemma_diac, ''))));
+  ON lemmas USING gin (to_tsvector('public.simple_unaccent', coalesce(lemma_diac, '')));
 
 CREATE INDEX IF NOT EXISTS forms_fts_idx
-  ON forms  USING gin (to_tsvector('simple', unaccent(coalesce(form_diac,  ''))));
+  ON forms  USING gin (to_tsvector('public.simple_unaccent', coalesce(form_diac,  '')));
 
--- =========================
--- Helper query functions
--- =========================
+-- (Optional) If you prefer generated columns, these also work because the expression is immutable:
+-- ALTER TABLE lemmas ADD COLUMN IF NOT EXISTS lemma_fts tsvector
+--   GENERATED ALWAYS AS (to_tsvector('public.simple_unaccent', coalesce(lemma_diac,''))) STORED;
+-- CREATE INDEX IF NOT EXISTS lemmas_fts_gc_idx ON lemmas USING gin(lemma_fts);
+-- ALTER TABLE forms  ADD COLUMN IF NOT EXISTS form_fts  tsvector
+--   GENERATED ALWAYS AS (to_tsvector('public.simple_unaccent', coalesce(form_diac,''))) STORED;
+-- CREATE INDEX IF NOT EXISTS forms_fts_gc_idx  ON forms  USING gin(form_fts);
 
+-- -----------------------------------------------------------------------------
+-- Helper functions (unchanged semantics)
+-- -----------------------------------------------------------------------------
 CREATE OR REPLACE FUNCTION get_forms_by_lemma(q text)
 RETURNS SETOF forms
 LANGUAGE sql
