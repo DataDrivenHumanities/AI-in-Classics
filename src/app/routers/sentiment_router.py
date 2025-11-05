@@ -2,7 +2,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import Dict, Optional, Protocol, TypedDict
+from typing import Dict, Optional, Protocol, TypedDict, Any
 
 
 class SentimentResult(TypedDict, total=False):
@@ -11,6 +11,8 @@ class SentimentResult(TypedDict, total=False):
     confidence: float
     scores: Dict[str, float]
     raw_model_output: str
+    translation: Optional[str]
+    analysis: Optional[Dict[str, Any]]
 
 
 class SentimentProvider(Protocol):
@@ -52,6 +54,11 @@ class VADERSentimentProvider:
                 "neu": vs.get("neu", 0.0),
                 "neg": vs.get("neg", 0.0),
             },
+            "translation": None,
+            "analysis": {
+                "heuristic": "vader",
+                "thresholds": {"pos": 0.05, "neg": -0.05},
+            },
         }
 
 
@@ -84,6 +91,8 @@ class LLMSentimentProvider:
             "label": label,
             "confidence": confidence,
             "raw_model_output": raw,
+            "translation": parsed.get("translation"),
+            "analysis": parsed.get("analysis"),
         }
         # if the model returns scores, pass them through
         if isinstance(parsed.get("scores"), dict):

@@ -21,9 +21,11 @@ PIP_RUN       := $(if $(POETRY_BIN),poetry run $(PIP),.venv/bin/$(PIP))
 
 # ===== Frontend (React) =====
 FRONTEND_DIR ?= src/frontend
-FRONTEND_PORT ?= 5173
-FE_DIR ?= src/frontend
+FRONTEND_PORT ?= 3000
+FE_DIR ?= src/frontend/src
 NPM    ?= npm
+
+
 
 # ===== Notebooks -> JupyterLite =====
 NB_SRC_DIR        ?= notebooks
@@ -67,21 +69,22 @@ WHITE    :=
 endif
 
 ifeq ($(FE_PM),pnpm)
-FE_PM_DEV     := pnpm dev
+FE_PM_DEV     := pnpm dev -p $(FRONTEND_PORT)
 FE_PM_BUILD   := pnpm build
-FE_PM_PREVIEW := pnpm preview
+FE_PM_PREVIEW := pnpm start -p $(FRONTEND_PORT)
 FE_PM_INSTALL := pnpm install --frozen-lockfile
 else ifeq ($(FE_PM),yarn)
-FE_PM_DEV     := yarn dev
+FE_PM_DEV     := yarn dev -p $(FRONTEND_PORT)
 FE_PM_BUILD   := yarn build
-FE_PM_PREVIEW := yarn preview
+FE_PM_PREVIEW := yarn start -p $(FRONTEND_PORT)
 FE_PM_INSTALL := yarn install --frozen-lockfile
 else
-FE_PM_DEV     := npm run dev
+FE_PM_DEV     := npm run dev -- -p $(FRONTEND_PORT)
 FE_PM_BUILD   := npm run build
-FE_PM_PREVIEW := npm run preview
+FE_PM_PREVIEW := npm run start -- -p $(FRONTEND_PORT)
 FE_PM_INSTALL := npm install
 endif
+
 
 
 .PHONY: help setup setup-poetry setup-venv env run web check fix test \
@@ -109,13 +112,13 @@ help:
 	@printf "$(YELLOW)  test             Run pytest tests$(RESET)\n"
 	@printf "$(YELLOW)  check / fix      Format or lint Python code$(RESET)\n\n"
 
-	@printf "$(BLUE)Frontend (React):$(RESET)\n"
+	@printf "$(BLUE)Frontend (Next.js):$(RESET)\n"
 	@printf "$(BLUE)  fe-install       Install frontend dependencies ($(FE_PM))$(RESET)\n"
-	@printf "$(BLUE)  fe-dev           Start React dev server (port $(FRONTEND_PORT))$(RESET)\n"
+	@printf "$(BLUE)  fe-dev           Start Next.js dev server (port $(FRONTEND_PORT))$(RESET)\n"
 	@printf "$(BLUE)  fe-build         Build production bundle$(RESET)\n"
-	@printf "$(BLUE)  fe-serve         Preview production build$(RESET)\n"
-	@printf "$(BLUE)  fe-clean         Remove node_modules and dist$(RESET)\n"
-	@printf "$(BLUE)  run-all          Run Streamlit + React dev servers together$(RESET)\n\n"
+	@printf "$(BLUE)  fe-serve         Start production server$(RESET)\n"
+	@printf "$(BLUE)  fe-clean         Remove node_modules and .next$(RESET)\n"
+	@printf "$(BLUE)  run-all          Run Streamlit + Next.js dev servers together$(RESET)\n\n"
 
 	@printf "$(GREY)Docker / Ollama:$(RESET)\n"
 	@printf "$(GREY)  docker-build, docker-run, docker-dev, docker-bash, docker-clean$(RESET)\n"
@@ -250,12 +253,12 @@ fe-build:
 	@cd $(FRONTEND_DIR) && $(FE_PM_BUILD)
 
 fe-serve:
-	@echo "Previewing production build..."
+	@echo "Starting production server on port $(FRONTEND_PORT)..."
 	@cd $(FRONTEND_DIR) && $(FE_PM_PREVIEW)
 
 fe-clean:
-	@echo "Cleaning frontend node_modules and dist..."
-	@rm -rf $(FRONTEND_DIR)/node_modules $(FRONTEND_DIR)/dist
+	@echo "Cleaning frontend node_modules and .next..."
+	@rm -rf $(FRONTEND_DIR)/node_modules $(FRONTEND_DIR)/.next
 
 fe-lint:
 	cd $(FE_DIR) && ($(NPM) run -s lint || echo "skip: no 'lint' script")
@@ -267,7 +270,7 @@ fe-format:
 	cd $(FE_DIR) && ($(NPM) run -s format || echo "skip: no 'format' script")
 
 fe-format-check:
-	cd $(FE_DIR) && ($(NPM) run -s format:check || echo "skip: no 'format:check' script")
+	cd $(FE_DIR) && ($(NPM) run -s format:check || echo "skip: no 'format:check' script"
 
 # ===== Combined Runner =====
 run-all:

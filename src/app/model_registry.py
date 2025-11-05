@@ -18,6 +18,7 @@ import os
 
 REGISTRY_ENV_VAR = "TP_MODEL_REGISTRY"
 _REGISTRY_FILENAME = "model_registry.json"
+_REG_PATH = Path(__file__).with_name("model_registry.json")
 
 
 class ModelRegistryError(RuntimeError):
@@ -190,3 +191,17 @@ def available_model_ids() -> Iterable[str]:
 
     registry = get_registry()
     return [model.model_id for model in registry.available_models()]
+
+
+def resolve_model(preferred: Optional[str]) -> str:
+    data = json.loads(_REG_PATH.read_text(encoding="utf-8"))
+    default_id = data.get("default") or "latin_model:1.0.0"
+    models = {m["id"]: m for m in data.get("models", [])}
+    if preferred and preferred in models and models[preferred].get("available", False):
+        return preferred
+    if default_id in models and models[default_id].get("available", False):
+        return default_id
+    for m in data.get("models", []):
+        if m.get("available", False):
+            return m["id"]
+    return default_id
