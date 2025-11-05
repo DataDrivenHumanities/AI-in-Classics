@@ -1,3 +1,14 @@
+"""
+clean_xml.py parses greek xml files into raw text files, maintaining file structure but eliminating xml elements
+and metadata. This script can be modified to store and use metadata, as it currently collects author and title, but
+does nothing with this information.
+
+The raw xml is picked up from <root>/data/greek/original_xml directory, and the output is stored in
+<root>/data/greek/cleaned_text
+
+The output text is ready for lemmatization.
+"""
+
 import os
 import re
 import xml.etree.ElementTree as ET
@@ -56,14 +67,16 @@ def get_all_xml_text(file_path):
                 in_text = True
             elif tag == 'head':  # can add more tag searches to add more metadata as needed
                 metadata.append(f"Head: {element.text}")
+            elif tag == 'note':
+                continue
 
             if in_text and element.text:
                 all_text.append(element.text.strip())
         return " ".join(all_text), author, title, metadata
     except FileNotFoundError:
-        return "Error: XML file not found"
+        return "Error: XML file not found", -1, -1, -1,
     except ET.ParseError as e:
-        return f"Error parsing XML: {e}"
+        return f"Error parsing XML: {e}", -1, -1, -1
 
 def clean_xml(directory_path, save_directory):
     """
@@ -84,6 +97,8 @@ def clean_xml(directory_path, save_directory):
         file_path = directory_path + "/" + filename
 
         xml_text, author, title, metadata = get_all_xml_text(file_path)
+        if author == -1 or title == -1 or metadata == -1:
+            return f"Error in get_all_xml_test: {xml_text}"
 
         save_path = get_save_path(save_directory, filename)
         with open(save_path, "w", encoding="utf-8") as f:
@@ -95,7 +110,7 @@ if __name__ == "__main__":
     test_path = parent + "/script_test"
     test_mode = False
 
-    output_path = "./cleaned_xml"
+    output_path = "data/greek/raw_text_from_xml"
     if test_mode:
         output = clean_xml(test_path, output_path)
         print(f"script_test xml parsing complete.")
