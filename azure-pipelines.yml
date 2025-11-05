@@ -53,14 +53,15 @@ steps:
       versionSpec: '3.11.9'
       architecture: 'x64'
 
-  # 3) Create venv + install deps (call the venv’s interpreter explicitly)
+  # 3) Create venv + deps (fix requirements path)
   - powershell: |
       $ErrorActionPreference = 'Stop'
       python -m venv .venv
       .\.venv\Scripts\python.exe -m pip install -U pip
-      .\.venv\Scripts\python.exe -m pip install -r etl/requirements.txt
+      .\.venv\Scripts\python.exe -m pip install -r "$(Build.SourcesDirectory)\src\Lemmatizer-LTN\etl\requirements.txt"
     displayName: "Create venv + deps"
 
+  # 4) Materialize Google SA JSON (unchanged)
   - powershell: |
       $ErrorActionPreference = 'Stop'
       $bytes = [Convert]::FromBase64String($env:GOOGLE_SERVICE_ACCOUNT_JSON_BASE64)
@@ -69,30 +70,42 @@ steps:
     env:
       GOOGLE_SERVICE_ACCOUNT_JSON_BASE64: $(GOOGLE_SERVICE_ACCOUNT_JSON_BASE64)
 
+  # 5) Scrape → CSVs (ensure out/ exists; call script via absolute path)
   - powershell: |
       $ErrorActionPreference = 'Stop'
-      .\.venv\Scripts\python.exe "$(SCRAPER_PATH)" --lemmas-out "$(LEMMA_CSV)" --forms-out "$(FORM_CSV)"
+      $lemOut = "$(Build.SourcesDirectory)\src\Lemmatizer-LTN\out\lemmas.csv"
+      $frmOut = "$(Build.SourcesDirectory)\src\Lemmatizer-LTN\out\forms.csv"
+      New-Item -ItemType Directory -Force -Path (Split-Path $lemOut) | Out-Null
+      .\.venv\Scripts\python.exe "$(Build.SourcesDirectory)\src\Lemmatizer-LTN\tools\scrape_tables.py" `
+        --lemmas-out "$lemOut" `
+        --forms-out  "$frmOut"
     displayName: "Scrape → CSVs"
 
+  # 6) Upload CSVs to Google Drive (fix script path)
   - powershell: |
       $ErrorActionPreference = 'Stop'
-      .\.venv\Scripts\python.exe etl/upload_to_drive.py `
+      .\.venv\Scripts\python.exe "$(Build.SourcesDirectory)\src\Lemmatizer-LTN\etl\upload_to_drive.py" `
         --service-account-json service_account.json `
         --folder-id "$(GOOGLE_DRIVE_FOLDER_ID)" `
-        --files "$(LEMMA_CSV)" "$(FORM_CSV)"
+        --files "$(Build.SourcesDirectory)\src\Lemmatizer-LTN\out\lemmas.csv" `
+                "$(Build.SourcesDirectory)\src\Lemmatizer-LTN\out\forms.csv"
     displayName: "Upload CSVs to Google Drive"
     env:
       GOOGLE_DRIVE_FOLDER_ID: $(GOOGLE_DRIVE_FOLDER_ID)
 
+  # 7) Init schema + Load CSVs (point to ops/init_db.sql under the subfolder)
   - powershell: |
       $ErrorActionPreference = 'Stop'
       $py = ".\.venv\Scripts\python.exe"
+      $projectRoot = "$(Build.SourcesDirectory)\src\Lemmatizer-LTN"
+
       $script = @'
       import os, subprocess, sys
       import psycopg2
 
+      project_root = os.environ["PROJECT_ROOT"]
       dsn = os.environ["DATABASE_URL"]
-      sql_path = os.path.join("ops", "init_db.sql")
+      sql_path = os.path.join(project_root, "ops", "init_db.sql")
 
       with open(sql_path, "r", encoding="utf-8") as f:
           init_sql = f.read()
@@ -104,17 +117,19 @@ steps:
       print("Schema initialized.")
 
       subprocess.check_call([
-          sys.executable, "etl/load_to_postgres.py",
+          sys.executable, os.path.join(project_root, "etl", "load_to_postgres.py"),
           "--db", dsn,
           "--lemmas", os.environ["LEMMA_CSV"],
           "--forms",  os.environ["FORM_CSV"],
       ])
       '@
+
       $scriptPath = Join-Path $PWD "run_init_and_load.py"
       Set-Content -Path $scriptPath -Value $script -Encoding UTF8
       & $py $scriptPath
     displayName: "Init schema + Load CSVs"
     env:
+      PROJECT_ROOT: $(Build.SourcesDirectory)\src\Lemmatizer-LTN
       DATABASE_URL: $(DATABASE_URL)
-      LEMMA_CSV: $(LEMMA_CSV)
-      FORM_CSV: $(FORM_CSV)
+      LEMMA_CSV: $(Build.SourcesDirectory)\src\Lemmatizer-LTN\out\lemmas.csv
+      FORM_CSV: $(Build.SourcesDirectory)\src\Lemmatizer-LTN\out\forms.csv
