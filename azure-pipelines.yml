@@ -16,13 +16,39 @@ pool:
 steps:
   - powershell: |
       $ErrorActionPreference = 'Stop'
-      py -3.11 --version
-      py -3.11 -m pip install -U pip
-      py -3.11 -m venv .venv
+
+      # Allow the Python launcher to auto-install via winget if possible
+      $env:PYLAUNCHER_ALLOW_INSTALL = "1"
+
+      function Test-Py311 {
+        try { & py -3.11 -c "import sys; print(sys.version)" | Out-Null; $true } catch { $false }
+      }
+
+      if (-not (Test-Py311)) {
+        Write-Host "Python 3.11 not found. Attempting installation via winget..."
+        try {
+          winget source update | Out-Null
+          winget install -e --id Python.Python.3.11 `
+            --accept-source-agreements --accept-package-agreements --silent
+        } catch {
+          Write-Warning "winget install failed; falling back to python.org installer."
+          $url = "https://www.python.org/ftp/python/3.11.9/python-3.11.9-amd64.exe"
+          $exe = Join-Path $env:TEMP "py311-installer.exe"
+          Invoke-WebRequest -Uri $url -OutFile $exe
+          & $exe /quiet InstallAllUsers=0 PrependPath=1 Include_pip=1 TargetDir="$env:LocalAppData\Programs\Python\Python311"
+        }
+      }
+
+      # Verify and set up the venv
+      & py -3.11 --version
+      & py -3.11 -m pip install -U pip
+      & py -3.11 -m venv .venv
+
+      # Activate and install your requirements
       Set-ExecutionPolicy Bypass -Scope Process -Force
       .\.venv\Scripts\Activate.ps1
       pip install -r etl/requirements.txt
-    displayName: "Use preinstalled Python 3.11 + deps"
+    displayName: "Install Python 3.11 if missing + deps"
 
   - powershell: |
       $ErrorActionPreference = 'Stop'
