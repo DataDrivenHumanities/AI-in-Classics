@@ -83,9 +83,13 @@ steps:
     timeoutInMinutes: 120
 
   - powershell: |
-      $json = Get-Content -Raw service_account.json | ConvertFrom-Json
-      "Service account: $($json.client_email)"
-    displayName: "Show service account email"
+      $ErrorActionPreference = 'Stop'
+      .\.venv\Scripts\python.exe "$(Build.SourcesDirectory)\src\Lemmatizer-LTN\etl\upload_to_drive.py" `
+        --service-account-json service_account.json `
+        --folder-id root `
+        --files "$(Build.SourcesDirectory)\src\Lemmatizer-LTN\out"
+    displayName: "Upload to SA root (sanity)"
+    timeoutInMinutes: 60
 
   # 6) Upload CSVs to Google Drive (fix script path)
   - powershell: |
