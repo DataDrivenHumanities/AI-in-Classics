@@ -1,6 +1,6 @@
 import streamlit as st
-from app_functions import *
-from src.app.settings import globals
+from app.app_functions import query_cb
+from app.settings import main_settings
 
 
 def app():
@@ -25,7 +25,7 @@ def app():
         query_input = st.text_input(
             label="Query Documents", help="Enter some keywords to search across texts."
         )
-        globals["query_input"] = query_input
+        main_settings["query_input"] = query_input
 
         save_corpus = st.checkbox(
             label="Save Corpus",
@@ -35,7 +35,7 @@ def app():
         query_button = st.button(
             label="Search", help="Execute query for given keywords."
         )
-        globals["query_button"] = query_button
+        main_settings["query_button"] = query_button
 
     if query_button:
         query_cb()

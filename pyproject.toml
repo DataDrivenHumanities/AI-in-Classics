@@ -41,6 +41,7 @@ vaderSentiment = "^3.3.2"
 fastapi = "^0.120.3"
 uvicorn = {extras = ["standard"], version = "^0.38.0"}
 pydantic = "^2.12.3"
+python-multipart = "^0.0.20"
 
 
 

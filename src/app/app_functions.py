@@ -14,7 +14,7 @@ from cltk.lemmatize.grc import GreekBackoffLemmatizer
 from sklearn.feature_extraction.text import CountVectorizer
 
 import streamlit as st
-from src.app.settings import globals
+from app.settings import main_settings
 import dill
 import multiprocessing as mp
 
@@ -51,8 +51,8 @@ except Exception:
 
 
 def dtm_cb():
-    DOC_TERM_MATRIX = globals["DOC_TERM_MATRIX"]
-    VOCABULARY = globals["VOCABULARY"]
+    DOC_TERM_MATRIX = main_settings["DOC_TERM_MATRIX"]
+    VOCABULARY = main_settings["VOCABULARY"]
     sorted_vocab = sorted(list(VOCABULARY.keys()))
 
     # display data
@@ -98,9 +98,9 @@ def dtm_cb():
 def dir_path_cb():
     global HISTORY
     global PREPROCESS_CHECKPOINT
-    FULL_TEXTS_PATH = globals["FULL_TEXTS_PATH"]
-    PREPROCESSED_TEXTS_PATH = globals["PREPROCESSED_TEXTS_PATH"]
-    dir_path = os.path.abspath(path=globals["dir_path_input"])
+    FULL_TEXTS_PATH = main_settings["FULL_TEXTS_PATH"]
+    PREPROCESSED_TEXTS_PATH = main_settings["PREPROCESSED_TEXTS_PATH"]
+    dir_path = os.path.abspath(path=main_settings["dir_path_input"])
 
     # debugging
     if DEBUG:
@@ -139,8 +139,8 @@ def dir_path_cb():
                 body="WARNING (DIRECTORY PATH CALLBACK): No files detected in directory path:"
             )
 
-        globals["FULL_TEXTS_PATH"] = dir_path
-        globals["UPLOADED_DATA_NAME"] = dir_path
+        main_settings["FULL_TEXTS_PATH"] = dir_path
+        main_settings["UPLOADED_DATA_NAME"] = dir_path
         PREPROCESS_CHECKPOINT = True
         st.success(
             body=f'SUCCESS (DIRECTORY PATH CALLBACK): Confirmed directory path. {"Path has changed since last load." if source_changed else "Same path as last load."}'
@@ -151,13 +151,13 @@ def dir_path_cb():
 
 def csv_upload_cb():
     global PREPROCESS_CHECKPOINT
-    FULL_TEXTS_PATH = globals["FULL_TEXTS_PATH"] = "./full_texts/"
-    PREPROCESSED_TEXTS_PATH = globals["PREPROCESSED_TEXTS_PATH"]
-    csv_file = globals["csv_file"]
+    FULL_TEXTS_PATH = main_settings["FULL_TEXTS_PATH"] = "./full_texts/"
+    PREPROCESSED_TEXTS_PATH = main_settings["PREPROCESSED_TEXTS_PATH"]
+    csv_file = main_settings["csv_file"]
 
     # check for different data source than last load
     source_changed = False
-    if globals["UPLOADED_DATA_NAME"] != csv_file.name:
+    if main_settings["UPLOADED_DATA_NAME"] != csv_file.name:
         source_changed = True
 
         # resetting temporary directories
@@ -170,7 +170,7 @@ def csv_upload_cb():
         pd.read_csv(file_path_or_buffer=csv_data)
         st.dataframe(data=csv_data)
 
-    globals["UPLOADED_DATA_NAME"] = csv_file.name
+    main_settings["UPLOADED_DATA_NAME"] = csv_file.name
     PREPROCESS_CHECKPOINT = True
     st.success(
         body=f'SUCCESS: Confirmed directory path. {"CSV has changed since last load." if source_changed else "Same CSV as last load."}'
@@ -180,13 +180,13 @@ def csv_upload_cb():
 def load_cb():
     preprocess_texts()
     DOC_TERM_MATRIX = doc_term_matrix()
-    globals["DOC_TERM_MATRIX"] = DOC_TERM_MATRIX
+    main_settings["DOC_TERM_MATRIX"] = DOC_TERM_MATRIX
 
 
 def query_cb():
-    DOC_TERM_MATRIX = globals["DOC_TERM_MATRIX"]
-    VOCABULARY = globals["VOCABULARY"]
-    query_input = globals["query_input"]
+    DOC_TERM_MATRIX = main_settings["DOC_TERM_MATRIX"]
+    VOCABULARY = main_settings["VOCABULARY"]
+    query_input = main_settings["query_input"]
     kws = lemmatizer.lemmatize(
         tokens=list([token for token in cltk_normalize(text=query_input).split()])
     )
@@ -208,7 +208,7 @@ def query_cb():
 
 def doc_term_matrix():
     global DTM_CHECKPOINT
-    PREPROCESSED_TEXTS_PATH = globals["PREPROCESSED_TEXTS_PATH"]
+    PREPROCESSED_TEXTS_PATH = main_settings["PREPROCESSED_TEXTS_PATH"]
 
     # validity checks
     if not DTM_CHECKPOINT:
@@ -241,8 +241,8 @@ def preprocess_texts():
     global PREPROCESS_CHECKPOINT
     global DTM_CHECKPOINT
     DTM_CHECKPOINT = False
-    FULL_TEXTS_PATH = globals["FULL_TEXTS_PATH"]
-    PREPROCESSED_TEXTS_PATH = globals["PREPROCESSED_TEXTS_PATH"]
+    FULL_TEXTS_PATH = main_settings["FULL_TEXTS_PATH"]
+    PREPROCESSED_TEXTS_PATH = main_settings["PREPROCESSED_TEXTS_PATH"]
 
     # validity checks
     if not PREPROCESS_CHECKPOINT:

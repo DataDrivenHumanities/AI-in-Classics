@@ -1,4 +1,4 @@
-globals = dict(
+main_settings = dict(
     {
         "UPLOADED_DATA_NAME": None,
         "FULL_TEXTS_PATH": None,

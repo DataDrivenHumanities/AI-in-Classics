@@ -1,7 +1,7 @@
 import numpy as np
 import streamlit as st
-from app_functions import *
-from src.app.settings import globals
+from app.app_functions import dir_path_cb, load_cb, csv_upload_cb
+from app.settings import main_settings
 
 
 def app():
@@ -23,19 +23,19 @@ def app():
         ),
         help="Choose mode of accessing data for querying.",
     )
-    globals["selector"] = selector
+    main_settings["selector"] = selector
 
     # control flow for type of data input
     if selector == "Directory Path":
         dir_path_input = st.text_input(
             label="Directory Path", help="Enter path to directory of texts:"
         )
-        globals["dir_path_input"] = dir_path_input
+        main_settings["dir_path_input"] = dir_path_input
 
         dir_path_button = st.button(
             label="Load", help="Check for existence of directory and texts."
         )
-        globals["dir_path_button"] = dir_path_button
+        main_settings["dir_path_button"] = dir_path_button
 
         if dir_path_input or dir_path_button:
             dir_path_cb()
@@ -48,9 +48,9 @@ def app():
             accept_multiple_files=False,
             help="Upload CSV file containing source location in first column and text snippet in second column.",
         )
-        globals["csv_upload"] = csv_upload
+        main_settings["csv_upload"] = csv_upload
 
         if csv_upload:
-            globals["csv_upload"] = csv_upload
+            main_settings["csv_upload"] = csv_upload
             csv_upload_cb()
             load_cb()
