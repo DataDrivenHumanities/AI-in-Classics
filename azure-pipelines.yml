@@ -93,7 +93,6 @@ steps:
     env:
       GOOGLE_DRIVE_FOLDER_ID: $(GOOGLE_DRIVE_FOLDER_ID)
 
-  # 7) Init schema + Load CSVs (point to ops/init_db.sql under the subfolder)
   - powershell: |
       $ErrorActionPreference = 'Stop'
       $py = ".\.venv\Scripts\python.exe"
@@ -187,3 +186,44 @@ steps:
           Set-Content -Path aggregate_out_to_csvs.py -Value $code -Encoding UTF8
           & $py aggregate_out_to_csvs.py
     displayName: "Aggregate per-lemma CSVs → lemmas.csv + forms.csv"
+
+  # 7) Init schema + Load CSVs (point to ops/init_db.sql under the subfolder)
+  - powershell: |
+      $ErrorActionPreference = 'Stop'
+      $py = ".\.venv\Scripts\python.exe"
+      $projectRoot = "$(Build.SourcesDirectory)\src\Lemmatizer-LTN"
+
+      $script = @'
+      import os, subprocess, sys
+      import psycopg2
+
+      project_root = os.environ["PROJECT_ROOT"]
+      dsn = os.environ["DATABASE_URL"]
+      sql_path = os.path.join(project_root, "ops", "init_db.sql")
+
+      with open(sql_path, "r", encoding="utf-8") as f:
+          init_sql = f.read()
+
+      with psycopg2.connect(dsn) as conn:
+          with conn.cursor() as cur:
+              cur.execute(init_sql)
+
+      print("Schema initialized.")
+
+      subprocess.check_call([
+          sys.executable, os.path.join(project_root, "etl", "load_to_postgres.py"),
+          "--db", dsn,
+          "--lemmas", os.environ["LEMMA_CSV"],
+          "--forms",  os.environ["FORM_CSV"],
+      ])
+      '@
+
+      $scriptPath = Join-Path $PWD "run_init_and_load.py"
+      Set-Content -Path $scriptPath -Value $script -Encoding UTF8
+      & $py $scriptPath
+    displayName: "Init schema + Load CSVs"
+    env:
+      PROJECT_ROOT: $(Build.SourcesDirectory)\src\Lemmatizer-LTN
+      DATABASE_URL: $(DATABASE_URL)
+      LEMMA_CSV: $(Build.SourcesDirectory)\src\Lemmatizer-LTN\out\lemmas.csv
+      FORM_CSV: $(Build.SourcesDirectory)\src\Lemmatizer-LTN\out\forms.csv
