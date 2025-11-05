@@ -2,8 +2,8 @@
 PYTHON        ?= python3
 PIP           ?= pip3
 PORT          ?= 8501
-APP_ENTRY     ?= src/app/app.py
-STREAMLIT_APP ?= src/app/app.py
+APP_ENTRY     ?= src/app/server_streamlit.py
+STREAMLIT_APP ?= src/app/server_streamlit.py
 
 # Ollama
 OLLAMA_HOST   ?= http://localhost:11434

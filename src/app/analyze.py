@@ -1,10 +1,10 @@
 import streamlit as st
-from app_functions import *
-from globals import globals
+from app.app_functions import dtm_cb
+from app.settings import main_settings
 
 
-def app():
-    PREPROCESSED_TEXTS_PATH = globals["PREPROCESSED_TEXTS_PATH"]
+def render_analyze():
+    PREPROCESSED_TEXTS_PATH = main_settings["PREPROCESSED_TEXTS_PATH"]
 
     # check for preprocessed texts
     if (
@@ -23,7 +23,7 @@ def app():
         label="Document Term Matrix",
         help="Compute frequency of each word stem for each document.",
     )
-    globals["dtm_button"] = dtm_button
+    main_settings["dtm_button"] = dtm_button
 
     if dtm_button:
         dtm_cb()

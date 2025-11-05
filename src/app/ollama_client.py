@@ -12,7 +12,7 @@ except Exception as e:
 
 
 try:
-    import model_registry as model_cfg
+    import app.model_registry as model_cfg
 except Exception:
     model_cfg = None
 
