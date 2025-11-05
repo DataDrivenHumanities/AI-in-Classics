@@ -1,3 +1,10 @@
+# HTTP + parsing
+aiohttp>=3.8
+beautifulsoup4>=4.12
+
+# Google Drive
 google-api-python-client
 google-auth
+
+# DB
 psycopg[binary]>=3
