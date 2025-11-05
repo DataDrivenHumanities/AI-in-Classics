@@ -97,39 +97,93 @@ steps:
   - powershell: |
       $ErrorActionPreference = 'Stop'
       $py = ".\.venv\Scripts\python.exe"
-      $projectRoot = "$(Build.SourcesDirectory)\src\Lemmatizer-LTN"
+      $proj = "$(Build.SourcesDirectory)\src\Lemmatizer-LTN"
+      $code = @'
+      import csv, os, re, unicodedata, glob
+      from urllib.parse import urlparse, parse_qs
 
-      $script = @'
-      import os, subprocess, sys
-      import psycopg2
+      OUT_DIR   = os.path.join(r"$(Build.SourcesDirectory)", r"src\Lemmatizer-LTN\out")
+      LEMMA_CSV = os.path.join(OUT_DIR, "lemmas.csv")
+      FORM_CSV  = os.path.join(OUT_DIR, "forms.csv")
 
-      project_root = os.environ["PROJECT_ROOT"]
-      dsn = os.environ["DATABASE_URL"]
-      sql_path = os.path.join(project_root, "ops", "init_db.sql")
+      def strip_accents(s):
+          if not s: return ""
+          nf = unicodedata.normalize("NFD", s)
+          return "".join(ch for ch in nf if not unicodedata.combining(ch))
 
-      with open(sql_path, "r", encoding="utf-8") as f:
-          init_sql = f.read()
+      def norm(s):
+          s = strip_accents(s).lower()
+          s = re.sub(r"[^a-z0-9]+", "", s)
+          return s
 
-      with psycopg2.connect(dsn) as conn:
-          with conn.cursor() as cur:
-              cur.execute(init_sql)
+      def lemma_code_from_url(u):
+          try:
+              q = parse_qs(urlparse(u).query)
+              return (q.get("lemma") or [None])[0]
+          except Exception:
+              return None
 
-      print("Schema initialized.")
+      # Collect inputs
+      paths = sorted(glob.glob(os.path.join(OUT_DIR, "*.csv")))
+      # Exclude outputs if they exist (re-entrancy)
+      paths = [p for p in paths if os.path.basename(p) not in ("lemmas.csv", "forms.csv")]
 
-      subprocess.check_call([
-          sys.executable, os.path.join(project_root, "etl", "load_to_postgres.py"),
-          "--db", dsn,
-          "--lemmas", os.environ["LEMMA_CSV"],
-          "--forms",  os.environ["FORM_CSV"],
-      ])
+      lemmas = {}  # key: lemma_nod -> (lemma_code, lemma_nod, lemma_diac, pos, gender, page_url)
+      forms  = []  # rows for forms.csv
+
+      for p in paths:
+          with open(p, newline="", encoding="utf-8") as f:
+              r = csv.DictReader(f)
+              rows = list(r)
+              if not rows:
+                  continue
+              # Use the first row to get lemma-level attributes
+              r0 = rows[0]
+              lemma_text = r0.get("lemma_text","") or ""
+              pos        = r0.get("pos","") or ""
+              page_url   = r0.get("page_url","") or ""
+              lnod       = norm(lemma_text)
+              lcode      = lemma_code_from_url(page_url)
+              # Keep first-seen; update sparsely if new info appears
+              if lnod not in lemmas:
+                  lemmas[lnod] = (lcode, lnod, lemma_text, pos, "", page_url)
+
+              # Build forms rows: one row per table entry
+              for rr in rows:
+                  val = (rr.get("value") or "").strip()
+                  if not val:
+                      continue
+                  label = rr.get("label","") or ""
+                  # We’ll keep morphology mostly blank for now; label/contexts retained
+                  forms.append((
+                      lnod,                 # lemma_nod
+                      norm(val),            # form_nod
+                      val,                  # form_diac
+                      label,                # label
+                      "", "", "",           # mood, tense, voice
+                      "", "", "",           # person, number, gender
+                      "", "",               # case, degree
+                      rr.get("page_url","") # page_url
+                  ))
+
+      # Write lemmas.csv
+      os.makedirs(OUT_DIR, exist_ok=True)
+      with open(LEMMA_CSV, "w", newline="", encoding="utf-8") as f:
+          w = csv.writer(f)
+          w.writerow(["lemma_code","lemma_nod","lemma_diac","pos","gender","page_url"])
+          for tup in lemmas.values():
+              w.writerow(tup)
+
+      # Write forms.csv
+      with open(FORM_CSV, "w", newline="", encoding="utf-8") as f:
+          w = csv.writer(f)
+          w.writerow(["lemma_nod","form_nod","form_diac","label",
+                      "mood","tense","voice","person","number","gender","case","degree","page_url"])
+          w.writerows(forms)
+
+      print(f"Wrote {len(lemmas)} lemmas -> {LEMMA_CSV}")
+      print(f"Wrote {len(forms)}  forms  -> {FORM_CSV}")
       '@
-
-      $scriptPath = Join-Path $PWD "run_init_and_load.py"
-      Set-Content -Path $scriptPath -Value $script -Encoding UTF8
-      & $py $scriptPath
-    displayName: "Init schema + Load CSVs"
-    env:
-      PROJECT_ROOT: $(Build.SourcesDirectory)\src\Lemmatizer-LTN
-      DATABASE_URL: $(DATABASE_URL)
-      LEMMA_CSV: $(Build.SourcesDirectory)\src\Lemmatizer-LTN\out\lemmas.csv
-      FORM_CSV: $(Build.SourcesDirectory)\src\Lemmatizer-LTN\out\forms.csv
+          Set-Content -Path aggregate_out_to_csvs.py -Value $code -Encoding UTF8
+          & $py aggregate_out_to_csvs.py
+    displayName: "Aggregate per-lemma CSVs → lemmas.csv + forms.csv"
