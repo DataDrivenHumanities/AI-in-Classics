@@ -1,4 +1,4 @@
-# AI in Classics [wip]
+# AI in Classics
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
@@ -14,10 +14,10 @@ This project looks at various languages and runs anlysis on the scripture using 
 
 ## Features
 
-- Feature one
-- Feature
-- Feature
-- Feature
+- Search Functionality
+- Notebook Integration for running juypter notebooks
+- Chat features
+- Switch between various LLM's
 
 ## Contributing
 
@@ -39,8 +39,8 @@ to run this project locally See `dev.md` for setting up your workspace or click 
 
 ## Authors
 
-- [@alxxjohn](https://www.github.com/alxxjohn)
-- byron
-- ryan
-- jake
-- duncan
+- Alex John [@alxxjohn](https://www.github.com/alxxjohn)
+- Byron Boatright [@bboatright01](https://github.com/bboatright01)
+- Ryan Wilsom [@wilsonr8](https://github.com/willsonr8)
+- Duncan Fuller [@df-ufgit](https://github.com/df-ufgit)
+- Jake Morotta [@j-marotta](https://github.com/j-marotta)
