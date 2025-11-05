@@ -73,13 +73,11 @@ steps:
   # 5) Scrape → CSVs (ensure out/ exists; call script via absolute path)
   - powershell: |
       $ErrorActionPreference = 'Stop'
-      $lemOut = "$(Build.SourcesDirectory)\src\Lemmatizer-LTN\out\lemmas.csv"
-      $frmOut = "$(Build.SourcesDirectory)\src\Lemmatizer-LTN\out\forms.csv"
-      New-Item -ItemType Directory -Force -Path (Split-Path $lemOut) | Out-Null
+      $out = "$(Build.SourcesDirectory)\src\Lemmatizer-LTN\out"
+      New-Item -ItemType Directory -Force -Path $out | Out-Null
       .\.venv\Scripts\python.exe "$(Build.SourcesDirectory)\src\Lemmatizer-LTN\tools\scrape_tables.py" `
-        --lemmas-out "$lemOut" `
-        --forms-out  "$frmOut"
-    displayName: "Scrape → CSVs"
+        --outdir "$out" --dynamic --start 1 --step 50
+    displayName: "Scrape → per-lemma CSVs"
 
   # 6) Upload CSVs to Google Drive (fix script path)
   - powershell: |
@@ -87,9 +85,8 @@ steps:
       .\.venv\Scripts\python.exe "$(Build.SourcesDirectory)\src\Lemmatizer-LTN\etl\upload_to_drive.py" `
         --service-account-json service_account.json `
         --folder-id "$(GOOGLE_DRIVE_FOLDER_ID)" `
-        --files "$(Build.SourcesDirectory)\src\Lemmatizer-LTN\out\lemmas.csv" `
-                "$(Build.SourcesDirectory)\src\Lemmatizer-LTN\out\forms.csv"
-    displayName: "Upload CSVs to Google Drive"
+        --files "$(Build.SourcesDirectory)\src\Lemmatizer-LTN\out"
+    displayName: "Upload all CSVs under out/ to Google Drive"
     env:
       GOOGLE_DRIVE_FOLDER_ID: $(GOOGLE_DRIVE_FOLDER_ID)
 
