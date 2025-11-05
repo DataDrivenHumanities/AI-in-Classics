@@ -148,3 +148,5 @@ models/**/weights/
 *.gguf
 .ollama/
 /.idea
+
+/src/frontend/node_modules
