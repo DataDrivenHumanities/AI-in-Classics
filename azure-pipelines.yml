@@ -14,27 +14,32 @@ pool:
   name: Default
 
 steps:
-  - pwsh: |
+  - powershell: |
+      $ErrorActionPreference = 'Stop'
       py -3.11 --version
       py -3.11 -m pip install -U pip
       py -3.11 -m venv .venv
+      Set-ExecutionPolicy Bypass -Scope Process -Force
       .\.venv\Scripts\Activate.ps1
       pip install -r etl/requirements.txt
     displayName: "Use preinstalled Python 3.11 + deps"
 
-  - pwsh: |
+  - powershell: |
+      $ErrorActionPreference = 'Stop'
       $bytes = [Convert]::FromBase64String($env:GOOGLE_SERVICE_ACCOUNT_JSON_BASE64)
       [IO.File]::WriteAllBytes("service_account.json", $bytes)
     displayName: "Materialize Google SA JSON"
     env:
       GOOGLE_SERVICE_ACCOUNT_JSON_BASE64: $(GOOGLE_SERVICE_ACCOUNT_JSON_BASE64)
 
-  - pwsh: |
+  - powershell: |
+      $ErrorActionPreference = 'Stop'
       .\.venv\Scripts\Activate.ps1
       python "$(SCRAPER_PATH)" --lemmas-out "$(LEMMA_CSV)" --forms-out "$(FORM_CSV)"
     displayName: "Scrape → CSVs"
 
-  - pwsh: |
+  - powershell: |
+      $ErrorActionPreference = 'Stop'
       .\.venv\Scripts\Activate.ps1
       python etl/upload_to_drive.py `
         --service-account-json service_account.json `
@@ -44,26 +49,37 @@ steps:
     env:
       GOOGLE_DRIVE_FOLDER_ID: $(GOOGLE_DRIVE_FOLDER_ID)
 
-  - pwsh: |
+  - powershell: |
+      $ErrorActionPreference = 'Stop'
       .\.venv\Scripts\Activate.ps1
-      python - << 'PY'
+
+      $script = @'
       import os, subprocess, sys
       import psycopg2
+
       dsn = os.environ["DATABASE_URL"]
-      sql_path = os.path.join("ops","init_db.sql")
+      sql_path = os.path.join("ops", "init_db.sql")
+
       with open(sql_path, "r", encoding="utf-8") as f:
           init_sql = f.read()
+
       with psycopg2.connect(dsn) as conn:
           with conn.cursor() as cur:
               cur.execute(init_sql)
+
       print("Schema initialized.")
+
       subprocess.check_call([
           sys.executable, "etl/load_to_postgres.py",
           "--db", dsn,
           "--lemmas", os.environ["LEMMA_CSV"],
           "--forms",  os.environ["FORM_CSV"],
       ])
-      PY
+      '@
+
+      $scriptPath = Join-Path $PWD "run_init_and_load.py"
+      Set-Content -Path $scriptPath -Value $script -Encoding UTF8
+      python $scriptPath
     displayName: "Init schema + Load CSVs"
     env:
       DATABASE_URL: $(DATABASE_URL)
