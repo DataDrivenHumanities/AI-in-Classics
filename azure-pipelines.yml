@@ -50,8 +50,8 @@ steps:
   - task: UsePythonVersion@0
     displayName: "Use Python 3.11.9"
     inputs:
-      versionSpec: '3.11.9'
-      architecture: 'x64'
+      versionSpec: "3.11.9"
+      architecture: "x64"
 
   # 3) Create venv + deps (fix requirements path)
   - powershell: |
@@ -81,15 +81,6 @@ steps:
         --index-concurrency 4 --lemma-concurrency 8 --delay 0.05
     displayName: "Scrape → per-lemma CSVs (100 pages test)"
     timeoutInMinutes: 120
-
-  - powershell: |
-      $ErrorActionPreference = 'Stop'
-      .\.venv\Scripts\python.exe "$(Build.SourcesDirectory)\src\Lemmatizer-LTN\etl\upload_to_drive.py" `
-        --service-account-json service_account.json `
-        --folder-id root `
-        --files "$(Build.SourcesDirectory)\src\Lemmatizer-LTN\out"
-    displayName: "Upload to SA root (sanity)"
-    timeoutInMinutes: 60
 
   # 6) Upload CSVs to Google Drive (fix script path)
   - powershell: |
