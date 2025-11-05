@@ -8,3 +8,4 @@ google-auth
 
 # DB
 psycopg[binary]>=3
+psycopg2-binary>=2.9

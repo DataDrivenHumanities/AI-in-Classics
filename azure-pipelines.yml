@@ -77,7 +77,7 @@ steps:
       New-Item -ItemType Directory -Force -Path $out | Out-Null
       .\.venv\Scripts\python.exe "$(Build.SourcesDirectory)\src\Lemmatizer-LTN\tools\scrape_tables.py" `
         --outdir "$out" `
-        --start 1 --step 1 --end 100 `
+        --start 1 --step 1 --end 2 `
         --index-concurrency 4 --lemma-concurrency 8 --delay 0.05
     displayName: "Scrape → per-lemma CSVs (100 pages test)"
     timeoutInMinutes: 120
