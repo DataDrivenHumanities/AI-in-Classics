@@ -82,6 +82,11 @@ steps:
     displayName: "Scrape → per-lemma CSVs (100 pages test)"
     timeoutInMinutes: 120
 
+  - powershell: |
+      $json = Get-Content -Raw service_account.json | ConvertFrom-Json
+      "Service account: $($json.client_email)"
+    displayName: "Show service account email"
+
   # 6) Upload CSVs to Google Drive (fix script path)
   - powershell: |
       $ErrorActionPreference = 'Stop'
