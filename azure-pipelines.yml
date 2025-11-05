@@ -14,42 +14,46 @@ pool:
   name: Default
 
 steps:
-  # 1) Seed Python 3.11.9 into the agent tool cache from the official NuGet package
+  # 1) Seed Python 3.11.9 into the agent tool cache from NuGet (no Store, no admin)
   - powershell: |
       $ErrorActionPreference = 'Stop'
       $version   = '3.11.9'
-      $cacheRoot = "$(Agent.ToolsDirectory)\Python\$version"
+      $cacheRoot = Join-Path "$(Agent.ToolsDirectory)" "Python\$version"
       $toolsDir  = Join-Path $cacheRoot 'x64'
 
-      if (-not (Test-Path $toolsDir)) {
+      if (-not (Test-Path (Join-Path $toolsDir 'python.exe'))) {
         New-Item -ItemType Directory -Force -Path $toolsDir | Out-Null
-        $pkgUrl = "https://www.nuget.org/api/v2/package/python/$version"
-        $pkgZip = Join-Path $env:TEMP "python-$version.nupkg"
-        $tmpDir = Join-Path $env:TEMP "py-extract-$version"
+        $pkgUrl  = "https://www.nuget.org/api/v2/package/python/$version"
+        $pkgFile = Join-Path $env:TEMP "python-$version.nupkg"
+        $tmpDir  = Join-Path $env:TEMP "py-extract-$version"
 
-        Invoke-WebRequest -Uri $pkgUrl -OutFile $pkgZip
+        Invoke-WebRequest -Uri $pkgUrl -OutFile $pkgFile
         if (Test-Path $tmpDir) { Remove-Item -Recurse -Force $tmpDir }
-        Expand-Archive -Path $pkgZip -DestinationPath $tmpDir
+        New-Item -ItemType Directory -Force -Path $tmpDir | Out-Null
+
+        # Extract .nupkg without renaming
+        Add-Type -AssemblyName System.IO.Compression.FileSystem
+        [IO.Compression.ZipFile]::ExtractToDirectory($pkgFile, $tmpDir)
+
         Copy-Item -Path (Join-Path $tmpDir 'tools\*') -Destination $toolsDir -Recurse -Force
 
-        # Mark the tool as complete for UsePythonVersion@0
-        New-Item -ItemType File -Path (Join-Path $cacheRoot 'x64.complete') | Out-Null
+        # Mark the cache as ready for UsePythonVersion
+        New-Item -ItemType File -Path (Join-Path $cacheRoot 'x64.complete') -Force | Out-Null
       }
 
       & "$toolsDir\python.exe" -V
       & "$toolsDir\python.exe" -m ensurepip --upgrade
       & "$toolsDir\python.exe" -m pip install -U pip
     displayName: "Seed Python 3.11.9 (NuGet) + ensurepip"
-    # If your firewall blocks nuget.org, mirror that URL internally.
 
-  # 2) Tell Azure Pipelines to use that Python (adds to PATH)
+  # 2) Put that Python on PATH
   - task: UsePythonVersion@0
     displayName: "Use Python 3.11.9"
     inputs:
       versionSpec: '3.11.9'
       architecture: 'x64'
 
-  # 3) Create venv and install deps (call the interpreter directly, avoid Store/py launcher)
+  # 3) Create venv + install deps (call the venv’s interpreter explicitly)
   - powershell: |
       $ErrorActionPreference = 'Stop'
       python -m venv .venv
