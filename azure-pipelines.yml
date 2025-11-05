@@ -76,8 +76,11 @@ steps:
       $out = "$(Build.SourcesDirectory)\src\Lemmatizer-LTN\out"
       New-Item -ItemType Directory -Force -Path $out | Out-Null
       .\.venv\Scripts\python.exe "$(Build.SourcesDirectory)\src\Lemmatizer-LTN\tools\scrape_tables.py" `
-        --outdir "$out" --dynamic --start 1 --step 50
-    displayName: "Scrape → per-lemma CSVs"
+        --outdir "$out" `
+        --start 1 --step 1 --end 100 `
+        --index-concurrency 4 --lemma-concurrency 8 --delay 0.05
+    displayName: "Scrape → per-lemma CSVs (100 pages test)"
+    timeoutInMinutes: 120
 
   # 6) Upload CSVs to Google Drive (fix script path)
   - powershell: |
