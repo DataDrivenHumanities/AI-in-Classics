@@ -14,7 +14,7 @@ from cltk.lemmatize.grc import GreekBackoffLemmatizer
 from sklearn.feature_extraction.text import CountVectorizer
 
 import streamlit as st
-from app.globals import globals
+from src.app.settings import globals
 import dill
 import multiprocessing as mp
 

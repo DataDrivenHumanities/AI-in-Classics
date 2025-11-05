@@ -6,7 +6,7 @@ import load
 import query
 import app_functions as app_func
 import model_registry as model_cfg
-from globals import globals  # noqa: F401
+from src.app.settings import globals  # noqa: F401
 import webUI as ui  # NEW: theming + tiny components
 
 try:

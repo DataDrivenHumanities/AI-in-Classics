@@ -1,6 +1,6 @@
 import streamlit as st
 from app_functions import *
-from globals import globals
+from src.app.settings import globals
 
 
 def app():
