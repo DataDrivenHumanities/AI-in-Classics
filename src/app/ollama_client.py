@@ -70,6 +70,7 @@ def _make_client(timeout_s: float) -> httpx.AsyncClient:
         limits=httpx.Limits(max_keepalive_connections=10, max_connections=10),
     )
 
+
 async def _repair_json_via_model(
     raw_text: str,
     model: str,
@@ -89,7 +90,13 @@ async def _repair_json_via_model(
         "stream": False,
         "format": "json",
         "raw": True,
-        "options": {"temperature": 0.0, "num_predict": 768, "top_p": 0.9, "stop": [], "mirostat": 0},
+        "options": {
+            "temperature": 0.0,
+            "num_predict": 768,
+            "top_p": 0.9,
+            "stop": [],
+            "mirostat": 0,
+        },
     }
     async with _make_client(timeout_s) as client:
         r = await client.post(f"{OLLAMA_HOST}/api/generate", json=payload)
@@ -198,8 +205,10 @@ async def generate_json(
             try:
                 payload = dict(base_payload)
                 if attempt > 0:
-                    shrink = 0.5 ** attempt
-                    payload["options"]["num_predict"] = max(256, int(num_predict * shrink))
+                    shrink = 0.5**attempt
+                    payload["options"]["num_predict"] = max(
+                        256, int(num_predict * shrink)
+                    )
                 r = await client.post(f"{OLLAMA_HOST}/api/generate", json=payload)
                 r.raise_for_status()
                 data = r.json()
@@ -220,7 +229,6 @@ async def generate_json(
                     repaired = await _repair_json_via_model(raw, model, timeout_s)
                     if repaired is not None:
                         return repaired, raw
-                    # if we still can't parse and have retries left, loop
                     if attempt >= retries:
                         break
             except (httpx.ReadTimeout, httpx.ConnectTimeout, httpx.HTTPError):
@@ -229,7 +237,6 @@ async def generate_json(
             attempt += 1
             await asyncio.sleep(0.5 * attempt)
 
-    # final minimal stub so the API never 500s due to JSONDecodeError
     return {
         "label": "neutral",
         "confidence": 0.5,

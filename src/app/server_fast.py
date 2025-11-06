@@ -343,9 +343,7 @@ async def analyze(body: AnalyzeBody):
             model_id = resolve_model(body.model_id)
             res = await _analyze_with_model(text, model_id)
             return JSONResponse(res)
-        # builtin flow (unchanged) ...
         res = _builtin_sentiment(text)
-        # optional translate fallback ...
         return JSONResponse(res)
     except (httpx.ReadTimeout, httpx.ConnectTimeout):
         raise HTTPException(status_code=504, detail="Model backend timeout")
