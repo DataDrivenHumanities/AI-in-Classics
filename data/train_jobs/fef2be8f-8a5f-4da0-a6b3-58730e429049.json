@@ -1,0 +1,15 @@
+{
+  "id": "fef2be8f-8a5f-4da0-a6b3-58730e429049",
+  "ts": "2025-11-06T22:18:33.559236Z",
+  "model_id": "latin_model:1.0.0",
+  "preset_name": "Test",
+  "filters": {
+    "tags": [
+      "test",
+      "eter"
+    ],
+    "limit": 4
+  },
+  "status": "queued",
+  "notes": "Attach your fine-tune script here (LoRA/RAG rebuild/prompt refresh)."
+}

@@ -13,6 +13,8 @@ from app.routers.chat_router import make_default_router as make_chat_router  # t
 from app.routers.chat_router import Message as ChatMessage
 from app.routers.sentiment_router import make_default_sentiment_router
 from app.routers import presets_router
+from app.routers import feedback_router
+from app.routers import train_router
 
 _VALID_LABELS = {"positive", "negative", "neutral"}
 _VALID = {"positive", "negative", "neutral"}
@@ -35,7 +37,8 @@ app.add_middleware(
 probing = ProbingRouter()
 app.include_router(probing.router, prefix="/api")
 app.include_router(presets_router.router)
-
+app.include_router(feedback_router.router)
+app.include_router(train_router.router)
 
 DEFAULT_OLLAMA_MODEL = os.getenv("DEFAULT_OLLAMA_MODEL", "llama3.1")
 chat_router = make_chat_router(DEFAULT_OLLAMA_MODEL)
