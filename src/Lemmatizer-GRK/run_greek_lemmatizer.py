@@ -148,11 +148,36 @@ class GreekLemmatizer:
     def normalize_greek_nfd(self, word: str) -> str:
         if not word:
             return ""
+
+        pattern = re.compile(
+            r"""
+            (?<!\S)                   # Ensure preceded by start or whitespace (lookbehind)
+            [\(\[]?                   # Optional opening parenthesis or bracket
+            (?:
+                [0-9]+(?:\.[0-9]+)?   # Numbers (allow trailing .digit sequence)
+                |                     # or
+                M{0,3}(?:CM|CD|D?C{0,3})
+                (?:XC|XL|L?X{0,3})
+                (?:IX|IV|V?I{0,3})
+            )
+            \.?                       # Optional trailing period
+            [\)\]]?                   # Optional closing parenthesis or bracket
+            (?!\S)                    # Ensure followed by end or whitespace (lookahead)
+            """,
+            re.IGNORECASE | re.VERBOSE
+        )
+
+        if pattern.fullmatch(word.strip()):
+            return ""
+
         decomposed = unicodedata.normalize('NFD', word)
         stripped = ''.join(c for c in decomposed if not unicodedata.combining(c))
         recomposed = unicodedata.normalize('NFC', stripped)
 
-        return recomposed.lower()
+        greek_only = re.sub(r"[^\u0370-\u03FF\u1F00-\u1FFF]", "", recomposed)
+        greek_only = greek_only.replace("ς", "σ")
+
+        return greek_only.lower()
     
     def lemmatize(self, word: str) -> List[Dict[str, Any]]:
         """
@@ -165,6 +190,9 @@ class GreekLemmatizer:
             List of possible lemmas with part of speech and definition
         """
         normalized_word = self.normalize_greek_nfd(word)
+        if normalized_word == "":
+            print(f"Returned empty string in normalization with word: {word}")
+            return []
         
         # Direct match in combined dictionary
         if normalized_word in self.combined_dict:
@@ -181,7 +209,7 @@ class GreekLemmatizer:
                         matches.append(entry)
             
             if matches:
-                print(f"Found stem matches for '{word}' using stem '{stem}'")
+                # print(f"Found stem matches for '{word}' using stem '{stem}'")
                 return matches[:5]  # Limit to top 5 matches
         
         return []

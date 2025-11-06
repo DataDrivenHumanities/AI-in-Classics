@@ -27,7 +27,6 @@ def split_dataset(input_path):
 def main():
     # split text corpus into train and test sets
     train_data, test_data = split_dataset("../../data/greek/lemmatized_text")
-    print(train_data)
     dataset = DatasetDict({
         "train": Dataset.from_list(train_data),
         "test": Dataset.from_list(test_data)
@@ -55,7 +54,7 @@ def main():
     )
 
     training_args = TrainingArguments(
-        output_dir="greekbert_v1/ancient-greek-text-classification-BERT",
+        output_dir="greekbert_v1/ancient-greek-text-classification-BERT-2",
         learning_rate=5e-5,
         per_device_train_batch_size=8,
         per_device_eval_batch_size=8,
@@ -81,7 +80,7 @@ def main():
     trainer.train()
 
     # --- 8. Save adapted model ---
-    trainer.save_model("./ancient-greek-text-classification-BERT-2")
+    trainer.save_model("greekbert_v1/ancient-greek-text-classification-BERT-2")
 
 if __name__ == "__main__":
     main()

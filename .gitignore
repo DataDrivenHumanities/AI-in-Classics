@@ -28,7 +28,7 @@ share/python-wheels/
 venv-greek-nlp
 venv-ml
 data/greek/*
-greekbert_v1/*
+src/SentimentAnalysisGreek/greekbert_v1/*
 MANIFEST
 
 # PyInstaller

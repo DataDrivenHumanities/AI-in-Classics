@@ -12,7 +12,6 @@ The output text is ready for lemmatization.
 import os
 import re
 import xml.etree.ElementTree as ET
-import numpy as np
 
 def strip_namespace(tag):
     """
@@ -106,11 +105,11 @@ def clean_xml(directory_path, save_directory):
     return "All xml files parsed"
 
 if __name__ == "__main__":
-    parent = "./original_xml"
+    parent = "./data/greek/original_xml"
     test_path = parent + "/script_test"
     test_mode = False
 
-    output_path = "data/greek/raw_text_from_xml"
+    output_path = "./data/greek/raw_text_from_xml"
     if test_mode:
         output = clean_xml(test_path, output_path)
         print(f"script_test xml parsing complete.")
