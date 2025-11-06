@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import os
+import httpx
 import pathlib
 import sys
 from typing import Dict, Iterable, List, Literal, Optional, Any
@@ -11,6 +12,7 @@ sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1]))
 from fastapi import FastAPI, HTTPException, UploadFile, File, Form
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse, StreamingResponse
+from fastapi import HTTPException
 from pydantic import BaseModel, Field
 
 
@@ -154,7 +156,7 @@ async def _analyze_with_model(text: str, model_id: str):
     )
 
     parsed, raw = await generate_json(
-        model_id, prompt, num_predict=2048, temperature=0.0
+        model_id, prompt, num_predict=768, temperature=0.0
     )
 
     label = str(parsed.get("label") or "").strip().lower()
@@ -336,23 +338,17 @@ def chat(req: ChatRequest):
 async def analyze(body: AnalyzeBody):
     text = body.text
     engine = (body.engine or "model").lower()
-
-    if engine == "model":
-        model_id = resolve_model(body.model_id)
-        res = await _analyze_with_model(text, model_id)
+    try:
+        if engine == "model":
+            model_id = resolve_model(body.model_id)
+            res = await _analyze_with_model(text, model_id)
+            return JSONResponse(res)
+        res = _builtin_sentiment(text)
         return JSONResponse(res)
-
-    res = _builtin_sentiment(text)
-    if res.get("translation") in (None, ""):
-        model_id = resolve_model(body.model_id)
-        try:
-            tr = await translate_en(model_id, text)
-            if tr:
-                res["translation"] = tr
-                res.setdefault("analysis", {}).update({"translator": "ollama"})
-        except Exception:
-            pass
-    return JSONResponse(res)
+    except (httpx.ReadTimeout, httpx.ConnectTimeout):
+        raise HTTPException(status_code=504, detail="Model backend timeout")
+    except httpx.HTTPError as e:
+        raise HTTPException(status_code=502, detail=f"Model backend error: {str(e)}")
 
 
 @app.post("/api/analyze/upload")

@@ -115,7 +115,7 @@ class SentimentRouter:
         self,
         text: str,
         *,
-        engine: str = "builtin",  # 'builtin' | 'model'
+        engine: str = "builtin",
         model_id: Optional[str] = None,
     ) -> SentimentResult:
         engine = (engine or "builtin").lower()
