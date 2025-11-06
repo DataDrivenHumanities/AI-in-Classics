@@ -3,8 +3,8 @@ from typing import Dict, Iterable, List, Optional, Tuple, Any
 import os
 import json
 import re
+import asyncio
 import httpx
-
 
 OLLAMA_HOST = os.getenv("OLLAMA_HOST", "http://localhost:11434")
 
@@ -15,7 +15,6 @@ except Exception as e:
         "The 'ollama' Python package is not installed. "
         "Install with 'poetry add ollama' or 'pip install ollama'."
     ) from e
-
 
 try:
     import app.model_registry as model_cfg
@@ -38,11 +37,60 @@ def _determine_default_model() -> str:
 DEFAULT_MODEL = _determine_default_model()
 
 
+def _coerce_result(obj: Dict[str, Any]) -> Dict[str, Any]:
+    return {
+        "label": obj.get("label") or "neutral",
+        "confidence": float(obj.get("confidence") or 0.5),
+        "scores": {
+            "positive": float(obj.get("scores", {}).get("positive", 0.25)),
+            "negative": float(obj.get("scores", {}).get("negative", 0.25)),
+            "neutral": float(obj.get("scores", {}).get("neutral", 0.5)),
+        },
+        "translation": obj.get("translation"),
+        "analysis": obj.get("analysis") or {},
+    }
+
+
+async def generate_analysis_only(model: str, text: str, timeout_s: float = 45.0) -> Dict[str, Any]:
+    prompt = (
+        "Return ONLY JSON with a single key 'analysis' whose value is an object that explains the sentiment.\n"
+        "Structure the 'analysis' object with keys: 'parts_of_speech' (array of {word, tag}), "
+        "'notable_words' (array of {word, note}), 'rationale' (string), and 'score_explanation' (string).\n"
+        "No extra keys. No prose outside JSON.\n\n"
+        f"Text:\n{text}"
+    )
+    payload = {
+        "model": model,
+        "prompt": prompt,
+        "stream": False,
+        "format": "json",
+        "raw": True,
+        "options": {
+            "temperature": 0.0,
+            "num_predict": 512,
+            "top_p": 0.9,
+            "stop": [],
+            "mirostat": 0,
+            "repeat_penalty": 1.1,
+        },
+    }
+    async with _make_client(timeout_s) as client:
+        r = await client.post(f"{OLLAMA_HOST}/api/generate", json=payload)
+        r.raise_for_status()
+        data = r.json()
+    raw = data.get("response") or ""
+    try:
+        parsed = json.loads(raw)
+    except Exception:
+        m = re.search(r"\{.*\}", raw, re.S)
+        parsed = json.loads(m.group(0)) if m else {"analysis": {}}
+    a = parsed.get("analysis") or {}
+    if not isinstance(a, dict):
+        a = {"rationale": str(a)}
+    return {"analysis": a}
+
+
 def ping(host: Optional[str] = None) -> bool:
-    """
-    health check against Ollama server.
-    Returns True if the server responds
-    """
     try:
         _ = ollama.list()
         return True
@@ -51,11 +99,6 @@ def ping(host: Optional[str] = None) -> bool:
 
 
 def ensure_model(model: str) -> None:
-    """
-    Ensure a model is available locally.
-    For hub models this will `pull` if missing.
-    For local Modelfile builds, you must have run `ollama create` already.
-    """
     try:
         tags = {m["model"] for m in ollama.list().get("models", [])}
         if model not in tags:
@@ -122,9 +165,6 @@ def chat_once(
     system: Optional[str] = None,
     temperature: Optional[float] = None,
 ) -> str:
-    """
-    Simple, non-streaming convenience wrapper.
-    """
     messages: List[Dict[str, str]] = []
     if system:
         messages.append({"role": "system", "content": system})
@@ -150,10 +190,6 @@ def chat_stream(
     model: str = DEFAULT_MODEL,
     temperature: Optional[float] = None,
 ) -> Iterable[str]:
-    """
-    Generator that yields tokens incrementally.
-    messages: [{"role": "system"|"user"|"assistant", "content": "..."}]
-    """
     kwargs = {"model": model, "messages": messages, "stream": True}
     if temperature is not None:
         kwargs["options"] = {"temperature": temperature}
@@ -179,13 +215,15 @@ async def generate_json(
     extra_options: Optional[Dict[str, Any]] = None,
     timeout_s: float = 60.0,
     retries: int = 1,
+    raw: bool = True,
+    out_format: str = "json",
 ) -> Tuple[Dict[str, Any], str]:
     base_payload: Dict[str, Any] = {
         "model": model,
         "prompt": prompt,
         "stream": False,
-        "format": "json",
-        "raw": True,
+        "format": out_format,
+        "raw": raw,
         "options": {
             "temperature": temperature,
             "num_predict": num_predict,
@@ -205,30 +243,26 @@ async def generate_json(
             try:
                 payload = dict(base_payload)
                 if attempt > 0:
-                    shrink = 0.5**attempt
-                    payload["options"]["num_predict"] = max(
-                        256, int(num_predict * shrink)
-                    )
+                    shrink = 0.5 ** attempt
+                    payload["options"]["num_predict"] = max(256, int(num_predict * shrink))
                 r = await client.post(f"{OLLAMA_HOST}/api/generate", json=payload)
                 r.raise_for_status()
                 data = r.json()
-                raw = data.get("response") or ""
-                last_raw = raw
+                raw_text = data.get("response") or ""
+                last_raw = raw_text
 
                 try:
-                    return json.loads(raw), raw
+                    return _coerce_result(json.loads(raw_text)), raw_text
                 except Exception:
-                    # try to extract {...}
-                    m = re.search(r"\{.*\}", raw, re.S)
+                    m = re.search(r"\{.*\}", raw_text, re.S)
                     if m:
                         try:
-                            return json.loads(m.group(0)), raw
+                            return _coerce_result(json.loads(m.group(0))), raw_text
                         except Exception:
                             pass
-                    # model-assisted repair
-                    repaired = await _repair_json_via_model(raw, model, timeout_s)
+                    repaired = await _repair_json_via_model(raw_text, model, timeout_s)
                     if repaired is not None:
-                        return repaired, raw
+                        return _coerce_result(repaired), raw_text
                     if attempt >= retries:
                         break
             except (httpx.ReadTimeout, httpx.ConnectTimeout, httpx.HTTPError):
@@ -237,13 +271,14 @@ async def generate_json(
             attempt += 1
             await asyncio.sleep(0.5 * attempt)
 
-    return {
+    return _coerce_result({
         "label": "neutral",
         "confidence": 0.5,
         "scores": {"positive": 0.25, "negative": 0.25, "neutral": 0.5},
         "translation": None,
-        "analysis": None,
-    }, last_raw
+        "analysis": {},
+    }), last_raw
+
 
 
 async def translate_en(model: str, text: str) -> Optional[str]:
@@ -290,8 +325,6 @@ async def generate_text(
     temperature: float = 0.0,
     num_predict: int = 16,
 ) -> str:
-    import httpx
-
     payload = {
         "model": model,
         "prompt": prompt,
@@ -311,3 +344,39 @@ async def generate_text(
         r.raise_for_status()
         data = r.json()
     return (data.get("response") or "").strip()
+
+
+async def generate_json_with_analysis(
+    model: str,
+    prompt: str,
+    *,
+    temperature: float = 0.0,
+    num_predict: int = 1024,
+    top_p: float = 0.9,
+    extra_options: Optional[Dict[str, Any]] = None,
+    timeout_s: float = 60.0,
+    retries: int = 1,
+    force_raw: Optional[bool] = None,
+    out_format: Optional[str] = None,
+) -> Tuple[Dict[str, Any], str]:
+    parsed, raw = await generate_json(
+        model,
+        prompt,
+        temperature=temperature,
+        num_predict=num_predict,
+        top_p=top_p,
+        extra_options=extra_options,
+        timeout_s=timeout_s,
+        retries=retries,
+        raw=(True if force_raw is None else force_raw),
+        out_format=(out_format or "json"),
+    )
+    if not parsed.get("analysis"):
+        try:
+            text_only = prompt.split("Text:", 1)[-1].strip()
+            add = await generate_analysis_only(model, text_only, timeout_s=min(45.0, timeout_s))
+            if add.get("analysis"):
+                parsed["analysis"] = add["analysis"]
+        except Exception:
+            parsed.setdefault("analysis", {})
+    return parsed, raw

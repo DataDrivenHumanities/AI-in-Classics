@@ -2376,7 +2376,7 @@ type = ["pytest-mypy"]
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.9,<3.12" 
-content-hash = "778dc55e602cb05dd30b64b6a786a59e0677827f766d4b7fcba1b8600c82e1b8"
+content-hash = "efa3ebf1461158300cdd14347e39186696578764ec6762b45c1fbd067045c583"
 
 [metadata.files]
 altair = [
