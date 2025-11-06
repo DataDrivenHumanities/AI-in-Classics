@@ -1,13 +1,16 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import React, { Fragment, useEffect, useRef, useState } from "react";
 import ModelModal from "@/components/ModelModal";
 import ModelSettingsModal, { ModelOptions } from "@/components/ModelSettingsModal";
+import FeedbackModal from "@/components/FeedbackModal";
+import ModelShopModal from "@/components/ModelShopModal";
+
 
 const API_BASE = process.env.NEXT_PUBLIC_API_BASE || "http://localhost:5050/api";
 const JUPYTERLITE_LAB = "/jlite/lab/index.html";
 
-type AnalyzeResponse = unknown;
+type AnalyzeResponse = any;
 
 export default function Analyzer() {
   const [model, setModel] = useState<string>("");
@@ -15,12 +18,15 @@ export default function Analyzer() {
   const [settingsOpen, setSettingsOpen] = useState<boolean>(false);
   const [notebookOpen, setNotebookOpen] = useState<boolean>(false);
   const [drawerOpen, setDrawerOpen] = useState<boolean>(false);
+  const [feedbackOpen, setFeedbackOpen] = useState<boolean>(false);
+  const [shopOpen, setShopOpen] = useState(false);
 
   const [text, setText] = useState<string>("");
   const [resp, setResp] = useState<AnalyzeResponse | null>(null);
   const [error, setError] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false);
   const [progress, setProgress] = useState<number>(0);
+  const [presetName, setPresetName] = useState<string>("Default");
 
   const fileRef = useRef<HTMLInputElement | null>(null);
   const controllerRef = useRef<AbortController | null>(null);
@@ -34,7 +40,6 @@ export default function Analyzer() {
     raw: true,
     format: "json",
   });
-  const [presetName, setPresetName] = useState<string>("Default");
 
   const hasResp = !!resp;
   const r: any = resp ?? {};
@@ -175,6 +180,72 @@ export default function Analyzer() {
     loading,
   };
 
+  function isPlainObject(v: any) {
+    return v && typeof v === "object" && !Array.isArray(v);
+  }
+
+  function toPercent(n: any) {
+    const x = Number(n);
+    if (Number.isFinite(x)) return `${(x * 100).toFixed(1)}%`;
+    return String(n);
+  }
+
+  function renderValue(val: any) {
+    if (Array.isArray(val)) {
+      const allPrimitive = val.every((x) => typeof x !== "object" || x === null);
+      if (allPrimitive) {
+        return (
+          <ul style={{ margin: 0, paddingLeft: 16 }}>
+            {val.map((item, i) => (
+              <li key={i}>{String(item)}</li>
+            ))}
+          </ul>
+        );
+      }
+      return (
+        <ul style={{ margin: 0, paddingLeft: 16 }}>
+          {val.map((obj, i) => (
+            <li key={i}>
+              {isPlainObject(obj)
+                ? Object.entries(obj)
+                    .map(([k, v]) => `${k}: ${String(v)}`)
+                    .join(" · ")
+                : String(obj)}
+            </li>
+          ))}
+        </ul>
+      );
+    }
+    if (isPlainObject(val)) {
+      const looksLikeScores =
+        Object.values(val).length > 0 &&
+        Object.values(val).every((v) => typeof v === "number" && v >= 0 && v <= 1);
+      if (looksLikeScores) {
+        return (
+          <div className="model-settings-grid">
+            {Object.entries(val).map(([k, v]) => (
+              <Fragment key={k}>
+                <div className="model-settings-label">{k}</div>
+                <div>{toPercent(v)}</div>
+              </Fragment>
+            ))}
+          </div>
+        );
+      }
+      return (
+        <div className="model-settings-grid">
+          {Object.entries(val).map(([k, v]) => (
+            <Fragment key={k}>
+              <div className="model-settings-label">{k}</div>
+              <div>{typeof v === "object" ? JSON.stringify(v) : String(v)}</div>
+            </Fragment>
+          ))}
+        </div>
+      );
+    }
+    return <span>{String(val)}</span>;
+  }
+
   return (
     <div className="app">
       <header className="header">
@@ -285,6 +356,18 @@ export default function Analyzer() {
                   </button>
                 </div>
                 <div className="tool-card">
+                  <div className="tool-title">Model Shop</div>
+                  <button
+                    className="tool-cta"
+                    onClick={() => {
+                      setShopOpen(true);
+                      setDrawerOpen(false);
+                    }}
+                  >
+                    Open
+                  </button>
+                </div>
+                <div className="tool-card">
                   <div className="tool-title">Reset</div>
                   <button
                     className="tool-cta"
@@ -314,16 +397,40 @@ export default function Analyzer() {
 
       {!!error && <div className="error">{error}</div>}
 
+      {hasResp && (
+        <div className="floating-actions">
+          <button
+            className="ghost-btn"
+            onClick={() => setFeedbackOpen(true)}
+            disabled={!resp || !model || !text}
+          >
+            Send Feedback
+          </button>
+          <button
+            className="ghost-btn"
+            onClick={exportJSON}
+            disabled={!resp}
+          >
+            Export JSON
+          </button>
+        </div>
+      )}
+
       {hasResp ? (
         <div className="panels">
           <div className="panel">
-            <h3>Results</h3>
-            <div className="model-settings-grid">
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+              <h3 style={{ margin: 0 }}>Results</h3>
+              <div style={{ display: "flex", gap: 8 }}>
+              </div>
+            </div>
+
+            <div className="model-settings-grid" style={{ marginTop: 10 }}>
               <div className="model-settings-label">Engine</div>
               <div>{engine || "—"}</div>
 
               <div className="model-settings-label">Label</div>
-              <div>{label ? label.toUpperCase() : "—"}</div>
+              <div>{label ? String(label).toUpperCase() : "—"}</div>
 
               <div className="model-settings-label">Confidence</div>
               <div>{typeof confidence === "number" ? `${(confidence * 100).toFixed(1)}%` : "—"}</div>
@@ -350,7 +457,18 @@ export default function Analyzer() {
 
           <div className="panel">
             <h3>Analysis</h3>
-            <pre>{analysis ? JSON.stringify(analysis, null, 2) : "—"}</pre>
+            {analysis && typeof analysis === "object" && Object.keys(analysis).length > 0 ? (
+              <div className="model-settings-grid">
+                {Object.entries(analysis).map(([key, val]) => (
+                  <Fragment key={key}>
+                    <div className="model-settings-label">{key}</div>
+                    <div>{renderValue(val)}</div>
+                  </Fragment>
+                ))}
+              </div>
+            ) : (
+              <div>—</div>
+            )}
           </div>
         </div>
       ) : (
@@ -428,6 +546,18 @@ export default function Analyzer() {
           setPresetName(name || "Custom");
         }}
       />
+
+      <FeedbackModal
+        open={feedbackOpen}
+        onClose={() => setFeedbackOpen(false)}
+        apiBase={API_BASE}
+        modelId={model}
+        text={text}
+        got={resp}
+      />
+
+      <ModelShopModal open={shopOpen} onClose={() => setShopOpen(false)} apiBase={API_BASE} />
+
 
       {notebookOpen && (
         <div className="modal" onClick={() => setNotebookOpen(false)}>
