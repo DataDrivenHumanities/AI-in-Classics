@@ -755,54 +755,24 @@ button:disabled {
 }
 
 
-.model-settings-grid > .models-col,
-.model-settings-grid > .align-left {
-  justify-self: start !important;   /* grid alignment */
-  align-self: start !important;
-  display: block !important;
-  text-align: left !important;
-  float: none !important;
-  margin: 0 !important;
-  padding: 0 !important;
+.radio-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  color: #fff;
+  font-size: 14px;
 }
 
 
-.model-settings-grid > .models-col ul.plain-list,
-.model-settings-grid > .align-left ul.plain-list {
-  list-style: none !important;
-  padding-left: 0 !important;
-  margin: 0 !important;
-  text-align: left !important;
-}
-
-
-.model-settings-grid > .models-col .radio-row,
-.model-settings-grid > .align-left .radio-row {
-  display: flex !important;
-  justify-content: flex-start !important;
-  align-items: left !important;
-  gap: 8px !important;
-}
-
-
-.model-settings-grid > .models-col .radio-row input[type="radio"],
-.model-settings-grid > .align-left .radio-row input[type="radio"] {
-  margin: 0 !important;
-}
-
-.model-settings-grid > .models-col .radio-row .radio-label,
-.model-settings-grid > .align-left .radio-row .radio-label {
-  color: #fff !important;
-  text-align: left !important;
+.radio-label {
+  color: #fff;
   font-weight: 500;
   line-height: 1.4;
 }
 
-/* Nuclear option: if some parent set space-between on the cell */
-.model-settings-grid > .models-col,
-.model-settings-grid > .align-left {
-  display: grid !important;         /* grid within the cell */
-  justify-items: start !important;  /* left-align everything inside */
+.radio-row input[type="radio"] {
+  transform: scale(1.1);
+  accent-color: var(--uf-orange);
+  cursor: pointer;
 }
-
-.shop-section { text-align: left !important; }
