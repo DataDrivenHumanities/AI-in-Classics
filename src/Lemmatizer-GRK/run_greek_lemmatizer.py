@@ -10,13 +10,14 @@ The workflow follows these steps:
 3. Create a lemmatization function
 4. Test with sample Greek words
 """
-
+import cltk.lemmatize
 import pandas as pd
 import os
 import sys
 from typing import List, Dict, Any, Tuple, Optional
 import unicodedata
 import re
+from cltk.alphabet import grc
 
 class GreekLemmatizer:
     """Greek lemmatizer using existing dictionary files"""
@@ -241,6 +242,17 @@ class GreekLemmatizer:
             })
             
         return results
+
+    def analyze_text_cltk(self, text: str):
+        filtered_text = grc.filter_non_greek(text)
+        normalized_text = grc.normalize_grc(filtered_text)
+        stripped_text = normalized_text.strip('.,;:!?""''()[]{}')
+        words = stripped_text.split()
+
+        lemmatizer = cltk.lemmatize.GreekBackoffLemmatizer()
+        lemmas = lemmatizer.lemmatize(words)
+        return lemmas
+
         
 def main():
     """Main function to run the Greek lemmatizer"""
@@ -279,7 +291,8 @@ def main():
     print("\nAnalyzing Greek text:")
     print(f"Text: {sample_text}")
     
-    analysis = lemmatizer.analyze_text(sample_text)
+    analysis = lemmatizer.analyze_text_cltk(sample_text)
+    print(analysis)
     for item in analysis:
         print(f"\nWord: {item['word']}")
         if item['lemmas']:
