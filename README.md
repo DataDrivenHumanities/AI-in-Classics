@@ -31,30 +31,30 @@ This project looks at various languages and runs anlysis on the scripture using 
 ## New Features
 
 ### Adjust Model Parameters
-Store and load preset params for a model
+Store and load preset parameters for a model.
 
 <p align="center">
   <img src="images/model_settings.png" alt="App Banner" width="500"/>
 </p>
 
-### Submit Feedback to improve the models
+### Submit feedback to improve the models
 
-Submit feed back for each query to help improve the models
+Submit feedback for each query to help improve the models.
 <p align="center">
   <img src="images/feedback.png" alt="App Banner" width="500"/>
 </p>
 
-### Check the statsus of local models
+### Check the status of a model or all models.
 
-Check the status of local and future cloud connected models.
+Check the status of local models and future cloud connected models.
 <p align="center">
   <img src="images/status.png" alt="App Banner" width="400"/>
 </p>
 
 ## Future Improvements
 
-Model shop takes the stored feedback for a specfic model and sends the data to be tasked to imrpoved the exsisitng model.
-A user can choose one of the three training strategies and see the status in the job queue.
+Model Shop takes the stored feedback for a specific model and sends that data as tasks to improve the existing model.
+Users can choose one of the three available training strategies and view the status of their job in the queue.
 
 <p align="center">
   <img src="images/modelShop.png" alt="App Banner" width="500"/>
