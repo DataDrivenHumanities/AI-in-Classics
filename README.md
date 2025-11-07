@@ -9,16 +9,56 @@ This project looks at various languages and runs anlysis on the scripture using 
 ## ✨Check out our New UI✨
 
 <p align="center">
-  <img src="images/screenshot_new_ui.png" alt="App Banner" width="600"/>
+  <img src="images/home.png" alt="App Banner" width="600"/>
+   <center> Landing page </center>
 </p>
 
-## Features
+
+
+<p align="center">
+  <img src="images/results.png" alt="App Banner" width="600"/>
+ <center> Latin model queried. </center>
+</p>
+
+## Current Features
 
 - Search Functionality
 - Notebook Integration for running juypter notebooks
 - Chat features
 - Switch between various LLM's
 
+
+## New Features
+
+### Adjust Model Parameters
+Store and load preset params for a model
+
+<p align="center">
+  <img src="images/model_settings.png" alt="App Banner" width="500"/>
+</p>
+
+### Submit Feedback to improve the models
+
+Submit feed back for each query to help improve the models
+<p align="center">
+  <img src="images/feedback.png" alt="App Banner" width="500"/>
+</p>
+
+### Check the statsus of local models
+
+Check the status of local and future cloud connected models.
+<p align="center">
+  <img src="images/status.png" alt="App Banner" width="400"/>
+</p>
+
+## Future Improvements
+
+Model shop takes the stored feedback for a specfic model and sends the data to be tasked to imrpoved the exsisitng model.
+A user can choose one of the three training strategies and see the status in the job queue.
+
+<p align="center">
+  <img src="images/modelShop.png" alt="App Banner" width="500"/>
+</p>
 ## Contributing
 
 Contributions are welcome!
