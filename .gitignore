@@ -29,6 +29,7 @@ venv-greek-nlp
 venv-ml
 data/greek/*
 src/SentimentAnalysisGreek/greekbert_v1/*
+src/SentimentAnalysisGreek/greekbert_v2/*
 MANIFEST
 
 # PyInstaller
