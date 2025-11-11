@@ -1,7 +1,7 @@
 # import
 import numpy as np
 import pandas as pd
-from googletrans import Translator
+from src.app.translate import Translator
 from transformers import pipeline
 
 # encodeing must = utf8

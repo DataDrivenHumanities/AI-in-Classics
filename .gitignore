@@ -147,3 +147,12 @@ src/pipelines/preprocessing/preprocess_root_query/needed_files/greek_words.csv
 
 
 .vscode/settings.json
+
+# ollam files 
+models/**/weights/
+*.gguf
+.ollama/
+/.idea
+
+/src/frontend/node_modules
+/src/frontend/.next

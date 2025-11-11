@@ -4,6 +4,7 @@ version = "0.1.0"
 description = ""
 authors = ["alex <53851759+alxxjohn@users.noreply.github.com>"]
 readme = "README.md"
+packages = [{ include = "app", from = "src" }]
 
 
 [tool.poetry.dependencies]
@@ -14,12 +15,10 @@ beautifulsoup4 = "*"
 bidict = "*"
 cltk = "1.5.0"
 click = "<8.1"
-
 dill = "*"
 ipycache = "*"
 ipywidgets = "*"
 fastparquet = "*"
-googletrans = "3.1.0a0"   
 graphviz = "*"
 matplotlib = "*"
 networkx = "*"
@@ -35,6 +34,15 @@ termcolor = "^3.1.0"
 altair = ">=4.2,<5"
 protobuf = "==3.20.3"
 urllib3 = "<2"
+deep-translator = "^1.11.4"
+ollama = "^0.5.4"
+pypdf = "^6.1.0"
+vaderSentiment = "^3.3.2"
+fastapi = "^0.120.3"
+uvicorn = {extras = ["standard"], version = "^0.38.0"}
+pydantic = "^2.12.3"
+python-multipart = "^0.0.20"
+
 
 
 [build-system]
