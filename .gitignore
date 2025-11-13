@@ -149,6 +149,8 @@ src/pipelines/preprocessing/preprocess_root_query/needed_files/greek_words.csv
 .vscode/settings.json
 src/frontend/public/jlite/jupyterlite.doit.db
 .jupyterlite.doit.db
+src/frontend/public/jlite/jupyterlite.doit.db
+src/frontend/public/jlite/.doit.db
 
 
 # ollam files 
