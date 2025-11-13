@@ -1,0 +1,29 @@
+{
+  "content": [
+    {
+      "content": null,
+      "created": "2025-11-13T22:48:55.300308Z",
+      "format": null,
+      "hash": null,
+      "hash_algorithm": null,
+      "last_modified": "2025-11-13T22:48:55.300308Z",
+      "mimetype": "application/json",
+      "name": "index.json",
+      "path": "notebooks/index.json",
+      "size": 21,
+      "type": "file",
+      "writable": true
+    }
+  ],
+  "created": "2025-11-13T21:31:23.426769Z",
+  "format": "json",
+  "hash": null,
+  "hash_algorithm": null,
+  "last_modified": "2025-11-13T21:31:23.426769Z",
+  "mimetype": null,
+  "name": "notebooks",
+  "path": "notebooks",
+  "size": null,
+  "type": "directory",
+  "writable": true
+}
