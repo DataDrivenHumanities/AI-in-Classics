@@ -318,6 +318,7 @@ fe-format:
 fe-format-check:
 	cd $(FE_DIR) && ($(NPM) run -s format:check || echo "skip: no 'format:check' script")
 
+
 # ===== Notebooks / JupyterLite =====
 nb-bootstrap:
 	@mkdir -p "$(NB_SRC_DIR)"
@@ -336,23 +337,21 @@ nb-sync: nb-bootstrap
 	@echo "✅ Synced notebooks to $(JLITE_NB_DIR)"
 
 nb-index:
-	@$(PYTHON) - <<'PY'
-import json, os, sys
+	@python3 - <<'PY'\nimp
+	import json, os, sys
+	nb_dir = os.path.normpath("$(JLITE_NB_DIR)")
+	index_path = os.path.normpath("$(JLITE_INDEX_JSON)")
+	if not os.path.isdir(nb_dir):
+		print(f"No notebook dir: {nb_dir}", file=sys.stderr)
+		raise SystemExit(0)
 
-nb_dir = os.path.normpath("$(JLITE_NB_DIR)")
-index_path = os.path.normpath("$(JLITE_INDEX_JSON)")
-
-if not os.path.isdir(nb_dir):
-    print(f"No notebook dir: {nb_dir}", file=sys.stderr)
-    raise SystemExit(0)
-
-names = [f for f in os.listdir(nb_dir) if f.endswith(".ipynb")]
-data = {"notebooks": [{"name": os.path.splitext(f)[0], "path": f} for f in sorted(names)]}
-os.makedirs(os.path.dirname(index_path), exist_ok=True)
-with open(index_path, "w", encoding="utf-8") as f:
-    json.dump(data, f, indent=2)
-print(f"Wrote {index_path} with {len(names)} notebooks")
-PY
+	names = [f for f in os.listdir(nb_dir) if f.endswith(".ipynb")]
+	data = {"notebooks": [{"name": os.path.splitext(f)[0], "path": f} for f in sorted(names)]}
+	os.makedirs(os.path.dirname(index_path), exist_ok=True)
+	with open(index_path, "w", encoding="utf-8") as f:
+		json.dump(data, f, indent=2)
+	print(f"Wrote {index_path} with {len(names)} notebooks")
+	PY
 
 # JupyterLite build/serve
 jlite-build:
