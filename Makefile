@@ -1,3 +1,22 @@
+UNAME_S := $(shell uname 2>/dev/null || echo Windows)
+
+define KILL_PORT
+	@echo "🔍 Checking port $(1)..."
+ifeq ($(UNAME_S),Windows)
+	@echo "🪟 Windows detected — using PowerShell to kill port $(1)"
+	@powershell -Command "Get-NetTCPConnection -LocalPort $(1) -State Listen | ForEach-Object { Stop-Process -Id $_.OwningProcess -Force }" 2>nul || true
+else
+	@PID=$$(lsof -ti :$(1) ); \
+	if [ ! -z "$$PID" ]; then \
+		echo "⚠️  Port $(1) in use — killing PID $$PID"; \
+		kill -9 $$PID || true; \
+	else \
+		echo "✅ Port $(1) is free"; \
+	fi
+endif
+endef
+
+
 # ===== Config =====
 PYTHON        ?= python3
 PIP           ?= pip3
@@ -245,6 +264,7 @@ fe-install:
 	@cd $(FRONTEND_DIR) && $(FE_PM_INSTALL)
 
 fe-dev:
+	@$(call KILL_PORT,$(FRONTEND_PORT))
 	@echo "Starting frontend dev server on port $(FRONTEND_PORT)..."
 	@cd $(FRONTEND_DIR) && $(FE_PM_DEV)
 
@@ -253,6 +273,7 @@ fe-build:
 	@cd $(FRONTEND_DIR) && $(FE_PM_BUILD)
 
 fe-serve:
+	@$(call KILL_PORT,$(FRONTEND_PORT))
 	@echo "Starting production server on port $(FRONTEND_PORT)..."
 	@cd $(FRONTEND_DIR) && $(FE_PM_PREVIEW)
 
@@ -347,20 +368,22 @@ run-all:
 
 start:
 	@echo "🚀 Setting up Trojan Parse full stack..."
-	@$(MAKE) setup          # Install backend deps (Poetry/venv + FastAPI + Jupyter deps)
-	@$(MAKE) jlite-build    # Build JupyterLite, copy notebooks, generate index.json
+	@$(MAKE) setup
+	@$(MAKE) jlite-build
 	@echo "🌐 Starting FastAPI server on :5050..."
-	@($(MAKE) -s api-run) & # Run FastAPI backend
+	@($(MAKE) -s api-run) &
 	@echo "📘 Starting Streamlit on :8501..."
-	@($(MAKE) -s web) &     # Run Streamlit
-	@echo "⚛️  Starting React dev server on :5173..."
-	@($(MAKE) -s fe-dev) &  # Run frontend
+	@($(MAKE) -s web) &
+	@echo "⚛️  Starting React dev server on :$(FRONTEND_PORT)..."
+	@$(call KILL_PORT,$(FRONTEND_PORT))
+	@($(MAKE) -s fe-dev) &
 	@wait
 
 start-lite:
 	@echo "⚡ Quick start (no setup, no JupyterLite build)…"
-	@echo "🌐 FastAPI → :5050, 🏺 Streamlit → :8501, ⚛️ React → :5173"
-	@($(MAKE) -s api-run) & \
-	($(MAKE) -s web) & \
-	( $(MAKE) -s fe-dev ) & \
+	@echo "🌐 FastAPI → :5050, 🏺 Streamlit → :8501, ⚛️ React → :$(FRONTEND_PORT)"
+	@$(call KILL_PORT,$(FRONTEND_PORT))
+	@($(MAKE) -s api-run) &
+	($(MAKE) -s web) &
+	($(MAKE) -s fe-dev) &
 	wait
