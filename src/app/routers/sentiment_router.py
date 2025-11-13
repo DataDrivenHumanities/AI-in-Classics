@@ -1,6 +1,4 @@
-# src/app/sentiment_router.py
 from __future__ import annotations
-
 from dataclasses import dataclass
 from typing import Dict, Optional, Protocol, TypedDict, Any
 
