@@ -148,6 +148,7 @@ src/pipelines/preprocessing/preprocess_root_query/needed_files/greek_words.csv
 
 .vscode/settings.json
 
+
 # ollam files 
 models/**/weights/
 *.gguf
@@ -156,3 +157,6 @@ models/**/weights/
 
 /src/frontend/node_modules
 /src/frontend/.nextsrc/frontend/public/jlite/jupyterlite.doit.db
+src/frontend/.next/
+.next/
+.jupyterlite.doit.db
