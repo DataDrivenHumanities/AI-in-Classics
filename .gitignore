@@ -165,6 +165,20 @@ models/**/weights/
 src/frontend/.next/
 .next/
 .jupyterlite.doit.db
+# Next.js build output
+.next
+out
+
+# Next.js cache
+.next/cache
+.next/cache/**
+
+# Webpack cache artifacts
+src/frontend/.next/cache/webpack
+src/frontend/.next/cache/webpack/**
+
+# General build caches
+node_modules
 
 # Logs
 logs
