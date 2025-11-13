@@ -155,4 +155,4 @@ models/**/weights/
 /.idea
 
 /src/frontend/node_modules
-/src/frontend/.next
+/src/frontend/.nextsrc/frontend/public/jlite/jupyterlite.doit.db
