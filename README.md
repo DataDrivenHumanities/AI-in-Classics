@@ -26,6 +26,8 @@ This project looks at various languages and runs anlysis on the scripture using 
 - Notebook Integration for running juypter notebooks
 - Chat features
 - Switch between various LLM's
+- Submit Feedback
+- Retrain models
 
 
 ## New Features

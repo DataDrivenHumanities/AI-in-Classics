@@ -1,29 +1,52 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import React, { Fragment, useEffect, useRef, useState } from "react";
 import ModelModal from "@/components/ModelModal";
+import ModelSettingsModal, { ModelOptions } from "@/components/ModelSettingsModal";
+import FeedbackModal from "@/components/FeedbackModal";
+import ModelShopModal from "@/components/ModelShopModal";
+
 
 const API_BASE = process.env.NEXT_PUBLIC_API_BASE || "http://localhost:5050/api";
 const JUPYTERLITE_LAB = "/jlite/lab/index.html";
 
-type AnalyzeResponse = unknown;
+type AnalyzeResponse = any;
 
 export default function Analyzer() {
   const [model, setModel] = useState<string>("");
   const [modelsOpen, setModelsOpen] = useState<boolean>(false);
+  const [settingsOpen, setSettingsOpen] = useState<boolean>(false);
+  const [notebookOpen, setNotebookOpen] = useState<boolean>(false);
+  const [drawerOpen, setDrawerOpen] = useState<boolean>(false);
+  const [feedbackOpen, setFeedbackOpen] = useState<boolean>(false);
+  const [shopOpen, setShopOpen] = useState(false);
+
   const [text, setText] = useState<string>("");
   const [resp, setResp] = useState<AnalyzeResponse | null>(null);
   const [error, setError] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false);
-
-  const [drawerOpen, setDrawerOpen] = useState<boolean>(false);
-  const [notebookOpen, setNotebookOpen] = useState<boolean>(false);
-
   const [progress, setProgress] = useState<number>(0);
-  const fileRef = useRef<HTMLInputElement | null>(null);
-  const hasResp = !!resp;
+  const [presetName, setPresetName] = useState<string>("Default");
 
+  const fileRef = useRef<HTMLInputElement | null>(null);
+  const controllerRef = useRef<AbortController | null>(null);
+
+  const [modelOpts, setModelOpts] = useState<ModelOptions>({
+    temperature: 0.0,
+    top_p: 0.9,
+    repeat_penalty: 1.0,
+    num_predict: 1024,
+    stop: [],
+    raw: true,
+    format: "json",
+  });
+
+  const hasResp = !!resp;
   const r: any = resp ?? {};
+  const engine = r?.engine ?? r?.data?.engine ?? null;
+  const label = r?.label ?? r?.data?.label ?? null;
+  const confidence = r?.confidence ?? r?.data?.confidence ?? null;
+  const scores = r?.scores ?? r?.data?.scores ?? null;
   const translation = r?.translation ?? r?.data?.translation ?? null;
   const analysis = r?.analysis ?? r?.data?.analysis ?? null;
 
@@ -41,12 +64,10 @@ export default function Analyzer() {
     return () => clearInterval(id);
   }, [loading]);
 
-  const controllerRef = useRef<AbortController | null>(null);
-  
-
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     if (!model || !text.trim()) return;
+
     controllerRef.current?.abort();
     controllerRef.current = new AbortController();
 
@@ -55,20 +76,33 @@ export default function Analyzer() {
     setResp(null);
 
     try {
-      const r = await fetch(`${API_BASE}/analyze`, {
+      const payload = {
+        text,
+        engine: "model",
+        model_id: model,
+        options: {
+          temperature: modelOpts.temperature,
+          top_p: modelOpts.top_p,
+          repeat_penalty: modelOpts.repeat_penalty,
+          num_predict: modelOpts.num_predict,
+          stop: modelOpts.stop,
+        },
+        raw: modelOpts.raw,
+        format: modelOpts.format,
+      };
+
+      const rr = await fetch(`${API_BASE}/analyze`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ text, engine: "model", model_id: model }),
+        body: JSON.stringify(payload),
         signal: controllerRef.current.signal,
       });
-      if (!r.ok) throw new Error(`Request failed: ${r.status}`);
-      const data: AnalyzeResponse = await r.json();
+      if (!rr.ok) throw new Error(`Request failed: ${rr.status}`);
+      const data: AnalyzeResponse = await rr.json();
       setResp(data);
       setProgress(100);
     } catch (err: any) {
-      if (err?.name !== "AbortError") {
-        setError(err?.message || "Request failed");
-      }
+      if (err?.name !== "AbortError") setError(err?.message || "Request failed");
     } finally {
       setLoading(false);
     }
@@ -86,6 +120,7 @@ export default function Analyzer() {
       setError("Please select a model before uploading a file.");
       return;
     }
+
     controllerRef.current?.abort();
     controllerRef.current = new AbortController();
 
@@ -98,21 +133,31 @@ export default function Analyzer() {
       form.append("file", f);
       form.append("engine", "model");
       form.append("model_id", model);
+      form.append("raw", String(modelOpts.raw));
+      form.append("format", modelOpts.format);
+      form.append(
+        "options",
+        JSON.stringify({
+          temperature: modelOpts.temperature,
+          top_p: modelOpts.top_p,
+          repeat_penalty: modelOpts.repeat_penalty,
+          num_predict: modelOpts.num_predict,
+          stop: modelOpts.stop,
+        })
+      );
 
-      const r = await fetch(`${API_BASE}/analyze/upload`, {
+      const rr = await fetch(`${API_BASE}/analyze/upload`, {
         method: "POST",
         body: form,
         signal: controllerRef.current.signal,
       });
-      if (!r.ok) throw new Error(`Upload failed: ${r.status}`);
-      const data: any = await r.json();
+      if (!rr.ok) throw new Error(`Upload failed: ${rr.status}`);
+      const data: any = await rr.json();
       if (data?.text) setText(String(data.text));
       setResp(data as AnalyzeResponse);
       setProgress(100);
     } catch (err: any) {
-      if (err?.name !== "AbortError") {
-        setError(err?.message || "Upload failed");
-      }
+      if (err?.name !== "AbortError") setError(err?.message || "Upload failed");
     } finally {
       setLoading(false);
     }
@@ -127,6 +172,78 @@ export default function Analyzer() {
     a.download = "trojan-parse-result.json";
     a.click();
     URL.revokeObjectURL(url);
+  }
+
+  const miniDebug = {
+    model: model || null,
+    textLen: text.length,
+    loading,
+  };
+
+  function isPlainObject(v: any) {
+    return v && typeof v === "object" && !Array.isArray(v);
+  }
+
+  function toPercent(n: any) {
+    const x = Number(n);
+    if (Number.isFinite(x)) return `${(x * 100).toFixed(1)}%`;
+    return String(n);
+  }
+
+  function renderValue(val: any) {
+    if (Array.isArray(val)) {
+      const allPrimitive = val.every((x) => typeof x !== "object" || x === null);
+      if (allPrimitive) {
+        return (
+          <ul style={{ margin: 0, paddingLeft: 16 }}>
+            {val.map((item, i) => (
+              <li key={i}>{String(item)}</li>
+            ))}
+          </ul>
+        );
+      }
+      return (
+        <ul style={{ margin: 0, paddingLeft: 16 }}>
+          {val.map((obj, i) => (
+            <li key={i}>
+              {isPlainObject(obj)
+                ? Object.entries(obj)
+                    .map(([k, v]) => `${k}: ${String(v)}`)
+                    .join(" · ")
+                : String(obj)}
+            </li>
+          ))}
+        </ul>
+      );
+    }
+    if (isPlainObject(val)) {
+      const looksLikeScores =
+        Object.values(val).length > 0 &&
+        Object.values(val).every((v) => typeof v === "number" && v >= 0 && v <= 1);
+      if (looksLikeScores) {
+        return (
+          <div className="model-settings-grid">
+            {Object.entries(val).map(([k, v]) => (
+              <Fragment key={k}>
+                <div className="model-settings-label">{k}</div>
+                <div>{toPercent(v)}</div>
+              </Fragment>
+            ))}
+          </div>
+        );
+      }
+      return (
+        <div className="model-settings-grid">
+          {Object.entries(val).map(([k, v]) => (
+            <Fragment key={k}>
+              <div className="model-settings-label">{k}</div>
+              <div>{typeof v === "object" ? JSON.stringify(v) : String(v)}</div>
+            </Fragment>
+          ))}
+        </div>
+      );
+    }
+    return <span>{String(val)}</span>;
   }
 
   return (
@@ -216,8 +333,38 @@ export default function Analyzer() {
                 </div>
                 <div className="tool-card">
                   <div className="tool-title">LLM Status</div>
-                  <button className="tool-cta" onClick={() => setModelsOpen(true)}>
+                  <button
+                    className="tool-cta"
+                    onClick={() => {
+                      setModelsOpen(true);
+                      setDrawerOpen(false);
+                    }}
+                  >
                     View
+                  </button>
+                </div>
+                <div className="tool-card">
+                  <div className="tool-title">Model Settings</div>
+                  <button
+                    className="tool-cta"
+                    onClick={() => {
+                      setSettingsOpen(true);
+                      setDrawerOpen(false);
+                    }}
+                  >
+                    Edit
+                  </button>
+                </div>
+                <div className="tool-card">
+                  <div className="tool-title">Model Shop</div>
+                  <button
+                    className="tool-cta"
+                    onClick={() => {
+                      setShopOpen(true);
+                      setDrawerOpen(false);
+                    }}
+                  >
+                    Open
                   </button>
                 </div>
                 <div className="tool-card">
@@ -241,39 +388,177 @@ export default function Analyzer() {
           )}
         </div>
       </div>
+
       {loading && (
         <div className="progress progress-mid">
           <div className="progress-bar" style={{ width: `${progress}%` }} />
         </div>
       )}
+
       {!!error && <div className="error">{error}</div>}
+
+      {hasResp && (
+        <div className="floating-actions">
+          <button
+            className="ghost-btn"
+            onClick={() => setFeedbackOpen(true)}
+            disabled={!resp || !model || !text}
+          >
+            Send Feedback
+          </button>
+          <button
+            className="ghost-btn"
+            onClick={exportJSON}
+            disabled={!resp}
+          >
+            Export JSON
+          </button>
+        </div>
+      )}
 
       {hasResp ? (
         <div className="panels">
           <div className="panel">
-            <h3>Results</h3>
-            <pre>{JSON.stringify(resp, null, 2)}</pre>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+              <h3 style={{ margin: 0 }}>Results</h3>
+              <div style={{ display: "flex", gap: 8 }}>
+              </div>
+            </div>
+
+            <div className="model-settings-grid" style={{ marginTop: 10 }}>
+              <div className="model-settings-label">Engine</div>
+              <div>{engine || "—"}</div>
+
+              <div className="model-settings-label">Label</div>
+              <div>{label ? String(label).toUpperCase() : "—"}</div>
+
+              <div className="model-settings-label">Confidence</div>
+              <div>{typeof confidence === "number" ? `${(confidence * 100).toFixed(1)}%` : "—"}</div>
+
+              {scores && typeof scores === "object" ? (
+                <>
+                  <div className="model-settings-label">Positive</div>
+                  <div>{(Number(scores.positive) * 100).toFixed(1)}%</div>
+
+                  <div className="model-settings-label">Neutral</div>
+                  <div>{(Number(scores.neutral) * 100).toFixed(1)}%</div>
+
+                  <div className="model-settings-label">Negative</div>
+                  <div>{(Number(scores.negative) * 100).toFixed(1)}%</div>
+                </>
+              ) : null}
+            </div>
           </div>
+
           <div className="panel">
             <h3>Translation</h3>
             <pre>{translation ? String(translation) : "—"}</pre>
           </div>
+
           <div className="panel">
             <h3>Analysis</h3>
-            <pre>{analysis ? JSON.stringify(analysis, null, 2) : "—"}</pre>
+            {analysis && typeof analysis === "object" && Object.keys(analysis).length > 0 ? (
+              <div className="model-settings-grid">
+                {Object.entries(analysis).map(([key, val]) => (
+                  <Fragment key={key}>
+                    <div className="model-settings-label">{key}</div>
+                    <div>{renderValue(val)}</div>
+                  </Fragment>
+                ))}
+              </div>
+            ) : (
+              <div>—</div>
+            )}
           </div>
         </div>
       ) : (
-        <div className="panels">
-          <div className="panel">
+        <div className="panels debug-grid">
+          <div className="panel debug-snippet">
             <h3>Debug</h3>
-            <pre>{JSON.stringify({ model, textLen: text.length, loading }, null, 2)}</pre>
+            <pre>{JSON.stringify(miniDebug, null, 2)}</pre>
+          </div>
+
+          <div className="panel model-settings">
+            <div className="model-settings-header">
+              <h3>Model Settings</h3>
+              <div className="model-preset-badge">Preset: {presetName}</div>
+            </div>
+
+            <div className="model-settings-grid">
+              <div className="model-settings-label">Format</div>
+              <div>{modelOpts.format.toUpperCase()}</div>
+
+              <div className="model-settings-label">Bypass Modelfile (raw)</div>
+              <div>{modelOpts.raw ? "Enabled" : "Disabled"}</div>
+
+              <div className="model-settings-label">Temperature</div>
+              <div>{modelOpts.temperature}</div>
+
+              <div className="model-settings-label">Top-p</div>
+              <div>{modelOpts.top_p}</div>
+
+              <div className="model-settings-label">Repeat Penalty</div>
+              <div>{modelOpts.repeat_penalty}</div>
+
+              <div className="model-settings-label">Max Tokens</div>
+              <div>{modelOpts.num_predict}</div>
+
+              <div className="model-settings-label" style={{ alignSelf: "start" }}>
+                Stop Tokens
+              </div>
+              <div>
+                {modelOpts.stop.length === 0 ? (
+                  <span className="model-stop-chip none">None</span>
+                ) : (
+                  modelOpts.stop.map((s) => (
+                    <span key={s} className="model-stop-chip">
+                      {s}
+                    </span>
+                  ))
+                )}
+              </div>
+            </div>
           </div>
         </div>
       )}
-<ModelModal open={modelsOpen} onClose={() => setModelsOpen(false)} />
 
-  
+      <ModelModal open={modelsOpen} onClose={() => setModelsOpen(false)} />
+
+      <ModelSettingsModal
+        open={settingsOpen}
+        onClose={() => setSettingsOpen(false)}
+        initial={{ ...modelOpts, name: presetName } as ModelOptions & { name?: string }}
+        onSave={(opts: ModelOptions & { name?: string }) => {
+          setModelOpts({
+            temperature: opts.temperature,
+            top_p: opts.top_p,
+            repeat_penalty: opts.repeat_penalty,
+            num_predict: opts.num_predict,
+            stop: opts.stop,
+            raw: opts.raw,
+            format: opts.format,
+          });
+          setPresetName(opts.name || "Custom");
+          setSettingsOpen(false);
+        }}
+        onApplyPreset={(name: string, opts: ModelOptions) => {
+          setModelOpts(opts);
+          setPresetName(name || "Custom");
+        }}
+      />
+
+      <FeedbackModal
+        open={feedbackOpen}
+        onClose={() => setFeedbackOpen(false)}
+        apiBase={API_BASE}
+        modelId={model}
+        text={text}
+        got={resp}
+      />
+
+      <ModelShopModal open={shopOpen} onClose={() => setShopOpen(false)} apiBase={API_BASE} />
+
+
       {notebookOpen && (
         <div className="modal" onClick={() => setNotebookOpen(false)}>
           <div className="modal-inner" onClick={(e) => e.stopPropagation()}>

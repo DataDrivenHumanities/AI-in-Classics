@@ -1,0 +1,44 @@
+{
+  "presets": [
+    {
+      "name": "Deterministic (JSON)",
+      "temperature": 0.0,
+      "top_p": 0.9,
+      "repeat_penalty": 1.0,
+      "num_predict": 1024,
+      "stop": [],
+      "raw": true,
+      "format": "json"
+    },
+    {
+      "name": "Balanced (JSON)",
+      "temperature": 0.2,
+      "top_p": 0.95,
+      "repeat_penalty": 1.05,
+      "num_predict": 768,
+      "stop": [],
+      "raw": true,
+      "format": "json"
+    },
+    {
+      "name": "Creative (Text)",
+      "temperature": 0.7,
+      "top_p": 0.98,
+      "repeat_penalty": 1.0,
+      "num_predict": 1024,
+      "stop": [],
+      "raw": false,
+      "format": "text"
+    },
+    {
+      "name": "Latin Alex Test",
+      "temperature": 0.7,
+      "top_p": 0.98,
+      "repeat_penalty": 1,
+      "num_predict": 704,
+      "stop": [],
+      "raw": true,
+      "format": "json"
+    }
+  ]
+}
