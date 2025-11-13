@@ -21,11 +21,21 @@ endif
 
 
 # ===== Config =====
-PYTHON        ?= python3
+PROJECT_NAME := Trojan Parse
 PIP           ?= pip3
 PORT          ?= 8501
 APP_ENTRY     ?= src/app/server_streamlit.py
 STREAMLIT_APP ?= src/app/server_streamlit.py
+
+ifeq ($(DETECTED_OS),windows)
+    PYTHON       := python
+    VENV_PYTHON  := $(VENV_DIR)/Scripts/python
+    REMOVE_DIR   := rmdir /S /Q
+else
+    PYTHON       := python3
+    VENV_PYTHON  := $(VENV_DIR)/bin/python
+    REMOVE_DIR   := rm -rf
+endif
 
 # Ollama
 OLLAMA_HOST   ?= http://localhost:11434
@@ -119,6 +129,7 @@ endif
 
 # ===== Help screen =====
 help:
+	@echo "$(PROJECT_NAME) Makefile (OS = $(DETECTED_OS))"
 	@printf "Usage: make <target>\n\n"
 	@printf "$(GREEN)Start Here: First time Deployment:$(RESET)\n"
 	@printf "$(GREEN)  start            Install backend dependencies, JupyterLite, and frontend dev$(RESET)\n\n"
