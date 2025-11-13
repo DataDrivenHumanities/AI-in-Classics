@@ -776,3 +776,34 @@ button:disabled {
   accent-color: var(--uf-orange);
   cursor: pointer;
 }
+
+/* Analysis card layout */
+.analysis-grid {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 120px 1fr;  /* label | value */
+  column-gap: 1.5rem;
+  row-gap: 0.4rem;
+}
+
+.analysis-label {
+  text-align: left;
+  font-weight: 500;
+}
+
+/* Make sure long values (like JSON) wrap INSIDE the card */
+.analysis-value {
+  text-align: left;
+  overflow-wrap: anywhere;      /* key fix for the overflow */
+  word-break: break-word;       /* extra safety */
+  white-space: normal;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.9rem;
+}
+
+/* Optional: ensure panels grow with content */
+.panel {
+  height: auto;                 /* remove any fixed height if you had one */
+  max-height: none;
+  box-sizing: border-box;
+}

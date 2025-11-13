@@ -458,11 +458,11 @@ export default function Analyzer() {
           <div className="panel">
             <h3>Analysis</h3>
             {analysis && typeof analysis === "object" && Object.keys(analysis).length > 0 ? (
-              <div className="model-settings-grid">
+              <div className="analysis-grid">
                 {Object.entries(analysis).map(([key, val]) => (
                   <Fragment key={key}>
-                    <div className="model-settings-label">{key}</div>
-                    <div>{renderValue(val)}</div>
+                    <div className="analysis-label">{key}</div>
+                    <div className="analysis-value">{renderValue(val)}</div>
                   </Fragment>
                 ))}
               </div>
