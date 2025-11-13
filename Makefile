@@ -1,20 +1,23 @@
 UNAME_S := $(shell uname 2>/dev/null || echo Windows)
 
-define KILL_PORT
-	@echo "🔍 Checking port $(1)..."
 ifeq ($(UNAME_S),Windows)
-	@echo "🪟 Windows detected — using PowerShell to kill port $(1)"
-	@powershell -Command "Get-NetTCPConnection -LocalPort $(1) -State Listen | ForEach-Object { Stop-Process -Id $_.OwningProcess -Force }" 2>nul || true
+    define KILL_PORT
+        @echo "🔍 Checking port $(1) on Windows..."
+        @powershell -Command "Try { Get-NetTCPConnection -LocalPort $(1) -State Listen | ForEach-Object { Stop-Process -Id \$_.OwningProcess -Force } } Catch {}" 2>nul || true
+        @echo "✅ Port $(1) cleared (Windows)"
+    endef
 else
-	@PID=$$(lsof -ti :$(1) ); \
-	if [ ! -z "$$PID" ]; then \
-		echo "⚠️  Port $(1) in use — killing PID $$PID"; \
-		kill -9 $$PID || true; \
-	else \
-		echo "✅ Port $(1) is free"; \
-	fi
+    define KILL_PORT
+        @echo "🔍 Checking port $(1) on macOS/Linux..."
+        @PID=$$(lsof -ti :$(1)); \
+        if [ ! -z "$$PID" ]; then \
+            echo "⚠️  Port $(1) in use — killing PID $$PID"; \
+            kill -9 $$PID || true; \
+        else \
+            echo "✅ Port $(1) is free"; \
+        fi
+    endef
 endif
-endef
 
 
 # ===== Config =====
@@ -70,12 +73,12 @@ ESC      := \033
 RESET    := $(ESC)[0m
 BOLD     := $(ESC)[1m
 
-GREEN    := $(ESC)[1;32m   # Starts
-YELLOW   := $(ESC)[1;33m   # Core
-BLUE     := $(ESC)[1;34m   # Frontend
-PURPLE   := $(ESC)[1;35m   # FastAPI (Backend)
-GREY     := $(ESC)[90m     # Docker/Ollama + Config
-WHITE    := $(ESC)[1;37m   # Notebooks + JupyterLite
+GREEN    := $(ESC)[1;32m
+YELLOW   := $(ESC)[1;33m
+BLUE     := $(ESC)[1;34m
+PURPLE   := $(ESC)[1;35m
+GREY     := $(ESC)[90m
+WHITE    := $(ESC)[1;37m
 else
 RESET    :=
 BOLD     :=
@@ -115,22 +118,18 @@ endif
 
 
 # ===== Help screen =====
-# ===== Help screen =====
 help:
 	@printf "Usage: make <target>\n\n"
-
 	@printf "$(GREEN)Start Here: First time Deployment:$(RESET)\n"
 	@printf "$(GREEN)  start            Install backend dependencies, JupyterLite, and frontend dev$(RESET)\n\n"
 	@printf "$(GREEN)Start Lite: (without JupyterLite)$(RESET)\n"
 	@printf "$(GREEN)  start-lite       Install backend dependencies and start frontend + Streamlit$(RESET)\n\n"
-
 	@printf "$(YELLOW)Core:$(RESET)\n"
 	@printf "$(YELLOW)  setup            Install backend dependencies (Poetry or venv)$(RESET)\n"
 	@printf "$(YELLOW)  run              Run backend app ($(APP_ENTRY))$(RESET)\n"
 	@printf "$(YELLOW)  web              Run Streamlit UI ($(STREAMLIT_APP))$(RESET)\n"
 	@printf "$(YELLOW)  test             Run pytest tests$(RESET)\n"
 	@printf "$(YELLOW)  check / fix      Format or lint Python code$(RESET)\n\n"
-
 	@printf "$(BLUE)Frontend (Next.js):$(RESET)\n"
 	@printf "$(BLUE)  fe-install       Install frontend dependencies ($(FE_PM))$(RESET)\n"
 	@printf "$(BLUE)  fe-dev           Start Next.js dev server (port $(FRONTEND_PORT))$(RESET)\n"
@@ -138,26 +137,21 @@ help:
 	@printf "$(BLUE)  fe-serve         Start production server$(RESET)\n"
 	@printf "$(BLUE)  fe-clean         Remove node_modules and .next$(RESET)\n"
 	@printf "$(BLUE)  run-all          Run Streamlit + Next.js dev servers together$(RESET)\n\n"
-
 	@printf "$(GREY)Docker / Ollama:$(RESET)\n"
 	@printf "$(GREY)  docker-build, docker-run, docker-dev, docker-bash, docker-clean$(RESET)\n"
 	@printf "$(GREY)  ollama-serve, ollama-pull, build-latin, build-greek, smoke-latin, smoke-greek$(RESET)\n\n"
-
 	@printf "$(GREY)Config:$(RESET)\n"
 	@printf "$(GREY)  PORT=$(PORT)  FRONTEND_PORT=$(FRONTEND_PORT)$(RESET)\n"
 	@printf "$(GREY)  FRONTEND_DIR=$(FRONTEND_DIR)  FE_PM=$(FE_PM)$(RESET)\n\n"
-
 	@printf "$(WHITE)Notebooks:$(RESET)\n"
 	@printf "$(WHITE)  nb-bootstrap      Initialize JupyterLite and notebook folders$(RESET)\n"
 	@printf "$(WHITE)  nb-sync           Copy notebooks/ → frontend/public/jlite/files/notebooks/$(RESET)\n"
 	@printf "$(WHITE)  nb-index          Regenerate notebooks index.json$(RESET)\n\n"
-
 	@printf "$(WHITE)JupyterLite:$(RESET)\n"
 	@printf "$(WHITE)  jlite-build       Build a local JupyterLite bundle into frontend/public/jlite$(RESET)\n"
 	@printf "$(WHITE)  jlite-serve       Serve the built JupyterLite locally for quick testing$(RESET)\n"
 	@printf "$(WHITE)  jlite-clean       Remove the JupyterLite output directory$(RESET)\n\n"
-
-	@printf "$(PURPLE)FastAPI Backend:    For new UI or API work$(RESET)\n"
+	@printf "$(PURPLE)FastAPI Backend:$(RESET)\n"
 	@printf "$(PURPLE)  api-deps          Install FastAPI and Uvicorn dependencies$(RESET)\n"
 	@printf "$(PURPLE)  api-run           Run FastAPI backend server$(RESET)\n"
 	@printf "$(PURPLE)  api-health        Check FastAPI health endpoint$(RESET)\n\n"
@@ -171,8 +165,8 @@ ifdef POETRY_BIN
 else
 	@echo "Using venv..."
 	$(PYTHON) -m venv .venv
-	. .venv/bin/activate; $(PIP) install --upgrade pip
-	@if [ -f requirements.txt ]; then . .venv/bin/activate; $(PIP) install -r requirements.txt; fi
+	"$(PYTHON)" -m pip install --upgrade pip
+	@if [ -f requirements.txt ]; then "$(PYTHON)" -m pip install -r requirements.txt; fi
 endif
 	@$(MAKE) api-deps
 	@$(MAKE) nb-bootstrap
@@ -335,12 +329,10 @@ jlite-build:
 	@$(MAKE) nb-sync
 	@echo "✨ Done. You can now open notebooks via your app modal."
 
-# Quick local preview of the built JupyterLite
 jlite-serve:
 	@echo "🌐 Serving $(JLITE_DIR) at http://localhost:5174"
 	@cd "$(JLITE_DIR)" && python3 -m http.server 5174
 
-# Remove the generated JupyterLite directory
 jlite-clean:
 	@echo "🧹 Removing $(JLITE_DIR)"
 	@rm -rf "$(JLITE_DIR)"
@@ -358,7 +350,6 @@ api-run:
 api-health:
 	curl -s http://localhost:$(API_PORT)/api/health | jq .
 
-# Streamlit + FastAPI + Frontend together
 run-all:
 	( $(MAKE) -s web ) & \
 	( $(MAKE) -s api-run ) & \
