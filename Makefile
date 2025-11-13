@@ -1,11 +1,10 @@
-# ===== OS detection =====
 ifeq ($(OS),Windows_NT)
     DETECTED_OS := windows
 else
     DETECTED_OS := unix
 endif
 
-# ===== Kill port (per-OS) =====
+
 ifeq ($(DETECTED_OS),windows)
     define KILL_PORT
         @echo "🔍 Checking port $(1) on Windows..."
