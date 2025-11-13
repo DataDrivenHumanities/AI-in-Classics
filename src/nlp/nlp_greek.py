@@ -13,7 +13,7 @@ doc = nlp(passage)
 pprint(doc.text)
 
 for token in doc:
-    pprint(token)
+    print(f"Token: {token}")
     print(
         token.text,
         token.lemma_,
