@@ -1,6 +1,11 @@
-UNAME_S := $(shell uname 2>/dev/null || echo Windows)
+ifeq ($(OS),Windows_NT)
+    DETECTED_OS := windows
+else
+    DETECTED_OS := unix
+endif
 
-ifeq ($(UNAME_S),Windows)
+
+ifeq ($(DETECTED_OS),windows)
     define KILL_PORT
         @echo "🔍 Checking port $(1) on Windows..."
         @powershell -Command "Try { Get-NetTCPConnection -LocalPort $(1) -State Listen | ForEach-Object { Stop-Process -Id \$_.OwningProcess -Force } } Catch {}" 2>nul || true
@@ -19,13 +24,31 @@ else
     endef
 endif
 
-
 # ===== Config =====
-PYTHON        ?= python3
-PIP           ?= pip3
-PORT          ?= 8501
-APP_ENTRY     ?= src/app/server_streamlit.py
-STREAMLIT_APP ?= src/app/server_streamlit.py
+PROJECT_NAME  := Trojan Parse
+VENV_DIR      := .venv
+PIP          ?= pip3
+PORT         ?= 8501
+APP_ENTRY    ?= src/app/server_streamlit.py
+STREAMLIT_APP?= src/app/server_streamlit.py
+
+# ---- Python / Poetry / venv per OS ----
+ifeq ($(DETECTED_OS),windows)
+    PYTHON       := python
+    PIP          := pip
+    VENV_PYTHON  := $(VENV_DIR)/Scripts/python
+    POETRY_BIN   :=
+    RUNPY        := $(VENV_PYTHON)
+    RUN          := $(VENV_PYTHON) -m
+    PIP_RUN      := $(VENV_PYTHON) -m pip
+else
+    PYTHON      ?= python3
+    VENV_PYTHON := $(VENV_DIR)/bin/python
+    POETRY_BIN  := $(shell command -v poetry 2>/dev/null)
+    RUNPY       := $(if $(POETRY_BIN),poetry run $(PYTHON),$(VENV_PYTHON))
+    RUN         := $(if $(POETRY_BIN),poetry run,$(VENV_PYTHON) -m)
+    PIP_RUN     := $(if $(POETRY_BIN),poetry run $(PIP),$(VENV_PYTHON) -m pip)
+endif
 
 # Ollama
 OLLAMA_HOST   ?= http://localhost:11434
@@ -35,19 +58,11 @@ LATIN_TAG     ?= latin_model:1.0.0
 GREEK_TAG     ?= greek_model:1.0.0
 BASE_MODEL    ?= llama3.1:8b
 
-# Detect Poetry
-POETRY_BIN    := $(shell command -v poetry 2>/dev/null)
-RUNPY         := $(if $(POETRY_BIN),poetry run $(PYTHON),.venv/bin/$(PYTHON))
-RUN           := $(if $(POETRY_BIN),poetry run, .venv/bin)
-PIP_RUN       := $(if $(POETRY_BIN),poetry run $(PIP),.venv/bin/$(PIP))
-
 # ===== Frontend (React) =====
-FRONTEND_DIR ?= src/frontend
+FRONTEND_DIR  ?= src/frontend
 FRONTEND_PORT ?= 3000
-FE_DIR ?= src/frontend/src
-NPM    ?= npm
-
-
+FE_DIR        ?= src/frontend/src
+NPM           ?= npm
 
 # ===== Notebooks -> JupyterLite =====
 NB_SRC_DIR        ?= notebooks
@@ -60,6 +75,7 @@ JLITE_INDEX_JSON  ?= $(JLITE_NB_DIR)/index.json
 API_PORT ?= 5050
 API_APP  ?= app.server_fast:app
 
+# Detect frontend package manager
 FE_PM := $(shell \
   cd $(FRONTEND_DIR) 2>/dev/null && \
   if command -v pnpm >/dev/null 2>&1 && [ -f pnpm-lock.yaml ]; then echo pnpm; \
@@ -107,18 +123,20 @@ FE_PM_PREVIEW := npm run start -- -p $(FRONTEND_PORT)
 FE_PM_INSTALL := npm install
 endif
 
-
-
-.PHONY: help setup setup-poetry setup-venv env run web check fix test \
+.PHONY: help setup env run web check fix test \
         docker-build docker-run docker-dev docker-bash docker-clean \
         ollama-serve ollama-pull ollama-list build-latin build-greek \
         smoke-latin smoke-greek ensure-ollama ensure-models health \
-        fe-install fe-dev fe-build fe-serve fe-clean run-all
-
-
+        fe-install fe-dev fe-build fe-serve fe-clean fe-lint fe-lint-fix \
+        fe-format fe-format-check run-all \
+        nb-bootstrap nb-sync nb-index \
+        jlite-build jlite-serve jlite-clean \
+        api-deps api-run api-health \
+        start start-lite
 
 # ===== Help screen =====
 help:
+	@echo "$(PROJECT_NAME) Makefile (OS = $(DETECTED_OS))"
 	@printf "Usage: make <target>\n\n"
 	@printf "$(GREEN)Start Here: First time Deployment:$(RESET)\n"
 	@printf "$(GREEN)  start            Install backend dependencies, JupyterLite, and frontend dev$(RESET)\n\n"
@@ -136,7 +154,7 @@ help:
 	@printf "$(BLUE)  fe-build         Build production bundle$(RESET)\n"
 	@printf "$(BLUE)  fe-serve         Start production server$(RESET)\n"
 	@printf "$(BLUE)  fe-clean         Remove node_modules and .next$(RESET)\n"
-	@printf "$(BLUE)  run-all          Run Streamlit + Next.js dev servers together$(RESET)\n\n"
+	@printf "$(BLUE)  run-all          Run Streamlit + FastAPI + Next.js dev servers together$(RESET)\n\n"
 	@printf "$(GREY)Docker / Ollama:$(RESET)\n"
 	@printf "$(GREY)  docker-build, docker-run, docker-dev, docker-bash, docker-clean$(RESET)\n"
 	@printf "$(GREY)  ollama-serve, ollama-pull, build-latin, build-greek, smoke-latin, smoke-greek$(RESET)\n\n"
@@ -156,32 +174,45 @@ help:
 	@printf "$(PURPLE)  api-run           Run FastAPI backend server$(RESET)\n"
 	@printf "$(PURPLE)  api-health        Check FastAPI health endpoint$(RESET)\n\n"
 
-
 # ===== Setup =====
 setup:
-ifdef POETRY_BIN
+ifeq ($(DETECTED_OS),unix)
+ifneq ($(POETRY_BIN),)
 	@echo "Using Poetry..."
 	poetry install
 else
 	@echo "Using venv..."
-	$(PYTHON) -m venv .venv
-	"$(PYTHON)" -m pip install --upgrade pip
-	@if [ -f requirements.txt ]; then "$(PYTHON)" -m pip install -r requirements.txt; fi
+	$(PYTHON) -m venv $(VENV_DIR)
+	$(VENV_PYTHON) -m pip install --upgrade pip
+	@if [ -f requirements.txt ]; then $(VENV_PYTHON) -m pip install -r requirements.txt; fi
+endif
+else
+	@echo "Using venv (Windows)..."
+	$(PYTHON) -m venv $(VENV_DIR)
+	$(VENV_PYTHON) -m pip install --upgrade pip
+	@if exist requirements.txt $(VENV_PYTHON) -m pip install -r requirements.txt
 endif
 	@$(MAKE) api-deps
 	@$(MAKE) nb-bootstrap
 
 env:
+	@echo "DETECTED_OS=$(DETECTED_OS)"
 	@echo "PYTHON=$(PYTHON)"
-	@echo "Detected Poetry: $(if $(POETRY_BIN),yes,no)"
-	@echo "Runner: $(RUNPY)"
+	@echo "VENV_PYTHON=$(VENV_PYTHON)"
+	@echo "Poetry detected: $(if $(POETRY_BIN),yes,no)"
+	@echo "RUNPY=$(RUNPY)"
+	@echo "RUN=$(RUN)"
 
 # ===== Backend Run & Tests =====
 run:
 	$(RUNPY) $(APP_ENTRY)
 
 web:
-	$(if $(POETRY_BIN),poetry run streamlit run $(STREAMLIT_APP), .venv/bin/streamlit run $(STREAMLIT_APP))
+ifeq ($(DETECTED_OS),windows)
+	$(VENV_PYTHON) -m streamlit run $(STREAMLIT_APP)
+else
+	$(if $(POETRY_BIN),poetry run streamlit run $(STREAMLIT_APP), $(VENV_DIR)/bin/streamlit run $(STREAMLIT_APP))
+endif
 
 check:
 	$(RUN) black --check .
@@ -285,18 +316,9 @@ fe-format:
 	cd $(FE_DIR) && ($(NPM) run -s format || echo "skip: no 'format' script")
 
 fe-format-check:
-	cd $(FE_DIR) && ($(NPM) run -s format:check || echo "skip: no 'format:check' script"
+	cd $(FE_DIR) && ($(NPM) run -s format:check || echo "skip: no 'format:check' script")
 
-# ===== Combined Runner =====
-run-all:
-	@echo "Starting Streamlit (port $(PORT)) and React (port $(FRONTEND_PORT))..."
-	( $(MAKE) -s web ) & \
-	( cd $(FRONTEND_DIR) && $(FE_PM_DEV) ) & \
-	wait
-
-
-.PHONY: nb-bootstrap nb-sync nb-index
-
+# ===== Notebooks / JupyterLite =====
 nb-bootstrap:
 	@mkdir -p "$(NB_SRC_DIR)"
 	@mkdir -p "$(JLITE_NB_DIR)"
@@ -314,11 +336,25 @@ nb-sync: nb-bootstrap
 	@echo "✅ Synced notebooks to $(JLITE_NB_DIR)"
 
 nb-index:
-	@python3 - <<'PY'\nimp
+	@$(PYTHON) - <<'PY'
+import json, os, sys
 
+nb_dir = os.path.normpath("$(JLITE_NB_DIR)")
+index_path = os.path.normpath("$(JLITE_INDEX_JSON)")
 
-.PHONY: jlite-build jlite-serve jlite-clean
+if not os.path.isdir(nb_dir):
+    print(f"No notebook dir: {nb_dir}", file=sys.stderr)
+    raise SystemExit(0)
 
+names = [f for f in os.listdir(nb_dir) if f.endswith(".ipynb")]
+data = {"notebooks": [{"name": os.path.splitext(f)[0], "path": f} for f in sorted(names)]}
+os.makedirs(os.path.dirname(index_path), exist_ok=True)
+with open(index_path, "w", encoding="utf-8") as f:
+    json.dump(data, f, indent=2)
+print(f"Wrote {index_path} with {len(names)} notebooks")
+PY
+
+# JupyterLite build/serve
 jlite-build:
 	@echo "🧱 Installing JupyterLite..."
 	$(PIP_RUN) install -U "jupyterlite[all]"
@@ -331,15 +367,13 @@ jlite-build:
 
 jlite-serve:
 	@echo "🌐 Serving $(JLITE_DIR) at http://localhost:5174"
-	@cd "$(JLITE_DIR)" && python3 -m http.server 5174
+	@cd "$(JLITE_DIR)" && $(PYTHON) -m http.server 5174
 
 jlite-clean:
 	@echo "🧹 Removing $(JLITE_DIR)"
 	@rm -rf "$(JLITE_DIR)"
 
-
-.PHONY: api-deps api-run api-health run-all
-
+# ===== FastAPI backend =====
 api-deps:
 	$(PIP_RUN) install "fastapi>=0.110" "uvicorn[standard]>=0.23" "pydantic>=2"
 
@@ -350,31 +384,47 @@ api-run:
 api-health:
 	curl -s http://localhost:$(API_PORT)/api/health | jq .
 
-run-all:
-	( $(MAKE) -s web ) & \
-	( $(MAKE) -s api-run ) & \
-	( cd frontend && $(FE_PM_DEV) ) & \
-	wait
-
 
 start:
+ifeq ($(DETECTED_OS),windows)
+	@echo "🚀 Setting up Trojan Parse full stack (Windows)..."
+	@$(MAKE) setup
+	@$(MAKE) jlite-build
+	@echo "🌐 Starting FastAPI server on :$(API_PORT)..."
+	@start "" cmd /c "$(MAKE) -s api-run"
+	@echo "📘 Starting Streamlit on :$(PORT)..."
+	@start "" cmd /c "$(MAKE) -s web"
+	@echo "⚛️  Starting React dev server on :$(FRONTEND_PORT)..."
+	@$(call KILL_PORT,$(FRONTEND_PORT))
+	@start "" cmd /c "cd $(FRONTEND_DIR) && $(FE_PM_DEV)"
+else
 	@echo "🚀 Setting up Trojan Parse full stack..."
 	@$(MAKE) setup
 	@$(MAKE) jlite-build
-	@echo "🌐 Starting FastAPI server on :5050..."
-	@($(MAKE) -s api-run) &
-	@echo "📘 Starting Streamlit on :8501..."
-	@($(MAKE) -s web) &
+	@echo "🌐 Starting FastAPI server on :$(API_PORT)..."
+	( $(MAKE) -s api-run ) &
+	@echo "📘 Starting Streamlit on :$(PORT)..."
+	( $(MAKE) -s web ) &
 	@echo "⚛️  Starting React dev server on :$(FRONTEND_PORT)..."
 	@$(call KILL_PORT,$(FRONTEND_PORT))
-	@($(MAKE) -s fe-dev) &
-	@wait
+	( cd $(FRONTEND_DIR) && $(FE_PM_DEV) ) &
+	wait
+endif
 
 start-lite:
-	@echo "⚡ Quick start (no setup, no JupyterLite build)…"
-	@echo "🌐 FastAPI → :5050, 🏺 Streamlit → :8501, ⚛️ React → :$(FRONTEND_PORT)"
+ifeq ($(DETECTED_OS),windows)
+	@echo "⚡ Quick start (no setup, no JupyterLite build)… (Windows)"
+	@echo "🌐 FastAPI → :$(API_PORT), 🏺 Streamlit → :$(PORT), ⚛️ React → :$(FRONTEND_PORT)"
 	@$(call KILL_PORT,$(FRONTEND_PORT))
-	@($(MAKE) -s api-run) &
-	($(MAKE) -s web) &
-	($(MAKE) -s fe-dev) &
+	@start "" cmd /c "$(MAKE) -s api-run"
+	@start "" cmd /c "$(MAKE) -s web"
+	@start "" cmd /c "cd $(FRONTEND_DIR) && $(FE_PM_DEV)"
+else
+	@echo "⚡ Quick start (no setup, no JupyterLite build)…"
+	@echo "🌐 FastAPI → :$(API_PORT), 🏺 Streamlit → :$(PORT), ⚛️ React → :$(FRONTEND_PORT)"
+	@$(call KILL_PORT,$(FRONTEND_PORT))
+	( $(MAKE) -s api-run ) &
+	( $(MAKE) -s web ) &
+	( cd $(FRONTEND_DIR) && $(FE_PM_DEV) ) &
 	wait
+endif
