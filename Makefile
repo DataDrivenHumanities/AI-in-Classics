@@ -337,21 +337,12 @@ nb-sync: nb-bootstrap
 	@echo "✅ Synced notebooks to $(JLITE_NB_DIR)"
 
 nb-index:
-	@python3 - <<'PY'\nimp
-	import json, os, sys
-	nb_dir = os.path.normpath("$(JLITE_NB_DIR)")
-	index_path = os.path.normpath("$(JLITE_INDEX_JSON)")
-	if not os.path.isdir(nb_dir):
-		print(f"No notebook dir: {nb_dir}", file=sys.stderr)
-		raise SystemExit(0)
-
-	names = [f for f in os.listdir(nb_dir) if f.endswith(".ipynb")]
-	data = {"notebooks": [{"name": os.path.splitext(f)[0], "path": f} for f in sorted(names)]}
-	os.makedirs(os.path.dirname(index_path), exist_ok=True)
-	with open(index_path, "w", encoding="utf-8") as f:
-		json.dump(data, f, indent=2)
-	print(f"Wrote {index_path} with {len(names)} notebooks")
-	PY
+	@$(PYTHON) -c "import json, os; nb='$(JLITE_NB_DIR)'; idx='$(JLITE_INDEX_JSON)'; \
+	files=[f for f in os.listdir(nb) if f.endswith('.ipynb')] if os.path.isdir(nb) else []; \
+	data={'notebooks':[{'name':os.path.splitext(f)[0],'path':f} for f in sorted(files)]}; \
+	os.makedirs(os.path.dirname(idx), exist_ok=True); \
+	json.dump(data, open(idx,'w',encoding='utf8'), indent=2); \
+	print('Wrote', idx, 'with', len(files), 'notebooks')" || echo "nb-index failed"
 
 # JupyterLite build/serve
 jlite-build:
