@@ -15,7 +15,7 @@ a = p.parse_args()
 
 creds = Credentials.from_service_account_file(
     a.service_account_json,
-    scopes=["https://www.googleapis.com/auth/drive.file"]
+    scopes=["https://www.googleapis.com/auth/drive"]
 )
 svc = build("drive", "v3", credentials=creds)
 
