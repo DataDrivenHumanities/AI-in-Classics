@@ -14,34 +14,25 @@ pool:
   name: Default
 
 steps:
-  # 1) Seed Python 3.11.9 into the agent tool cache from NuGet (no Store, no admin)
+  # 1) Seed Python 3.11.9 into the agent tool cache (no Store/admin needed)
   - powershell: |
       $ErrorActionPreference = 'Stop'
       $version   = '3.11.9'
       $cacheRoot = Join-Path "$(Agent.ToolsDirectory)" "Python\$version"
       $toolsDir  = Join-Path $cacheRoot 'x64'
-
       if (-not (Test-Path (Join-Path $toolsDir 'python.exe'))) {
         New-Item -ItemType Directory -Force -Path $toolsDir | Out-Null
         $pkgUrl  = "https://www.nuget.org/api/v2/package/python/$version"
         $pkgFile = Join-Path $env:TEMP "python-$version.nupkg"
         $tmpDir  = Join-Path $env:TEMP "py-extract-$version"
-
         Invoke-WebRequest -Uri $pkgUrl -OutFile $pkgFile
         if (Test-Path $tmpDir) { Remove-Item -Recurse -Force $tmpDir }
         New-Item -ItemType Directory -Force -Path $tmpDir | Out-Null
-
-        # Extract .nupkg without renaming
         Add-Type -AssemblyName System.IO.Compression.FileSystem
         [IO.Compression.ZipFile]::ExtractToDirectory($pkgFile, $tmpDir)
-
         Copy-Item -Path (Join-Path $tmpDir 'tools\*') -Destination $toolsDir -Recurse -Force
-
-        # Mark the cache as ready for UsePythonVersion
         New-Item -ItemType File -Path (Join-Path $cacheRoot 'x64.complete') -Force | Out-Null
       }
-
-      & "$toolsDir\python.exe" -V
       & "$toolsDir\python.exe" -m ensurepip --upgrade
       & "$toolsDir\python.exe" -m pip install -U pip
     displayName: "Seed Python 3.11.9 (NuGet) + ensurepip"
@@ -53,7 +44,7 @@ steps:
       versionSpec: "3.11.9"
       architecture: "x64"
 
-  # 3) Create venv + deps (fix requirements path)
+  # 3) Create venv + deps
   - powershell: |
       $ErrorActionPreference = 'Stop'
       python -m venv .venv
@@ -61,7 +52,7 @@ steps:
       .\.venv\Scripts\python.exe -m pip install -r "$(Build.SourcesDirectory)\src\Lemmatizer-LTN\etl\requirements.txt"
     displayName: "Create venv + deps"
 
-  # 4) Materialize Google SA JSON (unchanged)
+  # 4) Materialize Google SA JSON
   - powershell: |
       $ErrorActionPreference = 'Stop'
       $bytes = [Convert]::FromBase64String($env:GOOGLE_SERVICE_ACCOUNT_JSON_BASE64)
@@ -70,66 +61,46 @@ steps:
     env:
       GOOGLE_SERVICE_ACCOUNT_JSON_BASE64: $(GOOGLE_SERVICE_ACCOUNT_JSON_BASE64)
 
-  # 5) Scrape → CSVs (ensure out/ exists; call script via absolute path)
+  # 5) Scrape → per-lemma CSVs (small test slice)
   - powershell: |
       $ErrorActionPreference = 'Stop'
       $out = "$(Build.SourcesDirectory)\src\Lemmatizer-LTN\out"
       New-Item -ItemType Directory -Force -Path $out | Out-Null
-      .\.venv\Scripts\python.exe "$(Build.SourcesDirectory)\src\Lemmatizer-LTN\tools\scrape_tables.py" `
+      .\.venv\Scripts\python.exe "$(Build.SourcesDirectory)\$(SCRAPER_PATH)" `
         --outdir "$out" `
         --start 1 --step 1 --end 100 `
         --index-concurrency 4 --lemma-concurrency 8 --delay 0.05
     displayName: "Scrape → per-lemma CSVs (100 pages test)"
     timeoutInMinutes: 120
 
-  # 6) Upload CSVs to Google Drive (fix script path)
+  # 6) Aggregate per-lemma → lemmas.csv + forms.csv
   - powershell: |
       $ErrorActionPreference = 'Stop'
-      .\.venv\Scripts\python.exe "$(Build.SourcesDirectory)\src\Lemmatizer-LTN\etl\upload_to_drive.py" `
+      .\.venv\Scripts\python.exe "$(Build.SourcesDirectory)\src\Lemmatizer-LTN\etl\aggregate_out_to_csvs.py"
+    displayName: "Aggregate per-lemma CSVs → lemmas.csv + forms.csv"
+
+  # 7) Upload to Drive:
+  #    - aggregates → ROOT/aggregates/
+  #    - per-lemma CSVs → ROOT/a..z/ (or ROOT/other/)
+  - powershell: |
+      $ErrorActionPreference = 'Stop'
+      .\.venv\Scripts\python.exe "$(Build.SourcesDirectory)\src\Lemmatizer-LTN\etl\upload_tree_to_drive.py" `
         --service-account-json service_account.json `
-        --folder-id "$(GOOGLE_DRIVE_FOLDER_ID)" `
-        --files "$(Build.SourcesDirectory)\src\Lemmatizer-LTN\out"
-    displayName: "Upload all CSVs under out/ to Google Drive"
+        --root-folder-id "$(GOOGLE_DRIVE_FOLDER_ID)" `
+        --outdir "$(Build.SourcesDirectory)\src\Lemmatizer-LTN\out"
+    displayName: "Upload to Drive (aggregates + lettered folders)"
     env:
       GOOGLE_DRIVE_FOLDER_ID: $(GOOGLE_DRIVE_FOLDER_ID)
+    timeoutInMinutes: 120
 
-  # 7) Init schema + Load CSVs (point to ops/init_db.sql under the subfolder)
+  # 8) Initialize schema + load CSVs into Postgres
   - powershell: |
       $ErrorActionPreference = 'Stop'
-      $py = ".\.venv\Scripts\python.exe"
-      $projectRoot = "$(Build.SourcesDirectory)\src\Lemmatizer-LTN"
-
-      $script = @'
-      import os, subprocess, sys
-      import psycopg2
-
-      project_root = os.environ["PROJECT_ROOT"]
-      dsn = os.environ["DATABASE_URL"]
-      sql_path = os.path.join(project_root, "ops", "init_db.sql")
-
-      with open(sql_path, "r", encoding="utf-8") as f:
-          init_sql = f.read()
-
-      with psycopg2.connect(dsn) as conn:
-          with conn.cursor() as cur:
-              cur.execute(init_sql)
-
-      print("Schema initialized.")
-
-      subprocess.check_call([
-          sys.executable, os.path.join(project_root, "etl", "load_to_postgres.py"),
-          "--db", dsn,
-          "--lemmas", os.environ["LEMMA_CSV"],
-          "--forms",  os.environ["FORM_CSV"],
-      ])
-      '@
-
-      $scriptPath = Join-Path $PWD "run_init_and_load.py"
-      Set-Content -Path $scriptPath -Value $script -Encoding UTF8
-      & $py $scriptPath
+      .\.venv\Scripts\python.exe "$(Build.SourcesDirectory)\src\Lemmatizer-LTN\etl\run_init_and_load.py"
     displayName: "Init schema + Load CSVs"
     env:
       PROJECT_ROOT: $(Build.SourcesDirectory)\src\Lemmatizer-LTN
       DATABASE_URL: $(DATABASE_URL)
       LEMMA_CSV: $(Build.SourcesDirectory)\src\Lemmatizer-LTN\out\lemmas.csv
       FORM_CSV: $(Build.SourcesDirectory)\src\Lemmatizer-LTN\out\forms.csv
+    timeoutInMinutes: 120

@@ -9,12 +9,14 @@ a = p.parse_args()
 def read_csv(path):
     with open(path, newline="", encoding="utf-8") as f:
         r = csv.reader(f)
-        header = next(r, None)  # allow empty files with header only
+        header = next(r, None)
         return header, [tuple(row) for row in r]
 
+def is_placeholder(s: str) -> bool:
+    return (s or "").strip() in {"", "-", "–", "—"}
+
 with psycopg.connect(a.db) as conn, conn.cursor() as cur:
-    # Create schema (idempotent) already done in pipeline; harmless if run again
-    # Upsert lemmas
+    # upsert lemmas
     _, lrows = read_csv(a.lemmas)
     if lrows:
         cur.executemany("""
@@ -25,11 +27,15 @@ with psycopg.connect(a.db) as conn, conn.cursor() as cur:
               pos=EXCLUDED.pos, gender=EXCLUDED.gender, page_url=EXCLUDED.page_url
         """, lrows)
 
-    # Insert forms (resolve lemma_id by lemma_nod; skip if no rows)
+    # insert forms
     _, frows = read_csv(a.forms)
     for r in frows:
         (lemma_nod, form_nod, form_diac, label, mood, tense, voice,
          person, number, gender, case, degree, page_url) = r
+
+        if is_placeholder(form_diac):
+            continue
+
         cur.execute("SELECT id FROM lemmas WHERE lemma_nod = norm(%s)", (lemma_nod,))
         row = cur.fetchone()
         if not row:
@@ -37,11 +43,12 @@ with psycopg.connect(a.db) as conn, conn.cursor() as cur:
             lemma_id = cur.fetchone()[0]
         else:
             lemma_id = row[0]
+
         cur.execute("""
           INSERT INTO forms (lemma_id,form_nod,form_diac,label,mood,tense,voice,person,number,gender,"case",degree,page_url)
           VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)
           ON CONFLICT DO NOTHING
         """, (lemma_id, form_nod, form_diac, label, mood, tense, voice, person, number, gender, case, degree, page_url))
-    conn.commit()
 
+    conn.commit()
 print("Load complete.")
