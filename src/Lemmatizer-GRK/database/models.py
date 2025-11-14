@@ -3,6 +3,7 @@ Database Models for Greek Dictionary
 
 Defines SQLAlchemy ORM models for Greek dictionary data:
 - GreekWord: Headwords/lemmas scraped from LSJ
+- PerseusVocabLemma: Lemmas from Perseus vocabulary with definitions and frequency
 - GreekLemma: Word forms with morphological information
 - GreekParse: Inflected forms with parsing details
 - GreekVerb, GreekNoun, GreekAdjective, GreekAdverb: Part-of-speech specific tables
@@ -203,3 +204,53 @@ class GreekParse(Base):
     
     def __repr__(self):
         return f"<GreekParse(id={self.id}, text='{self.text}', morph_code='{self.morph_code}')>"
+
+
+class PerseusVocabLemma(Base):
+    """
+    Greek lemmas from Perseus vocabulary tools with definitions and frequency data.
+    Source: perseus_vocab_scraper.py (vocab.perseus.org and atlas.perseus.tufts.edu)
+    
+    This table is optimized for sentiment analysis with:
+    - Definitions/glosses for semantic understanding
+    - Corpus and core frequency counts
+    - Links to Perseus resources
+    """
+    __tablename__ = 'perseus_vocab_lemmas'
+    
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    lemma = Column(String(255), nullable=False, index=True)
+    lemma_id = Column(String(50), nullable=True, index=True)  # Perseus vocab ID
+    atlas_id = Column(String(50), nullable=True, index=True)  # Perseus atlas ID
+    url = Column(Text, nullable=True)
+    source = Column(String(100), default='perseus')  # 'vocab.perseus.org' or 'atlas.perseus.tufts.edu'
+    language = Column(String(10), default='grc')
+    
+    # Frequency data (useful for sentiment analysis weighting)
+    corpus_count = Column(Integer, nullable=True)  # Occurrences in full corpus
+    corpus_freq = Column(Float, nullable=True)  # Frequency in full corpus
+    core_count = Column(Integer, nullable=True)  # Occurrences in core reading list
+    core_freq = Column(Float, nullable=True)  # Frequency in core texts
+    
+    # Definitions (critical for sentiment analysis)
+    definition = Column(Text, nullable=True)  # Full definition from Perseus
+    gloss = Column(Text, nullable=True)  # Short gloss/translation
+    
+    # Sentiment analysis fields
+    sentiment = Column(String(50), nullable=True)  # positive/negative/neutral
+    sentiment_score = Column(Float, nullable=True)  # -1.0 to 1.0
+    sentiment_analyzed_at = Column(DateTime, nullable=True)
+    
+    created_at = Column(DateTime, default=datetime.utcnow)
+    updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+    
+    __table_args__ = (
+        Index('idx_perseus_lemma', 'lemma'),
+        Index('idx_perseus_lemma_id', 'lemma_id'),
+        Index('idx_perseus_atlas_id', 'atlas_id'),
+        Index('idx_perseus_corpus_count', 'corpus_count'),
+        Index('idx_perseus_sentiment', 'sentiment'),
+    )
+    
+    def __repr__(self):
+        return f"<PerseusVocabLemma(id={self.id}, lemma='{self.lemma}', definition='{self.definition[:50] if self.definition else None}...')>"

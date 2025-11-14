@@ -21,7 +21,7 @@ from sqlalchemy.engine import Engine
 from .config import get_engine, get_session
 from .models import (
     Base, GreekWord, GreekVerb, GreekNoun, 
-    GreekAdjective, GreekAdverb, GreekLemma, GreekParse
+    GreekAdjective, GreekAdverb, GreekLemma, GreekParse, PerseusVocabLemma
 )
 
 
@@ -289,6 +289,77 @@ class DatabaseLoader:
         finally:
             session.close()
     
+    def load_perseus_vocab(self, csv_path: Optional[str] = None) -> int:
+        """
+        Load Perseus vocabulary lemmas from CSV.
+        
+        Args:
+            csv_path: Path to perseus_vocab.csv (defaults to database/perseus_vocab.csv)
+            
+        Returns:
+            Number of records loaded
+        """
+        if csv_path is None:
+            csv_path = self.data_dir.parent / 'database' / 'perseus_vocab.csv'
+        
+        print(f"Loading Perseus vocabulary from {csv_path}...")
+        
+        if not Path(csv_path).exists():
+            print(f"⚠ File not found: {csv_path}")
+            return 0
+        
+        try:
+            df = pd.read_csv(csv_path)
+        except Exception as e:
+            print(f"Error reading CSV: {e}", file=sys.stderr)
+            return 0
+        
+        df.columns = df.columns.str.strip()
+        
+        session = get_session(self.engine)
+        count = 0
+        
+        try:
+            records = []
+            for _, row in df.iterrows():
+                lemma = PerseusVocabLemma(
+                    lemma=str(row.get('lemma', '')).strip(),
+                    lemma_id=str(row.get('lemma_id')) if pd.notna(row.get('lemma_id')) else None,
+                    atlas_id=str(row.get('atlas_id')) if pd.notna(row.get('atlas_id')) else None,
+                    url=str(row.get('url')) if pd.notna(row.get('url')) else None,
+                    source=str(row.get('source', 'perseus')),
+                    language=str(row.get('language', 'grc')),
+                    corpus_count=int(row.get('corpus_count')) if pd.notna(row.get('corpus_count')) else None,
+                    corpus_freq=float(row.get('corpus_freq')) if pd.notna(row.get('corpus_freq')) else None,
+                    core_count=int(row.get('core_count')) if pd.notna(row.get('core_count')) else None,
+                    core_freq=float(row.get('core_freq')) if pd.notna(row.get('core_freq')) else None,
+                    definition=str(row.get('definition')) if pd.notna(row.get('definition')) else None,
+                    gloss=str(row.get('gloss')) if pd.notna(row.get('gloss')) else None
+                )
+                records.append(lemma)
+                
+                if len(records) >= self.batch_size:
+                    session.bulk_save_objects(records)
+                    session.commit()
+                    count += len(records)
+                    print(f"  Loaded {count} Perseus lemmas...")
+                    records = []
+            
+            if records:
+                session.bulk_save_objects(records)
+                session.commit()
+                count += len(records)
+            
+            print(f"✓ Loaded {count} Perseus vocabulary lemmas")
+            return count
+            
+        except Exception as e:
+            session.rollback()
+            print(f"✗ Error loading Perseus vocabulary: {e}", file=sys.stderr)
+            raise
+        finally:
+            session.close()
+    
     def load_all(self, create_tables: bool = True, drop_existing: bool = False):
         """
         Load all CSV data into database.
@@ -312,6 +383,7 @@ class DatabaseLoader:
             ('nouns', self.load_nouns),
             ('adjectives', self.load_adjectives),
             ('adverbs', self.load_adverbs),
+            ('perseus_vocab', self.load_perseus_vocab),
         ]
         
         for name, loader_func in files:
