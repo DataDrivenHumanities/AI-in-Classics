@@ -24,3 +24,5 @@ torch
 termcolor
 transformers
 vaderSentiment>=3.3.2
+sqlalchemy>=2.0,<2.1
+psycopg2-binary>=2.9,<3.0
