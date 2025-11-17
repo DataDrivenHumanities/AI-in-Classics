@@ -153,8 +153,8 @@ def main():
                     "mood","tense","voice","person","number","gender","case","degree","page_url"])
         w.writerows(forms)
 
-    print(f"Wrote {len(lemmas)} lemmas  → {LEMMA_CSV}")
-    print(f"Wrote {len(forms)}  forms   → {FORM_CSV}")
+    print(f"Wrote {len(lemmas)} lemmas -> {LEMMA_CSV}")
+    print(f"Wrote {len(forms)}  forms  -> {FORM_CSV}")
 
 if __name__ == "__main__":
     main()
