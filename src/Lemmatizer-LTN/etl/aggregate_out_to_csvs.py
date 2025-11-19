@@ -1,4 +1,3 @@
-# Aggregate per-lemma CSVs in ../out/ → lemmas.csv & forms.csv
 from pathlib import Path
 import csv, re, unicodedata, glob
 from urllib.parse import urlparse, parse_qs

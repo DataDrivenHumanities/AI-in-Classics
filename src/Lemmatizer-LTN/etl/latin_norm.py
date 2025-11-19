@@ -80,7 +80,7 @@ def _detect_case(*fields: Optional[str]) -> str:
     return ""
 
 def normalize_morph(row: dict) -> dict:
-    # check fields in priority: label, then closest titles (context_3→2→1), then pos
+    # check fields in priority: label, then closest titles (context_3->2->1), then pos
     label = (row.get("label") or "")
     c1 = row.get("context_1") or ""
     c2 = row.get("context_2") or ""
