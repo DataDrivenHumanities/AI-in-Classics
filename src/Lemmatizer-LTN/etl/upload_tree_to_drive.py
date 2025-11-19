@@ -1,124 +1,191 @@
-import argparse, os, glob, time, socket, ssl
+#!/usr/bin/env python3
+import os
+import argparse
+from pathlib import Path
+from typing import List
+
 from google.oauth2.service_account import Credentials
 from googleapiclient.discovery import build
 from googleapiclient.http import MediaFileUpload
-import google_auth_httplib2
-import httplib2
+from googleapiclient.errors import HttpError
 
-def parse_args():
-    p = argparse.ArgumentParser()
-    p.add_argument("--service-account-json", required=True)
-    p.add_argument("--root-folder-id", required=True)
-    p.add_argument("--outdir", required=True)
-    p.add_argument("--timeout", type=float, default=120.0, help="HTTP timeout seconds")
-    p.add_argument("--retries", type=int, default=6, help="Max retries on network errors")
-    p.add_argument("--limit-total", type=int, default=0, help="Limit total per-lemma uploads for testing (0 = no limit)")
-    return p.parse_args()
 
-def backoff_sleep(i):
-    time.sleep(min(2 ** i, 16))
+def build_drive(sa_path: str):
+    """Build a Drive service client with drive.file scope."""
+    scopes = ["https://www.googleapis.com/auth/drive.file"]
+    creds = Credentials.from_service_account_file(sa_path, scopes=scopes)
+    return build("drive", "v3", credentials=creds)
 
-def safe_execute(req, retries):
-    for i in range(retries + 1):
-        try:
-            # Also ask googleapiclient to retry HTTP 5xx, 429 internally.
-            return req.execute(num_retries=retries)
-        except (TimeoutError, socket.timeout, ssl.SSLError) as e:
-            if i == retries:
-                raise
-            backoff_sleep(i)
 
-def safe_resumable_upload(request, retries):
-    response = None
-    i = 0
-    while response is None:
-        try:
-            status, response = request.next_chunk(num_retries=retries)
-        except (TimeoutError, socket.timeout, ssl.SSLError):
-            if i >= retries:
-                raise
-            backoff_sleep(i)
-            i += 1
-    return response
+def ensure_folder_exists(svc, folder_id: str):
+    """Verify that folder_id is a folder the service account can see."""
+    try:
+        meta = svc.files().get(
+            fileId=folder_id,
+            fields="id,name,mimeType,driveId",
+            supportsAllDrives=True,
+        ).execute()
+    except HttpError as e:
+        raise SystemExit(f"Cannot access folder ID '{folder_id}': {e}")
+
+    if meta.get("mimeType") != "application/vnd.google-apps.folder":
+        raise SystemExit(
+            f"Target is not a folder: {folder_id} (mimeType={meta.get('mimeType')})"
+        )
+    return meta
+
+
+def get_or_create_child_folder(svc, parent_id: str, name: str) -> str:
+    """Return id of child folder 'name' under parent_id, creating it if missing."""
+    # NOTE: we assume `name` has no single quotes; your names (A..Z, 'aggregates') are safe.
+    q = (
+        f"name = '{name}' and "
+        f"'{parent_id}' in parents and "
+        "mimeType = 'application/vnd.google-apps.folder' and "
+        "trashed = false"
+    )
+    res = svc.files().list(
+        q=q,
+        spaces="drive",
+        fields="files(id,name)",
+        pageSize=1,
+        includeItemsFromAllDrives=True,
+        supportsAllDrives=True,
+    ).execute()
+    files = res.get("files", [])
+    if files:
+        return files[0]["id"]
+
+    meta = {
+        "name": name,
+        "mimeType": "application/vnd.google-apps.folder",
+        "parents": [parent_id],
+    }
+    f = svc.files().create(
+        body=meta,
+        fields="id",
+        supportsAllDrives=True,
+    ).execute()
+    print(f"Created folder '{name}' (id {f['id']}) under {parent_id}")
+    return f["id"]
+
+
+def upsert_file(svc, parent_id: str, local_path: Path):
+    """Create or update a CSV file by name within parent_id."""
+    name = local_path.name
+    q = (
+        f"name = '{name}' and "
+        f"'{parent_id}' in parents and "
+        "trashed = false"
+    )
+    res = svc.files().list(
+        q=q,
+        spaces="drive",
+        fields="files(id,name)",
+        pageSize=1,
+        includeItemsFromAllDrives=True,
+        supportsAllDrives=True,
+    ).execute()
+    files = res.get("files", [])
+
+    media = MediaFileUpload(str(local_path), mimetype="text/csv", resumable=False)
+
+    if files:
+        fid = files[0]["id"]
+        svc.files().update(
+            fileId=fid,
+            media_body=media,
+            supportsAllDrives=True,
+        ).execute()
+        print(f"[update] {name} in folder {parent_id}")
+    else:
+        meta = {"name": name, "parents": [parent_id]}
+        f = svc.files().create(
+            body=meta,
+            media_body=media,
+            fields="id",
+            supportsAllDrives=True,
+        ).execute()
+        print(f"[create] {name} -> id {f['id']} in folder {parent_id}")
+
+
+def pick_letter(name: str) -> str:
+    """Pick the first alphabetic character from the basename as A–Z bucket."""
+    stem = Path(name).stem
+    for ch in stem:
+        if ch.isalpha():
+            return ch.upper()
+    return "MISC"
+
+
+def collect_csv_paths(files_args: List[str]) -> list[Path]:
+    """Expand --files: accept files or directories, gather all *.csv."""
+    paths: list[Path] = []
+    for inp in files_args:
+        p = Path(inp)
+        if p.is_dir():
+            for root, _, filenames in os.walk(p):
+                for fn in filenames:
+                    if fn.lower().endswith(".csv"):
+                        paths.append(Path(root) / fn)
+        elif p.is_file() and p.suffix.lower() == ".csv":
+            paths.append(p)
+        else:
+            # ignore non-CSV paths
+            pass
+
+    # de-duplicate & sort
+    uniq = sorted({p.resolve() for p in paths})
+    return uniq
+
 
 def main():
-    a = parse_args()
-
-    creds = Credentials.from_service_account_file(a.service_account_json, scopes=["https://www.googleapis.com/auth/drive"])
-    # Explicit HTTP timeout for all requests
-    http = httplib2.Http(timeout=a.timeout)
-    authed_http = google_auth_httplib2.AuthorizedHttp(creds, http=http)
-
-    svc = build("drive", "v3", http=authed_http, cache_discovery=False)
-
-    root = safe_execute(
-        svc.files().get(fileId=a.root_folder_id, fields="id,name,driveId", supportsAllDrives=True),
-        a.retries,
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--service-account-json", required=True)
+    ap.add_argument("--folder-id", required=True, help="Root Drive folder ID")
+    ap.add_argument(
+        "--files",
+        nargs="+",
+        required=True,
+        help="CSV file paths OR directories to scan for *.csv",
     )
-    drive_id = root.get("driveId")
+    ap.add_argument(
+        "--aggregates-folder-name",
+        default="aggregates",
+        help="Name of subfolder to hold lemmas.csv/forms.csv",
+    )
+    args = ap.parse_args()
 
-    def get_or_create_folder(name, parent_id):
-        q = (
-            f"name = '{name}' and mimeType = 'application/vnd.google-apps.folder' "
-            f"and '{parent_id}' in parents and trashed = false"
-        )
-        res = safe_execute(
-            svc.files().list(
-                q=q,
-                fields="files(id,name)",
-                supportsAllDrives=True,
-                includeItemsFromAllDrives=True,
-                corpora="drive",
-                driveId=drive_id,
-                pageSize=10,
-            ),
-            a.retries,
-        )
-        items = res.get("files", [])
-        if items:
-            return items[0]["id"]
-        meta = {"name": name, "mimeType": "application/vnd.google-apps.folder", "parents": [parent_id]}
-        created = safe_execute(
-            svc.files().create(body=meta, fields="id", supportsAllDrives=True),
-            a.retries,
-        )
-        return created["id"]
+    svc = build_drive(args.service_account_json)
+    ensure_folder_exists(svc, args.folder_id)
+    root_id = args.folder_id
 
-    def upload_csv(path, parent_id):
-        body = {"name": os.path.basename(path), "parents": [parent_id]}
-        media = MediaFileUpload(path, mimetype="text/csv", chunksize=1024 * 1024, resumable=True)
-        request = svc.files().create(
-            body=body, media_body=media, fields="id", supportsAllDrives=True
-        )
-        resp = safe_resumable_upload(request, a.retries)
-        return resp["id"]
+    paths = collect_csv_paths(args.files)
+    if not paths:
+        print("No CSV files found to upload.")
+        return
 
-    # 1) aggregates/
-    agg_id = get_or_create_folder("aggregates", a.root_folder_id)
-    for name in ("lemmas.csv", "forms.csv"):
-        pth = os.path.join(a.outdir, name)
-        if os.path.exists(pth):
-            upload_csv(pth, agg_id)
+    # Aggregates folder (for lemmas.csv, forms.csv)
+    agg_id = get_or_create_child_folder(svc, root_id, args.aggregates_folder_name)
 
-    # 2) letter folders a..z + other
-    letters = {chr(c): get_or_create_folder(chr(c), a.root_folder_id) for c in range(ord("a"), ord("z") + 1)}
-    other_id = get_or_create_folder("other", a.root_folder_id)
+    # Cache for letter subfolders
+    letter_cache: dict[str, str] = {}
 
-    # Upload each per-lemma CSV to lettered folder
-    uploaded = 0
-    for pth in glob.glob(os.path.join(a.outdir, "*.csv")):
-        base = os.path.basename(pth)
-        if base in ("lemmas.csv", "forms.csv"):
-            continue
-        if a.limit_total and uploaded >= a.limit_total:
-            break
-        stem = os.path.splitext(base)[0]
-        first = (stem[:1] or "").lower()
-        parent = letters.get(first, other_id)
-        upload_csv(pth, parent)
-        uploaded += 1
+    def letter_folder(letter: str) -> str:
+        if letter not in letter_cache:
+            letter_cache[letter] = get_or_create_child_folder(svc, root_id, letter)
+        return letter_cache[letter]
 
-    print(f"Uploaded aggregates + {uploaded} per-lemma CSVs.")
+    # Upload all CSVs: lemmas/forms -> aggregates; others -> letter folders
+    for p in paths:
+        name = p.name
+        if name in ("lemmas.csv", "forms.csv"):
+            upsert_file(svc, agg_id, p)
+        else:
+            bucket = pick_letter(name)  # e.g., "A", "B", ...
+            parent_id = letter_folder(bucket)
+            upsert_file(svc, parent_id, p)
+
 
 if __name__ == "__main__":
     main()
