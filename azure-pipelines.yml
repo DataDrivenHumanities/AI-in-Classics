@@ -7,10 +7,6 @@ parameters:
 trigger: none
 pr: none
 
-
-trigger: none
-pr: none
-
 variables:
   - group: latin-secrets
   - name: SCRAPER_PATH
