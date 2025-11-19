@@ -68,7 +68,7 @@ BEGIN
   ) THEN
     EXECUTE $I$
       CREATE UNIQUE INDEX forms_unique_idx ON forms(
-        lemma_id, form_nod, label,
+        lemma_id, form_nod,
         coalesce(mood,''), coalesce(tense,''), coalesce(voice,''),
         coalesce(person,''), coalesce(number,''), coalesce(gender,''),
         coalesce("case",''), coalesce(degree,'')
