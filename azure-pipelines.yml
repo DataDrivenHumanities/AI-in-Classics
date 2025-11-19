@@ -118,6 +118,25 @@ jobs:
         .\.venv\Scripts\python.exe "$(Build.SourcesDirectory)\src\Lemmatizer-LTN\etl\aggregate_out_to_csvs.py"
       displayName: "Aggregate per-lemma CSVs -> lemmas.csv + forms.csv"
 
+    - powershell: |
+          $ErrorActionPreference = 'Stop'
+          $py = ".\.venv\Scripts\python.exe"
+
+          $code = @'
+          from google.oauth2.service_account import Credentials
+
+          creds = Credentials.from_service_account_file(
+              "service_account.json",
+              scopes=["https://www.googleapis.com/auth/drive.file"],
+          )
+          print("SERVICE ACCOUNT EMAIL IN PIPELINE:", creds.service_account_email)
+          '@
+
+          $code | Set-Content -Path show_sa_email.py -Encoding UTF8
+          & $py show_sa_email.py
+      displayName: "Debug: show SA email"
+
+
     # 7) Upload to Drive:
     #    - aggregates -> ROOT/aggregates/
     #    - per-lemma CSVs -> ROOT/a..z/ (or ROOT/other/)
