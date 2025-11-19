@@ -3,7 +3,7 @@ CREATE EXTENSION IF NOT EXISTS unaccent;
 CREATE EXTENSION IF NOT EXISTS pg_trgm;
 CREATE EXTENSION IF NOT EXISTS citext;
 
--- Immutable normalizer for indexes/uniques
+-- Immutable normalizer for indexes/expressions
 CREATE OR REPLACE FUNCTION norm(t text) RETURNS text
 LANGUAGE sql IMMUTABLE PARALLEL SAFE AS $$
   SELECT unaccent(lower(t));
@@ -42,7 +42,7 @@ CREATE TABLE IF NOT EXISTS forms (
   page_url  text
 );
 
--- Remove any legacy context columns if they still exist
+-- Clean up any legacy columns we no longer use
 ALTER TABLE forms DROP COLUMN IF EXISTS source_context_1;
 ALTER TABLE forms DROP COLUMN IF EXISTS source_context_2;
 ALTER TABLE forms DROP COLUMN IF EXISTS source_context_3;
@@ -52,27 +52,32 @@ CREATE INDEX IF NOT EXISTS forms_lemma_id_idx ON forms(lemma_id);
 CREATE INDEX IF NOT EXISTS forms_form_nod_idx ON forms(form_nod);
 CREATE INDEX IF NOT EXISTS forms_form_trgm_idx ON forms USING gin (form_nod gin_trgm_ops);
 
--- FTS on diacritics-stripped forms/lemmas
-ALTER TABLE lemmas ADD COLUMN IF NOT EXISTS lemma_fts tsvector
-  GENERATED ALWAYS AS (to_tsvector('simple', unaccent(coalesce(lemma_diac,'')))) STORED;
-ALTER TABLE forms  ADD COLUMN IF NOT EXISTS form_fts  tsvector
-  GENERATED ALWAYS AS (to_tsvector('simple', unaccent(coalesce(form_diac ,'')))) STORED;
+-- Recreate FTS columns using IMMUTABLE expression via norm(...)
+ALTER TABLE lemmas DROP COLUMN IF EXISTS lemma_fts;
+ALTER TABLE forms  DROP COLUMN IF EXISTS form_fts;
+
+ALTER TABLE lemmas ADD COLUMN lemma_fts tsvector
+  GENERATED ALWAYS AS (to_tsvector('simple', norm(coalesce(lemma_diac,'')))) STORED;
+
+ALTER TABLE forms  ADD COLUMN form_fts tsvector
+  GENERATED ALWAYS AS (to_tsvector('simple', norm(coalesce(form_diac ,'')))) STORED;
 
 CREATE INDEX IF NOT EXISTS lemmas_fts_idx ON lemmas USING gin(lemma_fts);
 CREATE INDEX IF NOT EXISTS forms_fts_idx  ON forms  USING gin(form_fts);
 
--- Idempotent unique to avoid dup forms on reloads
+-- Idempotent uniqueness to avoid dup forms on reloads
 DO $$
 BEGIN
   IF NOT EXISTS (
     SELECT 1 FROM pg_indexes
-    WHERE schemaname = 'public'
-      AND indexname  = 'forms_unique_idx'
+    WHERE schemaname = 'public' AND indexname = 'forms_unique_idx'
   ) THEN
     EXECUTE $I$
       CREATE UNIQUE INDEX forms_unique_idx ON forms(
-        lemma_id, form_nod, label, coalesce(mood,''), coalesce(tense,''), coalesce(voice,''),
-        coalesce(person,''), coalesce(number,''), coalesce(gender,''), coalesce("case",''), coalesce(degree,'')
+        lemma_id, form_nod, label,
+        coalesce(mood,''), coalesce(tense,''), coalesce(voice,''),
+        coalesce(person,''), coalesce(number,''), coalesce(gender,''),
+        coalesce("case",''), coalesce(degree,'')
       )
     $I$;
   END IF;
