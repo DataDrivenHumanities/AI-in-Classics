@@ -68,9 +68,8 @@ steps:
       New-Item -ItemType Directory -Force -Path $out | Out-Null
       .\.venv\Scripts\python.exe "$(Build.SourcesDirectory)\$(SCRAPER_PATH)" `
         --outdir "$out" `
-        --start 1 --step 1 --end 1 `
         --index-concurrency 4 --lemma-concurrency 8 --delay 0.05
-    displayName: "Scrape → per-lemma CSVs (1 page test)"
+    displayName: "Scrape -> per-lemma CSVs"
     timeoutInMinutes: 120
 
   # 6) Aggregate per-lemma → lemmas.csv + forms.csv
