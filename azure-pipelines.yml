@@ -103,11 +103,12 @@ steps:
   # 8) Initialize schema + load CSVs into Postgres
   - powershell: |
       $ErrorActionPreference = 'Stop'
-      .\.venv\Scripts\python.exe "$(Build.SourcesDirectory)\src\Lemmatizer-LTN\etl\run_init_and_load.py"
-    displayName: "Init schema + Load CSVs"
+      $py = ".\.venv\Scripts\python.exe"
+      $root = "$(Build.SourcesDirectory)\src\Lemmatizer-LTN"
+      & $py "$root\etl\load_to_postgres.py" `
+        --schema "$root\ops\schema.sql" `
+        --outdir "$root\out" `
+        --truncate
+    displayName: "Normalize & load per-lemma CSVs"
     env:
-      PROJECT_ROOT: $(Build.SourcesDirectory)\src\Lemmatizer-LTN
       DATABASE_URL: $(DATABASE_URL)
-      LEMMA_CSV: $(Build.SourcesDirectory)\src\Lemmatizer-LTN\out\lemmas.csv
-      FORM_CSV: $(Build.SourcesDirectory)\src\Lemmatizer-LTN\out\forms.csv
-    timeoutInMinutes: 120
