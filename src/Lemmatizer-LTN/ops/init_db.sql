@@ -26,26 +26,20 @@ CREATE INDEX IF NOT EXISTS lemmas_trgm_idx ON lemmas USING gin (lemma_nod gin_tr
 
 -- Forms
 CREATE TABLE IF NOT EXISTS forms (
-  id        BIGSERIAL PRIMARY KEY,
-  lemma_id  BIGINT NOT NULL REFERENCES lemmas(id) ON DELETE CASCADE,
-  form_nod  citext NOT NULL,
-  form_diac text,
-  label     text,
-  mood      text,
-  tense     text,
-  voice     text,
-  person    text,
-  number    text,
-  gender    text,
-  "case"    text,
-  degree    text,
-  page_url  text
+  id          BIGSERIAL PRIMARY KEY,
+  lemma_id    BIGINT NOT NULL REFERENCES lemmas(id) ON DELETE CASCADE,
+  form_nod    CITEXT NOT NULL,
+  form_diac   TEXT,
+  mood        TEXT,
+  tense       TEXT,
+  voice       TEXT,
+  person      TEXT,
+  number      TEXT,
+  gender      TEXT,
+  "case"      TEXT,
+  degree      TEXT,
+  page_url    TEXT
 );
-
--- Clean up any legacy columns we no longer use
-ALTER TABLE forms DROP COLUMN IF EXISTS source_context_1;
-ALTER TABLE forms DROP COLUMN IF EXISTS source_context_2;
-ALTER TABLE forms DROP COLUMN IF EXISTS source_context_3;
 
 -- Helpful indexes
 CREATE INDEX IF NOT EXISTS forms_lemma_id_idx ON forms(lemma_id);

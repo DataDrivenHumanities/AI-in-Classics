@@ -51,16 +51,16 @@ def insert_form(conn, lemma_id: int, r: dict):
     conn.execute(
         """
         INSERT INTO forms
-          (lemma_id, form_nod, form_diac, label,
+          (lemma_id, form_nod, form_diac
            mood, tense, voice, person, number, gender, "case", degree, page_url)
         VALUES
-          (%s,      norm(%s), %s,       %s,
+          (%s,      norm(%s), %s,
            %s,  %s,   %s,    %s,     %s,     %s,     %s,    %s,    %s)
         ON CONFLICT DO NOTHING
         """,
         (
             lemma_id,
-            form_diac, form_diac, (r.get("label") or ""),
+            form_diac, form_diac,
             (n["mood"] or None), (n["tense"] or None), (n["voice"] or None),
             (n["person"] or None), (n["number"] or None), (n["gender"] or None),
             (n["case"] or None), (n["degree"] or None),
