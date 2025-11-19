@@ -84,10 +84,17 @@ steps:
   #    - per-lemma CSVs → ROOT/a..z/ (or ROOT/other/)
   - powershell: |
       $ErrorActionPreference = 'Stop'
+      # UTF-8, just in case any script prints non-ASCII
+      [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
+      $env:PYTHONIOENCODING = "utf-8"
+      $env:PYTHONUTF8 = "1"
       .\.venv\Scripts\python.exe "$(Build.SourcesDirectory)\src\Lemmatizer-LTN\etl\upload_tree_to_drive.py" `
         --service-account-json service_account.json `
         --root-folder-id "$(GOOGLE_DRIVE_FOLDER_ID)" `
-        --outdir "$(Build.SourcesDirectory)\src\Lemmatizer-LTN\out"
+        --outdir "$(Build.SourcesDirectory)\src\Lemmatizer-LTN\out" `
+        --timeout 180 `
+        --retries 6 `
+        --limit-total 250
     displayName: "Upload to Drive (aggregates + lettered folders)"
     env:
       GOOGLE_DRIVE_FOLDER_ID: $(GOOGLE_DRIVE_FOLDER_ID)
