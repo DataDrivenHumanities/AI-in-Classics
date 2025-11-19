@@ -1,7 +1,7 @@
 import re, unicodedata
 from typing import Dict, Optional
 
-# strip " – Active/Passive diathesis" from lemma headings (for display / lemma_nod)
+# strip “ – Active/Passive diathesis” from lemma headings (for lemma_nod / cleaned display)
 _DIATHESIS_TAIL = re.compile(r"\s*[-–—]?\s*(active|passive)\s+diathesis\s*$", re.I)
 
 def strip_accents(s: str) -> str:
@@ -11,6 +11,7 @@ def strip_accents(s: str) -> str:
     return "".join(ch for ch in nf if not unicodedata.combining(ch))
 
 def clean_lemma_text(t: str) -> str:
+    # Used when normalizing lemma_nod / lemma_diac, NOT for morph detection
     return _DIATHESIS_TAIL.sub("", (t or "").strip())
 
 ROMAN_TO_PERSON = {"I": "first", "II": "second", "III": "third"}
@@ -71,7 +72,7 @@ TENSE_MAP = {
     "FUTURE PERFECT": "future perfect",
 }
 
-# Normalize ALL voice variants (including diathesis) to lower-case
+# Normalize all voice-y phrases to canonical lower-case values
 VOICE_MAP = {
     "ACTIVE DIATHESIS": "active",
     "PASSIVE DIATHESIS": "passive",
@@ -163,12 +164,10 @@ def normalize_morph(row: dict) -> dict:
     pos = row.get("pos") or ""
     lemma_text = row.get("lemma_text") or ""
 
-    # Mood/tense generally live in headings + label, sometimes pos
-    mood   = _first_hit(MOOD_MAP,    label, c3, c2, c1, pos)
-    tense  = _first_hit(TENSE_MAP,   label, c3, c2, c1, pos)
-
-    # Voice can live in headings OR in lemma_text ("- Active diathesis")
-    voice  = _first_hit(VOICE_MAP,   label, c3, c2, c1, pos, lemma_text)
+    # Mood / tense / voice can be in headings, pos, or lemma_text
+    mood   = _first_hit(MOOD_MAP,   label, c3, c2, c1, pos)
+    tense  = _first_hit(TENSE_MAP,  label, c3, c2, c1, pos)
+    voice  = _first_hit(VOICE_MAP,  label, c3, c2, c1, pos, lemma_text)
 
     gender = _first_hit(ABBR_GENDER, label, c3, c2, c1, pos)
 
@@ -176,7 +175,7 @@ def normalize_morph(row: dict) -> dict:
     case   = _detect_case(label, c3, c2, c1)
     person = _detect_person(label, c3, c2, c1, pos)
 
-    degree = _first_hit(DEGREE_MAP,  label, c3, c2, c1, pos)
+    degree = _first_hit(DEGREE_MAP, label, c3, c2, c1, pos)
 
     return {
         "mood":   mood   or "",
