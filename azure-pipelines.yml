@@ -100,7 +100,32 @@ steps:
       GOOGLE_DRIVE_FOLDER_ID: $(GOOGLE_DRIVE_FOLDER_ID)
     timeoutInMinutes: 120
 
-  # 8) Initialize schema + load CSVs into Postgres
+  # 8) Initialize schema
+  - powershell: |
+      $ErrorActionPreference = 'Stop'
+      $py   = ".\.venv\Scripts\python.exe"
+      $root = "$(Build.SourcesDirectory)\src\Lemmatizer-LTN"
+
+      $code = @'
+      import os, pathlib, psycopg
+      dsn = os.environ["DATABASE_URL"]
+      schema_path = pathlib.Path(os.environ["SCHEMA_PATH"])
+      print(f"Applying schema: {schema_path}")
+      sql = schema_path.read_text(encoding="utf-8")
+      with psycopg.connect(dsn, autocommit=True) as conn:
+          conn.execute(sql)
+      print("Schema applied.")
+      '@
+
+      Set-Content -Path apply_schema.py -Value $code -Encoding UTF8
+      $env:SCHEMA_PATH = Join-Path $root "ops\init_db.sql"
+      & $py .\apply_schema.py
+    displayName: "Init DB schema (create/ensure tables)"
+    env:
+      DATABASE_URL: $(DATABASE_URL)
+
+
+  # 9) Load CSVs into Postgres
   - powershell: |
       $ErrorActionPreference = 'Stop'
       $py = ".\.venv\Scripts\python.exe"
