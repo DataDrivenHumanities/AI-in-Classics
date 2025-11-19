@@ -7,7 +7,7 @@ import psycopg
 # Robust import whether run as a script or as a module
 try:
     from latin_norm import clean_lemma_text, normalize_morph
-except Exception:  # e.g., when executed as a module
+except Exception:
     import importlib, sys
     sys.path.append(str(Path(__file__).parent))
     _ln = importlib.import_module("latin_norm")
@@ -36,7 +36,7 @@ def upsert_lemma(conn, *, lemma_text: str, pos: str, gender_hint: str, page_url:
     row = conn.execute(
         """
         INSERT INTO lemmas (lemma_code, lemma_nod, lemma_diac, pos, gender, page_url)
-        VALUES ($1, norm($2), $2, $3, $4, $5)
+        VALUES (%s, norm(%s), %s, %s, %s, %s)
         ON CONFLICT (lemma_nod) DO UPDATE SET
           lemma_code = EXCLUDED.lemma_code,
           lemma_diac = EXCLUDED.lemma_diac,
@@ -45,7 +45,14 @@ def upsert_lemma(conn, *, lemma_text: str, pos: str, gender_hint: str, page_url:
           page_url   = EXCLUDED.page_url
         RETURNING id
         """,
-        (lemma_code or None, lemma_diac, (pos or None), (gender_hint or None), (page_url or None)),
+        (
+            (lemma_code or None),
+            lemma_diac,                   # for norm(%s)
+            lemma_diac,                   # lemma_diac
+            (pos or None),
+            (gender_hint or None),
+            (page_url or None),
+        ),
     ).fetchone()
     return row[0]
 
@@ -61,26 +68,36 @@ def insert_form(conn, lemma_id: int, r: dict):
            mood, tense, voice, person, number, gender, "case", degree,
            source_context_1, source_context_2, source_context_3, page_url)
         VALUES
-          ($1, norm($2), $2, $3,
-           $4, $5, $6, $7, $8, $9, $10, $11,
-           $12, $13, $14, $15)
+          (%s, norm(%s), %s, %s,
+           %s, %s, %s, %s, %s, %s, %s, %s,
+           %s, %s, %s, %s)
         ON CONFLICT DO NOTHING
         """,
         (
-            lemma_id, form_diac, form_diac, (r.get("label") or ""),
-            (n["mood"] or None), (n["tense"] or None), (n["voice"] or None),
-            (n["person"] or None), (n["number"] or None), (n["gender"] or None),
-            (n["case"] or None), (n["degree"] or None),
-            (r.get("context_1") or None), (r.get("context_2") or None), (r.get("context_3") or None),
+            lemma_id,
+            form_diac,                    # for norm(%s)
+            form_diac,
+            (r.get("label") or ""),
+            (n["mood"] or None),
+            (n["tense"] or None),
+            (n["voice"] or None),
+            (n["person"] or None),
+            (n["number"] or None),
+            (n["gender"] or None),
+            (n["case"] or None),
+            (n["degree"] or None),
+            (r.get("context_1") or None),
+            (r.get("context_2") or None),
+            (r.get("context_3") or None),
             (r.get("page_url") or None),
         ),
     )
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--outdir",  default=str(OUT_DIR),                 help="Directory of per-lemma CSVs")
+    ap.add_argument("--outdir",  default=str(OUT_DIR),                      help="Directory of per-lemma CSVs")
     ap.add_argument("--schema",  default=str(BASE / "ops" / "init_db.sql"), help="Apply schema before loading (if present)")
-    ap.add_argument("--truncate", action="store_true",                 help="Truncate lemmas/forms before load")
+    ap.add_argument("--truncate", action="store_true",                      help="Truncate lemmas/forms before load")
     args = ap.parse_args()
 
     dsn = os.getenv("DATABASE_URL")
