@@ -75,7 +75,9 @@ TENSE_MAP = {
 # Normalize all voice-y phrases to canonical lower-case values
 VOICE_MAP = {
     "ACTIVE DIATHESIS": "active",
+    "ACTIVEDIATHESIS": "active",   # lemma_text often has no space
     "PASSIVE DIATHESIS": "passive",
+    "PASSIVEDIATHESIS": "passive",
     "ACTIVE VOICE": "active",
     "PASSIVE VOICE": "passive",
     "ACTIVE": "active",
@@ -155,19 +157,53 @@ def normalize_morph(row: dict) -> dict:
       - label
       - value
       - page_url
+      - (optional) voice_hint, number_hint, gender_hint, etc.
     We derive normalized morphological tags from these.
     """
-    label = row.get("label") or ""
-    c1 = row.get("context_1") or ""
-    c2 = row.get("context_2") or ""
-    c3 = row.get("context_3") or ""
-    pos = row.get("pos") or ""
+    label      = row.get("label") or ""
+    c1         = row.get("context_1") or ""
+    c2         = row.get("context_2") or ""
+    c3         = row.get("context_3") or ""
+    pos        = row.get("pos") or ""
     lemma_text = row.get("lemma_text") or ""
+    voice_hint_raw = (row.get("voice_hint") or "").strip().lower()
 
-    # Mood / tense / voice can be in headings, pos, or lemma_text
+    # Mood / tense from headings / POS
     mood   = _first_hit(MOOD_MAP,   label, c3, c2, c1, pos)
     tense  = _first_hit(TENSE_MAP,  label, c3, c2, c1, pos)
-    voice  = _first_hit(VOICE_MAP,  label, c3, c2, c1, pos, lemma_text)
+
+    # --- VOICE: voice_hint first, then text heuristics, then VOICE_MAP ---
+
+    voice: str = ""
+
+    # 1) Strongest signal: explicit voice_hint from scraper
+    if voice_hint_raw:
+        if "active" in voice_hint_raw:
+            voice = "active"
+        elif "passive" in voice_hint_raw:
+            voice = "passive"
+        elif "deponent" in voice_hint_raw:
+            voice = "deponent"
+        elif "middle" in voice_hint_raw:
+            voice = "middle"
+
+    # 2) If still unknown, look at combined headings for patterns
+    if not voice:
+        combined = " ".join(
+            x for x in [label, c1, c2, c3, pos, lemma_text] if x
+        ).lower()
+        if "active diathesis" in combined or "voice active" in combined or " active " in f" {combined} ":
+            voice = "active"
+        elif "passive diathesis" in combined or "voice passive" in combined or " passive " in f" {combined} ":
+            voice = "passive"
+        elif "deponent" in combined:
+            voice = "deponent"
+        elif "middle" in combined:
+            voice = "middle"
+
+    # 3) Final fallback: VOICE_MAP string matching
+    if not voice:
+        voice = _first_hit(VOICE_MAP, label, c3, c2, c1, pos, lemma_text) or ""
 
     gender = _first_hit(ABBR_GENDER, label, c3, c2, c1, pos)
 
