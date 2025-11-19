@@ -4,11 +4,15 @@ from pathlib import Path
 from urllib.parse import urlparse, parse_qs
 import psycopg
 
-# Import the sibling module when run as a file; fall back to package style if needed.
+# Robust import whether run as a script or as a module
 try:
     from latin_norm import clean_lemma_text, normalize_morph
-except Exception:
-    from .latin_norm import clean_lemma_text, normalize_morph  # works if run via `python -m etl.load_to_postgres`
+except Exception:  # e.g., when executed as a module
+    import importlib, sys
+    sys.path.append(str(Path(__file__).parent))
+    _ln = importlib.import_module("latin_norm")
+    clean_lemma_text = _ln.clean_lemma_text
+    normalize_morph  = _ln.normalize_morph
 
 BASE = Path(__file__).resolve().parents[1]
 OUT_DIR = BASE / "out"
@@ -20,23 +24,26 @@ def lemma_code_from_url(u: str) -> str:
     except Exception:
         return ""
 
-def upsert_lemma(conn, lemma_text: str, pos: str, gender_hint: str, page_url: str) -> int:
-    # Clean trailing “ – Active/Passive diathesis” from the heading for verbs
+def upsert_lemma(conn, *, lemma_text: str, pos: str, gender_hint: str, page_url: str) -> int:
+    """
+    Insert/update the lemma row.
+    - lemma_nod is computed in SQL as norm(lemma_diac)
+    - lemma_diac stores the cleaned display form (diacritics ok, diathesis tail stripped)
+    """
     lemma_diac = clean_lemma_text(lemma_text or "")
     lemma_code = lemma_code_from_url(page_url)
 
-    # Use SQL norm() (immutable, defined in your schema) to fill lemma_nod
     row = conn.execute(
         """
-        insert into lemmas (lemma_code, lemma_nod, lemma_diac, pos, gender, page_url)
-        values ($1, norm($2), $2, $3, $4, $5)
-        on conflict (lemma_nod) do update set
-          lemma_code = excluded.lemma_code,
-          lemma_diac = excluded.lemma_diac,
-          pos        = excluded.pos,
-          gender     = excluded.gender,
-          page_url   = excluded.page_url
-        returning id
+        INSERT INTO lemmas (lemma_code, lemma_nod, lemma_diac, pos, gender, page_url)
+        VALUES ($1, norm($2), $2, $3, $4, $5)
+        ON CONFLICT (lemma_nod) DO UPDATE SET
+          lemma_code = EXCLUDED.lemma_code,
+          lemma_diac = EXCLUDED.lemma_diac,
+          pos        = EXCLUDED.pos,
+          gender     = EXCLUDED.gender,
+          page_url   = EXCLUDED.page_url
+        RETURNING id
         """,
         (lemma_code or None, lemma_diac, (pos or None), (gender_hint or None), (page_url or None)),
     ).fetchone()
@@ -49,15 +56,15 @@ def insert_form(conn, lemma_id: int, r: dict):
         return
     conn.execute(
         """
-        insert into forms
+        INSERT INTO forms
           (lemma_id, form_nod, form_diac, label,
            mood, tense, voice, person, number, gender, "case", degree,
            source_context_1, source_context_2, source_context_3, page_url)
-        values
+        VALUES
           ($1, norm($2), $2, $3,
            $4, $5, $6, $7, $8, $9, $10, $11,
            $12, $13, $14, $15)
-        on conflict do nothing
+        ON CONFLICT DO NOTHING
         """,
         (
             lemma_id, form_diac, form_diac, (r.get("label") or ""),
@@ -71,9 +78,9 @@ def insert_form(conn, lemma_id: int, r: dict):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--outdir", default=str(OUT_DIR), help="Directory of per-lemma CSVs")
-    ap.add_argument("--schema", default=str(BASE / "ops" / "init_db.sql"), help="Apply schema before loading (if present)")
-    ap.add_argument("--truncate", action="store_true", help="Truncate lemmas/forms before load")
+    ap.add_argument("--outdir",  default=str(OUT_DIR),                 help="Directory of per-lemma CSVs")
+    ap.add_argument("--schema",  default=str(BASE / "ops" / "init_db.sql"), help="Apply schema before loading (if present)")
+    ap.add_argument("--truncate", action="store_true",                 help="Truncate lemmas/forms before load")
     args = ap.parse_args()
 
     dsn = os.getenv("DATABASE_URL")
@@ -85,12 +92,14 @@ def main():
         raise SystemExit(f"Out dir not found: {outdir}")
 
     with psycopg.connect(dsn, autocommit=True) as conn:
-        conn.execute("set application_name = 'latin-etl';")
+        conn.execute("SET application_name = 'latin-etl';")
+
         if args.schema and Path(args.schema).exists():
             conn.execute(Path(args.schema).read_text(encoding="utf-8"))
+
         if args.truncate:
-            conn.execute("truncate table forms restart identity cascade;")
-            conn.execute("truncate table lemmas restart identity cascade;")
+            conn.execute("TRUNCATE TABLE forms RESTART IDENTITY CASCADE;")
+            conn.execute("TRUNCATE TABLE lemmas RESTART IDENTITY CASCADE;")
 
         # Load each per-lemma CSV (skip aggregate files if present)
         files = [p for p in outdir.glob("*.csv") if p.name not in ("lemmas.csv","forms.csv")]
@@ -101,9 +110,9 @@ def main():
                 continue
 
             head = rows[0]
-            # Use normalized gender from the head row as lemma.gender if available
-            head_norm = normalize_morph(head)
+            head_norm = normalize_morph(head)  # pull a gender hint if available
             lemma_id = upsert_lemma(
+                conn,
                 lemma_text = head.get("lemma_text",""),
                 pos        = head.get("pos",""),
                 gender_hint= head_norm.get("gender",""),
