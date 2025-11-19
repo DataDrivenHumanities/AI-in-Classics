@@ -1,9 +1,9 @@
-# Aggregates per-lemma CSVs in ../out/ into lemmas.csv + forms.csv
+# Aggregate per-lemma CSVs in ../out/ → lemmas.csv & forms.csv
 from pathlib import Path
 import csv, re, unicodedata, glob
 from urllib.parse import urlparse, parse_qs
 
-BASE = Path(__file__).resolve().parents[1]          # .../Lemmatizer-LTN
+BASE = Path(__file__).resolve().parents[1]  # .../Lemmatizer-LTN
 OUT_DIR = BASE / "out"
 LEMMA_CSV = OUT_DIR / "lemmas.csv"
 FORM_CSV  = OUT_DIR / "forms.csv"
@@ -17,6 +17,10 @@ def norm(s: str) -> str:
     s = strip_accents(s or "").lower()
     return re.sub(r"[^a-z0-9]+", "", s)
 
+_DIATH_RE = re.compile(r"\s*[-–—]?\s*(active|passive)\s+diathesis\s*$", re.I)
+def clean_lemma_text(t: str) -> str:
+    return _DIATH_RE.sub("", (t or "").strip())
+
 def lemma_code_from_url(u: str):
     try:
         q = parse_qs(urlparse(u or "").query)
@@ -24,137 +28,141 @@ def lemma_code_from_url(u: str):
     except Exception:
         return None
 
-CASE_MAP = {
-    "nom.":"nominative","gen.":"genitive","dat.":"dative",
-    "acc.":"accusative","abl.":"ablative","voc.":"vocative",
-    "loc.":"locative","ins.":"instrumental"
-}
-NUM_SG = {"singular","sing.","sg","sg."}
-NUM_PL = {"plural","plur.","pl","pl."}
-MOODS  = {"indicative","subjunctive","imperative","infinitive","participle","gerund","gerundive","supine"}
-VOICES = {"active","passive"}
-TENSES = {"present","imperfect","future","perfect","pluperfect","future perfect","futureperfect"}
-PERSON_MAP = {"1st":"first","2nd":"second","3rd":"third"}
+# --- detectors: tolerant to abbreviations/variants (EN + some fallbacks) ---
+CASE_PATTERNS = [
+    (re.compile(r"\bnom(?:\.|in(?:ative)?)?\b", re.I), "nominative"),
+    (re.compile(r"\bgen(?:\.|it(?:ive)?)?\b", re.I),   "genitive"),
+    (re.compile(r"\bdat(?:\.|iv(?:e)?)?\b", re.I),     "dative"),
+    (re.compile(r"\bacc(?:\.|us(?:ative)?)?\b", re.I), "accusative"),
+    (re.compile(r"\babl(?:\.|at(?:ive)?)?\b", re.I),   "ablative"),
+    (re.compile(r"\bvoc(?:\.|at(?:ive)?)?\b", re.I),   "vocative"),
+    (re.compile(r"\bloc(?:\.|at(?:ive)?)?\b", re.I),   "locative"),
+]
+NUM_SG = re.compile(r"\b(sg|sing|singular|sing\.)\b", re.I)
+NUM_PL = re.compile(r"\b(pl|plur|plural|pl\.)\b", re.I)
 
-def clean(s): return (s or "").strip()
+MOODS  = ["indicative","subjunctive","imperative","infinitive","participle","gerund","gerundive","supine"]
+VOICES = ["active","passive"]
+TENSES = ["present","imperfect","future","perfect","pluperfect","future perfect","futureperfect"]
 
-def detect_number(*xs):
-    j = " ".join(filter(None, xs)).lower()
-    if any(t in j for t in NUM_SG): return "singular"
-    if any(t in j for t in NUM_PL): return "plural"
-    if re.search(r"\bsg\b\.?", j): return "singular"
-    if re.search(r"\bpl\b\.?", j): return "plural"
+def detect_case(text: str) -> str:
+    t = text or ""
+    for pat, name in CASE_PATTERNS:
+        if pat.search(t):
+            return name
     return ""
 
-def detect_mood(*xs):
+def detect_number(*xs) -> str:
+    j = " ".join(filter(None, xs))
+    if NUM_SG.search(j): return "singular"
+    if NUM_PL.search(j): return "plural"
+    return ""
+
+def detect_mood(*xs) -> str:
     j = " ".join(filter(None, xs)).lower()
     for m in MOODS:
         if m in j: return m
     return ""
 
-def detect_voice(*xs):
+def detect_voice(*xs) -> str:
     j = " ".join(filter(None, xs)).lower()
-    for v in VOICES:
-        if v in j: return v
-    if "deponent" in j: return "passive"
+    if "active diathesis" in j or "voice active" in j or " active " in f" {j} ":
+        return "active"
+    if "passive diathesis" in j or "voice passive" in j or " passive " in f" {j} ":
+        return "passive"
+    if "deponent" in j:
+        return "passive"
     return ""
 
-def detect_tense(*xs):
+def detect_tense(*xs) -> str:
     j = " ".join(filter(None, xs)).lower()
     if "future perfect" in j or "futureperfect" in j: return "future perfect"
     for t in TENSES:
         if t in j: return t
     return ""
 
-def person_num_from_label(label):
-    ll = (label or "").lower()
-    m = re.search(r"\b(1st|2nd|3rd)\b", ll)
-    person = PERSON_MAP.get(m.group(1), "") if m else ""
-    number = "singular" if re.search(r"\bsg\b\.?|\bsing(ular)?\b", ll) else \
-             "plural"   if re.search(r"\bpl\b\.?|\bplur(al)?\b", ll) else ""
+def person_num_from_label(lbl: str):
+    l = (lbl or "").lower()
+    person = ""
+    if re.search(r"\b(1st|first|i)\b", l):   person = "first"
+    elif re.search(r"\b(2nd|second|ii)\b", l): person = "second"
+    elif re.search(r"\b(3rd|third|iii)\b", l): person = "third"
+    number = ""
+    if re.search(r"\b(sg|sing|singular|sing\.)\b", l): number = "singular"
+    if re.search(r"\b(pl|plur|plural|pl\.)\b", l):     number = "plural"
     return person, number
 
-def case_from_label(lbl): return CASE_MAP.get((lbl or "").strip().lower(), "")
+def clean(s): return (s or "").strip()
 
-def split_forms(val):
-    if not val: return []
-    if val.strip() in {"-","–","—"}: return []
-    parts = re.split(r"\s*[/;,]\s*|\s+or\s+|\s+vel\s+", val.strip(), flags=re.IGNORECASE)
-    out, seen = [], set()
-    for p in parts:
-        if p and p not in {"-","–","—"} and p not in seen:
-            out.append(p); seen.add(p)
-    return out
-
-def main():
+def aggregate():
     OUT_DIR.mkdir(parents=True, exist_ok=True)
+
+    # discover all per-lemma csvs (ignore previous aggregates)
     paths = [p for p in glob.glob(str(OUT_DIR / "*.csv"))
              if Path(p).name not in ("lemmas.csv","forms.csv")]
 
-    lemmas = {}     # lemma_nod -> tuple(row)
-    forms  = []
+    lemmas = {}   # lemma_nod -> (lemma_code, lemma_nod, lemma_diac, pos, gender, page_url)
+    forms  = []   # (lemma_nod, form_nod, form_diac, label, mood, tense, voice, person, number, gender, case, degree, page_url)
 
     for p in paths:
         with open(p, newline="", encoding="utf-8") as f:
             r = csv.DictReader(f); rows = list(r)
-        if not rows: continue
+        if not rows: 
+            continue
 
         r0 = rows[0]
-        lemma_text = clean(r0.get("lemma_text",""))
+        lemma_text = clean_lemma_text(clean(r0.get("lemma_text","")))
         pos_text   = clean(r0.get("pos",""))
         page_url   = clean(r0.get("page_url",""))
         lnod       = norm(lemma_text)
         lcode      = lemma_code_from_url(page_url)
 
-        gender = ""
+        gender_from_pos = ""
         pl = pos_text.lower()
-        if   "masculine" in pl: gender = "masculine"
-        elif "feminine"  in pl: gender = "feminine"
-        elif "neuter"    in pl: gender = "neuter"
+        if   "masculine" in pl: gender_from_pos = "masculine"
+        elif "feminine"  in pl: gender_from_pos = "feminine"
+        elif "neuter"    in pl: gender_from_pos = "neuter"
 
-        lemmas.setdefault(lnod, (lcode, lnod, lemma_text, pos_text, gender, page_url))
+        # store lemma once
+        lemmas.setdefault(lnod, (lcode, lnod, lemma_text, pos_text, gender_from_pos, page_url))
         is_verb = "verb" in pl
 
         for rr in rows:
-            ctx1, ctx2, ctx3 = clean(rr.get("context_1","")), clean(rr.get("context_2","")), clean(rr.get("context_3",""))
-            label = clean(rr.get("label",""))
-            value = clean(rr.get("value",""))
+            ctx1 = clean(rr.get("context_1",""))
+            ctx2 = clean(rr.get("context_2",""))
+            ctx3 = clean(rr.get("context_3",""))
+            label= clean(rr.get("label",""))
+            value= clean(rr.get("value",""))
+            if not value:
+                continue
 
-            for form in split_forms(value):
-                form_diac = form
-                form_nod  = norm(form_diac)
-                if not form_nod: continue
+            form_diac = value
+            form_nod  = norm(form_diac)
+            if not form_nod:
+                continue
 
-                mood=tense=voice=person=number=case=degree=""
+            # Hints from scraper (if present)
+            number_hint = (rr.get("number_hint") or "").lower()
+            gender_hint = (rr.get("gender_hint") or "").lower()
+            voice_hint  = (rr.get("voice_hint")  or "").lower()
 
-                if is_verb:
-                    mood  = detect_mood(ctx1,ctx2,ctx3)
-                    tense = detect_tense(ctx1,ctx2,ctx3)
-                    voice = detect_voice(ctx1,ctx2,ctx3)
-                    p_lbl, n_lbl = person_num_from_label(label)
-                    person = p_lbl
-                    number = n_lbl or detect_number(ctx1,ctx2,ctx3,label)
-                else:
-                    case   = case_from_label(label)
-                    number = detect_number(ctx1,ctx2,ctx3,label)
+            # defaults
+            mood=tense=voice=person=number=case=degree=""
 
-                forms.append((lnod, form_nod, form_diac, label,
-                              mood, tense, voice, person, number, gender, case, degree, page_url))
+            if is_verb:
+                # voice: prefer explicit hint from diathesis, else detect from titles
+                voice = voice_hint or detect_voice(ctx1,ctx2,ctx3,label)
 
-    with open(LEMMA_CSV, "w", newline="", encoding="utf-8") as f:
-        w = csv.writer(f)
-        w.writerow(["lemma_code","lemma_nod","lemma_diac","pos","gender","page_url"])
-        for v in lemmas.values():
-            w.writerow(v)
+                # mood/tense from titles
+                mood  = detect_mood(ctx1,ctx2,ctx3,label)
+                tense = detect_tense(ctx1,ctx2,ctx3,label)
 
-    with open(FORM_CSV, "w", newline="", encoding="utf-8") as f:
-        w = csv.writer(f)
-        w.writerow(["lemma_nod","form_nod","form_diac","label",
-                    "mood","tense","voice","person","number","gender","case","degree","page_url"])
-        w.writerows(forms)
+                # person/number from label (e.g., "3rd sg.")
+                p_lbl, n_lbl = person_num_from_label(label)
+                person = p_lbl
+                number = n_lbl or number_hint or detect_number(ctx1,ctx2,ctx3,label)
 
-    print(f"Wrote {len(lemmas)} lemmas -> {LEMMA_CSV}")
-    print(f"Wrote {len(forms)}  forms  -> {FORM_CSV}")
-
-if __name__ == "__main__":
-    main()
+            else:
+                # nouns/adjectives: case from label, number from hint or tokens
+                case   = detect_case(label)
+                number = number_hint or detect_number(l

@@ -9,15 +9,16 @@ import re
 import unicodedata
 import argparse
 import random
-import time
 
 BASE = "https://www.online-latin-dictionary.com"
 INDEX_URL = BASE + "/latin-english-dictionary.php?typ=pg&pg={pg}"
 FLEXION_URL = BASE + "/latin-dictionary-flexion.php?lemma={lemma}"
 
-HEADERS = {
-    "User-Agent": "Mozilla/5.0 (compatible; DDHBot/1.0)"
-}
+HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; DDHBot/1.0)"}
+
+# -------- text helpers --------
+_whitespace = re.compile(r"\s+")
+_DIATH_RE = re.compile(r"\s*[-–—]?\s*(active|passive)\s+diathesis\s*$", re.I)
 
 def strip_accents(s: str) -> str:
     nfkd = unicodedata.normalize("NFD", s or "")
@@ -28,6 +29,9 @@ def slugify_lemma(lemma_text: str) -> str:
     s = re.sub(r"[^a-z0-9]+", "_", s)
     s = re.sub(r"_+", "_", s).strip("_")
     return s or "lemma"
+
+def clean_lemma_text(t: str) -> str:
+    return _DIATH_RE.sub("", (t or "").strip())
 
 def parse_index_for_lemmas(html_text: str):
     soup = BeautifulSoup(html_text, "html.parser")
@@ -40,8 +44,6 @@ def parse_index_for_lemmas(html_text: str):
             if code:
                 lemmas.append(code)
     return lemmas
-
-_whitespace = re.compile(r"\s+")
 
 def flatten_ff_value(cell):
     out = []
@@ -70,31 +72,75 @@ def flatten_ff_value(cell):
 
 def parse_flexion_tables(html_text: str, page_url: str):
     soup = BeautifulSoup(html_text, "html.parser")
+
+    # Header: lemma text and part-of-speech line
     h2 = soup.select_one("#myth h2")
-    lemma_text = h2.get_text(strip=True) if h2 else ""
+    raw_lemma_text = h2.get_text(strip=True) if h2 else ""
+    lemma_text = clean_lemma_text(raw_lemma_text)
+
     pos = soup.select_one("#myth .grammatica")
     pos_text = pos.get_text(" ", strip=True) if pos else ""
+    pos_lc = pos_text.lower()
+
+    # Detect diathesis in section titles to hint voice
+    def voice_hint_from_titles(titles):
+        t = " ".join(titles).lower()
+        if "active diathesis" in t:
+            return "active"
+        if "passive diathesis" in t:
+            return "passive"
+        return ""
 
     rows = []
     for cont in soup.select(".conjugation-container .ff_tbl_container"):
+        # up to 3 hierarchical titles (e.g., diathesis/mood/tense)
         titles = [t.get_text(" ", strip=True) for t in cont.find_all_previous("div", class_="ff_tbl_title", limit=3)]
         titles = list(reversed(titles))
+        v_hint = voice_hint_from_titles(titles)
+
+        # Walk each row and capture *all* value columns, not just the last one
         for r in cont.select(".ff_tbl_row"):
             cols = r.select(".ff_tbl_col")
             if not cols:
                 continue
+
+            # First col is the label (case, person, etc.)
             label = cols[0].get_text(" ", strip=True)
-            value = flatten_ff_value(cols[-1])
-            rows.append({
-                "lemma_text": lemma_text,
-                "pos": pos_text,
-                "context_1": titles[0] if len(titles) > 0 else "",
-                "context_2": titles[1] if len(titles) > 1 else "",
-                "context_3": titles[2] if len(titles) > 2 else "",
-                "label": label,
-                "value": value,
-                "page_url": page_url,
-            })
+            values = [flatten_ff_value(c) for c in cols[1:]]
+            nvals = len(values)
+            if nvals == 0:
+                continue
+
+            # Heuristics for per-column hints (number/gender) when headers are not easily detectable
+            per_col_hints = [{"number_hint": "", "gender_hint": ""} for _ in values]
+
+            if "noun" in pos_lc and nvals == 2:
+                # Nouns commonly have [singular | plural]
+                per_col_hints[0]["number_hint"] = "singular"
+                per_col_hints[1]["number_hint"] = "plural"
+
+            elif "adjective" in pos_lc and nvals == 3:
+                # Adjectives commonly have [masculine | feminine | neuter]
+                per_col_hints[0]["gender_hint"] = "masculine"
+                per_col_hints[1]["gender_hint"] = "feminine"
+                per_col_hints[2]["gender_hint"] = "neuter"
+
+            # Emit one CSV row per value column, carrying hints
+            for j, val in enumerate(values):
+                rows.append({
+                    "lemma_text": lemma_text,
+                    "pos": pos_text,
+                    "context_1": titles[0] if len(titles) > 0 else "",
+                    "context_2": titles[1] if len(titles) > 1 else "",
+                    "context_3": titles[2] if len(titles) > 2 else "",
+                    "label": label,
+                    "value": val,
+                    "page_url": page_url,
+                    "number_hint": per_col_hints[j]["number_hint"],
+                    "gender_hint": per_col_hints[j]["gender_hint"],
+                    "voice_hint": v_hint,
+                })
+
     return lemma_text, rows
 
 async def fetch_text(session: aiohttp.ClientSession, url: str, timeout: int = 20, retries: int = 4, delay: float = 0.2):
@@ -103,35 +149,13 @@ async def fetch_text(session: aiohttp.ClientSession, url: str, timeout: int = 20
             async with session.get(url, timeout=timeout) as resp:
                 resp.raise_for_status()
                 return await resp.text()
-        except (ClientResponseError, ClientConnectorError, asyncio.TimeoutError) as e:
+        except (ClientResponseError, ClientConnectorError, asyncio.TimeoutError):
             if attempt >= retries:
                 raise
             backoff = delay * (2 ** attempt) + random.uniform(0, delay)
             await asyncio.sleep(backoff)
 
-async def gather_index_range(session, start: int, step: int, end: int, sem: asyncio.Semaphore, delay: float):
-    all_codes = set()
-    async def one(pg: int):
-        url = INDEX_URL.format(pg=pg)
-        async with sem:
-            html = await fetch_text(session, url)
-            codes = parse_index_for_lemmas(html)
-            # tiny polite jitter
-            if delay > 0:
-                await asyncio.sleep(delay)
-            return codes
-    tasks = [asyncio.create_task(one(pg)) for pg in range(start, end + 1, step)]
-    for t in asyncio.as_completed(tasks):
-        try:
-            codes = await t
-            all_codes.update(codes)
-        except Exception as e:
-            # Log and continue
-            print(f"[index] warn: {e}")
-    return sorted(all_codes)
-
 async def discover_lemmas_dynamic(session, start: int, step: int, sem: asyncio.Semaphore, delay: float, max_empty: int = 2):
-    """Sequentially walk index pages until we see 'max_empty' empty pages, returns a set of lemma codes."""
     all_codes = set()
     empty_run = 0
     pg = start
@@ -173,9 +197,13 @@ async def fetch_and_write_lemma(session, code: str, outdir: Path, sem: asyncio.S
         name = slugify_lemma(lemma_text) + ".csv"
         path = outdir / name
         with path.open("w", newline="", encoding="utf-8") as f:
-            w = csv.DictWriter(f, fieldnames=[
-                "lemma_text","pos","context_1","context_2","context_3","label","value","page_url"
-            ])
+            w = csv.DictWriter(
+                f,
+                fieldnames=[
+                    "lemma_text","pos","context_1","context_2","context_3",
+                    "label","value","page_url","number_hint","gender_hint","voice_hint"
+                ],
+            )
             w.writeheader()
             for r in rows:
                 w.writerow(r)
@@ -185,43 +213,45 @@ async def fetch_and_write_lemma(session, code: str, outdir: Path, sem: asyncio.S
 
 async def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--outdir", default="out", help="Directory for per-lemma CSVs")
-    ap.add_argument("--start", type=int, default=1, help="First index page number (pg=...)")
-    ap.add_argument("--step", type=int, default=50, help="Pagination step (default 50)")
-    ap.add_argument("--end", type=int, default=None, help="Last index page number (if omitted, use --dynamic)")
-    ap.add_argument("--dynamic", action="store_true", help="Sequentially discover index pages until empty, then parallelize lemma fetching")
-    ap.add_argument("--index-concurrency", type=int, default=8, help="Concurrent index fetches")
-    ap.add_argument("--lemma-concurrency", type=int, default=16, help="Concurrent lemma fetches")
-    ap.add_argument("--timeout", type=int, default=20, help="HTTP timeout seconds")
-    ap.add_argument("--retries", type=int, default=4, help="Retry count per request")
-    ap.add_argument("--delay", type=float, default=0.2, help="Polite small delay between requests")
+    ap.add_argument("--outdir", default="out")
+    ap.add_argument("--start", type=int, default=1)
+    ap.add_argument("--step", type=int, default=50)
+    ap.add_argument("--end", type=int, default=None)
+    ap.add_argument("--dynamic", action="store_true")
+    ap.add_argument("--index-concurrency", type=int, default=8)
+    ap.add_argument("--lemma-concurrency", type=int, default=16)
+    ap.add_argument("--timeout", type=int, default=20)
+    ap.add_argument("--retries", type=int, default=4)
+    ap.add_argument("--delay", type=float, default=0.2)
     args = ap.parse_args()
 
-    outdir = Path(args.outdir)
-    outdir.mkdir(parents=True, exist_ok=True)
+    outdir = Path(args.outdir); outdir.mkdir(parents=True, exist_ok=True)
 
-    connector = aiohttp.TCPConnector(limit= args.index_concurrency + args.lemma_concurrency, ssl=False)
+    connector = aiohttp.TCPConnector(limit=args.index_concurrency + args.lemma_concurrency, ssl=False)
     timeout = aiohttp.ClientTimeout(total=None, sock_connect=args.timeout, sock_read=args.timeout)
     async with aiohttp.ClientSession(headers=HEADERS, connector=connector, timeout=timeout) as session:
-        # Phase 1: collect lemmas
         index_sem = asyncio.Semaphore(args.index_concurrency)
         if args.dynamic or args.end is None:
             print("[index] dynamic discovery mode")
             lemma_codes = await discover_lemmas_dynamic(session, args.start, args.step, index_sem, args.delay)
         else:
             print(f"[index] fetching range {args.start}..{args.end} step {args.step}")
-            lemma_codes = await gather_index_range(session, args.start, args.step, args.end, index_sem, args.delay)
+            # simple range gather
+            tasks = []
+            for pg in range(args.start, args.end + 1, args.step):
+                async with index_sem:
+                    html = await fetch_text(session, INDEX_URL.format(pg=pg))
+                    tasks.append(parse_index_for_lemmas(html))
+            lemma_codes = sorted({c for batch in tasks for c in batch})
         print(f"[index] unique lemmas: {len(lemma_codes)}")
 
-        # Phase 2: fetch lemmas
         lemma_sem = asyncio.Semaphore(args.lemma_concurrency)
-        tasks = [asyncio.create_task(fetch_and_write_lemma(session, code, outdir, lemma_sem, args.delay)) for code in lemma_codes]
-        done = 0
-        rows_total = 0
+        tasks = [asyncio.create_task(fetch_and_write_lemma(session, code, outdir, lemma_sem, args.delay))
+                 for code in lemma_codes]
+        done = 0; rows_total = 0
         for t in asyncio.as_completed(tasks):
             try:
-                n = await t
-                rows_total += n
+                n = await t; rows_total += n
             except Exception as e:
                 print(f"[lemma] warn: {e}")
             done += 1
