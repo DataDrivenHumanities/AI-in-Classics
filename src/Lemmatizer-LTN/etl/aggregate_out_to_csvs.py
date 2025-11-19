@@ -165,4 +165,28 @@ def aggregate():
             else:
                 # nouns/adjectives: case from label, number from hint or tokens
                 case   = detect_case(label)
-                number = number_hint or detect_number(l
+                number = number_hint or detect_number(label, ctx1, ctx2, ctx3)
+
+            gender = gender_hint or gender_from_pos
+
+            forms.append((lnod, form_nod, form_diac, label,
+                          mood, tense, voice, person, number, gender, case, degree, page_url))
+
+    # write aggregates
+    with open(LEMMA_CSV, "w", newline="", encoding="utf-8") as f:
+        w = csv.writer(f)
+        w.writerow(["lemma_code","lemma_nod","lemma_diac","pos","gender","page_url"])
+        for v in lemmas.values():
+            w.writerow(v)
+
+    with open(FORM_CSV, "w", newline="", encoding="utf-8") as f:
+        w = csv.writer(f)
+        w.writerow(["lemma_nod","form_nod","form_diac","label",
+                    "mood","tense","voice","person","number","gender","case","degree","page_url"])
+        w.writerows(forms)
+
+    print(f"Wrote {len(lemmas)} lemmas -> {LEMMA_CSV}")
+    print(f"Wrote {len(forms)} forms  -> {FORM_CSV}")
+
+if __name__ == "__main__":
+    aggregate()
