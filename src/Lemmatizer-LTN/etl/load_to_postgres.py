@@ -51,7 +51,7 @@ def insert_form(conn, lemma_id: int, r: dict):
     conn.execute(
         """
         INSERT INTO forms
-          (lemma_id, form_nod, form_diac
+          (lemma_id, form_nod, form_diac,
            mood, tense, voice, person, number, gender, "case", degree, page_url)
         VALUES
           (%s,      norm(%s), %s,
