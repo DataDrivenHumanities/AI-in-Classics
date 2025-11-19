@@ -1,3 +1,13 @@
+parameters:
+- name: testing
+  displayName: 'Testing?'
+  type: boolean
+  default: false
+
+trigger: none
+pr: none
+
+
 trigger: none
 pr: none
 
@@ -69,17 +79,40 @@ jobs:
       env:
         GOOGLE_SERVICE_ACCOUNT_JSON_BASE64: $(GOOGLE_SERVICE_ACCOUNT_JSON_BASE64)
 
-    # 5) Scrape -> per-lemma CSVs (small test slice)
+      # 5) Scrape -> per-lemma CSVs (switch behavior via Testing? checkbox)
     - powershell: |
         $ErrorActionPreference = 'Stop'
+
         $out = "$(Build.SourcesDirectory)\src\Lemmatizer-LTN\out"
         if (Test-Path $out) {
           Remove-Item -Recurse -Force "$out\*" -ErrorAction SilentlyContinue
         }
         New-Item -ItemType Directory -Force -Path $out | Out-Null
-        .\.venv\Scripts\python.exe "$(Build.SourcesDirectory)\$(SCRAPER_PATH)" `
-          --outdir "$out" `
-          --index-concurrency 4 --lemma-concurrency 8 --delay 0.05
+
+        # Build args based on Testing? parameter
+        if ("${{ parameters.testing }}" -ieq "true") {
+          Write-Host "Running in TEST mode (pages 1..10)..."
+          $args = @(
+            "--outdir", "$out",
+            "--start", "1",
+            "--step",  "1",
+            "--end",   "10",
+            "--index-concurrency", "4",
+            "--lemma-concurrency", "8",
+            "--delay", "0.05"
+          )
+        } else {
+          Write-Host "Running in FULL mode..."
+          $args = @(
+            "--outdir", "$out",
+            "--index-concurrency", "6",
+            "--lemma-concurrency", "16",
+            "--delay", "0.03"
+          )
+        }
+
+        Write-Host "Scraper args: $args"
+        .\.venv\Scripts\python.exe "$(Build.SourcesDirectory)\$(SCRAPER_PATH)" @args
       displayName: "Scrape -> per-lemma CSVs"
       timeoutInMinutes: 120
 
