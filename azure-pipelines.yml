@@ -65,6 +65,9 @@ steps:
   - powershell: |
       $ErrorActionPreference = 'Stop'
       $out = "$(Build.SourcesDirectory)\src\Lemmatizer-LTN\out"
+      if (Test-Path $out) {
+        Remove-Item -Recurse -Force "$out\*" -ErrorAction SilentlyContinue
+      }
       New-Item -ItemType Directory -Force -Path $out | Out-Null
       .\.venv\Scripts\python.exe "$(Build.SourcesDirectory)\$(SCRAPER_PATH)" `
         --outdir "$out" `
