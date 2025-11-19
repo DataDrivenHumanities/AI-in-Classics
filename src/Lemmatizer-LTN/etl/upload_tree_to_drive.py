@@ -114,8 +114,8 @@ def pick_letter(name: str) -> str:
     stem = Path(name).stem
     for ch in stem:
         if ch.isalpha():
-            return ch.upper()
-    return "MISC"
+            return ch.lower()
+    return "misc"
 
 
 def collect_csv_paths(files_args: List[str]) -> list[Path]:
