@@ -11,8 +11,8 @@ from googleapiclient.errors import HttpError
 
 
 def build_drive(sa_path: str):
-    """Build a Drive service client with drive.file scope."""
-    scopes = ["https://www.googleapis.com/auth/drive.file"]
+    """Build a Drive service client with drive scope."""
+    scopes = ["https://www.googleapis.com/auth/drive"]
     creds = Credentials.from_service_account_file(sa_path, scopes=scopes)
     return build("drive", "v3", credentials=creds)
 
