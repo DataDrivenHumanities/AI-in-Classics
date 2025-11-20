@@ -2,7 +2,7 @@ import re
 import unicodedata
 from typing import Dict, Optional
 
-# strip " – Active/Passive diathesis" from lemma headings (for lemma_nod / cleaned display)
+# strip “ – Active/Passive diathesis” from lemma headings (for lemma_nod / cleaned display)
 _DIATHESIS_TAIL = re.compile(r"\s*[-–—]?\s*(active|passive)\s+diathesis\s*$", re.I)
 
 
@@ -122,3 +122,122 @@ def _first_hit(mapping: Dict[str, str], *fields: Optional[str]) -> Optional[str]
 
 def _detect_person(*fields: Optional[str]) -> Optional[str]:
     for fld in fields:
+        if not fld:
+            continue
+        if (m := _rx_roman.search(fld)):
+            return ROMAN_TO_PERSON[m.group(1)]
+        if _rx_1st.search(fld):
+            return "first"
+        if _rx_2nd.search(fld):
+            return "second"
+        if _rx_3rd.search(fld):
+            return "third"
+    return None
+
+
+def _detect_number(*fields: Optional[str]) -> Optional[str]:
+    for fld in fields:
+        if not fld:
+            continue
+        if _rx_pl.search(fld):
+            return "plural"  # prefer explicit "plural"
+        if _rx_sg.search(fld):
+            return "singular"
+        v = _pick(ABBR_NUMBER, fld)
+        if v:
+            return v
+    return None
+
+
+def _detect_case(*fields: Optional[str]) -> str:
+    # case almost always lives in the label like "Nom.", "Gen.", …
+    label = fields[0] if fields else ""
+    if not label:
+        return ""
+    up = label.upper()
+    for k, name in ABBR_CASE.items():
+        if k in up:
+            return name
+    return ""
+
+
+def normalize_morph(row: dict) -> dict:
+    """
+    row is a dict from a per-lemma CSV row:
+      - lemma_text
+      - pos
+      - context_1/2/3
+      - label
+      - value
+      - page_url
+      - voice_hint (if present from scraper)
+    We derive normalized morphological tags from these.
+    """
+    label = row.get("label") or ""
+    c1 = row.get("context_1") or ""
+    c2 = row.get("context_2") or ""
+    c3 = row.get("context_3") or ""
+    pos = row.get("pos") or ""
+    lemma_text = row.get("lemma_text") or ""
+    voice_hint_raw = (row.get("voice_hint") or "").strip().lower()
+
+    # Mood / tense can be in headings, pos, etc.
+    mood = _first_hit(MOOD_MAP, label, c3, c2, c1, pos)
+    tense = _first_hit(TENSE_MAP, label, c3, c2, c1, pos)
+
+    # ---- VOICE: prioritize lemma heading + voice_hint ----------------------
+    voice: str = ""
+
+    # 1) explicit voice_hint from scraper (usually taken from the heading)
+    if voice_hint_raw:
+        if "active" in voice_hint_raw:
+            voice = "active"
+        elif "passive" in voice_hint_raw:
+            voice = "passive"
+        elif "deponent" in voice_hint_raw:
+            voice = "deponent"
+        elif "middle" in voice_hint_raw:
+            voice = "middle"
+
+    # 2) combined lemma heading + titles
+    if not voice:
+        combined = " ".join(
+            x for x in [lemma_text, pos, c1, c2, c3, label] if x
+        ).lower()
+
+        if "active diathesis" in combined or "voice active" in combined:
+            voice = "active"
+        elif "passive diathesis" in combined or "voice passive" in combined:
+            voice = "passive"
+        elif "deponent" in combined:
+            voice = "deponent"
+        elif "middle" in combined:
+            voice = "middle"
+        else:
+            # looser fallback: look for bare 'active' / 'passive' as whole words
+            if " active " in f" {combined} ":
+                voice = "active"
+            elif " passive " in f" {combined} ":
+                voice = "passive"
+
+    # 3) final fallback: VOICE_MAP over individual fields
+    if not voice:
+        voice = _first_hit(VOICE_MAP, label, c3, c2, c1, pos, lemma_text) or ""
+
+    # ---- rest of the tags ---------------------------------------------------
+    gender = _first_hit(ABBR_GENDER, label, c3, c2, c1, pos)
+    number = _detect_number(label, c3, c2, c1, pos)
+    case = _detect_case(label, c3, c2, c1)
+    person = _detect_person(label, c3, c2, c1, pos)
+    degree = _first_hit(DEGREE_MAP, label, c3, c2, c1, pos)
+
+    return {
+        "mood": mood or "",
+        "tense": tense or "",
+        "voice": voice or "",
+        "person": person or "",
+        "number": number or "",
+        "gender": gender or "",
+        "case": case or "",
+        "degree": degree or "",
+    }
