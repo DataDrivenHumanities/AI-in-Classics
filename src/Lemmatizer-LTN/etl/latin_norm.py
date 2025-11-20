@@ -170,7 +170,6 @@ def normalize_morph(row: dict) -> dict:
       - label
       - value
       - page_url
-      - voice_hint (if present from scraper)
     We derive normalized morphological tags from these.
     """
     label = row.get("label") or ""
@@ -179,25 +178,23 @@ def normalize_morph(row: dict) -> dict:
     c3 = row.get("context_3") or ""
     pos = row.get("pos") or ""
     lemma_text = row.get("lemma_text") or ""
-    voice_hint_raw = (row.get("voice_hint") or "").strip().lower()
 
     # Mood / tense can be in headings, pos, etc.
     mood = _first_hit(MOOD_MAP, label, c3, c2, c1, pos)
     tense = _first_hit(TENSE_MAP, label, c3, c2, c1, pos)
 
-    # ---- VOICE: prioritize lemma heading + voice_hint ----------------------
+    # ---- VOICE: prioritize lemma heading  ----------------------
     voice: str = ""
 
     # 1) explicit voice_hint from scraper (usually taken from the heading)
-    if voice_hint_raw:
-        if "active" in voice_hint_raw:
-            voice = "active"
-        elif "passive" in voice_hint_raw:
-            voice = "passive"
-        elif "deponent" in voice_hint_raw:
-            voice = "deponent"
-        elif "middle" in voice_hint_raw:
-            voice = "middle"
+    if "active" in lemma_text.lower():
+        voice = "active"
+    elif "passive" in lemma_text.lower():
+        voice = "passive"
+    elif "deponent" in lemma_text.lower():
+        voice = "deponent"
+    elif "middle" in lemma_text.lower():
+        voice = "middle"
 
     # 2) combined lemma heading + titles
     if not voice:
