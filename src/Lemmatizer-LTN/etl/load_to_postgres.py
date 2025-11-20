@@ -216,8 +216,9 @@ def expand_value_to_forms(raw: str, base_hint: str | None) -> tuple[list[str], s
 
 def detect_lemma_voice_from_heading(row: dict) -> str:
     """
-    Infer voice (active/passive/deponent/middle) from the lemma heading +
-    nearby text. This is where "Active diathesis" / "Passive diathesis" lives.
+    Fallback: infer voice (active/passive/deponent/middle) from lemma heading
+    and nearby text. Handles 'Active diathesis' / 'Passive diathesis' from
+    the lemma heading if voice_hint is missing.
     """
     lemma_text = (row.get("lemma_text") or "")
     pos = (row.get("pos") or "")
@@ -298,8 +299,11 @@ def insert_form(
 
     mood = n.get("mood") or None
     tense = n.get("tense") or None
-    # Per-form voice if present, otherwise lemma-wide voice hint.
-    voice = n.get("voice") or lemma_voice_hint or None
+
+    # Voice: ALL forms of a lemma inherit lemma_voice_hint
+    # (normalize_morph's voice is noisy for rows; we trust lemma-level voice)
+    voice = lemma_voice_hint or None
+
     person = n.get("person") or None
     number = n.get("number") or None
     gender = n.get("gender") or lemma_gender_hint or None
@@ -420,10 +424,17 @@ def main():
             # Gender: from normalized morph if present
             lemma_gender_hint = (head_norm.get("gender") or "").strip().lower() or None
 
-            # Voice: prefer normalized morph, else lemma heading text
-            lemma_voice_hint = (head_norm.get("voice") or "").strip().lower()
+            # Voice: FIRST from CSV voice_hint, since the scraper can set it
+            lemma_voice_hint = (head.get("voice_hint") or "").strip().lower()
+
+            # If CSV doesn't have it, fall back to normalized morph:
+            if not lemma_voice_hint:
+                lemma_voice_hint = (head_norm.get("voice") or "").strip().lower()
+
+            # If still missing, fall back to heading text (Active/Passive diathesis)
             if not lemma_voice_hint:
                 lemma_voice_hint = detect_lemma_voice_from_heading(head) or ""
+
             lemma_voice_hint = lemma_voice_hint or None
             # -----------------------------------------------------------------
 
