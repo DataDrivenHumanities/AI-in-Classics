@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
 import os
+import sys
 import csv
 import re
 import argparse
 from pathlib import Path
 from urllib.parse import urlparse, parse_qs
+import urllib.request
+from functools import lru_cache
 
 import psycopg
 
@@ -15,7 +18,7 @@ try:
     from latin_norm import clean_lemma_text, normalize_morph
 except Exception:
     # When run from elsewhere: add this directory to sys.path
-    import importlib, sys
+    import importlib
     sys.path.append(str(Path(__file__).parent))
     _ln = importlib.import_module("latin_norm")
     clean_lemma_text = _ln.clean_lemma_text
@@ -47,6 +50,7 @@ LATIN_ENDINGS = sorted(set(LATIN_ENDINGS), key=len, reverse=True)
 
 
 def lemma_code_from_url(u: str) -> str:
+    """Extract lemma=XYZ from the page_url querystring."""
     try:
         q = parse_qs(urlparse(u or "").query)
         return (q.get("lemma") or [""])[0]
@@ -143,6 +147,18 @@ def expand_value_to_forms(raw: str, base_hint: str | None) -> tuple[list[str], s
     base_hint from the previous row (for rows that start with '-').
 
     Returns (forms_list, new_base_hint).
+
+    Cases:
+      1) raw starts with '-' and we have base_hint:
+           -> use expand_suffix_row(raw, base_hint)
+           -> keep base_hint unchanged
+
+      2) raw has commas and inline hyphen shorthand:
+           e.g. "abalienaturos, -as, -auros, -as, -a esse"
+           -> multiple forms from a single row, new base_hint = base form
+
+      3) raw is a simple one-form row (no comma, doesn't start with '-'):
+           -> one form, and becomes the new base_hint for subsequent '-' rows.
     """
     raw = (raw or "").strip()
     if not raw:
@@ -202,36 +218,55 @@ def expand_value_to_forms(raw: str, base_hint: str | None) -> tuple[list[str], s
     return uniq, new_base_hint
 
 
-def detect_lemma_voice_from_heading(row: dict) -> str:
+@lru_cache(maxsize=8192)
+def detect_voice_from_url(page_url: str) -> str:
     """
-    Fallback: infer voice (active/passive/deponent/middle) from lemma heading
-    and nearby text. Handles 'Active diathesis' in various spellings.
+    Look up the lemma page and pull the voice from the heading,
+    e.g. 'ăbălĭēno - Active diathesis' / '... - Passive diathesis'.
+
+    Returns: 'active', 'passive', 'deponent', 'middle', or ''.
     """
-    lemma_text = (row.get("lemma_text") or "")
-    pos = (row.get("pos") or "")
-    c1 = (row.get("context_1") or "")
-    c2 = (row.get("context_2") or "")
-    c3 = (row.get("context_3") or "")
-    label = (row.get("label") or "")
+    if not page_url:
+        return ""
 
-    combined = " ".join(x for x in [lemma_text, pos, c1, c2, c3, label] if x)
-    combined_lower = combined.lower()
-    # Strip spaces and dash-like chars so 'active diathesis' and 'activediathesis'
-    # and 'active-diathesis' all become 'activediathesis'
-    packed = re.sub(r"[\s\-–—]+", "", combined_lower)
+    try:
+        with urllib.request.urlopen(page_url, timeout=10) as resp:
+            html = resp.read().decode("utf-8", errors="ignore")
+    except Exception as e:
+        print(
+            f"[load_to_postgres] WARN: could not fetch {page_url!r} for voice detection: {e}",
+            file=sys.stderr,
+        )
+        return ""
 
-    if "activediathesis" in packed:
+    up = html.upper()
+
+    # Primary patterns used by online-latin-dictionary
+    if "ACTIVE DIATHESIS" in up:
         return "active"
-    if "passivediathesis" in packed:
+    if "PASSIVE DIATHESIS" in up:
         return "passive"
-    if "deponent" in combined_lower:
+
+    # Just in case there are other diathesis labels
+    if "DEPONENT DIATHESIS" in up or "DEPONENT VERB" in up:
         return "deponent"
-    if "middle" in combined_lower:
+    if "MIDDLE DIATHESIS" in up or "MIDDLE VOICE" in up:
         return "middle"
+
     return ""
 
 
-def upsert_lemma(conn, *, lemma_text: str, pos: str, gender_hint: str, page_url: str) -> int:
+# --- DB helpers -------------------------------------------------------------
+
+
+def upsert_lemma(
+    conn,
+    *,
+    lemma_text: str,
+    pos: str,
+    gender_hint: str,
+    page_url: str,
+) -> int:
     """
     Insert or update a lemma row, returning lemmas.id.
     """
@@ -255,7 +290,7 @@ def upsert_lemma(conn, *, lemma_text: str, pos: str, gender_hint: str, page_url:
             lemma_diac,
             lemma_diac or None,
             pos or None,
-            gender_hint or None,
+            (gender_hint or None),
             page_url or None,
         ),
     ).fetchone()
@@ -266,8 +301,8 @@ def insert_form(
     conn,
     lemma_id: int,
     r: dict,
-    lemma_voice_hint: str,
-    lemma_gender_hint: str,
+    lemma_voice_hint: str | None,
+    lemma_gender_hint: str | None,
     base_hint: str | None,
 ) -> str | None:
     """
@@ -277,18 +312,13 @@ def insert_form(
     """
     n = normalize_morph(r)
 
-    # Per-row hints coming directly from scraper / per-lemma CSV
-    row_voice_hint = (r.get("voice_hint") or "").strip().lower() or None
-    row_gender_hint = (r.get("gender_hint") or "").strip().lower() or None
-
     mood = n.get("mood") or None
     tense = n.get("tense") or None
-    # voice precedence: normalized -> row hint -> lemma-level hint
-    voice = n.get("voice") or row_voice_hint or (lemma_voice_hint or None)
+    # <-- This is the key: per-form voice if present, otherwise lemma-wide voice hint.
+    voice = n.get("voice") or lemma_voice_hint or None
     person = n.get("person") or None
     number = n.get("number") or None
-    # gender precedence: normalized -> row hint -> lemma-level hint
-    gender = n.get("gender") or row_gender_hint or (lemma_gender_hint or None)
+    gender = n.get("gender") or lemma_gender_hint or None
     case = n.get("case") or None
     degree = n.get("degree") or None
 
@@ -319,7 +349,14 @@ def insert_form(
                 lemma_id,
                 form_diac,
                 form_diac,
-                mood, tense, voice, person, number, gender, case, degree,
+                mood,
+                tense,
+                voice,
+                person,
+                number,
+                gender,
+                case,
+                degree,
                 page_url,
             ),
         )
@@ -372,7 +409,8 @@ def main():
 
         # Load all per-lemma CSVs (skip aggregate lemmas/forms CSVs if present)
         csv_files = [
-            p for p in outdir.glob("*.csv")
+            p
+            for p in outdir.glob("*.csv")
             if p.name not in ("lemmas.csv", "forms.csv")
         ]
 
@@ -394,22 +432,33 @@ def main():
                 page_url=head.get("page_url", ""),
             )
 
-            # lemma-level hints
-            lemma_voice_hint = (head_norm.get("voice") or "").lower()
-            lemma_gender_hint = (head_norm.get("gender") or "").lower()
+            # ---- VOICE + GENDER HINTS --------------------------------------
+            # 1) Prefer explicit hints coming from the CSV (if present)
+            lemma_voice_hint = (head.get("voice_hint") or "").strip().lower()
+            lemma_gender_hint = (
+                head_norm.get("gender") or (head.get("gender_hint") or "")
+            )
+            lemma_gender_hint = (lemma_gender_hint or "").strip().lower() or None
 
-            # pull hint from the per-lemma CSV if present
-            head_voice_hint_col = (head.get("voice_hint") or "").strip().lower()
-            head_gender_hint_col = (head.get("gender_hint") or "").strip().lower()
-
-            if head_voice_hint_col and not lemma_voice_hint:
-                lemma_voice_hint = head_voice_hint_col
-            if head_gender_hint_col and not lemma_gender_hint:
-                lemma_gender_hint = head_gender_hint_col
-
-            # fallback to heading-based detection if still empty
+            # 2) Fall back to what normalize_morph can figure out from labels/contexts
             if not lemma_voice_hint:
-                lemma_voice_hint = detect_lemma_voice_from_heading(head) or ""
+                lemma_voice_hint = (head_norm.get("voice") or "").strip().lower()
+
+            # 3) FINAL fallback: read the lemma page HTML and grab "... Active diathesis"
+            if not lemma_voice_hint:
+                page_url = head.get("page_url") or ""
+                lemma_voice_hint = detect_voice_from_url(page_url)
+
+            # 4) Very last resort: if lemma_text somehow *still* carries the diathesis
+            lemma_text_raw = (head.get("lemma_text") or "")
+            up = lemma_text_raw.upper()
+            if not lemma_voice_hint and "ACTIVE DIATHESIS" in up:
+                lemma_voice_hint = "active"
+            elif not lemma_voice_hint and "PASSIVE DIATHESIS" in up:
+                lemma_voice_hint = "passive"
+
+            lemma_voice_hint = lemma_voice_hint or None
+            # -----------------------------------------------------------------
 
             base_hint: str | None = None
             for r in rows:
