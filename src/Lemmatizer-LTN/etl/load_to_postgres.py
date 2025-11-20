@@ -45,6 +45,7 @@ LATIN_ENDINGS = sorted(set(LATIN_ENDINGS), key=len, reverse=True)
 
 # --- helpers ----------------------------------------------------------------
 
+
 def lemma_code_from_url(u: str) -> str:
     try:
         q = parse_qs(urlparse(u or "").query)
@@ -98,21 +99,9 @@ def stem_from_base(base_head: str) -> tuple[str, str]:
     return head, ""
 
 
-def _is_suffix_row(s: str) -> bool:
-    """
-    True if the string is a hyphen-suffix row like '-as esse', '–auros esse', etc.
-    We treat '-', '–', '—' as equivalent and ignore leading whitespace.
-    """
-    if not s:
-        return False
-    s = s.lstrip()
-    return bool(s) and s[0] in "-–—"
-
-
 def expand_suffix_row(raw: str, base_full: str) -> list[str]:
     """
-    Expand a row whose value starts with '-' (ASCII or Unicode dash)
-    using the last base form.
+    Expand a row whose value starts with '-' using the last base form.
 
     Example:
       base_full   = 'abalienaturos esse'
@@ -123,12 +112,12 @@ def expand_suffix_row(raw: str, base_full: str) -> list[str]:
         return []
 
     s = (raw or "").strip()
-    if not _is_suffix_row(s):
+    if not s.startswith("-"):
         return []
 
     # Split suffix-row into head (like '-as') and tail (' esse')
     head2, tail2 = split_tail_esse(s)
-    suf = head2.lstrip(" -–—").strip()
+    suf = head2.lstrip("-").strip()
     if not suf:
         return []
 
@@ -148,15 +137,15 @@ def expand_suffix_row(raw: str, base_full: str) -> list[str]:
     return [new_form]
 
 
-def expand_value_to_forms(raw: str, base_hint: "str | None") -> tuple[list[str], "str | None"]:
+def expand_value_to_forms(raw: str, base_hint: str | None) -> tuple[list[str], str | None]:
     """
     Expand a CSV 'value' into one or more surface forms, with optional
-    base_hint from the previous row (for rows that start with '-','–','—').
+    base_hint from the previous row (for rows that start with '-').
 
     Returns (forms_list, new_base_hint).
 
     Cases:
-      1) raw starts with '-' (ASCII or Unicode) and we have base_hint:
+      1) raw starts with '-' and we have base_hint:
            -> use expand_suffix_row(raw, base_hint)
            -> keep base_hint unchanged
 
@@ -164,35 +153,34 @@ def expand_value_to_forms(raw: str, base_hint: "str | None") -> tuple[list[str],
            e.g. "abalienaturos, -as, -auros, -as, -a esse"
            -> multiple forms from a single row, new base_hint = base form
 
-      3) raw is a simple one-form row (no comma, not a suffix row):
+      3) raw is a simple one-form row (no comma, doesn't start with '-'):
            -> one form, and becomes the new base_hint for subsequent '-' rows.
     """
-    raw = raw or ""
-    s = raw.strip()
-    if not s:
+    raw = (raw or "").strip()
+    if not raw:
         return [], base_hint
 
     # Case 1: suffix-only row, use previous base if we have it
-    if _is_suffix_row(s):
+    if raw.startswith("-"):
         if base_hint:
-            forms = expand_suffix_row(s, base_hint)
+            forms = expand_suffix_row(raw, base_hint)
             return forms, base_hint
-        # No base: treat as standalone (strip leading dash)
-        stripped = s.lstrip(" -–—").strip()
+        # No base: treat as standalone (strip leading '-')
+        stripped = raw.lstrip("-").strip()
         if not stripped:
             return [], base_hint
         return [dedupe_tail(stripped)], base_hint
 
     # Case 3: simple one-form row, no comma => becomes new base
-    if "," not in s:
-        return [dedupe_tail(s)], s
+    if "," not in raw:
+        return [dedupe_tail(raw)], raw
 
     # Case 2: inline pattern with commas and maybe hyphens:
     # e.g. "abalienaturos, -as, -auros, -as, -a esse"
-    head, tail = split_tail_esse(s)
+    head, tail = split_tail_esse(raw)
     parts = [p.strip() for p in head.split(",") if p.strip()]
     if not parts:
-        return [dedupe_tail(s)], s
+        return [dedupe_tail(raw)], raw
 
     base = dedupe_tail(parts[0])
     stem, _ending = stem_from_base(base)
@@ -202,9 +190,8 @@ def expand_value_to_forms(raw: str, base_hint: "str | None") -> tuple[list[str],
     forms.append(base + (tail or ""))
 
     for part in parts[1:]:
-        part = part.strip()
-        if _is_suffix_row(part):
-            suf = part.lstrip(" -–—").strip()
+        if part.startswith("-"):
+            suf = part.lstrip("-").strip()
             if not suf:
                 continue
             if stem:
@@ -225,6 +212,41 @@ def expand_value_to_forms(raw: str, base_hint: "str | None") -> tuple[list[str],
             seen.add(f)
 
     return uniq, new_base_hint
+
+
+def detect_lemma_voice_from_heading(row: dict) -> str:
+    """
+    Try to infer voice (active/passive/deponent/middle) from the lemma heading
+    and nearby text. This is where 'Active diathesis' / 'Passive diathesis'
+    typically lives.
+
+    Handles:
+      - 'abalieno - Active diathesis'
+      - 'abalienoactivediathesis'
+      - 'abalieno – Active diathesis', etc.
+    """
+    lemma_text = (row.get("lemma_text") or "")
+    pos = (row.get("pos") or "")
+    c1 = (row.get("context_1") or "")
+    c2 = (row.get("context_2") or "")
+    c3 = (row.get("context_3") or "")
+    label = (row.get("label") or "")
+
+    combined = " ".join(x for x in [lemma_text, pos, c1, c2, c3, label] if x)
+    combined_lower = combined.lower()
+    # strip spaces and dash-like chars so 'active diathesis' and 'activediathesis'
+    # and 'active-diathesis' all become 'activediathesis'
+    packed = re.sub(r"[\s\-–—]+", "", combined_lower)
+
+    if "activediathesis" in packed:
+        return "active"
+    if "passivediathesis" in packed:
+        return "passive"
+    if "deponent" in combined_lower:
+        return "deponent"
+    if "middle" in combined_lower:
+        return "middle"
+    return ""
 
 
 def upsert_lemma(conn, *, lemma_text: str, pos: str, gender_hint: str, page_url: str) -> int:
@@ -264,8 +286,8 @@ def insert_form(
     r: dict,
     lemma_voice_hint: str,
     lemma_gender_hint: str,
-    base_hint: "str | None",
-) -> "str | None":
+    base_hint: str | None,
+) -> str | None:
     """
     Insert one or more forms for a given lemma_id.
 
@@ -273,13 +295,14 @@ def insert_form(
     """
     n = normalize_morph(r)
 
-    mood   = n.get("mood")   or None
-    tense  = n.get("tense")  or None
-    voice  = (n.get("voice") or lemma_voice_hint) or None
+    mood = n.get("mood") or None
+    tense = n.get("tense") or None
+    # <-- main change: if normalize_morph() doesn't see voice, fall back on lemma_voice_hint
+    voice = (n.get("voice") or lemma_voice_hint) or None
     person = n.get("person") or None
     number = n.get("number") or None
     gender = (n.get("gender") or lemma_gender_hint) or None
-    case   = n.get("case")   or None
+    case = n.get("case") or None
     degree = n.get("degree") or None
 
     raw_val = (r.get("value") or "").strip()
@@ -318,6 +341,7 @@ def insert_form(
 
 
 # --- main -------------------------------------------------------------------
+
 
 def main():
     ap = argparse.ArgumentParser()
@@ -383,18 +407,17 @@ def main():
                 page_url=head.get("page_url", ""),
             )
 
-            # Voice hint from morph AND lemma_text, in case the normalizer misses it
+            # --- lemma-level hints -------------------------------------------
             lemma_voice_hint = head_norm.get("voice", "") or ""
             lemma_gender_hint = head_norm.get("gender", "") or ""
 
-            lemma_text_raw = (head.get("lemma_text") or "")
-            up = lemma_text_raw.upper()
-            if not lemma_voice_hint and "ACTIVE DIATHESIS" in up:
-                lemma_voice_hint = "active"
-            elif not lemma_voice_hint and "PASSIVE DIATHESIS" in up:
-                lemma_voice_hint = "passive"
+            # If normalize_morph() didn't see voice, fall back to heading-based detection
+            if not lemma_voice_hint:
+                lemma_voice_hint = detect_lemma_voice_from_heading(head)
+                if lemma_voice_hint:
+                    print(f"[voice] {head.get('lemma_text','')} -> {lemma_voice_hint}")
 
-            base_hint: "str | None" = None
+            base_hint: str | None = None
             for r in rows:
                 base_hint = insert_form(
                     conn,
