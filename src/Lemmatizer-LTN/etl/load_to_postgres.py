@@ -1,13 +1,10 @@
 #!/usr/bin/env python3
 import os
-import sys
 import csv
 import re
 import argparse
 from pathlib import Path
 from urllib.parse import urlparse, parse_qs
-import urllib.request
-from functools import lru_cache
 
 import psycopg
 
@@ -18,7 +15,7 @@ try:
     from latin_norm import clean_lemma_text, normalize_morph
 except Exception:
     # When run from elsewhere: add this directory to sys.path
-    import importlib
+    import importlib, sys
     sys.path.append(str(Path(__file__).parent))
     _ln = importlib.import_module("latin_norm")
     clean_lemma_text = _ln.clean_lemma_text
@@ -43,7 +40,6 @@ LATIN_ENDINGS = [
     "us", "um", "os", "is", "ae", "am", "as", "es", "im", "em",
     "is", "e", "o", "u", "i",
 ]
-
 LATIN_ENDINGS = sorted(set(LATIN_ENDINGS), key=len, reverse=True)
 
 # --- helpers ----------------------------------------------------------------
@@ -218,41 +214,29 @@ def expand_value_to_forms(raw: str, base_hint: str | None) -> tuple[list[str], s
     return uniq, new_base_hint
 
 
-@lru_cache(maxsize=8192)
-def detect_voice_from_url(page_url: str) -> str:
+def detect_lemma_voice_from_heading(row: dict) -> str:
     """
-    Look up the lemma page and pull the voice from the heading,
-    e.g. 'ăbălĭēno - Active diathesis' / '... - Passive diathesis'.
-
-    Returns: 'active', 'passive', 'deponent', 'middle', or ''.
+    Infer voice (active/passive/deponent/middle) from the lemma heading +
+    nearby text. This is where "Active diathesis" / "Passive diathesis" lives.
     """
-    if not page_url:
-        return ""
+    lemma_text = (row.get("lemma_text") or "")
+    pos = (row.get("pos") or "")
+    c1 = (row.get("context_1") or "")
+    c2 = (row.get("context_2") or "")
+    c3 = (row.get("context_3") or "")
+    label = (row.get("label") or "")
 
-    try:
-        with urllib.request.urlopen(page_url, timeout=10) as resp:
-            html = resp.read().decode("utf-8", errors="ignore")
-    except Exception as e:
-        print(
-            f"[load_to_postgres] WARN: could not fetch {page_url!r} for voice detection: {e}",
-            file=sys.stderr,
-        )
-        return ""
+    combined = " ".join(x for x in [lemma_text, pos, c1, c2, c3, label] if x)
+    up = combined.upper()
 
-    up = html.upper()
-
-    # Primary patterns used by online-latin-dictionary
     if "ACTIVE DIATHESIS" in up:
         return "active"
     if "PASSIVE DIATHESIS" in up:
         return "passive"
-
-    # Just in case there are other diathesis labels
-    if "DEPONENT DIATHESIS" in up or "DEPONENT VERB" in up:
+    if "DEPONENT" in up:
         return "deponent"
     if "MIDDLE DIATHESIS" in up or "MIDDLE VOICE" in up:
         return "middle"
-
     return ""
 
 
@@ -314,7 +298,7 @@ def insert_form(
 
     mood = n.get("mood") or None
     tense = n.get("tense") or None
-    # <-- This is the key: per-form voice if present, otherwise lemma-wide voice hint.
+    # Per-form voice if present, otherwise lemma-wide voice hint.
     voice = n.get("voice") or lemma_voice_hint or None
     person = n.get("person") or None
     number = n.get("number") or None
@@ -433,30 +417,13 @@ def main():
             )
 
             # ---- VOICE + GENDER HINTS --------------------------------------
-            # 1) Prefer explicit hints coming from the CSV (if present)
-            lemma_voice_hint = (head.get("voice_hint") or "").strip().lower()
-            lemma_gender_hint = (
-                head_norm.get("gender") or (head.get("gender_hint") or "")
-            )
-            lemma_gender_hint = (lemma_gender_hint or "").strip().lower() or None
+            # Gender: from normalized morph if present
+            lemma_gender_hint = (head_norm.get("gender") or "").strip().lower() or None
 
-            # 2) Fall back to what normalize_morph can figure out from labels/contexts
+            # Voice: prefer normalized morph, else lemma heading text
+            lemma_voice_hint = (head_norm.get("voice") or "").strip().lower()
             if not lemma_voice_hint:
-                lemma_voice_hint = (head_norm.get("voice") or "").strip().lower()
-
-            # 3) FINAL fallback: read the lemma page HTML and grab "... Active diathesis"
-            if not lemma_voice_hint:
-                page_url = head.get("page_url") or ""
-                lemma_voice_hint = detect_voice_from_url(page_url)
-
-            # 4) Very last resort: if lemma_text somehow *still* carries the diathesis
-            lemma_text_raw = (head.get("lemma_text") or "")
-            up = lemma_text_raw.upper()
-            if not lemma_voice_hint and "ACTIVE DIATHESIS" in up:
-                lemma_voice_hint = "active"
-            elif not lemma_voice_hint and "PASSIVE DIATHESIS" in up:
-                lemma_voice_hint = "passive"
-
+                lemma_voice_hint = detect_lemma_voice_from_heading(head) or ""
             lemma_voice_hint = lemma_voice_hint or None
             # -----------------------------------------------------------------
 
