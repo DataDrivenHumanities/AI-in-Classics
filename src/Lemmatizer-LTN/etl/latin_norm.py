@@ -187,9 +187,9 @@ def normalize_morph(row: dict) -> dict:
     voice: str = ""
 
     # 1) explicit voice_hint from scraper (usually taken from the heading)
-    if "active" in lemma_text.lower():
+    if "active diathesis" in lemma_text.lower():
         voice = "active"
-    elif "passive" in lemma_text.lower():
+    elif "passive diathesis" in lemma_text.lower():
         voice = "passive"
     elif "deponent" in lemma_text.lower():
         voice = "deponent"
