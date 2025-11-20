@@ -143,18 +143,6 @@ def expand_value_to_forms(raw: str, base_hint: str | None) -> tuple[list[str], s
     base_hint from the previous row (for rows that start with '-').
 
     Returns (forms_list, new_base_hint).
-
-    Cases:
-      1) raw starts with '-' and we have base_hint:
-           -> use expand_suffix_row(raw, base_hint)
-           -> keep base_hint unchanged
-
-      2) raw has commas and inline hyphen shorthand:
-           e.g. "abalienaturos, -as, -auros, -as, -a esse"
-           -> multiple forms from a single row, new base_hint = base form
-
-      3) raw is a simple one-form row (no comma, doesn't start with '-'):
-           -> one form, and becomes the new base_hint for subsequent '-' rows.
     """
     raw = (raw or "").strip()
     if not raw:
@@ -216,14 +204,8 @@ def expand_value_to_forms(raw: str, base_hint: str | None) -> tuple[list[str], s
 
 def detect_lemma_voice_from_heading(row: dict) -> str:
     """
-    Try to infer voice (active/passive/deponent/middle) from the lemma heading
-    and nearby text. This is where 'Active diathesis' / 'Passive diathesis'
-    typically lives.
-
-    Handles:
-      - 'abalieno - Active diathesis'
-      - 'abalienoactivediathesis'
-      - 'abalieno – Active diathesis', etc.
+    Fallback: infer voice (active/passive/deponent/middle) from lemma heading
+    and nearby text. Handles 'Active diathesis' in various spellings.
     """
     lemma_text = (row.get("lemma_text") or "")
     pos = (row.get("pos") or "")
@@ -234,7 +216,7 @@ def detect_lemma_voice_from_heading(row: dict) -> str:
 
     combined = " ".join(x for x in [lemma_text, pos, c1, c2, c3, label] if x)
     combined_lower = combined.lower()
-    # strip spaces and dash-like chars so 'active diathesis' and 'activediathesis'
+    # Strip spaces and dash-like chars so 'active diathesis' and 'activediathesis'
     # and 'active-diathesis' all become 'activediathesis'
     packed = re.sub(r"[\s\-–—]+", "", combined_lower)
 
@@ -295,13 +277,18 @@ def insert_form(
     """
     n = normalize_morph(r)
 
+    # Per-row hints coming directly from scraper / per-lemma CSV
+    row_voice_hint = (r.get("voice_hint") or "").strip().lower() or None
+    row_gender_hint = (r.get("gender_hint") or "").strip().lower() or None
+
     mood = n.get("mood") or None
     tense = n.get("tense") or None
-    # <-- main change: if normalize_morph() doesn't see voice, fall back on lemma_voice_hint
-    voice = (n.get("voice") or lemma_voice_hint) or None
+    # voice precedence: normalized -> row hint -> lemma-level hint
+    voice = n.get("voice") or row_voice_hint or (lemma_voice_hint or None)
     person = n.get("person") or None
     number = n.get("number") or None
-    gender = (n.get("gender") or lemma_gender_hint) or None
+    # gender precedence: normalized -> row hint -> lemma-level hint
+    gender = n.get("gender") or row_gender_hint or (lemma_gender_hint or None)
     case = n.get("case") or None
     degree = n.get("degree") or None
 
@@ -407,15 +394,22 @@ def main():
                 page_url=head.get("page_url", ""),
             )
 
-            # --- lemma-level hints -------------------------------------------
-            lemma_voice_hint = head_norm.get("voice", "") or ""
-            lemma_gender_hint = head_norm.get("gender", "") or ""
+            # lemma-level hints
+            lemma_voice_hint = (head_norm.get("voice") or "").lower()
+            lemma_gender_hint = (head_norm.get("gender") or "").lower()
 
-            # If normalize_morph() didn't see voice, fall back to heading-based detection
+            # pull hint from the per-lemma CSV if present
+            head_voice_hint_col = (head.get("voice_hint") or "").strip().lower()
+            head_gender_hint_col = (head.get("gender_hint") or "").strip().lower()
+
+            if head_voice_hint_col and not lemma_voice_hint:
+                lemma_voice_hint = head_voice_hint_col
+            if head_gender_hint_col and not lemma_gender_hint:
+                lemma_gender_hint = head_gender_hint_col
+
+            # fallback to heading-based detection if still empty
             if not lemma_voice_hint:
-                lemma_voice_hint = detect_lemma_voice_from_heading(head)
-                if lemma_voice_hint:
-                    print(f"[voice] {head.get('lemma_text','')} -> {lemma_voice_hint}")
+                lemma_voice_hint = detect_lemma_voice_from_heading(head) or ""
 
             base_hint: str | None = None
             for r in rows:
