@@ -2,7 +2,6 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import Dict, Optional, Protocol, TypedDict, Any
 
-
 class SentimentResult(TypedDict, total=False):
     engine: str
     label: str
@@ -17,7 +16,6 @@ class SentimentProvider(Protocol):
     def analyze(
         self, text: str, *, model_id: Optional[str] = None
     ) -> SentimentResult: ...
-
 
 class VADERSentimentProvider:
     """Uses vaderSentiment (fast)."""
@@ -137,7 +135,7 @@ class SentimentRouter:
     """Routes to builtin (VADER), ollama, or hugging face."""
 
     builtin_provider: Optional[VADERSentimentProvider] = None
-    model_provider: Optional[LLMSentimentProvider] = None
+    model_provider: Optional[LLMSentimentProvider] | Optional[HFSentimentProvider] = None
 
     def analyze(
         self,
@@ -160,7 +158,7 @@ class SentimentRouter:
                 self.model_provider = HFSentimentProvider()
             return self.model_provider.analyze(text, model_id=model_id)
         else:
-            raise ValueError(f"Unknown engine '{engine}'. Use 'builtin' or 'model'.")
+            raise ValueError(f"Unknown engine '{engine}'. Use 'builtin', 'hugging face' or 'ollama'.")
 
 
 def make_default_sentiment_router() -> SentimentRouter:

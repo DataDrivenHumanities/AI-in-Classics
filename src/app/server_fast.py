@@ -16,6 +16,8 @@ from app.routers import presets_router
 from app.routers import feedback_router
 from app.routers import train_router
 
+from src.app.app_functions import hf_sentiment
+
 _VALID_LABELS = {"positive", "negative", "neutral"}
 _VALID = {"positive", "negative", "neutral"}
 
@@ -159,12 +161,23 @@ def chat(req: ChatRequest):
 async def _analyze_with_model(
     text: str,
     model_id: str,
-    *,
+    engine: str,
     options: Optional[Dict[str, Any]] = None,
     raw: Optional[bool] = None,
     fmt: Optional[str] = None,
 ) -> Dict[str, Any]:
     from app.ollama_client import generate_json_with_analysis
+
+    if engine == "hugging face":
+        res = hf_sentiment(text, model_id)
+        return {"engine": "hugging face",
+                "label": res[0].get("label"),
+                "confidence": res[0].get("score"),
+                "scores": None,
+                "raw_model_output": None,
+                "translation": "Hugging face models do not produce a translation.",
+                "analysis": "Hugging face models do not produce an analysis.",
+                }
 
     prompt = (
         "Return ONLY a JSON object with these exact keys and types; no extra keys and no prose. "
@@ -207,7 +220,7 @@ async def _analyze_with_model(
     analysis = parsed.get("analysis", None)
 
     return {
-        "engine": "model",
+        "engine": "ollama",
         "label": label,
         "confidence": confidence,
         "scores": scores,
@@ -222,9 +235,9 @@ async def analyze(body: AnalyzeBody):
     text = body.text
     engine = (body.engine or "model").lower()
     try:
-        if engine == "model":
+        if engine == "ollama" or engine == "hugging face":
             model_id = resolve_model(body.model_id)
-            res = await _analyze_with_model(text, model_id, options=body.options, raw=body.raw, fmt=body.format)
+            res = await _analyze_with_model(text, model_id, engine, options=body.options, raw=body.raw, fmt=body.format)
             return JSONResponse(res)
         return JSONResponse({"engine": "builtin", "label": "neutral", "confidence": 0.5, "scores": {"positive": 0.25, "negative": 0.25, "neutral": 0.5}, "raw_model_output": "", "translation": None, "analysis": None})
     except (httpx.ReadTimeout, httpx.ConnectTimeout):
