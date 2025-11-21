@@ -59,6 +59,36 @@ class VADERSentimentProvider:
             },
         }
 
+class HFSentimentProvider:
+    """
+    Current providers hugging face greek.
+    """
+
+    def __init__(self):
+        # robust import whether app_functions is under app/ or /src on path
+        try:
+            from app import app_functions as app_func  # type: ignore
+        except Exception:
+            import app_functions as app_func  # type: ignore
+        self._f = app_func
+
+    def analyze(self, text: str, *, model_id: Optional[str] = None) -> SentimentResult:
+        raw = self._f.hf_sentiment(text, model_id)
+        label = raw["label"]
+        conf = raw["score"]
+        try:
+            confidence = float(conf) if conf is not None else 0.0
+        except Exception:
+            confidence = 0.0
+        out: SentimentResult = {
+            "engine": "hugging face",
+            "label": label,
+            "confidence": confidence,
+            "raw_model_output": "",
+            "translation": "",
+            "analysis": {},
+        }
+        return out
 
 class LLMSentimentProvider:
     """
@@ -85,7 +115,7 @@ class LLMSentimentProvider:
         except Exception:
             confidence = 0.0
         out: SentimentResult = {
-            "engine": "model",
+            "engine": "hugging face",
             "label": label,
             "confidence": confidence,
             "raw_model_output": raw,
@@ -104,7 +134,7 @@ class LLMSentimentProvider:
 
 @dataclass
 class SentimentRouter:
-    """Routes to builtin (VADER) or model (LLM)."""
+    """Routes to builtin (VADER), ollama, or hugging face."""
 
     builtin_provider: Optional[VADERSentimentProvider] = None
     model_provider: Optional[LLMSentimentProvider] = None
@@ -121,9 +151,13 @@ class SentimentRouter:
             if not self.builtin_provider:
                 self.builtin_provider = VADERSentimentProvider()
             return self.builtin_provider.analyze(text, model_id=model_id)
-        elif engine == "model":
+        elif engine == "ollama":
             if not self.model_provider:
                 self.model_provider = LLMSentimentProvider()
+            return self.model_provider.analyze(text, model_id=model_id)
+        elif engine == "hugging face":
+            if not self.model_provider:
+                self.model_provider = HFSentimentProvider()
             return self.model_provider.analyze(text, model_id=model_id)
         else:
             raise ValueError(f"Unknown engine '{engine}'. Use 'builtin' or 'model'.")

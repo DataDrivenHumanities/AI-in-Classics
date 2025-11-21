@@ -268,7 +268,8 @@ export default function Analyzer() {
           >
             <option value="">Select a model…</option>
             <option value="latin_model:1.0.0">latin_model:1.0.0</option>
-            <option value="greek_model:1.0.0">greek_model:1.0.0</option>
+            <option value="greek_ollama_model:1.0.0">greek_ollama_model:1.0.0</option>
+            <option value="greek_hf_model:1.0.0">greek_hf_model:1.0.0</option>
             <option value="auto">auto</option>
           </select>
 

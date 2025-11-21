@@ -15,6 +15,7 @@ from sklearn.feature_extraction.text import CountVectorizer
 
 import streamlit as st
 from app.settings import main_settings
+from transformers import pipeline
 import dill
 import multiprocessing as mp
 
@@ -362,6 +363,10 @@ def llm_sentiment(text: str, model_name: str) -> str:
         buf.append(tok)
     return "".join(buf)
 
+def hf_sentiment(text: str, model_name: str) -> dict:
+    classifier = pipeline("text-classification", model="rtwins/greekbert_for_text_classification")
+    result = classifier(text)
+    return result[0]
 
 def parse_llm_json(s: str) -> Optional[dict]:
     """Try to parse the model output as JSON; be forgiving if there's noise."""

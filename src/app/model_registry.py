@@ -32,7 +32,7 @@ class ModelInfo:
     model_id: str
     name: str
     description: str = ""
-    provider: str = "ollama"
+    provider: str = ""
     available: bool = True
     tags: Sequence[str] = field(default_factory=tuple)
     metadata: Dict[str, str] = field(default_factory=dict)

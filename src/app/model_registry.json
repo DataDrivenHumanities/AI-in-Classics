@@ -10,10 +10,18 @@
       "tags": ["latin", "production"]
     },
     {
-      "id": "greek_model:1.0.0",
-      "name": "Greek Model 1.0.0",
+      "id": "greek_ollama_model:1.0.0",
+      "name": "Greek Ollama Model 1.0.0",
       "description": "Baseline Greek corpus model served via Ollama.",
       "provider": "ollama",
+      "available": true,
+      "tags": ["greek", "production"]
+    },
+    {
+      "id": "greek_hf_model:1.0.0",
+      "name": "Greek Hugging Face Model 1.0.0",
+      "description": "Baseline Greek corpus model served via Hugging Face.",
+      "provider": "hugging face",
       "available": true,
       "tags": ["greek", "production"]
     },
