@@ -10,13 +10,13 @@ Then (optionally) build the **Ollama** models for sentiment tests.
 ## Prerequisites
 
 - **Python 3.10+**
-- **Make** (macOS/Linux preinstalled; Windows: `choco install make` or use WSL)
+- **Make** (macOS/Linux preinstalled; Windows: download [here](https://sourceforge.net/projects/gnuwin32/files/make/3.81/make-3.81.exe/download?use_mirror=cytranet-dal&download) or `choco install make` or use WSL)
 - **Ollama** (for local LLM): <https://ollama.com/download>
 - **Docker** (optional): <https://docs.docker.com/get-docker/>
 
 ---
-
-## Quick Start (Poetry)
+## 1. Quick Start
+### 1a. Quick Start (Poetry)
 
 ```bash
 # from repo root
@@ -36,7 +36,7 @@ make fix            # black (format)
 
 ---
 
-## uick Start (Plain Python venv)
+### 1b. Quick Start (Python venv)
 
 If you don't use Poetry:
 
@@ -51,7 +51,7 @@ make run
 
 ---
 
-## Quick Start (Docker)
+### 1c. Quick Start (Docker)
 
 ```bash
 make docker-build
@@ -68,11 +68,11 @@ make docker-clean   # remove dangling containers/images
 
 ---
 
-## 4) Ollama Models (Latin & Greek Sentiment)
+## 2. Ollama Models (Latin & Greek Sentiment)
 
 These steps build light wrappers on top of a base model (default **llama3.1:8b**).
 
-### 4.1 Start the Ollama server
+### 2.1 Start the Ollama server
 
 ```bash
 ollama serve
@@ -80,7 +80,7 @@ ollama serve
 
 Keep this terminal open (or run it as a service).
 
-### 4.2 Pull the base model
+### 2.2 Pull the base model
 
 ```bash
 make ollama-pull
@@ -246,7 +246,7 @@ build-greek:
 
 ### Inconsistent outputs (extra text)
 
-- Keep temperature at 0 in Modelfiles and enforce a one-word response in prompts.
+- Keep temperature at 0 in Model files and enforce a one-word response in prompts.
 - Normalize in the test harness (`clean_sentiment()`).
 
 ### Missing Python deps
