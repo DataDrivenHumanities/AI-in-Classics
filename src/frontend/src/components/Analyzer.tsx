@@ -52,7 +52,6 @@ export default function Analyzer() {
         {id: "greek_hf_model:1.0.0"},
     ]);
 
-    // TypeScript
     useEffect(() => {
         let mounted = true;
         (async () => {
@@ -62,7 +61,7 @@ export default function Analyzer() {
                 if (!rr.ok) throw new Error(`Failed to load model registry: ${rr.status}`);
                 const data: any = await rr.json();
                 let models: ModelEntry[] = [];
-
+                console.log(data)
                 if (Array.isArray(data)) {
                     models = data.map((m: any) =>
                         typeof m === "string" ? {id: m} : {
@@ -99,6 +98,7 @@ export default function Analyzer() {
 
                 models = models.filter((m) => m.id);
                 if (models.length > 0) setAvailableModels(models);
+                console.log(models)
             } catch (e) {
                 // keep fallback list on error
             }
@@ -146,7 +146,6 @@ export default function Analyzer() {
         try {
             const payload = {
                 text,
-                engine: "model",
                 model_id: model,
                 options: {
                     temperature: modelOpts.temperature,
@@ -158,7 +157,6 @@ export default function Analyzer() {
                 raw: modelOpts.raw,
                 format: modelOpts.format,
             };
-
             const rr = await fetch(`${API_BASE}/analyze`, {
                 method: "POST",
                 headers: {"Content-Type": "application/json"},
@@ -167,6 +165,7 @@ export default function Analyzer() {
             });
             if (!rr.ok) throw new Error(`Request failed: ${rr.status}`);
             const data: AnalyzeResponse = await rr.json();
+            console.log(data)
             setResp(data);
             setProgress(100);
         } catch (err: any) {

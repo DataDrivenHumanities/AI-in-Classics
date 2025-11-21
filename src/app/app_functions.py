@@ -358,7 +358,9 @@ def llm_sentiment(text: str, model_name: str) -> str:
 
 def hf_sentiment(text: str, model_id: str) -> dict:
     classifier = pipeline("text-classification", model="rtwins/greekbert_for_text_classification")
+    print(text)
     result = classifier(text)
+    print(result)
     return result[0]
 
 def parse_llm_json(s: str) -> Optional[dict]:

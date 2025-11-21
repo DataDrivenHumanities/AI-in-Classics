@@ -8,15 +8,16 @@ import json
 import os
 import httpx
 
-from app.routers.probing_router import ProbingRouter
-from app.routers.chat_router import make_default_router as make_chat_router  # type: ignore
-from app.routers.chat_router import Message as ChatMessage
-from app.routers.sentiment_router import make_default_sentiment_router
-from app.routers import presets_router
-from app.routers import feedback_router
-from app.routers import train_router
+from .routers.probing_router import ProbingRouter
+from .routers.chat_router import make_default_router as make_chat_router  # type: ignore
+from .routers.chat_router import Message as ChatMessage
+from .routers.sentiment_router import make_default_sentiment_router
+from .routers import presets_router
+from .routers import feedback_router
+from .routers import train_router
 
 from src.app.app_functions import hf_sentiment
+from src.app.model_registry import get_registry, available_model_ids
 
 _VALID_LABELS = {"positive", "negative", "neutral"}
 _VALID = {"positive", "negative", "neutral"}
@@ -49,7 +50,6 @@ sent_router = make_default_sentiment_router()
 
 class AnalyzeBody(BaseModel):
     text: str
-    engine: str = "model"
     model_id: Optional[str] = None
     options: Optional[Dict[str, Any]] = None
     raw: Optional[bool] = None
@@ -75,6 +75,13 @@ def resolve_model(model_id: Optional[str]) -> str:
                 pass
     return "latin_model:1.0.0"
 
+def resolve_engine(model_id: str) -> str:
+    try:
+        registry = get_registry()
+        model = registry.get(model_id)
+        return model.provider
+    except Exception as e:
+        print(f"Model with id {model_id} not found in registry: {e}")
 
 # ------------------------------------------------------------------------------
 #  -----------   Chat endpoint  -----------   -----------   -----------
@@ -166,19 +173,23 @@ async def _analyze_with_model(
     raw: Optional[bool] = None,
     fmt: Optional[str] = None,
 ) -> Dict[str, Any]:
-    from app.ollama_client import generate_json_with_analysis
 
     if engine == "hugging face":
         res = hf_sentiment(text, model_id)
+        print(res)
         return {"engine": "hugging face",
-                "label": res[0].get("label"),
-                "confidence": res[0].get("score"),
-                "scores": None,
-                "raw_model_output": None,
+                "label": res.get("label"),
+                "confidence": res.get("score"),
+                "scores": {
+                    "positive": 0.0,
+                    "negative": 0.0,
+                    "neutral": 0.0,
+                },
+                "raw_model_output": "",
                 "translation": "Hugging face models do not produce a translation.",
                 "analysis": "Hugging face models do not produce an analysis.",
                 }
-
+    from .ollama_client import generate_json_with_analysis
     prompt = (
         "Return ONLY a JSON object with these exact keys and types; no extra keys and no prose. "
         'label: one of ["positive","negative","neutral"]; confidence: number in [0,1]; '
@@ -233,8 +244,8 @@ async def _analyze_with_model(
 @app.post("/api/analyze")
 async def analyze(body: AnalyzeBody):
     text = body.text
-    engine = (body.engine or "model").lower()
     try:
+        engine = (resolve_engine(body.model_id) or "builtin").lower()
         if engine == "ollama" or engine == "hugging face":
             model_id = resolve_model(body.model_id)
             res = await _analyze_with_model(text, model_id, engine, options=body.options, raw=body.raw, fmt=body.format)
@@ -293,3 +304,8 @@ async def analyze_upload(
 @app.get("/api/health")
 def api_health():
     return {"ok": True, "service": "trojan-parse-api"}
+
+@app.get("/api/model_registry")
+def api_model_registry():
+    registry = get_registry()
+    return registry.available_models()
