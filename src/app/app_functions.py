@@ -8,24 +8,19 @@ import numpy as np
 import pandas as pd
 import tqdm
 
-from cltk.alphabet.text_normalization import cltk_normalize
-from cltk.data.fetch import FetchCorpus
-from cltk.lemmatize.grc import GreekBackoffLemmatizer
+from cltk.text.utils import cltk_normalize
+from cltk import NLP
 from sklearn.feature_extraction.text import CountVectorizer
 
 import streamlit as st
-from app.settings import main_settings
-import dill
-import multiprocessing as mp
-
-grc_corpus = FetchCorpus(language="grc")
-grc_corpus.import_corpus(corpus_name="grc_models_cltk")
-lemmatizer = GreekBackoffLemmatizer()
+from .settings import main_settings
+from transformers import pipeline
 
 PREPROCESS_CHECKPOINT = False
 DTM_CHECKPOINT = False
 DEBUG = True
 HISTORY = list()
+nlp = NLP(language_code="grc")
 
 try:
     import pypdf
@@ -42,7 +37,7 @@ except Exception:
     VADER_OK = False
 
 try:
-    from app.ollama_client import chat_stream
+    from .ollama_client import chat_stream
 except Exception:
     st.error(
         "Cannot import ollama_client. Make sure src/ollama_client.py exists and is importable."
@@ -187,9 +182,8 @@ def query_cb():
     DOC_TERM_MATRIX = main_settings["DOC_TERM_MATRIX"]
     VOCABULARY = main_settings["VOCABULARY"]
     query_input = main_settings["query_input"]
-    kws = lemmatizer.lemmatize(
-        tokens=list([token for token in cltk_normalize(text=query_input).split()])
-    )
+    kws = nlp.analyze(cltk_normalize(query_input))
+
     vocab_indexes = np.asarray(
         a=sorted(
             list(filter(lambda x: x is not None, [VOCABULARY.get(kw) for kw in kws]))
@@ -263,7 +257,7 @@ def preprocess_texts():
 
         # lemmatize text and save as single text blob with no punctuation or marks
         lemmatized_blob = " ".join(
-            list([pair[1] for pair in lemmatizer.lemmatize(tokens=text.split())])
+            str(nlp.analyze(text))
         )
         with open(
             file=os.path.join(
@@ -362,6 +356,12 @@ def llm_sentiment(text: str, model_name: str) -> str:
         buf.append(tok)
     return "".join(buf)
 
+def hf_sentiment(text: str, model_id: str) -> dict:
+    classifier = pipeline("text-classification", model="rtwins/greekbert_for_text_classification")
+    print(text)
+    result = classifier(text)
+    print(result)
+    return result[0]
 
 def parse_llm_json(s: str) -> Optional[dict]:
     """Try to parse the model output as JSON; be forgiving if there's noise."""

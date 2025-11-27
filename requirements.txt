@@ -17,8 +17,10 @@ pandas
 pyarrow
 pydot
 python-dotenv
+python-multipart
 spacy
 scikit-learn
+stanza
 streamlit
 torch
 termcolor

@@ -5,23 +5,31 @@ else
 endif
 
 
+# Makefile (replace the Windows KILL_PORT define)
 ifeq ($(DETECTED_OS),windows)
-    define KILL_PORT
-        @echo "🔍 Checking port $(1) on Windows..."
-        @powershell -Command "Try { Get-NetTCPConnection -LocalPort $(1) -State Listen | ForEach-Object { Stop-Process -Id \$_.OwningProcess -Force } } Catch {}" 2>nul || true
-        @echo "✅ Port $(1) cleared (Windows)"
-    endef
+define KILL_PORT
+@echo "🔍 Checking port $(1) on Windows..."
+@powershell -NoProfile -Command "try { \
+  $$conns = Get-NetTCPConnection -LocalPort $(1) -State Listen -ErrorAction SilentlyContinue; \
+  if ($$null -ne $$conns) { \
+    foreach ($$c in $$conns) { Stop-Process -Id $$c.OwningProcess -Force -ErrorAction SilentlyContinue } ; \
+    Write-Output '✅ Port $(1) cleared (Windows)'; \
+  } else { \
+    Write-Output '✅ Port $(1) is free'; \
+  } \
+} catch { Write-Output '⚠️  Port check failed, continuing' }"
+endef
 else
-    define KILL_PORT
-        @echo "🔍 Checking port $(1) on macOS/Linux..."
-        @PID=$$(lsof -ti :$(1)); \
-        if [ ! -z "$$PID" ]; then \
-            echo "⚠️  Port $(1) in use — killing PID $$PID"; \
-            kill -9 $$PID || true; \
-        else \
-            echo "✅ Port $(1) is free"; \
-        fi
-    endef
+define KILL_PORT
+@echo "🔍 Checking port $(1) on macOS/Linux..."
+@PID=$$(lsof -ti :$(1)); \
+if [ ! -z "$$PID" ]; then \
+  echo "⚠️  Port $(1) in use — killing PID $$PID"; \
+  kill -9 $$PID || true; \
+else \
+  echo "✅ Port $(1) is free"; \
+fi
+endef
 endif
 
 # ===== Config =====
@@ -36,7 +44,7 @@ STREAMLIT_APP?= src/app/server_streamlit.py
 ifeq ($(DETECTED_OS),windows)
     PYTHON       := python
     PIP          := pip
-    VENV_PYTHON  := $(VENV_DIR)/Scripts/python
+    VENV_PYTHON  := $(VENV_DIR)\Scripts\python.exe
     POETRY_BIN   :=
     RUNPY        := $(VENV_PYTHON)
     RUN          := $(VENV_PYTHON) -m
@@ -76,12 +84,16 @@ API_PORT ?= 5050
 API_APP  ?= app.server_fast:app
 
 # Detect frontend package manager
+ifeq ($(DETECTED_OS), windows)
+FE_PM := npm
+else
 FE_PM := $(shell \
   cd $(FRONTEND_DIR) 2>/dev/null && \
   if command -v pnpm >/dev/null 2>&1 && [ -f pnpm-lock.yaml ]; then echo pnpm; \
   elif command -v yarn >/dev/null 2>&1 && [ -f yarn.lock ]; then echo yarn; \
   else echo npm; fi \
 )
+endif
 
 # ===== Colors =====
 ifeq ($(NO_COLOR),)
@@ -190,8 +202,9 @@ else
 	@echo "Using venv (Windows)..."
 	$(PYTHON) -m venv $(VENV_DIR)
 	$(VENV_PYTHON) -m pip install --upgrade pip
-	@if exist requirements.txt $(VENV_PYTHON) -m pip install -r requirements.txt
+	@if exist requirements.txt ( "$(VENV_PYTHON)" -m pip install -r requirements.txt )
 endif
+
 	@$(MAKE) api-deps
 	@$(MAKE) nb-bootstrap
 
@@ -320,21 +333,37 @@ fe-format-check:
 
 
 # ===== Notebooks / JupyterLite =====
+# makefile
 nb-bootstrap:
+ifeq ($(DETECTED_OS),windows)
+	@powershell -Command "New-Item -ItemType Directory -Force -Path '$(NB_SRC_DIR)' >$null"
+	@powershell -Command "New-Item -ItemType Directory -Force -Path '$(JLITE_NB_DIR)' >$null"
+	@powershell -Command "if (Test-Path -Path '$(JLITE_DIR)/lab/index.html') { Write-Output '✅ JupyterLite present at $(JLITE_DIR)' } else { Write-Output '⚠️  JupyterLite not found at $(JLITE_DIR). Drop a Lite build there (lab/index.html).' }"
+	@echo "✅ Notebook environment initialized. Place .ipynb files in $(NB_SRC_DIR)/ and run 'make nb-sync'"
+else
 	@mkdir -p "$(NB_SRC_DIR)"
 	@mkdir -p "$(JLITE_NB_DIR)"
 	@if [ ! -f "$(JLITE_DIR)/lab/index.html" ]; then \
-	  echo "⚠️  JupyterLite not found at $(JLITE_DIR). Drop a Lite build there (lab/index.html)."; \
+		echo "⚠️  JupyterLite not found at $(JLITE_DIR). Drop a Lite build there (lab/index.html)."; \
 	else \
-	  echo "✅ JupyterLite present at $(JLITE_DIR)"; \
-	fi
+		echo "✅ JupyterLite present at $(JLITE_DIR)"; \
+ 	fi
 	@echo "✅ Notebook environment initialized. Place .ipynb files in $(NB_SRC_DIR)/ and run 'make nb-sync'"
+endif
 
 nb-sync: nb-bootstrap
+ifeq ($(DETECTED_OS),windows)
+	@powershell -Command "New-Item -ItemType Directory -Force -Path '$(JLITE_NB_DIR)' >$$null"
+	@powershell -Command "Get-ChildItem -Path '$(NB_SRC_DIR)' -Filter '*.ipynb' -File | ForEach-Object { Copy-Item -Path $$_.FullName -Destination '$(JLITE_NB_DIR)' -Force }"
+	@$(MAKE) nb-index
+	@echo "✅ Synced notebooks to $(JLITE_NB_DIR)"
+else
 	@mkdir -p "$(JLITE_NB_DIR)"
 	@find "$(NB_SRC_DIR)" -maxdepth 1 -type f -name "*.ipynb" -print0 | xargs -0 -I{} cp "{}" "$(JLITE_NB_DIR)"/
 	@$(MAKE) nb-index
 	@echo "✅ Synced notebooks to $(JLITE_NB_DIR)"
+endif
+
 
 nb-index:
 	@$(PYTHON) -c "import json, os; nb='$(JLITE_NB_DIR)'; idx='$(JLITE_INDEX_JSON)'; \
@@ -374,19 +403,20 @@ api-run:
 api-health:
 	curl -s http://localhost:$(API_PORT)/api/health | jq .
 
-
+# language: makefile
+# Replace the Windows branches of start and start-lite in `Makefile`.
 start:
 ifeq ($(DETECTED_OS),windows)
 	@echo "🚀 Setting up Trojan Parse full stack (Windows)..."
 	@$(MAKE) setup
 	@$(MAKE) jlite-build
 	@echo "🌐 Starting FastAPI server on :$(API_PORT)..."
-	@start "" cmd /c "$(MAKE) -s api-run"
 	@echo "📘 Starting Streamlit on :$(PORT)..."
-	@start "" cmd /c "$(MAKE) -s web"
-	@echo "⚛️  Starting React dev server on :$(FRONTEND_PORT)..."
 	@$(call KILL_PORT,$(FRONTEND_PORT))
-	@start "" cmd /c "cd $(FRONTEND_DIR) && $(FE_PM_DEV)"
+	@powershell -NoProfile -Command "cd '$(CURDIR)'; \
+	  Start-Process -FilePath '$(VENV_PYTHON)' -ArgumentList '-m','uvicorn','$(API_APP)','--host','0.0.0.0','--port','$(API_PORT)','--reload','--app-dir','src' -WorkingDirectory '$(CURDIR)'; \
+	  Start-Process -FilePath '$(VENV_PYTHON)' -ArgumentList '-m','streamlit','run','$(STREAMLIT_APP)' -WorkingDirectory '$(CURDIR)'; \
+	  Start-Process -FilePath 'cmd.exe' -WorkingDirectory '$(CURDIR)\\$(FRONTEND_DIR)' -ArgumentList '/c','$(FE_PM_DEV)';"
 else
 	@echo "🚀 Setting up Trojan Parse full stack..."
 	@$(MAKE) setup
@@ -395,7 +425,7 @@ else
 	( $(MAKE) -s api-run ) &
 	@echo "📘 Starting Streamlit on :$(PORT)..."
 	( $(MAKE) -s web ) &
-	@echo "⚛️  Starting React dev server on :$(FRONTEND_PORT)..."
+	@echo "⚛️  Starting React dev server on :$(FRONTEND_PORT)"
 	@$(call KILL_PORT,$(FRONTEND_PORT))
 	( cd $(FRONTEND_DIR) && $(FE_PM_DEV) ) &
 	wait
@@ -406,9 +436,10 @@ ifeq ($(DETECTED_OS),windows)
 	@echo "⚡ Quick start (no setup, no JupyterLite build)… (Windows)"
 	@echo "🌐 FastAPI → :$(API_PORT), 🏺 Streamlit → :$(PORT), ⚛️ React → :$(FRONTEND_PORT)"
 	@$(call KILL_PORT,$(FRONTEND_PORT))
-	@start "" cmd /c "$(MAKE) -s api-run"
-	@start "" cmd /c "$(MAKE) -s web"
-	@start "" cmd /c "cd $(FRONTEND_DIR) && $(FE_PM_DEV)"
+	@powershell -NoProfile -Command "cd '$(CURDIR)'; \
+	  Start-Process -FilePath '$(VENV_PYTHON)' -ArgumentList '-m','uvicorn','$(API_APP)','--host','0.0.0.0','--port','$(API_PORT)','--reload','--app-dir','src' -WorkingDirectory '$(CURDIR)'; \
+	  Start-Process -FilePath '$(VENV_PYTHON)' -ArgumentList '-m','streamlit','run','$(STREAMLIT_APP)' -WorkingDirectory '$(CURDIR)'; \
+	  Start-Process -FilePath 'cmd.exe' -WorkingDirectory '$(CURDIR)\\$(FRONTEND_DIR)' -ArgumentList '/c','$(FE_PM_DEV)'"
 else
 	@echo "⚡ Quick start (no setup, no JupyterLite build)…"
 	@echo "🌐 FastAPI → :$(API_PORT), 🏺 Streamlit → :$(PORT), ⚛️ React → :$(FRONTEND_PORT)"
@@ -418,3 +449,8 @@ else
 	( cd $(FRONTEND_DIR) && $(FE_PM_DEV) ) &
 	wait
 endif
+
+
+
+
+

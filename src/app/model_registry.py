@@ -32,7 +32,7 @@ class ModelInfo:
     model_id: str
     name: str
     description: str = ""
-    provider: str = "ollama"
+    provider: str = ""
     available: bool = True
     tags: Sequence[str] = field(default_factory=tuple)
     metadata: Dict[str, str] = field(default_factory=dict)
@@ -66,10 +66,6 @@ class ModelRegistry:
 
         self._ordered: List[ModelInfo] = list(models)
         self._models_by_id: Dict[str, ModelInfo] = {m.model_id: m for m in models}
-        if len(self._models_by_id) != len(self._ordered):
-            raise ModelRegistryError(
-                "Duplicate model identifiers detected in registry."
-            )
 
         default_id = default
         if default_id not in self._models_by_id:
@@ -136,20 +132,20 @@ def _load_registry_from_path(path: Path) -> ModelRegistry:
         raw = json.load(fh)
 
     entries = raw.get("models") or []
-    models = [
-        ModelInfo(
-            model_id=item.get("id") or item.get("model_id") or "",
-            name=item.get("name") or item.get("label") or "",
-            description=item.get("description", ""),
-            provider=item.get("provider", "ollama"),
-            available=bool(item.get("available", True)),
-            tags=item.get("tags", ()),
-            metadata=item.get("metadata", {}),
-        )
-        for item in entries
-    ]
 
-    models = [m for m in models if m.model_id]
+    models = []
+    for key in entries.keys():
+        entry = entries[key]
+        models.append(ModelInfo(
+            model_id=entry.get("id", ""),
+            name=entry.get("name", ""),
+            description=entry.get("description", ""),
+            provider=entry.get("provider", ""),
+            available=bool(entry.get("available", True)),
+            tags=entry.get("tags", ()),
+            metadata=entry.get("metadata", {}),
+        ))
+
     if not models:
         raise ModelRegistryError(
             "Registry file is present but does not define any models."
