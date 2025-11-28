@@ -61,6 +61,7 @@ Users can choose one of the three available training strategies and view the sta
 <p align="center">
   <img src="images/modelShop.png" alt="App Banner" width="500"/>
 </p>
+
 ## Contributing
 
 Contributions are welcome!
@@ -83,6 +84,6 @@ to run this project locally See `dev.md` for setting up your workspace or click 
 
 - Alex John [@alxxjohn](https://www.github.com/alxxjohn)
 - Byron Boatright [@bboatright01](https://github.com/bboatright01)
-- Ryan Wilsom [@wilsonr8](https://github.com/willsonr8)
+- Ryan Willson [@willsonr8](https://github.com/willsonr8)
 - Duncan Fuller [@df-ufgit](https://github.com/df-ufgit)
 - Jake Morotta [@j-marotta](https://github.com/j-marotta)
