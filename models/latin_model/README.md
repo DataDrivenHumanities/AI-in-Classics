@@ -33,13 +33,7 @@ For full accuracy (70%+), see [Option 2](#option-2-full-model-with-fine-tuned-ad
 - [Support](#support)
 
 
-```python
-# scripts/11-28/create_ollama_deployment_guide.py
-"""
-Create comprehensive Ollama deployment guide for team
-"""
-
-ollama_readme = """# Running Latin Sentiment Model Locally with Ollama
+# Running Latin Sentiment Model Locally with Ollama
 
 This guide shows you how to run Team Trojan Parse's Latin sentiment model on your own computer using Ollama.
 
@@ -87,6 +81,9 @@ Victoria splendidissima! Dux gloriam aeternam meruit!
 ## Option 2: Full Model (With Fine-tuned Adapter)
 
 For 70%+ accuracy, convert our HuggingFace adapter to GGUF format.
+
+### Prerequisites
+**LoRA Adapter:** Hosted on Hugging Face → [TronCodes/augustulus-latin-sentiment-lora](https://huggingface.co/TronCodes/augustulus-latin-sentiment-lora)
 
 ### Prerequisites
 
@@ -216,7 +213,7 @@ Create `Modelfile.finetuned`:
 # Trojan Parse - Fine-tuned Latin Sentiment Model
 FROM ./latin_sentiment_q8_0.gguf
 
-SYSTEM """You are an expert in Ancient Latin sentiment analysis trained on 9,000 examples. You classify Latin texts into six emotional categories:
+SYSTEM """You are an expert in Ancient Latin sentiment analysis trained on 9,000 examples. You classify Latin texts into seven emotional categories:
 
 Categories:
 - EXTREMELY POSITIVE (+3): exsultatio, jubilum, beatitudo, summa felicitas
@@ -483,3 +480,4 @@ chmod +x full_setup.sh
 ---
 
 **Created by Team Trojan Parse | University of Florida 2025**
+
