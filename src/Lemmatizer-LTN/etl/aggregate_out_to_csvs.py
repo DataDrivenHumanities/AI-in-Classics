@@ -275,6 +275,9 @@ def aggregate():
 
         # Track last full form per context (to handle ending forms across rows)
         last_full_form_by_context = {}
+        # Also track last full form per section (ignoring label) + global fallback
+        last_full_form_by_section = {}
+        last_full_form_global = None
 
         for rr in rows:
             ctx1, ctx2, ctx3 = clean(rr.get("context_1","")), clean(rr.get("context_2","")), clean(rr.get("context_3",""))
@@ -285,21 +288,30 @@ def aggregate():
             
             # Create context key for tracking last full form
             context_key = (ctx1, ctx2, ctx3, label)
-            base_for_context = last_full_form_by_context.get(context_key)
+            section_key = (ctx1, ctx2, ctx3)
+            base_hint = (last_full_form_by_context.get(context_key)
+                         or last_full_form_by_section.get(section_key)
+                         or last_full_form_global)
             
             # Get forms, passing in last full form for this context
-            forms_from_value, new_base = split_forms_with_context(value, base_for_context)
+            forms_from_value, new_base = split_forms_with_context(value, base_hint)
             
             # Update last full form for this context (only updated by original full forms, not ending-derived)
             if new_base:
                 last_full_form_by_context[context_key] = new_base
+                last_full_form_by_section[section_key] = new_base
+                last_full_form_global = new_base
+
+            # Base available for this row (after potential updates)
+            base_hint_for_row = new_base or base_hint or last_full_form_by_section.get(section_key) or last_full_form_global
 
             for form in forms_from_value:
                 stripped_form = form.strip()
                 # If split logic missed an ending-only entry, try to combine it now
                 if stripped_form.startswith(("-", "–", "—")):
-                    if base_for_context:
-                        form = combine_ending_with_base(base_for_context, stripped_form)
+                    combine_base = base_hint_for_row or last_full_form_by_section.get(section_key) or last_full_form_global
+                    if combine_base:
+                        form = combine_ending_with_base(combine_base, stripped_form)
                     else:
                         continue
                 
