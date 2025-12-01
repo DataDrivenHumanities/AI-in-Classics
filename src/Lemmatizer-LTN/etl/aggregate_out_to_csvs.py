@@ -195,10 +195,20 @@ def split_forms_with_context(val, last_full_form_context=None):
     """Split form values, expanding ending-only entries by combining with previous full forms.
     Can use a last_full_form from context (across rows) as well as within the same value.
     Returns (forms_list, new_last_full_form) where new_last_full_form is only updated by
-    original full forms (not ending-derived combinations)."""
+    original full forms (not ending-derived combinations).
+    
+    IMPORTANT: Ending-only forms (starting with -) are ONLY included if they can be combined
+    with a base form. Standalone endings without a base are filtered out.
+    """
     if not val: return [], last_full_form_context
-    if val.strip() in {"-","–","—"}: return [], last_full_form_context
-    parts = re.split(r"\s*[/;,]\s*|\s+or\s+|\s+vel\s+", val.strip(), flags=re.IGNORECASE)
+    val_stripped = val.strip()
+    if val_stripped in {"-","–","—"}: return [], last_full_form_context
+    
+    # If the entire value is just an ending (starts with dash), skip it unless we have a base
+    if val_stripped.startswith(("-", "–", "—")) and not last_full_form_context:
+        return [], last_full_form_context
+    
+    parts = re.split(r"\s*[/;,]\s*|\s+or\s+|\s+vel\s+", val_stripped, flags=re.IGNORECASE)
     out, seen = [], set()
     base_form = last_full_form_context  # The base form that endings combine with
     new_base = last_full_form_context  # Track new base (only updated by original full forms)
@@ -215,7 +225,7 @@ def split_forms_with_context(val, last_full_form_context=None):
                     out.append(combined)
                     seen.add(combined)
                 # Note: base_form stays the same - all endings combine with the original base
-            # Note: if no base_form, we skip the ending-only form
+            # If no base_form, we skip the ending-only form (don't include standalone endings)
         else:
             # Full form (original, not ending-derived) - keep it and update base
             if p not in seen:
@@ -285,6 +295,10 @@ def aggregate():
                 last_full_form_by_context[context_key] = new_base
 
             for form in forms_from_value:
+                # Skip any forms that are still ending-only (shouldn't happen, but safety check)
+                if form.strip().startswith(("-", "–", "—")):
+                    continue
+                
                 form_diac = form
                 form_nod  = norm(form_diac)
                 if not form_nod:
@@ -299,9 +313,21 @@ def aggregate():
                 mood=tense=voice=person=number=case=degree=""
 
                 if is_verb:
-                    # voice: prefer explicit hint from diathesis, else detect from titles
-                    voice = voice_hint or detect_voice(ctx1,ctx2,ctx3,label)
-                    # If voice not found in context, try to infer from form pattern
+                    # voice: prefer explicit hint from scraper (extracted from lemma heading)
+                    # The scraper extracts this from "lemma – Active/Passive diathesis" in the raw heading
+                    voice = voice_hint
+                    # Fallback: check lemma_text (before cleaning, it might still have diathesis info)
+                    if not voice:
+                        # Check if lemma_text contains diathesis (sometimes it's not fully cleaned)
+                        raw_lemma = clean(rr.get("lemma_text", ""))
+                        if "active diathesis" in raw_lemma.lower():
+                            voice = "active"
+                        elif "passive diathesis" in raw_lemma.lower():
+                            voice = "passive"
+                    # Fallback: detect from context fields
+                    if not voice:
+                        voice = detect_voice(ctx1,ctx2,ctx3,label)
+                    # Final fallback: try to infer from form pattern
                     if not voice:
                         voice = infer_voice_from_form(form_diac, pos_text)
 

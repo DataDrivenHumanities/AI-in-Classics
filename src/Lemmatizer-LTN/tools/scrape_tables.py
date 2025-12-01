@@ -84,7 +84,18 @@ def parse_flexion_tables(html_text: str, page_url: str):
     pos_text = pos.get_text(" ", strip=True) if pos else ""
     pos_lc = pos_text.lower()
 
-    # Detect diathesis in section titles to hint voice
+    # Extract voice from raw lemma heading (BEFORE cleaning) - this is the primary source
+    # e.g., "abalieno – Active diathesis" or "abalieno – Passive diathesis"
+    lemma_voice_hint = ""
+    raw_lower = raw_lemma_text.lower()
+    if "active diathesis" in raw_lower:
+        lemma_voice_hint = "active"
+    elif "passive diathesis" in raw_lower:
+        lemma_voice_hint = "passive"
+    elif "deponent" in raw_lower:
+        lemma_voice_hint = "passive"  # deponent verbs are passive in form
+
+    # Detect diathesis in section titles as fallback
     def voice_hint_from_titles(titles):
         t = " ".join(titles).lower()
         if "active diathesis" in t:
@@ -98,7 +109,8 @@ def parse_flexion_tables(html_text: str, page_url: str):
         # up to 3 hierarchical titles (e.g., diathesis/mood/tense)
         titles = [t.get_text(" ", strip=True) for t in cont.find_all_previous("div", class_="ff_tbl_title", limit=3)]
         titles = list(reversed(titles))
-        v_hint = voice_hint_from_titles(titles)
+        # Use lemma-level voice hint if available, otherwise check table titles
+        v_hint = lemma_voice_hint or voice_hint_from_titles(titles)
 
         # Walk each row and capture *all* value columns, not just the last one
         for r in cont.select(".ff_tbl_row"):
