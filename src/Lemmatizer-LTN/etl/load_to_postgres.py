@@ -99,9 +99,21 @@ def stem_from_base(base_head: str) -> tuple[str, str]:
     return head, ""
 
 
+def _is_suffix_row(s: str) -> bool:
+    """
+    True if the string is a hyphen-suffix row like '-as esse', '–auros esse', etc.
+    We treat '-', '–', '—' as equivalent and ignore leading whitespace.
+    """
+    if not s:
+        return False
+    s = s.lstrip()
+    return bool(s) and s[0] in "-–—"
+
+
 def expand_suffix_row(raw: str, base_full: str) -> list[str]:
     """
-    Expand a row whose value starts with '-' using the last base form.
+    Expand a row whose value starts with '-' (ASCII or Unicode dash)
+    using the last base form.
 
     Example:
       base_full   = 'abalienaturos esse'
@@ -112,12 +124,12 @@ def expand_suffix_row(raw: str, base_full: str) -> list[str]:
         return []
 
     s = (raw or "").strip()
-    if not s.startswith("-"):
+    if not _is_suffix_row(s):
         return []
 
     # Split suffix-row into head (like '-as') and tail (' esse')
     head2, tail2 = split_tail_esse(s)
-    suf = head2.lstrip("-").strip()
+    suf = head2.lstrip(" -–—").strip()
     if not suf:
         return []
 
@@ -156,31 +168,32 @@ def expand_value_to_forms(raw: str, base_hint: str | None) -> tuple[list[str], s
       3) raw is a simple one-form row (no comma, doesn't start with '-'):
            -> one form, and becomes the new base_hint for subsequent '-' rows.
     """
-    raw = (raw or "").strip()
-    if not raw:
+    raw = raw or ""
+    s = raw.strip()
+    if not s:
         return [], base_hint
 
     # Case 1: suffix-only row, use previous base if we have it
-    if raw.startswith("-"):
+    if _is_suffix_row(s):
         if base_hint:
-            forms = expand_suffix_row(raw, base_hint)
+            forms = expand_suffix_row(s, base_hint)
             return forms, base_hint
-        # No base: treat as standalone (strip leading '-')
-        stripped = raw.lstrip("-").strip()
+        # No base: treat as standalone (strip leading dash)
+        stripped = s.lstrip(" -–—").strip()
         if not stripped:
             return [], base_hint
         return [dedupe_tail(stripped)], base_hint
 
     # Case 3: simple one-form row, no comma => becomes new base
-    if "," not in raw:
-        return [dedupe_tail(raw)], raw
+    if "," not in s:
+        return [dedupe_tail(s)], s
 
     # Case 2: inline pattern with commas and maybe hyphens:
     # e.g. "abalienaturos, -as, -auros, -as, -a esse"
-    head, tail = split_tail_esse(raw)
+    head, tail = split_tail_esse(s)
     parts = [p.strip() for p in head.split(",") if p.strip()]
     if not parts:
-        return [dedupe_tail(raw)], raw
+        return [dedupe_tail(s)], s
 
     base = dedupe_tail(parts[0])
     stem, _ending = stem_from_base(base)
@@ -190,8 +203,9 @@ def expand_value_to_forms(raw: str, base_hint: str | None) -> tuple[list[str], s
     forms.append(base + (tail or ""))
 
     for part in parts[1:]:
-        if part.startswith("-"):
-            suf = part.lstrip("-").strip()
+        part = part.strip()
+        if _is_suffix_row(part):
+            suf = part.lstrip(" -–—").strip()
             if not suf:
                 continue
             if stem:
