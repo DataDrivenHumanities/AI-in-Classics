@@ -280,24 +280,28 @@ def aggregate():
             ctx1, ctx2, ctx3 = clean(rr.get("context_1","")), clean(rr.get("context_2","")), clean(rr.get("context_3",""))
             label = clean(rr.get("label",""))
             value = clean(rr.get("value",""))
-            
-            if not value:
+            if not value or value in {"-","–","—"}:
                 continue
             
             # Create context key for tracking last full form
             context_key = (ctx1, ctx2, ctx3, label)
+            base_for_context = last_full_form_by_context.get(context_key)
             
             # Get forms, passing in last full form for this context
-            forms_from_value, new_base = split_forms_with_context(value, last_full_form_by_context.get(context_key))
+            forms_from_value, new_base = split_forms_with_context(value, base_for_context)
             
             # Update last full form for this context (only updated by original full forms, not ending-derived)
             if new_base:
                 last_full_form_by_context[context_key] = new_base
 
             for form in forms_from_value:
-                # Skip any forms that are still ending-only (shouldn't happen, but safety check)
-                if form.strip().startswith(("-", "–", "—")):
-                    continue
+                stripped_form = form.strip()
+                # If split logic missed an ending-only entry, try to combine it now
+                if stripped_form.startswith(("-", "–", "—")):
+                    if base_for_context:
+                        form = combine_ending_with_base(base_for_context, stripped_form)
+                    else:
+                        continue
                 
                 form_diac = form
                 form_nod  = norm(form_diac)
