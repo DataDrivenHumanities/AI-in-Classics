@@ -48,22 +48,67 @@ def parse_index_for_lemmas(html_text: str):
 def flatten_ff_value(cell):
     """Extract form values from HTML cell, combining roots (radice) and endings (desinenza).
     
-    The HTML structure has:
-    - Multiple desinenza spans (endings like "-as", "-auros", "-a")
-    - A radice span (stem) that typically appears at the end
+    The HTML structure has two patterns:
     
-    We combine the radice with each desinenza to reconstruct all full forms.
+    1. Simple pattern:
+       <span class="radice">ăbălĭēn</span><span class="desinenza">or</span>
+       → "ăbălĭēnor"
+    
+    2. Complex pattern (for periphrastic forms):
+       <span class="radice">abalienat</span><span class="desinenza">us, –a, –um</span> <span class="radice"></span>sum
+       → "abalienatus sum", "abalienata sum", "abalienatum sum"
+       
     Returns a comma-separated string of all reconstructed forms.
     """
     desinenze = []  # List of endings (desinenza spans)
-    radice = None   # The stem (radice span)
+    radice = None   # The stem (radice span) - use first non-empty one
+    suffix_text = []  # Text after empty radice spans (like "sum", "es", "est")
     other_parts = []  # Any other text content
     
-    # First pass: collect all desinenza and radice spans
-    for node in cell.children:
+    # Collect all nodes in order to handle empty radice spans properly
+    nodes = list(cell.children)
+    
+    for i, node in enumerate(nodes):
         name = getattr(node, "name", None)
+        
+        # Handle text nodes (spaces, suffixes after empty radice)
+        if name is None:
+            text = str(node).strip()
+            if text:
+                # Check if this text comes after an empty radice span
+                # Look backwards through whitespace to find the previous non-whitespace node
+                found_empty_radice = False
+                if i > 0:
+                    for j in range(i - 1, -1, -1):
+                        prev_node = nodes[j]
+                        prev_name = getattr(prev_node, "name", None)
+                        
+                        # Skip whitespace text nodes
+                        if prev_name is None:
+                            prev_text = str(prev_node).strip()
+                            if not prev_text:
+                                continue  # Keep looking backwards through whitespace
+                            else:
+                                break  # Found non-whitespace text, stop looking
+                        
+                        # Check if this is an empty radice span
+                        if prev_name == "span":
+                            prev_classes = set(getattr(prev_node, "get", lambda *_: [])("class", []))
+                            if "radice" in prev_classes:
+                                prev_text = prev_node.get_text("", strip=True)
+                                if not prev_text:  # Empty radice span
+                                    suffix_text.append(text)
+                                    found_empty_radice = True
+                                    break  # Found empty radice, this is suffix text
+                        break  # Found a non-text node, stop looking
+                
+                # If we didn't find an empty radice, add to other_parts
+                if not found_empty_radice:
+                    other_parts.append(text)
+            continue
+        
         if name != "span":
-            # Handle non-span content
+            # Handle non-span elements
             if hasattr(node, "get_text"):
                 text = node.get_text(" ", strip=False)
                 if text.strip():
@@ -74,68 +119,75 @@ def flatten_ff_value(cell):
         text = node.get_text("", strip=True)
         
         if "desinenza" in classes:
-            # This is an ending - collect it
+            # This is an ending - collect it (may contain comma-separated endings)
             desinenze.append(text)
         elif "radice" in classes:
-            # This is the stem - save it
-            radice = text
+            # This is the stem - save first non-empty one
+            if text and radice is None:
+                radice = text
+            # Empty radice spans are handled above (text after them goes to suffix_text)
         else:
             # Other span content
             if text:
                 other_parts.append(text)
     
+    # Combine suffix text (from after empty radice spans) with other parts
+    all_suffix = " ".join(suffix_text + other_parts).strip()
+    
     # If we have a radice and desinenze, combine them
     if radice and desinenze:
         forms = []
         for des in desinenze:
-            # Remove leading dash/hyphen from desinenza if present
-            des_clean = des.lstrip("-–—").strip()
+            # Desinenza may contain comma-separated endings: "us, –a, –um"
+            # Split by comma and process each ending
+            des_parts = [p.strip() for p in des.split(",")]
             
-            # Check if desinenza already contains a suffix (like "esse")
-            # Split by space to separate ending from suffix
-            des_parts = des_clean.split(None, 1)
-            ending_only = des_parts[0] if des_parts else ""
-            des_suffix = des_parts[1] if len(des_parts) > 1 else ""
-            
-            # Combine radice + ending
-            combined = radice + ending_only
-            
-            # Add suffix from desinenza if present, otherwise from other_parts
-            if des_suffix:
-                combined = f"{combined} {des_suffix}"
-            elif other_parts:
-                suffix = " ".join(other_parts).strip()
-                if suffix:
-                    combined = f"{combined} {suffix}"
-            
-            forms.append(combined)
+            for des_part in des_parts:
+                if not des_part:
+                    continue
+                
+                # Remove leading dash/hyphen from ending if present
+                des_clean = des_part.lstrip("-–—").strip()
+                if not des_clean:
+                    continue
+                
+                # Check if ending already contains a suffix (like "esse")
+                # Split by space to separate ending from suffix
+                ending_parts = des_clean.split(None, 1)
+                ending_only = ending_parts[0] if ending_parts else ""
+                ending_suffix = ending_parts[1] if len(ending_parts) > 1 else ""
+                
+                # Combine radice + ending
+                combined = radice + ending_only
+                
+                # Add suffix: prefer ending_suffix, then all_suffix
+                if ending_suffix:
+                    combined = f"{combined} {ending_suffix}"
+                elif all_suffix:
+                    combined = f"{combined} {all_suffix}"
+                
+                forms.append(combined)
         
         # Return comma-separated forms
         return ", ".join(forms)
     
     # Fallback: if no radice+desinenza pattern, just concatenate everything
-    # (handles cases where the structure is different)
     if desinenze:
         # We have endings but no radice - return them as-is (they'll be combined later)
         result = ", ".join(desinenze)
-        if other_parts:
-            suffix = " ".join(other_parts).strip()
-            if suffix:
-                result = f"{result}, {suffix}" if result else suffix
+        if all_suffix:
+            result = f"{result}, {all_suffix}" if result else all_suffix
         return result
     
     if radice:
-        # We have a radice but no desinenze - return it with any other parts
+        # We have a radice but no desinenze - return it with any suffix
         result = radice
-        if other_parts:
-            suffix = " ".join(other_parts).strip()
-            if suffix:
-                result = f"{result} {suffix}"
+        if all_suffix:
+            result = f"{result} {all_suffix}"
         return result
     
     # No radice or desinenza - just return other content
-    s = " ".join(other_parts).strip()
-    return s
+    return all_suffix if all_suffix else ""
 
 def parse_flexion_tables(html_text: str, page_url: str):
     soup = BeautifulSoup(html_text, "html.parser")
