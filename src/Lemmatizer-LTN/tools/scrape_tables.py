@@ -44,6 +44,8 @@ def parse_index_for_lemmas(html_text: str):
 _whitespace = re.compile(r"\s+")
 
 def flatten_ff_value(cell):
+    """Extract form values from HTML cell, combining roots (radice) and endings (desinenza).
+    Note: Standalone endings (like "-a", "-umus") are filtered out during aggregation."""
     out = []
     for node in cell.children:
         name = getattr(node, "name", None)
