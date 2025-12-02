@@ -248,7 +248,9 @@ async def analyze(body: AnalyzeBody):
         engine = (resolve_engine(body.model_id) or "builtin").lower()
         if engine == "ollama" or engine == "hugging face":
             model_id = resolve_model(body.model_id)
+            print(model_id, engine)
             res = await _analyze_with_model(text, model_id, engine, options=body.options, raw=body.raw, fmt=body.format)
+            print(res)
             return JSONResponse(res)
         return JSONResponse({"engine": "builtin", "label": "neutral", "confidence": 0.5, "scores": {"positive": 0.25, "negative": 0.25, "neutral": 0.5}, "raw_model_output": "", "translation": None, "analysis": None})
     except (httpx.ReadTimeout, httpx.ConnectTimeout):

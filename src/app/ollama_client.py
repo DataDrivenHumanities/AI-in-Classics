@@ -245,7 +245,9 @@ async def generate_json(
                 if attempt > 0:
                     shrink = 0.5 ** attempt
                     payload["options"]["num_predict"] = max(256, int(num_predict * shrink))
+                print(payload)
                 r = await client.post(f"{OLLAMA_HOST}/api/generate", json=payload)
+                print(r)
                 r.raise_for_status()
                 data = r.json()
                 raw_text = data.get("response") or ""
@@ -371,6 +373,7 @@ async def generate_json_with_analysis(
         raw=(True if force_raw is None else force_raw),
         out_format=(out_format or "json"),
     )
+
     if not parsed.get("analysis"):
         try:
             text_only = prompt.split("Text:", 1)[-1].strip()
