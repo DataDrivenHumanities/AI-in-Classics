@@ -356,7 +356,7 @@ def llm_sentiment(text: str, model_name: str) -> str:
         buf.append(tok)
     return "".join(buf)
 
-def hf_sentiment(text: str, model_id: str, hf_classifier_params: Dict[str, Any]) -> dict:
+def hf_sentiment(text: str, hf_classifier_params: Dict[str, Any]) -> dict:
     model: str = hf_classifier_params.get("model", "")
     task: str = hf_classifier_params.get("task", "")
     if model == "" or task == "":

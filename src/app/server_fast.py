@@ -186,7 +186,7 @@ async def _analyze_with_model(
 ) -> Dict[str, Any]:
 
     if engine == "hugging face":
-        res = hf_sentiment(text, model_id, hf_classifier_params)
+        res = hf_sentiment(text, hf_classifier_params)
         return {"engine": "hugging face",
                 "label": res.get("label"),
                 "confidence": res.get("score"),

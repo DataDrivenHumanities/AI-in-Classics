@@ -25,6 +25,7 @@ export default function Analyzer() {
     const [drawerOpen, setDrawerOpen] = useState<boolean>(false);
     const [feedbackOpen, setFeedbackOpen] = useState<boolean>(false);
     const [shopOpen, setShopOpen] = useState(false);
+    const [isHuggingFaceModel, setIsHuggingFaceModel] = useState(false)
 
     const [text, setText] = useState<string>("");
     const [resp, setResp] = useState<AnalyzeResponse | null>(null);
@@ -131,6 +132,10 @@ export default function Analyzer() {
         }, 200);
         return () => clearInterval(id);
     }, [loading]);
+
+    useEffect(() => {
+        setIsHuggingFaceModel(engine === "hugging face")
+    }, [engine])
 
     async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
@@ -504,7 +509,7 @@ export default function Analyzer() {
                             <div className="model-settings-label">Confidence</div>
                             <div>{typeof confidence === "number" ? `${(confidence * 100).toFixed(1)}%` : "—"}</div>
 
-                            {scores && typeof scores === "object" ? (
+                            {!isHuggingFaceModel && scores && typeof scores === "object" ? (
                                 <>
                                     <div className="model-settings-label">Positive</div>
                                     <div>{(Number(scores.positive) * 100).toFixed(1)}%</div>
@@ -519,12 +524,12 @@ export default function Analyzer() {
                         </div>
                     </div>
 
-                    <div className="panel">
+                    {!isHuggingFaceModel && (<div className="panel">
                         <h3>Translation</h3>
                         <pre>{translation ? String(translation) : "—"}</pre>
-                    </div>
+                    </div>)}
 
-                    <div className="panel">
+                    {!isHuggingFaceModel && (<div className="panel">
                         <h3>Analysis</h3>
                         {analysis && typeof analysis === "object" && Object.keys(analysis).length > 0 ? (
                             <div className="analysis-grid">
@@ -538,7 +543,7 @@ export default function Analyzer() {
                         ) : (
                             <div>—</div>
                         )}
-                    </div>
+                    </div>)}
                 </div>
             ) : (
                 <div className="panels debug-grid">
