@@ -63,11 +63,6 @@ MOOD_MAP = {
     "INDICATIVE": "indicative",
     "SUBJUNCTIVE": "subjunctive",
     "IMPERATIVE": "imperative",
-    "INFINITIVE": "infinitive",
-    "PARTICIPLE": "participle",
-    "GERUND": "gerund",
-    "GERUNDIVE": "gerundive",
-    "SUPINE": "supine",
 }
 
 TENSE_MAP = {
@@ -91,6 +86,14 @@ VOICE_MAP = {
     "PASSIVE": "passive",
     "DEPONENT": "deponent",
     "MIDDLE": "middle",
+}
+
+ADDITIONAL_VERB_FORM_MAP = {
+    "INFINITIVE": "infinitive",
+    "PARTICIPLE": "participle",
+    "GERUND": "gerund",
+    "GERUNDIVE": "gerundive",
+    "SUPINE": "supine",
 }
 
 _rx_roman = re.compile(r"\b(III|II|I)\b")
@@ -181,9 +184,10 @@ def normalize_morph(row: dict) -> dict:
     lemma_text = row.get("lemma_text") or ""
     voice_hint_raw = (row.get("voice_hint") or "").strip().lower()
 
-    # Mood / tense from headings / POS
+    # Mood / tense / verb_form from headings / POS
     mood = _first_hit(MOOD_MAP, label, c3, c2, c1, pos)
     tense = _first_hit(TENSE_MAP, label, c3, c2, c1, pos)
+    verb_form = _first_hit(ADDITIONAL_VERB_FORM_MAP, label, c3, c2, c1, pos)
 
     # --- VOICE: voice_hint first, then text heuristics, then VOICE_MAP ---
     voice: str = ""
@@ -233,4 +237,5 @@ def normalize_morph(row: dict) -> dict:
         "gender": gender or "",
         "case": case or "",
         "degree": degree or "",
+        "verb_form": verb_form or "",
     }

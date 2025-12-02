@@ -40,7 +40,8 @@ CASE_PATTERNS = [
 NUM_SG = re.compile(r"\b(sg|sing|singular|sing\.)\b", re.I)
 NUM_PL = re.compile(r"\b(pl|plur|plural|pl\.)\b", re.I)
 
-MOODS  = ["indicative","subjunctive","imperative","infinitive","participle","gerund","gerundive","supine"]
+MOODS  = ["indicative","subjunctive","imperative"]
+VERB_FORMS = ["infinitive","participle","gerund","gerundive","supine"]
 VOICES = ["active","passive"]
 TENSES = ["present","imperfect","future","perfect","pluperfect","future perfect","futureperfect"]
 
@@ -62,6 +63,13 @@ def detect_mood(*xs) -> str:
     j = " ".join(filter(None, xs)).lower()
     for m in MOODS:
         if m in j: return m
+    return ""
+
+def detect_verb_form(*xs) -> str:
+    """Detect verb form (infinitive, participle, gerund, gerundive, supine) from context fields and label."""
+    j = " ".join(filter(None, xs)).lower()
+    for vf in VERB_FORMS:
+        if vf in j: return vf
     return ""
 
 def detect_voice(*xs) -> str:
@@ -248,7 +256,7 @@ def aggregate():
              if Path(p).name not in ("lemmas.csv","forms.csv")]
 
     lemmas = {}   # lemma_nod -> (lemma_code, lemma_nod, lemma_diac, pos, gender, page_url)
-    forms  = []   # (lemma_nod, form_nod, form_diac, label, mood, tense, voice, person, number, gender, case, degree, page_url)
+    forms  = []   # (lemma_nod, form_nod, form_diac, label, mood, tense, voice, person, number, gender, case, degree, verb_form, page_url)
 
     for p in paths:
         with open(p, newline="", encoding="utf-8") as f:
@@ -314,7 +322,7 @@ def aggregate():
                 voice_hint  = (rr.get("voice_hint")  or "").lower()
 
                 # defaults
-                mood=tense=voice=person=number=case=degree=""
+                mood=tense=voice=person=number=case=degree=verb_form=""
 
                 if is_verb:
                     # voice: prefer explicit hint from scraper (extracted from lemma heading)
@@ -335,9 +343,10 @@ def aggregate():
                     if not voice:
                         voice = infer_voice_from_form(form_diac, pos_text)
 
-                    # mood/tense from titles
+                    # mood/tense/verb_form from titles
                     mood  = detect_mood(ctx1,ctx2,ctx3,label)
                     tense = detect_tense(ctx1,ctx2,ctx3,label)
+                    verb_form = detect_verb_form(ctx1,ctx2,ctx3,label)
 
                     # person/number from label (e.g., "3rd sg.")
                     p_lbl, n_lbl = person_num_from_label(label)
@@ -352,7 +361,7 @@ def aggregate():
                 gender = gender_hint or gender_from_pos
 
                 forms.append((lnod, form_nod, form_diac, label,
-                              mood, tense, voice, person, number, gender, case, degree, page_url))
+                              mood, tense, voice, person, number, gender, case, degree, verb_form, page_url))
 
     # write aggregates
     with open(LEMMA_CSV, "w", newline="", encoding="utf-8") as f:
@@ -364,7 +373,7 @@ def aggregate():
     with open(FORM_CSV, "w", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
         w.writerow(["lemma_nod","form_nod","form_diac","label",
-                    "mood","tense","voice","person","number","gender","case","degree","page_url"])
+                    "mood","tense","voice","person","number","gender","case","degree","verb_form","page_url"])
         w.writerows(forms)
 
     print(f"Wrote {len(lemmas)} lemmas -> {LEMMA_CSV}")

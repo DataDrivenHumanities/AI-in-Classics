@@ -38,6 +38,7 @@ CREATE TABLE IF NOT EXISTS forms (
   gender      TEXT,
   "case"      TEXT,
   degree      TEXT,
+  verb_form   TEXT,
   page_url    TEXT
 );
 
@@ -71,7 +72,7 @@ BEGIN
         lemma_id, form_nod,
         coalesce(mood,''), coalesce(tense,''), coalesce(voice,''),
         coalesce(person,''), coalesce(number,''), coalesce(gender,''),
-        coalesce("case",''), coalesce(degree,'')
+        coalesce("case",''), coalesce(degree,''), coalesce(verb_form,'')
       )
     $I$;
   END IF;
@@ -83,7 +84,7 @@ RETURNS SETOF forms LANGUAGE sql STABLE AS $$
   SELECT f.* FROM lemmas l
   JOIN forms f ON f.lemma_id = l.id
   WHERE l.lemma_nod = norm(q)
-  ORDER BY f.mood, f.tense, f.voice, f.person, f.number, f.gender, f."case", f.degree, f.form_nod;
+  ORDER BY f.mood, f.tense, f.voice, f.person, f.number, f.gender, f."case", f.degree, f.verb_form, f.form_nod;
 $$;
 
 CREATE OR REPLACE FUNCTION get_lemma_by_form(q text)
@@ -98,7 +99,7 @@ CREATE OR REPLACE FUNCTION inflect_within_lemma(
   q text,
   p_mood text DEFAULT NULL, p_tense text DEFAULT NULL, p_voice text DEFAULT NULL,
   p_person text DEFAULT NULL, p_number text DEFAULT NULL, p_gender text DEFAULT NULL,
-  p_case text DEFAULT NULL, p_degree text DEFAULT NULL
+  p_case text DEFAULT NULL, p_degree text DEFAULT NULL, p_verb_form text DEFAULT NULL
 )
 RETURNS SETOF forms LANGUAGE sql STABLE AS $$
   WITH base AS (
@@ -117,5 +118,6 @@ RETURNS SETOF forms LANGUAGE sql STABLE AS $$
     AND (p_gender IS NULL OR f.gender = p_gender)
     AND (p_case   IS NULL OR f."case" = p_case)
     AND (p_degree IS NULL OR f.degree = p_degree)
+    AND (p_verb_form IS NULL OR f.verb_form = p_verb_form)
   ORDER BY f.form_nod;
 $$;

@@ -323,6 +323,7 @@ def insert_form(
     gender = n.get("gender") or lemma_gender_hint or None
     case = n.get("case") or None
     degree = n.get("degree") or None
+    verb_form = n.get("verb_form") or None
 
     raw_val = (r.get("value") or "").strip()
     if not raw_val:
@@ -341,10 +342,10 @@ def insert_form(
             """
             INSERT INTO forms
               (lemma_id, form_nod, form_diac,
-               mood, tense, voice, person, number, gender, "case", degree, page_url)
+               mood, tense, voice, person, number, gender, "case", degree, verb_form, page_url)
             VALUES
               (%s,      norm(%s), %s,
-               %s,  %s,   %s,    %s,     %s,     %s,     %s,    %s,    %s)
+               %s,  %s,   %s,    %s,     %s,     %s,     %s,    %s,    %s,        %s)
             ON CONFLICT DO NOTHING
             """,
             (
@@ -359,6 +360,7 @@ def insert_form(
                 gender,
                 case,
                 degree,
+                verb_form,
                 page_url,
             ),
         )
