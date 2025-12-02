@@ -3,24 +3,61 @@ import os
 import shutil
 import json
 import re
+from pathlib import Path
 from typing import Optional
 import numpy as np
 import pandas as pd
 import tqdm
 
-from cltk.text.utils import cltk_normalize
+BASE_DIR = Path(__file__).resolve().parents[2]
+DEFAULT_CLTK_DATA = BASE_DIR / "cltk_data"
+if not os.getenv("CLTK_DATA"):
+    os.environ["CLTK_DATA"] = str(DEFAULT_CLTK_DATA)
+CLTK_DATA_PATH = Path(os.environ["CLTK_DATA"]).expanduser()
+CLTK_DATA_PATH.mkdir(parents=True, exist_ok=True)
+
+from cltk.alphabet.text_normalization import cltk_normalize
 from cltk import NLP
 from sklearn.feature_extraction.text import CountVectorizer
 
 import streamlit as st
 from .settings import main_settings
-from transformers import pipeline
+from . import model_registry as model_cfg
+
+try:
+    from transformers import pipeline
+
+    TRANSFORMERS_OK = True
+except Exception:
+    pipeline = None
+    TRANSFORMERS_OK = False
 
 PREPROCESS_CHECKPOINT = False
 DTM_CHECKPOINT = False
 DEBUG = True
 HISTORY = list()
-nlp = NLP(language_code="grc")
+nlp = NLP(language="grc")
+HF_DEFAULT_MODEL = os.getenv(
+    "HF_SENTIMENT_MODEL", "rtwins/greekbert_for_text_classification"
+)
+
+
+def _resolve_hf_repo_name(preferred: Optional[str]) -> str:
+    candidate = (preferred or "").strip()
+    if candidate:
+        if "/" in candidate and ":" not in candidate.partition("/")[0]:
+            return candidate
+        try:
+            registry = model_cfg.get_registry()
+            entry = registry.get(candidate)
+            meta = getattr(entry, "metadata", {}) or {}
+            for key in ("hf_repo", "huggingface_repo", "hf_model", "huggingface_id"):
+                repo = meta.get(key)
+                if isinstance(repo, str) and repo.strip():
+                    return repo.strip()
+        except Exception:
+            pass
+    return HF_DEFAULT_MODEL
 
 try:
     import pypdf
@@ -356,11 +393,22 @@ def llm_sentiment(text: str, model_name: str) -> str:
         buf.append(tok)
     return "".join(buf)
 
-def hf_sentiment(text: str, model_id: str) -> dict:
-    classifier = pipeline("text-classification", model="rtwins/greekbert_for_text_classification")
-    print(text)
-    result = classifier(text)
-    print(result)
+def hf_sentiment(text: str, model_id: Optional[str]) -> dict:
+    """
+    Run a Hugging Face text-classification pipeline for sentiment analysis.
+    """
+    if not TRANSFORMERS_OK or pipeline is None:
+        raise RuntimeError(
+            "transformers is not installed. Install it to enable Hugging Face sentiment."
+        )
+    model_name = _resolve_hf_repo_name(model_id)
+    try:
+        classifier = pipeline("text-classification", model=model_name)
+        result = classifier(text)
+    except Exception as exc:
+        raise RuntimeError(f"Failed to run Hugging Face sentiment: {exc}") from exc
+    if not result:
+        return {}
     return result[0]
 
 def parse_llm_json(s: str) -> Optional[dict]:

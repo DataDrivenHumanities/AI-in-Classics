@@ -52,7 +52,14 @@ class ProbingRouter:
     def _load_registry(self) -> Dict[str, Any]:
         try:
             if self.registry_path.exists():
-                return json.loads(self.registry_path.read_text(encoding="utf-8"))
+                data = json.loads(self.registry_path.read_text(encoding="utf-8"))
+                models = data.get("models", [])
+                if isinstance(models, dict):
+                    # legacy files used a dict keyed by model id; normalize to list
+                    data["models"] = list(models.values())
+                elif not isinstance(models, list):
+                    data["models"] = []
+                return data
         except Exception:
             pass
         return {"models": [], "default": None}

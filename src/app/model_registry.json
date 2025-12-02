@@ -32,7 +32,10 @@
       "tags": [
         "greek",
         "production"
-      ]
+      ],
+      "metadata": {
+        "hf_repo": "rtwins/greekbert_for_text_classification"
+      }
     },
     "latin_ollama_model:2.0.0": {
       "id": "latin_ollama_model:2.0.0",
