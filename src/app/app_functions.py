@@ -3,7 +3,7 @@ import os
 import shutil
 import json
 import re
-from typing import Optional
+from typing import Optional, Dict, Any
 import numpy as np
 import pandas as pd
 import tqdm
@@ -356,11 +356,13 @@ def llm_sentiment(text: str, model_name: str) -> str:
         buf.append(tok)
     return "".join(buf)
 
-def hf_sentiment(text: str, model_id: str) -> dict:
-    classifier = pipeline("text-classification", model="rtwins/greekbert_for_text_classification")
-    print(text)
+def hf_sentiment(text: str, model_id: str, hf_classifier_params: Dict[str, Any]) -> dict:
+    model: str = hf_classifier_params.get("model", "")
+    task: str = hf_classifier_params.get("task", "")
+    if model == "" or task == "":
+        raise Exception("model and task cannot be blank in model registry for hugging face models")
+    classifier = pipeline(task=task, model=model)
     result = classifier(text)
-    print(result)
     return result[0]
 
 def parse_llm_json(s: str) -> Optional[dict]:

@@ -12,7 +12,7 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from functools import lru_cache
 from pathlib import Path
-from typing import Dict, Iterable, List, Optional, Sequence
+from typing import Dict, Iterable, List, Optional, Sequence, Any
 import json
 import os
 
@@ -33,6 +33,7 @@ class ModelInfo:
     name: str
     description: str = ""
     provider: str = ""
+    hf_classifier_params: Dict[str: Any] = field(default_factory=dict)
     available: bool = True
     tags: Sequence[str] = field(default_factory=tuple)
     metadata: Dict[str, str] = field(default_factory=dict)
@@ -141,6 +142,7 @@ def _load_registry_from_path(path: Path) -> ModelRegistry:
             name=entry.get("name", ""),
             description=entry.get("description", ""),
             provider=entry.get("provider", ""),
+            hf_classifier_params=entry.get("hf_classifier_params", {}),
             available=bool(entry.get("available", True)),
             tags=entry.get("tags", ()),
             metadata=entry.get("metadata", {}),
@@ -189,15 +191,15 @@ def available_model_ids() -> Iterable[str]:
     return [model.model_id for model in registry.available_models()]
 
 
-def resolve_model(preferred: Optional[str]) -> str:
+def resolve_model(preferred: Optional[str]):
     data = json.loads(_REG_PATH.read_text(encoding="utf-8"))
     default_id = data.get("default") or "latin_model:1.0.0"
     models = {m["id"]: m for m in data.get("models", [])}
     if preferred and preferred in models and models[preferred].get("available", False):
-        return preferred
+        return preferred, {}
     if default_id in models and models[default_id].get("available", False):
-        return default_id
+        return default_id, {}
     for m in data.get("models", []):
         if m.get("available", False):
-            return m["id"]
-    return default_id
+            return m["id"], m["hf_classifier_params"]
+    return default_id, {}
