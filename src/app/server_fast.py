@@ -18,6 +18,11 @@ from .routers import train_router
 
 from .app_functions import hf_sentiment
 from .model_registry import get_registry, available_model_ids
+from .ollama_client import (
+    generate_json_with_analysis,
+    translate_en,
+    resolve_available_model_tag,
+)
 
 _VALID_LABELS = {"positive", "negative", "neutral"}
 _VALID = {"positive", "negative", "neutral"}
@@ -176,20 +181,19 @@ async def _analyze_with_model(
 
     if engine == "hugging face":
         res = hf_sentiment(text, model_id)
-        print(res)
-        return {"engine": "hugging face",
-                "label": res.get("label"),
-                "confidence": res.get("score"),
-                "scores": {
-                    "positive": 0.0,
-                    "negative": 0.0,
-                    "neutral": 0.0,
-                },
-                "raw_model_output": "",
-                "translation": "Hugging face models do not produce a translation.",
-                "analysis": "Hugging face models do not produce an analysis.",
-                }
-    from .ollama_client import generate_json_with_analysis
+        return {
+            "engine": "hugging face",
+            "label": res.get("label"),
+            "confidence": res.get("score"),
+            "scores": {
+                "positive": 0.0,
+                "negative": 0.0,
+                "neutral": 0.0,
+            },
+            "raw_model_output": "",
+            "translation": "Hugging face models do not produce a translation.",
+            "analysis": "Hugging face models do not produce an analysis.",
+        }
     prompt = (
         "Return ONLY a JSON object with these exact keys and types; no extra keys and no prose. "
         'label: one of ["positive","negative","neutral"]; confidence: number in [0,1]; '
@@ -202,8 +206,9 @@ async def _analyze_with_model(
     temp = float(options.get("temperature", 0.0)) if options else 0.0
     top_p = float(options.get("top_p", 0.9)) if options else 0.9
 
+    runtime_model = resolve_available_model_tag(model_id)
     parsed, raw_text = await generate_json_with_analysis(
-        model_id,
+        runtime_model,
         prompt,
         num_predict=np,
         temperature=temp,
@@ -228,6 +233,11 @@ async def _analyze_with_model(
     }
 
     translation = parsed.get("translation", None)
+    if not translation:
+        try:
+            translation = await translate_en(runtime_model, text)
+        except Exception:
+            translation = None
     analysis = parsed.get("analysis", None)
 
     return {
