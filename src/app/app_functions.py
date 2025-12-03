@@ -10,19 +10,55 @@ import numpy as np
 import pandas as pd
 import tqdm
 
-from cltk.text.utils import cltk_normalize
+BASE_DIR = Path(__file__).resolve().parents[2]
+DEFAULT_CLTK_DATA = BASE_DIR / "cltk_data"
+if not os.getenv("CLTK_DATA"):
+    os.environ["CLTK_DATA"] = str(DEFAULT_CLTK_DATA)
+CLTK_DATA_PATH = Path(os.environ["CLTK_DATA"]).expanduser()
+CLTK_DATA_PATH.mkdir(parents=True, exist_ok=True)
+
+from cltk.alphabet.text_normalization import cltk_normalize
 from cltk import NLP
 from sklearn.feature_extraction.text import CountVectorizer
 
 import streamlit as st
 from .settings import main_settings
-from transformers import pipeline
+from . import model_registry as model_cfg
+
+try:
+    from transformers import pipeline
+
+    TRANSFORMERS_OK = True
+except Exception:
+    pipeline = None
+    TRANSFORMERS_OK = False
 
 PREPROCESS_CHECKPOINT = False
 DTM_CHECKPOINT = False
 DEBUG = True
 HISTORY = list()
-nlp = NLP(language_code="grc")
+nlp = NLP(language="grc")
+HF_DEFAULT_MODEL = os.getenv(
+    "HF_SENTIMENT_MODEL", "rtwins/greekbert_for_text_classification"
+)
+
+
+def _resolve_hf_repo_name(preferred: Optional[str]) -> str:
+    candidate = (preferred or "").strip()
+    if candidate:
+        if "/" in candidate and ":" not in candidate.partition("/")[0]:
+            return candidate
+        try:
+            registry = model_cfg.get_registry()
+            entry = registry.get(candidate)
+            meta = getattr(entry, "metadata", {}) or {}
+            for key in ("hf_repo", "huggingface_repo", "hf_model", "huggingface_id"):
+                repo = meta.get(key)
+                if isinstance(repo, str) and repo.strip():
+                    return repo.strip()
+        except Exception:
+            pass
+    return HF_DEFAULT_MODEL
 
 try:
     import pypdf
@@ -359,6 +395,13 @@ def llm_sentiment(text: str, model_name: str) -> str:
     return "".join(buf)
 
 def hf_sentiment(text: str, hf_classifier_params: Dict[str, Any]):
+    """
+    Run a Hugging Face text-classification pipeline for sentiment analysis.
+    """
+    if not TRANSFORMERS_OK or pipeline is None:
+        raise RuntimeError(
+            "transformers is not installed. Install it to enable Hugging Face sentiment."
+        )
     model = hf_classifier_params.get("model", None)
     task = hf_classifier_params.get("task", None)
     if not model or not task:
