@@ -3,6 +3,8 @@ import os
 import shutil
 import json
 import re
+import uuid
+import tempfile
 from typing import Optional, Dict, Any
 import numpy as np
 import pandas as pd
@@ -356,14 +358,37 @@ def llm_sentiment(text: str, model_name: str) -> str:
         buf.append(tok)
     return "".join(buf)
 
-def hf_sentiment(text: str, hf_classifier_params: Dict[str, Any]) -> dict:
-    model: str = hf_classifier_params.get("model", "")
-    task: str = hf_classifier_params.get("task", "")
-    if model == "" or task == "":
+def hf_sentiment(text: str, hf_classifier_params: Dict[str, Any]):
+    model = hf_classifier_params.get("model", None)
+    task = hf_classifier_params.get("task", None)
+    if not model or not task:
         raise Exception("model and task cannot be blank in model registry for hugging face models")
     classifier = pipeline(task=task, model=model)
-    result = classifier(text)
-    return result[0]
+
+    res = []
+
+    sentences = [s.strip() for s in re.split(r"(?<=[.!?])\s+", text) if s.strip()]
+
+    for s in sentences:
+        sentence_result = classifier(s)
+        sentence_result[0]["sentence"] = s
+        res.append(sentence_result)
+
+    if len(res) > 100:
+        tmp_dir = os.path.abspath(os.path.join(os.getcwd(), "tmp"))
+        os.makedirs(tmp_dir, exist_ok=True)
+        filename = f"hf_sentiment_results_{uuid.uuid4().hex}.csv"
+        path = os.path.join(tmp_dir, filename)
+        try:
+            try:
+                df = pd.json_normalize(res)
+            except Exception:
+                df = pd.DataFrame(res)
+            df.to_csv(path, index=False)
+        except Exception as e:
+            return {"error": f"Failed to write CSV: {e}", "count": len(res)}
+        return {"preview": res[:100], "csv_path": path, "count": len(res)}
+    return res
 
 def parse_llm_json(s: str) -> Optional[dict]:
     """Try to parse the model output as JSON; be forgiving if there's noise."""

@@ -187,18 +187,11 @@ async def _analyze_with_model(
 
     if engine == "hugging face":
         res = hf_sentiment(text, hf_classifier_params)
-        return {"engine": "hugging face",
-                "label": res.get("label"),
-                "confidence": res.get("score"),
-                "scores": {
-                    "positive": 0.0,
-                    "negative": 0.0,
-                    "neutral": 0.0,
-                },
-                "raw_model_output": "",
-                "translation": "Hugging face models do not produce a translation.",
-                "analysis": "Hugging face models do not produce an analysis.",
-                }
+        print(res)
+        return {
+            "engine": "hugging face",
+            "labels and scores by sentence": res
+        }
     from .ollama_client import generate_json_with_analysis
     prompt = (
         "Return ONLY a JSON object with these exact keys and types; no extra keys and no prose. "

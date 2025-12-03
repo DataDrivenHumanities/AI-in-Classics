@@ -5,6 +5,7 @@ import ModelModal from "@/components/ModelModal";
 import ModelSettingsModal, {ModelOptions} from "@/components/ModelSettingsModal";
 import FeedbackModal from "@/components/FeedbackModal";
 import ModelShopModal from "@/components/ModelShopModal";
+import {render} from "react-dom";
 
 
 const API_BASE = process.env.NEXT_PUBLIC_API_BASE || "http://localhost:5050/api";
@@ -318,6 +319,110 @@ export default function Analyzer() {
         return <span>{String(val)}</span>;
     }
 
+// typescript
+// Insert this inside the Analyzer component (e.g. after renderValue) and replace the existing HF panel JSX with the usage shown below.
+
+    function extractHfList(respObj: any): any[] | null {
+        if (!respObj) return null;
+        // try multiple common key variants
+        const candidates = [
+            "labels_and_scores_by_sentence",
+            "labels and scores by sentence",
+            "labels_and_scores",
+            "labels_by_sentence",
+            "labels",
+            "scores_by_sentence",
+        ];
+        for (const k of candidates) {
+            const v = respObj[k] ?? respObj?.data?.[k];
+            if (Array.isArray(v) && v.length > 0) return v;
+        }
+        // maybe top-level is already an array
+        if (Array.isArray(respObj)) return respObj;
+        return null;
+    }
+
+    function renderHfTable(respObj: any) {
+        const list = extractHfList(respObj);
+        if (!list) {
+            // fallback to raw JSON display
+            return (
+                <div className="panel">
+                    <h3>Raw Response (Hugging Face)</h3>
+                    <pre style={{whiteSpace: "pre-wrap", wordBreak: "break-word", maxHeight: 400, overflow: "auto"}}>
+                    {JSON.stringify(respObj, null, 2)}
+                </pre>
+                </div>
+            );
+        }
+        const rows = list.map((item: any, i: number) => {
+            if (Array.isArray(item) && item.length > 0) {
+                const top = item[0];
+                return {
+                    index: i + 1,
+                    label: top?.label ?? top?.name ?? JSON.stringify(item),
+                    score: top?.score ?? top?.confidence ?? null,
+                    sentence: (top?.sentence ?? top?.text ?? null),
+                    raw: item,
+                };
+            }
+            if (item && typeof item === "object") {
+                // item may be { label, score, sentence } or { sentence: "...", labels: [...] }
+                const label = item.label ?? item.predicted_label ?? (Array.isArray(item.labels) ? String(item.labels[0]?.label ?? item.labels[0]) : undefined);
+                const score = item.score ?? item.confidence ?? item.probability ?? (Array.isArray(item.labels) ? item.labels[0]?.score : undefined);
+                const sentence = item.sentence ?? item.text ?? item.input ?? null;
+                return {
+                    index: i + 1,
+                    label: label ?? JSON.stringify(item),
+                    score: score ?? null,
+                    sentence,
+                    raw: item,
+                };
+            }
+            // primitive fallback
+            return {index: i + 1, label: String(item), score: null, sentence: null, raw: item};
+        });
+
+        const showSentenceColumn = rows.some((r) => r.sentence);
+
+        return (
+            <div className="panel">
+                <h3>Hugging Face — Results by Sentence</h3>
+                <div style={{overflowX: "auto", maxHeight: 420}}>
+                    <table className="hf-table" style={{width: "100%", borderCollapse: "collapse"}}>
+                        <thead>
+                        <tr>
+                            <th style={{textAlign: "left", padding: 8, borderBottom: "1px solid #ddd"}}>#</th>
+                            <th style={{textAlign: "left", padding: 8, borderBottom: "1px solid #ddd"}}>Label</th>
+                            <th style={{textAlign: "left", padding: 8, borderBottom: "1px solid #ddd"}}>Score</th>
+                            {showSentenceColumn && <th style={{
+                                textAlign: "left",
+                                padding: 8,
+                                borderBottom: "1px solid #ddd"
+                            }}>Sentence</th>}
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {rows.map((r) => (
+                            <tr key={r.index} style={{borderBottom: "1px solid #f3f3f3"}}>
+                                <td style={{padding: 8}}>{r.index}</td>
+                                <td style={{padding: 8, whiteSpace: "nowrap"}}>{String(r.label)}</td>
+                                <td style={{padding: 8}}>{r.score != null ? toPercent(r.score) : "—"}</td>
+                                {showSentenceColumn && <td style={{
+                                    padding: 8,
+                                    whiteSpace: "normal",
+                                    maxWidth: 420
+                                }}>{r.sentence ?? JSON.stringify(r.raw)}</td>}
+                            </tr>
+                        ))}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        );
+    }
+
+
     return (
         <div className="app">
             <header className="header">
@@ -489,62 +594,72 @@ export default function Analyzer() {
                     </button>
                 </div>
             )}
-
             {hasResp ? (
-                <div className="panels">
-                    <div className="panel">
-                        <div style={{display: "flex", justifyContent: "space-between", alignItems: "center"}}>
-                            <h3 style={{margin: 0}}>Results</h3>
-                            <div style={{display: "flex", gap: 8}}>
+                <>
+                    {isHuggingFaceModel ? renderHfTable(resp) :
+
+                        (<div className="panels">
+                            <div className="panel">
+                                <div style={{display: "flex", justifyContent: "space-between", alignItems: "center"}}>
+                                    <h3 style={{margin: 0}}>Results</h3>
+                                    <div style={{display: "flex", gap: 8}}/>
+                                </div>
+
+                                <div className="model-settings-grid" style={{marginTop: 10}}>
+                                    <div className="model-settings-label">Engine</div>
+                                    <div>{engine || "—"}</div>
+
+
+                                    <>
+                                        <div className="model-settings-label">Label</div>
+                                        <div>{label ? String(label).toUpperCase() : "—"}</div>
+
+                                        <div className="model-settings-label">Confidence</div>
+                                        <div>{typeof confidence === "number" ? `${(confidence * 100).toFixed(1)}%` : "—"}</div>
+                                    </>
+
+
+                                    {scores && typeof scores === "object" ? (
+                                        <>
+                                            <div className="model-settings-label">Positive</div>
+                                            <div>{(Number(scores.positive) * 100).toFixed(1)}%</div>
+
+                                            <div className="model-settings-label">Neutral</div>
+                                            <div>{(Number(scores.neutral) * 100).toFixed(1)}%</div>
+
+                                            <div className="model-settings-label">Negative</div>
+                                            <div>{(Number(scores.negative) * 100).toFixed(1)}%</div>
+                                        </>
+                                    ) : null}
+                                </div>
                             </div>
-                        </div>
 
-                        <div className="model-settings-grid" style={{marginTop: 10}}>
-                            <div className="model-settings-label">Engine</div>
-                            <div>{engine || "—"}</div>
 
-                            <div className="model-settings-label">Label</div>
-                            <div>{label ? String(label).toUpperCase() : "—"}</div>
+                            <>
+                                <div className="panel">
+                                    <h3>Translation</h3>
+                                    <pre>{translation ? String(translation) : "—"}</pre>
+                                </div>
 
-                            <div className="model-settings-label">Confidence</div>
-                            <div>{typeof confidence === "number" ? `${(confidence * 100).toFixed(1)}%` : "—"}</div>
+                                <div className="panel">
+                                    <h3>Analysis</h3>
+                                    {analysis && typeof analysis === "object" && Object.keys(analysis).length > 0 ? (
+                                        <div className="analysis-grid">
+                                            {Object.entries(analysis).map(([key, val]) => (
+                                                <Fragment key={key}>
+                                                    <div className="analysis-label">{key}</div>
+                                                    <div className="analysis-value">{renderValue(val)}</div>
+                                                </Fragment>
+                                            ))}
+                                        </div>
+                                    ) : (
+                                        <div>—</div>
+                                    )}
+                                </div>
+                            </>
 
-                            {!isHuggingFaceModel && scores && typeof scores === "object" ? (
-                                <>
-                                    <div className="model-settings-label">Positive</div>
-                                    <div>{(Number(scores.positive) * 100).toFixed(1)}%</div>
-
-                                    <div className="model-settings-label">Neutral</div>
-                                    <div>{(Number(scores.neutral) * 100).toFixed(1)}%</div>
-
-                                    <div className="model-settings-label">Negative</div>
-                                    <div>{(Number(scores.negative) * 100).toFixed(1)}%</div>
-                                </>
-                            ) : null}
-                        </div>
-                    </div>
-
-                    {!isHuggingFaceModel && (<div className="panel">
-                        <h3>Translation</h3>
-                        <pre>{translation ? String(translation) : "—"}</pre>
-                    </div>)}
-
-                    {!isHuggingFaceModel && (<div className="panel">
-                        <h3>Analysis</h3>
-                        {analysis && typeof analysis === "object" && Object.keys(analysis).length > 0 ? (
-                            <div className="analysis-grid">
-                                {Object.entries(analysis).map(([key, val]) => (
-                                    <Fragment key={key}>
-                                        <div className="analysis-label">{key}</div>
-                                        <div className="analysis-value">{renderValue(val)}</div>
-                                    </Fragment>
-                                ))}
-                            </div>
-                        ) : (
-                            <div>—</div>
-                        )}
-                    </div>)}
-                </div>
+                        </div>)}
+                </>
             ) : (
                 <div className="panels debug-grid">
                     <div className="panel debug-snippet">
@@ -585,9 +700,7 @@ export default function Analyzer() {
                                     <span className="model-stop-chip none">None</span>
                                 ) : (
                                     modelOpts.stop.map((s) => (
-                                        <span key={s} className="model-stop-chip">
-                      {s}
-                    </span>
+                                        <span key={s} className="model-stop-chip">{s}</span>
                                     ))
                                 )}
                             </div>
@@ -595,6 +708,7 @@ export default function Analyzer() {
                     </div>
                 </div>
             )}
+
 
             <ModelModal open={modelsOpen} onClose={() => setModelsOpen(false)}/>
 
@@ -633,24 +747,27 @@ export default function Analyzer() {
             <ModelShopModal open={shopOpen} onClose={() => setShopOpen(false)} apiBase={API_BASE}/>
 
 
-            {notebookOpen && (
-                <div className="modal" onClick={() => setNotebookOpen(false)}>
-                    <div className="modal-inner" onClick={(e) => e.stopPropagation()}>
-                        <div className="modal-bar">
-                            <div className="modal-title">JupyterLite</div>
-                            <div className="modal-actions">
-                                <a className="modal-link" href={JUPYTERLITE_LAB} target="_blank" rel="noreferrer">
-                                    Open in new tab
-                                </a>
-                                <button className="modal-close" onClick={() => setNotebookOpen(false)}>
-                                    Close
-                                </button>
+            {
+                notebookOpen && (
+                    <div className="modal" onClick={() => setNotebookOpen(false)}>
+                        <div className="modal-inner" onClick={(e) => e.stopPropagation()}>
+                            <div className="modal-bar">
+                                <div className="modal-title">JupyterLite</div>
+                                <div className="modal-actions">
+                                    <a className="modal-link" href={JUPYTERLITE_LAB} target="_blank" rel="noreferrer">
+                                        Open in new tab
+                                    </a>
+                                    <button className="modal-close" onClick={() => setNotebookOpen(false)}>
+                                        Close
+                                    </button>
+                                </div>
                             </div>
+                            <iframe className="modal-iframe" title="JupyterLite" src={`${JUPYTERLITE_LAB}?reset=1`}/>
                         </div>
-                        <iframe className="modal-iframe" title="JupyterLite" src={`${JUPYTERLITE_LAB}?reset=1`}/>
                     </div>
-                </div>
-            )}
+                )
+            }
         </div>
-    );
+    )
+        ;
 }
