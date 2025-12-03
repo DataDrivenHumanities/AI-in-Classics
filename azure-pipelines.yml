@@ -141,6 +141,7 @@ jobs:
         $formsCSV = Join-Path $out "forms.csv"
 
         # Try parallel upload first (5 workers)
+        # Skip large aggregate files if they cause SSL errors (letter CSVs contain all the data anyway)
         Write-Host "Attempting parallel upload with 5 workers..."
         $args = @(
           $script,
@@ -148,7 +149,8 @@ jobs:
           "--folder-id", "$(GOOGLE_DRIVE_FOLDER_ID)",
           "--files", $lemmasCSV, $formsCSV, $letterDir,
           "--max-workers", "5",
-          "--no-letter-folders"
+          "--no-letter-folders",
+          "--skip-large-files"
         )
 
         Write-Host "Running: $py $($args -join ' ')"
@@ -157,7 +159,17 @@ jobs:
 
         if ($exitCode -ne 0) {
           Write-Host "Parallel upload failed, trying sequential upload (1 worker)..." -ForegroundColor Yellow
-          $args[8] = "1"  # Change max-workers to 1
+          # Rebuild args with max-workers = 1
+          $args = @(
+            $script,
+            "--service-account-json", "service_account.json",
+            "--folder-id", "$(GOOGLE_DRIVE_FOLDER_ID)",
+            "--files", $lemmasCSV, $formsCSV, $letterDir,
+            "--max-workers", "1",
+            "--no-letter-folders",
+            "--skip-large-files"
+          )
+          Write-Host "Running: $py $($args -join ' ')"
           & $py @args
           $exitCode = $LASTEXITCODE
         }

@@ -171,7 +171,7 @@ def upsert_file(svc, parent_id: str, local_path: Path, existing_files_cache: Dic
                         existing_files_cache[cache_key] = fid
                 return ("create", name, fid)
         
-        except (ssl.SSLError, ConnectionError, TimeoutError, HttpError) as e:
+        except (ssl.SSLError, ConnectionError, TimeoutError, OSError) as e:
             last_error = e
             if attempt < max_retries - 1:
                 wait_time = 2 ** attempt  # Exponential backoff: 1s, 2s, 4s
@@ -180,6 +180,9 @@ def upsert_file(svc, parent_id: str, local_path: Path, existing_files_cache: Dic
             else:
                 # Final attempt failed
                 raise last_error
+        except HttpError as e:
+            # HTTP errors (403, 404, etc.) shouldn't be retried
+            raise e
     
     # Should not reach here, but just in case
     raise last_error if last_error else Exception("Unknown error in upsert_file")
@@ -251,6 +254,11 @@ def main():
         help="Don't split CSVs into letter subfolders (useful when uploading pre-aggregated letter files)",
     )
     ap.add_argument(
+        "--skip-large-files",
+        action="store_true",
+        help="Skip lemmas.csv and forms.csv (upload only letter-based CSVs)",
+    )
+    ap.add_argument(
         "--max-workers",
         type=int,
         default=5,
@@ -262,6 +270,9 @@ def main():
     ensure_folder_exists(svc, args.folder_id)
     root_id = args.folder_id
 
+    # Aggregates folder (for lemmas.csv, forms.csv) - create FIRST
+    agg_id = get_or_create_child_folder(svc, root_id, args.aggregates_folder_name)
+    
     paths = collect_csv_paths(args.files)
     if not paths:
         print("No CSV files found to upload.")
@@ -269,9 +280,6 @@ def main():
 
     print(f"Found {len(paths)} CSV files to upload")
     print(f"Using {args.max_workers} parallel workers")
-
-    # Aggregates folder (for lemmas.csv, forms.csv)
-    agg_id = get_or_create_child_folder(svc, root_id, args.aggregates_folder_name)
 
     # Cache for letter subfolders
     letter_cache: dict[str, str] = {}
@@ -312,8 +320,15 @@ def main():
     print_lock = Lock()
     
     upload_tasks = []
+    skipped = []
     for p in paths:
         name = p.name
+        
+        # Skip large aggregate files if requested
+        if args.skip_large_files and name in ("lemmas.csv", "forms.csv"):
+            skipped.append(name)
+            continue
+        
         if name in ("lemmas.csv", "forms.csv"):
             parent_id = agg_id
         elif args.no_letter_folders:
@@ -323,6 +338,9 @@ def main():
             parent_id = letter_folder(bucket)
         
         upload_tasks.append((svc, parent_id, p, existing_files_cache, cache_lock, print_lock))
+    
+    if skipped:
+        print(f"Skipping large files (--skip-large-files): {', '.join(skipped)}")
 
     # Upload in parallel (or sequential if max_workers=1)
     start_time = time.time()
