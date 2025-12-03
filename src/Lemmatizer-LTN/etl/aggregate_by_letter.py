@@ -85,7 +85,7 @@ def aggregate_by_letter():
     total_original = len(paths)
     total_aggregated = len(letter_groups)
     reduction = (1 - total_aggregated / total_original) * 100 if total_original > 0 else 0
-    print(f"\nFile reduction: {total_original} → {total_aggregated} ({reduction:.1f}% reduction)")
+    print(f"\nFile reduction: {total_original} -> {total_aggregated} ({reduction:.1f}% reduction)")
 
 if __name__ == "__main__":
     aggregate_by_letter()
