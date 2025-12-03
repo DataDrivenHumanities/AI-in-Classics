@@ -26,26 +26,35 @@ logic.
 ## 3. Step-by-step: adding a new model
 
 1. **Open the registry file**: in your editor, open
-   `src/app/model_registry.json`. You will see a list (`[]`) of model entries.
-2. **Copy an existing entry**: duplicate one of the objects and change the
+   `src/app/model_registry.json`. You will see a dictionary (`{}`) of model entries.
+2. **Copy an existing entry**: duplicate one of the objects within the `models` dictionary and change the
    values. Each entry uses this shape:
 
-   ```json
-   {
-     "tag": "latin-latest",
-     "label": "Latin production (v4)",
+   ```
+   "<model id>": {
+     "id": "<model id>",
+     "name": "Latin production (v4)",
+     "description": "Latin production level model, fourth iteration"
+     "provider": "hugging face"
+     "hf_classifier_params": {
+        "model": "rtwins/latinbert_for_text_classification"
+        "task": "text-classification"
+     }
      "available": true,
-     "is_default": false,
-     "description": "High-accuracy Latin analysis model"
+     "tags": ["latin", "production"]
    }
    ```
 
-   * `tag` is the short handle the backend expects.
-   * `label` is what teammates will read in the app sidebar.
-   * `available` should be `true` only when the model is safe to use.
-   * `is_default` should be `true` for exactly one model in the list (usually
-     your new model once it launches).
+   * `id` is the short handle the backend expects.
+   * `name` is what teammates will read in the app sidebar.
    * `description` is optional but helps others understand what changed.
+   * `provider` is the platform running the model. Current choices are `ollama` or `hugging face`
+   * `hf_classifier_params` contains important hugging face parameters used by the backend to call the correct model. Can be left as en empty dictionary `{}` if hugging face is not the model provider
+     * `model` refers to the name of the hugging face model
+     * `task` refers to the hugging face task that the model can/should be running
+   * `available` should be `true` only when the model is safe to use.
+   * `tags` refers to model metadata or characteristics. Not currently used at any point
+
 3. **Save the file**: nothing else is required. When the app starts, the
    Streamlit sidebar reads this file and automatically shows the new entry. If
    `available` is `false`, it will appear as "coming soon" so teammates know
@@ -63,10 +72,10 @@ by setting the `TP_MODEL_REGISTRY` environment variable before launching it.
 
 ## 5. How this differs from the old workflow
 
-| Task | Before the registry | Now |
-| --- | --- | --- |
-| Add a new model | Ask a developer to edit Python files, wait for code review and deployment. | Edit `model_registry.json` yourself; the app picks it up on the next launch. |
-| Change the default model | Update hard-coded defaults in multiple modules. | Flip `"is_default": true` on the correct registry entry. |
+| Task | Before the registry | Now                                                                                  |
+| --- | --- |--------------------------------------------------------------------------------------|
+| Add a new model | Ask a developer to edit Python files, wait for code review and deployment. | Edit `model_registry.json` yourself; the app picks it up on the next launch.         |
+| Change the default model | Update hard-coded defaults in multiple modules. | Change `"default": <model id>` at the top of the registry.                           |
 | Preview an upcoming model | Keep side-channel notes or comment code so people know what is coming. | Add the model with `"available": false`; it shows up as "coming soon" automatically. |
 
 If anything here is unclear, please reach out—we can walk through an example
