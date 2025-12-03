@@ -128,7 +128,7 @@ jobs:
     #    - lemmas.csv + forms.csv -> ROOT/aggregates/
     #    - letter CSVs (a.csv, b.csv, ...) -> ROOT/aggregates/ (much faster than individual files!)
     - powershell: |
-        $ErrorActionPreference = 'Stop'
+        $ErrorActionPreference = 'Continue'  # Don't stop on first error, try fallback
 
         $root = "$(Build.SourcesDirectory)\src\Lemmatizer-LTN"
         $out  = Join-Path $root "out"
@@ -140,19 +140,32 @@ jobs:
         $lemmasCSV = Join-Path $out "lemmas.csv"
         $formsCSV = Join-Path $out "forms.csv"
 
-        # Build the full arg list: upload lemmas.csv, forms.csv, and all letter CSVs
-        # Using --no-letter-folders to put everything in aggregates folder
+        # Try parallel upload first (5 workers)
+        Write-Host "Attempting parallel upload with 5 workers..."
         $args = @(
           $script,
           "--service-account-json", "service_account.json",
           "--folder-id", "$(GOOGLE_DRIVE_FOLDER_ID)",
           "--files", $lemmasCSV, $formsCSV, $letterDir,
-          "--max-workers", "20",
+          "--max-workers", "5",
           "--no-letter-folders"
         )
 
         Write-Host "Running: $py $($args -join ' ')"
         & $py @args
+        $exitCode = $LASTEXITCODE
+
+        if ($exitCode -ne 0) {
+          Write-Host "Parallel upload failed, trying sequential upload (1 worker)..." -ForegroundColor Yellow
+          $args[8] = "1"  # Change max-workers to 1
+          & $py @args
+          $exitCode = $LASTEXITCODE
+        }
+
+        if ($exitCode -ne 0) {
+          Write-Host "##vso[task.complete result=Failed;]Upload to Drive failed"
+          exit $exitCode
+        }
       displayName: "Upload to Drive (aggregates folder: ~30 files total)"
       env:
         GOOGLE_DRIVE_FOLDER_ID: $(GOOGLE_DRIVE_FOLDER_ID)

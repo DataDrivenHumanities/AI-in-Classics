@@ -11,13 +11,25 @@ from google.oauth2.service_account import Credentials
 from googleapiclient.discovery import build
 from googleapiclient.http import MediaFileUpload
 from googleapiclient.errors import HttpError
+import ssl
 
 
 def build_drive(sa_path: str):
     """Build a Drive service client with drive scope."""
     scopes = ["https://www.googleapis.com/auth/drive"]
     creds = Credentials.from_service_account_file(sa_path, scopes=scopes)
-    return build("drive", "v3", credentials=creds)
+    
+    # Build with explicit retry configuration
+    service = build("drive", "v3", credentials=creds)
+    
+    # Test connection
+    try:
+        service.about().get(fields="user").execute()
+        print("Successfully authenticated with Google Drive")
+    except Exception as e:
+        print(f"Warning: Failed to verify Drive connection: {e}")
+    
+    return service
 
 
 def ensure_folder_exists(svc, folder_id: str):
@@ -73,7 +85,7 @@ def get_or_create_child_folder(svc, parent_id: str, name: str) -> str:
     return f["id"]
 
 
-def upsert_file(svc, parent_id: str, local_path: Path, existing_files_cache: Dict[Tuple[str, str], str] = None, cache_lock: Lock = None):
+def upsert_file(svc, parent_id: str, local_path: Path, existing_files_cache: Dict[Tuple[str, str], str] = None, cache_lock: Lock = None, max_retries: int = 3):
     """Create or update a CSV file by name within parent_id.
     
     Args:
@@ -82,77 +94,95 @@ def upsert_file(svc, parent_id: str, local_path: Path, existing_files_cache: Dic
         local_path: Path to local CSV file
         existing_files_cache: Optional dict mapping (parent_id, name) -> file_id
         cache_lock: Optional lock for thread-safe cache access
+        max_retries: Maximum number of retry attempts for transient errors
     """
     name = local_path.name
     cache_key = (parent_id, name)
     
-    # Check cache first (thread-safe read)
-    if existing_files_cache:
-        if cache_lock:
-            with cache_lock:
-                fid = existing_files_cache.get(cache_key)
-        else:
-            fid = existing_files_cache.get(cache_key)
-        
-        if fid:
-            media = MediaFileUpload(str(local_path), mimetype="text/csv", resumable=False)
-            svc.files().update(
-                fileId=fid,
-                media_body=media,
+    # Retry logic for transient errors
+    last_error = None
+    for attempt in range(max_retries):
+        try:
+            # Check cache first (thread-safe read)
+            if existing_files_cache:
+                if cache_lock:
+                    with cache_lock:
+                        fid = existing_files_cache.get(cache_key)
+                else:
+                    fid = existing_files_cache.get(cache_key)
+                
+                if fid:
+                    media = MediaFileUpload(str(local_path), mimetype="text/csv", resumable=True)
+                    svc.files().update(
+                        fileId=fid,
+                        media_body=media,
+                        supportsAllDrives=True,
+                    ).execute()
+                    return ("update", name, fid)
+            
+            # Query for existing file
+            q = (
+                f"name = '{name}' and "
+                f"'{parent_id}' in parents and "
+                "trashed = false"
+            )
+            res = svc.files().list(
+                q=q,
+                spaces="drive",
+                fields="files(id,name)",
+                pageSize=1,
+                includeItemsFromAllDrives=True,
                 supportsAllDrives=True,
             ).execute()
-            return ("update", name, fid)
+            files = res.get("files", [])
+
+            media = MediaFileUpload(str(local_path), mimetype="text/csv", resumable=True)
+
+            if files:
+                fid = files[0]["id"]
+                svc.files().update(
+                    fileId=fid,
+                    media_body=media,
+                    supportsAllDrives=True,
+                ).execute()
+                # Update cache (thread-safe write)
+                if existing_files_cache:
+                    if cache_lock:
+                        with cache_lock:
+                            existing_files_cache[cache_key] = fid
+                    else:
+                        existing_files_cache[cache_key] = fid
+                return ("update", name, fid)
+            else:
+                meta = {"name": name, "parents": [parent_id]}
+                f = svc.files().create(
+                    body=meta,
+                    media_body=media,
+                    fields="id",
+                    supportsAllDrives=True,
+                ).execute()
+                fid = f["id"]
+                # Update cache (thread-safe write)
+                if existing_files_cache:
+                    if cache_lock:
+                        with cache_lock:
+                            existing_files_cache[cache_key] = fid
+                    else:
+                        existing_files_cache[cache_key] = fid
+                return ("create", name, fid)
+        
+        except (ssl.SSLError, ConnectionError, TimeoutError, HttpError) as e:
+            last_error = e
+            if attempt < max_retries - 1:
+                wait_time = 2 ** attempt  # Exponential backoff: 1s, 2s, 4s
+                time.sleep(wait_time)
+                continue
+            else:
+                # Final attempt failed
+                raise last_error
     
-    # Query for existing file
-    q = (
-        f"name = '{name}' and "
-        f"'{parent_id}' in parents and "
-        "trashed = false"
-    )
-    res = svc.files().list(
-        q=q,
-        spaces="drive",
-        fields="files(id,name)",
-        pageSize=1,
-        includeItemsFromAllDrives=True,
-        supportsAllDrives=True,
-    ).execute()
-    files = res.get("files", [])
-
-    media = MediaFileUpload(str(local_path), mimetype="text/csv", resumable=False)
-
-    if files:
-        fid = files[0]["id"]
-        svc.files().update(
-            fileId=fid,
-            media_body=media,
-            supportsAllDrives=True,
-        ).execute()
-        # Update cache (thread-safe write)
-        if existing_files_cache:
-            if cache_lock:
-                with cache_lock:
-                    existing_files_cache[cache_key] = fid
-            else:
-                existing_files_cache[cache_key] = fid
-        return ("update", name, fid)
-    else:
-        meta = {"name": name, "parents": [parent_id]}
-        f = svc.files().create(
-            body=meta,
-            media_body=media,
-            fields="id",
-            supportsAllDrives=True,
-        ).execute()
-        fid = f["id"]
-        # Update cache (thread-safe write)
-        if existing_files_cache:
-            if cache_lock:
-                with cache_lock:
-                    existing_files_cache[cache_key] = fid
-            else:
-                existing_files_cache[cache_key] = fid
-        return ("create", name, fid)
+    # Should not reach here, but just in case
+    raise last_error if last_error else Exception("Unknown error in upsert_file")
 
 
 def pick_letter(name: str) -> str:
@@ -223,8 +253,8 @@ def main():
     ap.add_argument(
         "--max-workers",
         type=int,
-        default=10,
-        help="Maximum number of parallel upload workers (default: 10)",
+        default=5,
+        help="Maximum number of parallel upload workers (default: 5, lower for CI/CD environments)",
     )
     args = ap.parse_args()
 
@@ -294,30 +324,41 @@ def main():
         
         upload_tasks.append((svc, parent_id, p, existing_files_cache, cache_lock, print_lock))
 
-    # Upload in parallel
+    # Upload in parallel (or sequential if max_workers=1)
     start_time = time.time()
     completed = 0
     failed = 0
     
-    with ThreadPoolExecutor(max_workers=args.max_workers) as executor:
-        future_to_task = {executor.submit(upload_worker, task): task for task in upload_tasks}
-        
-        for future in as_completed(future_to_task):
-            completed += 1
-            if completed % 100 == 0:
-                elapsed = time.time() - start_time
-                rate = completed / elapsed if elapsed > 0 else 0
-                remaining = len(upload_tasks) - completed
-                eta = remaining / rate if rate > 0 else 0
-                print(f"Progress: {completed}/{len(upload_tasks)} files uploaded "
-                      f"({rate:.1f} files/sec, ETA: {eta/60:.1f} min)")
-            
+    if args.max_workers == 1:
+        print("Using sequential uploads (max_workers=1)")
+        for task in upload_tasks:
             try:
-                future.result()
+                upload_worker(task)
+                completed += 1
             except Exception as e:
                 failed += 1
-                task = future_to_task[future]
                 print(f"[ERROR] Failed: {task[2].name} - {e}")
+    else:
+        print(f"Using parallel uploads with {args.max_workers} workers")
+        with ThreadPoolExecutor(max_workers=args.max_workers) as executor:
+            future_to_task = {executor.submit(upload_worker, task): task for task in upload_tasks}
+            
+            for future in as_completed(future_to_task):
+                completed += 1
+                if completed % 100 == 0:
+                    elapsed = time.time() - start_time
+                    rate = completed / elapsed if elapsed > 0 else 0
+                    remaining = len(upload_tasks) - completed
+                    eta = remaining / rate if rate > 0 else 0
+                    print(f"Progress: {completed}/{len(upload_tasks)} files uploaded "
+                          f"({rate:.1f} files/sec, ETA: {eta/60:.1f} min)")
+                
+                try:
+                    future.result()
+                except Exception as e:
+                    failed += 1
+                    task = future_to_task[future]
+                    print(f"[ERROR] Failed: {task[2].name} - {e}")
 
     elapsed = time.time() - start_time
     print(f"\nUpload complete!")
@@ -325,7 +366,12 @@ def main():
     print(f"  Successful: {completed - failed}")
     print(f"  Failed: {failed}")
     print(f"  Total time: {elapsed/60:.1f} minutes")
-    print(f"  Average rate: {len(upload_tasks)/elapsed:.1f} files/sec")
+    if elapsed > 0:
+        print(f"  Average rate: {len(upload_tasks)/elapsed:.1f} files/sec")
+    
+    # Exit with error code if any uploads failed
+    if failed > 0:
+        raise SystemExit(f"Upload failed: {failed}/{len(upload_tasks)} files failed")
 
 
 if __name__ == "__main__":
