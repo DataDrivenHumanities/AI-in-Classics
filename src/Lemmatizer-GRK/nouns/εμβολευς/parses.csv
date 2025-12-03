@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εμβολευς	ERROR: Nothing found with those parameters	εμβολης
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εμβολης
+2	Dative	εμβολη	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	εμβολη	ERROR: Nothing found with those parameters	εμβολας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εμβολης

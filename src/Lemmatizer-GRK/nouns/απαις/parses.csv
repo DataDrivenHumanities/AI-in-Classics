@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	απαις	ERROR: Nothing found with those parameters	απαιδες
+1	Genitive	π	ERROR: Nothing found with those parameters	απαιδες
+2	Dative	απαιδ	ERROR: Nothing found with those parameters	απαισι
+3	Accusative	απαιδ	ERROR: Nothing found with those parameters	απαιδας
+4	Vocative	π	ERROR: Nothing found with those parameters	απαιδες

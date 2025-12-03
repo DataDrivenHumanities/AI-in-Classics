@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ηυγενει	ERROR: Nothing found with those parameters	ηυγενει
+1	Genitive	ηυγενει	ERROR: Nothing found with those parameters	ηυγενει
+2	Dative	ηυγενει	ERROR: Nothing found with those parameters	ευγενειαις
+3	Accusative	ευγενειαν	ERROR: Nothing found with those parameters	ευγενιας
+4	Vocative	ηυγενει	ERROR: Nothing found with those parameters	ηυγενει

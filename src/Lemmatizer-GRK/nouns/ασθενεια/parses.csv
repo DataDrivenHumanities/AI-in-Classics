@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ασθενεια	ERROR: Nothing found with those parameters	ασθενεια
+1	Genitive	ασθενεια	ERROR: Nothing found with those parameters	ασθενεια
+2	Dative	ασθενεια	ERROR: Nothing found with those parameters	ασθενειαις
+3	Accusative	ασθενειαν	ERROR: Nothing found with those parameters	ασθενειας
+4	Vocative	ασθενεια	ERROR: Nothing found with those parameters	ασθενεια

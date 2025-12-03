@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αιρεσις	ERROR: Nothing found with those parameters	αιρεσεις
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αιρεσεις
+2	Dative	αιρεσει	ERROR: Nothing found with those parameters	αιρεσεσι
+3	Accusative	ᾱιρεσιν	ERROR: Nothing found with those parameters	αιρεσις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αιρεσεις

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δῠας	ERROR: Nothing found with those parameters	δυαδες
+1	Genitive	δυ	ERROR: Nothing found with those parameters	δυαδες
+2	Dative	δυαδι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	δυαδα	ERROR: Nothing found with those parameters	δυαδας
+4	Vocative	δυ	ERROR: Nothing found with those parameters	δυαδες

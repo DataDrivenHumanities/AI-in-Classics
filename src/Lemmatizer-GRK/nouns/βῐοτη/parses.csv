@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βῐοτη	ERROR: Nothing found with those parameters	βιοτα
+1	Genitive	βῐοτη	ERROR: Nothing found with those parameters	βιοτα
+2	Dative	βιοτη	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	βιοτην	ERROR: Nothing found with those parameters	βιοτας
+4	Vocative	βῐοτη	ERROR: Nothing found with those parameters	βιοτα

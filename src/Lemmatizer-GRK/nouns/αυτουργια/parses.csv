@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αυτουργια	ERROR: Nothing found with those parameters	αυτουργια
+1	Genitive	αυτουργια	ERROR: Nothing found with those parameters	αυτουργια
+2	Dative	αυτουργια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αυτουργιαν	ERROR: Nothing found with those parameters	αυτουργιας
+4	Vocative	αυτουργια	ERROR: Nothing found with those parameters	αυτουργια

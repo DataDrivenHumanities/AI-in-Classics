@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αναρχιᾱ	ERROR: Nothing found with those parameters	αναρχια
+1	Genitive	αναρχιᾱ	ERROR: Nothing found with those parameters	αναρχια
+2	Dative	αναρχια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αναρχιαν	ERROR: Nothing found with those parameters	αναρχιας
+4	Vocative	αναρχιᾱ	ERROR: Nothing found with those parameters	αναρχια

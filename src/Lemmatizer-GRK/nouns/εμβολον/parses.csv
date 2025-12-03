@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εμβολον	ERROR: Nothing found with those parameters	εμβολα
+1	Genitive	εμβολον	ERROR: Nothing found with those parameters	εμβολα
+2	Dative	εμβολω	ERROR: Nothing found with those parameters	εμβολοις
+3	Accusative	εμβολον	ERROR: Nothing found with those parameters	εμβολα
+4	Vocative	εμβολον	ERROR: Nothing found with those parameters	εμβολα

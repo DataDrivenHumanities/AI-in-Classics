@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	επος	ERROR: Nothing found with those parameters	επη
+1	Genitive	επος	ERROR: Nothing found with those parameters	επη
+2	Dative	επε	ERROR: Nothing found with those parameters	επες
+3	Accusative	επην	ERROR: Nothing found with those parameters	επη
+4	Vocative	επος	ERROR: Nothing found with those parameters	επη

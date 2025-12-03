@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βωκολος	ERROR: Nothing found with those parameters	βουκολοι
+1	Genitive	βουκολ	ERROR: Nothing found with those parameters	βουκολοι
+2	Dative	βουκολω	ERROR: Nothing found with those parameters	βουκολοις
+3	Accusative	βουκολον	ERROR: Nothing found with those parameters	βουκολους
+4	Vocative	βουκολ	ERROR: Nothing found with those parameters	βουκολοι

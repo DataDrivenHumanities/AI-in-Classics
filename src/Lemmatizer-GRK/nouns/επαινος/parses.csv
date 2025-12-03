@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	επαινος	ERROR: Nothing found with those parameters	επαινοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	επαινοι
+2	Dative	επαινω	ERROR: Nothing found with those parameters	επαινοις
+3	Accusative	επαινον	ERROR: Nothing found with those parameters	επαινους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	επαινοι

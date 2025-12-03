@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	γαμψωνυξ	ERROR: Nothing found with those parameters	γαμψωνυχες
+1	Genitive	γαμψωνυξ	ERROR: Nothing found with those parameters	γαμψωνυχες
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	γαμψωνυξι
+3	Accusative	γαμψωνυχα	ERROR: Nothing found with those parameters	γαμψωνυχας
+4	Vocative	γαμψωνυξ	ERROR: Nothing found with those parameters	γαμψωνυχες

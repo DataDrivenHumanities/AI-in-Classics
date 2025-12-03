@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εξωστης	ERROR: Nothing found with those parameters	εξωσται
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εξωσται
+2	Dative	εξωσται	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εξωσται

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δουροδοκη	ERROR: Nothing found with those parameters	δουροδοκαι
+1	Genitive	δουροδοκη	ERROR: Nothing found with those parameters	δουροδοκαι
+2	Dative	δουροδοκαι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	δουροδοκη	ERROR: Nothing found with those parameters	δουροδοκαι

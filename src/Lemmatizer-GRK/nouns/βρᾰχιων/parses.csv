@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βρᾰχιων	ERROR: Nothing found with those parameters	βραχιονες
+1	Genitive	βρᾰχιων	ERROR: Nothing found with those parameters	βραχιονες
+2	Dative	βραχιον	ERROR: Nothing found with those parameters	βραχῑοσι
+3	Accusative	βραχιον	ERROR: Nothing found with those parameters	βραχιονας
+4	Vocative	βρᾰχιων	ERROR: Nothing found with those parameters	βραχιονες

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αγριοτης	ERROR: Nothing found with those parameters	αγριοτητες
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αγριοτητες
+2	Dative	αγριοτητι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αγριοτητα	ERROR: Nothing found with those parameters	αγριοτητας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αγριοτητες

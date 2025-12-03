@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ανελιγμα	ERROR: Nothing found with those parameters	ανελιγματα
+1	Genitive	ανελιγμα	ERROR: Nothing found with those parameters	ανελιγματα
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ανελιγμα	ERROR: Nothing found with those parameters	ανελιγματα
+4	Vocative	ανελιγμα	ERROR: Nothing found with those parameters	ανελιγματα

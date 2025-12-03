@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ικετις	ERROR: Nothing found with those parameters	ικετιδες
+1	Genitive	ικετ	ERROR: Nothing found with those parameters	ικετιδες
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ικετιν	ERROR: Nothing found with those parameters	ικετιδας
+4	Vocative	ικετ	ERROR: Nothing found with those parameters	ικετιδες

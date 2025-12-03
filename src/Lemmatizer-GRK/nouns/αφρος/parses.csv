@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αφρος	ERROR: Nothing found with those parameters	αφροι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αφροι
+2	Dative	αφρω	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αφρον	ERROR: Nothing found with those parameters	αφρους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αφροι

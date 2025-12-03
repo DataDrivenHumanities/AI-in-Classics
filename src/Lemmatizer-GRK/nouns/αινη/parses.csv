@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αινη	ERROR: Nothing found with those parameters	αιν
+1	Genitive	αινη	ERROR: Nothing found with those parameters	αιν
+2	Dative	αιν	ERROR: Nothing found with those parameters	αινησιν
+3	Accusative	αινην	ERROR: Nothing found with those parameters	αινας
+4	Vocative	αινη	ERROR: Nothing found with those parameters	αιν

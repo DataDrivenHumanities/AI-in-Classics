@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δῠναστεια	ERROR: Nothing found with those parameters	δυναστεια
+1	Genitive	δῠναστεια	ERROR: Nothing found with those parameters	δυναστεια
+2	Dative	δυναστεια	ERROR: Nothing found with those parameters	δυναστειαις
+3	Accusative	δυναστειᾱν	ERROR: Nothing found with those parameters	δυναστειας
+4	Vocative	δῠναστεια	ERROR: Nothing found with those parameters	δυναστεια

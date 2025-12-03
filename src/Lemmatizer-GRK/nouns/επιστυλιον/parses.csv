@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	επιστυλιον	ERROR: Nothing found with those parameters	επιστυλια
+1	Genitive	επιστυλιον	ERROR: Nothing found with those parameters	επιστυλια
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	επιστυλιοις
+3	Accusative	επιστυλιον	ERROR: Nothing found with those parameters	επιστυλια
+4	Vocative	επιστυλιον	ERROR: Nothing found with those parameters	επιστυλια

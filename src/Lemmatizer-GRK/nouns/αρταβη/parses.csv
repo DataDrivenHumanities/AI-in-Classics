@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αρταβη	ERROR: Nothing found with those parameters	αρταβαι
+1	Genitive	αρταβη	ERROR: Nothing found with those parameters	αρταβαι
+2	Dative	αρταβαι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αρταβην	ERROR: Nothing found with those parameters	αρταβας
+4	Vocative	αρταβη	ERROR: Nothing found with those parameters	αρταβαι

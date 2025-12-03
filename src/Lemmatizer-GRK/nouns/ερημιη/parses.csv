@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ερημιη	ERROR: Nothing found with those parameters	ερημια
+1	Genitive	ερημιη	ERROR: Nothing found with those parameters	ερημια
+2	Dative	ερημιη	ERROR: Nothing found with those parameters	ερημιαις
+3	Accusative	ερημιην	ERROR: Nothing found with those parameters	ερημιας
+4	Vocative	ερημιη	ERROR: Nothing found with those parameters	ερημια

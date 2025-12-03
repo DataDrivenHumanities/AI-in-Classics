@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αμελετησια	ERROR: Nothing found with those parameters	αμελετησια
+1	Genitive	αμελετησια	ERROR: Nothing found with those parameters	αμελετησια
+2	Dative	αμελετησια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αμελετησιας
+4	Vocative	αμελετησια	ERROR: Nothing found with those parameters	αμελετησια

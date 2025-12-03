@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ατῑμᾰγελης	ERROR: Nothing found with those parameters	ατιμαγελαι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ατιμαγελαι
+2	Dative	ατιμαγελαι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ατιμαγελας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ατιμαγελαι

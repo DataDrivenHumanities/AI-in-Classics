@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ιμερος	ERROR: Nothing found with those parameters	ιμερα
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ιμερα
+2	Dative	ιμερω	ERROR: Nothing found with those parameters	ιμεροις
+3	Accusative	ιμερον	ERROR: Nothing found with those parameters	ιμερα
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ιμερα

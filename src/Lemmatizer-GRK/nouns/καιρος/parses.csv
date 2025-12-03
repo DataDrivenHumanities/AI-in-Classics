@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	καιρος	ERROR: Nothing found with those parameters	καιροι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	καιροι
+2	Dative	καιρω	ERROR: Nothing found with those parameters	καιροις
+3	Accusative	καιρον	ERROR: Nothing found with those parameters	καιρους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	καιροι

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	θηγανη	ERROR: Nothing found with those parameters	θηγαναι
+1	Genitive	θηγανη	ERROR: Nothing found with those parameters	θηγαναι
+2	Dative	θηγανη	ERROR: Nothing found with those parameters	θηγαναισι
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	θηγανας
+4	Vocative	θηγανη	ERROR: Nothing found with those parameters	θηγαναι

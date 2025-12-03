@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δαυλια	ERROR: Nothing found with those parameters	δαυλια
+1	Genitive	δαυλια	ERROR: Nothing found with those parameters	δαυλια
+2	Dative	δαυλια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	δαυλιαν	ERROR: Nothing found with those parameters	δαυλιας
+4	Vocative	δαυλια	ERROR: Nothing found with those parameters	δαυλια

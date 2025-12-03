@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αποκοπη	ERROR: Nothing found with those parameters	αποκοπαι
+1	Genitive	αποκοπη	ERROR: Nothing found with those parameters	αποκοπαι
+2	Dative	αποκοπη	ERROR: Nothing found with those parameters	αποκοπαις
+3	Accusative	αποκοπην	ERROR: Nothing found with those parameters	αποκοπας
+4	Vocative	αποκοπη	ERROR: Nothing found with those parameters	αποκοπαι

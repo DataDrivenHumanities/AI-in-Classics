@@ -130,7 +130,14 @@ dmypy.json
 
 # Custom
 OpenGreekAndLatin-First1KGreek/
-greek_variations/
+src/Lemmatizer-GRK/Dictionary_Dataframes/
+src/Lemmatizer-GRK/outputs/
+src/Lemmatizer-LTN/outputs/
+src/Lemmatizer-LTN/Dictionary_Dataframes/
+src/Lemmatizer-LTN/Raw_XML/
+src/pipelines/preprocessing/preprocess_root_query/needed_files/0-50kgreekv1.csv
+src/pipelines/preprocessing/preprocess_root_query/needed_files/dictionary_grk.pkl
+src/pipelines/preprocessing/preprocess_root_query/needed_files/greek_words.csvgreek_variations/
 nouns/
 Raw_XML/
 verbs-complete/

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ακᾰληφη	ERROR: Nothing found with those parameters	ακαληφαι
+1	Genitive	ακᾰληφη	ERROR: Nothing found with those parameters	ακαληφαι
+2	Dative	ακαληφαι	ERROR: Nothing found with those parameters	ακαληφαις
+3	Accusative	ακαληφην	ERROR: Nothing found with those parameters	ακαληφας
+4	Vocative	ακᾰληφη	ERROR: Nothing found with those parameters	ακαληφαι

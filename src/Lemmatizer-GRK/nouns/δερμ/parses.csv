@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δερμ	ERROR: Nothing found with those parameters	δερματ
+1	Genitive	δερμ	ERROR: Nothing found with those parameters	δερματ
+2	Dative	δερματ	ERROR: Nothing found with those parameters	δερμασι
+3	Accusative	δερμ	ERROR: Nothing found with those parameters	δερματ
+4	Vocative	δερμ	ERROR: Nothing found with those parameters	δερματ

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ανακειον	ERROR: Nothing found with those parameters	ανακεια
+1	Genitive	ανακειον	ERROR: Nothing found with those parameters	ανακεια
+2	Dative	ανακειω	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ανακειον	ERROR: Nothing found with those parameters	ανακεια
+4	Vocative	ανακειον	ERROR: Nothing found with those parameters	ανακεια

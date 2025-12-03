@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ιχθῠς	ERROR: Nothing found with those parameters	ιχθῠς
+1	Genitive	ιχθυ	ERROR: Nothing found with those parameters	ιχθῠς
+2	Dative	ιχθῠι	ERROR: Nothing found with those parameters	ιχθῠσι
+3	Accusative	ιχθῠν	ERROR: Nothing found with those parameters	ιχθῠς
+4	Vocative	ιχθυ	ERROR: Nothing found with those parameters	ιχθῠς

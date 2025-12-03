@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βηλος	ERROR: Nothing found with those parameters	βαλοι
+1	Genitive	βαλ	ERROR: Nothing found with those parameters	βαλοι
+2	Dative	βηλω	ERROR: Nothing found with those parameters	βαλοις
+3	Accusative	βηλον	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	βαλ	ERROR: Nothing found with those parameters	βαλοι

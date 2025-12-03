@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ισχας	ERROR: Nothing found with those parameters	ισχαδες
+1	Genitive	ισχ	ERROR: Nothing found with those parameters	ισχαδες
+2	Dative	ισχαδι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ισχαδα	ERROR: Nothing found with those parameters	ισχαδας
+4	Vocative	ισχ	ERROR: Nothing found with those parameters	ισχαδες

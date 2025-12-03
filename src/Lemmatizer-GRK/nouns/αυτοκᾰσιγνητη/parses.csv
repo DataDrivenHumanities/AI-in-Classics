@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αυτοκᾰσιγνητη	ERROR: Nothing found with those parameters	αυτοκασιγνητα
+1	Genitive	αυτοκᾰσιγνητη	ERROR: Nothing found with those parameters	αυτοκασιγνητα
+2	Dative	αυτοκασιγνητη	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αυτοκασιγνητην	ERROR: Nothing found with those parameters	αυτοκασιγνητας
+4	Vocative	αυτοκᾰσιγνητη	ERROR: Nothing found with those parameters	αυτοκασιγνητα

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ηλᾰκατη	ERROR: Nothing found with those parameters	ηλακατα
+1	Genitive	ηλᾰκατη	ERROR: Nothing found with those parameters	ηλακατα
+2	Dative	ηλακατη	ERROR: Nothing found with those parameters	ηλακατησι
+3	Accusative	ηλακατην	ERROR: Nothing found with those parameters	ηλακατας
+4	Vocative	ηλᾰκατη	ERROR: Nothing found with those parameters	ηλακατα

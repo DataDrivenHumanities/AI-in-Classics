@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αιγιᾰλος	ERROR: Nothing found with those parameters	αιγιαλοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αιγιαλοι
+2	Dative	αιγιαλω	ERROR: Nothing found with those parameters	αιγιαλοις
+3	Accusative	αιγιαλον	ERROR: Nothing found with those parameters	αιγιαλους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αιγιαλοι

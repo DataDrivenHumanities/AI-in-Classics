@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	επιβαθρον	ERROR: Nothing found with those parameters	επιβαθρα
+1	Genitive	επιβαθρον	ERROR: Nothing found with those parameters	επιβαθρα
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	επιβαθρον	ERROR: Nothing found with those parameters	επιβαθρα
+4	Vocative	επιβαθρον	ERROR: Nothing found with those parameters	επιβαθρα

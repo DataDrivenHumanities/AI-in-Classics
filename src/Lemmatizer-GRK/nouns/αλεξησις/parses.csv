@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αλεξησις	ERROR: Nothing found with those parameters	αλεξησεις
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αλεξησεις
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αλεξησιν	ERROR: Nothing found with those parameters	αλεξησις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αλεξησεις

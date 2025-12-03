@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ακινακης	ERROR: Nothing found with those parameters	ακινακεα
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ακινακεα
+2	Dative	ακινακη	ERROR: Nothing found with those parameters	ακινακαις
+3	Accusative	ακινακην	ERROR: Nothing found with those parameters	ακινακεα
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ακινακεα

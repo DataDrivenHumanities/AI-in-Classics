@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ημεροσκοπος	ERROR: Nothing found with those parameters	ημεροσκοποι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ημεροσκοποι
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ημεροσκοπον	ERROR: Nothing found with those parameters	ημεροσκοπους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ημεροσκοποι

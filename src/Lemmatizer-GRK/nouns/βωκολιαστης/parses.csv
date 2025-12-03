@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βωκολιαστης	ERROR: Nothing found with those parameters	βουκολιασται
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βουκολιασται
+2	Dative	βουκολιασται	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	βουκολιασταν	ERROR: Nothing found with those parameters	βουκολιαστας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βουκολιασται

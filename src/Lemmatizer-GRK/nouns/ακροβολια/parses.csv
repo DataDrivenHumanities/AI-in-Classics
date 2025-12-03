@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ακροβολια	ERROR: Nothing found with those parameters	ακροβολιαι
+1	Genitive	ακροβολια	ERROR: Nothing found with those parameters	ακροβολιαι
+2	Dative	ακροβολιαι	ERROR: Nothing found with those parameters	ακροβολιαις
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ακροβολιας
+4	Vocative	ακροβολια	ERROR: Nothing found with those parameters	ακροβολιαι

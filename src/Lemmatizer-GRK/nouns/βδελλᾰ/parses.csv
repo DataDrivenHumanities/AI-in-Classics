@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βδελλᾰ	ERROR: Nothing found with those parameters	βδελλαι
+1	Genitive	βδελλᾰ	ERROR: Nothing found with those parameters	βδελλαι
+2	Dative	βδελλη	ERROR: Nothing found with those parameters	βδελλαις
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βδελλας
+4	Vocative	βδελλᾰ	ERROR: Nothing found with those parameters	βδελλαι

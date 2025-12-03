@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αναδασμος	ERROR: Nothing found with those parameters	αναδασμοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αναδασμοι
+2	Dative	αναδασμω	ERROR: Nothing found with those parameters	αναδασμοις
+3	Accusative	αναδασμον	ERROR: Nothing found with those parameters	αναδασμους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αναδασμοι

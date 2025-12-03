@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	απωσις	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+1	Genitive	απωσι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+2	Dative	απωσι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	απωσιν	ERROR: Nothing found with those parameters	απωσις
+4	Vocative	απωσι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters

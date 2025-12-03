@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	γεωργιᾱ	ERROR: Nothing found with those parameters	γεωργια
+1	Genitive	γεωργιᾱ	ERROR: Nothing found with those parameters	γεωργια
+2	Dative	γεωργια	ERROR: Nothing found with those parameters	γεωργιαις
+3	Accusative	γεωργιᾱν	ERROR: Nothing found with those parameters	γεωργιας
+4	Vocative	γεωργιᾱ	ERROR: Nothing found with those parameters	γεωργια

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ευπαις	ERROR: Nothing found with those parameters	ευπαιδες
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ευπαιδες
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ευπαιδα	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ευπαιδες

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αδελφη	ERROR: Nothing found with those parameters	ωδελφ
+1	Genitive	αδελφη	ERROR: Nothing found with those parameters	ωδελφ
+2	Dative	ωδελφ	ERROR: Nothing found with those parameters	αδελφαις
+3	Accusative	αδελφην	ERROR: Nothing found with those parameters	αδελφας
+4	Vocative	αδελφη	ERROR: Nothing found with those parameters	ωδελφ

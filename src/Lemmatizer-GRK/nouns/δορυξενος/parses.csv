@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δορυξενος	ERROR: Nothing found with those parameters	δορυξενοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	δορυξενοι
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	δορυξενους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	δορυξενοι

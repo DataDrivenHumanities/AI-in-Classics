@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	διπος	ERROR: Nothing found with those parameters	διποδα
+1	Genitive	διπος	ERROR: Nothing found with those parameters	διποδα
+2	Dative	διποδι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	διπουν	ERROR: Nothing found with those parameters	διποδα
+4	Vocative	διπος	ERROR: Nothing found with those parameters	διποδα

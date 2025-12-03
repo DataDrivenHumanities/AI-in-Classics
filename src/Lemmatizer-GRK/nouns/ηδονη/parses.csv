@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ηδονη	ERROR: Nothing found with those parameters	ηδονα
+1	Genitive	ηδονη	ERROR: Nothing found with those parameters	ηδονα
+2	Dative	ηδονη	ERROR: Nothing found with those parameters	ηδοναις
+3	Accusative	ηδονην	ERROR: Nothing found with those parameters	ηδονας
+4	Vocative	ηδονη	ERROR: Nothing found with those parameters	ηδονα

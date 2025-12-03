@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ευπαθειη	ERROR: Nothing found with those parameters	ευπαθειαι
+1	Genitive	ευπαθειη	ERROR: Nothing found with those parameters	ευπαθειαι
+2	Dative	ευπαθειαι	ERROR: Nothing found with those parameters	ευπαθιησι
+3	Accusative	ευπαθειαν	ERROR: Nothing found with those parameters	ευπαθειας
+4	Vocative	ευπαθειη	ERROR: Nothing found with those parameters	ευπαθειαι

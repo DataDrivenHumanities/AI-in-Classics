@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	γενῠς	ERROR: Nothing found with those parameters	γενυες
+1	Genitive	γενῠ	ERROR: Nothing found with those parameters	γενυες
+2	Dative	γενυι	ERROR: Nothing found with those parameters	γενυσι
+3	Accusative	γενυν	ERROR: Nothing found with those parameters	γενῡς
+4	Vocative	γενῠ	ERROR: Nothing found with those parameters	γενυες

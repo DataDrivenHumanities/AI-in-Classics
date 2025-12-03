@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αμπνοη	ERROR: Nothing found with those parameters	αναπνοαι
+1	Genitive	αμπνοη	ERROR: Nothing found with those parameters	αναπνοαι
+2	Dative	αναπνοη	ERROR: Nothing found with those parameters	αναπνοαις
+3	Accusative	αμπνοαν	ERROR: Nothing found with those parameters	αμπνοας
+4	Vocative	αμπνοη	ERROR: Nothing found with those parameters	αναπνοαι

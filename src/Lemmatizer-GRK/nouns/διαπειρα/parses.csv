@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	διαπειρα	ERROR: Nothing found with those parameters	διαπειρα
+1	Genitive	διαπειρα	ERROR: Nothing found with those parameters	διαπειρα
+2	Dative	διαπειρα	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	διαπειραν	ERROR: Nothing found with those parameters	διαπειρας
+4	Vocative	διαπειρα	ERROR: Nothing found with those parameters	διαπειρα

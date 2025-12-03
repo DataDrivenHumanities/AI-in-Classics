@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	κᾰκοηθεια	ERROR: Nothing found with those parameters	κακοηθεια
+1	Genitive	κᾰκοηθεια	ERROR: Nothing found with those parameters	κακοηθεια
+2	Dative	κακοηθεια	ERROR: Nothing found with those parameters	κακοηθειαις
+3	Accusative	κακοηθειαν	ERROR: Nothing found with those parameters	κακοηθειας
+4	Vocative	κᾰκοηθεια	ERROR: Nothing found with those parameters	κακοηθεια

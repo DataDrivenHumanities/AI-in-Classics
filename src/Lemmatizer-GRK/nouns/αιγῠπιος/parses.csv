@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αιγῠπιος	ERROR: Nothing found with those parameters	αιγυπιοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αιγυπιοι
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αιγυπιοισι
+3	Accusative	αιγυπιον	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αιγυπιοι

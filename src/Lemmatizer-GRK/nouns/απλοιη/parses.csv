@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	απλοιη	ERROR: Nothing found with those parameters	απλοια
+1	Genitive	απλοιη	ERROR: Nothing found with those parameters	απλοια
+2	Dative	απλοια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	απλοιας
+4	Vocative	απλοιη	ERROR: Nothing found with those parameters	απλοια

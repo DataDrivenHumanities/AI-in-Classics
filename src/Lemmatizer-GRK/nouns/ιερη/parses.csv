@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ιερη	ERROR: Nothing found with those parameters	ιερ
+1	Genitive	ιερη	ERROR: Nothing found with those parameters	ιερ
+2	Dative	ιερ	ERROR: Nothing found with those parameters	ιερηις
+3	Accusative	ιερην	ERROR: Nothing found with those parameters	ιερας
+4	Vocative	ιερη	ERROR: Nothing found with those parameters	ιερ

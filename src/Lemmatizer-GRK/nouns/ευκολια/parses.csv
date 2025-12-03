@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ευκολια	ERROR: Nothing found with those parameters	ευκολια
+1	Genitive	ευκολια	ERROR: Nothing found with those parameters	ευκολια
+2	Dative	ευκολια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ευκολιαν	ERROR: Nothing found with those parameters	ευκολιας
+4	Vocative	ευκολια	ERROR: Nothing found with those parameters	ευκολια

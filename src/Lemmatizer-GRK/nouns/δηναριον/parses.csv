@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δηναριον	ERROR: Nothing found with those parameters	δηναρια
+1	Genitive	δηναριον	ERROR: Nothing found with those parameters	δηναρια
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	δηναριον	ERROR: Nothing found with those parameters	δηναρια
+4	Vocative	δηναριον	ERROR: Nothing found with those parameters	δηναρια

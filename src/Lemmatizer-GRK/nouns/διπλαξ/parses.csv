@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	διπλαξ	ERROR: Nothing found with those parameters	διπλακες
+1	Genitive	διπλαξ	ERROR: Nothing found with those parameters	διπλακες
+2	Dative	διπλακι	ERROR: Nothing found with those parameters	διπλακεσσιν
+3	Accusative	διπλακα	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	διπλαξ	ERROR: Nothing found with those parameters	διπλακες

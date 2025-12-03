@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αιων	ERROR: Nothing found with those parameters	αιωνες
+1	Genitive	αιων	ERROR: Nothing found with those parameters	αιωνες
+2	Dative	αιων	ERROR: Nothing found with those parameters	αιωσιν
+3	Accusative	αιω	ERROR: Nothing found with those parameters	αιωνας
+4	Vocative	αιων	ERROR: Nothing found with those parameters	αιωνες

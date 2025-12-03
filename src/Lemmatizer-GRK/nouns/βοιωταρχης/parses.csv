@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βοιωταρχης	ERROR: Nothing found with those parameters	βοιωταρχαι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βοιωταρχαι
+2	Dative	βοιωταρχαι	ERROR: Nothing found with those parameters	βοιωταρχαις
+3	Accusative	βοιωταρχην	ERROR: Nothing found with those parameters	βοιωταρχας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βοιωταρχαι

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αυλητρις	ERROR: Nothing found with those parameters	αυλητριδες
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αυλητριδες
+2	Dative	αυλητριδ	ERROR: Nothing found with those parameters	αυλητρισι
+3	Accusative	αυλητριδ	ERROR: Nothing found with those parameters	αυλητριδας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αυλητριδες

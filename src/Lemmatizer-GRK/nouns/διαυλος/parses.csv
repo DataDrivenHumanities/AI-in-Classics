@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	διαυλος	ERROR: Nothing found with those parameters	διαυλοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	διαυλοι
+2	Dative	διαυλω	ERROR: Nothing found with those parameters	διαυλοις
+3	Accusative	διαυλον	ERROR: Nothing found with those parameters	διαυλως
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	διαυλοι

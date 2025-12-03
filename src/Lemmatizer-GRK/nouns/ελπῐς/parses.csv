@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ελπῐς	ERROR: Nothing found with those parameters	ελπιδες
+1	Genitive	ελπι	ERROR: Nothing found with those parameters	ελπιδες
+2	Dative	ελπιδ	ERROR: Nothing found with those parameters	ελπισι
+3	Accusative	ελπιδ	ERROR: Nothing found with those parameters	ελπιδας
+4	Vocative	ελπι	ERROR: Nothing found with those parameters	ελπιδες

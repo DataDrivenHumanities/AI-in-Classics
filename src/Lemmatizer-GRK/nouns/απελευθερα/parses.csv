@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	απελευθερα	ERROR: Nothing found with those parameters	απελευθεροι
+1	Genitive	απελευθερα	ERROR: Nothing found with those parameters	απελευθεροι
+2	Dative	απελευθερω	ERROR: Nothing found with those parameters	απελευθεροις
+3	Accusative	απελευθερον	ERROR: Nothing found with those parameters	απελευθερας
+4	Vocative	απελευθερα	ERROR: Nothing found with those parameters	απελευθεροι

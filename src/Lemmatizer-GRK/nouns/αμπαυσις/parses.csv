@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αμπαυσις	ERROR: Nothing found with those parameters	αναπαυσεις
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αναπαυσεις
+2	Dative	αναπαυση	ERROR: Nothing found with those parameters	αναπαυσεσιν
+3	Accusative	αναπαυσιν	ERROR: Nothing found with those parameters	αμπαυσις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αναπαυσεις

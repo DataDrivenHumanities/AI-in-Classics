@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δυσμη	ERROR: Nothing found with those parameters	δυσμαι
+1	Genitive	δυσμη	ERROR: Nothing found with those parameters	δυσμαι
+2	Dative	δυσμαι	ERROR: Nothing found with those parameters	δυσμησι
+3	Accusative	δυσμαν	ERROR: Nothing found with those parameters	δυσμας
+4	Vocative	δυσμη	ERROR: Nothing found with those parameters	δυσμαι

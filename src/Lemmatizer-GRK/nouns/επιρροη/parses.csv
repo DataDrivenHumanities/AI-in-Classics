@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	επιρροη	ERROR: Nothing found with those parameters	επιρροαι
+1	Genitive	επιρροη	ERROR: Nothing found with those parameters	επιρροαι
+2	Dative	επιρροη	ERROR: Nothing found with those parameters	επιρροαις
+3	Accusative	επιρροην	ERROR: Nothing found with those parameters	επιρροας
+4	Vocative	επιρροη	ERROR: Nothing found with those parameters	επιρροαι

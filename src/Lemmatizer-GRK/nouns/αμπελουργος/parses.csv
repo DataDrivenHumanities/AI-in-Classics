@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αμπελουργος	ERROR: Nothing found with those parameters	αμπελοεργοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αμπελοεργοι
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αμπελουργον	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αμπελοεργοι

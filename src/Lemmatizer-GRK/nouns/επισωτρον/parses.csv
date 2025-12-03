@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	επισωτρον	ERROR: Nothing found with those parameters	επισσωτρα
+1	Genitive	επισωτρον	ERROR: Nothing found with those parameters	επισσωτρα
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	επισσωτροις
+3	Accusative	επισωτρον	ERROR: Nothing found with those parameters	επισσωτρα
+4	Vocative	επισωτρον	ERROR: Nothing found with those parameters	επισσωτρα

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αλυξις	ERROR: Nothing found with those parameters	αλυξης
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αλυξης
+2	Dative	αλυξη	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αλυξις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αλυξης

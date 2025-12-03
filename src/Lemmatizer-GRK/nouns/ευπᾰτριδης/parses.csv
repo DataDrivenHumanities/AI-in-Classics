@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ευπᾰτριδης	ERROR: Nothing found with those parameters	ευπατριδαι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ευπατριδαι
+2	Dative	ευπατριδαι	ERROR: Nothing found with those parameters	ευπατριδαις
+3	Accusative	ευπατριδαν	ERROR: Nothing found with those parameters	ευπατριδας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ευπατριδαι

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αυδη	ERROR: Nothing found with those parameters	αυδα
+1	Genitive	αυδη	ERROR: Nothing found with those parameters	αυδα
+2	Dative	αυδη	ERROR: Nothing found with those parameters	αυδας
+3	Accusative	αυδην	ERROR: Nothing found with those parameters	αυδας
+4	Vocative	αυδη	ERROR: Nothing found with those parameters	αυδα

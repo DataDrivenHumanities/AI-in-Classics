@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ηγεμων	ERROR: Nothing found with those parameters	ηγεμονες
+1	Genitive	ηγεμων	ERROR: Nothing found with those parameters	ηγεμονες
+2	Dative	ηγεμον	ERROR: Nothing found with those parameters	ηγεμοσι
+3	Accusative	ηγεμον	ERROR: Nothing found with those parameters	ηγεμονας
+4	Vocative	ηγεμων	ERROR: Nothing found with those parameters	ηγεμονες

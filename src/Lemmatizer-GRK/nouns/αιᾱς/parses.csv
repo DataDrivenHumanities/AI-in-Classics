@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αιᾱς	ERROR: Nothing found with those parameters	αιαντες
+1	Genitive	αια	ERROR: Nothing found with those parameters	αιαντες
+2	Dative	αιαντ	ERROR: Nothing found with those parameters	αιαντεσς
+3	Accusative	αιαντ	ERROR: Nothing found with those parameters	αιαντας
+4	Vocative	αια	ERROR: Nothing found with those parameters	αιαντες

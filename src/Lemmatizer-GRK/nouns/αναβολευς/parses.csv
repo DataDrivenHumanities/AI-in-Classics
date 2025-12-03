@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αναβολευς	ERROR: Nothing found with those parameters	αναβολης
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αναβολης
+2	Dative	αναβολη	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αναβολη	ERROR: Nothing found with those parameters	αναβολας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αναβολης

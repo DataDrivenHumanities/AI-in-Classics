@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ερκτη	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+1	Genitive	ερκτη	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+2	Dative	ειρκτη	ERROR: Nothing found with those parameters	ειρκταις
+3	Accusative	ερκτην	ERROR: Nothing found with those parameters	ειρκτας
+4	Vocative	ερκτη	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ανακτοριη	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+1	Genitive	ανακτοριη	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ανακτοριησιν
+3	Accusative	ανακτοριην	ERROR: Nothing found with those parameters	ανακτοριας
+4	Vocative	ανακτοριη	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters

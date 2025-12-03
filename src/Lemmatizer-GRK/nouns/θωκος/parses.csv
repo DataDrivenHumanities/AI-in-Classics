@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	θωκος	ERROR: Nothing found with those parameters	θωκοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	θωκοι
+2	Dative	θωκω	ERROR: Nothing found with those parameters	θακοις
+3	Accusative	θωκον	ERROR: Nothing found with those parameters	θωκους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	θωκοι

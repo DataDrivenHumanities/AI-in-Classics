@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αισχος	ERROR: Nothing found with those parameters	αισχη
+1	Genitive	αισχος	ERROR: Nothing found with those parameters	αισχη
+2	Dative	αισχε	ERROR: Nothing found with those parameters	αισχεσιν
+3	Accusative	αισχος	ERROR: Nothing found with those parameters	αισχη
+4	Vocative	αισχος	ERROR: Nothing found with those parameters	αισχη

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αμμος	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+1	Genitive	αμμ	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+2	Dative	αμμω	ERROR: Nothing found with those parameters	αμμοις
+3	Accusative	αμμον	ERROR: Nothing found with those parameters	αμμους
+4	Vocative	αμμ	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters

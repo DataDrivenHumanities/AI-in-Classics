@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	γερᾰνος	ERROR: Nothing found with those parameters	γερανοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	γερανοι
+2	Dative	γερανω	ERROR: Nothing found with those parameters	γερανοισι
+3	Accusative	γερανον	ERROR: Nothing found with those parameters	γερανους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	γερανοι

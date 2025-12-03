@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αντιστᾰσιωτης	ERROR: Nothing found with those parameters	αντιστασιωται
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αντιστασιωται
+2	Dative	αντιστασιωται	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αντιστασιωτην	ERROR: Nothing found with those parameters	αντιστασιωτας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αντιστασιωται

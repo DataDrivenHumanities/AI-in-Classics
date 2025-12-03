@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	θεριστης	ERROR: Nothing found with those parameters	θερισται
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	θερισται
+2	Dative	θερισται	ERROR: Nothing found with those parameters	θερισταις
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	θεριστας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	θερισται

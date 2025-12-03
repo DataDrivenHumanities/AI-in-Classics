@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εσμος	ERROR: Nothing found with those parameters	εσμοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εσμοι
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	εσμον	ERROR: Nothing found with those parameters	εσμους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εσμοι

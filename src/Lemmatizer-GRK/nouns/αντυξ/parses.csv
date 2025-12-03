@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αντυξ	ERROR: Nothing found with those parameters	αντυγες
+1	Genitive	αντυξ	ERROR: Nothing found with those parameters	αντυγες
+2	Dative	αντυγ	ERROR: Nothing found with those parameters	αντυξιν
+3	Accusative	αντυγ	ERROR: Nothing found with those parameters	αντυγας
+4	Vocative	αντυξ	ERROR: Nothing found with those parameters	αντυγες

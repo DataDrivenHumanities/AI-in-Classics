@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εσηγησις	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εισηγησεσιν
+3	Accusative	εσηγησιν	ERROR: Nothing found with those parameters	εσηγησις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters

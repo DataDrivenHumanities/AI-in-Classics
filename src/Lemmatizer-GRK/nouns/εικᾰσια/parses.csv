@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εικᾰσια	ERROR: Nothing found with those parameters	εικασια
+1	Genitive	εικᾰσια	ERROR: Nothing found with those parameters	εικασια
+2	Dative	εικασια	ERROR: Nothing found with those parameters	εικασιαις
+3	Accusative	εικασιαν	ERROR: Nothing found with those parameters	εικασιας
+4	Vocative	εικᾰσια	ERROR: Nothing found with those parameters	εικασια

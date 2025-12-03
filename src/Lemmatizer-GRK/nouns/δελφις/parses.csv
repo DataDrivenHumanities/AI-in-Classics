@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δελφις	ERROR: Nothing found with those parameters	δελφιδες
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	δελφιδες
+2	Dative	δελφιδ	ERROR: Nothing found with those parameters	δελφισιν
+3	Accusative	δελφιδ	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	δελφιδες

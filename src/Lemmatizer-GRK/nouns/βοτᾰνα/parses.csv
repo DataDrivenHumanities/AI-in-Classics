@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βοτᾰνα	ERROR: Nothing found with those parameters	βοτανα
+1	Genitive	βοτᾰνα	ERROR: Nothing found with those parameters	βοτανα
+2	Dative	βοτανη	ERROR: Nothing found with those parameters	βοταναις
+3	Accusative	βοτανην	ERROR: Nothing found with those parameters	βοτανας
+4	Vocative	βοτᾰνα	ERROR: Nothing found with those parameters	βοτανα

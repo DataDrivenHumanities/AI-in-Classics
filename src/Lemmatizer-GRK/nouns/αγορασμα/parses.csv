@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αγορασμα	ERROR: Nothing found with those parameters	αγορασματα
+1	Genitive	αγορασμα	ERROR: Nothing found with those parameters	αγορασματα
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αγορασμα	ERROR: Nothing found with those parameters	αγορασματα
+4	Vocative	αγορασμα	ERROR: Nothing found with those parameters	αγορασματα

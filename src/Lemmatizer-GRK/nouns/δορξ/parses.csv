@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δορξ	ERROR: Nothing found with those parameters	ζορκαδες
+1	Genitive	δορξ	ERROR: Nothing found with those parameters	ζορκαδες
+2	Dative	δορκαδ	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	δορκα	ERROR: Nothing found with those parameters	δορκας
+4	Vocative	δορξ	ERROR: Nothing found with those parameters	ζορκαδες

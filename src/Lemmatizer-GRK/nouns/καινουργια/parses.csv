@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	καινουργια	ERROR: Nothing found with those parameters	καινουργια
+1	Genitive	καινουργια	ERROR: Nothing found with those parameters	καινουργια
+2	Dative	καινουργια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	καινουργιας
+4	Vocative	καινουργια	ERROR: Nothing found with those parameters	καινουργια

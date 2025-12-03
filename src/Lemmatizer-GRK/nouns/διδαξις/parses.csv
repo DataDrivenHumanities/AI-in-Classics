@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	διδαξις	ERROR: Nothing found with those parameters	διδαξεις
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	διδαξεις
+2	Dative	διδαξη	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	διδαξιν	ERROR: Nothing found with those parameters	διδαξις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	διδαξεις

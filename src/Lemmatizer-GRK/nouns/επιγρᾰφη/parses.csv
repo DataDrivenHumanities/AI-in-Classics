@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	επιγρᾰφη	ERROR: Nothing found with those parameters	επιγραφαι
+1	Genitive	επιγρᾰφη	ERROR: Nothing found with those parameters	επιγραφαι
+2	Dative	επιγραφη	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	επιγραφην	ERROR: Nothing found with those parameters	επιγραφας
+4	Vocative	επιγρᾰφη	ERROR: Nothing found with those parameters	επιγραφαι

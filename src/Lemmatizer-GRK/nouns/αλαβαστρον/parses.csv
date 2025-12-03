@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αλαβαστρον	ERROR: Nothing found with those parameters	αλαβαστρα
+1	Genitive	αλαβαστρον	ERROR: Nothing found with those parameters	αλαβαστρα
+2	Dative	αλαβαστρω	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αλαβαστρον	ERROR: Nothing found with those parameters	αλαβαστρα
+4	Vocative	αλαβαστρον	ERROR: Nothing found with those parameters	αλαβαστρα

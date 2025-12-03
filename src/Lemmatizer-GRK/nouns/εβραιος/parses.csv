@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εβραιος	ERROR: Nothing found with those parameters	εβραιοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εβραιοι
+2	Dative	εβραιω	ERROR: Nothing found with those parameters	εβραιοις
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εβραιους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εβραιοι

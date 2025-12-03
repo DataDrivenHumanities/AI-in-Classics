@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εριπνη	ERROR: Nothing found with those parameters	εριπναι
+1	Genitive	εριπνη	ERROR: Nothing found with those parameters	εριπναι
+2	Dative	εριπναι	ERROR: Nothing found with those parameters	εριπναις
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εριπνας
+4	Vocative	εριπνη	ERROR: Nothing found with those parameters	εριπναι

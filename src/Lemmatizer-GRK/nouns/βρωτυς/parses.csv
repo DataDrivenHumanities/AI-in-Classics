@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βρωτυς	ERROR: Nothing found with those parameters	βρωσεις
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βρωσεις
+2	Dative	βρωσει	ERROR: Nothing found with those parameters	βρωσεσιν
+3	Accusative	βρωτυν	ERROR: Nothing found with those parameters	βρωτυς
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βρωσεις

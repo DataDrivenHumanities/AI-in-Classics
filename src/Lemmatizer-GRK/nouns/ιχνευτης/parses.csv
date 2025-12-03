@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ιχνευτης	ERROR: Nothing found with those parameters	ιχνευται
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ιχνευται
+2	Dative	ιχνευται	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ιχνευτας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ιχνευται

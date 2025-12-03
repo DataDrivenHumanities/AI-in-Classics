@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ημερια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+1	Genitive	ημερια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ημεριαν	ERROR: Nothing found with those parameters	ημεριας
+4	Vocative	ημερια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	επωμις	ERROR: Nothing found with those parameters	επωμιδες
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	επωμιδες
+2	Dative	επωμιδι	ERROR: Nothing found with those parameters	επωμισι
+3	Accusative	επωμιδα	ERROR: Nothing found with those parameters	επωμιδας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	επωμιδες

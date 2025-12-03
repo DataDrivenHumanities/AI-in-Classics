@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δῐκαστης	ERROR: Nothing found with those parameters	δικασται
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	δικασται
+2	Dative	δικαστη	ERROR: Nothing found with those parameters	δικασταις
+3	Accusative	δικαστην	ERROR: Nothing found with those parameters	δικαστᾱς
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	δικασται

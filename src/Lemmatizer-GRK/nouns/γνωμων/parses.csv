@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	γνωμων	ERROR: Nothing found with those parameters	γνωμονες
+1	Genitive	γνωμων	ERROR: Nothing found with those parameters	γνωμονες
+2	Dative	γνωμονι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	γνωμονα	ERROR: Nothing found with those parameters	γνωμονας
+4	Vocative	γνωμων	ERROR: Nothing found with those parameters	γνωμονες

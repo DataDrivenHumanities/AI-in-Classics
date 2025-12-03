@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	κᾰκουχια	ERROR: Nothing found with those parameters	κακουχια
+1	Genitive	κᾰκουχια	ERROR: Nothing found with those parameters	κακουχια
+2	Dative	κακουχια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	κακουχιαν	ERROR: Nothing found with those parameters	κακουχιας
+4	Vocative	κᾰκουχια	ERROR: Nothing found with those parameters	κακουχια

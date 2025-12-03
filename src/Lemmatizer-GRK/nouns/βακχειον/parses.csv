@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βακχειον	ERROR: Nothing found with those parameters	βακχει
+1	Genitive	βακχειον	ERROR: Nothing found with those parameters	βακχει
+2	Dative	βακχειω	ERROR: Nothing found with those parameters	βακχειοις
+3	Accusative	βακχειον	ERROR: Nothing found with those parameters	βακχει
+4	Vocative	βακχειον	ERROR: Nothing found with those parameters	βακχει

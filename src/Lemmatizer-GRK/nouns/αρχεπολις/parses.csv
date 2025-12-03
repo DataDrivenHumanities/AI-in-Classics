@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αρχεπολις	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αρχεπολιν	ERROR: Nothing found with those parameters	αρχεπολις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters

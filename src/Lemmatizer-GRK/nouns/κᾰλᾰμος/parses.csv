@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	κᾰλᾰμος	ERROR: Nothing found with those parameters	καλαμοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	καλαμοι
+2	Dative	καλαμω	ERROR: Nothing found with those parameters	καλαμοις
+3	Accusative	καλαμον	ERROR: Nothing found with those parameters	καλαμους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	καλαμοι

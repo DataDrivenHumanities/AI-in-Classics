@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βουλευμ	ERROR: Nothing found with those parameters	βουλευματ
+1	Genitive	βουλευμ	ERROR: Nothing found with those parameters	βουλευματ
+2	Dative	βουλευματ	ERROR: Nothing found with those parameters	βουλευμασι
+3	Accusative	βουλευμ	ERROR: Nothing found with those parameters	βουλευματ
+4	Vocative	βουλευμ	ERROR: Nothing found with those parameters	βουλευματ

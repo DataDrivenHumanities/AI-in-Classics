@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ευπορια	ERROR: Nothing found with those parameters	ευπορια
+1	Genitive	ευπορια	ERROR: Nothing found with those parameters	ευπορια
+2	Dative	ευπορια	ERROR: Nothing found with those parameters	ευποριαις
+3	Accusative	ευποριαν	ERROR: Nothing found with those parameters	ευποριας
+4	Vocative	ευπορια	ERROR: Nothing found with those parameters	ευπορια

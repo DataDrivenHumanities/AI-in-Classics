@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ειρηνοποιος	ERROR: Nothing found with those parameters	ειρηνοποιοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ειρηνοποιοι
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ειρηνοποιους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ειρηνοποιοι

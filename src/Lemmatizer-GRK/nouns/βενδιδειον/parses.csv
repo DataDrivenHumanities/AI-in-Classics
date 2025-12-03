@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βενδιδειον	ERROR: Nothing found with those parameters	βενδιδεια
+1	Genitive	βενδιδειον	ERROR: Nothing found with those parameters	βενδιδεια
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βενδιδειοις
+3	Accusative	βενδιδειον	ERROR: Nothing found with those parameters	βενδιδεια
+4	Vocative	βενδιδειον	ERROR: Nothing found with those parameters	βενδιδεια

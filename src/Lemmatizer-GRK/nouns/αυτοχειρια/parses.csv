@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αυτοχειρια	ERROR: Nothing found with those parameters	αυτοχειρια
+1	Genitive	αυτοχειρια	ERROR: Nothing found with those parameters	αυτοχειρια
+2	Dative	αυτοχειριη	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αυτοχειριαν	ERROR: Nothing found with those parameters	αυτοχειριας
+4	Vocative	αυτοχειρια	ERROR: Nothing found with those parameters	αυτοχειρια

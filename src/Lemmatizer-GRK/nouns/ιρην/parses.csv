@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ιρην	ERROR: Nothing found with those parameters	ιρενες
+1	Genitive	ιρην	ERROR: Nothing found with those parameters	ιρενες
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ιρεσσιν
+3	Accusative	ειρενα	ERROR: Nothing found with those parameters	ιρενας
+4	Vocative	ιρην	ERROR: Nothing found with those parameters	ιρενες

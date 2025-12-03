@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αθηναιον	ERROR: Nothing found with those parameters	αθηναια
+1	Genitive	αθηναιον	ERROR: Nothing found with those parameters	αθηναια
+2	Dative	αθηναιω	ERROR: Nothing found with those parameters	αθηναιοις
+3	Accusative	αθηναιον	ERROR: Nothing found with those parameters	αθηναια
+4	Vocative	αθηναιον	ERROR: Nothing found with those parameters	αθηναια

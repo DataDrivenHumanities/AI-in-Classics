@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αισθημα	ERROR: Nothing found with those parameters	αισθηματα
+1	Genitive	αισθημα	ERROR: Nothing found with those parameters	αισθηματα
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αισθημασι
+3	Accusative	αισθημα	ERROR: Nothing found with those parameters	αισθηματα
+4	Vocative	αισθημα	ERROR: Nothing found with those parameters	αισθηματα

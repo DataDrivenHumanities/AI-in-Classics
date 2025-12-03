@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ευρεσις	ERROR: Nothing found with those parameters	ευρεσεις
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ευρεσεις
+2	Dative	ευρεσει	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ευρεσιν	ERROR: Nothing found with those parameters	ευρεσις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ευρεσεις

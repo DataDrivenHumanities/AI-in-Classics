@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αμαθιη	ERROR: Nothing found with those parameters	αμαθια
+1	Genitive	αμαθιη	ERROR: Nothing found with those parameters	αμαθια
+2	Dative	αμαθια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αμαθιην	ERROR: Nothing found with those parameters	αμαθιας
+4	Vocative	αμαθιη	ERROR: Nothing found with those parameters	αμαθια

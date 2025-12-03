@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ᾰλωσις	ERROR: Nothing found with those parameters	αλωσεις
+1	Genitive	αλωσι	ERROR: Nothing found with those parameters	αλωσεις
+2	Dative	αλωσι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αλωσιν	ERROR: Nothing found with those parameters	ᾰλωσις
+4	Vocative	αλωσι	ERROR: Nothing found with those parameters	αλωσεις

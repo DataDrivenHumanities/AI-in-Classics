@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αργος	ERROR: Nothing found with those parameters	αργοι
+1	Genitive	αργος	ERROR: Nothing found with those parameters	αργοι
+2	Dative	αργει	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αργος	ERROR: Nothing found with those parameters	αργους
+4	Vocative	αργος	ERROR: Nothing found with those parameters	αργοι

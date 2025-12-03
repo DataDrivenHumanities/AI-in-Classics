@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βουγαιος	ERROR: Nothing found with those parameters	βουγαιοι
+1	Genitive	βουγαιε	ERROR: Nothing found with those parameters	βουγαιοι
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	βουγαιε	ERROR: Nothing found with those parameters	βουγαιοι

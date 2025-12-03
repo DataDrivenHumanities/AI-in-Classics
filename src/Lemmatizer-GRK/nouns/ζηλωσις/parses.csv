@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ζηλωσις	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+1	Genitive	ζηλωσι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+2	Dative	ζηλωσι	ERROR: Nothing found with those parameters	ζηλωσεσιν
+3	Accusative	ζηλωσιν	ERROR: Nothing found with those parameters	ζηλωσις
+4	Vocative	ζηλωσι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters

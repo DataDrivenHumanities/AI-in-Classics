@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	κατ	ERROR: Nothing found with those parameters	κατ
+1	Genitive	κατ	ERROR: Nothing found with those parameters	κατ
+2	Dative	κατ	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αιταν	ERROR: Nothing found with those parameters	αιτας
+4	Vocative	κατ	ERROR: Nothing found with those parameters	κατ

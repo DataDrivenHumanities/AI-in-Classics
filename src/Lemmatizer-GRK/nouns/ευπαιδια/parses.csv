@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ευπαιδια	ERROR: Nothing found with those parameters	ευπαιδια
+1	Genitive	ευπαιδια	ERROR: Nothing found with those parameters	ευπαιδια
+2	Dative	ευπαιδια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ευπαιδιαν	ERROR: Nothing found with those parameters	ευπαιδιας
+4	Vocative	ευπαιδια	ERROR: Nothing found with those parameters	ευπαιδια

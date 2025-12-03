@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αρχηιον	ERROR: Nothing found with those parameters	αρχηια
+1	Genitive	αρχηιον	ERROR: Nothing found with those parameters	αρχηια
+2	Dative	αρχειω	ERROR: Nothing found with those parameters	αρχειοις
+3	Accusative	αρχηιον	ERROR: Nothing found with those parameters	αρχηια
+4	Vocative	αρχηιον	ERROR: Nothing found with those parameters	αρχηια

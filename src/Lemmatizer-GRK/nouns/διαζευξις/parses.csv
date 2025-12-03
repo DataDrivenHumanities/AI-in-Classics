@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	διαζευξις	ERROR: Nothing found with those parameters	διαζευξεις
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	διαζευξεις
+2	Dative	διαζευξει	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	διαζευξιν	ERROR: Nothing found with those parameters	διαζευξις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	διαζευξεις

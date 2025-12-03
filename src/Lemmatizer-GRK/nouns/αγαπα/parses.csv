@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αγαπα	ERROR: Nothing found with those parameters	αγαπα
+1	Genitive	αγαπα	ERROR: Nothing found with those parameters	αγαπα
+2	Dative	αγαπη	ERROR: Nothing found with those parameters	αγαπας
+3	Accusative	αγαπαν	ERROR: Nothing found with those parameters	αγαπας
+4	Vocative	αγαπα	ERROR: Nothing found with those parameters	αγαπα

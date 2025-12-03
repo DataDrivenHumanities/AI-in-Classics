@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αιπος	ERROR: Nothing found with those parameters	αιπα
+1	Genitive	αιπος	ERROR: Nothing found with those parameters	αιπα
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αιπος	ERROR: Nothing found with those parameters	αιπα
+4	Vocative	αιπος	ERROR: Nothing found with those parameters	αιπα

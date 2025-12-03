@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δεσμ	ERROR: Nothing found with those parameters	δεσματ
+1	Genitive	δεσμ	ERROR: Nothing found with those parameters	δεσματ
+2	Dative	δεσματ	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	δεσμ	ERROR: Nothing found with those parameters	δεσματ
+4	Vocative	δεσμ	ERROR: Nothing found with those parameters	δεσματ

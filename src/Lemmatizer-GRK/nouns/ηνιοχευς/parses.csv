@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ηνιοχευς	ERROR: Nothing found with those parameters	ηνιοχης
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ηνιοχης
+2	Dative	ηνιοχη	ERROR: Nothing found with those parameters	ηνιοχευσι
+3	Accusative	ηνιοχη	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ηνιοχης

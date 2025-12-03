@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	διαβᾰσις	ERROR: Nothing found with those parameters	διαβασεις
+1	Genitive	διαβασι	ERROR: Nothing found with those parameters	διαβασεις
+2	Dative	διαβασι	ERROR: Nothing found with those parameters	διαβασεσι
+3	Accusative	διαβασιν	ERROR: Nothing found with those parameters	διαβᾰσις
+4	Vocative	διαβασι	ERROR: Nothing found with those parameters	διαβασεις

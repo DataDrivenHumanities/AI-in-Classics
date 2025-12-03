@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	γοργω	ERROR: Nothing found with those parameters	γοργως
+1	Genitive	γοργων	ERROR: Nothing found with those parameters	γοργως
+2	Dative	γοργοι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	γοργω	ERROR: Nothing found with those parameters	γοργως
+4	Vocative	γοργων	ERROR: Nothing found with those parameters	γοργως

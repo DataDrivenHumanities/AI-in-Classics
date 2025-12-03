@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ανοδος	ERROR: Nothing found with those parameters	ανοδοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ανοδοι
+2	Dative	ανοδω	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ανοδον	ERROR: Nothing found with those parameters	ανοδους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ανοδοι

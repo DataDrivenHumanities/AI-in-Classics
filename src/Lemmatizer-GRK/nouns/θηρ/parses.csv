@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	θηρ	ERROR: Nothing found with those parameters	θηρες
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	θηρες
+2	Dative	θηρ	ERROR: Nothing found with those parameters	θηρσι
+3	Accusative	θηρ	ERROR: Nothing found with those parameters	θηρᾰς
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	θηρες

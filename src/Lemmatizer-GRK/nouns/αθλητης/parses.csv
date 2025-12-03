@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αθλητης	ERROR: Nothing found with those parameters	ᾱθληται
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ᾱθληται
+2	Dative	αθλητη	ERROR: Nothing found with those parameters	αθληταις
+3	Accusative	αθλητην	ERROR: Nothing found with those parameters	αθλητας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ᾱθληται

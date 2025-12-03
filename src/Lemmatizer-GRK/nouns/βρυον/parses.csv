@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βρυον	ERROR: Nothing found with those parameters	βρυα
+1	Genitive	βρυον	ERROR: Nothing found with those parameters	βρυα
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βρυοις
+3	Accusative	βρυον	ERROR: Nothing found with those parameters	βρυα
+4	Vocative	βρυον	ERROR: Nothing found with those parameters	βρυα

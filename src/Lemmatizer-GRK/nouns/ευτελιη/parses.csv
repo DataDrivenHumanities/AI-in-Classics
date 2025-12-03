@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ευτελιη	ERROR: Nothing found with those parameters	ευτελεια
+1	Genitive	ευτελιη	ERROR: Nothing found with those parameters	ευτελεια
+2	Dative	ευτελεια	ERROR: Nothing found with those parameters	ευτελειαις
+3	Accusative	ευτελειην	ERROR: Nothing found with those parameters	ευτελειας
+4	Vocative	ευτελιη	ERROR: Nothing found with those parameters	ευτελεια

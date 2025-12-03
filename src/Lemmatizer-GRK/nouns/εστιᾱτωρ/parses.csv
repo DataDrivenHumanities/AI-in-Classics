@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εστιᾱτωρ	ERROR: Nothing found with those parameters	εστιατορες
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εστιατορες
+2	Dative	εστιατορ	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	εστιατορ	ERROR: Nothing found with those parameters	εστιατορας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εστιατορες

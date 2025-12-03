@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ειληθυια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+1	Genitive	ειληθυια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ειληθυιαν	ERROR: Nothing found with those parameters	ειληθυιας
+4	Vocative	ειληθυια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters

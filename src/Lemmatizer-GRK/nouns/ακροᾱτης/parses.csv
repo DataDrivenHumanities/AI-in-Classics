@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ακροᾱτης	ERROR: Nothing found with those parameters	ακροαται
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ακροαται
+2	Dative	ακροατη	ERROR: Nothing found with those parameters	ακροαταις
+3	Accusative	ακροατην	ERROR: Nothing found with those parameters	ακροατας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ακροαται

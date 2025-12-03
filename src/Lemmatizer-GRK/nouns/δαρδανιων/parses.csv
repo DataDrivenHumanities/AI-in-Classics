@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δαρδανιων	ERROR: Nothing found with those parameters	δαρδᾰνιδαι
+1	Genitive	δαρδανιων	ERROR: Nothing found with those parameters	δαρδᾰνιδαι
+2	Dative	δαρδανιδη	ERROR: Nothing found with those parameters	δαρδανιδαις
+3	Accusative	δαρδανιδαν	ERROR: Nothing found with those parameters	δαρδανιδας
+4	Vocative	δαρδανιων	ERROR: Nothing found with those parameters	δαρδᾰνιδαι

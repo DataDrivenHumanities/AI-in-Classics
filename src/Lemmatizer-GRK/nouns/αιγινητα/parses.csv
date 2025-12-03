@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αιγινητα	ERROR: Nothing found with those parameters	αιγινηται
+1	Genitive	αιγινητα	ERROR: Nothing found with those parameters	αιγινηται
+2	Dative	αιγινητη	ERROR: Nothing found with those parameters	αιγινητησι
+3	Accusative	αιγινητην	ERROR: Nothing found with those parameters	αιγινητας
+4	Vocative	αιγινητα	ERROR: Nothing found with those parameters	αιγινηται

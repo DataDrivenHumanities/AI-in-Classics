@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	απωλεια	ERROR: Nothing found with those parameters	απωλεια
+1	Genitive	απωλεια	ERROR: Nothing found with those parameters	απωλεια
+2	Dative	απωλεια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	απωλειαν	ERROR: Nothing found with those parameters	απωλειας
+4	Vocative	απωλεια	ERROR: Nothing found with those parameters	απωλεια

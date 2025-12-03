@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ωνθρωπος	ERROR: Nothing found with those parameters	ωνθρωποι
+1	Genitive	ωνθρωπ	ERROR: Nothing found with those parameters	ωνθρωποι
+2	Dative	ανθρωπω	ERROR: Nothing found with those parameters	ανθρωποις
+3	Accusative	ανθρωπον	ERROR: Nothing found with those parameters	ανθρωπους
+4	Vocative	ωνθρωπ	ERROR: Nothing found with those parameters	ωνθρωποι

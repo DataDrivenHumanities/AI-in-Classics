@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ευχωλη	ERROR: Nothing found with those parameters	ευχωλαι
+1	Genitive	ευχωλη	ERROR: Nothing found with those parameters	ευχωλαι
+2	Dative	ευχωλη	ERROR: Nothing found with those parameters	ευχωλης
+3	Accusative	ευχωλην	ERROR: Nothing found with those parameters	ευχωλας
+4	Vocative	ευχωλη	ERROR: Nothing found with those parameters	ευχωλαι

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ζωμα	ERROR: Nothing found with those parameters	ζωματα
+1	Genitive	ζωμα	ERROR: Nothing found with those parameters	ζωματα
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ζωμα	ERROR: Nothing found with those parameters	ζωματα
+4	Vocative	ζωμα	ERROR: Nothing found with those parameters	ζωματα

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αινιγμος	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+1	Genitive	αινιγμ	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αινιγμοις
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αινιγμους
+4	Vocative	αινιγμ	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αμβολη	ERROR: Nothing found with those parameters	αμβολαι
+1	Genitive	αμβολη	ERROR: Nothing found with those parameters	αμβολαι
+2	Dative	αναβολη	ERROR: Nothing found with those parameters	αναβολαις
+3	Accusative	αναβολην	ERROR: Nothing found with those parameters	αμβολας
+4	Vocative	αμβολη	ERROR: Nothing found with those parameters	αμβολαι

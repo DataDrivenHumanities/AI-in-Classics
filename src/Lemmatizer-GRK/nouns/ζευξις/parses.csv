@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ζευξις	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+1	Genitive	ζευξ	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+2	Dative	ζευξι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ζευξιν	ERROR: Nothing found with those parameters	ζευξις
+4	Vocative	ζευξ	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters

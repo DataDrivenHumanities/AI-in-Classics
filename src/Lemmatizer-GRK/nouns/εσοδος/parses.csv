@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εσοδος	ERROR: Nothing found with those parameters	εσοδοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εσοδοι
+2	Dative	εσοδω	ERROR: Nothing found with those parameters	εισοδοις
+3	Accusative	εσοδον	ERROR: Nothing found with those parameters	εσοδους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εσοδοι

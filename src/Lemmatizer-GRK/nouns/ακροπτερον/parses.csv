@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ακροπτερον	ERROR: Nothing found with those parameters	ακροπτερα
+1	Genitive	ακροπτερον	ERROR: Nothing found with those parameters	ακροπτερα
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ακροπτερον	ERROR: Nothing found with those parameters	ακροπτερα
+4	Vocative	ακροπτερον	ERROR: Nothing found with those parameters	ακροπτερα

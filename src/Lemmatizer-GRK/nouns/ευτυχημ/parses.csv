@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ευτυχημ	ERROR: Nothing found with those parameters	ευτυχηματ
+1	Genitive	ευτυχημ	ERROR: Nothing found with those parameters	ευτυχηματ
+2	Dative	ευτυχηματ	ERROR: Nothing found with those parameters	ευτυχημασι
+3	Accusative	ευτυχημ	ERROR: Nothing found with those parameters	ευτυχηματ
+4	Vocative	ευτυχημ	ERROR: Nothing found with those parameters	ευτυχηματ

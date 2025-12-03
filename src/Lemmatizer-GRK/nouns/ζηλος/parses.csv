@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ζηλος	ERROR: Nothing found with those parameters	ζηλη
+1	Genitive	ζηλος	ERROR: Nothing found with those parameters	ζηλη
+2	Dative	ζηλω	ERROR: Nothing found with those parameters	ζηλοις
+3	Accusative	ζηλος	ERROR: Nothing found with those parameters	ζηλη
+4	Vocative	ζηλος	ERROR: Nothing found with those parameters	ζηλη

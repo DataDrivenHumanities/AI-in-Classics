@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αδμης	ERROR: Nothing found with those parameters	αδμητες
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αδμητες
+2	Dative	αδμητ	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αδμητ	ERROR: Nothing found with those parameters	αδμητας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αδμητες

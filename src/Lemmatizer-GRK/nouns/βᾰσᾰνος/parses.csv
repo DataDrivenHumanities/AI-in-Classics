@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βᾰσᾰνος	ERROR: Nothing found with those parameters	βασανοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βασανοι
+2	Dative	βασανω	ERROR: Nothing found with those parameters	βασανοις
+3	Accusative	βασανον	ERROR: Nothing found with those parameters	βασανους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βασανοι

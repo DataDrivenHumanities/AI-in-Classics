@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δυσκλεια	ERROR: Nothing found with those parameters	δυσκλεια
+1	Genitive	δυσκλεια	ERROR: Nothing found with those parameters	δυσκλεια
+2	Dative	δυσκλεια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	δυσκλειαν	ERROR: Nothing found with those parameters	δυσκλειας
+4	Vocative	δυσκλεια	ERROR: Nothing found with those parameters	δυσκλεια

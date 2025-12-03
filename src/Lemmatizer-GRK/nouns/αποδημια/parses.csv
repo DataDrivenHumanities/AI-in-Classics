@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αποδημια	ERROR: Nothing found with those parameters	αποδημια
+1	Genitive	αποδημια	ERROR: Nothing found with those parameters	αποδημια
+2	Dative	αποδημια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αποδημιαν	ERROR: Nothing found with those parameters	αποδημιας
+4	Vocative	αποδημια	ERROR: Nothing found with those parameters	αποδημια

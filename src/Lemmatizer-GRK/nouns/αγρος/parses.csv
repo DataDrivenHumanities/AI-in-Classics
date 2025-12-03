@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αγρος	ERROR: Nothing found with those parameters	αγροι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αγροι
+2	Dative	αγρω	ERROR: Nothing found with those parameters	αγροις
+3	Accusative	αγρον	ERROR: Nothing found with those parameters	αγρους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αγροι

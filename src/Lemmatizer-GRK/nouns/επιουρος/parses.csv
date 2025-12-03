@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	επιουρος	ERROR: Nothing found with those parameters	επιουροι
+1	Genitive	επιουρε	ERROR: Nothing found with those parameters	επιουροι
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	επιουρον	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	επιουρε	ERROR: Nothing found with those parameters	επιουροι

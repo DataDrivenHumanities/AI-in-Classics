@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	γλουτος	ERROR: Nothing found with those parameters	γλουτοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	γλουτοι
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	γλουτον	ERROR: Nothing found with those parameters	γλουτους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	γλουτοι

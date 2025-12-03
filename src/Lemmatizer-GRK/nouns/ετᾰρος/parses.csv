@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ετᾰρος	ERROR: Nothing found with those parameters	εταροι
+1	Genitive	εταρ	ERROR: Nothing found with those parameters	εταροι
+2	Dative	εταρω	ERROR: Nothing found with those parameters	εταροις
+3	Accusative	εταρον	ERROR: Nothing found with those parameters	εταρους
+4	Vocative	εταρ	ERROR: Nothing found with those parameters	εταροι

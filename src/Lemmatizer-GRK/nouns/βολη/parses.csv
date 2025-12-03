@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βολη	ERROR: Nothing found with those parameters	βολαι
+1	Genitive	βολη	ERROR: Nothing found with those parameters	βολαι
+2	Dative	βολη	ERROR: Nothing found with those parameters	βολησι
+3	Accusative	βολην	ERROR: Nothing found with those parameters	βολας
+4	Vocative	βολη	ERROR: Nothing found with those parameters	βολαι

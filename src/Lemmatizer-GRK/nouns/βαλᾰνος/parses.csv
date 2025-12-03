@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βαλᾰνος	ERROR: Nothing found with those parameters	βαλανοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βαλανοι
+2	Dative	βαλανω	ERROR: Nothing found with those parameters	βαλανοις
+3	Accusative	βαλανον	ERROR: Nothing found with those parameters	βαλανους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βαλανοι

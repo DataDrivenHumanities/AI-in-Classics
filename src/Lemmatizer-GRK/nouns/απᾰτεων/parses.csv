@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	απᾰτεων	ERROR: Nothing found with those parameters	απατεωνες
+1	Genitive	απᾰτεων	ERROR: Nothing found with those parameters	απατεωνες
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	απατεωνα	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	απᾰτεων	ERROR: Nothing found with those parameters	απατεωνες

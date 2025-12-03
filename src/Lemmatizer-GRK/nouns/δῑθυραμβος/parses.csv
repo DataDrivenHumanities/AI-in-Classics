@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δῑθυραμβος	ERROR: Nothing found with those parameters	διθυραμβοι
+1	Genitive	διθυραμβ	ERROR: Nothing found with those parameters	διθυραμβοι
+2	Dative	διθυραμβω	ERROR: Nothing found with those parameters	διθυραμβοις
+3	Accusative	διθυραμβ	ERROR: Nothing found with those parameters	διθυραμβους
+4	Vocative	διθυραμβ	ERROR: Nothing found with those parameters	διθυραμβοι

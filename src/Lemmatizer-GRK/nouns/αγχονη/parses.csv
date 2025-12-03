@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αγχονη	ERROR: Nothing found with those parameters	αγχοναι
+1	Genitive	αγχονη	ERROR: Nothing found with those parameters	αγχοναι
+2	Dative	αγχονη	ERROR: Nothing found with those parameters	αγχοναις
+3	Accusative	αγχονην	ERROR: Nothing found with those parameters	αγχονας
+4	Vocative	αγχονη	ERROR: Nothing found with those parameters	αγχοναι

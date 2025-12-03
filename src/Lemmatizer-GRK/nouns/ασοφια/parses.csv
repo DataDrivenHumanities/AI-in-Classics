@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ασοφια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+1	Genitive	ασοφια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ασοφιας
+4	Vocative	ασοφια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters

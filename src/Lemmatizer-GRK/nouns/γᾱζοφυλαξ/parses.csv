@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	γᾱζοφυλαξ	ERROR: Nothing found with those parameters	γαζοφυλακες
+1	Genitive	γᾱζοφυλαξ	ERROR: Nothing found with those parameters	γαζοφυλακες
+2	Dative	γαζοφυλακι	ERROR: Nothing found with those parameters	γαζοφυλαξιν
+3	Accusative	γαζοφυλακα	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	γᾱζοφυλαξ	ERROR: Nothing found with those parameters	γαζοφυλακες

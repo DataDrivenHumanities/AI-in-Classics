@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ερωδιος	ERROR: Nothing found with those parameters	ερωδιοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ερωδιοι
+2	Dative	ερωδιω	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ερωδιον	ERROR: Nothing found with those parameters	ερωδιους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ερωδιοι

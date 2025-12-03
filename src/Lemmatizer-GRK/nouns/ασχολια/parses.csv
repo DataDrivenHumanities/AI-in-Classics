@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ασχολια	ERROR: Nothing found with those parameters	ασχολια
+1	Genitive	ασχολια	ERROR: Nothing found with those parameters	ασχολια
+2	Dative	ασχολια	ERROR: Nothing found with those parameters	ασχολιαις
+3	Accusative	ασχολιαν	ERROR: Nothing found with those parameters	ασχολιας
+4	Vocative	ασχολια	ERROR: Nothing found with those parameters	ασχολια

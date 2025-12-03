@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ζεφῠρος	ERROR: Nothing found with those parameters	ζεφυροι
+1	Genitive	ζεφυρε	ERROR: Nothing found with those parameters	ζεφυροι
+2	Dative	ζεφυρω	ERROR: Nothing found with those parameters	ζεφυροις
+3	Accusative	ζεφυρον	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	ζεφυρε	ERROR: Nothing found with those parameters	ζεφυροι

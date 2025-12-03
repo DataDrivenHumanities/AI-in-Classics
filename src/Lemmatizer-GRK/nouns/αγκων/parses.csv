@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αγκων	ERROR: Nothing found with those parameters	αγκωνες
+1	Genitive	αγκων	ERROR: Nothing found with those parameters	αγκωνες
+2	Dative	αγκων	ERROR: Nothing found with those parameters	αγκωσι
+3	Accusative	αγκων	ERROR: Nothing found with those parameters	αγκωνας
+4	Vocative	αγκων	ERROR: Nothing found with those parameters	αγκωνες

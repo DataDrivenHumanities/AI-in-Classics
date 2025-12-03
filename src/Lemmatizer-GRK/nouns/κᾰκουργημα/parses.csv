@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	κᾰκουργημα	ERROR: Nothing found with those parameters	κακουργηματα
+1	Genitive	κᾰκουργημα	ERROR: Nothing found with those parameters	κακουργηματα
+2	Dative	κακουργηματι	ERROR: Nothing found with those parameters	κακουργημασιν
+3	Accusative	κᾰκουργημα	ERROR: Nothing found with those parameters	κακουργηματα
+4	Vocative	κᾰκουργημα	ERROR: Nothing found with those parameters	κακουργηματα

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αελλοπος	ERROR: Nothing found with those parameters	αελλοποδες
+1	Genitive	αελλοπος	ERROR: Nothing found with those parameters	αελλοποδες
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αελλοποδεσσιν
+3	Accusative	αελλοπουν	ERROR: Nothing found with those parameters	αελλοποδας
+4	Vocative	αελλοπος	ERROR: Nothing found with those parameters	αελλοποδες

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	επισταλμα	ERROR: Nothing found with those parameters	επισταλματα
+1	Genitive	επισταλμα	ERROR: Nothing found with those parameters	επισταλματα
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	επισταλμα	ERROR: Nothing found with those parameters	επισταλματα
+4	Vocative	επισταλμα	ERROR: Nothing found with those parameters	επισταλματα

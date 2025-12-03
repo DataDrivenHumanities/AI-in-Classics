@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βαλβις	ERROR: Nothing found with those parameters	βαλβιδες
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βαλβιδες
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	βαλβιδα	ERROR: Nothing found with those parameters	βαλβιδας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βαλβιδες

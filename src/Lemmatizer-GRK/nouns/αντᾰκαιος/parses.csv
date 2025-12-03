@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αντᾰκαιος	ERROR: Nothing found with those parameters	αντακαιοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αντακαιοι
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αντακαιον	ERROR: Nothing found with those parameters	αντακαιους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αντακαιοι

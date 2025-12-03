@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	γομφιος	ERROR: Nothing found with those parameters	γομφιοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	γομφιοι
+2	Dative	γομφιω	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	γομφιον	ERROR: Nothing found with those parameters	γομφιους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	γομφιοι

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	γλευκος	ERROR: Nothing found with those parameters	γλευκη
+1	Genitive	γλευκος	ERROR: Nothing found with those parameters	γλευκη
+2	Dative	γλευκει	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	γλευκος	ERROR: Nothing found with those parameters	γλευκη
+4	Vocative	γλευκος	ERROR: Nothing found with those parameters	γλευκη

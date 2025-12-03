@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αστυνομος	ERROR: Nothing found with those parameters	αστυνομοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αστυνομοι
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αστυνομοις
+3	Accusative	αστυνομον	ERROR: Nothing found with those parameters	αστυνομους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αστυνομοι

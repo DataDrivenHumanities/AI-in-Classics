@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	θειασμος	ERROR: Nothing found with those parameters	θειασμοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	θειασμοι
+2	Dative	θειασμω	ERROR: Nothing found with those parameters	θειασμοις
+3	Accusative	θειασμον	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	θειασμοι

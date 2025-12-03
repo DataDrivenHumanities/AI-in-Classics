@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ασπῐδιωτης	ERROR: Nothing found with those parameters	ασπιδιωται
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ασπιδιωται
+2	Dative	ασπιδιωται	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ασπιδιωταν	ERROR: Nothing found with those parameters	ασπιδιωτας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ασπιδιωται

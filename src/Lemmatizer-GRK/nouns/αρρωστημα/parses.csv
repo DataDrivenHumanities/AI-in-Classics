@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αρρωστημα	ERROR: Nothing found with those parameters	αρρωστηματα
+1	Genitive	αρρωστημα	ERROR: Nothing found with those parameters	αρρωστηματα
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αρρωστημασιν
+3	Accusative	αρρωστημα	ERROR: Nothing found with those parameters	αρρωστηματα
+4	Vocative	αρρωστημα	ERROR: Nothing found with those parameters	αρρωστηματα

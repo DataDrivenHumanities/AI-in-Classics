@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ιτριον	ERROR: Nothing found with those parameters	ιτρια
+1	Genitive	ιτριον	ERROR: Nothing found with those parameters	ιτρια
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ιτριοις
+3	Accusative	ιτριον	ERROR: Nothing found with those parameters	ιτρια
+4	Vocative	ιτριον	ERROR: Nothing found with those parameters	ιτρια

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βατρᾰχος	ERROR: Nothing found with those parameters	βατραχοι
+1	Genitive	βᾰτρᾰχε	ERROR: Nothing found with those parameters	βατραχοι
+2	Dative	βατραχω	ERROR: Nothing found with those parameters	βατραχοις
+3	Accusative	βατραχον	ERROR: Nothing found with those parameters	βατραχους
+4	Vocative	βᾰτρᾰχε	ERROR: Nothing found with those parameters	βατραχοι

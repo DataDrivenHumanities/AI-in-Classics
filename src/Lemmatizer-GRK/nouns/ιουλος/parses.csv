@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ιουλος	ERROR: Nothing found with those parameters	ιουλοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ιουλοι
+2	Dative	ιουλω	ERROR: Nothing found with those parameters	ιουλοις
+3	Accusative	ιουλον	ERROR: Nothing found with those parameters	ιουλους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ιουλοι

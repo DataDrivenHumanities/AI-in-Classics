@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ζωδιον	ERROR: Nothing found with those parameters	ζωδια
+1	Genitive	ζωδιον	ERROR: Nothing found with those parameters	ζωδια
+2	Dative	ζωδιω	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ζωδιον	ERROR: Nothing found with those parameters	ζωδια
+4	Vocative	ζωδιον	ERROR: Nothing found with those parameters	ζωδια

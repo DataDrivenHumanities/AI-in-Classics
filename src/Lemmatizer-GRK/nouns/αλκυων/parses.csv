@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αλκυων	ERROR: Nothing found with those parameters	αλκυονες
+1	Genitive	αλκυων	ERROR: Nothing found with those parameters	αλκυονες
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αλκυονεσσι
+3	Accusative	αλκυονα	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	αλκυων	ERROR: Nothing found with those parameters	αλκυονες

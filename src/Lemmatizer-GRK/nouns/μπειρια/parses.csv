@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	μπειρια	ERROR: Nothing found with those parameters	εμπειρια
+1	Genitive	μπειρια	ERROR: Nothing found with those parameters	εμπειρια
+2	Dative	εμπειρια	ERROR: Nothing found with those parameters	εμπειριαις
+3	Accusative	εμπειριᾱν	ERROR: Nothing found with those parameters	εμπειριας
+4	Vocative	μπειρια	ERROR: Nothing found with those parameters	εμπειρια

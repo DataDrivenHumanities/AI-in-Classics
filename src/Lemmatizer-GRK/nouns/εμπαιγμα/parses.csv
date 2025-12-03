@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εμπαιγμα	ERROR: Nothing found with those parameters	εμπαιγματα
+1	Genitive	εμπαιγμα	ERROR: Nothing found with those parameters	εμπαιγματα
+2	Dative	εμπαιγμονη	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	εμπαιγμα	ERROR: Nothing found with those parameters	εμπαιγματα
+4	Vocative	εμπαιγμα	ERROR: Nothing found with those parameters	εμπαιγματα

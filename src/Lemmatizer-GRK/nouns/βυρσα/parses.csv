@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βυρσα	ERROR: Nothing found with those parameters	βυρσαι
+1	Genitive	βυρσα	ERROR: Nothing found with those parameters	βυρσαι
+2	Dative	βυρση	ERROR: Nothing found with those parameters	βυρσησι
+3	Accusative	βυρσαν	ERROR: Nothing found with those parameters	βυρσας
+4	Vocative	βυρσα	ERROR: Nothing found with those parameters	βυρσαι

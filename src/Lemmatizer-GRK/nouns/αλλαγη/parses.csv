@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αλλαγη	ERROR: Nothing found with those parameters	αλλαγα
+1	Genitive	αλλαγη	ERROR: Nothing found with those parameters	αλλαγα
+2	Dative	αλλαγα	ERROR: Nothing found with those parameters	αλλαγαις
+3	Accusative	αλλαγην	ERROR: Nothing found with those parameters	αλλαγας
+4	Vocative	αλλαγη	ERROR: Nothing found with those parameters	αλλαγα

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βωλᾱ	ERROR: Nothing found with those parameters	βουλα
+1	Genitive	βωλᾱ	ERROR: Nothing found with those parameters	βουλα
+2	Dative	βουλη	ERROR: Nothing found with those parameters	βουλης
+3	Accusative	βωλαν	ERROR: Nothing found with those parameters	βωλας
+4	Vocative	βωλᾱ	ERROR: Nothing found with those parameters	βουλα

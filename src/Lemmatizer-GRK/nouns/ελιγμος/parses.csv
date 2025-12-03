@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ελιγμος	ERROR: Nothing found with those parameters	ελιγμοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ελιγμοι
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ελιγμοις
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ελιγμους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ελιγμοι

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	θεμεθλον	ERROR: Nothing found with those parameters	θεμεθλα
+1	Genitive	θεμεθλον	ERROR: Nothing found with those parameters	θεμεθλα
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	θεμεθλοις
+3	Accusative	θεμεθλον	ERROR: Nothing found with those parameters	θεμεθλα
+4	Vocative	θεμεθλον	ERROR: Nothing found with those parameters	θεμεθλα

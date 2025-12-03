@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βρομος	ERROR: Nothing found with those parameters	βρομοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βρομοι
+2	Dative	βρομω	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	βρομον	ERROR: Nothing found with those parameters	βρομους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βρομοι

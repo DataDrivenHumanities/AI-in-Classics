@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δικτυς	ERROR: Nothing found with those parameters	δικτυες
+1	Genitive	δικτυ	ERROR: Nothing found with those parameters	δικτυες
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	δικτυν	ERROR: Nothing found with those parameters	δικτυς
+4	Vocative	δικτυ	ERROR: Nothing found with those parameters	δικτυες

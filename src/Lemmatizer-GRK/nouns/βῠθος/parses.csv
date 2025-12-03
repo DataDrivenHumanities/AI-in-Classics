@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βῠθος	ERROR: Nothing found with those parameters	βυθοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βυθοι
+2	Dative	βυθω	ERROR: Nothing found with those parameters	βυθοις
+3	Accusative	βυθον	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βυθοι

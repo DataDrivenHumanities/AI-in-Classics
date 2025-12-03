@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εξᾰπατη	ERROR: Nothing found with those parameters	εξαπατα
+1	Genitive	εξᾰπατη	ERROR: Nothing found with those parameters	εξαπατα
+2	Dative	εξαπατα	ERROR: Nothing found with those parameters	εξαπατας
+3	Accusative	ξαπαταν	ERROR: Nothing found with those parameters	εξαπατας
+4	Vocative	εξᾰπατη	ERROR: Nothing found with those parameters	εξαπατα

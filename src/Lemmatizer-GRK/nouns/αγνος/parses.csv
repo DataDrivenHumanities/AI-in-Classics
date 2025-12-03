@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αγνος	ERROR: Nothing found with those parameters	αγνοι-
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αγνοι-
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αγνως
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αγνοι-

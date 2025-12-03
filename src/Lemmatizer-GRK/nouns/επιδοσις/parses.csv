@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	επιδοσις	ERROR: Nothing found with those parameters	επιδοσεις
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	επιδοσεις
+2	Dative	επιδοσει	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	επιδοσιν	ERROR: Nothing found with those parameters	επιδοσις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	επιδοσεις

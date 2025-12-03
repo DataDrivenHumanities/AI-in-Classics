@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ιδρως	ERROR: Nothing found with those parameters	ιδρωτες
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ιδρωτες
+2	Dative	ιδρω	ERROR: Nothing found with those parameters	ιδρωσι
+3	Accusative	ιδρω	ERROR: Nothing found with those parameters	ιδρωτας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ιδρωτες

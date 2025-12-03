@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βουνος	ERROR: Nothing found with those parameters	βουνοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βουνοι
+2	Dative	βουνω	ERROR: Nothing found with those parameters	βουνοις
+3	Accusative	βουνον	ERROR: Nothing found with those parameters	βουνους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βουνοι

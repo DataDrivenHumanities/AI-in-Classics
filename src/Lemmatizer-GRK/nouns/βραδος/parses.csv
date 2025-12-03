@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βραδος	ERROR: Nothing found with those parameters	βραδεα
+1	Genitive	βραδος	ERROR: Nothing found with those parameters	βραδεα
+2	Dative	βραδει	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	βραδος	ERROR: Nothing found with those parameters	βραδεα
+4	Vocative	βραδος	ERROR: Nothing found with those parameters	βραδεα

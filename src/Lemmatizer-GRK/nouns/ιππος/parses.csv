@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ιππος	ERROR: Nothing found with those parameters	ιπποι
+1	Genitive	ιππε	ERROR: Nothing found with those parameters	ιπποι
+2	Dative	ιππω	ERROR: Nothing found with those parameters	ιπποις
+3	Accusative	ιππον	ERROR: Nothing found with those parameters	ιππως
+4	Vocative	ιππε	ERROR: Nothing found with those parameters	ιπποι

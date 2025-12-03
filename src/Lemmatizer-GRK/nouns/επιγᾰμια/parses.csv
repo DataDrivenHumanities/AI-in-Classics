@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	επιγᾰμια	ERROR: Nothing found with those parameters	επιγαμια
+1	Genitive	επιγᾰμια	ERROR: Nothing found with those parameters	επιγαμια
+2	Dative	επιγαμια	ERROR: Nothing found with those parameters	επιγαμιαις
+3	Accusative	επιγαμιαν	ERROR: Nothing found with those parameters	επιγαμιας
+4	Vocative	επιγᾰμια	ERROR: Nothing found with those parameters	επιγαμια

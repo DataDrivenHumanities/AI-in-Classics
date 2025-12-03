@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ηυλαβεια	ERROR: Nothing found with those parameters	ευλαβεια
+1	Genitive	ηυλαβεια	ERROR: Nothing found with those parameters	ευλαβεια
+2	Dative	ευλαβεια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ευλαβειαν	ERROR: Nothing found with those parameters	ευλαβειας
+4	Vocative	ηυλαβεια	ERROR: Nothing found with those parameters	ευλαβεια

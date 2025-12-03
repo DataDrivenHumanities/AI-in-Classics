@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αιθαλη	ERROR: Nothing found with those parameters	αιθαλαι
+1	Genitive	αιθαλη	ERROR: Nothing found with those parameters	αιθαλαι
+2	Dative	αιθαλαι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	αιθαλη	ERROR: Nothing found with those parameters	αιθαλαι

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ιωνιη	ERROR: Nothing found with those parameters	ιωνια
+1	Genitive	ιωνιη	ERROR: Nothing found with those parameters	ιωνια
+2	Dative	ιωνιη	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ιωνιαν	ERROR: Nothing found with those parameters	ιωνιας
+4	Vocative	ιωνιη	ERROR: Nothing found with those parameters	ιωνια

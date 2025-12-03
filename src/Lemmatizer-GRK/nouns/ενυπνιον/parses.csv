@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ενυπνιον	ERROR: Nothing found with those parameters	ενυπνια
+1	Genitive	ενυπνιον	ERROR: Nothing found with those parameters	ενυπνια
+2	Dative	ενυπνιω	ERROR: Nothing found with those parameters	ενυπνιοις
+3	Accusative	ενυπνιον	ERROR: Nothing found with those parameters	ενυπνια
+4	Vocative	ενυπνιον	ERROR: Nothing found with those parameters	ενυπνια

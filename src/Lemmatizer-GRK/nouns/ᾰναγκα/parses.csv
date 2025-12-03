@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ᾰναγκα	ERROR: Nothing found with those parameters	αναγκα
+1	Genitive	ᾰναγκα	ERROR: Nothing found with those parameters	αναγκα
+2	Dative	αναγκη	ERROR: Nothing found with those parameters	αναγκαις
+3	Accusative	αναγκην	ERROR: Nothing found with those parameters	αναγκας
+4	Vocative	ᾰναγκα	ERROR: Nothing found with those parameters	αναγκα

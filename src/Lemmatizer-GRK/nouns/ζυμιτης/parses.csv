@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ζυμιτης	ERROR: Nothing found with those parameters	ζυμιται
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ζυμιται
+2	Dative	ζυμιται	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ζυμιται

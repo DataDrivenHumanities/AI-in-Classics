@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αζυξ	ERROR: Nothing found with those parameters	αζυγα
+1	Genitive	αζυξ	ERROR: Nothing found with those parameters	αζυγα
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αζυγα	ERROR: Nothing found with those parameters	αζυγα
+4	Vocative	αζυξ	ERROR: Nothing found with those parameters	αζυγα

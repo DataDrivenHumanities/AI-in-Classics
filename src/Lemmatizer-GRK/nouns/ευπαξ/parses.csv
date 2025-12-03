@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ευπαξ	ERROR: Nothing found with those parameters	ευπαγες
+1	Genitive	ευπαξ	ERROR: Nothing found with those parameters	ευπαγες
+2	Dative	ευπαγι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	ευπαξ	ERROR: Nothing found with those parameters	ευπαγες

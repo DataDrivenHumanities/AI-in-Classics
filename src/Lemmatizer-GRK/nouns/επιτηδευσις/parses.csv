@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	επιτηδευσις	ERROR: Nothing found with those parameters	επιτηδευσεις
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	επιτηδευσεις
+2	Dative	επιτηδευσει	ERROR: Nothing found with those parameters	επιτηδευσεσι
+3	Accusative	επιτηδευσιν	ERROR: Nothing found with those parameters	επιτηδευσις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	επιτηδευσεις

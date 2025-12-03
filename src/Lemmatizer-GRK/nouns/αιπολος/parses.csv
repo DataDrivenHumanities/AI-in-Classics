@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αιπολος	ERROR: Nothing found with those parameters	αιπολοι
+1	Genitive	αιπολε	ERROR: Nothing found with those parameters	αιπολοι
+2	Dative	αιπολω	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αιπολον	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	αιπολε	ERROR: Nothing found with those parameters	αιπολοι

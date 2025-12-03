@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δεξιωσις	ERROR: Nothing found with those parameters	δεξιωσεις
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	δεξιωσεις
+2	Dative	δεξιωσει	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	δεξιωσις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	δεξιωσεις

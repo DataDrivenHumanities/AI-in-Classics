@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	γεννητα	ERROR: Nothing found with those parameters	γεννηται
+1	Genitive	γεννητα	ERROR: Nothing found with those parameters	γεννηται
+2	Dative	γεννηται	ERROR: Nothing found with those parameters	γεννηταις
+3	Accusative	γεννητην	ERROR: Nothing found with those parameters	γεννητας
+4	Vocative	γεννητα	ERROR: Nothing found with those parameters	γεννηται

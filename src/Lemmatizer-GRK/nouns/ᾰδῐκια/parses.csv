@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ᾰδῐκια	ERROR: Nothing found with those parameters	αδικια
+1	Genitive	ᾰδῐκια	ERROR: Nothing found with those parameters	αδικια
+2	Dative	αδικια	ERROR: Nothing found with those parameters	αδικιαις
+3	Accusative	αδικιην	ERROR: Nothing found with those parameters	αδικιας
+4	Vocative	ᾰδῐκια	ERROR: Nothing found with those parameters	αδικια

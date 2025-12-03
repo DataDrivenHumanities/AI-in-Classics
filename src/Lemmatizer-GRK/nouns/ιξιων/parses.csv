@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ιξιων	ERROR: Nothing found with those parameters	ιξιονες
+1	Genitive	ιξιων	ERROR: Nothing found with those parameters	ιξιονες
+2	Dative	ιξιον	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ιξιον	ERROR: Nothing found with those parameters	ιξιονας
+4	Vocative	ιξιων	ERROR: Nothing found with those parameters	ιξιονες

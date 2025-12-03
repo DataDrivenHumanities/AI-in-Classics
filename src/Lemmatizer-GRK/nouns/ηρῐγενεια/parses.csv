@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ηρῐγενεια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+1	Genitive	ηρῐγενεια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+2	Dative	ηριγενειη	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ηριγενειαν	ERROR: Nothing found with those parameters	ηριγενειας
+4	Vocative	ηρῐγενεια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters

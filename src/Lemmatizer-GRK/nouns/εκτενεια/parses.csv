@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εκτενεια	ERROR: Nothing found with those parameters	εκτενεια
+1	Genitive	εκτενεια	ERROR: Nothing found with those parameters	εκτενεια
+2	Dative	εκτενεια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	εκτενειαν	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	εκτενεια	ERROR: Nothing found with those parameters	εκτενεια

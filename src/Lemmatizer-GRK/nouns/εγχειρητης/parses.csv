@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εγχειρητης	ERROR: Nothing found with those parameters	εγχειρηται
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εγχειρηται
+2	Dative	εγχειρηται	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εγχειρηται

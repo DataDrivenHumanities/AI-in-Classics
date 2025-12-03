@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ευχαρι	ERROR: Nothing found with those parameters	ευχαριτα
+1	Genitive	ευχαρι	ERROR: Nothing found with those parameters	ευχαριτα
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ευχαρι	ERROR: Nothing found with those parameters	ευχαριτα
+4	Vocative	ευχαρι	ERROR: Nothing found with those parameters	ευχαριτα

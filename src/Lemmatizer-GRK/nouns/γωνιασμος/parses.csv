@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	γωνιασμος	ERROR: Nothing found with those parameters	γωνιασμοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	γωνιασμοι
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	γωνιασμους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	γωνιασμοι

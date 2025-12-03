@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δημιοργος	ERROR: Nothing found with those parameters	δημιουργοι
+1	Genitive	δημιουργε	ERROR: Nothing found with those parameters	δημιουργοι
+2	Dative	δημιουργω	ERROR: Nothing found with those parameters	δημιουργοις
+3	Accusative	δημιουργον	ERROR: Nothing found with those parameters	δημιουργους
+4	Vocative	δημιουργε	ERROR: Nothing found with those parameters	δημιουργοι

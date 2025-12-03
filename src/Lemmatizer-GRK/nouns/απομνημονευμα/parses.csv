@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	απομνημονευμα	ERROR: Nothing found with those parameters	απομνημονευματα
+1	Genitive	απομνημονευμα	ERROR: Nothing found with those parameters	απομνημονευματα
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	απομνημονευμασιν
+3	Accusative	απομνημονευμα	ERROR: Nothing found with those parameters	απομνημονευματα
+4	Vocative	απομνημονευμα	ERROR: Nothing found with those parameters	απομνημονευματα

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ευφρονη	ERROR: Nothing found with those parameters	ευφρον
+1	Genitive	ευφρονη	ERROR: Nothing found with those parameters	ευφρον
+2	Dative	ευφρον	ERROR: Nothing found with those parameters	ευφρονησι
+3	Accusative	ευφρονην	ERROR: Nothing found with those parameters	ευφρονας
+4	Vocative	ευφρονη	ERROR: Nothing found with those parameters	ευφρον

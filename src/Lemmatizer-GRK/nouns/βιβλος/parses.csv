@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βιβλος	ERROR: Nothing found with those parameters	βιβλοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βιβλοι
+2	Dative	βιβλω	ERROR: Nothing found with those parameters	βιβλοις
+3	Accusative	βιβλον	ERROR: Nothing found with those parameters	βιβλους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βιβλοι

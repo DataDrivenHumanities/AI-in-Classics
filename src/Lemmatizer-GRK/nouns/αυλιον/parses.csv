@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αυλιον	ERROR: Nothing found with those parameters	αυλια
+1	Genitive	αυλιον	ERROR: Nothing found with those parameters	αυλια
+2	Dative	αυλιω	ERROR: Nothing found with those parameters	αυλιοις
+3	Accusative	αυλιον	ERROR: Nothing found with those parameters	αυλια
+4	Vocative	αυλιον	ERROR: Nothing found with those parameters	αυλια

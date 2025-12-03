@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	διαπονημα	ERROR: Nothing found with those parameters	διαπονηματα
+1	Genitive	διαπονημα	ERROR: Nothing found with those parameters	διαπονηματα
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	διαπονημασι
+3	Accusative	διαπονημα	ERROR: Nothing found with those parameters	διαπονηματα
+4	Vocative	διαπονημα	ERROR: Nothing found with those parameters	διαπονηματα

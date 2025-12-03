@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ευγονια	ERROR: Nothing found with those parameters	ευγονια
+1	Genitive	ευγονια	ERROR: Nothing found with those parameters	ευγονια
+2	Dative	ευγονια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ευγονιας
+4	Vocative	ευγονια	ERROR: Nothing found with those parameters	ευγονια

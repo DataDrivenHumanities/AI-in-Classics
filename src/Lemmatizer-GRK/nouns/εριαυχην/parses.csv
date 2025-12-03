@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εριαυχην	ERROR: Nothing found with those parameters	εριαυχενες
+1	Genitive	εριαυχην	ERROR: Nothing found with those parameters	εριαυχενες
+2	Dative	εριαυχενι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εριαυχενας
+4	Vocative	εριαυχην	ERROR: Nothing found with those parameters	εριαυχενες

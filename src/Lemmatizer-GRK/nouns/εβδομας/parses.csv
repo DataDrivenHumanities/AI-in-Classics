@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εβδομας	ERROR: Nothing found with those parameters	εβδομαδες
+1	Genitive	εβδομα	ERROR: Nothing found with those parameters	εβδομαδες
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εβδομασι
+3	Accusative	εβδομαδα	ERROR: Nothing found with those parameters	εβδομαδας
+4	Vocative	εβδομα	ERROR: Nothing found with those parameters	εβδομαδες

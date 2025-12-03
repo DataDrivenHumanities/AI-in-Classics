@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	γανος	ERROR: Nothing found with those parameters	γανα
+1	Genitive	γανος	ERROR: Nothing found with those parameters	γανα
+2	Dative	γανει	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	γανος	ERROR: Nothing found with those parameters	γανα
+4	Vocative	γανος	ERROR: Nothing found with those parameters	γανα

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αιθριη	ERROR: Nothing found with those parameters	αιθρια
+1	Genitive	αιθριη	ERROR: Nothing found with those parameters	αιθρια
+2	Dative	αιθριη	ERROR: Nothing found with those parameters	αιθριαις
+3	Accusative	αιθριην	ERROR: Nothing found with those parameters	αιθριας
+4	Vocative	αιθριη	ERROR: Nothing found with those parameters	αιθρια

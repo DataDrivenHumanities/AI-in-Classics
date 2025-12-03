@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ελευθεριη	ERROR: Nothing found with those parameters	ελευθερια
+1	Genitive	ελευθεριη	ERROR: Nothing found with those parameters	ελευθερια
+2	Dative	ελευθεριη	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ελευθεριην	ERROR: Nothing found with those parameters	ελευθεριᾱς
+4	Vocative	ελευθεριη	ERROR: Nothing found with those parameters	ελευθερια

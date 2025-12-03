@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δρηστηρ	ERROR: Nothing found with those parameters	δρηστης
+1	Genitive	δρηστειρα	ERROR: Nothing found with those parameters	δρηστης
+2	Dative	δρηστειραι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	δρηστιν	ERROR: Nothing found with those parameters	δρηστις
+4	Vocative	δρηστειρα	ERROR: Nothing found with those parameters	δρηστης

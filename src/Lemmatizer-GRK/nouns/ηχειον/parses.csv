@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ηχειον	ERROR: Nothing found with those parameters	ηχεια
+1	Genitive	ηχειον	ERROR: Nothing found with those parameters	ηχεια
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ηχειοις
+3	Accusative	ηχειον	ERROR: Nothing found with those parameters	ηχεια
+4	Vocative	ηχειον	ERROR: Nothing found with those parameters	ηχεια

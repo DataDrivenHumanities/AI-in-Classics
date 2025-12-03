@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αρᾰβια	ERROR: Nothing found with those parameters	αραβια
+1	Genitive	αρᾰβια	ERROR: Nothing found with those parameters	αραβια
+2	Dative	αραβιη	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αραβιην	ERROR: Nothing found with those parameters	αραβιας
+4	Vocative	αρᾰβια	ERROR: Nothing found with those parameters	αραβια

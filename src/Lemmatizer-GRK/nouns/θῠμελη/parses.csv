@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	θῠμελη	ERROR: Nothing found with those parameters	θυμελαι
+1	Genitive	θῠμελη	ERROR: Nothing found with those parameters	θυμελαι
+2	Dative	θυμελαι	ERROR: Nothing found with those parameters	θυμελησι
+3	Accusative	θυμελαν	ERROR: Nothing found with those parameters	θυμελας
+4	Vocative	θῠμελη	ERROR: Nothing found with those parameters	θυμελαι

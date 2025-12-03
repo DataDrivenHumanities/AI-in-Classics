@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	απολις	ERROR: Nothing found with those parameters	απολεις
+1	Genitive	ωπολι	ERROR: Nothing found with those parameters	απολεις
+2	Dative	ωπολι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	απολιν	ERROR: Nothing found with those parameters	απολις
+4	Vocative	ωπολι	ERROR: Nothing found with those parameters	απολεις

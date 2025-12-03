@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ιλεος	ERROR: Nothing found with those parameters	ειλεοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ειλεοι
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ιλεον	ERROR: Nothing found with those parameters	ιλεους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ειλεοι

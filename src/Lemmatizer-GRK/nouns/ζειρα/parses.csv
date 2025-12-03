@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ζειρα	ERROR: Nothing found with those parameters	ζειραι
+1	Genitive	ζειρα	ERROR: Nothing found with those parameters	ζειραι
+2	Dative	ζειραι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ζειρας
+4	Vocative	ζειρα	ERROR: Nothing found with those parameters	ζειραι

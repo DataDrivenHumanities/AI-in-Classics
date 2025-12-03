@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αυτοχειρ	ERROR: Nothing found with those parameters	αυτοχειρες
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αυτοχειρες
+2	Dative	αυτοχειρ	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αυτοχειρ	ERROR: Nothing found with those parameters	αυτοχειρας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αυτοχειρες

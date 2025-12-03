@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ιχνος	ERROR: Nothing found with those parameters	ιχνη
+1	Genitive	ιχνος	ERROR: Nothing found with those parameters	ιχνη
+2	Dative	ιχνει	ERROR: Nothing found with those parameters	ιχνεσι
+3	Accusative	ιχνος	ERROR: Nothing found with those parameters	ιχνη
+4	Vocative	ιχνος	ERROR: Nothing found with those parameters	ιχνη

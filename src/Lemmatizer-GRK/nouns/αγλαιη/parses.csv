@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αγλαιη	ERROR: Nothing found with those parameters	αγλαια
+1	Genitive	αγλαιη	ERROR: Nothing found with those parameters	αγλαια
+2	Dative	αγλαια	ERROR: Nothing found with those parameters	αγλαιης
+3	Accusative	αγλαιαν	ERROR: Nothing found with those parameters	αγλαιας
+4	Vocative	αγλαιη	ERROR: Nothing found with those parameters	αγλαια

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ᾰγωνια	ERROR: Nothing found with those parameters	αγωνια
+1	Genitive	ᾰγωνια	ERROR: Nothing found with those parameters	αγωνια
+2	Dative	αγωνιη	ERROR: Nothing found with those parameters	αγωνιας
+3	Accusative	αγωνιαν	ERROR: Nothing found with those parameters	αγωνιας
+4	Vocative	ᾰγωνια	ERROR: Nothing found with those parameters	αγωνια

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ωρτος	ERROR: Nothing found with those parameters	αρτοι
+1	Genitive	αρτ	ERROR: Nothing found with those parameters	αρτοι
+2	Dative	αρτω	ERROR: Nothing found with those parameters	αρτοις
+3	Accusative	αρτον	ERROR: Nothing found with those parameters	αρτους
+4	Vocative	αρτ	ERROR: Nothing found with those parameters	αρτοι

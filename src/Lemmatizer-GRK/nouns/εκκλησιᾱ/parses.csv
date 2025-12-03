@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εκκλησιᾱ	ERROR: Nothing found with those parameters	εκκλησια
+1	Genitive	εκκλησιᾱ	ERROR: Nothing found with those parameters	εκκλησια
+2	Dative	εκκλησια	ERROR: Nothing found with those parameters	εκκλησιαις
+3	Accusative	εκκλησιην	ERROR: Nothing found with those parameters	εκκλησιας
+4	Vocative	εκκλησιᾱ	ERROR: Nothing found with those parameters	εκκλησια

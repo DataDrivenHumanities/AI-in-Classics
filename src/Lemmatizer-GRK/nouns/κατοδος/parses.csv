@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	κατοδος	ERROR: Nothing found with those parameters	καθοδοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	καθοδοι
+2	Dative	κατοδω	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	κατοδον	ERROR: Nothing found with those parameters	καθοδους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	καθοδοι

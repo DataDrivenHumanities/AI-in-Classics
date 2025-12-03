@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ζεια	ERROR: Nothing found with those parameters	ζεια
+1	Genitive	ζεια	ERROR: Nothing found with those parameters	ζεια
+2	Dative	ζεια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ζειας
+4	Vocative	ζεια	ERROR: Nothing found with those parameters	ζεια

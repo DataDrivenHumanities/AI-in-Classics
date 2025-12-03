@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	γελως	ERROR: Nothing found with those parameters	γελω
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	γελωτες
+2	Dative	γελω	ERROR: Nothing found with those parameters	γελωσι
+3	Accusative	γελωτ	ERROR: Nothing found with those parameters	γελως
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	γελωτες

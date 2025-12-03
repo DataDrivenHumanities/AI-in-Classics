@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δυσγενει	ERROR: Nothing found with those parameters	δυσγενει
+1	Genitive	δυσγενει	ERROR: Nothing found with those parameters	δυσγενει
+2	Dative	δυσγενει	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	δυσγενειαν	ERROR: Nothing found with those parameters	δυσγενειας
+4	Vocative	δυσγενει	ERROR: Nothing found with those parameters	δυσγενει

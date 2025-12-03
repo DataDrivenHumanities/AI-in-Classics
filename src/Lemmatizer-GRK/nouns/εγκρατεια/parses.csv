@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εγκρατεια	ERROR: Nothing found with those parameters	εγκρατεια
+1	Genitive	εγκρατεια	ERROR: Nothing found with those parameters	εγκρατεια
+2	Dative	εγκρατεια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	εγκρατειαν	ERROR: Nothing found with those parameters	εγκρατειας
+4	Vocative	εγκρατεια	ERROR: Nothing found with those parameters	εγκρατεια

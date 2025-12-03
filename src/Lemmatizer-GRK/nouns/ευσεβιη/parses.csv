@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ευσεβιη	ERROR: Nothing found with those parameters	ευσεβια
+1	Genitive	ευσεβιη	ERROR: Nothing found with those parameters	ευσεβια
+2	Dative	ευσεβια	ERROR: Nothing found with those parameters	ευσεβειαις
+3	Accusative	ευσεβῐᾰν	ERROR: Nothing found with those parameters	ευσεβιας
+4	Vocative	ευσεβιη	ERROR: Nothing found with those parameters	ευσεβια

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δρομος	ERROR: Nothing found with those parameters	δρομοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	δρομοι
+2	Dative	δρομω	ERROR: Nothing found with those parameters	δρομοις
+3	Accusative	δρομον	ERROR: Nothing found with those parameters	δρομους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	δρομοι

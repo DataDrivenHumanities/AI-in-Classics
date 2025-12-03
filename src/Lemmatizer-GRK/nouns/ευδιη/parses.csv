@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ευδιη	ERROR: Nothing found with those parameters	ευδι
+1	Genitive	ευδιη	ERROR: Nothing found with those parameters	ευδι
+2	Dative	ευδι	ERROR: Nothing found with those parameters	ευδιαις
+3	Accusative	ευδιαν	ERROR: Nothing found with those parameters	ευδιας
+4	Vocative	ευδιη	ERROR: Nothing found with those parameters	ευδι

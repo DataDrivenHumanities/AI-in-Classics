@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δουλοσυνη	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+1	Genitive	δουλοσυνη	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+2	Dative	δουλοσυνη	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	δουλοσυνην	ERROR: Nothing found with those parameters	δουλοσυνας
+4	Vocative	δουλοσυνη	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters

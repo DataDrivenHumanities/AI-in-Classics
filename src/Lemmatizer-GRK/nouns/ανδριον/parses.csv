@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ανδριον	ERROR: Nothing found with those parameters	ανδρια
+1	Genitive	ανδριον	ERROR: Nothing found with those parameters	ανδρια
+2	Dative	ανδριω	ERROR: Nothing found with those parameters	ανδριοις
+3	Accusative	ανδριον	ERROR: Nothing found with those parameters	ανδρια
+4	Vocative	ανδριον	ERROR: Nothing found with those parameters	ανδρια

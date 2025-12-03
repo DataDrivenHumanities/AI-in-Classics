@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εκφοριον	ERROR: Nothing found with those parameters	εκφορια
+1	Genitive	εκφοριον	ERROR: Nothing found with those parameters	εκφορια
+2	Dative	εκφοριω	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	εκφοριον	ERROR: Nothing found with those parameters	εκφορια
+4	Vocative	εκφοριον	ERROR: Nothing found with those parameters	εκφορια

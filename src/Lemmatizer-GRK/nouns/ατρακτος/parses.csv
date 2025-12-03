@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ατρακτος	ERROR: Nothing found with those parameters	ατρακτοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ατρακτοι
+2	Dative	ατρακτω	ERROR: Nothing found with those parameters	ατρακτοις
+3	Accusative	ατρακτον	ERROR: Nothing found with those parameters	ατρακτους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ατρακτοι

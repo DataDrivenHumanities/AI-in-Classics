@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αγγελιη	ERROR: Nothing found with those parameters	αγγελια
+1	Genitive	αγγελιη	ERROR: Nothing found with those parameters	αγγελια
+2	Dative	αγγελιη	ERROR: Nothing found with those parameters	αγγελιης
+3	Accusative	αγγελιην	ERROR: Nothing found with those parameters	αγγελιας
+4	Vocative	αγγελιη	ERROR: Nothing found with those parameters	αγγελια

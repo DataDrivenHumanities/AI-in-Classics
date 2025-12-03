@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αρεσκεια	ERROR: Nothing found with those parameters	αρεσκεια
+1	Genitive	αρεσκεια	ERROR: Nothing found with those parameters	αρεσκεια
+2	Dative	αρεσκεια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αρεσκειαν	ERROR: Nothing found with those parameters	αρεσκειας
+4	Vocative	αρεσκεια	ERROR: Nothing found with those parameters	αρεσκεια

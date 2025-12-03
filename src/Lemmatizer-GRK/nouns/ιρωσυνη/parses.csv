@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ιρωσυνη	ERROR: Nothing found with those parameters	ιερωσυναι
+1	Genitive	ιρωσυνη	ERROR: Nothing found with those parameters	ιερωσυναι
+2	Dative	ιερωσυνη	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ιρωσυνην	ERROR: Nothing found with those parameters	ιρωσυνας
+4	Vocative	ιρωσυνη	ERROR: Nothing found with those parameters	ιερωσυναι

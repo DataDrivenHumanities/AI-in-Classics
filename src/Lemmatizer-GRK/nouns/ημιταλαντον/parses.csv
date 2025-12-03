@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ημιταλαντον	ERROR: Nothing found with those parameters	ημιταλαντα
+1	Genitive	ημιταλαντον	ERROR: Nothing found with those parameters	ημιταλαντα
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ημιταλαντον	ERROR: Nothing found with those parameters	ημιταλαντα
+4	Vocative	ημιταλαντον	ERROR: Nothing found with those parameters	ημιταλαντα

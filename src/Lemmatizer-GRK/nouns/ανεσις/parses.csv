@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ανεσις	ERROR: Nothing found with those parameters	ανεσιες
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ανεσιες
+2	Dative	ανεση	ERROR: Nothing found with those parameters	ανεσεσι
+3	Accusative	ανεσιν	ERROR: Nothing found with those parameters	ανεσις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ανεσιες

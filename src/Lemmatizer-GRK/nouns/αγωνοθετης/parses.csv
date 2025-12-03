@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αγωνοθετης	ERROR: Nothing found with those parameters	αγωνοθεται
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αγωνοθεται
+2	Dative	αγωνοθεται	ERROR: Nothing found with those parameters	αγωνοθεταις
+3	Accusative	αγωνοθετην	ERROR: Nothing found with those parameters	αγωνοθετας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αγωνοθεται

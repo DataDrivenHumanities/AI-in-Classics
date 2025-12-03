@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βᾰσιληιον	ERROR: Nothing found with those parameters	βασιληα
+1	Genitive	βᾰσιληιον	ERROR: Nothing found with those parameters	βασιληα
+2	Dative	βασιληιω	ERROR: Nothing found with those parameters	βασιλειοις
+3	Accusative	βᾰσιληιον	ERROR: Nothing found with those parameters	βασιληα
+4	Vocative	βᾰσιληιον	ERROR: Nothing found with those parameters	βασιληα

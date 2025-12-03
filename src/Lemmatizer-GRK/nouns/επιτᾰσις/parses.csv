@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	επιτᾰσις	ERROR: Nothing found with those parameters	επιτασιες
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	επιτασιες
+2	Dative	επιτασει	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	επιτασιν	ERROR: Nothing found with those parameters	επιτᾰσις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	επιτασιες

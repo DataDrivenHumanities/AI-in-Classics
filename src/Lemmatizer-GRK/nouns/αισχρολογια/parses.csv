@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αισχρολογια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+1	Genitive	αισχρολογια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αισχρολογιαν	ERROR: Nothing found with those parameters	αισχρολογιας
+4	Vocative	αισχρολογια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters

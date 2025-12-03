@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	επισκευαστης	ERROR: Nothing found with those parameters	επισκευασται
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	επισκευασται
+2	Dative	επισκευασται	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	επισκευαστην	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	επισκευασται

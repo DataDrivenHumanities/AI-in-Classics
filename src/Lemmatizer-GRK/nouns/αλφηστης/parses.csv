@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αλφηστης	ERROR: Nothing found with those parameters	αλφησται
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αλφησται
+2	Dative	αλφησται	ERROR: Nothing found with those parameters	αλφηστησιν
+3	Accusative	αλφησταν	ERROR: Nothing found with those parameters	αλφηστας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αλφησται

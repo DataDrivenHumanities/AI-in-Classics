@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αγνωμοσυνη	ERROR: Nothing found with those parameters	αγνωμοσυναι
+1	Genitive	αγνωμοσυνη	ERROR: Nothing found with those parameters	αγνωμοσυναι
+2	Dative	αγνωμοσυνη	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αγνωμοσυνην	ERROR: Nothing found with those parameters	αγνωμοσυνας
+4	Vocative	αγνωμοσυνη	ERROR: Nothing found with those parameters	αγνωμοσυναι

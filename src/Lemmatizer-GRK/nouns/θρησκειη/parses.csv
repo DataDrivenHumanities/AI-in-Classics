@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	θρησκειη	ERROR: Nothing found with those parameters	θρησκεια
+1	Genitive	θρησκειη	ERROR: Nothing found with those parameters	θρησκεια
+2	Dative	θρησκηιη	ERROR: Nothing found with those parameters	θρησκειαις
+3	Accusative	θρησκειαν	ERROR: Nothing found with those parameters	θρησκηιας
+4	Vocative	θρησκειη	ERROR: Nothing found with those parameters	θρησκεια

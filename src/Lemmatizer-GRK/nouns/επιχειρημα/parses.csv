@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	επιχειρημα	ERROR: Nothing found with those parameters	επιχειρηματα
+1	Genitive	επιχειρημα	ERROR: Nothing found with those parameters	επιχειρηματα
+2	Dative	επιχειρηματι	ERROR: Nothing found with those parameters	επιχειρημασι
+3	Accusative	επιχειρημα	ERROR: Nothing found with those parameters	επιχειρηματα
+4	Vocative	επιχειρημα	ERROR: Nothing found with those parameters	επιχειρηματα

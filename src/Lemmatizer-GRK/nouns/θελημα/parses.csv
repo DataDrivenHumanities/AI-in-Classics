@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	θελημα	ERROR: Nothing found with those parameters	θεληματα
+1	Genitive	θελημα	ERROR: Nothing found with those parameters	θεληματα
+2	Dative	θεληματι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	θελημα	ERROR: Nothing found with those parameters	θεληματα
+4	Vocative	θελημα	ERROR: Nothing found with those parameters	θεληματα

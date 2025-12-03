@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αγροιωτης	ERROR: Nothing found with those parameters	αγροιωται
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αγροιωται
+2	Dative	αγροιωται	ERROR: Nothing found with those parameters	αγροιωταις
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αγροιωτας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αγροιωται

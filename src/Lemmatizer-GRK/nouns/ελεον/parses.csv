@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ελεον	ERROR: Nothing found with those parameters	ελεα
+1	Genitive	ελεον	ERROR: Nothing found with those parameters	ελεα
+2	Dative	ελεω	ERROR: Nothing found with those parameters	ελεοις
+3	Accusative	ελεον	ERROR: Nothing found with those parameters	ελεα
+4	Vocative	ελεον	ERROR: Nothing found with those parameters	ελεα

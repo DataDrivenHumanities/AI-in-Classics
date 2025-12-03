@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βλαψις	ERROR: Nothing found with those parameters	βλαψεις
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βλαψεις
+2	Dative	βλαψη	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βλαψις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βλαψεις

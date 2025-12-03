@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	καινοτομια	ERROR: Nothing found with those parameters	καινοτομιαι
+1	Genitive	καινοτομια	ERROR: Nothing found with those parameters	καινοτομιαι
+2	Dative	καινοτομιαι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	καινοτομιαν	ERROR: Nothing found with those parameters	καινοτομιας
+4	Vocative	καινοτομια	ERROR: Nothing found with those parameters	καινοτομιαι

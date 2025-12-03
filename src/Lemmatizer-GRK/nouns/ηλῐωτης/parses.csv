@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ηλῐωτης	ERROR: Nothing found with those parameters	ηλιωται
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ηλιωται
+2	Dative	ηλιωται	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ηλιωτιν	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ηλιωται

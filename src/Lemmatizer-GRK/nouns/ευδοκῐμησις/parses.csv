@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ευδοκῐμησις	ERROR: Nothing found with those parameters	ευδοκιμησεις
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ευδοκιμησεις
+2	Dative	ευδοκιμησει	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ευδοκιμησιν	ERROR: Nothing found with those parameters	ευδοκῐμησις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ευδοκιμησεις

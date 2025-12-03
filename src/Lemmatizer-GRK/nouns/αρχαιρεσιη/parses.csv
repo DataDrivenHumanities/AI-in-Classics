@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αρχαιρεσιη	ERROR: Nothing found with those parameters	αρχαιρεσιαι
+1	Genitive	αρχαιρεσιη	ERROR: Nothing found with those parameters	αρχαιρεσιαι
+2	Dative	αρχαιρεσιαι	ERROR: Nothing found with those parameters	αρχαιρεσιαις
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αρχαιρεσιας
+4	Vocative	αρχαιρεσιη	ERROR: Nothing found with those parameters	αρχαιρεσιαι

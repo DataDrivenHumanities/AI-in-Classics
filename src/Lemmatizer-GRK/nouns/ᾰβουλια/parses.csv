@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ᾰβουλια	ERROR: Nothing found with those parameters	αβουλια
+1	Genitive	ᾰβουλια	ERROR: Nothing found with those parameters	αβουλια
+2	Dative	αβουλιη	ERROR: Nothing found with those parameters	αβουλιησι
+3	Accusative	αβουλιαν	ERROR: Nothing found with those parameters	αβουλιας
+4	Vocative	ᾰβουλια	ERROR: Nothing found with those parameters	αβουλια

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δακτῠλος	ERROR: Nothing found with those parameters	δακτυλα
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	δακτυλα
+2	Dative	δακτυλω	ERROR: Nothing found with those parameters	δακτυλοις
+3	Accusative	δακτυλον	ERROR: Nothing found with those parameters	δακτυλα
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	δακτυλα

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αξιη	ERROR: Nothing found with those parameters	αξι
+1	Genitive	αξιη	ERROR: Nothing found with those parameters	αξι
+2	Dative	αξι	ERROR: Nothing found with those parameters	αξιαις
+3	Accusative	αξιην	ERROR: Nothing found with those parameters	αξιᾱς
+4	Vocative	αξιη	ERROR: Nothing found with those parameters	αξι

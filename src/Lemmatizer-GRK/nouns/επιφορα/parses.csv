@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	επιφορα	ERROR: Nothing found with those parameters	επιφορα
+1	Genitive	επιφορα	ERROR: Nothing found with those parameters	επιφορα
+2	Dative	επιφορα	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	επιφοραν	ERROR: Nothing found with those parameters	επιφορας
+4	Vocative	επιφορα	ERROR: Nothing found with those parameters	επιφορα

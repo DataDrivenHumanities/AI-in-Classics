@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ευμενια	ERROR: Nothing found with those parameters	ευμενια
+1	Genitive	ευμενια	ERROR: Nothing found with those parameters	ευμενια
+2	Dative	ευμενια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ευμενειαν	ERROR: Nothing found with those parameters	ευμενειας
+4	Vocative	ευμενια	ERROR: Nothing found with those parameters	ευμενια

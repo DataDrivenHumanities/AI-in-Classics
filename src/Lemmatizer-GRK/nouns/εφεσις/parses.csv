@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εφεσις	ERROR: Nothing found with those parameters	εφεσεις
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εφεσεις
+2	Dative	εφεσει	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	εφεσιν	ERROR: Nothing found with those parameters	εφεσις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εφεσεις

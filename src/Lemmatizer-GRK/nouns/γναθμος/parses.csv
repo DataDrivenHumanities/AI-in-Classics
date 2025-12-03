@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	γναθμος	ERROR: Nothing found with those parameters	γναθμοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	γναθμοι
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	γναθμοις
+3	Accusative	γναθμον	ERROR: Nothing found with those parameters	γναθμους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	γναθμοι

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	γνωρισμα	ERROR: Nothing found with those parameters	γνωρισματα
+1	Genitive	γνωρισμα	ERROR: Nothing found with those parameters	γνωρισματα
+2	Dative	γνωρισματι	ERROR: Nothing found with those parameters	γνωρισμασι
+3	Accusative	γνωρισμα	ERROR: Nothing found with those parameters	γνωρισματα
+4	Vocative	γνωρισμα	ERROR: Nothing found with those parameters	γνωρισματα

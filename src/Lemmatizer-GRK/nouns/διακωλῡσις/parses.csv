@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	διακωλῡσις	ERROR: Nothing found with those parameters	διακωλυσεις
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	διακωλυσεις
+2	Dative	διακωλυση	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	διακωλυσιν	ERROR: Nothing found with those parameters	διακωλῡσις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	διακωλυσεις

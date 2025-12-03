@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	γενεᾱλογια	ERROR: Nothing found with those parameters	γενεαλογιαι
+1	Genitive	γενεᾱλογια	ERROR: Nothing found with those parameters	γενεαλογιαι
+2	Dative	γενεαλογιαι	ERROR: Nothing found with those parameters	γενεαλογιαις
+3	Accusative	γενεαλογιαν	ERROR: Nothing found with those parameters	γενεαλογιας
+4	Vocative	γενεᾱλογια	ERROR: Nothing found with those parameters	γενεαλογιαι

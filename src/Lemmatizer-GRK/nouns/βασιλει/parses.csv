@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βασιλει	ERROR: Nothing found with those parameters	βασιλει
+1	Genitive	βασιλει	ERROR: Nothing found with those parameters	βασιλει
+2	Dative	βασιλει	ERROR: Nothing found with those parameters	βασιλειαις
+3	Accusative	βασιλειαν	ERROR: Nothing found with those parameters	βασιλειας
+4	Vocative	βασιλει	ERROR: Nothing found with those parameters	βασιλει

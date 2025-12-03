@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αστη	ERROR: Nothing found with those parameters	στ
+1	Genitive	αστη	ERROR: Nothing found with those parameters	στ
+2	Dative	στ	ERROR: Nothing found with those parameters	ασταις
+3	Accusative	αστην	ERROR: Nothing found with those parameters	αστας
+4	Vocative	αστη	ERROR: Nothing found with those parameters	στ

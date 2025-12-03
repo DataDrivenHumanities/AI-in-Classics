@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δωρις	ERROR: Nothing found with those parameters	δωριδες
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	δωριδες
+2	Dative	δωριδ	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	δωριδ	ERROR: Nothing found with those parameters	δωριδας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	δωριδες

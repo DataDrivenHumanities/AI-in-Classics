@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αυθεντα	ERROR: Nothing found with those parameters	αυθενται
+1	Genitive	αυθεντα	ERROR: Nothing found with those parameters	αυθενται
+2	Dative	αυθεντη	ERROR: Nothing found with those parameters	αυθεντησι
+3	Accusative	αυθεντην	ERROR: Nothing found with those parameters	αυθεντας
+4	Vocative	αυθεντα	ERROR: Nothing found with those parameters	αυθενται

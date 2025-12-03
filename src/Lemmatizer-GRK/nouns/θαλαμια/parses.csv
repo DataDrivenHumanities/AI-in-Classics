@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	θαλαμια	ERROR: Nothing found with those parameters	θαλαμιαι
+1	Genitive	θαλαμια	ERROR: Nothing found with those parameters	θαλαμιαι
+2	Dative	θαλαμιαι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	θᾰλᾰμιας
+4	Vocative	θαλαμια	ERROR: Nothing found with those parameters	θαλαμιαι

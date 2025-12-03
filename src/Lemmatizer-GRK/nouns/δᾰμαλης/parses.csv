@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δᾰμαλης	ERROR: Nothing found with those parameters	δαμαλαι
+1	Genitive	δᾰμαλη	ERROR: Nothing found with those parameters	δαμαλαι
+2	Dative	δαμαλαι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	δαμαλαν	ERROR: Nothing found with those parameters	δαμαλας
+4	Vocative	δᾰμαλη	ERROR: Nothing found with those parameters	δαμαλαι

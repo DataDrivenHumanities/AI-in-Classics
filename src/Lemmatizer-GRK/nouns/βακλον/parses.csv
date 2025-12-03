@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βακλον	ERROR: Nothing found with those parameters	βακλα
+1	Genitive	βακλον	ERROR: Nothing found with those parameters	βακλα
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	βακλον	ERROR: Nothing found with those parameters	βακλα
+4	Vocative	βακλον	ERROR: Nothing found with those parameters	βακλα

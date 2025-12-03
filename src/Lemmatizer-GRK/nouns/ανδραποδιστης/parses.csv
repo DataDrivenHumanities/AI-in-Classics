@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ανδραποδιστης	ERROR: Nothing found with those parameters	ανδραποδισται
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ανδραποδισται
+2	Dative	ανδραποδισται	ERROR: Nothing found with those parameters	ανδραποδισταις
+3	Accusative	ανδραποδιστην	ERROR: Nothing found with those parameters	ανδραποδιστας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ανδραποδισται

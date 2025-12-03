@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εξετᾰσις	ERROR: Nothing found with those parameters	εξετασεις
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εξετασεις
+2	Dative	εξετασει	ERROR: Nothing found with those parameters	εξετασεσιν
+3	Accusative	εξετασιν	ERROR: Nothing found with those parameters	εξετᾰσις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εξετασεις

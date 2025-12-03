@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ευπρηξιη	ERROR: Nothing found with those parameters	ευπραξια
+1	Genitive	ευπρηξιη	ERROR: Nothing found with those parameters	ευπραξια
+2	Dative	ευπραξια	ERROR: Nothing found with those parameters	ευπραξιαις
+3	Accusative	ευπρηξιην	ERROR: Nothing found with those parameters	ευπραξιας
+4	Vocative	ευπρηξιη	ERROR: Nothing found with those parameters	ευπραξια

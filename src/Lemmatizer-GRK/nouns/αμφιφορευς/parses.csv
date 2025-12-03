@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αμφιφορευς	ERROR: Nothing found with those parameters	αμφιφορηες
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αμφιφορηες
+2	Dative	αμφιφορει	ERROR: Nothing found with those parameters	αμφιφορευσι
+3	Accusative	αμφιφορηα	ERROR: Nothing found with those parameters	αμφιφορηας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αμφιφορηες

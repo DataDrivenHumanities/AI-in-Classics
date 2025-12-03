@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ημεροδρομος	ERROR: Nothing found with those parameters	ημεροδρομοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ημεροδρομοι
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ημεροδρομην	ERROR: Nothing found with those parameters	ημεροδρομους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ημεροδρομοι

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ηθεος	ERROR: Nothing found with those parameters	ηθεοι
+1	Genitive	ηιθεη	ERROR: Nothing found with those parameters	ηθεοι
+2	Dative	ηιθεω	ERROR: Nothing found with those parameters	ηιθεοις
+3	Accusative	ηθεον	ERROR: Nothing found with those parameters	ηθεους
+4	Vocative	ηιθεη	ERROR: Nothing found with those parameters	ηθεοι

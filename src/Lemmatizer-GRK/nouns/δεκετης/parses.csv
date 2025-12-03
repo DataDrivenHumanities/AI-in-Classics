@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δεκετης	ERROR: Nothing found with those parameters	δεκεται
+1	Genitive	δεκετη	ERROR: Nothing found with those parameters	δεκεται
+2	Dative	δεκεται	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	δεκετιν	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	δεκετη	ERROR: Nothing found with those parameters	δεκεται

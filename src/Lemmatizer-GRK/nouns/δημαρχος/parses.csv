@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δημαρχος	ERROR: Nothing found with those parameters	δημαρχοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	δημαρχοι
+2	Dative	δημαρχω	ERROR: Nothing found with those parameters	δημαρχοις
+3	Accusative	δημαρχον	ERROR: Nothing found with those parameters	δημαρχους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	δημαρχοι

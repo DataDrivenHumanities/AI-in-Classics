@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εγγυη	ERROR: Nothing found with those parameters	εγγυα
+1	Genitive	εγγυη	ERROR: Nothing found with those parameters	εγγυα
+2	Dative	εγγυα	ERROR: Nothing found with those parameters	εγγυαις
+3	Accusative	εγγυαν	ERROR: Nothing found with those parameters	εγγυας
+4	Vocative	εγγυη	ERROR: Nothing found with those parameters	εγγυα

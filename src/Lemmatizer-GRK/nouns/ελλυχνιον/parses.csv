@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ελλυχνιον	ERROR: Nothing found with those parameters	ελλυχνια
+1	Genitive	ελλυχνιον	ERROR: Nothing found with those parameters	ελλυχνια
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ελλυχνιον	ERROR: Nothing found with those parameters	ελλυχνια
+4	Vocative	ελλυχνιον	ERROR: Nothing found with those parameters	ελλυχνια

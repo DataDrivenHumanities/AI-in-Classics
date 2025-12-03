@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	επωνῠμια	ERROR: Nothing found with those parameters	επωνυμια
+1	Genitive	επωνῠμια	ERROR: Nothing found with those parameters	επωνυμια
+2	Dative	επωνυμια	ERROR: Nothing found with those parameters	επωνυμιαις
+3	Accusative	επωνυμιην	ERROR: Nothing found with those parameters	επωνυμιας
+4	Vocative	επωνῠμια	ERROR: Nothing found with those parameters	επωνυμια

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ηγεμονιη	ERROR: Nothing found with those parameters	ηγεμονια
+1	Genitive	ηγεμονιη	ERROR: Nothing found with those parameters	ηγεμονια
+2	Dative	ηγεμονια	ERROR: Nothing found with those parameters	ηγεμονιαις
+3	Accusative	ηγεμονιην	ERROR: Nothing found with those parameters	ηγεμονιας
+4	Vocative	ηγεμονιη	ERROR: Nothing found with those parameters	ηγεμονια

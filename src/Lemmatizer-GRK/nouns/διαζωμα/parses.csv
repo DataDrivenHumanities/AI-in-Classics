@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	διαζωμα	ERROR: Nothing found with those parameters	διαζωματα
+1	Genitive	διαζωμα	ERROR: Nothing found with those parameters	διαζωματα
+2	Dative	διαζωματι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	διαζωμα	ERROR: Nothing found with those parameters	διαζωματα
+4	Vocative	διαζωμα	ERROR: Nothing found with those parameters	διαζωματα

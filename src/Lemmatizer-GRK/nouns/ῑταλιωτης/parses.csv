@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ῑταλιωτης	ERROR: Nothing found with those parameters	ιταλιωται
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ιταλιωται
+2	Dative	ιταλιωται	ERROR: Nothing found with those parameters	ιταλιωταις
+3	Accusative	ιταλιωταν	ERROR: Nothing found with those parameters	ιταλιωτας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ιταλιωται

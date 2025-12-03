@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ελεπολις	ERROR: Nothing found with those parameters	ελεπολεις
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ελεπολεις
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ελεπολιν	ERROR: Nothing found with those parameters	ελεπολις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ελεπολεις

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ελλην	ERROR: Nothing found with those parameters	ελληνες
+1	Genitive	ελλην	ERROR: Nothing found with those parameters	ελληνες
+2	Dative	ελλην	ERROR: Nothing found with those parameters	ελλασι
+3	Accusative	ελλην	ERROR: Nothing found with those parameters	ελληνας
+4	Vocative	ελλην	ERROR: Nothing found with those parameters	ελληνες

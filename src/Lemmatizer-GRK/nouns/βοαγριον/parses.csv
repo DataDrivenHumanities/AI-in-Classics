@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βοαγριον	ERROR: Nothing found with those parameters	βοαγρια
+1	Genitive	βοαγριον	ERROR: Nothing found with those parameters	βοαγρια
+2	Dative	βοαγριω	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	βοαγριον	ERROR: Nothing found with those parameters	βοαγρια
+4	Vocative	βοαγριον	ERROR: Nothing found with those parameters	βοαγρια

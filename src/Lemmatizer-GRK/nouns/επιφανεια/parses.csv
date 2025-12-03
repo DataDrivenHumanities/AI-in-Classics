@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	επιφανεια	ERROR: Nothing found with those parameters	επιφανεια
+1	Genitive	επιφανεια	ERROR: Nothing found with those parameters	επιφανεια
+2	Dative	επιφανεια	ERROR: Nothing found with those parameters	επιφανειαις
+3	Accusative	επιφανειαν	ERROR: Nothing found with those parameters	επιφανειας
+4	Vocative	επιφανεια	ERROR: Nothing found with those parameters	επιφανεια

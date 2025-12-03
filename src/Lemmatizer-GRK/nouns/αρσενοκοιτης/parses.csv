@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αρσενοκοιτης	ERROR: Nothing found with those parameters	αρσενοκοιται
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αρσενοκοιται
+2	Dative	αρσενοκοιται	ERROR: Nothing found with those parameters	αρσενοκοιταις
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αρσενοκοιται

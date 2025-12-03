@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αναλωτα	ERROR: Nothing found with those parameters	αναλωται
+1	Genitive	αναλωτα	ERROR: Nothing found with those parameters	αναλωται
+2	Dative	αναλωται	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αναλωτεα	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	αναλωτα	ERROR: Nothing found with those parameters	αναλωται

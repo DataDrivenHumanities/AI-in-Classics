@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ερωτησις	ERROR: Nothing found with those parameters	ερωτησης
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ερωτησης
+2	Dative	ερωτηση	ERROR: Nothing found with those parameters	ερωτησεσι
+3	Accusative	ερωτησιν	ERROR: Nothing found with those parameters	ερωτησις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ερωτησης

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ζωον	ERROR: Nothing found with those parameters	ζωα
+1	Genitive	ζωον	ERROR: Nothing found with those parameters	ζωα
+2	Dative	ζωω	ERROR: Nothing found with those parameters	ζωοις
+3	Accusative	ζωον	ERROR: Nothing found with those parameters	ζωα
+4	Vocative	ζωον	ERROR: Nothing found with those parameters	ζωα

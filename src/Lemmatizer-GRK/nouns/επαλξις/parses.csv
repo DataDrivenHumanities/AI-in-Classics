@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	επαλξις	ERROR: Nothing found with those parameters	επαλξιες
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	επαλξιες
+2	Dative	επαλξει	ERROR: Nothing found with those parameters	επαλξεσι
+3	Accusative	επαλξιν	ERROR: Nothing found with those parameters	επαλξῑς
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	επαλξιες

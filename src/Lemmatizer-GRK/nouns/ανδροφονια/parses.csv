@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ανδροφονια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+1	Genitive	ανδροφονια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ανδροφονιας
+4	Vocative	ανδροφονια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters

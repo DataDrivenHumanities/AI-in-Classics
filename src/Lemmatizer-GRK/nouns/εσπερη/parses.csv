@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εσπερη	ERROR: Nothing found with those parameters	εσπερα
+1	Genitive	εσπερη	ERROR: Nothing found with those parameters	εσπερα
+2	Dative	εσπερα	ERROR: Nothing found with those parameters	εσπεραις
+3	Accusative	εσπερην	ERROR: Nothing found with those parameters	εσπερᾱς
+4	Vocative	εσπερη	ERROR: Nothing found with those parameters	εσπερα

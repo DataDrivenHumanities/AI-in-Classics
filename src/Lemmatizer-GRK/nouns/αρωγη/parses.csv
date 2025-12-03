@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αρωγη	ERROR: Nothing found with those parameters	αρωγαι
+1	Genitive	αρωγη	ERROR: Nothing found with those parameters	αρωγαι
+2	Dative	αρωγη	ERROR: Nothing found with those parameters	αρωγαις
+3	Accusative	αρωγην	ERROR: Nothing found with those parameters	αρωγας
+4	Vocative	αρωγη	ERROR: Nothing found with those parameters	αρωγαι

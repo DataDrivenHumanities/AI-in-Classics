@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ζῠγον	ERROR: Nothing found with those parameters	ζυγ
+1	Genitive	ζυγ	ERROR: Nothing found with those parameters	ζυγ
+2	Dative	ζυγω	ERROR: Nothing found with those parameters	ζυγοις
+3	Accusative	ζῠγον	ERROR: Nothing found with those parameters	ζυγ
+4	Vocative	ζυγ	ERROR: Nothing found with those parameters	ζυγ

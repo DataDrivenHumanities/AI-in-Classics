@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ᾰκοιτις	ERROR: Nothing found with those parameters	ακοιτης
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ακοιτης
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ακοιτιν	ERROR: Nothing found with those parameters	ᾰκοιτις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ακοιτης

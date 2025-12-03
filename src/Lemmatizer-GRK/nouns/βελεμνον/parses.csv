@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βελεμνον	ERROR: Nothing found with those parameters	βελεμνα
+1	Genitive	βελεμνον	ERROR: Nothing found with those parameters	βελεμνα
+2	Dative	βελεμνω	ERROR: Nothing found with those parameters	βελεμνοις
+3	Accusative	βελεμνον	ERROR: Nothing found with those parameters	βελεμνα
+4	Vocative	βελεμνον	ERROR: Nothing found with those parameters	βελεμνα

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ημῐονος	ERROR: Nothing found with those parameters	ημιονοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ημιονοι
+2	Dative	ημιονω	ERROR: Nothing found with those parameters	ημιονοις
+3	Accusative	ημιονον	ERROR: Nothing found with those parameters	ημιονους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ημιονοι

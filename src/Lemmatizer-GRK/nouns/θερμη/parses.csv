@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	θερμη	ERROR: Nothing found with those parameters	θερμ
+1	Genitive	θερμη	ERROR: Nothing found with those parameters	θερμ
+2	Dative	θερμ	ERROR: Nothing found with those parameters	θερμησι
+3	Accusative	θερμην	ERROR: Nothing found with those parameters	θερμας
+4	Vocative	θερμη	ERROR: Nothing found with those parameters	θερμ

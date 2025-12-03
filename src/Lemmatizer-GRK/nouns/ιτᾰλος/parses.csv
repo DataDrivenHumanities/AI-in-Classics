@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ιτᾰλος	ERROR: Nothing found with those parameters	ιταλοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ιταλοι
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ιταλον	ERROR: Nothing found with those parameters	ιταλους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ιταλοι

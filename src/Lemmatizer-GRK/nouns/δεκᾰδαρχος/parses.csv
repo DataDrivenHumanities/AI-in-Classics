@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δεκᾰδαρχος	ERROR: Nothing found with those parameters	δεκαδαρχοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	δεκαδαρχοι
+2	Dative	δεκαδαρχω	ERROR: Nothing found with those parameters	δεκαδαρχοις
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	δεκαδαρχους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	δεκαδαρχοι

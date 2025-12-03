@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δειγμ	ERROR: Nothing found with those parameters	δειγματ
+1	Genitive	δειγμ	ERROR: Nothing found with those parameters	δειγματ
+2	Dative	δειγματ	ERROR: Nothing found with those parameters	δειγμασιν
+3	Accusative	δειγμ	ERROR: Nothing found with those parameters	δειγματ
+4	Vocative	δειγμ	ERROR: Nothing found with those parameters	δειγματ

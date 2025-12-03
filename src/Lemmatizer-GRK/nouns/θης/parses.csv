@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	θης	ERROR: Nothing found with those parameters	θητες
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	θητες
+2	Dative	θητ	ERROR: Nothing found with those parameters	θησι
+3	Accusative	θητ	ERROR: Nothing found with those parameters	θητας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	θητες

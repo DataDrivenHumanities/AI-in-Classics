@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εταιρια	ERROR: Nothing found with those parameters	εταιρια
+1	Genitive	εταιρια	ERROR: Nothing found with those parameters	εταιρια
+2	Dative	εταιρια	ERROR: Nothing found with those parameters	εταιριαις
+3	Accusative	εταιριαν	ERROR: Nothing found with those parameters	εταιριας
+4	Vocative	εταιρια	ERROR: Nothing found with those parameters	εταιρια

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δαιμων	ERROR: Nothing found with those parameters	δαιμονες
+1	Genitive	δαιμον	ERROR: Nothing found with those parameters	δαιμονες
+2	Dative	δαιμον	ERROR: Nothing found with those parameters	δαιμοσι
+3	Accusative	δαιμον	ERROR: Nothing found with those parameters	δαιμονας
+4	Vocative	δαιμον	ERROR: Nothing found with those parameters	δαιμονες

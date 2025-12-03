@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εωρα	ERROR: Nothing found with those parameters	εωραι
+1	Genitive	εωρα	ERROR: Nothing found with those parameters	εωραι
+2	Dative	εωραι	ERROR: Nothing found with those parameters	εωραις
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	εωρα	ERROR: Nothing found with those parameters	εωραι

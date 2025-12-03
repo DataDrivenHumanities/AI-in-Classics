@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ορτη	ERROR: Nothing found with those parameters	ορται
+1	Genitive	ορτη	ERROR: Nothing found with those parameters	ορται
+2	Dative	ορτη	ERROR: Nothing found with those parameters	ορτησι
+3	Accusative	ορτην	ERROR: Nothing found with those parameters	ορτας
+4	Vocative	ορτη	ERROR: Nothing found with those parameters	ορται

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	διαγνωσις	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+1	Genitive	διαγνωσι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+2	Dative	διαγνωσι	ERROR: Nothing found with those parameters	διαγνωσεσιν
+3	Accusative	διαγνωσιν	ERROR: Nothing found with those parameters	διαγνωσις
+4	Vocative	διαγνωσι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	θῡμος	ERROR: Nothing found with those parameters	θυμοι
+1	Genitive	θυμ	ERROR: Nothing found with those parameters	θυμοι
+2	Dative	θῡμω	ERROR: Nothing found with those parameters	θυμοις
+3	Accusative	θῡμον	ERROR: Nothing found with those parameters	θυμους
+4	Vocative	θυμ	ERROR: Nothing found with those parameters	θυμοι

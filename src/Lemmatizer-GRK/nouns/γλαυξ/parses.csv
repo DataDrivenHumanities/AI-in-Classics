@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	γλαυξ	ERROR: Nothing found with those parameters	γλαυκες
+1	Genitive	γλαυξ	ERROR: Nothing found with those parameters	γλαυκες
+2	Dative	γλαυχ	ERROR: Nothing found with those parameters	γλαυξιν
+3	Accusative	γλαυχ	ERROR: Nothing found with those parameters	γλαυκας
+4	Vocative	γλαυξ	ERROR: Nothing found with those parameters	γλαυκες

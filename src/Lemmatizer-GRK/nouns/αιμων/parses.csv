@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αιμων	ERROR: Nothing found with those parameters	αιμονες
+1	Genitive	αιμον	ERROR: Nothing found with those parameters	αιμονες
+2	Dative	αιμονι	ERROR: Nothing found with those parameters	αιμονεσσιν
+3	Accusative	αιμονα	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	αιμον	ERROR: Nothing found with those parameters	αιμονες

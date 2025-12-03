@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ελεγος	ERROR: Nothing found with those parameters	ελεγοι
+1	Genitive	ελεγ	ERROR: Nothing found with those parameters	ελεγοι
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ελεγοις
+3	Accusative	λεγον	ERROR: Nothing found with those parameters	ελεγους
+4	Vocative	ελεγ	ERROR: Nothing found with those parameters	ελεγοι

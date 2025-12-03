@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	διᾰμαρτια	ERROR: Nothing found with those parameters	διαμαρτια
+1	Genitive	διᾰμαρτια	ERROR: Nothing found with those parameters	διαμαρτια
+2	Dative	διαμαρτια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	διαμαρτιαν	ERROR: Nothing found with those parameters	διαμαρτιας
+4	Vocative	διᾰμαρτια	ERROR: Nothing found with those parameters	διαμαρτια

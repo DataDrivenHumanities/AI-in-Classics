@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βαρις	ERROR: Nothing found with those parameters	βαρης
+1	Genitive	βαρι	ERROR: Nothing found with those parameters	βαρης
+2	Dative	βαρη	ERROR: Nothing found with those parameters	βαρεσι
+3	Accusative	βαρεα	ERROR: Nothing found with those parameters	βαρις
+4	Vocative	βαρι	ERROR: Nothing found with those parameters	βαρης

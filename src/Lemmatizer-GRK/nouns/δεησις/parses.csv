@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δεησις	ERROR: Nothing found with those parameters	δεησεις
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	δεησεις
+2	Dative	δεηση	ERROR: Nothing found with those parameters	δεησεσι
+3	Accusative	δεησιν	ERROR: Nothing found with those parameters	δεησις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	δεησεις

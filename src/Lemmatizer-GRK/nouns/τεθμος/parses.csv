@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	τεθμος	ERROR: Nothing found with those parameters	θεσμα
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	θεσμα
+2	Dative	θεσμω	ERROR: Nothing found with those parameters	θεσμοις
+3	Accusative	τεθμον	ERROR: Nothing found with those parameters	θεσμα
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	θεσμα

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	διαρροη	ERROR: Nothing found with those parameters	διαρροαι
+1	Genitive	διαρροη	ERROR: Nothing found with those parameters	διαρροαι
+2	Dative	διαρροαι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	διαρροας
+4	Vocative	διαρροη	ERROR: Nothing found with those parameters	διαρροαι

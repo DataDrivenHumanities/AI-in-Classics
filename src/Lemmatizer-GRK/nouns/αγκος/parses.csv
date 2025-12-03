@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αγκος	ERROR: Nothing found with those parameters	αγκη
+1	Genitive	αγκος	ERROR: Nothing found with those parameters	αγκη
+2	Dative	αγκε	ERROR: Nothing found with those parameters	αγκεσι
+3	Accusative	αγκος	ERROR: Nothing found with those parameters	αγκη
+4	Vocative	αγκος	ERROR: Nothing found with those parameters	αγκη

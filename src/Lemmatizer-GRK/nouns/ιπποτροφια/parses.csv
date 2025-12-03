@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ιπποτροφια	ERROR: Nothing found with those parameters	ιπποτροφιαι
+1	Genitive	ιπποτροφια	ERROR: Nothing found with those parameters	ιπποτροφιαι
+2	Dative	ιπποτροφιαι	ERROR: Nothing found with those parameters	ιπποτροφιαις
+3	Accusative	ιπποτροφιαν	ERROR: Nothing found with those parameters	ιπποτροφιας
+4	Vocative	ιπποτροφια	ERROR: Nothing found with those parameters	ιπποτροφιαι

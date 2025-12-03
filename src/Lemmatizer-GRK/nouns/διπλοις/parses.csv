@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	διπλοις	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+1	Genitive	διπλοι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	διπλοισι
+3	Accusative	διπλοιν	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	διπλοι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δραπετα	ERROR: Nothing found with those parameters	δραπεται
+1	Genitive	δραπετα	ERROR: Nothing found with those parameters	δραπεται
+2	Dative	δραπεται	ERROR: Nothing found with those parameters	δρηπετησι
+3	Accusative	δρηπετην	ERROR: Nothing found with those parameters	δραπετας
+4	Vocative	δραπετα	ERROR: Nothing found with those parameters	δραπεται

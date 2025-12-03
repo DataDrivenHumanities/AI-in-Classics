@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ερευνα	ERROR: Nothing found with those parameters	ερευνα
+1	Genitive	ερευνα	ERROR: Nothing found with those parameters	ερευνα
+2	Dative	ερευνη	ERROR: Nothing found with those parameters	ερευνας
+3	Accusative	ερευναν	ERROR: Nothing found with those parameters	ερευνας
+4	Vocative	ερευνα	ERROR: Nothing found with those parameters	ερευνα

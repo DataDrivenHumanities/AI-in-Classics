@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εργμα	ERROR: Nothing found with those parameters	εργματ
+1	Genitive	εργμα	ERROR: Nothing found with those parameters	εργματ
+2	Dative	εργματ	ERROR: Nothing found with those parameters	εργμασι
+3	Accusative	εργμα	ERROR: Nothing found with those parameters	εργματ
+4	Vocative	εργμα	ERROR: Nothing found with those parameters	εργματ

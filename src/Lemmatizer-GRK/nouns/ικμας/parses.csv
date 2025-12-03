@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ικμας	ERROR: Nothing found with those parameters	ικμαδες
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ικμαδες
+2	Dative	ικμαδ	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ικμαδ	ERROR: Nothing found with those parameters	ικμαδας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ικμαδες

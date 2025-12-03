@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ηλιος	ERROR: Nothing found with those parameters	ηλιοι
+1	Genitive	ηελι	ERROR: Nothing found with those parameters	ηλιοι
+2	Dative	ηλιω	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ηλιον	ERROR: Nothing found with those parameters	αλιως
+4	Vocative	ηελι	ERROR: Nothing found with those parameters	ηλιοι

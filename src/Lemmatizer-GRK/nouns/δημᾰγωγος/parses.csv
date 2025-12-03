@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δημᾰγωγος	ERROR: Nothing found with those parameters	δημαγωγοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	δημαγωγοι
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	δημαγωγοις
+3	Accusative	δημαγωγον	ERROR: Nothing found with those parameters	δημαγωγους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	δημαγωγοι

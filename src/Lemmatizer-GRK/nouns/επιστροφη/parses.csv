@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	επιστροφη	ERROR: Nothing found with those parameters	επιστροφαι
+1	Genitive	επιστροφη	ERROR: Nothing found with those parameters	επιστροφαι
+2	Dative	επιστροφαι	ERROR: Nothing found with those parameters	επιστροφαις
+3	Accusative	επιστροφην	ERROR: Nothing found with those parameters	επιστροφας
+4	Vocative	επιστροφη	ERROR: Nothing found with those parameters	επιστροφαι

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ειρεσιη	ERROR: Nothing found with those parameters	ειρεσια
+1	Genitive	ειρεσιη	ERROR: Nothing found with those parameters	ειρεσια
+2	Dative	ειρεσιη	ERROR: Nothing found with those parameters	ειρεσιαις
+3	Accusative	ειρεσιην	ERROR: Nothing found with those parameters	ειρεσιας
+4	Vocative	ειρεσιη	ERROR: Nothing found with those parameters	ειρεσια

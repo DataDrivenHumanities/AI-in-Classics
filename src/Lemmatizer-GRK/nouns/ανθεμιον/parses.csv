@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ανθεμιον	ERROR: Nothing found with those parameters	ανθεμια
+1	Genitive	ανθεμιον	ERROR: Nothing found with those parameters	ανθεμια
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ανθεμιον	ERROR: Nothing found with those parameters	ανθεμια
+4	Vocative	ανθεμιον	ERROR: Nothing found with those parameters	ανθεμια

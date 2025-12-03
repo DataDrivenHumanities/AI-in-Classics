@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ευλογιᾱ	ERROR: Nothing found with those parameters	ευλογια
+1	Genitive	ευλογιᾱ	ERROR: Nothing found with those parameters	ευλογια
+2	Dative	ευλογιη	ERROR: Nothing found with those parameters	ευλογιαις
+3	Accusative	ευλογιαν	ERROR: Nothing found with those parameters	ευλογιας
+4	Vocative	ευλογιᾱ	ERROR: Nothing found with those parameters	ευλογια

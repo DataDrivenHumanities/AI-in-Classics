@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ανθρωπιον	ERROR: Nothing found with those parameters	ανθρωπια
+1	Genitive	ανθρωπιον	ERROR: Nothing found with those parameters	ανθρωπια
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ανθρωπισκοις
+3	Accusative	ανθρωπιον	ERROR: Nothing found with those parameters	ανθρωπια
+4	Vocative	ανθρωπιον	ERROR: Nothing found with those parameters	ανθρωπια

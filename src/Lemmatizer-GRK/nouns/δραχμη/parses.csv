@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δραχμη	ERROR: Nothing found with those parameters	δραχμαι
+1	Genitive	δραχμη	ERROR: Nothing found with those parameters	δραχμαι
+2	Dative	δραχμη	ERROR: Nothing found with those parameters	δραχμησι
+3	Accusative	δραχμην	ERROR: Nothing found with those parameters	δραχμᾱς
+4	Vocative	δραχμη	ERROR: Nothing found with those parameters	δραχμαι

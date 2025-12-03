@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ενταλμα	ERROR: Nothing found with those parameters	ενταλματα
+1	Genitive	ενταλμα	ERROR: Nothing found with those parameters	ενταλματα
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ενταλμα	ERROR: Nothing found with those parameters	ενταλματα
+4	Vocative	ενταλμα	ERROR: Nothing found with those parameters	ενταλματα

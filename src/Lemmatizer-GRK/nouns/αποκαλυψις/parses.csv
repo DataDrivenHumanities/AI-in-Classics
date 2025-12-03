@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αποκαλυψις	ERROR: Nothing found with those parameters	αποκαλυψεις
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αποκαλυψεις
+2	Dative	αποκαλυψει	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αποκαλυψιν	ERROR: Nothing found with those parameters	αποκαλυψις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αποκαλυψεις

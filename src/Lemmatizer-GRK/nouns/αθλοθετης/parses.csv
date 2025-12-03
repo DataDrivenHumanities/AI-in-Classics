@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αθλοθετης	ERROR: Nothing found with those parameters	αθλοθεται
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αθλοθεται
+2	Dative	αθλοθεται	ERROR: Nothing found with those parameters	αθλοθεταις
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αθλοθετας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αθλοθεται

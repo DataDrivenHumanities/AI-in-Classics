@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δεικηλον	ERROR: Nothing found with those parameters	δεικηλα
+1	Genitive	δεικηλον	ERROR: Nothing found with those parameters	δεικηλα
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	δεικηλον	ERROR: Nothing found with those parameters	δεικηλα
+4	Vocative	δεικηλον	ERROR: Nothing found with those parameters	δεικηλα

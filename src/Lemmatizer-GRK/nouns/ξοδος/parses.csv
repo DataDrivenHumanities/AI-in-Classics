@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ξοδος	ERROR: Nothing found with those parameters	εξοδοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εξοδοι
+2	Dative	εξοδω	ERROR: Nothing found with those parameters	εξοδοις
+3	Accusative	εξοδον	ERROR: Nothing found with those parameters	εξοδους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εξοδοι

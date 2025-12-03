@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εργᾰσῐα	ERROR: Nothing found with those parameters	εργασια
+1	Genitive	εργᾰσῐα	ERROR: Nothing found with those parameters	εργασια
+2	Dative	εργασια	ERROR: Nothing found with those parameters	εργασιαις
+3	Accusative	εργασιην	ERROR: Nothing found with those parameters	εργασιας
+4	Vocative	εργᾰσῐα	ERROR: Nothing found with those parameters	εργασια

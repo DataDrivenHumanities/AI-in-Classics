@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ενεργεια	ERROR: Nothing found with those parameters	ενεργεια
+1	Genitive	ενεργεια	ERROR: Nothing found with those parameters	ενεργεια
+2	Dative	ενεργεια	ERROR: Nothing found with those parameters	ενεργειαις
+3	Accusative	ενεργειαν	ERROR: Nothing found with those parameters	ενεργειας
+4	Vocative	ενεργεια	ERROR: Nothing found with those parameters	ενεργεια

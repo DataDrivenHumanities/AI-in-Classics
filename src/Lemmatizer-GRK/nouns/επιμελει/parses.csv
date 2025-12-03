@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	επιμελει	ERROR: Nothing found with those parameters	επιμελει
+1	Genitive	επιμελει	ERROR: Nothing found with those parameters	επιμελει
+2	Dative	επιμελει	ERROR: Nothing found with those parameters	επιμελειαις
+3	Accusative	επιμελειην	ERROR: Nothing found with those parameters	επιμεληιας
+4	Vocative	επιμελει	ERROR: Nothing found with those parameters	επιμελει

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ιπποσυνη	ERROR: Nothing found with those parameters	ιπποσυνα
+1	Genitive	ιπποσυνη	ERROR: Nothing found with those parameters	ιπποσυνα
+2	Dative	ιπποσυνη	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ιπποσυνην	ERROR: Nothing found with those parameters	ιπποσυνας
+4	Vocative	ιπποσυνη	ERROR: Nothing found with those parameters	ιπποσυνα

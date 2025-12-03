@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ασελγει	ERROR: Nothing found with those parameters	ασελγει
+1	Genitive	ασελγει	ERROR: Nothing found with those parameters	ασελγει
+2	Dative	ασελγει	ERROR: Nothing found with those parameters	ασελγειαις
+3	Accusative	ασελγειαν	ERROR: Nothing found with those parameters	ασελγειᾱς
+4	Vocative	ασελγει	ERROR: Nothing found with those parameters	ασελγει

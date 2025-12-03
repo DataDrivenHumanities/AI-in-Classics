@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ιδρῡσις	ERROR: Nothing found with those parameters	ιδρυσιες
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ιδρυσιες
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ιδρυσεσι
+3	Accusative	ιδρυσιν	ERROR: Nothing found with those parameters	ιδρῡσις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ιδρυσιες

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ερωτις	ERROR: Nothing found with those parameters	ερωτιδες
+1	Genitive	ερωτ	ERROR: Nothing found with those parameters	ερωτιδες
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ερωτιδα	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	ερωτ	ERROR: Nothing found with those parameters	ερωτιδες

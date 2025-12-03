@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ισθμιᾰς	ERROR: Nothing found with those parameters	ισθμιαδες
+1	Genitive	ισθμι	ERROR: Nothing found with those parameters	ισθμιαδες
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ισθμιαδεσσιν
+3	Accusative	ισθμιαδα	ERROR: Nothing found with those parameters	ισθμιαδας
+4	Vocative	ισθμι	ERROR: Nothing found with those parameters	ισθμιαδες

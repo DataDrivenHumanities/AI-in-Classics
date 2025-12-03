@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βυβλιδιον	ERROR: Nothing found with those parameters	βιβλιδια
+1	Genitive	βυβλιδιον	ERROR: Nothing found with those parameters	βιβλιδια
+2	Dative	βυβλιδιω	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	βυβλιδιον	ERROR: Nothing found with those parameters	βιβλιδια
+4	Vocative	βυβλιδιον	ERROR: Nothing found with those parameters	βιβλιδια

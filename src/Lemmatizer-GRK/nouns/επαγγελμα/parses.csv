@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	επαγγελμα	ERROR: Nothing found with those parameters	επαγγελματα
+1	Genitive	επαγγελμα	ERROR: Nothing found with those parameters	επαγγελματα
+2	Dative	επαγγελματι	ERROR: Nothing found with those parameters	επαγγελμασι
+3	Accusative	επαγγελμα	ERROR: Nothing found with those parameters	επαγγελματα
+4	Vocative	επαγγελμα	ERROR: Nothing found with those parameters	επαγγελματα

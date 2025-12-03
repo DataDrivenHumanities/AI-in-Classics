@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	γυμνᾰσιαρχια	ERROR: Nothing found with those parameters	γυμνασιαρχιαι
+1	Genitive	γυμνᾰσιαρχια	ERROR: Nothing found with those parameters	γυμνασιαρχιαι
+2	Dative	γυμνασιαρχιαι	ERROR: Nothing found with those parameters	γυμνασιαρχιαις
+3	Accusative	γυμνασιαρχιαν	ERROR: Nothing found with those parameters	γυμνασιαρχιας
+4	Vocative	γυμνᾰσιαρχια	ERROR: Nothing found with those parameters	γυμνασιαρχιαι

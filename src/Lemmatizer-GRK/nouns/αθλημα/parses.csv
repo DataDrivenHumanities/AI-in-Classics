@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αθλημα	ERROR: Nothing found with those parameters	αθληματα
+1	Genitive	αθλημα	ERROR: Nothing found with those parameters	αθληματα
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αθλημασιν
+3	Accusative	αθλημα	ERROR: Nothing found with those parameters	αθληματα
+4	Vocative	αθλημα	ERROR: Nothing found with those parameters	αθληματα

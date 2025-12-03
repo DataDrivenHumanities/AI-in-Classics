@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	επηρεια	ERROR: Nothing found with those parameters	επηρεια
+1	Genitive	επηρεια	ERROR: Nothing found with those parameters	επηρεια
+2	Dative	επηρεια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	επηρειαν	ERROR: Nothing found with those parameters	επηρειας
+4	Vocative	επηρεια	ERROR: Nothing found with those parameters	επηρεια

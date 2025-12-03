@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αγιστεια	ERROR: Nothing found with those parameters	αγιστειαι
+1	Genitive	αγιστεια	ERROR: Nothing found with those parameters	αγιστειαι
+2	Dative	αγιστειαι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αγιστειαν	ERROR: Nothing found with those parameters	αγιστειας
+4	Vocative	αγιστεια	ERROR: Nothing found with those parameters	αγιστειαι

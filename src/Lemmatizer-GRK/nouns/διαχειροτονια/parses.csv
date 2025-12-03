@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	διαχειροτονια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+1	Genitive	διαχειροτονια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	διαχειροτονιαν	ERROR: Nothing found with those parameters	διαχειροτονιας
+4	Vocative	διαχειροτονια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters

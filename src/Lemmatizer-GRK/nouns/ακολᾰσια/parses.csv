@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ακολᾰσια	ERROR: Nothing found with those parameters	ακολασια
+1	Genitive	ακολᾰσια	ERROR: Nothing found with those parameters	ακολασια
+2	Dative	ακολασια	ERROR: Nothing found with those parameters	ακολασιαις
+3	Accusative	ακολασιᾱν	ERROR: Nothing found with those parameters	ακολασιας
+4	Vocative	ακολᾰσια	ERROR: Nothing found with those parameters	ακολασια

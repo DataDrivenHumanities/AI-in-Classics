@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ευτρᾰπελια	ERROR: Nothing found with those parameters	ευτραπελια
+1	Genitive	ευτρᾰπελια	ERROR: Nothing found with those parameters	ευτραπελια
+2	Dative	ευτραπελια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ευτραπελιαν	ERROR: Nothing found with those parameters	ευτραπελιας
+4	Vocative	ευτρᾰπελια	ERROR: Nothing found with those parameters	ευτραπελια

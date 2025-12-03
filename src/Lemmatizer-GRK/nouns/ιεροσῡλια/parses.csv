@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ιεροσῡλια	ERROR: Nothing found with those parameters	ιεροσυλια
+1	Genitive	ιεροσῡλια	ERROR: Nothing found with those parameters	ιεροσυλια
+2	Dative	ιεροσυλια	ERROR: Nothing found with those parameters	ιεροσυλιαις
+3	Accusative	ιεροσυλιαν	ERROR: Nothing found with those parameters	ιεροσυλιας
+4	Vocative	ιεροσῡλια	ERROR: Nothing found with those parameters	ιεροσυλια

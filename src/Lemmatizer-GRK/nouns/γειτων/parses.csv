@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	γειτων	ERROR: Nothing found with those parameters	γειτονες
+1	Genitive	γειτον	ERROR: Nothing found with those parameters	γειτονες
+2	Dative	γειτον	ERROR: Nothing found with those parameters	γειτοσι
+3	Accusative	γειτον	ERROR: Nothing found with those parameters	γειτονας
+4	Vocative	γειτον	ERROR: Nothing found with those parameters	γειτονες

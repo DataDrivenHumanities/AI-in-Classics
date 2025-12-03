@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εσθημα	ERROR: Nothing found with those parameters	εσθηματα
+1	Genitive	εσθημα	ERROR: Nothing found with those parameters	εσθηματα
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εσθημασι
+3	Accusative	εσθημα	ERROR: Nothing found with those parameters	εσθηματα
+4	Vocative	εσθημα	ERROR: Nothing found with those parameters	εσθηματα

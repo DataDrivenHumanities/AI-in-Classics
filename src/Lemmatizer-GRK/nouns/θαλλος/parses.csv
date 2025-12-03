@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	θαλλος	ERROR: Nothing found with those parameters	θαλλοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	θαλλοι
+2	Dative	θαλλω	ERROR: Nothing found with those parameters	θαλλοις
+3	Accusative	θαλλον	ERROR: Nothing found with those parameters	θαλλους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	θαλλοι

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ᾰποικια	ERROR: Nothing found with those parameters	αποικια
+1	Genitive	ᾰποικια	ERROR: Nothing found with those parameters	αποικια
+2	Dative	αποικια	ERROR: Nothing found with those parameters	αποικιαις
+3	Accusative	αποικιην	ERROR: Nothing found with those parameters	αποικιας
+4	Vocative	ᾰποικια	ERROR: Nothing found with those parameters	αποικια

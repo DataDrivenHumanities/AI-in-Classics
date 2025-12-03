@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αλωπεκια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+1	Genitive	αλωπεκια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αλωπεκιας
+4	Vocative	αλωπεκια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters

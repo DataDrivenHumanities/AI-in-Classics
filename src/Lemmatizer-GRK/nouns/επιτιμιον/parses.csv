@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	επιτιμιον	ERROR: Nothing found with those parameters	επιτιμια
+1	Genitive	επιτιμιον	ERROR: Nothing found with those parameters	επιτιμια
+2	Dative	επιτιμιω	ERROR: Nothing found with those parameters	επιτιμιοις
+3	Accusative	επιτιμιον	ERROR: Nothing found with those parameters	επιτιμια
+4	Vocative	επιτιμιον	ERROR: Nothing found with those parameters	επιτιμια

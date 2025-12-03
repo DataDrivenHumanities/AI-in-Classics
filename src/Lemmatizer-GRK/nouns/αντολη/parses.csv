@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αντολη	ERROR: Nothing found with those parameters	αντολαι
+1	Genitive	αντολη	ERROR: Nothing found with those parameters	αντολαι
+2	Dative	αντολαι	ERROR: Nothing found with those parameters	ανατολαις
+3	Accusative	αντολιην	ERROR: Nothing found with those parameters	αντολας
+4	Vocative	αντολη	ERROR: Nothing found with those parameters	αντολαι

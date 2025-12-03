@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αδελφος	ERROR: Nothing found with those parameters	αδελφοι
+1	Genitive	ωδελφ	ERROR: Nothing found with those parameters	αδελφοι
+2	Dative	αδελφω	ERROR: Nothing found with those parameters	αδελφοις
+3	Accusative	αδελφον	ERROR: Nothing found with those parameters	αδελφους
+4	Vocative	ωδελφ	ERROR: Nothing found with those parameters	αδελφοι

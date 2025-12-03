@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ιαμβος	ERROR: Nothing found with those parameters	ιαμβοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ιαμβοι
+2	Dative	ιαμβω	ERROR: Nothing found with those parameters	ιαμβοις
+3	Accusative	ιαμβον	ERROR: Nothing found with those parameters	ιαμβους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ιαμβοι

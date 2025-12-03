@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αυλων	ERROR: Nothing found with those parameters	αυλωνες
+1	Genitive	αυλων	ERROR: Nothing found with those parameters	αυλωνες
+2	Dative	αυλων	ERROR: Nothing found with those parameters	αυλωσιν
+3	Accusative	αυλων	ERROR: Nothing found with those parameters	αυλωνας
+4	Vocative	αυλων	ERROR: Nothing found with those parameters	αυλωνες

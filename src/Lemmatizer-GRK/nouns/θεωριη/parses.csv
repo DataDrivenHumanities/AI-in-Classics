@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	θεωριη	ERROR: Nothing found with those parameters	θεωρια
+1	Genitive	θεωριη	ERROR: Nothing found with those parameters	θεωρια
+2	Dative	θεωρια	ERROR: Nothing found with those parameters	θεωριαις
+3	Accusative	θεωριαν	ERROR: Nothing found with those parameters	θεωριας
+4	Vocative	θεωριη	ERROR: Nothing found with those parameters	θεωρια

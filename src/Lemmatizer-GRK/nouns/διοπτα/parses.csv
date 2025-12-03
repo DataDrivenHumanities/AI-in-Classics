@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	διοπτα	ERROR: Nothing found with those parameters	διοπται
+1	Genitive	διοπτα	ERROR: Nothing found with those parameters	διοπται
+2	Dative	διοπται	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	διοπτας
+4	Vocative	διοπτα	ERROR: Nothing found with those parameters	διοπται

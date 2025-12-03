@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	επιμελητα	ERROR: Nothing found with those parameters	επιμεληται
+1	Genitive	επιμελητα	ERROR: Nothing found with those parameters	επιμεληται
+2	Dative	επιμελητη	ERROR: Nothing found with those parameters	επιμεληταις
+3	Accusative	επιμελητην	ERROR: Nothing found with those parameters	επιμελητας
+4	Vocative	επιμελητα	ERROR: Nothing found with those parameters	επιμεληται

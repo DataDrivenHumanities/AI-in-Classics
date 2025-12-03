@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αλημων	ERROR: Nothing found with those parameters	αλημονες
+1	Genitive	αλημων	ERROR: Nothing found with those parameters	αλημονες
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	αλημων	ERROR: Nothing found with those parameters	αλημονες

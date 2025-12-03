@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βορβορος	ERROR: Nothing found with those parameters	βορβοροι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βορβοροι
+2	Dative	βορβορω	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	βορβορον	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βορβοροι

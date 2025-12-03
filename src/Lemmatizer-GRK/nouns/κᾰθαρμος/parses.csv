@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	κᾰθαρμος	ERROR: Nothing found with those parameters	καθαρμοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	καθαρμοι
+2	Dative	καθαρμω	ERROR: Nothing found with those parameters	καθαρμοις
+3	Accusative	καθαρμον	ERROR: Nothing found with those parameters	καθαρμους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	καθαρμοι

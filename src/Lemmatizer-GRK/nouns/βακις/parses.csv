@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βακις	ERROR: Nothing found with those parameters	βακιδες
+1	Genitive	βακι	ERROR: Nothing found with those parameters	βακιδες
+2	Dative	βακιδι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	βακιν	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	βακι	ERROR: Nothing found with those parameters	βακιδες

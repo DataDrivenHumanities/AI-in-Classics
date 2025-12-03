@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ασσυριη	ERROR: Nothing found with those parameters	ασσυρια
+1	Genitive	ασσυριη	ERROR: Nothing found with those parameters	ασσυρια
+2	Dative	ασσυριη	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ασσυριην	ERROR: Nothing found with those parameters	ασσυριας
+4	Vocative	ασσυριη	ERROR: Nothing found with those parameters	ασσυρια

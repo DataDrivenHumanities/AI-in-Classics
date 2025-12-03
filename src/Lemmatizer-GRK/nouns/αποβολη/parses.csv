@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αποβολη	ERROR: Nothing found with those parameters	αποβολαι
+1	Genitive	αποβολη	ERROR: Nothing found with those parameters	αποβολαι
+2	Dative	αποβολη	ERROR: Nothing found with those parameters	αποβολαις
+3	Accusative	αποβολην	ERROR: Nothing found with those parameters	αποβολας
+4	Vocative	αποβολη	ERROR: Nothing found with those parameters	αποβολαι

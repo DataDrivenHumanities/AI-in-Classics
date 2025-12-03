@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εγγονος	ERROR: Nothing found with those parameters	εγγονοι
+1	Genitive	εγγονε	ERROR: Nothing found with those parameters	εγγονοι
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εγγονοις
+3	Accusative	εγγονον	ERROR: Nothing found with those parameters	εγγονους
+4	Vocative	εγγονε	ERROR: Nothing found with those parameters	εγγονοι

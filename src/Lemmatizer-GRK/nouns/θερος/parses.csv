@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	θερος	ERROR: Nothing found with those parameters	θερη
+1	Genitive	θερος	ERROR: Nothing found with those parameters	θερη
+2	Dative	θερει	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	θερος	ERROR: Nothing found with those parameters	θερη
+4	Vocative	θερος	ERROR: Nothing found with those parameters	θερη

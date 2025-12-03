@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ιγνυς	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+2	Dative	ιγνυι	ERROR: Nothing found with those parameters	ιγνυσι
+3	Accusative	ιγνυν	ERROR: Nothing found with those parameters	ιγνυς
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters

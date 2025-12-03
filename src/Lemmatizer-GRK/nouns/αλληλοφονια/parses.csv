@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αλληλοφονια	ERROR: Nothing found with those parameters	αλλαλοφονια
+1	Genitive	αλληλοφονια	ERROR: Nothing found with those parameters	αλλαλοφονια
+2	Dative	αλλαλοφονια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	αλληλοφονια	ERROR: Nothing found with those parameters	αλλαλοφονια

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	θριγκος	ERROR: Nothing found with those parameters	θριγκοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	θριγκοι
+2	Dative	θριγκω	ERROR: Nothing found with those parameters	θριγκοις
+3	Accusative	θριγκον	ERROR: Nothing found with those parameters	θριγκους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	θριγκοι

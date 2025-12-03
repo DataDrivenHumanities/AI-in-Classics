@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	επαρχια	ERROR: Nothing found with those parameters	επαρχια
+1	Genitive	επαρχια	ERROR: Nothing found with those parameters	επαρχια
+2	Dative	επαρχια	ERROR: Nothing found with those parameters	επαρχιαις
+3	Accusative	επαρχιαν	ERROR: Nothing found with those parameters	επαρχιας
+4	Vocative	επαρχια	ERROR: Nothing found with those parameters	επαρχια

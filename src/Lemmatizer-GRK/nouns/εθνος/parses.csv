@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εθνος	ERROR: Nothing found with those parameters	εθνη
+1	Genitive	εθνος	ERROR: Nothing found with those parameters	εθνη
+2	Dative	εθνε	ERROR: Nothing found with those parameters	εθνεσι
+3	Accusative	εθνος	ERROR: Nothing found with those parameters	εθνη
+4	Vocative	εθνος	ERROR: Nothing found with those parameters	εθνη

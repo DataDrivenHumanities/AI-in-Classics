@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ηγετα	ERROR: Nothing found with those parameters	ηγεται
+1	Genitive	ηγετα	ERROR: Nothing found with those parameters	ηγεται
+2	Dative	ηγεται	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	ηγετα	ERROR: Nothing found with those parameters	ηγεται

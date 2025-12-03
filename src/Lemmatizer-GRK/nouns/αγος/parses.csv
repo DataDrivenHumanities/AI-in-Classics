@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αγος	ERROR: Nothing found with those parameters	διασφαγες
+1	Genitive	διασφαξ	ERROR: Nothing found with those parameters	διασφαγες
+2	Dative	διασφαγι	ERROR: Nothing found with those parameters	αγοισιν
+3	Accusative	διασφαγα	ERROR: Nothing found with those parameters	διασφαγας
+4	Vocative	διασφαξ	ERROR: Nothing found with those parameters	διασφαγες

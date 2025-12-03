@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εμπορευμα	ERROR: Nothing found with those parameters	εμπορευματα
+1	Genitive	εμπορευμα	ERROR: Nothing found with those parameters	εμπορευματα
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εμπορευμασιν
+3	Accusative	εμπορευμα	ERROR: Nothing found with those parameters	εμπορευματα
+4	Vocative	εμπορευμα	ERROR: Nothing found with those parameters	εμπορευματα

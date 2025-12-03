@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αλευρον	ERROR: Nothing found with those parameters	αλευρα
+1	Genitive	αλευρον	ERROR: Nothing found with those parameters	αλευρα
+2	Dative	αλευρω	ERROR: Nothing found with those parameters	αλευροις
+3	Accusative	αλευρον	ERROR: Nothing found with those parameters	αλευρα
+4	Vocative	αλευρον	ERROR: Nothing found with those parameters	αλευρα

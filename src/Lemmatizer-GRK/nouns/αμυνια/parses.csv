@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αμυνια	ERROR: Nothing found with those parameters	αμυνια
+1	Genitive	αμυνια	ERROR: Nothing found with those parameters	αμυνια
+2	Dative	αμυνια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αμυνιαν	ERROR: Nothing found with those parameters	αμυνιας
+4	Vocative	αμυνια	ERROR: Nothing found with those parameters	αμυνια

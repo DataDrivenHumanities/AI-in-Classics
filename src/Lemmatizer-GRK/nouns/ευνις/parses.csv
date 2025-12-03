@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ευνις	ERROR: Nothing found with those parameters	ευνιδες
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ευνιδες
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ευνιν	ERROR: Nothing found with those parameters	ευνιδας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ευνιδες

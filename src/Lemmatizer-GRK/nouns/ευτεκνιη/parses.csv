@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ευτεκνιη	ERROR: Nothing found with those parameters	ευτεκνια
+1	Genitive	ευτεκνιη	ERROR: Nothing found with those parameters	ευτεκνια
+2	Dative	ευτεκνια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ευτεκνιαν	ERROR: Nothing found with those parameters	ευτεκνιας
+4	Vocative	ευτεκνιη	ERROR: Nothing found with those parameters	ευτεκνια

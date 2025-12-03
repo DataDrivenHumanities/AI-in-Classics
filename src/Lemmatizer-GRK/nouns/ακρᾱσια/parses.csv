@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ακρᾱσια	ERROR: Nothing found with those parameters	ακρασια
+1	Genitive	ακρᾱσια	ERROR: Nothing found with those parameters	ακρασια
+2	Dative	ακρασια	ERROR: Nothing found with those parameters	ακρασιαις
+3	Accusative	ακρασιαν	ERROR: Nothing found with those parameters	ακρασιας
+4	Vocative	ακρᾱσια	ERROR: Nothing found with those parameters	ακρασια

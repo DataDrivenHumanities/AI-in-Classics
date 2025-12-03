@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δωλος	ERROR: Nothing found with those parameters	δουλα
+1	Genitive	δωλε	ERROR: Nothing found with those parameters	δουλα
+2	Dative	δωλω	ERROR: Nothing found with those parameters	δουλοις
+3	Accusative	δουλον	ERROR: Nothing found with those parameters	δουλας
+4	Vocative	δωλε	ERROR: Nothing found with those parameters	δουλα

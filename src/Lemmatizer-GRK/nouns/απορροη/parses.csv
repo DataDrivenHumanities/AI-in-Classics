@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	απορροη	ERROR: Nothing found with those parameters	απορροαι
+1	Genitive	απορροη	ERROR: Nothing found with those parameters	απορροαι
+2	Dative	απορροαι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	απορροην	ERROR: Nothing found with those parameters	απορροας
+4	Vocative	απορροη	ERROR: Nothing found with those parameters	απορροαι

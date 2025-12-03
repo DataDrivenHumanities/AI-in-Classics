@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δερη	ERROR: Nothing found with those parameters	δερα
+1	Genitive	δερη	ERROR: Nothing found with those parameters	δερα
+2	Dative	δερη	ERROR: Nothing found with those parameters	δεραις
+3	Accusative	δερην	ERROR: Nothing found with those parameters	δερας
+4	Vocative	δερη	ERROR: Nothing found with those parameters	δερα

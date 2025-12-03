@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αγκιστριον	ERROR: Nothing found with those parameters	ταγκιστρια
+1	Genitive	αγκιστριον	ERROR: Nothing found with those parameters	ταγκιστρια
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αγκιστριον	ERROR: Nothing found with those parameters	ταγκιστρια
+4	Vocative	αγκιστριον	ERROR: Nothing found with those parameters	ταγκιστρια

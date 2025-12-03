@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βασμος	ERROR: Nothing found with those parameters	βαθμοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βαθμοι
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βαθμοις
+3	Accusative	βαθμον	ERROR: Nothing found with those parameters	βαθμους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βαθμοι

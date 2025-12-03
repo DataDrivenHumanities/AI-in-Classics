@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δημηγορος	ERROR: Nothing found with those parameters	δημηγοροι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	δημηγοροι
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	δημηγοροις
+3	Accusative	δημηγορον	ERROR: Nothing found with those parameters	δημηγορους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	δημηγοροι

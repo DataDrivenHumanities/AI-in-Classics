@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	κᾰκοπους	ERROR: Nothing found with those parameters	κακοποδα
+1	Genitive	κᾰκοπους	ERROR: Nothing found with those parameters	κακοποδα
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	κακοποδα	ERROR: Nothing found with those parameters	κακοποδα
+4	Vocative	κᾰκοπους	ERROR: Nothing found with those parameters	κακοποδα

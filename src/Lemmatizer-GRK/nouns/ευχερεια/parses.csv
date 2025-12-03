@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ευχερεια	ERROR: Nothing found with those parameters	ευχερεια
+1	Genitive	ευχερεια	ERROR: Nothing found with those parameters	ευχερεια
+2	Dative	ευχερεια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ευχερειαν	ERROR: Nothing found with those parameters	ευχερειας
+4	Vocative	ευχερεια	ERROR: Nothing found with those parameters	ευχερεια

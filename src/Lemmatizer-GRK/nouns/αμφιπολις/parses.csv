@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αμφιπολις	ERROR: Nothing found with those parameters	αμφιπολεις
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αμφιπολεις
+2	Dative	αμφιπολει	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αμφιπολιν	ERROR: Nothing found with those parameters	αμφιπολις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αμφιπολεις

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δορη	ERROR: Nothing found with those parameters	δορα
+1	Genitive	δορη	ERROR: Nothing found with those parameters	δορα
+2	Dative	δορα	ERROR: Nothing found with those parameters	δοραις
+3	Accusative	δορην	ERROR: Nothing found with those parameters	δορας
+4	Vocative	δορη	ERROR: Nothing found with those parameters	δορα

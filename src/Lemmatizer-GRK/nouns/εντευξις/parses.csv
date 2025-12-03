@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εντευξις	ERROR: Nothing found with those parameters	εντευξεις
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εντευξεις
+2	Dative	εντευξη	ERROR: Nothing found with those parameters	εντευξεσι
+3	Accusative	εντευξιν	ERROR: Nothing found with those parameters	εντευξις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εντευξεις

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αγγᾰρος	ERROR: Nothing found with those parameters	αγγαροι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αγγαροι
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αγγαρον	ERROR: Nothing found with those parameters	αγγαρους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αγγαροι

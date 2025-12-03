@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	επαγγελια	ERROR: Nothing found with those parameters	επαγγελια
+1	Genitive	επαγγελια	ERROR: Nothing found with those parameters	επαγγελια
+2	Dative	επαγγελια	ERROR: Nothing found with those parameters	επαγγελιαις
+3	Accusative	επαγγελιαν	ERROR: Nothing found with those parameters	επαγγελιας
+4	Vocative	επαγγελια	ERROR: Nothing found with those parameters	επαγγελια

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αδολεσχης	ERROR: Nothing found with those parameters	αδολεσχαι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αδολεσχαι
+2	Dative	αδολεσχη	ERROR: Nothing found with those parameters	αδολεσχαις
+3	Accusative	αδολεσχην	ERROR: Nothing found with those parameters	αδολεσχας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αδολεσχαι

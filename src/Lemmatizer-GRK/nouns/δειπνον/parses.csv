@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δειπνον	ERROR: Nothing found with those parameters	δειπν
+1	Genitive	δειπνον	ERROR: Nothing found with those parameters	δειπν
+2	Dative	δειπνω	ERROR: Nothing found with those parameters	δειπνοις
+3	Accusative	δειπνον	ERROR: Nothing found with those parameters	δειπν
+4	Vocative	δειπνον	ERROR: Nothing found with those parameters	δειπν

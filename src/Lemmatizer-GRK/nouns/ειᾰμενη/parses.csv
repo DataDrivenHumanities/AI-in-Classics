@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ειᾰμενη	ERROR: Nothing found with those parameters	ειαμεναι
+1	Genitive	ειᾰμενη	ERROR: Nothing found with those parameters	ειαμεναι
+2	Dative	ειαμενη	ERROR: Nothing found with those parameters	ειαμενησι
+3	Accusative	ειαμενην	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	ειᾰμενη	ERROR: Nothing found with those parameters	ειαμεναι

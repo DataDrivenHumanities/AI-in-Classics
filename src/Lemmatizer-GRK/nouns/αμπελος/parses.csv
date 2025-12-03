@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αμπελος	ERROR: Nothing found with those parameters	αμπελια
+1	Genitive	αμπελιον	ERROR: Nothing found with those parameters	αμπελια
+2	Dative	αμπελω	ERROR: Nothing found with those parameters	αμπελοις
+3	Accusative	αμπελον	ERROR: Nothing found with those parameters	αμπελια
+4	Vocative	αμπελιον	ERROR: Nothing found with those parameters	αμπελια

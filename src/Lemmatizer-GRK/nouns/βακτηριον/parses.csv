@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βακτηριον	ERROR: Nothing found with those parameters	βακτηρια
+1	Genitive	βακτηριον	ERROR: Nothing found with those parameters	βακτηρια
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βακτηριοις
+3	Accusative	βακτηριον	ERROR: Nothing found with those parameters	βακτηρια
+4	Vocative	βακτηριον	ERROR: Nothing found with those parameters	βακτηρια

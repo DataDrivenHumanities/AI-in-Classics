@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αξων	ERROR: Nothing found with those parameters	αξονες
+1	Genitive	αξον	ERROR: Nothing found with those parameters	αξονες
+2	Dative	αξονι	ERROR: Nothing found with those parameters	αξοσι
+3	Accusative	αξονα	ERROR: Nothing found with those parameters	αξονας
+4	Vocative	αξον	ERROR: Nothing found with those parameters	αξονες

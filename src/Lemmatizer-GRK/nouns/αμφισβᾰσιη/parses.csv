@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αμφισβᾰσιη	ERROR: Nothing found with those parameters	αμφισβητησεις
+1	Genitive	αμφισβᾰσιη	ERROR: Nothing found with those parameters	αμφισβητησεις
+2	Dative	αμφισβητηση	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αμφισβητησιν	ERROR: Nothing found with those parameters	αμφισβᾰσιας
+4	Vocative	αμφισβᾰσιη	ERROR: Nothing found with those parameters	αμφισβητησεις

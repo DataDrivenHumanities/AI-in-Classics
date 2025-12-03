@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δομος	ERROR: Nothing found with those parameters	δομοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	δομοι
+2	Dative	δομω	ERROR: Nothing found with those parameters	δομοις
+3	Accusative	δομον	ERROR: Nothing found with those parameters	δομους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	δομοι

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ζωγραφος	ERROR: Nothing found with those parameters	ζωγραφοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ζωγραφοι
+2	Dative	ζωγραφω	ERROR: Nothing found with those parameters	ζωγραφοις
+3	Accusative	ζωγραφον	ERROR: Nothing found with those parameters	ζωγραφους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ζωγραφοι

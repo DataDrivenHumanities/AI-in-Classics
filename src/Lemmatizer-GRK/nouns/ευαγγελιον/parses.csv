@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ευαγγελιον	ERROR: Nothing found with those parameters	ευαγγελια
+1	Genitive	ευαγγελιον	ERROR: Nothing found with those parameters	ευαγγελια
+2	Dative	ευαγγελιω	ERROR: Nothing found with those parameters	ευαγγελιοις
+3	Accusative	ευαγγελιον	ERROR: Nothing found with those parameters	ευαγγελια
+4	Vocative	ευαγγελιον	ERROR: Nothing found with those parameters	ευαγγελια

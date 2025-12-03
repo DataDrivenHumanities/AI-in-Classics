@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αραχνιον	ERROR: Nothing found with those parameters	αραχνια
+1	Genitive	αραχνιον	ERROR: Nothing found with those parameters	αραχνια
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αραχνιοις
+3	Accusative	αραχνιον	ERROR: Nothing found with those parameters	αραχνια
+4	Vocative	αραχνιον	ERROR: Nothing found with those parameters	αραχνια

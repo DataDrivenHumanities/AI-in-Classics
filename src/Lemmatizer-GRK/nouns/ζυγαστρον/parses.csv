@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ζυγαστρον	ERROR: Nothing found with those parameters	ζυγαστρα
+1	Genitive	ζυγαστρον	ERROR: Nothing found with those parameters	ζυγαστρα
+2	Dative	ζυγαστρω	ERROR: Nothing found with those parameters	ζυγαστροις
+3	Accusative	ζυγαστρον	ERROR: Nothing found with those parameters	ζυγαστρα
+4	Vocative	ζυγαστρον	ERROR: Nothing found with those parameters	ζυγαστρα

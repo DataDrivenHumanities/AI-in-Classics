@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	διοδος	ERROR: Nothing found with those parameters	διοδοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	διοδοι
+2	Dative	διοδω	ERROR: Nothing found with those parameters	διοδοις
+3	Accusative	διοδον	ERROR: Nothing found with those parameters	δῐοδους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	διοδοι

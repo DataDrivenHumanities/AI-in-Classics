@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αντιβλεψις	ERROR: Nothing found with those parameters	αντιβλεψεις
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αντιβλεψεις
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αντιβλεψις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αντιβλεψεις

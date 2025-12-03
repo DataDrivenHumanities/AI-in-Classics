@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ασωτια	ERROR: Nothing found with those parameters	ασωτια
+1	Genitive	ασωτια	ERROR: Nothing found with those parameters	ασωτια
+2	Dative	ασωτια	ERROR: Nothing found with those parameters	ασωτιαις
+3	Accusative	ασωτιαν	ERROR: Nothing found with those parameters	ασωτιας
+4	Vocative	ασωτια	ERROR: Nothing found with those parameters	ασωτια

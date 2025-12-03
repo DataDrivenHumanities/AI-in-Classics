@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	κακη	ERROR: Nothing found with those parameters	κακ
+1	Genitive	κακη	ERROR: Nothing found with those parameters	κακ
+2	Dative	κακ	ERROR: Nothing found with those parameters	κακης
+3	Accusative	κακην	ERROR: Nothing found with those parameters	κακας
+4	Vocative	κακη	ERROR: Nothing found with those parameters	κακ

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βεβαιωσις	ERROR: Nothing found with those parameters	βεβαιωσεις
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βεβαιωσεις
+2	Dative	βεβαιωση	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	βεβαιωσιν	ERROR: Nothing found with those parameters	βεβαιωσις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βεβαιωσεις

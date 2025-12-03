@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εμπις	ERROR: Nothing found with those parameters	εμπιδες
+1	Genitive	αμπι	ERROR: Nothing found with those parameters	εμπιδες
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	εμπιδα	ERROR: Nothing found with those parameters	εμπιδας
+4	Vocative	αμπι	ERROR: Nothing found with those parameters	εμπιδες

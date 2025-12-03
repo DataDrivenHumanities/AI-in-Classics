@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βοσκη	ERROR: Nothing found with those parameters	βοσκ
+1	Genitive	βοσκη	ERROR: Nothing found with those parameters	βοσκ
+2	Dative	βοσκ	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	βοσκην	ERROR: Nothing found with those parameters	βοσκας
+4	Vocative	βοσκη	ERROR: Nothing found with those parameters	βοσκ

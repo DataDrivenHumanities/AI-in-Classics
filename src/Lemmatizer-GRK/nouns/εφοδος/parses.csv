@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εφοδος	ERROR: Nothing found with those parameters	εφοδοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εφοδοι
+2	Dative	εφοδω	ERROR: Nothing found with those parameters	εφοδοις
+3	Accusative	εφοδον	ERROR: Nothing found with those parameters	εφοδους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εφοδοι

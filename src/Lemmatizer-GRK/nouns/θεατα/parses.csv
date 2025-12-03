@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	θεατα	ERROR: Nothing found with those parameters	θεηται
+1	Genitive	θεατη	ERROR: Nothing found with those parameters	θεηται
+2	Dative	θεηται	ERROR: Nothing found with those parameters	θεαταις
+3	Accusative	θεατην	ERROR: Nothing found with those parameters	θεᾱτᾱς
+4	Vocative	θεατη	ERROR: Nothing found with those parameters	θεηται

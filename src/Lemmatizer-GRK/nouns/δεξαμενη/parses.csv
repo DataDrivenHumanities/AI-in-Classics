@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δεξαμενη	ERROR: Nothing found with those parameters	δεξαμεναι
+1	Genitive	δεξαμενη	ERROR: Nothing found with those parameters	δεξαμεναι
+2	Dative	δεξαμεναι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	δεξαμενην	ERROR: Nothing found with those parameters	δεξαμενας
+4	Vocative	δεξαμενη	ERROR: Nothing found with those parameters	δεξαμεναι

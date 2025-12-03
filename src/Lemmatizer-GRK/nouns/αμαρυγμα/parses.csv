@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αμαρυγμα	ERROR: Nothing found with those parameters	αμαρυγματ
+1	Genitive	αμαρυγμα	ERROR: Nothing found with those parameters	αμαρυγματ
+2	Dative	αμαρυγματ	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αμαρυγμα	ERROR: Nothing found with those parameters	αμαρυγματ
+4	Vocative	αμαρυγμα	ERROR: Nothing found with those parameters	αμαρυγματ

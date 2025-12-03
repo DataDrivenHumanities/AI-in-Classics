@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ζητησις	ERROR: Nothing found with those parameters	ζητησεις
+1	Genitive	ζητησι	ERROR: Nothing found with those parameters	ζητησεις
+2	Dative	ζητησι	ERROR: Nothing found with those parameters	ζητησεσιν
+3	Accusative	ζητησιν	ERROR: Nothing found with those parameters	ζητησις
+4	Vocative	ζητησι	ERROR: Nothing found with those parameters	ζητησεις

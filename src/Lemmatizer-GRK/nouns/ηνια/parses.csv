@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ηνια	ERROR: Nothing found with those parameters	ηνι
+1	Genitive	ηνια	ERROR: Nothing found with those parameters	ηνι
+2	Dative	ηνι	ERROR: Nothing found with those parameters	ηνιαις
+3	Accusative	ηνιαν	ERROR: Nothing found with those parameters	ηνιᾱς
+4	Vocative	ηνια	ERROR: Nothing found with those parameters	ηνι

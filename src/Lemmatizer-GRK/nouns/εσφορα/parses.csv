@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εσφορα	ERROR: Nothing found with those parameters	εσφοραι
+1	Genitive	εσφορα	ERROR: Nothing found with those parameters	εσφοραι
+2	Dative	εσφοραι	ERROR: Nothing found with those parameters	εσφοραις
+3	Accusative	εσφοραν	ERROR: Nothing found with those parameters	εσφορας
+4	Vocative	εσφορα	ERROR: Nothing found with those parameters	εσφοραι

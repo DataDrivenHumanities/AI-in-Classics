@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εγκαυμα	ERROR: Nothing found with those parameters	εγκαυματα
+1	Genitive	εγκαυμα	ERROR: Nothing found with those parameters	εγκαυματα
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	εγκαυμα	ERROR: Nothing found with those parameters	εγκαυματα
+4	Vocative	εγκαυμα	ERROR: Nothing found with those parameters	εγκαυματα

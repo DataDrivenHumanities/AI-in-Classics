@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βουλησις	ERROR: Nothing found with those parameters	βουλησεις
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βουλησεις
+2	Dative	βουληση	ERROR: Nothing found with those parameters	βουλησεσι
+3	Accusative	βουλησιν	ERROR: Nothing found with those parameters	βουλησις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βουλησεις

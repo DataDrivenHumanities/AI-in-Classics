@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βλασφημια	ERROR: Nothing found with those parameters	βλασφημια
+1	Genitive	βλασφημια	ERROR: Nothing found with those parameters	βλασφημια
+2	Dative	βλασφημια	ERROR: Nothing found with those parameters	βλασφημιαις
+3	Accusative	βλασφημιαν	ERROR: Nothing found with those parameters	βλασφημιας
+4	Vocative	βλασφημια	ERROR: Nothing found with those parameters	βλασφημια

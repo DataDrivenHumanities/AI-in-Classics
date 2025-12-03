@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αληθει	ERROR: Nothing found with those parameters	αληθει
+1	Genitive	αληθει	ERROR: Nothing found with those parameters	αληθει
+2	Dative	αληθει	ERROR: Nothing found with those parameters	αληθειαις
+3	Accusative	αληθειην	ERROR: Nothing found with those parameters	αληθειᾱς
+4	Vocative	αληθει	ERROR: Nothing found with those parameters	αληθει

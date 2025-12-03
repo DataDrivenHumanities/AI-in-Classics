@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ευφωνια	ERROR: Nothing found with those parameters	ευφωνια
+1	Genitive	ευφωνια	ERROR: Nothing found with those parameters	ευφωνια
+2	Dative	ευφωνια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ευφωνιαν	ERROR: Nothing found with those parameters	ευφωνιας
+4	Vocative	ευφωνια	ERROR: Nothing found with those parameters	ευφωνια

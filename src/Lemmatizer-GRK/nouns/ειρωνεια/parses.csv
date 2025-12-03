@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ειρωνεια	ERROR: Nothing found with those parameters	ειρωνεια
+1	Genitive	ειρωνεια	ERROR: Nothing found with those parameters	ειρωνεια
+2	Dative	ειρωνεια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ειρωνειαν	ERROR: Nothing found with those parameters	ειρωνειας
+4	Vocative	ειρωνεια	ERROR: Nothing found with those parameters	ειρωνεια

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	κᾰθαρσις	ERROR: Nothing found with those parameters	καθαρσιες
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	καθαρσιες
+2	Dative	καθαρσι	ERROR: Nothing found with those parameters	καθαρσεσι
+3	Accusative	καθαρσιν	ERROR: Nothing found with those parameters	κᾰθαρσις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	καθαρσιες

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ελαιον	ERROR: Nothing found with those parameters	ελαα
+1	Genitive	ελαιον	ERROR: Nothing found with those parameters	ελαα
+2	Dative	ελαιω	ERROR: Nothing found with those parameters	ελαιοις
+3	Accusative	ελαιον	ERROR: Nothing found with those parameters	ελαα
+4	Vocative	ελαιον	ERROR: Nothing found with those parameters	ελαα

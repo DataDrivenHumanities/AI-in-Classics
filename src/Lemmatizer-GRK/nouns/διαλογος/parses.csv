@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	διαλογος	ERROR: Nothing found with those parameters	διαλογοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	διαλογοι
+2	Dative	διαλογω	ERROR: Nothing found with those parameters	διαλογοις
+3	Accusative	διαλογον	ERROR: Nothing found with those parameters	διαλογους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	διαλογοι

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ανεπιστημοσυνη	ERROR: Nothing found with those parameters	ανεπιστημοσυναι
+1	Genitive	ανεπιστημοσυνη	ERROR: Nothing found with those parameters	ανεπιστημοσυναι
+2	Dative	ανεπιστημοσυνη	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ανεπιστημοσυνην	ERROR: Nothing found with those parameters	ανεπιστημοσυνας
+4	Vocative	ανεπιστημοσυνη	ERROR: Nothing found with those parameters	ανεπιστημοσυναι

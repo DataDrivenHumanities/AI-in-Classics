@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ανθολκη	ERROR: Nothing found with those parameters	ανθολκαι
+1	Genitive	ανθολκη	ERROR: Nothing found with those parameters	ανθολκαι
+2	Dative	ανθολκαι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+4	Vocative	ανθολκη	ERROR: Nothing found with those parameters	ανθολκαι

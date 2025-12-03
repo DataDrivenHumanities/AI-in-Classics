@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ικτιν	ERROR: Nothing found with those parameters	ικτινα
+1	Genitive	ικτιν	ERROR: Nothing found with those parameters	ικτινα
+2	Dative	ικτινω	ERROR: Nothing found with those parameters	ικτισι
+3	Accusative	ικτινα	ERROR: Nothing found with those parameters	ικτινα
+4	Vocative	ικτιν	ERROR: Nothing found with those parameters	ικτινα

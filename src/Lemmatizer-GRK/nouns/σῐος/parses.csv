@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	σῐος	ERROR: Nothing found with those parameters	θεοι
+1	Genitive	σι	ERROR: Nothing found with those parameters	θεοι
+2	Dative	σιω	ERROR: Nothing found with those parameters	θεοις
+3	Accusative	σιον	ERROR: Nothing found with those parameters	σιους
+4	Vocative	σι	ERROR: Nothing found with those parameters	θεοι

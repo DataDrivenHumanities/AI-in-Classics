@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αγρωστις	ERROR: Nothing found with those parameters	αγρωστης
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αγρωστης
+2	Dative	αγρωστει	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αγρωστιν	ERROR: Nothing found with those parameters	αγρωστις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αγρωστης

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	βᾰρυτης	ERROR: Nothing found with those parameters	βαρυτητες
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βαρυτητες
+2	Dative	βαρυτητι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	βαρυτητα	ERROR: Nothing found with those parameters	βαρυτητας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	βαρυτητες

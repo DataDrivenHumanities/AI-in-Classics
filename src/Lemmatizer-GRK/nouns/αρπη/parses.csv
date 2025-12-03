@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αρπη	ERROR: Nothing found with those parameters	αρπα
+1	Genitive	αρπη	ERROR: Nothing found with those parameters	αρπα
+2	Dative	αρπα	ERROR: Nothing found with those parameters	αρπαις
+3	Accusative	αρπην	ERROR: Nothing found with those parameters	αρπᾰς
+4	Vocative	αρπη	ERROR: Nothing found with those parameters	αρπα

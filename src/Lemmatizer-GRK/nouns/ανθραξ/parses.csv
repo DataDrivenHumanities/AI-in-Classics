@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ανθραξ	ERROR: Nothing found with those parameters	ανθρακες
+1	Genitive	ανθραξ	ERROR: Nothing found with those parameters	ανθρακες
+2	Dative	ανθρακ	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ανθρακ	ERROR: Nothing found with those parameters	ανθρακας
+4	Vocative	ανθραξ	ERROR: Nothing found with those parameters	ανθρακες

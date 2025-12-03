@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εκβᾰσις	ERROR: Nothing found with those parameters	εκβασης
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εκβασης
+2	Dative	εκβασει	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	εκβασιν	ERROR: Nothing found with those parameters	εκβᾰσις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εκβασης

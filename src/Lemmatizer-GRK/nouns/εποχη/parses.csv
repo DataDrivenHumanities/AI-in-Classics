@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εποχη	ERROR: Nothing found with those parameters	εποχαι
+1	Genitive	εποχη	ERROR: Nothing found with those parameters	εποχαι
+2	Dative	εποχη	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	εποχην	ERROR: Nothing found with those parameters	εποχας
+4	Vocative	εποχη	ERROR: Nothing found with those parameters	εποχαι

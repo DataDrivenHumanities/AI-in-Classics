@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ᾰρετα	ERROR: Nothing found with those parameters	αρετ
+1	Genitive	ᾰρετα	ERROR: Nothing found with those parameters	αρετ
+2	Dative	αρετ	ERROR: Nothing found with those parameters	αρετησι
+3	Accusative	αρετην	ERROR: Nothing found with those parameters	αρετας
+4	Vocative	ᾰρετα	ERROR: Nothing found with those parameters	αρετ

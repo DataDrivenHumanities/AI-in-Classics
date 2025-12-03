@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αβελτερια	ERROR: Nothing found with those parameters	αβελτεριαι
+1	Genitive	αβελτερια	ERROR: Nothing found with those parameters	αβελτεριαι
+2	Dative	αβελτεριαι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αβελτεριαν	ERROR: Nothing found with those parameters	αβελτεριας
+4	Vocative	αβελτερια	ERROR: Nothing found with those parameters	αβελτεριαι

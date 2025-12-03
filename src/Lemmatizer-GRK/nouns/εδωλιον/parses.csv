@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	εδωλιον	ERROR: Nothing found with those parameters	εδωλια
+1	Genitive	εδωλιον	ERROR: Nothing found with those parameters	εδωλια
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	εδωλιοις
+3	Accusative	εδωλιον	ERROR: Nothing found with those parameters	εδωλια
+4	Vocative	εδωλιον	ERROR: Nothing found with those parameters	εδωλια

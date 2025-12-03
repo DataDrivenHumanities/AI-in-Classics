@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αφλαστον	ERROR: Nothing found with those parameters	αφλαστα
+1	Genitive	αφλαστον	ERROR: Nothing found with those parameters	αφλαστα
+2	Dative	αφλαστω	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αφλαστον	ERROR: Nothing found with those parameters	αφλαστα
+4	Vocative	αφλαστον	ERROR: Nothing found with those parameters	αφλαστα

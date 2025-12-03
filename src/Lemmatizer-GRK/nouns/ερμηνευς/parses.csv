@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ερμηνευς	ERROR: Nothing found with those parameters	ερμηνης
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ερμηνης
+2	Dative	ερμηνει	ERROR: Nothing found with those parameters	ερμηνευσιν
+3	Accusative	ερμηνεα	ERROR: Nothing found with those parameters	ερμηνεας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ερμηνης

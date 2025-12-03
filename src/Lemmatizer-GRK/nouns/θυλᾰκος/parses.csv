@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	θυλᾰκος	ERROR: Nothing found with those parameters	θυλακοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	θυλακοι
+2	Dative	θυλακω	ERROR: Nothing found with those parameters	θυλακοις
+3	Accusative	θυλακον	ERROR: Nothing found with those parameters	θυλακους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	θυλακοι

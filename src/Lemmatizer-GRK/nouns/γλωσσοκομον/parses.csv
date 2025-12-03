@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	γλωσσοκομον	ERROR: Nothing found with those parameters	γλωσσοκομα
+1	Genitive	γλωσσοκομον	ERROR: Nothing found with those parameters	γλωσσοκομα
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	γλωσσοκομον	ERROR: Nothing found with those parameters	γλωσσοκομα
+4	Vocative	γλωσσοκομον	ERROR: Nothing found with those parameters	γλωσσοκομα

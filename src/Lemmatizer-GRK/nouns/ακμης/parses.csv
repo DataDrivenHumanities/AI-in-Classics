@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ακμης	ERROR: Nothing found with those parameters	ακμητες
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ακμητες
+2	Dative	ακμητι	ERROR: Nothing found with those parameters	ακμησι
+3	Accusative	ακμητα	ERROR: Nothing found with those parameters	ακμητας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ακμητες

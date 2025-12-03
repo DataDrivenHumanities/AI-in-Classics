@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	δημευσις	ERROR: Nothing found with those parameters	δημευσεις
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	δημευσεις
+2	Dative	δημευσει	ERROR: Nothing found with those parameters	δημευσεσι
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	δημευσις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	δημευσεις

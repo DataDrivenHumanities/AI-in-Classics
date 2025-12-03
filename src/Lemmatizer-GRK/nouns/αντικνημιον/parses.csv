@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αντικνημιον	ERROR: Nothing found with those parameters	ταντικνημια
+1	Genitive	αντικνημιον	ERROR: Nothing found with those parameters	ταντικνημια
+2	Dative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αντικνημιοις
+3	Accusative	αντικνημιον	ERROR: Nothing found with those parameters	ταντικνημια
+4	Vocative	αντικνημιον	ERROR: Nothing found with those parameters	ταντικνημια

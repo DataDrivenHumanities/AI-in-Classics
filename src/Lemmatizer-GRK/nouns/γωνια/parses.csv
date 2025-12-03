@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	γωνια	ERROR: Nothing found with those parameters	γωνια
+1	Genitive	γωνια	ERROR: Nothing found with those parameters	γωνια
+2	Dative	γωνια	ERROR: Nothing found with those parameters	γωνιαις
+3	Accusative	γωνιαν	ERROR: Nothing found with those parameters	γωνιας
+4	Vocative	γωνια	ERROR: Nothing found with those parameters	γωνια

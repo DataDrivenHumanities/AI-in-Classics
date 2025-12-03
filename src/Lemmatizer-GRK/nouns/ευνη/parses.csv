@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ευνη	ERROR: Nothing found with those parameters	ευνα
+1	Genitive	ευνη	ERROR: Nothing found with those parameters	ευνα
+2	Dative	ευνη	ERROR: Nothing found with those parameters	ευνηφι
+3	Accusative	ευνην	ERROR: Nothing found with those parameters	ευνας
+4	Vocative	ευνη	ERROR: Nothing found with those parameters	ευνα

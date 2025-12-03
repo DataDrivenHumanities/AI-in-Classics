@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	θεσις	ERROR: Nothing found with those parameters	θεσεις
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	θεσεις
+2	Dative	θεσει	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	θεσιν	ERROR: Nothing found with those parameters	θεσις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	θεσεις

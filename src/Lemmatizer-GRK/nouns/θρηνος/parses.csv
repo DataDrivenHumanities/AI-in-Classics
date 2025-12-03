@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	θρηνος	ERROR: Nothing found with those parameters	θρηνοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	θρηνοι
+2	Dative	θρηνω	ERROR: Nothing found with those parameters	θρηνοις
+3	Accusative	θρηνον	ERROR: Nothing found with those parameters	θρηνους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	θρηνοι

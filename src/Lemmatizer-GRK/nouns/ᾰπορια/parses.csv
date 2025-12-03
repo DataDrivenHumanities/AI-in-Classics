@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ᾰπορια	ERROR: Nothing found with those parameters	απορια
+1	Genitive	ᾰπορια	ERROR: Nothing found with those parameters	απορια
+2	Dative	αποριη	ERROR: Nothing found with those parameters	αποριησι
+3	Accusative	αποριην	ERROR: Nothing found with those parameters	αποριας
+4	Vocative	ᾰπορια	ERROR: Nothing found with those parameters	απορια

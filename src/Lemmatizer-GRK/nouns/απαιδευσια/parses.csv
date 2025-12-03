@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	απαιδευσια	ERROR: Nothing found with those parameters	απαιδευσια
+1	Genitive	απαιδευσια	ERROR: Nothing found with those parameters	απαιδευσια
+2	Dative	απαιδευσια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	απαιδευσιαν	ERROR: Nothing found with those parameters	απαιδευσιας
+4	Vocative	απαιδευσια	ERROR: Nothing found with those parameters	απαιδευσια

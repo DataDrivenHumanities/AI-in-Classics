@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	καθηγεμων	ERROR: Nothing found with those parameters	κατηγεμονες
+1	Genitive	καθηγεμων	ERROR: Nothing found with those parameters	κατηγεμονες
+2	Dative	καθηγεμονι	ERROR: Nothing found with those parameters	καθηγεμοσιν
+3	Accusative	κατηγεμονα	ERROR: Nothing found with those parameters	κατηγεμονας
+4	Vocative	καθηγεμων	ERROR: Nothing found with those parameters	κατηγεμονες

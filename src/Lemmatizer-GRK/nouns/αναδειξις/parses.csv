@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αναδειξις	ERROR: Nothing found with those parameters	αναδειξεις
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αναδειξεις
+2	Dative	αναδειξη	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αναδειξιν	ERROR: Nothing found with those parameters	αναδειξις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	αναδειξεις

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ασιαρχης	ERROR: Nothing found with those parameters	ασιαρχαι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ασιαρχαι
+2	Dative	ασιαρχαι	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ασιαρχας
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ασιαρχαι

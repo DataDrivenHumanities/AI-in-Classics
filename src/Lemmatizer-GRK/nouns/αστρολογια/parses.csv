@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αστρολογια	ERROR: Nothing found with those parameters	αστρολογια
+1	Genitive	αστρολογια	ERROR: Nothing found with those parameters	αστρολογια
+2	Dative	αστρολογια	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αστρολογιαν	ERROR: Nothing found with those parameters	αστρολογιας
+4	Vocative	αστρολογια	ERROR: Nothing found with those parameters	αστρολογια

@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	ελᾰφος	ERROR: Nothing found with those parameters	ελαφοι
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ελαφοι
+2	Dative	ελαφω	ERROR: Nothing found with those parameters	ελαφοις
+3	Accusative	ελαφον	ERROR: Nothing found with those parameters	ελαφους
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	ελαφοι

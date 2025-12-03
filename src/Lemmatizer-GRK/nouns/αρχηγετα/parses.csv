@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	αρχηγετα	ERROR: Nothing found with those parameters	αρχαγετα
+1	Genitive	αρχηγετι	ERROR: Nothing found with those parameters	αρχαγετα
+2	Dative	αρχαγετα	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	αρχαγεταν	ERROR: Nothing found with those parameters	αρχᾱγετας
+4	Vocative	αρχηγετι	ERROR: Nothing found with those parameters	αρχαγετα

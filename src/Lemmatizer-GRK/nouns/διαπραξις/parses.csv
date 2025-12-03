@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	διαπραξις	ERROR: Nothing found with those parameters	διαπραξεις
+1	Genitive	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	διαπραξεις
+2	Dative	διαπραξη	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters
+3	Accusative	διαπραξιν	ERROR: Nothing found with those parameters	διαπραξις
+4	Vocative	ERROR: Nothing found with those parameters	ERROR: Nothing found with those parameters	διαπραξεις

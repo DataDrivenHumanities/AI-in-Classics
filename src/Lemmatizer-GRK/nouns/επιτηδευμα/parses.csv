@@ -1,0 +1,6 @@
+	Cases	Singular	Dual	Plural
+0	Nominative	επιτηδευμα	ERROR: Nothing found with those parameters	επιτηδευματ
+1	Genitive	επιτηδευμα	ERROR: Nothing found with those parameters	επιτηδευματ
+2	Dative	επιτηδευματ	ERROR: Nothing found with those parameters	επιτηδευμασι
+3	Accusative	επιτηδευμα	ERROR: Nothing found with those parameters	επιτηδευματ
+4	Vocative	επιτηδευμα	ERROR: Nothing found with those parameters	επιτηδευματ
