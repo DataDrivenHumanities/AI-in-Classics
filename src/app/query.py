@@ -1,10 +1,11 @@
 import streamlit as st
-from app.app_functions import query_cb
-from app.settings import main_settings
+from .app_functions import query_cb
+from .settings import main_settings
+import os
 
 
 def app():
-    PREPROCESSED_TEXTS_PATH = globals["PREPROCESSED_TEXTS_PATH"]
+    PREPROCESSED_TEXTS_PATH = main_settings["PREPROCESSED_TEXTS_PATH"]
 
     # check for preprocessed texts
     if (

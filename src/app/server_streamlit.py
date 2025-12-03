@@ -5,13 +5,14 @@ import os, sys
 
 import numpy as np
 import streamlit as st
-from app.settings import main_settings
-import app.app_functions as app_func
-import app.model_registry as model_cfg
-import app.webUI as ui
+
+from src.app import app_functions as app_func
+from src.app import model_registry as model_cfg
+from src.app import webUI as ui
+from src.app.settings import main_settings
 
 try:
-    from app.ollama_client import chat_stream
+    from src.app.ollama_client import chat_stream
 except Exception:
     st.error(
         "Cannot import ollama_client. Make sure src/ollama_client.py exists and is importable."
@@ -39,9 +40,7 @@ ui.sidebar_logo(
 def main():
 
     try:
-        import app.analyze as analyze
-        import app.load as load
-        import app.query as query
+        from src.app import analyze, query, load
     except Exception as e:
         st.error(f"Failed to import app pages: {e}")
         st.stop()
@@ -106,7 +105,7 @@ def main():
     elif task_select == tasks[1]:
         query.app()
     elif task_select == tasks[2]:
-        analyze.app()
+        analyze.render_analyze()
 
     # ---------- Sentiment Analysis ----------
     st.markdown("---")
@@ -115,7 +114,7 @@ def main():
         "Run quick polarity scoring either with a built-in lexicon (fast) or via the selected model (slower but more contextual)."
     )
 
-    engine = st.radio("Engine", ["Built-in (VADER)", "Model (Ollama)"], horizontal=True)
+    engine = st.radio("Engine", ["Built-in (VADER)", "Model (Ollama)", "Model (Hugging Face)"], horizontal=True)
 
     uploaded = st.file_uploader(
         "Upload a file to analyze (txt/md/csv/tsv/pdf)",

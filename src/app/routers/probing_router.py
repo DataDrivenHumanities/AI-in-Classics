@@ -139,8 +139,7 @@ class ProbingRouter:
                     "host": host,
                     "meta": {"default": mid == default_id, "in_tags": mid in tagset},
                 }
-
-            checks = [check(m) for m in models if (m.get("id") or m.get("name"))]
+            checks = [check(models[m]) for m in models if (models[m].get("id") or models[m].get("name"))]
             results = await asyncio.gather(*checks)
 
         if not results:

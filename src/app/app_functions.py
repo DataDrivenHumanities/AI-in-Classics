@@ -3,8 +3,9 @@ import os
 import shutil
 import json
 import re
-from pathlib import Path
-from typing import Optional
+import uuid
+import tempfile
+from typing import Optional, Dict, Any
 import numpy as np
 import pandas as pd
 import tqdm
@@ -393,7 +394,7 @@ def llm_sentiment(text: str, model_name: str) -> str:
         buf.append(tok)
     return "".join(buf)
 
-def hf_sentiment(text: str, model_id: Optional[str]) -> dict:
+def hf_sentiment(text: str, hf_classifier_params: Dict[str, Any]):
     """
     Run a Hugging Face text-classification pipeline for sentiment analysis.
     """
@@ -401,15 +402,36 @@ def hf_sentiment(text: str, model_id: Optional[str]) -> dict:
         raise RuntimeError(
             "transformers is not installed. Install it to enable Hugging Face sentiment."
         )
-    model_name = _resolve_hf_repo_name(model_id)
-    try:
-        classifier = pipeline("text-classification", model=model_name)
-        result = classifier(text)
-    except Exception as exc:
-        raise RuntimeError(f"Failed to run Hugging Face sentiment: {exc}") from exc
-    if not result:
-        return {}
-    return result[0]
+    model = hf_classifier_params.get("model", None)
+    task = hf_classifier_params.get("task", None)
+    if not model or not task:
+        raise Exception("model and task cannot be blank in model registry for hugging face models")
+    classifier = pipeline(task=task, model=model)
+
+    res = []
+
+    sentences = [s.strip() for s in re.split(r"(?<=[.!?])\s+", text) if s.strip()]
+
+    for s in sentences:
+        sentence_result = classifier(s)
+        sentence_result[0]["sentence"] = s
+        res.append(sentence_result)
+
+    if len(res) > 100:
+        tmp_dir = os.path.abspath(os.path.join(os.getcwd(), "tmp"))
+        os.makedirs(tmp_dir, exist_ok=True)
+        filename = f"hf_sentiment_results_{uuid.uuid4().hex}.csv"
+        path = os.path.join(tmp_dir, filename)
+        try:
+            try:
+                df = pd.json_normalize(res)
+            except Exception:
+                df = pd.DataFrame(res)
+            df.to_csv(path, index=False)
+        except Exception as e:
+            return {"error": f"Failed to write CSV: {e}", "count": len(res)}
+        return {"preview": res[:100], "csv_path": path, "count": len(res)}
+    return res
 
 def parse_llm_json(s: str) -> Optional[dict]:
     """Try to parse the model output as JSON; be forgiving if there's noise."""

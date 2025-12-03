@@ -1,6 +1,7 @@
 import streamlit as st
-from app.app_functions import dtm_cb
-from app.settings import main_settings
+from .app_functions import dtm_cb
+from .settings import main_settings
+import os
 
 
 def render_analyze():

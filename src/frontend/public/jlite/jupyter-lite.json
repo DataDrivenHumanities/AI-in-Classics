@@ -2,14 +2,14 @@
   "jupyter-config-data": {
     "appName": "JupyterLite",
     "appUrl": "./lab",
-    "appVersion": "0.6.4",
+    "appVersion": "0.7.0",
     "baseUrl": "./",
     "defaultKernelName": "python",
     "faviconUrl": "./lab/favicon.ico",
     "federated_extensions": [
       {
         "extension": "./extension",
-        "load": "static/remoteEntry.7b426e34c9bd9f45e6dc.js",
+        "load": "static/remoteEntry.7a71a85038a02ea552e8.js",
         "name": "@jupyter-notebook/lab-extension",
         "style": "./style"
       },
@@ -26,6 +26,16 @@
       }
     ],
     "fileTypes": {
+      "avi": {
+        "extensions": [
+          ".avi"
+        ],
+        "fileFormat": "base64",
+        "mimeTypes": [
+          "video/x-msvideo"
+        ],
+        "name": "avi"
+      },
       "css": {
         "extensions": [
           ".css"
@@ -55,6 +65,16 @@
           "text/plain"
         ],
         "name": "fasta"
+      },
+      "flac": {
+        "extensions": [
+          ".flac"
+        ],
+        "fileFormat": "base64",
+        "mimeTypes": [
+          "audio/flac"
+        ],
+        "name": "flac"
       },
       "geojson": {
         "extensions": [
@@ -163,6 +183,16 @@
         ],
         "name": "json"
       },
+      "jupyterlab_workspace": {
+        "extensions": [
+          ".jupyterlab-workspace"
+        ],
+        "fileFormat": "json",
+        "mimeTypes": [
+          "application/json"
+        ],
+        "name": "jupyterlab_workspace"
+      },
       "manifest": {
         "extensions": [
           ".manifest"
@@ -183,6 +213,56 @@
           "text/markdown"
         ],
         "name": "md"
+      },
+      "mkv": {
+        "extensions": [
+          ".mkv"
+        ],
+        "fileFormat": "base64",
+        "mimeTypes": [
+          "video/x-matroska"
+        ],
+        "name": "mkv"
+      },
+      "mov": {
+        "extensions": [
+          ".mov"
+        ],
+        "fileFormat": "base64",
+        "mimeTypes": [
+          "video/quicktime"
+        ],
+        "name": "mov"
+      },
+      "mp3": {
+        "extensions": [
+          ".mp3"
+        ],
+        "fileFormat": "base64",
+        "mimeTypes": [
+          "audio/mpeg"
+        ],
+        "name": "mp3"
+      },
+      "mp4": {
+        "extensions": [
+          ".mp4"
+        ],
+        "fileFormat": "base64",
+        "mimeTypes": [
+          "video/mp4"
+        ],
+        "name": "mp4"
+      },
+      "ogg": {
+        "extensions": [
+          ".ogg"
+        ],
+        "fileFormat": "base64",
+        "mimeTypes": [
+          "audio/ogg"
+        ],
+        "name": "ogg"
       },
       "pdf": {
         "extensions": [
@@ -264,6 +344,26 @@
           "application/wasm"
         ],
         "name": "wasm"
+      },
+      "wav": {
+        "extensions": [
+          ".wav"
+        ],
+        "fileFormat": "base64",
+        "mimeTypes": [
+          "audio/wav"
+        ],
+        "name": "wav"
+      },
+      "webm": {
+        "extensions": [
+          ".webm"
+        ],
+        "fileFormat": "base64",
+        "mimeTypes": [
+          "video/webm"
+        ],
+        "name": "webm"
       },
       "wheel": {
         "extensions": [

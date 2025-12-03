@@ -6,6 +6,7 @@
       "name": "Latin Ollama Model 1.0.0",
       "description": "Baseline Latin corpus model served via Ollama.",
       "provider": "ollama",
+      "hf_classifier_params": {},
       "available": true,
       "tags": [
         "latin",
@@ -17,6 +18,7 @@
       "name": "Greek Ollama Model 1.0.0",
       "description": "Baseline Greek corpus model served via Ollama.",
       "provider": "ollama",
+      "hf_classifier_params": {},
       "available": true,
       "tags": [
         "greek",
@@ -28,6 +30,25 @@
       "name": "Greek Hugging Face Model 1.0.0",
       "description": "Baseline Greek corpus model served via Hugging Face.",
       "provider": "hugging face",
+      "hf_classifier_params": {
+        "model": "luvnpce83/ancient-greek-emotion-bert",
+        "task": "text-classification"
+      },
+      "available": true,
+      "tags": [
+        "greek",
+        "production"
+      ]
+    },
+    "greek_hf_model:2.0.0": {
+      "id": "greek_hf_model:2.0.0",
+      "name": "Greek Hugging Face Model 2.0.0",
+      "description": "Fine-tuned Greek Hugging Face model based on model 1.0.0",
+      "provider": "hugging face",
+      "hf_classifier_params": {
+        "model": "rtwins/greekbert_for_text_classification",
+        "task": "text-classification"
+      },
       "available": true,
       "tags": [
         "greek",
@@ -42,6 +63,7 @@
       "name": "Latin Ollama Model 2.0.0",
       "description": "Next-generation Ollama Latin model (pending release).",
       "provider": "ollama",
+      "hf_classifier_params": {},
       "available": false,
       "tags": [
         "latin",

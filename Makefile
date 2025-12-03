@@ -62,8 +62,8 @@ endif
 OLLAMA_HOST   ?= http://localhost:11434
 OLLAMA_GEN    := $(OLLAMA_HOST)/api/generate
 OLLAMA_TAGS   := $(OLLAMA_HOST)/api/tags
-LATIN_TAG     ?= latin_model:1.0.0
-GREEK_TAG     ?= greek_model:1.0.0
+LATIN_TAG     ?= latin_ollama_model:1.0.0
+GREEK_TAG     ?= greek_ollama_model:1.0.0
 BASE_MODEL    ?= llama3.1:8b
 
 # ===== Frontend (React) =====

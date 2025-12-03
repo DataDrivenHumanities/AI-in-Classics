@@ -61,7 +61,7 @@ class AnalyzeBody(BaseModel):
     format: Optional[str] = None
 
 
-def resolve_model(model_id: Optional[str]) -> str:
+def resolve_model(model_id: Optional[str]):
     if model_id:
         return model_id
     reg_paths = [
@@ -87,6 +87,16 @@ def resolve_engine(model_id: str) -> str:
         return model.provider
     except Exception as e:
         print(f"Model with id {model_id} not found in registry: {e}")
+        return ""
+
+def resolve_hf_params(model_id: str):
+    try:
+        registry = get_registry()
+        model = registry.get(model_id)
+        return model.hf_classifier_params
+    except Exception as e:
+        print(f"Model with id {model_id} not found in registry: {e}")
+        return {}
 
 # ------------------------------------------------------------------------------
 #  -----------   Chat endpoint  -----------   -----------   -----------
@@ -177,23 +187,16 @@ async def _analyze_with_model(
     options: Optional[Dict[str, Any]] = None,
     raw: Optional[bool] = None,
     fmt: Optional[str] = None,
+    hf_classifier_params: Optional[Dict[str, Any]] | None = None
 ) -> Dict[str, Any]:
 
     if engine == "hugging face":
-        res = hf_sentiment(text, model_id)
+        res = hf_sentiment(text, hf_classifier_params)
         return {
             "engine": "hugging face",
-            "label": res.get("label"),
-            "confidence": res.get("score"),
-            "scores": {
-                "positive": 0.0,
-                "negative": 0.0,
-                "neutral": 0.0,
-            },
-            "raw_model_output": "",
-            "translation": "Hugging face models do not produce a translation.",
-            "analysis": "Hugging face models do not produce an analysis.",
+            "labels and scores by sentence": res
         }
+    from .ollama_client import generate_json_with_analysis
     prompt = (
         "Return ONLY a JSON object with these exact keys and types; no extra keys and no prose. "
         'label: one of ["positive","negative","neutral"]; confidence: number in [0,1]; '
@@ -256,9 +259,12 @@ async def analyze(body: AnalyzeBody):
     text = body.text
     try:
         engine = (resolve_engine(body.model_id) or "builtin").lower()
+        print(engine)
         if engine == "ollama" or engine == "hugging face":
             model_id = resolve_model(body.model_id)
-            res = await _analyze_with_model(text, model_id, engine, options=body.options, raw=body.raw, fmt=body.format)
+            hf_classifier_params = resolve_hf_params(body.model_id)
+            print(model_id, hf_classifier_params)
+            res = await _analyze_with_model(text, model_id, engine, options=body.options, raw=body.raw, fmt=body.format, hf_classifier_params=hf_classifier_params)
             return JSONResponse(res)
         return JSONResponse({"engine": "builtin", "label": "neutral", "confidence": 0.5, "scores": {"positive": 0.25, "negative": 0.25, "neutral": 0.5}, "raw_model_output": "", "translation": None, "analysis": None})
     except (httpx.ReadTimeout, httpx.ConnectTimeout):
