@@ -386,37 +386,39 @@ export default function Analyzer() {
         const showSentenceColumn = rows.some((r) => r.sentence);
 
         return (
-            <div className="panel">
-                <h3>Hugging Face — Results by Sentence</h3>
-                <div style={{overflowX: "auto", maxHeight: 420}}>
-                    <table className="hf-table" style={{width: "100%", borderCollapse: "collapse"}}>
-                        <thead>
-                        <tr>
-                            <th style={{textAlign: "left", padding: 8, borderBottom: "1px solid #ddd"}}>#</th>
-                            <th style={{textAlign: "left", padding: 8, borderBottom: "1px solid #ddd"}}>Label</th>
-                            <th style={{textAlign: "left", padding: 8, borderBottom: "1px solid #ddd"}}>Score</th>
-                            {showSentenceColumn && <th style={{
-                                textAlign: "left",
-                                padding: 8,
-                                borderBottom: "1px solid #ddd"
-                            }}>Sentence</th>}
-                        </tr>
-                        </thead>
-                        <tbody>
-                        {rows.map((r) => (
-                            <tr key={r.index} style={{borderBottom: "1px solid #f3f3f3"}}>
-                                <td style={{padding: 8}}>{r.index}</td>
-                                <td style={{padding: 8, whiteSpace: "nowrap"}}>{String(r.label)}</td>
-                                <td style={{padding: 8}}>{r.score != null ? toPercent(r.score) : "—"}</td>
-                                {showSentenceColumn && <td style={{
+            <div className="panels">
+                <div className="panel width=100%">
+                    <h3>Hugging Face — Results by Sentence</h3>
+                    <div style={{overflowX: "auto", maxHeight: 420}}>
+                        <table className="hf-table" style={{width: "100%", borderCollapse: "collapse"}}>
+                            <thead>
+                            <tr>
+                                <th style={{textAlign: "left", padding: 8, borderBottom: "1px solid #ddd"}}>#</th>
+                                <th style={{textAlign: "left", padding: 8, borderBottom: "1px solid #ddd"}}>Label</th>
+                                <th style={{textAlign: "left", padding: 8, borderBottom: "1px solid #ddd"}}>Score</th>
+                                {showSentenceColumn && <th style={{
+                                    textAlign: "left",
                                     padding: 8,
-                                    whiteSpace: "normal",
-                                    maxWidth: 420
-                                }}>{r.sentence ?? JSON.stringify(r.raw)}</td>}
+                                    borderBottom: "1px solid #ddd"
+                                }}>Sentence</th>}
                             </tr>
-                        ))}
-                        </tbody>
-                    </table>
+                            </thead>
+                            <tbody>
+                            {rows.map((r) => (
+                                <tr key={r.index} style={{borderBottom: "1px solid #f3f3f3"}}>
+                                    <td style={{padding: 8}}>{r.index}</td>
+                                    <td style={{padding: 8, whiteSpace: "nowrap"}}>{String(r.label)}</td>
+                                    <td style={{padding: 8}}>{r.score != null ? toPercent(r.score) : "—"}</td>
+                                    {showSentenceColumn && <td style={{
+                                        padding: 8,
+                                        whiteSpace: "normal",
+                                        maxWidth: 420
+                                    }}>{r.sentence ?? JSON.stringify(r.raw)}</td>}
+                                </tr>
+                            ))}
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         );
@@ -604,12 +606,9 @@ export default function Analyzer() {
                                     <h3 style={{margin: 0}}>Results</h3>
                                     <div style={{display: "flex", gap: 8}}/>
                                 </div>
-
                                 <div className="model-settings-grid" style={{marginTop: 10}}>
                                     <div className="model-settings-label">Engine</div>
                                     <div>{engine || "—"}</div>
-
-
                                     <>
                                         <div className="model-settings-label">Label</div>
                                         <div>{label ? String(label).toUpperCase() : "—"}</div>
@@ -617,8 +616,6 @@ export default function Analyzer() {
                                         <div className="model-settings-label">Confidence</div>
                                         <div>{typeof confidence === "number" ? `${(confidence * 100).toFixed(1)}%` : "—"}</div>
                                     </>
-
-
                                     {scores && typeof scores === "object" ? (
                                         <>
                                             <div className="model-settings-label">Positive</div>
@@ -633,14 +630,11 @@ export default function Analyzer() {
                                     ) : null}
                                 </div>
                             </div>
-
-
                             <>
                                 <div className="panel">
                                     <h3>Translation</h3>
                                     <pre>{translation ? String(translation) : "—"}</pre>
                                 </div>
-
                                 <div className="panel">
                                     <h3>Analysis</h3>
                                     {analysis && typeof analysis === "object" && Object.keys(analysis).length > 0 ? (
@@ -657,7 +651,6 @@ export default function Analyzer() {
                                     )}
                                 </div>
                             </>
-
                         </div>)}
                 </>
             ) : (
