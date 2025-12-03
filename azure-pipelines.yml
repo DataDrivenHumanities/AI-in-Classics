@@ -118,31 +118,45 @@ jobs:
         .\.venv\Scripts\python.exe "$(Build.SourcesDirectory)\src\Lemmatizer-LTN\etl\aggregate_out_to_csvs.py"
       displayName: "Aggregate per-lemma CSVs -> lemmas.csv + forms.csv"
 
+    # 6.5) Aggregate per-lemma CSVs by letter (a.csv, b.csv, ..., z.csv)
+    - powershell: |
+        $ErrorActionPreference = 'Stop'
+        .\.venv\Scripts\python.exe "$(Build.SourcesDirectory)\src\Lemmatizer-LTN\etl\aggregate_by_letter.py"
+      displayName: "Aggregate per-lemma CSVs by letter"
+
     # 7) Upload to Drive:
-    #    - aggregates -> ROOT/aggregates/
-    #    - per-lemma CSVs -> ROOT/a..z/ (or ROOT/other/)
+    #    - lemmas.csv + forms.csv -> ROOT/aggregates/
+    #    - letter CSVs (a.csv, b.csv, ...) -> ROOT/aggregates/ (much faster than individual files!)
     - powershell: |
         $ErrorActionPreference = 'Stop'
 
         $root = "$(Build.SourcesDirectory)\src\Lemmatizer-LTN"
         $out  = Join-Path $root "out"
+        $letterDir = Join-Path $out "by_letter"
         $py   = ".\.venv\Scripts\python.exe"
         $script = Join-Path $root "etl\upload_tree_to_drive.py"
 
-        # Build the full arg list explicitly so nothing gets dropped
+        # Upload aggregates (lemmas.csv, forms.csv) + letter-based CSVs
+        $lemmasCSV = Join-Path $out "lemmas.csv"
+        $formsCSV = Join-Path $out "forms.csv"
+
+        # Build the full arg list: upload lemmas.csv, forms.csv, and all letter CSVs
+        # Using --no-letter-folders to put everything in aggregates folder
         $args = @(
           $script,
           "--service-account-json", "service_account.json",
           "--folder-id", "$(GOOGLE_DRIVE_FOLDER_ID)",
-          "--files", $out
+          "--files", $lemmasCSV, $formsCSV, $letterDir,
+          "--max-workers", "20",
+          "--no-letter-folders"
         )
 
         Write-Host "Running: $py $($args -join ' ')"
         & $py @args
-      displayName: "Upload to Drive (aggregates + lettered folders)"
+      displayName: "Upload to Drive (aggregates folder: ~30 files total)"
       env:
         GOOGLE_DRIVE_FOLDER_ID: $(GOOGLE_DRIVE_FOLDER_ID)
-      timeoutInMinutes: 120
+      timeoutInMinutes: 30
 
     # 8) Initialize schema
     - powershell: |
