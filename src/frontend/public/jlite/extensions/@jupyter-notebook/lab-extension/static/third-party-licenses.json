@@ -2,13 +2,13 @@
   "packages": [
     {
       "name": "@jupyter-notebook/application",
-      "versionInfo": "7.4.7",
+      "versionInfo": "7.5.0",
       "licenseId": "BSD-3-Clause",
       "extractedText": ""
     },
     {
       "name": "@jupyterlab/application",
-      "versionInfo": "4.4.9",
+      "versionInfo": "4.5.0",
       "licenseId": "BSD-3-Clause",
       "extractedText": ""
     },

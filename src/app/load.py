@@ -1,7 +1,7 @@
 import numpy as np
 import streamlit as st
-from app.app_functions import dir_path_cb, load_cb, csv_upload_cb
-from app.settings import main_settings
+from .app_functions import dir_path_cb, load_cb, csv_upload_cb
+from .settings import main_settings
 
 
 def app():

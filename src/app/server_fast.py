@@ -187,7 +187,6 @@ async def _analyze_with_model(
 
     if engine == "hugging face":
         res = hf_sentiment(text, hf_classifier_params)
-        print(res)
         return {
             "engine": "hugging face",
             "labels and scores by sentence": res
