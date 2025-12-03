@@ -33,7 +33,7 @@ class ModelInfo:
     name: str
     description: str = ""
     provider: str = ""
-    hf_classifier_params: Dict[str: Any] = field(default_factory=dict)
+    hf_classifier_params: Dict[str, Any] = field(default_factory=dict)
     available: bool = True
     tags: Sequence[str] = field(default_factory=tuple)
     metadata: Dict[str, str] = field(default_factory=dict)

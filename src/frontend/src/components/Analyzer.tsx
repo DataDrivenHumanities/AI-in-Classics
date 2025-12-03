@@ -5,7 +5,6 @@ import ModelModal from "@/components/ModelModal";
 import ModelSettingsModal, {ModelOptions} from "@/components/ModelSettingsModal";
 import FeedbackModal from "@/components/FeedbackModal";
 import ModelShopModal from "@/components/ModelShopModal";
-import {render} from "react-dom";
 
 
 const API_BASE = process.env.NEXT_PUBLIC_API_BASE || "http://localhost:5050/api";
@@ -26,7 +25,7 @@ export default function Analyzer() {
     const [drawerOpen, setDrawerOpen] = useState<boolean>(false);
     const [feedbackOpen, setFeedbackOpen] = useState<boolean>(false);
     const [shopOpen, setShopOpen] = useState(false);
-    const [isHuggingFaceModel, setIsHuggingFaceModel] = useState(false)
+    const [isHuggingFaceModel, setIsHuggingFaceModel] = useState(false);
 
     const [text, setText] = useState<string>("");
     const [resp, setResp] = useState<AnalyzeResponse | null>(null);
@@ -135,7 +134,7 @@ export default function Analyzer() {
     }, [loading]);
 
     useEffect(() => {
-        setIsHuggingFaceModel(engine === "hugging face")
+        setIsHuggingFaceModel(engine === "hugging face");
     }, [engine])
 
     async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
