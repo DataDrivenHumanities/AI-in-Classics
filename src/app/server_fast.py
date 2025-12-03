@@ -16,8 +16,13 @@ from .routers import presets_router
 from .routers import feedback_router
 from .routers import train_router
 
-from src.app.app_functions import hf_sentiment
-from src.app.model_registry import get_registry, available_model_ids
+from .app_functions import hf_sentiment
+from .model_registry import get_registry, available_model_ids
+from .ollama_client import (
+    generate_json_with_analysis,
+    translate_en,
+    resolve_available_model_tag,
+)
 
 _VALID_LABELS = {"positive", "negative", "neutral"}
 _VALID = {"positive", "negative", "neutral"}
@@ -204,8 +209,9 @@ async def _analyze_with_model(
     temp = float(options.get("temperature", 0.0)) if options else 0.0
     top_p = float(options.get("top_p", 0.9)) if options else 0.9
 
+    runtime_model = resolve_available_model_tag(model_id)
     parsed, raw_text = await generate_json_with_analysis(
-        model_id,
+        runtime_model,
         prompt,
         num_predict=np,
         temperature=temp,
@@ -230,6 +236,11 @@ async def _analyze_with_model(
     }
 
     translation = parsed.get("translation", None)
+    if not translation:
+        try:
+            translation = await translate_en(runtime_model, text)
+        except Exception:
+            translation = None
     analysis = parsed.get("analysis", None)
 
     return {
@@ -286,10 +297,13 @@ async def analyze_upload(
         opts = None
     force_raw = (raw or "").lower() == "true" if raw is not None else None
     fmt = format if format in ("json", "text") else None
+    chosen_engine = (engine or "model").lower()
     try:
-        if (engine or "model").lower() == "model":
+        if chosen_engine == "model":
             mid = resolve_model(model_id)
-            res = await _analyze_with_model(text, mid, options=opts, raw=force_raw, fmt=fmt)
+            res = await _analyze_with_model(
+                text, mid, chosen_engine, options=opts, raw=force_raw, fmt=fmt
+            )
             res["text"] = text
             return JSONResponse(res)
         return JSONResponse({"engine": "builtin", "label": "neutral", "confidence": 0.5, "scores": {"positive": 0.25, "negative": 0.25, "neutral": 0.5}, "raw_model_output": "", "translation": None, "analysis": None, "text": text})

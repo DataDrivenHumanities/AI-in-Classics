@@ -37,6 +37,55 @@ def _determine_default_model() -> str:
 DEFAULT_MODEL = _determine_default_model()
 
 
+def _candidate_tags(model_id: str) -> List[str]:
+    candidates = [model_id]
+    if "_ollama_" in model_id:
+        candidates.append(model_id.replace("_ollama_", "_"))
+    if "_ollama_model" in model_id:
+        candidates.append(model_id.replace("_ollama_model", "_model"))
+    elif "_model" in model_id and "_ollama_" not in model_id:
+        candidates.append(model_id.replace("_model", "_ollama_model", 1))
+    return list(dict.fromkeys(filter(None, candidates)))
+
+
+def _available_model_tags() -> set:
+    try:
+        data = ollama.list()
+        models = data.get("models", []) if isinstance(data, dict) else []
+        tags = {m.get("model") for m in models if m.get("model")}
+        if tags:
+            return tags
+    except Exception:
+        pass
+    try:
+        with httpx.Client(timeout=5.0) as client:
+            resp = client.get(f"{OLLAMA_HOST}/api/tags")
+            resp.raise_for_status()
+            payload = resp.json() or {}
+            return {
+                m.get("model") or m.get("name")
+                for m in payload.get("models", [])
+                if m.get("model") or m.get("name")
+            }
+    except Exception:
+        pass
+    return set()
+
+
+def resolve_available_model_tag(model_id: str) -> str:
+    """Return a tag that exists in the local Ollama registry, trying common aliases."""
+    tags = _available_model_tags()
+    if not tags:
+        return model_id
+    try:
+        for cand in _candidate_tags(model_id):
+            if cand in tags:
+                return cand
+    except Exception:
+        pass
+    return model_id
+
+
 def _coerce_result(obj: Dict[str, Any]) -> Dict[str, Any]:
     return {
         "label": obj.get("label") or "neutral",

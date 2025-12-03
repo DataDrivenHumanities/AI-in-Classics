@@ -133,20 +133,28 @@ def _load_registry_from_path(path: Path) -> ModelRegistry:
         raw = json.load(fh)
 
     entries = raw.get("models") or []
+    if isinstance(entries, dict):
+        entry_iter = entries.values()
+    elif isinstance(entries, list):
+        entry_iter = entries
+    else:
+        entry_iter = []
 
     models = []
-    for key in entries.keys():
-        entry = entries[key]
-        models.append(ModelInfo(
-            model_id=entry.get("id", ""),
-            name=entry.get("name", ""),
-            description=entry.get("description", ""),
-            provider=entry.get("provider", ""),
-            hf_classifier_params=entry.get("hf_classifier_params", {}),
-            available=bool(entry.get("available", True)),
-            tags=entry.get("tags", ()),
-            metadata=entry.get("metadata", {}),
-        ))
+    for entry in entry_iter:
+        if not isinstance(entry, dict):
+            continue
+        models.append(
+            ModelInfo(
+                model_id=entry.get("id", ""),
+                name=entry.get("name", ""),
+                description=entry.get("description", ""),
+                provider=entry.get("provider", ""),
+                available=bool(entry.get("available", True)),
+                tags=entry.get("tags", ()),
+                metadata=entry.get("metadata", {}),
+            )
+        )
 
     if not models:
         raise ModelRegistryError(
@@ -194,7 +202,18 @@ def available_model_ids() -> Iterable[str]:
 def resolve_model(preferred: Optional[str]):
     data = json.loads(_REG_PATH.read_text(encoding="utf-8"))
     default_id = data.get("default") or "latin_model:1.0.0"
-    models = {m["id"]: m for m in data.get("models", [])}
+    raw_models = data.get("models", [])
+    if isinstance(raw_models, dict):
+        entry_iter = list(raw_models.values())
+    elif isinstance(raw_models, list):
+        entry_iter = list(raw_models)
+    else:
+        entry_iter = []
+
+    models = {}
+    for entry in entry_iter:
+        if isinstance(entry, dict) and entry.get("id"):
+            models[entry["id"]] = entry
     if preferred and preferred in models and models[preferred].get("available", False):
         return preferred, {}
     if default_id in models and models[default_id].get("available", False):
