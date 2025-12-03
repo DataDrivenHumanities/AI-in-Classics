@@ -150,25 +150,42 @@ make test-greek
 ## Make Targets (Cheat Sheet)
 
 Core:
-
 - `make setup` — Prefer Poetry; otherwise uses `.venv`
+- `make setup-venv` — Create and populate a Python virtualenv (legacy)
 - `make run` — Runs `src/app/app.py`
-- `make web` — Runs Streamlit app
-- `make test` / `make check` / `make fix`
+- `make web` — Runs Streamlit app (`src/app/app.py`)
+- `make start` — Start local dev server with hot-reload (convenience task; may run `make web` or a watcher)
+- `make start-lite` — Lightweight start (no model build, minimal services) for quick dev/testing
+- `make test` — Run `pytest`
+- `make check` — `black --check` (style checks)
+- `make fix` — Run `black` to format code
 
 Docker:
+- `make docker-build` — Build the development image
+- `make docker-run` — Run the built image
+- `make docker-dev` — Run container with repo mounted for live reload (exposes port, default 8501)
+- `make docker-bash` — Get a shell in the dev container
+- `make docker-clean` — Remove dangling containers/images
 
-- `make docker-build` / `make docker-run` / `make docker-dev` / `make docker-bash` / `make docker-clean`
+Ollama / Models:
+- `make ollama-serve` — Run Ollama server (foreground)
+- `make ollama-pull` — Pull base model (e.g., `llama3.1:8b`)
+- `make ollama-list` — List tags from Ollama server
+- `make build-latin` — Build `latin` model tag from `models/latin/Modelfile`
+- `make build-greek` — Build `greek` model tag from `models/greek/Modelfile`
+- `make ensure-models` — Verify required model tags exist on Ollama
+- `make smoke-latin` / `make smoke-greek` — Quick one-shot classify requests to validate models
+- `make health` — Check Ollama `/api/tags` (200 OK expected)
 
-Ollama:
+Misc / Tests:
+- `make test-latin` — Run Latin sentiment test suite
+- `make test-greek` — Run Greek sentiment test suite (if present)
+- `make lint` — Run linters (if defined)
+- `make deps` — Show or install dependency info (if defined)
 
-- `make ollama-serve` — Foreground server
-- `make ollama-pull` — Pull base (`llama3.1:8b`)
-- `make build-latin` / `make build-greek` — Create project model tags
-- `make ensure-models` — Verify tags are present on server
-- `make smoke-latin` / `make smoke-greek`
-- `make health` — 200 OK from `/api/tags`
-- `make ollama-list`
+Notes:
+- `make start` / `make start-lite` behavior may be project-specific; inspect the `Makefile` for exact commands and adjust environment variables (`PORT`, `OLLAMA_HOST`, `LATIN_TAG`, `GREEK_TAG`, etc.) as needed.
+- For Streamlit entry override use the `STREAMLIT_APP` env var (default `src/app/app.py`).
 
 Config via env vars:
 
