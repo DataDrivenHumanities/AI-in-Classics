@@ -267,7 +267,12 @@ def main():
     ap.add_argument(
         "--aggregates-folder-name",
         default="aggregates",
-        help="Name of subfolder to hold lemmas.csv/forms.csv",
+        help="Name of subfolder to hold lemmas.csv/forms.csv (only used with --use-aggregates-folder)",
+    )
+    ap.add_argument(
+        "--use-aggregates-folder",
+        action="store_true",
+        help="Create and use an 'aggregates' subfolder (default: upload directly to root)",
     )
     ap.add_argument(
         "--no-letter-folders",
@@ -290,9 +295,6 @@ def main():
     svc = build_drive(args.service_account_json)
     ensure_folder_exists(svc, args.folder_id)
     root_id = args.folder_id
-
-    # Aggregates folder (for lemmas.csv, forms.csv) - create FIRST
-    agg_id = get_or_create_child_folder(svc, root_id, args.aggregates_folder_name)
     
     paths = collect_csv_paths(args.files)
     if not paths:
@@ -301,6 +303,12 @@ def main():
 
     print(f"Found {len(paths)} CSV files to upload")
     print(f"Using {args.max_workers} parallel workers")
+    
+    # Aggregates folder (optional - for organizing lemmas.csv, forms.csv)
+    if args.use_aggregates_folder:
+        agg_id = get_or_create_child_folder(svc, root_id, args.aggregates_folder_name)
+    else:
+        agg_id = root_id  # Upload directly to root folder
 
     # Cache for letter subfolders
     letter_cache: dict[str, str] = {}
@@ -316,8 +324,11 @@ def main():
 
     # Determine folder structure
     if args.no_letter_folders:
-        # All CSVs go to aggregates folder (no letter subfolders)
-        print("Using flat structure (all files in aggregates folder)")
+        # All CSVs go to root or aggregates folder (no letter subfolders)
+        if args.use_aggregates_folder:
+            print("Using flat structure (all files in aggregates folder)")
+        else:
+            print("Using flat structure (all files in root folder)")
         letters_needed = set()
         parent_id_for_all = agg_id
     else:
