@@ -112,12 +112,21 @@ def upsert_file(svc, parent_id: str, local_path: Path, existing_files_cache: Dic
                     fid = existing_files_cache.get(cache_key)
                 
                 if fid:
-                    media = MediaFileUpload(str(local_path), mimetype="text/csv", resumable=True)
-                    svc.files().update(
+                    # Use chunked resumable upload with 5MB chunks for reliability
+                    media = MediaFileUpload(
+                        str(local_path), 
+                        mimetype="text/csv", 
+                        resumable=True,
+                        chunksize=5 * 1024 * 1024  # 5MB chunks
+                    )
+                    request = svc.files().update(
                         fileId=fid,
                         media_body=media,
                         supportsAllDrives=True,
-                    ).execute()
+                    )
+                    response = None
+                    while response is None:
+                        status, response = request.next_chunk()
                     return ("update", name, fid)
             
             # Query for existing file
@@ -136,15 +145,24 @@ def upsert_file(svc, parent_id: str, local_path: Path, existing_files_cache: Dic
             ).execute()
             files = res.get("files", [])
 
-            media = MediaFileUpload(str(local_path), mimetype="text/csv", resumable=True)
+            # Use chunked resumable upload with 5MB chunks for reliability
+            media = MediaFileUpload(
+                str(local_path), 
+                mimetype="text/csv", 
+                resumable=True,
+                chunksize=5 * 1024 * 1024  # 5MB chunks
+            )
 
             if files:
                 fid = files[0]["id"]
-                svc.files().update(
+                request = svc.files().update(
                     fileId=fid,
                     media_body=media,
                     supportsAllDrives=True,
-                ).execute()
+                )
+                response = None
+                while response is None:
+                    status, response = request.next_chunk()
                 # Update cache (thread-safe write)
                 if existing_files_cache:
                     if cache_lock:
@@ -155,13 +173,16 @@ def upsert_file(svc, parent_id: str, local_path: Path, existing_files_cache: Dic
                 return ("update", name, fid)
             else:
                 meta = {"name": name, "parents": [parent_id]}
-                f = svc.files().create(
+                request = svc.files().create(
                     body=meta,
                     media_body=media,
                     fields="id",
                     supportsAllDrives=True,
-                ).execute()
-                fid = f["id"]
+                )
+                response = None
+                while response is None:
+                    status, response = request.next_chunk()
+                fid = response["id"]
                 # Update cache (thread-safe write)
                 if existing_files_cache:
                     if cache_lock:
