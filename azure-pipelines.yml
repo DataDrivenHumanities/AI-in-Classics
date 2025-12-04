@@ -199,10 +199,10 @@ jobs:
         $ErrorActionPreference = 'Stop'
         $py = ".\.venv\Scripts\python.exe"
         $root = "$(Build.SourcesDirectory)\src\Lemmatizer-LTN"
-        & $py "$root\etl\load_to_postgres.py" `
-          --schema "$root\ops\schema.sql" `
+        & $py "$root\etl\load_aggregates_to_postgres.py" `
+          --schema "$root\ops\init_db.sql" `
           --outdir "$root\out" `
           --truncate
-      displayName: "Normalize & load per-lemma CSVs"
+      displayName: "Load aggregate CSVs to PostgreSQL"
       env:
         DATABASE_URL: $(DATABASE_URL)
