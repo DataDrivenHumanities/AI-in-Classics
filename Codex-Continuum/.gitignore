@@ -1,0 +1,20 @@
+# Node / frontend
+node_modules/
+dist/
+*.log
+
+# Editor / OS
+.DS_Store
+.vscode/
+.idea/
+
+# Env
+.env
+# Python
+backend/.venv/
+backend/__pycache__/
+backend/app/__pycache__/
+backend/app/.cache/
+backend/models/
+backend/completion/transformerEnv/
+transformerEnv/
