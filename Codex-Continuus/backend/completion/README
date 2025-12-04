@@ -1,0 +1,8 @@
+This part of the backend optionally uses its own virtual environment
+To set it up run
+python3 -m venv transformerEnv
+source venv/bin/activate
+pip install -r requirements.txt
+
+This should enable you to call the completion method using the code shown in subprocessExample.py.
+Also, the venv can be given any name, as long as the path in subprocessExample is changed to reflect that.
