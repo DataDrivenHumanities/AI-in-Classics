@@ -43,16 +43,18 @@ def main():
         with open(lemmas_csv, encoding="utf-8") as f:
             reader = csv.DictReader(f)
             for i, row in enumerate(reader, 1):
+                lemma_diac = row["lemma_diac"]
+                
                 conn.execute(
                     "INSERT INTO lemmas (lemma_code, lemma_nod, lemma_diac, pos, gender, page_url) "
-                    "VALUES (%s, %s, %s, %s, %s, %s) "
+                    "VALUES (%s, norm(%s), %s, %s, %s, %s) "
                     "ON CONFLICT (lemma_nod) DO UPDATE SET "
                     "lemma_code=EXCLUDED.lemma_code, lemma_diac=EXCLUDED.lemma_diac, "
                     "pos=EXCLUDED.pos, gender=EXCLUDED.gender, page_url=EXCLUDED.page_url",
                     (
                         row.get("lemma_code") or None,
-                        row["lemma_nod"],
-                        row["lemma_diac"],
+                        lemma_diac,  # norm() computed in database
+                        lemma_diac,
                         row.get("pos") or None,
                         row.get("gender") or None,
                         row.get("page_url") or None,
@@ -78,15 +80,17 @@ def main():
                 if not lemma_id:
                     continue
 
+                form_diac = row["form_diac"]
+                
                 conn.execute(
                     "INSERT INTO forms (lemma_id, form_nod, form_diac, mood, tense, voice, "
                     "person, number, gender, \"case\", degree, verb_form, page_url) "
-                    "VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s) "
+                    "VALUES (%s, norm(%s), %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s) "
                     "ON CONFLICT DO NOTHING",
                     (
                         lemma_id,
-                        row["form_nod"],
-                        row["form_diac"],
+                        form_diac,  # norm() computed in database
+                        form_diac,
                         row.get("mood") or None,
                         row.get("tense") or None,
                         row.get("voice") or None,
