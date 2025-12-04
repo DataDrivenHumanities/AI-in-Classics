@@ -137,4 +137,11 @@ src/Lemmatizer-LTN/Dictionary_Dataframes/
 src/Lemmatizer-LTN/Raw_XML/
 src/pipelines/preprocessing/preprocess_root_query/needed_files/0-50kgreekv1.csv
 src/pipelines/preprocessing/preprocess_root_query/needed_files/dictionary_grk.pkl
-src/pipelines/preprocessing/preprocess_root_query/needed_files/greek_words.csv
+src/pipelines/preprocessing/preprocess_root_query/needed_files/greek_words.csvgreek_variations/
+nouns/
+Raw_XML/
+verbs-complete/
+greek_dictionary/
+greek_words.csv
+temp_input.csv
+temp_output.csv
