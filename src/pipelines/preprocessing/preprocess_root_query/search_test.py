@@ -1,5 +1,6 @@
-import grk_lemmatizer
 import pickle
+
+import grk_lemmatizer
 
 phrase = str(input("Enter phrase to lookup: "))
 
@@ -20,7 +21,7 @@ for word in words:
 
 print("Associated ids: ", ids)
 
-file = open("dictionary_grk.pkl",'rb')
+file = open("dictionary_grk.pkl", "rb")
 
 dictionary = pickle.load(file)
 

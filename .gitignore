@@ -25,6 +25,14 @@ share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+venv-greek-nlp
+venv-ml
+venv
+.venv
+ull
+data/greek/*
+src/SentimentAnalysisGreek/greekbert_v1/*
+src/SentimentAnalysisGreek/greekbert_v2/*
 MANIFEST
 
 # PyInstaller
@@ -138,3 +146,64 @@ src/Lemmatizer-LTN/Raw_XML/
 src/pipelines/preprocessing/preprocess_root_query/needed_files/0-50kgreekv1.csv
 src/pipelines/preprocessing/preprocess_root_query/needed_files/dictionary_grk.pkl
 src/pipelines/preprocessing/preprocess_root_query/needed_files/greek_words.csv
+
+
+
+.vscode/settings.json
+src/frontend/public/jlite/jupyterlite.doit.db
+.jupyterlite.doit.db
+src/frontend/public/jlite/jupyterlite.doit.db
+src/frontend/public/jlite/.doit.db
+
+
+
+# ollam files 
+models/**/weights/
+*.gguf
+.ollama/
+/.idea
+
+/src/frontend/node_modules
+/src/frontend/.nextsrc/frontend/public/jlite/jupyterlite.doit.db
+src/frontend/.next/
+.next/
+.jupyterlite.doit.db
+# Next.js build output
+.next
+out
+
+# Next.js cache
+.next/cache
+.next/cache/**
+
+# Webpack cache artifacts
+src/frontend/.next/cache/webpack
+src/frontend/.next/cache/webpack/**
+
+# General build caches
+node_modules
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
