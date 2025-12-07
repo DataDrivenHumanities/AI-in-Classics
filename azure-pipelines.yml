@@ -193,15 +193,16 @@ jobs:
         env:
           DATABASE_URL: $(DATABASE_URL)
 
-      # 9) Load CSVs into Postgres
-      - powershell: |
-          $ErrorActionPreference = 'Stop'
-          $py = ".\.venv\Scripts\python.exe"
-          $root = "$(Build.SourcesDirectory)\src\Lemmatizer-LTN"
-          & $py "$root\etl\load_aggregates_to_postgres.py" `
-            --schema "$root\ops\init_db.sql" `
-            --outdir "$root\out" `
-            --truncate
-        displayName: "Load aggregate CSVs to PostgreSQL"
-        env:
-          DATABASE_URL: $(DATABASE_URL)
+       # 9) Load CSVs into Postgres (using COPY for speed)
+       - powershell: |
+           $ErrorActionPreference = 'Stop'
+           $py = ".\.venv\Scripts\python.exe"
+           $root = "$(Build.SourcesDirectory)\src\Lemmatizer-LTN"
+           & $py "$root\etl\load_aggregates_to_postgres.py" `
+             --schema "$root\ops\init_db.sql" `
+             --outdir "$root\out" `
+             --truncate
+         displayName: "Load aggregate CSVs to PostgreSQL (COPY)"
+         timeoutInMinutes: 30
+         env:
+           DATABASE_URL: $(DATABASE_URL)

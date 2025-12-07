@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Load aggregate CSVs (lemmas.csv, forms.csv) into PostgreSQL."""
+"""Load aggregate CSVs (lemmas.csv, forms.csv) into PostgreSQL using COPY for speed."""
 import os
 import csv
 import argparse
@@ -28,86 +28,146 @@ def main():
     if not lemmas_csv.exists() or not forms_csv.exists():
         raise SystemExit(f"CSVs not found: {lemmas_csv}, {forms_csv}")
 
-    with psycopg.connect(dsn, autocommit=True) as conn:
+    with psycopg.connect(dsn) as conn:
         # Apply schema
         if args.schema and Path(args.schema).exists():
-            conn.execute(Path(args.schema).read_text(encoding="utf-8"))
+            with conn.cursor() as cur:
+                cur.execute(Path(args.schema).read_text(encoding="utf-8"))
+            conn.commit()
 
         # Truncate
         if args.truncate:
-            conn.execute("TRUNCATE TABLE forms RESTART IDENTITY CASCADE")
-            conn.execute("TRUNCATE TABLE lemmas RESTART IDENTITY CASCADE")
+            print("Truncating tables...")
+            with conn.cursor() as cur:
+                cur.execute("TRUNCATE TABLE forms RESTART IDENTITY CASCADE")
+                cur.execute("TRUNCATE TABLE lemmas RESTART IDENTITY CASCADE")
+            conn.commit()
 
-        # Load lemmas
+        # Load lemmas using COPY
         print("Loading lemmas...")
-        with open(lemmas_csv, encoding="utf-8") as f:
-            reader = csv.DictReader(f)
-            for i, row in enumerate(reader, 1):
-                lemma_diac = row["lemma_diac"]
-                
-                conn.execute(
-                    "INSERT INTO lemmas (lemma_code, lemma_nod, lemma_diac, pos, gender, page_url) "
-                    "VALUES (%s, norm(%s), %s, %s, %s, %s) "
-                    "ON CONFLICT (lemma_nod) DO UPDATE SET "
-                    "lemma_code=EXCLUDED.lemma_code, lemma_diac=EXCLUDED.lemma_diac, "
-                    "pos=EXCLUDED.pos, gender=EXCLUDED.gender, page_url=EXCLUDED.page_url",
-                    (
-                        row.get("lemma_code") or None,
-                        lemma_diac,  # norm() computed in database
-                        lemma_diac,
-                        row.get("pos") or None,
-                        row.get("gender") or None,
-                        row.get("page_url") or None,
-                    )
-                )
-                if i % 1000 == 0:
-                    print(f"  {i} lemmas...")
-        print(f"Loaded {i} lemmas")
+        with conn.cursor() as cur:
+            # Create temp table with same structure but text columns for norm() computation
+            cur.execute("""
+                CREATE TEMP TABLE lemmas_staging (
+                    lemma_code TEXT,
+                    lemma_diac TEXT,
+                    pos TEXT,
+                    gender TEXT,
+                    page_url TEXT
+                ) ON COMMIT DROP
+            """)
+            
+            # COPY CSV into temp table (skip header)
+            with open(lemmas_csv, 'r', encoding='utf-8') as f:
+                next(f)  # Skip header
+                with cur.copy("COPY lemmas_staging (lemma_code, lemma_diac, pos, gender, page_url) FROM STDIN WITH (FORMAT CSV)") as copy:
+                    for line in f:
+                        # Parse CSV to skip lemma_nod column (2nd column)
+                        parts = list(csv.reader([line]))[0]
+                        if len(parts) >= 6:
+                            # lemma_code, _, lemma_diac, pos, gender, page_url
+                            out_row = [parts[0], parts[2], parts[3], parts[4], parts[5]]
+                            copy.write_row(out_row)
+            
+            # Insert from staging into lemmas with norm() computation
+            cur.execute("""
+                INSERT INTO lemmas (lemma_code, lemma_nod, lemma_diac, pos, gender, page_url)
+                SELECT 
+                    NULLIF(lemma_code, ''),
+                    norm(lemma_diac),
+                    lemma_diac,
+                    NULLIF(pos, ''),
+                    NULLIF(gender, ''),
+                    NULLIF(page_url, '')
+                FROM lemmas_staging
+                ON CONFLICT (lemma_nod) DO UPDATE SET
+                    lemma_code = EXCLUDED.lemma_code,
+                    lemma_diac = EXCLUDED.lemma_diac,
+                    pos = EXCLUDED.pos,
+                    gender = EXCLUDED.gender,
+                    page_url = EXCLUDED.page_url
+            """)
+            
+            lemma_count = cur.rowcount
+            print(f"Loaded {lemma_count} lemmas")
+        
+        conn.commit()
 
         # Build lemma cache
         print("Building lemma cache...")
         cache = {}
-        for row in conn.execute("SELECT id, lemma_nod FROM lemmas"):
-            cache[str(row[1]).lower()] = row[0]
+        with conn.cursor() as cur:
+            cur.execute("SELECT id, lemma_nod FROM lemmas")
+            for row in cur.fetchall():
+                cache[str(row[1]).lower()] = row[0]
+        
+        print(f"Cached {len(cache)} lemma IDs")
 
-        # Load forms
+        # Load forms using COPY
         print("Loading forms...")
-        with open(forms_csv, encoding="utf-8") as f:
-            reader = csv.DictReader(f)
-            for i, row in enumerate(reader, 1):
-                lemma_nod = row["lemma_nod"]
-                lemma_id = cache.get(lemma_nod.lower())
-                if not lemma_id:
-                    continue
-
-                form_diac = row["form_diac"]
-                
-                conn.execute(
-                    "INSERT INTO forms (lemma_id, form_nod, form_diac, mood, tense, voice, "
-                    "person, number, gender, \"case\", degree, verb_form, page_url) "
-                    "VALUES (%s, norm(%s), %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s) "
-                    "ON CONFLICT DO NOTHING",
-                    (
-                        lemma_id,
-                        form_diac,  # norm() computed in database
-                        form_diac,
-                        row.get("mood") or None,
-                        row.get("tense") or None,
-                        row.get("voice") or None,
-                        row.get("person") or None,
-                        row.get("number") or None,
-                        row.get("gender") or None,
-                        row.get("case") or None,
-                        row.get("degree") or None,
-                        row.get("verb_form") or None,
-                        row.get("page_url") or None,
-                    )
-                )
-                if i % 10000 == 0:
-                    print(f"  {i} forms...")
-        print(f"Loaded {i} forms")
+        with conn.cursor() as cur:
+            # Create temp table
+            cur.execute("""
+                CREATE TEMP TABLE forms_staging (
+                    lemma_nod TEXT,
+                    form_diac TEXT,
+                    label TEXT,
+                    mood TEXT,
+                    tense TEXT,
+                    voice TEXT,
+                    person TEXT,
+                    number TEXT,
+                    gender TEXT,
+                    "case" TEXT,
+                    degree TEXT,
+                    verb_form TEXT,
+                    page_url TEXT
+                ) ON COMMIT DROP
+            """)
+            
+            # COPY CSV into temp table
+            with open(forms_csv, 'r', encoding='utf-8') as f:
+                next(f)  # Skip header
+                with cur.copy("COPY forms_staging (lemma_nod, form_diac, label, mood, tense, voice, person, number, gender, \"case\", degree, verb_form, page_url) FROM STDIN WITH (FORMAT CSV)") as copy:
+                    for line in f:
+                        # Parse CSV to skip form_nod column (2nd column)
+                        parts = list(csv.reader([line]))[0]
+                        if len(parts) >= 14:
+                            # lemma_nod, _, form_diac, label, mood, tense, voice, person, number, gender, case, degree, verb_form, page_url
+                            out_row = [parts[0], parts[2], parts[3], parts[4], parts[5], parts[6], 
+                                      parts[7], parts[8], parts[9], parts[10], parts[11], parts[12], parts[13]]
+                            copy.write_row(out_row)
+            
+            # Insert from staging into forms with lemma_id lookup and norm() computation
+            cur.execute("""
+                INSERT INTO forms (lemma_id, form_nod, form_diac, mood, tense, voice, 
+                                  person, number, gender, "case", degree, verb_form, page_url)
+                SELECT 
+                    l.id,
+                    norm(s.form_diac),
+                    s.form_diac,
+                    NULLIF(s.mood, ''),
+                    NULLIF(s.tense, ''),
+                    NULLIF(s.voice, ''),
+                    NULLIF(s.person, ''),
+                    NULLIF(s.number, ''),
+                    NULLIF(s.gender, ''),
+                    NULLIF(s."case", ''),
+                    NULLIF(s.degree, ''),
+                    NULLIF(s.verb_form, ''),
+                    NULLIF(s.page_url, '')
+                FROM forms_staging s
+                JOIN lemmas l ON l.lemma_nod = norm(s.lemma_nod)
+                ON CONFLICT DO NOTHING
+            """)
+            
+            form_count = cur.rowcount
+            print(f"Loaded {form_count} forms")
+        
+        conn.commit()
+        
+        print("Done!")
 
 
 if __name__ == "__main__":
     main()
-
