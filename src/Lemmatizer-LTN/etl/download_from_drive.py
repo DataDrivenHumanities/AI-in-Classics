@@ -44,6 +44,26 @@ def find_file_in_folder(svc, folder_id: str, filename: str):
         return None
 
 
+def get_or_find_folder(svc, parent_id: str, folder_name: str):
+    """Get or find a subfolder by name."""
+    query = f"name='{folder_name}' and '{parent_id}' in parents and mimeType='application/vnd.google-apps.folder' and trashed=false"
+    try:
+        results = svc.files().list(
+            q=query,
+            spaces="drive",
+            fields="files(id, name)",
+            includeItemsFromAllDrives=True,
+            supportsAllDrives=True,
+        ).execute()
+        files = results.get("files", [])
+        if files:
+            return files[0]["id"]
+        return None
+    except Exception as e:
+        print(f"Error searching for folder {folder_name}: {e}")
+        return None
+
+
 def download_file(svc, file_id: str, output_path: Path):
     """Download a file from Drive to local path."""
     try:
@@ -82,17 +102,34 @@ def main():
     svc = build_drive(args.service_account_json)
     
     print(f"Searching for files in folder: {args.folder_id}")
+    
+    # Try to find files in root folder first, then in "aggregates" subfolder
+    search_folders = [args.folder_id]
+    aggregates_folder_id = get_or_find_folder(svc, args.folder_id, "aggregates")
+    if aggregates_folder_id:
+        search_folders.append(aggregates_folder_id)
+        print(f"Also searching in 'aggregates' subfolder")
+    
     for filename in args.files:
         print(f"\nLooking for: {filename}")
-        file_id = find_file_in_folder(svc, args.folder_id, filename)
+        file_id = None
+        found_in = None
+        
+        # Try root folder first
+        for folder_id in search_folders:
+            file_id = find_file_in_folder(svc, folder_id, filename)
+            if file_id:
+                found_in = "root" if folder_id == args.folder_id else "aggregates"
+                break
+        
         if file_id:
             output_path = outdir / filename
             if download_file(svc, file_id, output_path):
-                print(f"✓ Successfully downloaded {filename}")
+                print(f"✓ Successfully downloaded {filename} (from {found_in} folder)")
             else:
                 print(f"✗ Failed to download {filename}")
         else:
-            print(f"✗ File not found: {filename}")
+            print(f"✗ File not found: {filename} (searched in root and aggregates folders)")
 
 
 if __name__ == "__main__":

@@ -187,12 +187,12 @@ jobs:
           $py = ".\.venv\Scripts\python.exe"
           $root = "$(Build.SourcesDirectory)\src\Lemmatizer-LTN"
           $out = Join-Path $root "out"
-          
+
           # Ensure out directory exists
           if (-not (Test-Path $out)) {
             New-Item -ItemType Directory -Force -Path $out | Out-Null
           }
-          
+
           Write-Host "Downloading CSVs from Google Drive..."
           & $py "$root\etl\download_from_drive.py" `
             --service-account-json "service_account.json" `
