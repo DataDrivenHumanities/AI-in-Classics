@@ -202,7 +202,7 @@ jobs:
             --schema "$root\ops\init_db.sql" `
             --outdir "$root\out" `
             --truncate
-        displayName: "Load aggregate CSVs to PostgreSQL (COPY)"
+        displayName: "Load aggregate CSVs to PostgreSQL"
         timeoutInMinutes: 30
         env:
           DATABASE_URL: $(DATABASE_URL)
