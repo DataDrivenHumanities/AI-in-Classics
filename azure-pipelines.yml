@@ -3,6 +3,14 @@ parameters:
     displayName: "Testing?"
     type: boolean
     default: false
+  - name: pipelineMode
+    displayName: "Pipeline Mode"
+    type: string
+    default: "Full E2E Pipeline"
+    values:
+      - "Full E2E Pipeline"
+      - "Scrape + Upload to Drive"
+      - "Upload to Database"
 
 trigger: none
 pr: none
@@ -75,7 +83,7 @@ jobs:
         env:
           GOOGLE_SERVICE_ACCOUNT_JSON_BASE64: $(GOOGLE_SERVICE_ACCOUNT_JSON_BASE64)
 
-        # 5) Scrape -> per-lemma CSVs (switch behavior via Testing? checkbox)
+      # 5) Scrape -> per-lemma CSVs (switch behavior via Testing? checkbox)
       - powershell: |
           $ErrorActionPreference = 'Stop'
 
@@ -111,18 +119,21 @@ jobs:
           .\.venv\Scripts\python.exe "$(Build.SourcesDirectory)\$(SCRAPER_PATH)" @args
         displayName: "Scrape -> per-lemma CSVs"
         timeoutInMinutes: 120
+        condition: or(eq('${{ parameters.pipelineMode }}', 'Full E2E Pipeline'), eq('${{ parameters.pipelineMode }}', 'Scrape + Upload to Drive'))
 
       # 6) Aggregate per-lemma -> lemmas.csv + forms.csv
       - powershell: |
           $ErrorActionPreference = 'Stop'
           .\.venv\Scripts\python.exe "$(Build.SourcesDirectory)\src\Lemmatizer-LTN\etl\aggregate_out_to_csvs.py"
         displayName: "Aggregate per-lemma CSVs -> lemmas.csv + forms.csv"
+        condition: or(eq('${{ parameters.pipelineMode }}', 'Full E2E Pipeline'), eq('${{ parameters.pipelineMode }}', 'Scrape + Upload to Drive'))
 
       # 6.5) Aggregate per-lemma CSVs by letter (a.csv, b.csv, ..., z.csv)
       - powershell: |
           $ErrorActionPreference = 'Stop'
           .\.venv\Scripts\python.exe "$(Build.SourcesDirectory)\src\Lemmatizer-LTN\etl\aggregate_by_letter.py"
         displayName: "Aggregate per-lemma CSVs by letter"
+        condition: or(eq('${{ parameters.pipelineMode }}', 'Full E2E Pipeline'), eq('${{ parameters.pipelineMode }}', 'Scrape + Upload to Drive'))
 
       # 7) Upload to Drive:
       #    - lemmas.csv + forms.csv -> ROOT/aggregates/
@@ -165,6 +176,7 @@ jobs:
             exit $exitCode
           }
         displayName: "Upload to Drive"
+        condition: or(eq('${{ parameters.pipelineMode }}', 'Full E2E Pipeline'), eq('${{ parameters.pipelineMode }}', 'Scrape + Upload to Drive'))
         env:
           GOOGLE_DRIVE_FOLDER_ID: $(GOOGLE_DRIVE_FOLDER_ID)
         timeoutInMinutes: 30
@@ -190,10 +202,11 @@ jobs:
           $env:SCHEMA_PATH = Join-Path $root "ops\init_db.sql"
           & $py .\apply_schema.py
         displayName: "Init DB schema (create/ensure tables)"
+        condition: or(eq('${{ parameters.pipelineMode }}', 'Full E2E Pipeline'), eq('${{ parameters.pipelineMode }}', 'Upload to Database'))
         env:
           DATABASE_URL: $(DATABASE_URL)
 
-      # 9) Load CSVs into Postgres (using COPY for speed)
+      # 9) Load CSVs into Postgres (using batch inserts)
       - powershell: |
           $ErrorActionPreference = 'Stop'
           $py = ".\.venv\Scripts\python.exe"
@@ -203,6 +216,7 @@ jobs:
             --outdir "$root\out" `
             --truncate
         displayName: "Load aggregate CSVs to PostgreSQL"
+        condition: or(eq('${{ parameters.pipelineMode }}', 'Full E2E Pipeline'), eq('${{ parameters.pipelineMode }}', 'Upload to Database'))
         timeoutInMinutes: 30
         env:
           DATABASE_URL: $(DATABASE_URL)
