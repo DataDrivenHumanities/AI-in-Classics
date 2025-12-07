@@ -1,0 +1,97 @@
+[
+  {
+    "paragraph": "Puer bonus discipulus est. Facit omnem laborem suum. Magister laudat puerum. Puer est etiam filius bonus. Familia amant eum. Vult ludere cum cane. Currunt insimul. Etiam vult solem et mare pulchrum.",
+    "translation": "The boy is a good student. He does all of his work. The teacher praises the boy. The boy is also a good son. His family loves him. He likes to play with his dog. They run together. He also likes the sun and beautiful sea.",
+    "expected_sentiment": "VERY POSITIVE (+2)"
+  },
+  {
+    "paragraph": "Vir malus venator est. Aliquid non captat. Alii rident virum. Etiam vir malus maritus est. Familia eum oderunt. Non vult videre liberos. Non sciunt venatorem. Non videt uxorem suam.",
+    "translation": "The man is a bad hunter. He does not catch anything. The others laugh at the man. The man is also a bad husband. His family hates him. He doesn't want to see his children. They don't know the hunter. He also does not see his wife.",
+    "expected_sentiment": "VERY NEGATIVE (-2)"
+  },
+  {
+    "paragraph": "Nautae navem pro bello paraverunt. Milites quoque dederunt auxilium eis. Irent pugnare Persicos. Infeliciter, proelium perdiderunt. Navis deletus est et nautae necati sunt. Milites cesserunt.",
+    "translation": "The sailors prepared the ship for war. The soldiers helped them. They were going to fight the Persians. Unfortunately, they lost the battle. The ship was destroyed and the soldiers died. The soldiers surrendered.",
+    "expected_sentiment": "EXTREMELY NEGATIVE (-3)"
+  },
+  {
+    "paragraph": "Erat temporiva aestatas et tempestas erat valde bella. Bellum non fuit et imperator munificens fuit. Delphini cum piscibus nataverunt in oceano pulchro. Luderunt insimul et undas fruniti sunt. Gens in littore ad prospectum intentaverunt et surriserunt.",
+    "translation": "It was early summer and the weather was very nice. There was no war and the emperor was generous. The dolphins swam with the fish in the beautiful ocean. They played together and enjoyed the water. The people on the shore pointed and smiled at the view.",
+    "expected_sentiment": "VERY POSITIVE (+2)"
+  },
+  {
+    "paragraph": "Quod utilissimum ad ducendum est amicitia. Amici imperatoris probantur ut fides eius sustineatur. Haec affectio aut ex corde aut ex timore oritur, sed tamen necessaria est. Amicus bonus imperatori deliberationibus difficilibus adest, ut celerius adiuvet cives suos qui laborant. Cives patriae hoc tempore clamant, et amici imperatorem monent eum causas eorum audire et opes dare. Hoc modo, ad terram curandam, imperator amicos suos requirit sicut agricola boves.",
+    "translation": "The most useful thing for leading is friendship. Friends of the emperor are tested so that his trust is upheld. This affection arises either from the heart or from fear, but nevertheless it is necessary. A good friend assists the emperor in difficult deliberations, so the emperor can more quickly aid his citizens who are in distress. Citizens of the fatherland cry out at this time, and friends advise the emperor to hear their reasons and give aid. In this way, in order to care for the land, the emperor needs his friends just as the farmer needs his oxen.",
+    "expected_sentiment": "MODERATELY POSITIVE (+1)"
+  },
+  {
+    "paragraph": "Vir bonus agricola est. Pascit omnem animalium. Oppidum amat agricolam. Agricola est etiam mercator magnus. Unusquisque amat frugem eius. Colit bladium cibare omnibus in oppido. Nemo est essuriens. Agricola est valde felix cum labore.",
+    "translation": "The man is a good farmer. He feeds all of his animals. The town loves the farmer. The farmer is also a great merchant. Everyone loves his produce. He cultivates grain to feed all the people in town. Nobody is hungry. He is very happy with his 벌호출된 이미지 his work.",
+    "expected_sentiment": "VERY POSITIVE (+2)"
+  },
+  {
+    "paragraph": "Liberi convestiverunt pro schola. Parentes dederunt auxilium eis deligere induvias. Ibant ludere. Infeliciter, ludum perdiderunt. Liberi fleverunt et parentes molestati sunt.",
+    "translation": "The children got dressed for school. The parents helped them to choose clothes. They were going to play. Unfortunately, they lost the game. The children cried and the parents were annoyed.",
+    "expected_sentiment": "MODERATELY NEGATIVE (-1)"
+  },
+  {
+    "paragraph": "Novistine familiam quae hanc domum inhabitat? Audivi patrem malum virum esse. Ille miser servas suas saepe laedit et coniunx infidelis est. Maior filium ei nihil dicit. Pueros tanti mali viri miseror.",
+    "translation": "Do you know the family that lives in this house? I heard that the father is a wicked man. That wretched man hits his own slaves often and is an unfaithful spouse. His eldest son says nothing to him. I pity the children of such a wicked man.",
+    "expected_sentiment": "VERY NEGATIVE (-2)"
+  },
+  {
+    "paragraph": "Te cum puella quam amas in festo vidi. Hoc me delectat, quod pater eius dixit se velle te puellae nubere. Parare propositum matrimonii coepisse debes. Felix es, dum puellae quam vere amas nubas.",
+    "translation": "I saw you with the girl you like at the festival. This delights me, because her father said that he wants you to marry the girl. You should begin to arrange the marriage proposal. You are lucky, since you may marry the girl whom you truly love.",
+    "expected_sentiment": "VERY POSITIVE (+2)"
+  },
+  {
+    "paragraph": "Agricola in villa magna habitat. Campum fertile colit et fruges abundantes producit. Vicini laudant diligentiam eius. Liberi eius in agro ludunt et rident. Sol lucet et caelum est clarum. Agricola felix est in vita sua.",
+    "translation": "The farmer lives in a large house. He cultivates a fertile field and produces abundant crops. The neighbors praise his diligence. His children play and laugh in the field. The sun shines and the sky is clear. The farmer is happy in his life.",
+    "expected_sentiment": "VERY POSITIVE (+2)"
+  },
+  {
+    "paragraph": "Mercator in foro laborat. Res suas vendit, sed pauci emunt. Pecunia deest et debita crescunt. Amici eum derident. Domum tristem redit. Nullus eum consolatur.",
+    "translation": "The merchant works in the market. He sells his goods, but few buy. Money is lacking, and debts grow. Friends mock him. He returns to a sad home. No one comforts him.",
+    "expected_sentiment": "VERY NEGATIVE (-2)"
+  },
+  {
+    "paragraph": "Milites in castris exercentur. Gladium et scutum portant. Dux eos spectat et parat ad pugnam. Non timent hostes, sed bellum nondum venit. Cibus est sufficiens. Milites in tentoriis dormiunt.",
+    "translation": "The soldiers train in the camp. They carry swords and shields. The leader watches them and prepares for battle. They do not fear enemies, but war has not yet come. Food is sufficient. The soldiers sleep in tents.",
+    "expected_sentiment": "NEUTRAL (0)"
+  },
+  {
+    "paragraph": "Pueri in ludo discunt. Magister eos litteras docet. Semper quaerunt scire plus. Post ludum, in villa magna ludunt. Parentes eorum laeti sunt et donant poma. Pueri rident et currunt.",
+    "translation": "The boys study in school. The teacher teaches them letters. They always seek to learn more. After school, they play in a large house. Their parents are happy and give them apples. The boys laugh and run.",
+    "expected_sentiment": "VERY POSITIVE (+2)"
+  },
+  {
+    "paragraph": "Navis in tempestate magna navigat. Nautae laborant, sed venti sunt fortes. Navis fracta est et aqua intrat. Omnes timent perire. Capiunt remos, sed nihil proficit. Portum non vident.",
+    "translation": "The ship sails in a great storm. The sailors work, but the winds are strong. The ship is broken, and water enters. All fear they will perish. They take the oars, but it helps little. They do not see the port.",
+    "expected_sentiment": "EXTREMELY NEGATIVE (-3)"
+  },
+  {
+    "paragraph": "Cives in foro conveniunt. Orator loquitur de legibus novis. Alii adsentantur, alii negant. Nullus irascitur. Postea, cives ad tabernas eunt. Ibi vinum bibunt et fabulas narrant.",
+    "translation": "The citizens gather in the forum. The orator speaks about new laws. Some agree, others disagree. No one is angry. Afterward, the citizens go to taverns. There they drink wine and tell stories.",
+    "expected_sentiment": "NEUTRAL (0)"
+  },
+  {
+    "paragraph": "Matrona vestes pulchras facit. Omnes in oppido admirantur opus eius. Emit sericum carum et laborat nocte. Liberi eius eam laudant. Est felix cum familia sua. Omnes in villa rident.",
+    "translation": "The woman makes beautiful clothes. Everyone in the town admires her work. She buys expensive silk and works at night. Her children praise her. She is happy with her family. Everyone in the house laughs.",
+    "expected_sentiment": "VERY POSITIVE (+2)"
+  },
+  {
+    "paragraph": "Vir in villa magna habitat. Sed inimici eius villam oppugnant. Ignem iaciunt et tectum consumitur. Liberi eius fugiunt, sed pericula manent. Vir clamat et lacrimat. Nihil salvat.",
+    "translation": "The man lives in a large house. But his enemies attack the house. They throw fire, and the roof is consumed. His children flee, but dangers remain. The man shouts and cries. He saves nothing.",
+    "expected_sentiment": "EXTREMELY NEGATIVE (-3)"
+  },
+  {
+    "paragraph": "Piscatores in mari laborant. Retia iaciunt, sed pisces non capiunt. Ventus est tranquillus et sol lucet. Postea, ad litus redeunt. Ibi fabulas narrant. Nullus est tristis aut laetus.",
+    "translation": "The fishermen work at sea. They cast nets, but catch no fish. The wind is calm, and the sun shines. Afterward, they return to the shore. There they tell stories. No one is sad or happy.",
+    "expected_sentiment": "NEUTRAL (0)"
+  },
+  {
+    "paragraph": "Senex in villa magna habitat. Liberi eius eum neglegunt. Servi non laborant et res frangunt. Senex irascitur et clamat. Sed postea, amicus adest et donat vinum. Senex tandem ridet.",
+    "translation": "The old man lives in a large house. His children neglect him. The slaves do not work and break things. The old man is angry and shouts. But afterward, a friend arrives and gives wine. The old man finally smiles.",
+    "expected_sentiment": "MODERATELY NEGATIVE (-1)"
+  }
+]

@@ -1,0 +1,146 @@
+:root { font-family: system-ui, Arial; }
+body { margin: 0; background: #0f141a; color: #e6edf3; }
+
+.container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 16px;
+}
+
+h1 {
+  font-size: 1.6rem;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+
+/* LEFT PANEL */
+.upload-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.dropzone {
+  border: 2px dashed #3b3f45;
+  border-radius: 12px;
+  padding: 28px;
+  text-align: center;
+  background: #161b22;
+  transition: all 0.2s ease-in-out;
+  height: 256px;
+}
+
+.dropzone.over {
+  border-color: #88a0ff;
+  background: #111727;
+}
+
+.btn {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: #1f6feb;
+  color: white;
+  cursor: pointer;
+}
+
+.filecard {
+  padding: 8px 12px;
+  background: #161b22;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.primary {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  background: #2ea043;
+  color: #0b1116;
+  cursor: pointer;
+}
+
+.primary:disabled {
+  background: #2a2f34;
+  color: #8b949e;
+  cursor: not-allowed;
+}
+
+.status {
+  opacity: 0.9;
+  font-size: 0.9rem;
+}
+
+
+/* RIGHT PANEL */
+.output-panel {
+  background: #161b22;
+  border-radius: 12px;
+  padding: 16px;
+  height: 283px;
+  overflow-y: auto; 
+}
+
+.output-panel h2 {
+  margin-top: 0;
+}
+
+.placeholder {
+  opacity: 0.7;
+  font-style: italic;
+}
+
+.results {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+
+/* MOBILE VIEW */
+@media (max-width: 768px) {
+  .main-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Loading bar */
+.progress {
+  position: relative;
+  flex: 1 1 auto;
+  height: 6px;
+  min-width: 160px;
+  background: #2a2f34;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 40%;
+  left: -40%;
+  background: linear-gradient(90deg, #88a0ff, #1f6feb);
+  border-radius: 999px;
+  animation: progress-slide 1.2s infinite ease-in-out;
+}
+
+@keyframes progress-slide {
+  0%   { left: -40%; }
+  50%  { left: 60%;  }
+  100% { left: 100%; }
+}
