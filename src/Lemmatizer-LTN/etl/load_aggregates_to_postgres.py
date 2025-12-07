@@ -58,17 +58,21 @@ def main():
             """)
             
             # COPY CSV into temp table (skip header, skip lemma_nod column)
+            # CSV columns: lemma_code, lemma_nod, lemma_diac, pos, gender, page_url
             with open(lemmas_csv, 'r', encoding='utf-8') as f:
-                reader = csv.DictReader(f)
+                reader = csv.reader(f)
+                next(reader)  # Skip header
                 with cur.copy("COPY lemmas_staging (lemma_code, lemma_diac, pos, gender, page_url) FROM STDIN WITH (FORMAT CSV)") as copy:
                     for row in reader:
-                        # Skip lemma_nod column (2nd column)
+                        if len(row) < 6:
+                            continue
+                        # Skip lemma_nod (index 1), keep: 0, 2, 3, 4, 5
                         copy.write_row([
-                            row.get("lemma_code", ""),
-                            row.get("lemma_diac", ""),
-                            row.get("pos", ""),
-                            row.get("gender", ""),
-                            row.get("page_url", "")
+                            row[0] or "",  # lemma_code
+                            row[2] or "",  # lemma_diac
+                            row[3] or "",  # pos
+                            row[4] or "",  # gender
+                            row[5] or ""   # page_url
                         ])
             
             # Insert from staging into lemmas with norm() computation
@@ -128,25 +132,29 @@ def main():
             """)
             
             # COPY CSV into temp table (skip form_nod column)
+            # CSV columns: lemma_nod, form_nod, form_diac, label, mood, tense, voice, person, number, gender, case, degree, verb_form, page_url
             with open(forms_csv, 'r', encoding='utf-8') as f:
-                reader = csv.DictReader(f)
+                reader = csv.reader(f)
+                next(reader)  # Skip header
                 with cur.copy("COPY forms_staging (lemma_nod, form_diac, label, mood, tense, voice, person, number, gender, \"case\", degree, verb_form, page_url) FROM STDIN WITH (FORMAT CSV)") as copy:
                     for row in reader:
-                        # Skip form_nod column (2nd column)
+                        if len(row) < 14:
+                            continue
+                        # Skip form_nod (index 1), keep: 0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13
                         copy.write_row([
-                            row.get("lemma_nod", ""),
-                            row.get("form_diac", ""),
-                            row.get("label", ""),
-                            row.get("mood", ""),
-                            row.get("tense", ""),
-                            row.get("voice", ""),
-                            row.get("person", ""),
-                            row.get("number", ""),
-                            row.get("gender", ""),
-                            row.get("case", ""),
-                            row.get("degree", ""),
-                            row.get("verb_form", ""),
-                            row.get("page_url", "")
+                            row[0] or "",   # lemma_nod
+                            row[2] or "",   # form_diac
+                            row[3] or "",   # label
+                            row[4] or "",   # mood
+                            row[5] or "",   # tense
+                            row[6] or "",   # voice
+                            row[7] or "",   # person
+                            row[8] or "",   # number
+                            row[9] or "",   # gender
+                            row[10] or "",  # case
+                            row[11] or "",  # degree
+                            row[12] or "",  # verb_form
+                            row[13] or ""   # page_url
                         ])
             
             # Insert from staging into forms with lemma_id lookup and norm() computation
