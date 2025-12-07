@@ -57,17 +57,19 @@ def main():
                 ) ON COMMIT DROP
             """)
             
-            # COPY CSV into temp table (skip header)
+            # COPY CSV into temp table (skip header, skip lemma_nod column)
             with open(lemmas_csv, 'r', encoding='utf-8') as f:
-                next(f)  # Skip header
+                reader = csv.DictReader(f)
                 with cur.copy("COPY lemmas_staging (lemma_code, lemma_diac, pos, gender, page_url) FROM STDIN WITH (FORMAT CSV)") as copy:
-                    for line in f:
-                        # Parse CSV to skip lemma_nod column (2nd column)
-                        parts = list(csv.reader([line]))[0]
-                        if len(parts) >= 6:
-                            # lemma_code, _, lemma_diac, pos, gender, page_url
-                            out_row = [parts[0], parts[2], parts[3], parts[4], parts[5]]
-                            copy.write_row(out_row)
+                    for row in reader:
+                        # Skip lemma_nod column (2nd column)
+                        copy.write_row([
+                            row.get("lemma_code", ""),
+                            row.get("lemma_diac", ""),
+                            row.get("pos", ""),
+                            row.get("gender", ""),
+                            row.get("page_url", "")
+                        ])
             
             # Insert from staging into lemmas with norm() computation
             cur.execute("""
@@ -125,18 +127,27 @@ def main():
                 ) ON COMMIT DROP
             """)
             
-            # COPY CSV into temp table
+            # COPY CSV into temp table (skip form_nod column)
             with open(forms_csv, 'r', encoding='utf-8') as f:
-                next(f)  # Skip header
+                reader = csv.DictReader(f)
                 with cur.copy("COPY forms_staging (lemma_nod, form_diac, label, mood, tense, voice, person, number, gender, \"case\", degree, verb_form, page_url) FROM STDIN WITH (FORMAT CSV)") as copy:
-                    for line in f:
-                        # Parse CSV to skip form_nod column (2nd column)
-                        parts = list(csv.reader([line]))[0]
-                        if len(parts) >= 14:
-                            # lemma_nod, _, form_diac, label, mood, tense, voice, person, number, gender, case, degree, verb_form, page_url
-                            out_row = [parts[0], parts[2], parts[3], parts[4], parts[5], parts[6], 
-                                      parts[7], parts[8], parts[9], parts[10], parts[11], parts[12], parts[13]]
-                            copy.write_row(out_row)
+                    for row in reader:
+                        # Skip form_nod column (2nd column)
+                        copy.write_row([
+                            row.get("lemma_nod", ""),
+                            row.get("form_diac", ""),
+                            row.get("label", ""),
+                            row.get("mood", ""),
+                            row.get("tense", ""),
+                            row.get("voice", ""),
+                            row.get("person", ""),
+                            row.get("number", ""),
+                            row.get("gender", ""),
+                            row.get("case", ""),
+                            row.get("degree", ""),
+                            row.get("verb_form", ""),
+                            row.get("page_url", "")
+                        ])
             
             # Insert from staging into forms with lemma_id lookup and norm() computation
             cur.execute("""
