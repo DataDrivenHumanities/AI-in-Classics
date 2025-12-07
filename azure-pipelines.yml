@@ -181,6 +181,30 @@ jobs:
           GOOGLE_DRIVE_FOLDER_ID: $(GOOGLE_DRIVE_FOLDER_ID)
         timeoutInMinutes: 30
 
+      # 7.5) Download CSVs from Drive (only for Upload to Database mode)
+      - powershell: |
+          $ErrorActionPreference = 'Stop'
+          $py = ".\.venv\Scripts\python.exe"
+          $root = "$(Build.SourcesDirectory)\src\Lemmatizer-LTN"
+          $out = Join-Path $root "out"
+          
+          # Ensure out directory exists
+          if (-not (Test-Path $out)) {
+            New-Item -ItemType Directory -Force -Path $out | Out-Null
+          }
+          
+          Write-Host "Downloading CSVs from Google Drive..."
+          & $py "$root\etl\download_from_drive.py" `
+            --service-account-json "service_account.json" `
+            --folder-id "$(GOOGLE_DRIVE_FOLDER_ID)" `
+            --outdir "$out" `
+            --files "lemmas.csv" "forms.csv"
+        displayName: "Download CSVs from Google Drive"
+        condition: eq('${{ parameters.pipelineMode }}', 'Upload to Database')
+        env:
+          GOOGLE_DRIVE_FOLDER_ID: $(GOOGLE_DRIVE_FOLDER_ID)
+        timeoutInMinutes: 10
+
       # 8) Initialize schema
       - powershell: |
           $ErrorActionPreference = 'Stop'
