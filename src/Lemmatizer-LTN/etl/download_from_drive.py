@@ -110,6 +110,7 @@ def main():
         search_folders.append(aggregates_folder_id)
         print(f"Also searching in 'aggregates' subfolder")
     
+    failed = []
     for filename in args.files:
         print(f"\nLooking for: {filename}")
         file_id = None
@@ -125,11 +126,19 @@ def main():
         if file_id:
             output_path = outdir / filename
             if download_file(svc, file_id, output_path):
-                print(f"✓ Successfully downloaded {filename} (from {found_in} folder)")
+                print(f"[OK] Successfully downloaded {filename} (from {found_in} folder)")
             else:
-                print(f"✗ Failed to download {filename}")
+                print(f"[ERROR] Failed to download {filename}")
+                failed.append(filename)
         else:
-            print(f"✗ File not found: {filename} (searched in root and aggregates folders)")
+            print(f"[ERROR] File not found: {filename} (searched in root and aggregates folders)")
+            failed.append(filename)
+    
+    if failed:
+        print(f"\n[ERROR] Failed to download {len(failed)} file(s): {', '.join(failed)}")
+        raise SystemExit(1)
+    
+    print(f"\n[OK] Successfully downloaded all {len(args.files)} file(s)")
 
 
 if __name__ == "__main__":
