@@ -20,6 +20,7 @@ setup(
     python_requires=">=3.10",
     install_requires=[
         "psycopg[binary]>=3.0",
+        "python-dotenv>=1.0.0",
     ],
     classifiers=[
         "Development Status :: 3 - Alpha",
