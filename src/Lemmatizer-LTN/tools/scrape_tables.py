@@ -1,0 +1,394 @@
+import asyncio
+import aiohttp
+from aiohttp import ClientResponseError, ClientConnectorError
+from bs4 import BeautifulSoup
+from urllib.parse import urlparse, parse_qs, urljoin
+from pathlib import Path
+import csv
+import re
+import unicodedata
+import argparse
+import random
+
+BASE = "https://www.online-latin-dictionary.com"
+INDEX_URL = BASE + "/latin-english-dictionary.php?typ=pg&pg={pg}"
+FLEXION_URL = BASE + "/latin-dictionary-flexion.php?lemma={lemma}"
+
+HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; DDHBot/1.0)"}
+
+# -------- text helpers --------
+_whitespace = re.compile(r"\s+")
+_DIATH_RE = re.compile(r"\s*[-–—]?\s*(active|passive)\s+diathesis\s*$", re.I)
+
+def strip_accents(s: str) -> str:
+    nfkd = unicodedata.normalize("NFD", s or "")
+    return "".join(ch for ch in nfkd if not unicodedata.combining(ch))
+
+def slugify_lemma(lemma_text: str) -> str:
+    s = strip_accents(lemma_text).lower()
+    s = re.sub(r"[^a-z0-9]+", "_", s)
+    s = re.sub(r"_+", "_", s).strip("_")
+    return s or "lemma"
+
+def clean_lemma_text(t: str) -> str:
+    return _DIATH_RE.sub("", (t or "").strip())
+
+def parse_index_for_lemmas(html_text: str):
+    soup = BeautifulSoup(html_text, "html.parser")
+    lemmas = []
+    for a in soup.select("div.browse a.adv"):
+        href = a.get("href", "")
+        if "latin-english-dictionary.php" in href and "lemma=" in href:
+            q = parse_qs(urlparse(urljoin(BASE, href)).query)
+            code = q.get("lemma", [None])[0]
+            if code:
+                lemmas.append(code)
+    return lemmas
+
+def flatten_ff_value(cell):
+    """Extract form values from HTML cell, combining roots (radice) and endings (desinenza).
+    
+    The HTML structure has two patterns:
+    
+    1. Simple pattern:
+       <span class="radice">ăbălĭēn</span><span class="desinenza">or</span>
+       → "ăbălĭēnor"
+    
+    2. Complex pattern (for periphrastic forms):
+       <span class="radice">abalienat</span><span class="desinenza">us, –a, –um</span> <span class="radice"></span>sum
+       → "abalienatus sum", "abalienata sum", "abalienatum sum"
+       
+    Returns a comma-separated string of all reconstructed forms.
+    """
+    desinenze = []  # List of endings (desinenza spans)
+    radice = None   # The stem (radice span) - use first non-empty one
+    suffix_text = []  # Text after empty radice spans (like "sum", "es", "est")
+    other_parts = []  # Any other text content
+    
+    # Collect all nodes in order to handle empty radice spans properly
+    nodes = list(cell.children)
+    
+    for i, node in enumerate(nodes):
+        name = getattr(node, "name", None)
+        
+        # Handle text nodes (spaces, suffixes after empty radice)
+        if name is None:
+            text = str(node).strip()
+            if text:
+                # Check if this text comes after an empty radice span
+                # Look backwards through whitespace to find the previous non-whitespace node
+                found_empty_radice = False
+                if i > 0:
+                    for j in range(i - 1, -1, -1):
+                        prev_node = nodes[j]
+                        prev_name = getattr(prev_node, "name", None)
+                        
+                        # Skip whitespace text nodes
+                        if prev_name is None:
+                            prev_text = str(prev_node).strip()
+                            if not prev_text:
+                                continue  # Keep looking backwards through whitespace
+                            else:
+                                break  # Found non-whitespace text, stop looking
+                        
+                        # Check if this is an empty radice span
+                        if prev_name == "span":
+                            prev_classes = set(getattr(prev_node, "get", lambda *_: [])("class", []))
+                            if "radice" in prev_classes:
+                                prev_text = prev_node.get_text("", strip=True)
+                                if not prev_text:  # Empty radice span
+                                    suffix_text.append(text)
+                                    found_empty_radice = True
+                                    break  # Found empty radice, this is suffix text
+                        break  # Found a non-text node, stop looking
+                
+                # If we didn't find an empty radice, add to other_parts
+                if not found_empty_radice:
+                    other_parts.append(text)
+            continue
+        
+        if name != "span":
+            # Handle non-span elements
+            if hasattr(node, "get_text"):
+                text = node.get_text(" ", strip=False)
+                if text.strip():
+                    other_parts.append(text)
+            continue
+        
+        classes = set(getattr(node, "get", lambda *_: [])("class", []))
+        text = node.get_text("", strip=True)
+        
+        if "desinenza" in classes:
+            # This is an ending - collect it (may contain comma-separated endings)
+            desinenze.append(text)
+        elif "radice" in classes:
+            # This is the stem - save first non-empty one
+            if text and radice is None:
+                radice = text
+            # Empty radice spans are handled above (text after them goes to suffix_text)
+        else:
+            # Other span content
+            if text:
+                other_parts.append(text)
+    
+    # Combine suffix text (from after empty radice spans) with other parts
+    all_suffix = " ".join(suffix_text + other_parts).strip()
+    
+    # If we have a radice and desinenze, combine them
+    if radice and desinenze:
+        forms = []
+        for des in desinenze:
+            # Desinenza may contain comma-separated endings: "us, –a, –um"
+            # Split by comma and process each ending
+            des_parts = [p.strip() for p in des.split(",")]
+            
+            for des_part in des_parts:
+                if not des_part:
+                    continue
+                
+                # Remove leading dash/hyphen from ending if present
+                des_clean = des_part.lstrip("-–—").strip()
+                if not des_clean:
+                    continue
+                
+                # Check if ending already contains a suffix (like "esse")
+                # Split by space to separate ending from suffix
+                ending_parts = des_clean.split(None, 1)
+                ending_only = ending_parts[0] if ending_parts else ""
+                ending_suffix = ending_parts[1] if len(ending_parts) > 1 else ""
+                
+                # Combine radice + ending
+                combined = radice + ending_only
+                
+                # Add suffix: prefer ending_suffix, then all_suffix
+                if ending_suffix:
+                    combined = f"{combined} {ending_suffix}"
+                elif all_suffix:
+                    combined = f"{combined} {all_suffix}"
+                
+                forms.append(combined)
+        
+        # Return comma-separated forms
+        return ", ".join(forms)
+    
+    # Fallback: if no radice+desinenza pattern, just concatenate everything
+    if desinenze:
+        # We have endings but no radice - return them as-is (they'll be combined later)
+        result = ", ".join(desinenze)
+        if all_suffix:
+            result = f"{result}, {all_suffix}" if result else all_suffix
+        return result
+    
+    if radice:
+        # We have a radice but no desinenze - return it with any suffix
+        result = radice
+        if all_suffix:
+            result = f"{result} {all_suffix}"
+        return result
+    
+    # No radice or desinenza - just return other content
+    return all_suffix if all_suffix else ""
+
+def parse_flexion_tables(html_text: str, page_url: str):
+    soup = BeautifulSoup(html_text, "html.parser")
+
+    # Header: lemma text and part-of-speech line
+    h2 = soup.select_one("#myth h2")
+    raw_lemma_text = h2.get_text(strip=True) if h2 else ""
+    lemma_text = clean_lemma_text(raw_lemma_text)
+
+    pos = soup.select_one("#myth .grammatica")
+    pos_text = pos.get_text(" ", strip=True) if pos else ""
+    pos_lc = pos_text.lower()
+
+    # Extract voice from raw lemma heading (BEFORE cleaning) - this is the primary source
+    # e.g., "abalieno – Active diathesis" or "abalieno – Passive diathesis"
+    lemma_voice_hint = ""
+    raw_lower = raw_lemma_text.lower()
+    if "active diathesis" in raw_lower:
+        lemma_voice_hint = "active"
+    elif "passive diathesis" in raw_lower:
+        lemma_voice_hint = "passive"
+    elif "deponent" in raw_lower:
+        lemma_voice_hint = "passive"  # deponent verbs are passive in form
+
+    # Detect diathesis in section titles as fallback
+    def voice_hint_from_titles(titles):
+        t = " ".join(titles).lower()
+        if "active diathesis" in t:
+            return "active"
+        if "passive diathesis" in t:
+            return "passive"
+        return ""
+
+    rows = []
+    for cont in soup.select(".conjugation-container .ff_tbl_container"):
+        # up to 3 hierarchical titles (e.g., diathesis/mood/tense)
+        titles = [t.get_text(" ", strip=True) for t in cont.find_all_previous("div", class_="ff_tbl_title", limit=3)]
+        titles = list(reversed(titles))
+        # Use lemma-level voice hint if available, otherwise check table titles
+        v_hint = lemma_voice_hint or voice_hint_from_titles(titles)
+
+        # Walk each row and capture *all* value columns, not just the last one
+        for r in cont.select(".ff_tbl_row"):
+            cols = r.select(".ff_tbl_col")
+            if not cols:
+                continue
+
+            # First col is the label (case, person, etc.)
+            label = cols[0].get_text(" ", strip=True)
+            values = [flatten_ff_value(c) for c in cols[1:]]
+            nvals = len(values)
+            if nvals == 0:
+                continue
+
+            # Heuristics for per-column hints (number/gender) when headers are not easily detectable
+            per_col_hints = [{"number_hint": "", "gender_hint": ""} for _ in values]
+
+            if "noun" in pos_lc and nvals == 2:
+                # Nouns commonly have [singular | plural]
+                per_col_hints[0]["number_hint"] = "singular"
+                per_col_hints[1]["number_hint"] = "plural"
+
+            elif "adjective" in pos_lc and nvals == 3:
+                # Adjectives commonly have [masculine | feminine | neuter]
+                per_col_hints[0]["gender_hint"] = "masculine"
+                per_col_hints[1]["gender_hint"] = "feminine"
+                per_col_hints[2]["gender_hint"] = "neuter"
+
+            # Emit one CSV row per value column, carrying hints
+            for j, val in enumerate(values):
+                rows.append({
+                    "lemma_text": lemma_text,
+                    "pos": pos_text,
+                    "context_1": titles[0] if len(titles) > 0 else "",
+                    "context_2": titles[1] if len(titles) > 1 else "",
+                    "context_3": titles[2] if len(titles) > 2 else "",
+                    "label": label,
+                    "value": val,
+                    "page_url": page_url,
+                    "number_hint": per_col_hints[j]["number_hint"],
+                    "gender_hint": per_col_hints[j]["gender_hint"],
+                    "voice_hint": v_hint,
+                })
+
+    return lemma_text, rows
+
+async def fetch_text(session: aiohttp.ClientSession, url: str, timeout: int = 20, retries: int = 4, delay: float = 0.2):
+    for attempt in range(retries + 1):
+        try:
+            async with session.get(url, timeout=timeout) as resp:
+                resp.raise_for_status()
+                return await resp.text()
+        except (ClientResponseError, ClientConnectorError, asyncio.TimeoutError):
+            if attempt >= retries:
+                raise
+            backoff = delay * (2 ** attempt) + random.uniform(0, delay)
+            await asyncio.sleep(backoff)
+
+async def discover_lemmas_dynamic(session, start: int, step: int, sem: asyncio.Semaphore, delay: float, max_empty: int = 2):
+    all_codes = set()
+    empty_run = 0
+    pg = start
+    while True:
+        url = INDEX_URL.format(pg=pg)
+        async with sem:
+            try:
+                html = await fetch_text(session, url)
+            except Exception as e:
+                print(f"[index pg={pg}] warn: {e}")
+                break
+            codes = parse_index_for_lemmas(html)
+            print(f"[index pg={pg}] lemmas: {len(codes)}")
+            if codes:
+                all_codes.update(codes)
+                empty_run = 0
+            else:
+                empty_run += 1
+                if empty_run >= max_empty:
+                    print("[index] stopping after consecutive empty pages")
+                    break
+            if delay > 0:
+                await asyncio.sleep(delay)
+        pg += step
+    return sorted(all_codes)
+
+async def fetch_and_write_lemma(session, code: str, outdir: Path, sem: asyncio.Semaphore, delay: float):
+    url = FLEXION_URL.format(lemma=code)
+    async with sem:
+        try:
+            html = await fetch_text(session, url)
+        except Exception as e:
+            print(f"[lemma {code}] warn: {e}")
+            return 0
+        lemma_text, rows = parse_flexion_tables(html, url)
+        if not rows:
+            return 0
+        outdir.mkdir(parents=True, exist_ok=True)
+        name = slugify_lemma(lemma_text) + ".csv"
+        path = outdir / name
+        with path.open("w", newline="", encoding="utf-8") as f:
+            w = csv.DictWriter(
+                f,
+                fieldnames=[
+                    "lemma_text","pos","context_1","context_2","context_3",
+                    "label","value","page_url","number_hint","gender_hint","voice_hint"
+                ],
+            )
+            w.writeheader()
+            for r in rows:
+                w.writerow(r)
+        if delay > 0:
+            await asyncio.sleep(delay)
+        return len(rows)
+
+async def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--outdir", default="out")
+    ap.add_argument("--start", type=int, default=1)
+    ap.add_argument("--step", type=int, default=50)
+    ap.add_argument("--end", type=int, default=None)
+    ap.add_argument("--dynamic", action="store_true")
+    ap.add_argument("--index-concurrency", type=int, default=8)
+    ap.add_argument("--lemma-concurrency", type=int, default=16)
+    ap.add_argument("--timeout", type=int, default=20)
+    ap.add_argument("--retries", type=int, default=4)
+    ap.add_argument("--delay", type=float, default=0.2)
+    args = ap.parse_args()
+
+    outdir = Path(args.outdir); outdir.mkdir(parents=True, exist_ok=True)
+
+    connector = aiohttp.TCPConnector(limit=args.index_concurrency + args.lemma_concurrency, ssl=False)
+    timeout = aiohttp.ClientTimeout(total=None, sock_connect=args.timeout, sock_read=args.timeout)
+    async with aiohttp.ClientSession(headers=HEADERS, connector=connector, timeout=timeout) as session:
+        index_sem = asyncio.Semaphore(args.index_concurrency)
+        if args.dynamic or args.end is None:
+            print("[index] dynamic discovery mode")
+            lemma_codes = await discover_lemmas_dynamic(session, args.start, args.step, index_sem, args.delay)
+        else:
+            print(f"[index] fetching range {args.start}..{args.end} step {args.step}")
+            # simple range gather
+            tasks = []
+            for pg in range(args.start, args.end + 1, args.step):
+                async with index_sem:
+                    html = await fetch_text(session, INDEX_URL.format(pg=pg))
+                    tasks.append(parse_index_for_lemmas(html))
+            lemma_codes = sorted({c for batch in tasks for c in batch})
+        print(f"[index] unique lemmas: {len(lemma_codes)}")
+
+        lemma_sem = asyncio.Semaphore(args.lemma_concurrency)
+        tasks = [asyncio.create_task(fetch_and_write_lemma(session, code, outdir, lemma_sem, args.delay))
+                 for code in lemma_codes]
+        done = 0; rows_total = 0
+        for t in asyncio.as_completed(tasks):
+            try:
+                n = await t; rows_total += n
+            except Exception as e:
+                print(f"[lemma] warn: {e}")
+            done += 1
+            if done % 50 == 0 or done == len(tasks):
+                print(f"[lemma] progress: {done}/{len(tasks)} CSVs")
+        print(f"[lemma] finished. rows written: {rows_total}")
+
+if __name__ == "__main__":
+    asyncio.run(main())
