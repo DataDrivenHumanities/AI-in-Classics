@@ -164,7 +164,7 @@ jobs:
             Write-Host "##vso[task.complete result=Failed;]Upload to Drive failed"
             exit $exitCode
           }
-        displayName: "Upload to Drive (aggregates folder: ~30 files total)"
+        displayName: "Upload to Drive"
         env:
           GOOGLE_DRIVE_FOLDER_ID: $(GOOGLE_DRIVE_FOLDER_ID)
         timeoutInMinutes: 30
@@ -193,16 +193,16 @@ jobs:
         env:
           DATABASE_URL: $(DATABASE_URL)
 
-       # 9) Load CSVs into Postgres (using COPY for speed)
-       - powershell: |
-           $ErrorActionPreference = 'Stop'
-           $py = ".\.venv\Scripts\python.exe"
-           $root = "$(Build.SourcesDirectory)\src\Lemmatizer-LTN"
-           & $py "$root\etl\load_aggregates_to_postgres.py" `
-             --schema "$root\ops\init_db.sql" `
-             --outdir "$root\out" `
-             --truncate
-         displayName: "Load aggregate CSVs to PostgreSQL (COPY)"
-         timeoutInMinutes: 30
-         env:
-           DATABASE_URL: $(DATABASE_URL)
+      # 9) Load CSVs into Postgres (using COPY for speed)
+      - powershell: |
+          $ErrorActionPreference = 'Stop'
+          $py = ".\.venv\Scripts\python.exe"
+          $root = "$(Build.SourcesDirectory)\src\Lemmatizer-LTN"
+          & $py "$root\etl\load_aggregates_to_postgres.py" `
+            --schema "$root\ops\init_db.sql" `
+            --outdir "$root\out" `
+            --truncate
+        displayName: "Load aggregate CSVs to PostgreSQL (COPY)"
+        timeoutInMinutes: 30
+        env:
+          DATABASE_URL: $(DATABASE_URL)
