@@ -36,6 +36,23 @@ jobs:
       name: Default
 
     steps:
+      - bash: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import os, re
+          for k in ["DATABASE_URL","PGHOST","PGPORT","PGDATABASE","PGUSER","PGPASSWORD"]:
+              v = os.environ.get(k)
+              if v is None: 
+                  continue
+              if k in ("DATABASE_URL","PGPASSWORD"):
+                  v = re.sub(r"(password=)(\S+)", r"\1***", v)
+                  v = "***" if k=="PGPASSWORD" else v
+              print(f"{k}={v}")
+          PY
+        displayName: "Debug DB env (redacted)"
+        env:
+          DATABASE_URL: $(DATABASE_URL)
+    
       - script: python3 src/Lemmatizer-LTN/etl/run_pipeline.py --phase setup
         displayName: "Setup (venv + SA JSON)"
         env:
