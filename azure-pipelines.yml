@@ -36,19 +36,13 @@ jobs:
       name: Default
 
     steps:
-      # Omit architecture so the task uses the agent's native arch (avoids "Exec format error" on ARM)
-      - task: UsePythonVersion@0
-        displayName: "Use Python 3.11"
-        inputs:
-          versionSpec: "3.11"
-
-      - script: python src/Lemmatizer-LTN/etl/run_pipeline.py --phase setup
+      - script: python3 src/Lemmatizer-LTN/etl/run_pipeline.py --phase setup
         displayName: "Setup (venv + SA JSON)"
         env:
           BUILD_SOURCES_DIRECTORY: $(Build.SourcesDirectory)
           GOOGLE_SERVICE_ACCOUNT_JSON_BASE64: $(GOOGLE_SERVICE_ACCOUNT_JSON_BASE64)
 
-      - script: python src/Lemmatizer-LTN/etl/run_pipeline.py --phase scrape
+      - script: python3 src/Lemmatizer-LTN/etl/run_pipeline.py --phase scrape
         displayName: "Scrape -> per-lemma CSVs"
         condition: or(eq('${{ parameters.pipelineMode }}', 'Full E2E Pipeline'), eq('${{ parameters.pipelineMode }}', 'Scrape + Upload to Drive'))
         env:
@@ -56,13 +50,13 @@ jobs:
           TESTING: ${{ parameters.testing }}
         timeoutInMinutes: 120
 
-      - script: python src/Lemmatizer-LTN/etl/run_pipeline.py --phase aggregate
+      - script: python3 src/Lemmatizer-LTN/etl/run_pipeline.py --phase aggregate
         displayName: "Aggregate -> lemmas.csv + forms.csv + by letter"
         condition: or(eq('${{ parameters.pipelineMode }}', 'Full E2E Pipeline'), eq('${{ parameters.pipelineMode }}', 'Scrape + Upload to Drive'))
         env:
           BUILD_SOURCES_DIRECTORY: $(Build.SourcesDirectory)
 
-      - script: python src/Lemmatizer-LTN/etl/run_pipeline.py --phase upload_drive
+      - script: python3 src/Lemmatizer-LTN/etl/run_pipeline.py --phase upload_drive
         displayName: "Upload to Drive"
         condition: or(eq('${{ parameters.pipelineMode }}', 'Full E2E Pipeline'), eq('${{ parameters.pipelineMode }}', 'Scrape + Upload to Drive'))
         env:
@@ -70,7 +64,7 @@ jobs:
           GOOGLE_DRIVE_FOLDER_ID: $(GOOGLE_DRIVE_FOLDER_ID)
         timeoutInMinutes: 30
 
-      - script: python src/Lemmatizer-LTN/etl/run_pipeline.py --phase download_drive
+      - script: python3 src/Lemmatizer-LTN/etl/run_pipeline.py --phase download_drive
         displayName: "Download CSVs from Drive"
         condition: eq('${{ parameters.pipelineMode }}', 'Upload to Database')
         env:
@@ -78,7 +72,7 @@ jobs:
           GOOGLE_DRIVE_FOLDER_ID: $(GOOGLE_DRIVE_FOLDER_ID)
         timeoutInMinutes: 10
 
-      - script: python src/Lemmatizer-LTN/etl/run_pipeline.py --phase db
+      - script: python3 src/Lemmatizer-LTN/etl/run_pipeline.py --phase db
         displayName: "Init schema + load to PostgreSQL"
         condition: or(eq('${{ parameters.pipelineMode }}', 'Full E2E Pipeline'), eq('${{ parameters.pipelineMode }}', 'Upload to Database'))
         env:
