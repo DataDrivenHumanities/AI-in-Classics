@@ -9,10 +9,18 @@ Environment variables:
     API_TOKENS     — comma-separated list of valid bearer tokens
 """
 
+import os
 from contextlib import asynccontextmanager
+from pathlib import Path
 
+from dotenv import load_dotenv
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+
+# Load .env from the Lemmatizer-LTN directory (one level up from api/)
+_env_path = Path(__file__).resolve().parent.parent / ".env"
+if _env_path.exists():
+    load_dotenv(_env_path)
 
 from .db import close_pool, open_pool
 from .routes import router
