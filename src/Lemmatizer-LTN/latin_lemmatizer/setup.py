@@ -12,14 +12,14 @@ long_description = readme_path.read_text(encoding="utf-8") if readme_path.exists
 setup(
     name="latin-lemmatizer",
     version="0.1.0",
-    description="A Python package for querying Latin lemmas and inflected forms",
+    description="A Python client for the Latin Lemmatizer API",
     long_description=long_description,
     long_description_content_type="text/markdown",
     author="Aidan Burrowes",
     packages=find_packages(),
     python_requires=">=3.10",
     install_requires=[
-        "psycopg[binary]>=3.0",
+        "httpx>=0.27",
         "python-dotenv>=1.0.0",
     ],
     classifiers=[

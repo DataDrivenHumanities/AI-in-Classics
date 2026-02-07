@@ -1,18 +1,26 @@
 """
-Client for querying the Latin lemmatizer database.
+Client for querying the Latin Lemmatizer API.
+
+This package is a thin HTTP wrapper around the Latin Lemmatizer FastAPI
+server.  It preserves the same public interface as the original direct-SQL
+client so existing code continues to work — only the configuration changes:
+
+    Before:  DATABASE_URL=postgresql://...
+    After:   LATIN_API_URL=https://latin-api.example.com
+             LATIN_API_TOKEN=<bearer-token>
 """
 
 import os
 from pathlib import Path
 from typing import Optional, List, Dict, Any
-import psycopg
-from psycopg.rows import dict_row
+
+import httpx
 
 try:
     from dotenv import load_dotenv
+
     # Try to load .env file from current working directory or project root
     # This allows users to place .env in the project root or notebook directory
-    import os
     cwd = Path(os.getcwd())
     # Try current directory first, then project root (4 levels up from this file)
     for env_path in [cwd / ".env", Path(__file__).parent.parent.parent.parent / ".env"]:
@@ -25,103 +33,87 @@ except ImportError:
 
 
 class LatinLemmatizer:
-    """Client for querying Latin lemmas and forms from PostgreSQL database."""
-    
-    def __init__(self, dsn: Optional[str] = None):
+    """Client for querying Latin lemmas and forms via the Lemmatizer API."""
+
+    def __init__(
+        self,
+        api_url: Optional[str] = None,
+        api_token: Optional[str] = None,
+        timeout: float = 30.0,
+    ):
         """
         Initialize the Latin Lemmatizer client.
-        
+
         Args:
-            dsn: PostgreSQL connection string. If None, uses DATABASE_URL env var.
+            api_url: Base URL of the Lemmatizer API (e.g. "https://latin-api.example.com").
+                     Falls back to the LATIN_API_URL environment variable.
+            api_token: Bearer token for authentication.
+                       Falls back to the LATIN_API_TOKEN environment variable.
+            timeout: HTTP request timeout in seconds (default 30).
         """
-        self.dsn = dsn or os.getenv("DATABASE_URL")
-        if not self.dsn:
-            raise ValueError("No database connection string provided. Set DATABASE_URL or pass dsn parameter.")
-        self._conn = None
-    
-    def _get_conn(self):
-        """Get or create database connection, recovering from failed transactions."""
-        if self._conn is None or self._conn.closed:
-            self._conn = psycopg.connect(self.dsn, row_factory=dict_row)
-        else:
-            # Check if connection is in a failed transaction state
-            try:
-                # Try a simple query to check connection state
-                with self._conn.cursor() as cur:
-                    cur.execute("SELECT 1")
-            except Exception:
-                # Connection is in a bad state, rollback and recreate
-                try:
-                    self._conn.rollback()
-                except Exception:
-                    pass
-                self._conn.close()
-                self._conn = psycopg.connect(self.dsn, row_factory=dict_row)
-        return self._conn
-    
+        self.api_url = (api_url or os.getenv("LATIN_API_URL", "")).rstrip("/")
+        self.api_token = api_token or os.getenv("LATIN_API_TOKEN", "")
+
+        if not self.api_url:
+            raise ValueError(
+                "No API URL provided. Set LATIN_API_URL or pass api_url parameter."
+            )
+        if not self.api_token:
+            raise ValueError(
+                "No API token provided. Set LATIN_API_TOKEN or pass api_token parameter."
+            )
+
+        self._client = httpx.Client(
+            base_url=self.api_url,
+            headers={"Authorization": f"Bearer {self.api_token}"},
+            timeout=timeout,
+        )
+
+    # ------------------------------------------------------------------
+    # Lifecycle helpers
+    # ------------------------------------------------------------------
+
     def close(self):
-        """Close the database connection."""
-        if self._conn and not self._conn.closed:
-            self._conn.close()
-    
+        """Close the underlying HTTP client."""
+        self._client.close()
+
     def __enter__(self):
         """Context manager entry."""
         return self
-    
+
     def __exit__(self, exc_type, exc_val, exc_tb):
         """Context manager exit."""
         self.close()
-    
+
+    # ------------------------------------------------------------------
+    # Public query methods
+    # ------------------------------------------------------------------
+
     def get_lemma(self, word: str) -> Optional[Dict[str, Any]]:
         """
         Get lemma information from a word (lemma or inflected form).
-        
+
         If the word is already a lemma, returns that lemma.
         If the word is an inflected form, returns its lemma.
-        
+
         Args:
             word: A Latin word (lemma or inflected form)
-            
+
         Returns:
-            Dictionary with lemma information (id, lemma_code, lemma_nod, lemma_diac, pos, gender, page_url)
-            or None if not found.
-            
+            Dictionary with lemma information (id, lemma_code, lemma_nod,
+            lemma_diac, pos, gender, page_url) or None if not found.
+
         Example:
             >>> client.get_lemma("amavi")
             {'id': 123, 'lemma_nod': 'amo', 'lemma_diac': 'ămo', 'pos': 'verb', ...}
         """
-        conn = self._get_conn()
-        
-        try:
-            # First, try as a lemma
-            result = conn.execute(
-                "SELECT * FROM lemmas WHERE lemma_nod = norm(%s)",
-                (word,)
-            ).fetchone()
-            
-            if result:
-                return dict(result)
-            
-            # If not found as lemma, try as a form
-            result = conn.execute(
-                """
-                SELECT l.* FROM forms f
-                JOIN lemmas l ON l.id = f.lemma_id
-                WHERE f.form_nod = norm(%s)
-                LIMIT 1
-                """,
-                (word,)
-            ).fetchone()
-            
-            return dict(result) if result else None
-        except Exception:
-            # Rollback on error and re-raise
-            try:
-                conn.rollback()
-            except Exception:
-                pass
-            raise
-    
+        resp = self._client.get(f"/api/v1/lemma/{word}")
+
+        if resp.status_code == 404:
+            return None
+        resp.raise_for_status()
+        return resp.json()
+
     def get_form(
         self,
         *,
@@ -139,9 +131,9 @@ class LatinLemmatizer:
     ) -> List[Dict[str, Any]]:
         """
         Get inflected forms matching the specified criteria.
-        
-        You must provide either `lemma` or `form`, but not both.
-        
+
+        You must provide either ``lemma`` or ``form``, but not both.
+
         Args:
             lemma: Starting lemma (finds forms of this lemma)
             form: Starting form (finds other forms of the same lemma)
@@ -154,101 +146,56 @@ class LatinLemmatizer:
             case: Filter by case (nominative, genitive, dative, accusative, ablative, vocative, locative)
             degree: Filter by degree (positive, comparative, superlative)
             verb_form: Filter by verb form (infinitive, participle, gerund, gerundive, supine)
-            
+
         Returns:
-            List of dictionaries with form information
-            
+            List of dictionaries with form information.
+
         Examples:
             >>> # Get all perfect active forms of "amo"
             >>> client.get_form(lemma="amo", tense="perfect", voice="active")
-            
+
             >>> # Get plural forms of the same lemma as "amavi"
             >>> client.get_form(form="amavi", number="plural")
-            
+
             >>> # Get the infinitive form of "amo"
             >>> client.get_form(lemma="amo", verb_form="infinitive")
         """
         if (lemma is None and form is None) or (lemma is not None and form is not None):
             raise ValueError("Must provide exactly one of: lemma or form")
-        
-        conn = self._get_conn()
-        
-        # Build WHERE conditions dynamically to avoid IndeterminateDatatype errors
-        filters = []
-        params = []
-        
+
+        params: Dict[str, str] = {}
         if lemma is not None:
-            # Get forms by lemma
-            base_query = """
-                SELECT f.* FROM lemmas l
-                JOIN forms f ON f.lemma_id = l.id
-                WHERE l.lemma_nod = norm(%s)
-            """
-            params.append(lemma)
-        else:
-            # Get forms by starting form (inflect within same lemma)
-            base_query = """
-                WITH base AS (
-                    SELECT l.id AS lemma_id
-                    FROM forms f JOIN lemmas l ON l.id = f.lemma_id
-                    WHERE f.form_nod = norm(%s)
-                    LIMIT 1
-                )
-                SELECT f.* FROM forms f, base b
-                WHERE f.lemma_id = b.lemma_id
-            """
-            params.append(form)
-        
-        # Add filters only for non-None parameters
+            params["lemma"] = lemma
+        if form is not None:
+            params["form"] = form
         if mood is not None:
-            filters.append("f.mood = %s")
-            params.append(mood)
+            params["mood"] = mood
         if tense is not None:
-            filters.append("f.tense = %s")
-            params.append(tense)
+            params["tense"] = tense
         if voice is not None:
-            filters.append("f.voice = %s")
-            params.append(voice)
+            params["voice"] = voice
         if person is not None:
-            filters.append("f.person = %s")
-            params.append(person)
+            params["person"] = person
         if number is not None:
-            filters.append("f.number = %s")
-            params.append(number)
+            params["number"] = number
         if gender is not None:
-            filters.append("f.gender = %s")
-            params.append(gender)
+            params["gender"] = gender
         if case is not None:
-            filters.append("f.\"case\" = %s")
-            params.append(case)
+            params["case"] = case
         if degree is not None:
-            filters.append("f.degree = %s")
-            params.append(degree)
+            params["degree"] = degree
         if verb_form is not None:
-            filters.append("f.verb_form = %s")
-            params.append(verb_form)
-        
-        # Combine base query with filters
-        if filters:
-            query = base_query + " AND " + " AND ".join(filters)
-        else:
-            query = base_query
-        
-        query += " ORDER BY f.mood, f.tense, f.voice, f.person, f.number, f.gender, f.\"case\", f.degree, f.verb_form, f.form_nod"
-        
-        try:
-            results = conn.execute(query, tuple(params)).fetchall()
-            return [dict(row) for row in results]
-        except Exception:
-            # Rollback on error and re-raise
-            try:
-                conn.rollback()
-            except Exception:
-                pass
-            raise
+            params["verb_form"] = verb_form
+
+        resp = self._client.get("/api/v1/forms", params=params)
+        resp.raise_for_status()
+        return resp.json()
 
 
-# Convenience singleton instance
+# ======================================================================
+# Convenience singleton + module-level functions
+# ======================================================================
+
 _default_client: Optional[LatinLemmatizer] = None
 
 
@@ -263,10 +210,10 @@ def _get_default_client() -> LatinLemmatizer:
 def get_lemma(word: str) -> Optional[Dict[str, Any]]:
     """
     Get lemma information from a word (convenience function using default client).
-    
+
     Args:
         word: A Latin word (lemma or inflected form)
-        
+
     Returns:
         Dictionary with lemma information or None if not found.
     """
@@ -289,14 +236,14 @@ def get_form(
 ) -> List[Dict[str, Any]]:
     """
     Get inflected forms (convenience function using default client).
-    
+
     Args:
         lemma: Starting lemma
         form: Starting form
         (plus optional filters for mood, tense, voice, etc.)
-        
+
     Returns:
-        List of dictionaries with form information
+        List of dictionaries with form information.
     """
     return _get_default_client().get_form(
         lemma=lemma,
@@ -311,4 +258,3 @@ def get_form(
         degree=degree,
         verb_form=verb_form,
     )
-
