@@ -1,7 +1,13 @@
-# --- server_streamlit.py (safe import order, no top-level package imports) ---
-import os, sys
+from __future__ import annotations
 
-# sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+import sys
+from pathlib import Path
+
+# Streamlit runs this file directly, so the project root may not be on `sys.path`.
+# Add it so imports like `from src.app import ...` work reliably.
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
 
 import numpy as np
 import streamlit as st

@@ -5,6 +5,8 @@ import json
 import re
 import uuid
 import tempfile
+import unicodedata
+from pathlib import Path
 from typing import Optional, Dict, Any
 import numpy as np
 import pandas as pd
@@ -17,7 +19,6 @@ if not os.getenv("CLTK_DATA"):
 CLTK_DATA_PATH = Path(os.environ["CLTK_DATA"]).expanduser()
 CLTK_DATA_PATH.mkdir(parents=True, exist_ok=True)
 
-from cltk.alphabet.text_normalization import cltk_normalize
 from cltk import NLP
 from sklearn.feature_extraction.text import CountVectorizer
 
@@ -37,10 +38,44 @@ PREPROCESS_CHECKPOINT = False
 DTM_CHECKPOINT = False
 DEBUG = True
 HISTORY = list()
-nlp = NLP(language="grc")
+try:
+    nlp = NLP(language_code="grc")
+except TypeError:
+    nlp = NLP(language="grc")
 HF_DEFAULT_MODEL = os.getenv(
     "HF_SENTIMENT_MODEL", "rtwins/greekbert_for_text_classification"
 )
+
+
+def cltk_normalize(text: str) -> str:
+    # CLTK 1.x exposed `cltk_normalize`; CLTK 2.x removed/moved it.
+    # We keep a minimal normalization layer so the rest of the app keeps working.
+    if text is None:
+        return ""
+    if not isinstance(text, str):
+        text = str(text)
+    return unicodedata.normalize("NFC", text).strip()
+
+
+def _extract_lemmas(analysis: Any) -> list[str]:
+    if analysis is None:
+        return []
+    if isinstance(analysis, (list, tuple, set)):
+        return [str(item).strip() for item in analysis if str(item).strip()]
+    words = getattr(analysis, "words", None)
+    if words:
+        out: list[str] = []
+        for word in words:
+            lemma = getattr(word, "lemma", None) or getattr(word, "string", None)
+            if lemma is None:
+                continue
+            lemma = str(lemma).strip()
+            if lemma:
+                out.append(lemma)
+        return out
+    if isinstance(analysis, str):
+        return [part for part in analysis.split() if part]
+    return []
 
 
 def _resolve_hf_repo_name(preferred: Optional[str]) -> str:
@@ -220,7 +255,11 @@ def query_cb():
     DOC_TERM_MATRIX = main_settings["DOC_TERM_MATRIX"]
     VOCABULARY = main_settings["VOCABULARY"]
     query_input = main_settings["query_input"]
-    kws = nlp.analyze(cltk_normalize(query_input))
+    kws = _extract_lemmas(nlp.analyze(cltk_normalize(query_input)))
+
+    if not VOCABULARY:
+        st.error("No vocabulary is available yet. Load and preprocess a dataset first.")
+        return
 
     vocab_indexes = np.asarray(
         a=sorted(
@@ -264,7 +303,7 @@ def doc_term_matrix():
     ]
     vectorizer = CountVectorizer(input="filename")
     X = vectorizer.fit_transform(raw_documents=preprocessed_txt_paths)
-    globals["VOCABULARY"] = vectorizer.vocabulary_  # dict
+    main_settings["VOCABULARY"] = vectorizer.vocabulary_  # dict
     st.text(f"Vocabulary size: {len(vectorizer.vocabulary_)}")
     return X.toarray()
 
@@ -294,9 +333,7 @@ def preprocess_texts():
         text = cltk_normalize(text=text)
 
         # lemmatize text and save as single text blob with no punctuation or marks
-        lemmatized_blob = " ".join(
-            str(nlp.analyze(text))
-        )
+        lemmatized_blob = " ".join(_extract_lemmas(nlp.analyze(text)))
         with open(
             file=os.path.join(
                 PREPROCESSED_TEXTS_PATH,

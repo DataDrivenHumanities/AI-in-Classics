@@ -53,9 +53,10 @@ else
     PYTHON      ?= python3
     VENV_PYTHON := $(VENV_DIR)/bin/python
     POETRY_BIN  := $(shell command -v poetry 2>/dev/null)
-    RUNPY       := $(if $(POETRY_BIN),poetry run $(PYTHON),$(VENV_PYTHON))
-    RUN         := $(if $(POETRY_BIN),poetry run,$(VENV_PYTHON) -m)
-    PIP_RUN     := $(if $(POETRY_BIN),poetry run $(PIP),$(VENV_PYTHON) -m pip)
+    HAVE_VENV   := $(wildcard $(VENV_PYTHON))
+    RUNPY       := $(if $(HAVE_VENV),$(VENV_PYTHON),$(if $(POETRY_BIN),poetry run $(PYTHON),$(VENV_PYTHON)))
+    RUN         := $(if $(HAVE_VENV),$(VENV_PYTHON) -m,$(if $(POETRY_BIN),poetry run,$(VENV_PYTHON) -m))
+    PIP_RUN     := $(if $(HAVE_VENV),$(VENV_PYTHON) -m pip,$(if $(POETRY_BIN),poetry run $(PIP),$(VENV_PYTHON) -m pip))
 endif
 
 # Ollama
@@ -135,7 +136,7 @@ FE_PM_PREVIEW := npm run start -- -p $(FRONTEND_PORT)
 FE_PM_INSTALL := npm install
 endif
 
-.PHONY: help setup env run web check fix test \
+.PHONY: help setup setup-venv env run web check fix test \
         docker-build docker-run docker-dev docker-bash docker-clean \
         ollama-serve ollama-pull ollama-list build-latin build-greek \
         smoke-latin smoke-greek ensure-ollama ensure-models health \
@@ -190,14 +191,37 @@ help:
 setup:
 ifeq ($(DETECTED_OS),unix)
 ifneq ($(POETRY_BIN),)
-	@echo "Using Poetry..."
-	poetry install
+	@if poetry run python -c "import sys" >/dev/null 2>&1; then \
+	  echo "Using Poetry..." ; \
+	  poetry install ; \
+	else \
+	  echo "Poetry detected but not usable (likely Python version mismatch). Using venv..." ; \
+	  $(PYTHON) -m venv $(VENV_DIR) ; \
+	  $(VENV_PYTHON) -m pip install --upgrade pip ; \
+	  if [ -f requirements.txt ]; then $(VENV_PYTHON) -m pip install -r requirements.txt ; fi ; \
+	fi
 else
 	@echo "Using venv..."
 	$(PYTHON) -m venv $(VENV_DIR)
 	$(VENV_PYTHON) -m pip install --upgrade pip
 	@if [ -f requirements.txt ]; then $(VENV_PYTHON) -m pip install -r requirements.txt; fi
 endif
+else
+	@echo "Using venv (Windows)..."
+	$(PYTHON) -m venv $(VENV_DIR)
+	$(VENV_PYTHON) -m pip install --upgrade pip
+	@if exist requirements.txt ( "$(VENV_PYTHON)" -m pip install -r requirements.txt )
+endif
+
+	@$(MAKE) api-deps
+	@$(MAKE) nb-bootstrap
+
+setup-venv:
+ifeq ($(DETECTED_OS),unix)
+	@echo "Using venv..."
+	$(PYTHON) -m venv $(VENV_DIR)
+	$(VENV_PYTHON) -m pip install --upgrade pip
+	@if [ -f requirements.txt ]; then $(VENV_PYTHON) -m pip install -r requirements.txt; fi
 else
 	@echo "Using venv (Windows)..."
 	$(PYTHON) -m venv $(VENV_DIR)
@@ -224,7 +248,13 @@ web:
 ifeq ($(DETECTED_OS),windows)
 	$(VENV_PYTHON) -m streamlit run $(STREAMLIT_APP)
 else
-	$(if $(POETRY_BIN),poetry run streamlit run $(STREAMLIT_APP), $(VENV_DIR)/bin/streamlit run $(STREAMLIT_APP))
+	@if [ -x "$(VENV_DIR)/bin/streamlit" ]; then \
+	  PYTHONPATH="$(CURDIR)" $(VENV_DIR)/bin/streamlit run $(STREAMLIT_APP); \
+	elif [ -n "$(POETRY_BIN)" ] && poetry run python -c "import sys" >/dev/null 2>&1; then \
+	  PYTHONPATH="$(CURDIR)" poetry run streamlit run $(STREAMLIT_APP); \
+	else \
+	  PYTHONPATH="$(CURDIR)" $(VENV_DIR)/bin/streamlit run $(STREAMLIT_APP); \
+	fi
 endif
 
 check:
@@ -449,8 +479,3 @@ else
 	( cd $(FRONTEND_DIR) && $(FE_PM_DEV) ) &
 	wait
 endif
-
-
-
-
-
