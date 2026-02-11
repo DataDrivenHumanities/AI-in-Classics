@@ -211,3 +211,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# LiLa/LEMLAT local data + debug artifacts (large, reproducible)
+data/lila/lemlat_db.sql
+data/lila/*.sql.gz
+src/Lemmatizer-LTN-LiLa/ops/lemlat_pg_debug.sql
+src/Lemmatizer-LTN-LiLa/ops/*_pg_debug.sql
