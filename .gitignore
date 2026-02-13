@@ -198,6 +198,14 @@ lerna-debug.log*
 
 node_modules
 dist
+
+# External corpora (download locally; do not commit)
+data/external/*
+!data/external/README.md
+!data/external/.gitkeep
+
+# Generated evalsets (keep curated fixtures committed instead)
+tests/LatinRagLexiconPassages.generated.json
 dist-ssr
 *.local
 
