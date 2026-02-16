@@ -4,9 +4,11 @@ CREATE EXTENSION IF NOT EXISTS pg_trgm;
 CREATE EXTENSION IF NOT EXISTS citext;
 
 -- Immutable normalizer for indexes/expressions
+-- Strips accents, lowercases, and removes all non-alphanumeric characters
+-- to match the Python norm() used in the ETL pipeline.
 CREATE OR REPLACE FUNCTION norm(t text) RETURNS text
 LANGUAGE sql IMMUTABLE PARALLEL SAFE AS $$
-  SELECT unaccent(lower(t));
+  SELECT regexp_replace(unaccent(lower(t)), '[^a-z0-9]+', '', 'g');
 $$;
 
 -- Lemmas

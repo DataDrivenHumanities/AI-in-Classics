@@ -69,6 +69,7 @@ TENSE_MAP = {
     "PRESENT": "present",
     "IMPERFECT": "imperfect",
     "FUTURE": "future",
+    "FUTURO": "future",
     "PERFECT": "perfect",
     "PLUPERFECT": "pluperfect",
     "FUTURE PERFECT": "future perfect",
@@ -91,9 +92,12 @@ VOICE_MAP = {
 ADDITIONAL_VERB_FORM_MAP = {
     "INFINITIVE": "infinitive",
     "PARTICIPLE": "participle",
+    "PARTICIPIO": "participle",
     "GERUND": "gerund",
+    "GERUNDIO": "gerund",
     "GERUNDIVE": "gerundive",
     "SUPINE": "supine",
+    "SUPIN": "supine",
 }
 
 _rx_roman = re.compile(r"\b(III|II|I)\b")
@@ -139,13 +143,18 @@ def _detect_person(*fields: Optional[str]) -> Optional[str]:
 
 
 def _detect_number(*fields: Optional[str]) -> Optional[str]:
-    for fld in fields:
-        if not fld:
-            continue
-        if _rx_pl.search(fld):
-            return "plural"  # prefer explicit "plural"
-        if _rx_sg.search(fld):
+    """Detect number from context fields.
+    Checks each field individually from last to first (most-specific title first),
+    so that the closest heading (e.g. 'PLURAL') wins over a farther ancestor ('SINGULAR')."""
+    for fld in reversed([f for f in fields if f]):
+        has_sg = bool(_rx_sg.search(fld))
+        has_pl = bool(_rx_pl.search(fld))
+        if has_pl and not has_sg:
+            return "plural"
+        if has_sg and not has_pl:
             return "singular"
+        if has_pl and has_sg:
+            continue
         v = _pick(ABBR_NUMBER, fld)
         if v:
             return v

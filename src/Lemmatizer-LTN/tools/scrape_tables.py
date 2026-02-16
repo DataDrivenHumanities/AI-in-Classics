@@ -223,8 +223,9 @@ def parse_flexion_tables(html_text: str, page_url: str):
 
     rows = []
     for cont in soup.select(".conjugation-container .ff_tbl_container"):
-        # up to 3 hierarchical titles (e.g., diathesis/mood/tense)
-        titles = [t.get_text(" ", strip=True) for t in cont.find_all_previous("div", class_="ff_tbl_title", limit=3)]
+        # up to 10 hierarchical titles to capture mood even for deeply nested sections
+        # (e.g., INDICATIVE has 7 subsection titles before FUTURE PERFECT)
+        titles = [t.get_text(" ", strip=True) for t in cont.find_all_previous("div", class_="ff_tbl_title", limit=10)]
         titles = list(reversed(titles))
         # Use lemma-level voice hint if available, otherwise check table titles
         v_hint = lemma_voice_hint or voice_hint_from_titles(titles)
@@ -239,7 +240,23 @@ def parse_flexion_tables(html_text: str, page_url: str):
             label = cols[0].get_text(" ", strip=True)
             values = [flatten_ff_value(c) for c in cols[1:]]
             nvals = len(values)
+
             if nvals == 0:
+                # Single-column rows: the "label" IS the form value.
+                # This happens for infinitives, participles, supine, etc.
+                form_val = flatten_ff_value(cols[0])
+                if form_val and form_val not in {"-", "–", "—"}:
+                    rows.append({
+                        "lemma_text": lemma_text,
+                        "pos": pos_text,
+                        "context_titles": "|".join(titles),
+                        "label": "",
+                        "value": form_val,
+                        "page_url": page_url,
+                        "number_hint": "",
+                        "gender_hint": "",
+                        "voice_hint": v_hint,
+                    })
                 continue
 
             # Heuristics for per-column hints (number/gender) when headers are not easily detectable
@@ -247,6 +264,11 @@ def parse_flexion_tables(html_text: str, page_url: str):
 
             if "noun" in pos_lc and nvals == 2:
                 # Nouns commonly have [singular | plural]
+                per_col_hints[0]["number_hint"] = "singular"
+                per_col_hints[1]["number_hint"] = "plural"
+
+            elif "adjective" in pos_lc and nvals == 2:
+                # Some adjectives have [singular | plural] layout
                 per_col_hints[0]["number_hint"] = "singular"
                 per_col_hints[1]["number_hint"] = "plural"
 
@@ -261,9 +283,7 @@ def parse_flexion_tables(html_text: str, page_url: str):
                 rows.append({
                     "lemma_text": lemma_text,
                     "pos": pos_text,
-                    "context_1": titles[0] if len(titles) > 0 else "",
-                    "context_2": titles[1] if len(titles) > 1 else "",
-                    "context_3": titles[2] if len(titles) > 2 else "",
+                    "context_titles": "|".join(titles),
                     "label": label,
                     "value": val,
                     "page_url": page_url,
@@ -331,7 +351,7 @@ async def fetch_and_write_lemma(session, code: str, outdir: Path, sem: asyncio.S
             w = csv.DictWriter(
                 f,
                 fieldnames=[
-                    "lemma_text","pos","context_1","context_2","context_3",
+                    "lemma_text","pos","context_titles",
                     "label","value","page_url","number_hint","gender_hint","voice_hint"
                 ],
             )
