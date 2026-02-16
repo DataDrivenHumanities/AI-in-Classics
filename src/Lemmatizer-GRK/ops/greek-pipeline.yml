@@ -1,0 +1,36 @@
+name: $(Date:yyMMdd)$(Rev:.r)-GreekScraper
+parameters:
+  - name: testing
+    displayName: "Run in Test Mode? (Pages 1-20)"
+    type: boolean
+    default: true
+trigger: none
+pool:
+  name: Default
+steps:
+  # Setup Python
+  - task: UsePythonVersion@0
+    inputs:
+      versionSpec: '3.12'
+      addToPath: true
+    displayName: 'Setup Python 3.12'
+  # Setup Virtual Environment, Install Dependencies, Run Scraper
+  - powershell: |
+      if (-not (Test-Path ".venv")) {
+        Write-Host "Creating new virtual environment..."
+        python -m venv .venv
+      } else {
+        Write-Host "Using existing virtual environment..."
+      }
+      Write-Host "Installing dependencies..."
+      .\.venv\Scripts\python.exe -m pip install --upgrade pip
+      .\.venv\Scripts\python.exe -m pip install -r src/Lemmatizer-GRK/etl/requirements.txt
+      Write-Host "-- Scraper Configuration --"
+      $outDir = "$(Build.SourcesDirectory)\src\Lemmatizer-GRK\out"
+      if ('${{ parameters.testing }}' -eq 'True') {
+        Write-Host "MODE: TEST RUN (Pages 1 - 10)"
+        .\.venv\Scripts\python.exe src/Lemmatizer-GRK/tools/scrape_tables.py --start 1 --end 10 --outdir "$outDir" --lemma-concurrency 10 --delay 0.2
+      } else {
+        Write-Host "MODE: PRODUCTION RUN (Full Perseus Greek Library)"
+        .\.venv\Scripts\python.exe src/Lemmatizer-GRK/tools/scrape_tables.py --start 1 --end 6828 --outdir "$outDir" --lemma-concurrency 10 --delay 0.2
+      }
