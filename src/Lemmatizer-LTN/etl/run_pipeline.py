@@ -2,7 +2,8 @@
 """
 OS-agnostic pipeline runner for Latin ETL.
 Run with --phase <name> to run a single step (so Azure shows each step separately).
-Phases: setup | scrape | aggregate | upload_drive | download_drive | db
+Phases: setup | scrape | upload_drive | download_drive | db
+(aggregate is now built into scrape — no separate step needed)
 Or run with no --phase to run all phases (legacy).
 """
 import argparse
@@ -67,6 +68,7 @@ def phase_scrape():
     run_cmd([py] + args, cwd=REPO_ROOT, timeout_minutes=120)
 
 def phase_aggregate():
+    """Legacy: run aggregation separately (only needed if per-lemma CSVs exist)."""
     py = str(venv_python())
     run_cmd([py, str(ETL / "aggregate_out_to_csvs.py")], cwd=REPO_ROOT)
     run_cmd([py, str(ETL / "aggregate_by_letter.py")], cwd=REPO_ROOT)
@@ -140,7 +142,8 @@ def main():
     phase_setup()
     if scrape_or_upload_drive:
         phase_scrape()
-        phase_aggregate()
+        # Aggregation is now built into the scraper — lemmas.csv and forms.csv
+        # are written directly at the end of scraping.
         phase_upload_drive()
     if upload_db:
         phase_download_drive()

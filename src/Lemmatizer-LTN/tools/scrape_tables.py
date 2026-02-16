@@ -6,9 +6,16 @@ from urllib.parse import urlparse, parse_qs, urljoin
 from pathlib import Path
 import csv
 import re
+import sys
 import unicodedata
 import argparse
 import random
+
+# Allow importing from the etl/ directory
+_SCRIPT_DIR = Path(__file__).resolve().parent
+_ETL_DIR = _SCRIPT_DIR.parent / "etl"
+if str(_ETL_DIR) not in sys.path:
+    sys.path.insert(0, str(_ETL_DIR))
 
 BASE = "https://www.online-latin-dictionary.com"
 INDEX_URL = BASE + "/latin-english-dictionary.php?typ=pg&pg={pg}"
@@ -339,7 +346,9 @@ async def discover_lemmas_dynamic(session, start: int, step: int, sem: asyncio.S
         pg += step
     return sorted(all_codes)
 
-async def fetch_and_write_lemma(session, code: str, outdir: Path, sem: asyncio.Semaphore, delay: float):
+async def fetch_and_aggregate_lemma(session, code: str, sem: asyncio.Semaphore, delay: float,
+                                    lemmas: dict, forms: list, process_fn):
+    """Fetch a lemma page, parse it, aggregate in-memory (no per-lemma CSV)."""
     url = FLEXION_URL.format(lemma=code)
     async with sem:
         try:
@@ -347,26 +356,19 @@ async def fetch_and_write_lemma(session, code: str, outdir: Path, sem: asyncio.S
         except Exception as e:
             print(f"[lemma {code}] warn: {e}")
             return 0
-        lemma_text, rows = parse_flexion_tables(html, url)
+        _, rows = parse_flexion_tables(html, url)
         if not rows:
             return 0
-        outdir.mkdir(parents=True, exist_ok=True)
-        name = slugify_lemma(lemma_text) + ".csv"
-        path = outdir / name
-        with path.open("w", newline="", encoding="utf-8") as f:
-            w = csv.DictWriter(
-                f,
-                fieldnames=[
-                    "lemma_text","pos","context_titles",
-                    "label","value","page_url","number_hint","gender_hint","voice_hint"
-                ],
-            )
-            w.writeheader()
-            for r in rows:
-                w.writerow(r)
+
+        lemma_tuple, form_tuples = process_fn(rows)
+        if lemma_tuple:
+            lnod = lemma_tuple[1]
+            lemmas.setdefault(lnod, lemma_tuple)
+        forms.extend(form_tuples)
+
         if delay > 0:
             await asyncio.sleep(delay)
-        return len(rows)
+        return len(form_tuples)
 
 async def main():
     ap = argparse.ArgumentParser()
@@ -384,6 +386,13 @@ async def main():
 
     outdir = Path(args.outdir); outdir.mkdir(parents=True, exist_ok=True)
 
+    # Import the aggregation logic from the ETL module
+    from aggregate_out_to_csvs import process_lemma_rows, write_aggregates
+
+    # In-memory aggregation containers
+    lemmas = {}
+    forms = []
+
     connector = aiohttp.TCPConnector(limit=args.index_concurrency + args.lemma_concurrency, ssl=False)
     timeout = aiohttp.ClientTimeout(total=None, sock_connect=args.timeout, sock_read=args.timeout)
     async with aiohttp.ClientSession(headers=HEADERS, connector=connector, timeout=timeout) as session:
@@ -393,7 +402,6 @@ async def main():
             lemma_codes = await discover_lemmas_dynamic(session, args.start, args.step, index_sem, args.delay)
         else:
             print(f"[index] fetching range {args.start}..{args.end} step {args.step}")
-            # simple range gather
             tasks = []
             for pg in range(args.start, args.end + 1, args.step):
                 async with index_sem:
@@ -403,18 +411,27 @@ async def main():
         print(f"[index] unique lemmas: {len(lemma_codes)}")
 
         lemma_sem = asyncio.Semaphore(args.lemma_concurrency)
-        tasks = [asyncio.create_task(fetch_and_write_lemma(session, code, outdir, lemma_sem, args.delay))
+        tasks = [asyncio.create_task(
+            fetch_and_aggregate_lemma(session, code, lemma_sem, args.delay,
+                                     lemmas, forms, process_lemma_rows))
                  for code in lemma_codes]
-        done = 0; rows_total = 0
+        done = 0; forms_total = 0
         for t in asyncio.as_completed(tasks):
             try:
-                n = await t; rows_total += n
+                n = await t; forms_total += n
             except Exception as e:
                 print(f"[lemma] warn: {e}")
             done += 1
             if done % 50 == 0 or done == len(tasks):
-                print(f"[lemma] progress: {done}/{len(tasks)} CSVs")
-        print(f"[lemma] finished. rows written: {rows_total}")
+                print(f"[scrape] progress: {done}/{len(tasks)} lemmas")
+
+    # Write final aggregate CSVs
+    lemma_csv = outdir / "lemmas.csv"
+    form_csv = outdir / "forms.csv"
+    write_aggregates(lemmas, forms, lemma_csv, form_csv)
+    print(f"[complete] {len(lemmas)} lemmas, {forms_total} forms written to:")
+    print(f"  - {lemma_csv}")
+    print(f"  - {form_csv}")
 
 if __name__ == "__main__":
     asyncio.run(main())
