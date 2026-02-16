@@ -61,7 +61,13 @@ def parse_flexion_tables(html_text, page_url):
     # extract lemma header
     header = soup.find('h1') or soup.find('h2')
     raw_lemma_text = header.get_text(" ", strip=True) if header else "unknown_lemma"
-    lemma_text = raw_lemma_text.replace("Lemma:", "").split("(")[0].strip().split()[0]
+    cleaned_string = raw_lemma_text.replace("Lemma:", "").split("(")[0].strip()
+    if not cleaned_string:
+        lemma_id = page_url.strip("/").split("/")[-1]
+        lemma_text = f"unknown_{lemma_id}"
+        print(f"Warning: No lemma text found for {page_url}. Saved as {lemma_text}")
+    else:
+        lemma_text = cleaned_string.split()[0]
     # find Forms List table
     target_table = None
     for table in soup.find_all('table'):
