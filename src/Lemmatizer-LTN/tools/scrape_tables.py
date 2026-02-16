@@ -429,9 +429,16 @@ async def main():
     lemma_csv = outdir / "lemmas.csv"
     form_csv = outdir / "forms.csv"
     write_aggregates(lemmas, forms, lemma_csv, form_csv)
+
+    # Split forms into letter-based CSVs (a.csv, b.csv, ...)
+    from aggregate_by_letter import aggregate_by_letter
+    letter_dir = outdir / "by_letter"
+    aggregate_by_letter(form_csv, letter_dir)
+
     print(f"[complete] {len(lemmas)} lemmas, {forms_total} forms written to:")
     print(f"  - {lemma_csv}")
     print(f"  - {form_csv}")
+    print(f"  - {letter_dir}/")
 
 if __name__ == "__main__":
     asyncio.run(main())
