@@ -418,11 +418,20 @@ def write_aggregates(lemmas, forms, lemma_csv=None, form_csv=None):
 
 
 def aggregate():
-    """Aggregate per-lemma CSVs into lemmas.csv and forms.csv (legacy path)."""
+    """Aggregate per-lemma CSVs into lemmas.csv and forms.csv (legacy path).
+    
+    NOTE: The scraper now aggregates in-memory and writes these CSVs directly.
+    This function is only needed if per-lemma CSVs exist from an older workflow.
+    It will NOT overwrite existing aggregates if no per-lemma CSVs are found.
+    """
     OUT_DIR.mkdir(parents=True, exist_ok=True)
 
     paths = [p for p in glob.glob(str(OUT_DIR / "*.csv"))
              if Path(p).name not in ("lemmas.csv","forms.csv")]
+
+    if not paths:
+        print("No per-lemma CSV files found to aggregate")
+        return
 
     lemmas = {}
     forms  = []

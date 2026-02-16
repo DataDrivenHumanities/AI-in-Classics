@@ -60,18 +60,12 @@ jobs:
           GOOGLE_SERVICE_ACCOUNT_JSON_BASE64: $(GOOGLE_SERVICE_ACCOUNT_JSON_BASE64)
 
       - script: python3 src/Lemmatizer-LTN/etl/run_pipeline.py --phase scrape
-        displayName: "Scrape -> per-lemma CSVs"
+        displayName: "Scrape + Aggregate -> lemmas.csv + forms.csv"
         condition: or(eq('${{ parameters.pipelineMode }}', 'Full E2E Pipeline'), eq('${{ parameters.pipelineMode }}', 'Scrape + Upload to Drive'))
         env:
           BUILD_SOURCES_DIRECTORY: $(Build.SourcesDirectory)
           TESTING: ${{ parameters.testing }}
         timeoutInMinutes: 120
-
-      - script: python3 src/Lemmatizer-LTN/etl/run_pipeline.py --phase aggregate
-        displayName: "Aggregate -> lemmas.csv + forms.csv + by letter"
-        condition: or(eq('${{ parameters.pipelineMode }}', 'Full E2E Pipeline'), eq('${{ parameters.pipelineMode }}', 'Scrape + Upload to Drive'))
-        env:
-          BUILD_SOURCES_DIRECTORY: $(Build.SourcesDirectory)
 
       - script: python3 src/Lemmatizer-LTN/etl/run_pipeline.py --phase upload_drive
         displayName: "Upload to Drive"
