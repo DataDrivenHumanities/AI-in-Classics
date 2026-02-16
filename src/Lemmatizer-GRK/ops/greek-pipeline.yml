@@ -6,7 +6,7 @@ parameters:
     default: true
 trigger: none
 pool:
-  name: Default
+  name: GreekLemmatizerPool
 steps:
   # Setup Python
   - task: UsePythonVersion@0
