@@ -378,10 +378,10 @@ async def main():
     ap.add_argument("--end", type=int, default=None)
     ap.add_argument("--dynamic", action="store_true")
     ap.add_argument("--index-concurrency", type=int, default=4)
-    ap.add_argument("--lemma-concurrency", type=int, default=4)
+    ap.add_argument("--lemma-concurrency", type=int, default=8)
     ap.add_argument("--timeout", type=int, default=20)
     ap.add_argument("--retries", type=int, default=4)
-    ap.add_argument("--delay", type=float, default=0.5)
+    ap.add_argument("--delay", type=float, default=0.2)
     args = ap.parse_args()
 
     outdir = Path(args.outdir); outdir.mkdir(parents=True, exist_ok=True)

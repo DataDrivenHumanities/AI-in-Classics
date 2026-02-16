@@ -30,7 +30,7 @@ pool:
 jobs:
   - job: LatinETL
     displayName: "Latin ETL"
-    timeoutInMinutes: 180
+    timeoutInMinutes: 300
     cancelTimeoutInMinutes: 5
     pool:
       name: Default
@@ -59,13 +59,14 @@ jobs:
           BUILD_SOURCES_DIRECTORY: $(Build.SourcesDirectory)
           GOOGLE_SERVICE_ACCOUNT_JSON_BASE64: $(GOOGLE_SERVICE_ACCOUNT_JSON_BASE64)
 
-      - script: python3 src/Lemmatizer-LTN/etl/run_pipeline.py --phase scrape
+      - script: python3 -u src/Lemmatizer-LTN/etl/run_pipeline.py --phase scrape
         displayName: "Scrape + Aggregate -> lemmas.csv + forms.csv"
         condition: or(eq('${{ parameters.pipelineMode }}', 'Full E2E Pipeline'), eq('${{ parameters.pipelineMode }}', 'Scrape + Upload to Drive'))
         env:
           BUILD_SOURCES_DIRECTORY: $(Build.SourcesDirectory)
           TESTING: ${{ parameters.testing }}
-        timeoutInMinutes: 120
+          PYTHONUNBUFFERED: "1"
+        timeoutInMinutes: 240
 
       - script: python3 src/Lemmatizer-LTN/etl/run_pipeline.py --phase upload_drive
         displayName: "Upload to Drive"

@@ -63,9 +63,9 @@ def phase_scrape():
                 "--index-concurrency", "4", "--lemma-concurrency", "8", "--delay", "0.05"]
     else:
         args = [str(scraper), "--outdir", str(OUT), "--index-concurrency", "4",
-                "--lemma-concurrency", "4", "--delay", "0.5"]
+                "--lemma-concurrency", "8", "--delay", "0.2"]
     print("Running scraper:", " ".join(args))
-    run_cmd([py] + args, cwd=REPO_ROOT, timeout_minutes=120)
+    run_cmd([py] + args, cwd=REPO_ROOT, timeout_minutes=240)
 
 def phase_aggregate():
     """Legacy: run aggregation separately (only needed if per-lemma CSVs exist)."""
