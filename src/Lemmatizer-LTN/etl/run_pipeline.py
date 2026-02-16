@@ -61,8 +61,8 @@ def phase_scrape():
         args = [str(scraper), "--outdir", str(OUT), "--start", "1", "--step", "1", "--end", "10",
                 "--index-concurrency", "4", "--lemma-concurrency", "8", "--delay", "0.05"]
     else:
-        args = [str(scraper), "--outdir", str(OUT), "--index-concurrency", "6",
-                "--lemma-concurrency", "16", "--delay", "0.03"]
+        args = [str(scraper), "--outdir", str(OUT), "--index-concurrency", "4",
+                "--lemma-concurrency", "4", "--delay", "0.5"]
     print("Running scraper:", " ".join(args))
     run_cmd([py] + args, cwd=REPO_ROOT, timeout_minutes=120)
 

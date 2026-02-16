@@ -294,10 +294,16 @@ def parse_flexion_tables(html_text: str, page_url: str):
 
     return lemma_text, rows
 
-async def fetch_text(session: aiohttp.ClientSession, url: str, timeout: int = 20, retries: int = 4, delay: float = 0.2):
+async def fetch_text(session: aiohttp.ClientSession, url: str, timeout: int = 20, retries: int = 4, delay: float = 0.5):
     for attempt in range(retries + 1):
         try:
             async with session.get(url, timeout=timeout) as resp:
+                if resp.status == 429:
+                    # Rate limited — wait longer before retrying
+                    backoff = 5.0 * (2 ** attempt) + random.uniform(1, 3)
+                    print(f"[429] rate limited, waiting {backoff:.1f}s ({url.split('=')[-1]})")
+                    await asyncio.sleep(backoff)
+                    continue
                 resp.raise_for_status()
                 return await resp.text()
         except (ClientResponseError, ClientConnectorError, asyncio.TimeoutError):
@@ -369,11 +375,11 @@ async def main():
     ap.add_argument("--step", type=int, default=50)
     ap.add_argument("--end", type=int, default=None)
     ap.add_argument("--dynamic", action="store_true")
-    ap.add_argument("--index-concurrency", type=int, default=8)
-    ap.add_argument("--lemma-concurrency", type=int, default=16)
+    ap.add_argument("--index-concurrency", type=int, default=4)
+    ap.add_argument("--lemma-concurrency", type=int, default=4)
     ap.add_argument("--timeout", type=int, default=20)
     ap.add_argument("--retries", type=int, default=4)
-    ap.add_argument("--delay", type=float, default=0.2)
+    ap.add_argument("--delay", type=float, default=0.5)
     args = ap.parse_args()
 
     outdir = Path(args.outdir); outdir.mkdir(parents=True, exist_ok=True)
