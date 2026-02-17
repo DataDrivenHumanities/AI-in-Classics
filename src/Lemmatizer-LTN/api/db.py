@@ -103,8 +103,8 @@ def get_lemmas(word: str, pos: Optional[str] = None) -> List[Dict[str, Any]]:
             FROM combined
             ORDER BY
                 _src DESC,
-                (norm(%s) LIKE lemma_nod || '%%')::int DESC,
-                length(lemma_nod) DESC
+                (strpos(norm(%s), lemma_nod) = 1)::int DESC,
+                length(lemma_nod) ASC
         """
 
         all_params = exact_params + via_params + order_params
