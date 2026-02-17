@@ -2,33 +2,28 @@
 Client for querying the Latin Lemmatizer API.
 
 This package is a thin HTTP wrapper around the Latin Lemmatizer FastAPI
-server.  It preserves the same public interface as the original direct-SQL
-client so existing code continues to work — only the configuration changes:
+server.
 
-    Before:  DATABASE_URL=postgresql://...
-    After:   LATIN_API_URL=https://latin-api.example.com
-             LATIN_API_TOKEN=<bearer-token>
+Configuration (environment variables or constructor args):
+    LATIN_API_URL   — Base URL of the API (e.g. https://latin-api.example.com)
+    LATIN_API_TOKEN — Bearer token for authentication
 """
 
 import os
 from pathlib import Path
-from typing import Optional, List, Dict, Any
+from typing import Optional, List, Dict, Any, Union
 
 import httpx
 
 try:
     from dotenv import load_dotenv
 
-    # Try to load .env file from current working directory or project root
-    # This allows users to place .env in the project root or notebook directory
     cwd = Path(os.getcwd())
-    # Try current directory first, then project root (4 levels up from this file)
     for env_path in [cwd / ".env", Path(__file__).parent.parent.parent.parent / ".env"]:
         if env_path.exists():
             load_dotenv(env_path)
             break
 except ImportError:
-    # python-dotenv not installed, skip .env loading
     pass
 
 
@@ -78,43 +73,63 @@ class LatinLemmatizer:
         self._client.close()
 
     def __enter__(self):
-        """Context manager entry."""
         return self
 
     def __exit__(self, exc_type, exc_val, exc_tb):
-        """Context manager exit."""
         self.close()
 
     # ------------------------------------------------------------------
     # Public query methods
     # ------------------------------------------------------------------
 
-    def get_lemma(self, word: str) -> Optional[Dict[str, Any]]:
+    def get_lemmas(
+        self,
+        word: str,
+        pos: Optional[str] = None,
+        top: bool = False,
+    ) -> Union[List[Dict[str, Any]], Optional[Dict[str, Any]]]:
         """
-        Get lemma information from a word (lemma or inflected form).
-
-        If the word is already a lemma, returns that lemma.
-        If the word is an inflected form, returns its lemma.
+        Look up lemmas matching a Latin word, ranked by relevance.
 
         Args:
-            word: A Latin word (lemma or inflected form)
+            word: A Latin word (lemma or inflected form).
+            pos: Optional part-of-speech filter (e.g. "noun", "verb").
+                 Matches as a substring so "noun" matches
+                 "feminine noun I declension".
+            top: If True, return only the single best match (Dict) or
+                 None.  If False (default), return all matches as a
+                 list ranked by relevance.
 
         Returns:
-            Dictionary with lemma information (id, lemma_code, lemma_nod,
-            lemma_diac, pos, gender, page_url) or None if not found.
+            If top=False: List of lemma dicts, best match first.
+            If top=True:  Single best-match dict, or None.
 
-        Example:
-            >>> client.get_lemma("amavi")
-            {'id': 123, 'lemma_nod': 'amo', 'lemma_diac': 'ămo', 'pos': 'verb', ...}
+        Examples:
+            >>> client.get_lemmas("rosam")
+            [{'lemma_nod': 'rosa', ...}, {'lemma_nod': 'rodo', ...}]
+
+            >>> client.get_lemmas("rosam", top=True)
+            {'lemma_nod': 'rosa', ...}
+
+            >>> client.get_lemmas("rosam", pos="noun")
+            [{'lemma_nod': 'rosa', ...}]
         """
-        resp = self._client.get(f"/api/v1/lemma/{word}")
+        params: Dict[str, str] = {}
+        if pos is not None:
+            params["pos"] = pos
+
+        resp = self._client.get(f"/api/v1/lemma/{word}", params=params)
 
         if resp.status_code == 404:
-            return None
+            return None if top else []
         resp.raise_for_status()
-        return resp.json()
+        results = resp.json()
 
-    def get_form(
+        if top:
+            return results[0] if results else None
+        return results
+
+    def get_forms(
         self,
         *,
         lemma: Optional[str] = None,
@@ -138,27 +153,25 @@ class LatinLemmatizer:
             lemma: Starting lemma (finds forms of this lemma)
             form: Starting form (finds other forms of the same lemma)
             mood: Filter by mood (indicative, subjunctive, imperative)
-            tense: Filter by tense (present, imperfect, future, perfect, pluperfect, future perfect)
-            voice: Filter by voice (active, passive, deponent)
+            tense: Filter by tense (present, imperfect, future, perfect,
+                   pluperfect, future perfect)
+            voice: Filter by voice (active, passive)
             person: Filter by person (first, second, third)
             number: Filter by number (singular, plural)
             gender: Filter by gender (masculine, feminine, neuter)
-            case: Filter by case (nominative, genitive, dative, accusative, ablative, vocative, locative)
+            case: Filter by case (nominative, genitive, dative, accusative,
+                  ablative, vocative, locative)
             degree: Filter by degree (positive, comparative, superlative)
-            verb_form: Filter by verb form (infinitive, participle, gerund, gerundive, supine)
+            verb_form: Filter by verb form (infinitive, participle, gerund,
+                       gerundive, supine)
 
         Returns:
             List of dictionaries with form information.
 
         Examples:
-            >>> # Get all perfect active forms of "amo"
-            >>> client.get_form(lemma="amo", tense="perfect", voice="active")
-
-            >>> # Get plural forms of the same lemma as "amavi"
-            >>> client.get_form(form="amavi", number="plural")
-
-            >>> # Get the infinitive form of "amo"
-            >>> client.get_form(lemma="amo", verb_form="infinitive")
+            >>> client.get_forms(lemma="amo", tense="perfect", voice="active")
+            >>> client.get_forms(form="amavi", number="plural")
+            >>> client.get_forms(lemma="amo", verb_form="infinitive")
         """
         if (lemma is None and form is None) or (lemma is not None and form is not None):
             raise ValueError("Must provide exactly one of: lemma or form")
@@ -168,24 +181,13 @@ class LatinLemmatizer:
             params["lemma"] = lemma
         if form is not None:
             params["form"] = form
-        if mood is not None:
-            params["mood"] = mood
-        if tense is not None:
-            params["tense"] = tense
-        if voice is not None:
-            params["voice"] = voice
-        if person is not None:
-            params["person"] = person
-        if number is not None:
-            params["number"] = number
-        if gender is not None:
-            params["gender"] = gender
-        if case is not None:
-            params["case"] = case
-        if degree is not None:
-            params["degree"] = degree
-        if verb_form is not None:
-            params["verb_form"] = verb_form
+        for key, val in [
+            ("mood", mood), ("tense", tense), ("voice", voice),
+            ("person", person), ("number", number), ("gender", gender),
+            ("case", case), ("degree", degree), ("verb_form", verb_form),
+        ]:
+            if val is not None:
+                params[key] = val
 
         resp = self._client.get("/api/v1/forms", params=params)
         resp.raise_for_status()
@@ -207,20 +209,27 @@ def _get_default_client() -> LatinLemmatizer:
     return _default_client
 
 
-def get_lemma(word: str) -> Optional[Dict[str, Any]]:
+def get_lemmas(
+    word: str,
+    pos: Optional[str] = None,
+    top: bool = False,
+) -> Union[List[Dict[str, Any]], Optional[Dict[str, Any]]]:
     """
-    Get lemma information from a word (convenience function using default client).
+    Look up lemmas matching a Latin word (convenience function).
 
     Args:
-        word: A Latin word (lemma or inflected form)
+        word: A Latin word (lemma or inflected form).
+        pos: Optional part-of-speech filter (e.g. "noun", "verb").
+        top: If True, return single best match or None.
+             If False (default), return ranked list.
 
     Returns:
-        Dictionary with lemma information or None if not found.
+        List of lemma dicts (top=False) or single dict/None (top=True).
     """
-    return _get_default_client().get_lemma(word)
+    return _get_default_client().get_lemmas(word, pos=pos, top=top)
 
 
-def get_form(
+def get_forms(
     *,
     lemma: Optional[str] = None,
     form: Optional[str] = None,
@@ -235,17 +244,11 @@ def get_form(
     verb_form: Optional[str] = None,
 ) -> List[Dict[str, Any]]:
     """
-    Get inflected forms (convenience function using default client).
+    Get inflected forms (convenience function).
 
-    Args:
-        lemma: Starting lemma
-        form: Starting form
-        (plus optional filters for mood, tense, voice, etc.)
-
-    Returns:
-        List of dictionaries with form information.
+    Must provide exactly one of ``lemma`` or ``form``.
     """
-    return _get_default_client().get_form(
+    return _get_default_client().get_forms(
         lemma=lemma,
         form=form,
         mood=mood,

@@ -10,8 +10,8 @@ Configuration (environment variables or constructor args):
     LATIN_API_TOKEN — Bearer token for authentication
 """
 
-from .client import LatinLemmatizer, get_form, get_lemma
+from .client import LatinLemmatizer, get_forms, get_lemmas
 
-__all__ = ["LatinLemmatizer", "get_form", "get_lemma"]
+__all__ = ["LatinLemmatizer", "get_forms", "get_lemmas"]
 __version__ = "0.1.0"
 

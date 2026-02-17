@@ -12,7 +12,7 @@ from typing import List, Optional
 from fastapi import APIRouter, Depends, HTTPException, Query
 
 from .auth import verify_token
-from .db import get_lemma as db_get_lemma
+from .db import get_lemmas as db_get_lemmas
 from .db import get_forms as db_get_forms
 from .db import health_check as db_health_check
 from .models import FormResponse, HealthResponse, LemmaResponse
@@ -38,17 +38,19 @@ async def health():
 # Lemma lookup
 # ------------------------------------------------------------------
 
-@router.get("/lemma/{word}", response_model=Optional[LemmaResponse])
-async def get_lemma(word: str, _token: str = Depends(verify_token)):
+@router.get("/lemma/{word}", response_model=List[LemmaResponse])
+async def get_lemma(
+    word: str,
+    pos: Optional[str] = Query(None, description="Filter by part of speech (e.g. 'noun', 'verb')"),
+    _token: str = Depends(verify_token),
+):
     """
-    Look up a lemma by any Latin word (lemma or inflected form).
+    Look up lemmas matching any Latin word (lemma or inflected form).
 
-    Returns the lemma record, or 404 if nothing matches.
+    Returns all matching lemmas ranked by relevance. Optionally filter
+    by part of speech with the ``pos`` parameter.
     """
-    result = db_get_lemma(word)
-    if result is None:
-        raise HTTPException(status_code=404, detail=f"No lemma found for '{word}'.")
-    return result
+    return db_get_lemmas(word, pos=pos)
 
 
 # ------------------------------------------------------------------

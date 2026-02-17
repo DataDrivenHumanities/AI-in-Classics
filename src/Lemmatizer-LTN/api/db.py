@@ -49,39 +49,70 @@ def _get_pool() -> ConnectionPool:
 
 
 # ---------------------------------------------------------------------------
-# Query: get_lemma
+# Query: get_lemmas
 # ---------------------------------------------------------------------------
 
-def get_lemma(word: str) -> Optional[Dict[str, Any]]:
+def get_lemmas(word: str, pos: Optional[str] = None) -> List[Dict[str, Any]]:
     """
-    Look up a lemma by word.
+    Look up lemmas matching *word*, ranked by relevance.
 
-    First checks the lemmas table directly, then falls back to looking the
-    word up as an inflected form and returning its parent lemma.
+    First checks the lemmas table for an exact match on lemma_nod,
+    then falls back to looking the word up as an inflected form.
+    Results from both sources are merged, deduplicated, and ranked:
+      1. Exact lemma matches first
+      2. Then by whether the lemma_nod is a prefix of the word
+      3. Then by lemma_nod length descending (most specific first)
+
+    An optional *pos* filter narrows results to lemmas whose ``pos``
+    column contains the given substring (case-insensitive), e.g.
+    ``pos="noun"`` matches "feminine noun I declension".
     """
     pool = _get_pool()
     with pool.connection() as conn:
-        # Try as a lemma first
-        result = conn.execute(
-            "SELECT * FROM lemmas WHERE lemma_nod = norm(%s)",
-            (word,),
-        ).fetchone()
+        pos_filter = " AND l.pos ILIKE '%%' || %s || '%%'" if pos else ""
 
-        if result:
-            return dict(result)
+        # Build params in query order
+        exact_params: list[Any] = [word]
+        if pos:
+            exact_params.append(pos)
 
-        # Fall back: look up as an inflected form
-        result = conn.execute(
-            """
-            SELECT l.* FROM forms f
-            JOIN lemmas l ON l.id = f.lemma_id
-            WHERE f.form_nod = norm(%s)
-            LIMIT 1
-            """,
-            (word,),
-        ).fetchone()
+        via_params: list[Any] = [word]
+        if pos:
+            via_params.append(pos)
 
-        return dict(result) if result else None
+        order_params: list[Any] = [word]
+
+        query = f"""
+            WITH exact AS (
+                SELECT l.*, 1 AS _src
+                FROM lemmas l
+                WHERE l.lemma_nod = norm(%s){pos_filter}
+            ),
+            via_form AS (
+                SELECT DISTINCT ON (l.id) l.*, 0 AS _src
+                FROM forms f
+                JOIN lemmas l ON l.id = f.lemma_id
+                WHERE f.form_nod = norm(%s){pos_filter}
+            ),
+            combined AS (
+                SELECT * FROM exact
+                UNION
+                SELECT * FROM via_form
+            )
+            SELECT *
+            FROM combined
+            ORDER BY
+                _src DESC,
+                (norm(%s) LIKE lemma_nod || '%%')::int DESC,
+                length(lemma_nod) DESC
+        """
+
+        all_params = exact_params + via_params + order_params
+        rows = conn.execute(query, tuple(all_params)).fetchall()
+        return [
+            {k: v for k, v in dict(r).items() if k != "_src"}
+            for r in rows
+        ]
 
 
 # ---------------------------------------------------------------------------
