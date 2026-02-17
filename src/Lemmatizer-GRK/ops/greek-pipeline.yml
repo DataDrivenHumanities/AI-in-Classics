@@ -29,8 +29,11 @@ steps:
       $outDir = "$(Build.SourcesDirectory)\src\Lemmatizer-GRK\out"
       if ('${{ parameters.testing }}' -eq 'True') {
         Write-Host "MODE: TEST RUN (Pages 1 - 10)"
-        .\.venv\Scripts\python.exe src/Lemmatizer-GRK/tools/scrape_tables.py --start 1 --end 10 --outdir "$outDir" --lemma-concurrency 10 --delay 0.2
+        .\.venv\Scripts\python.exe src/Lemmatizer-GRK/tools/scrape_tables.py --start 1 --end 10 --lemma-concurrency 10 --delay 0.2
       } else {
         Write-Host "MODE: PRODUCTION RUN (Full Perseus Greek Library)"
-        .\.venv\Scripts\python.exe src/Lemmatizer-GRK/tools/scrape_tables.py --start 1 --end 6828 --outdir "$outDir" --lemma-concurrency 10 --delay 0.2
+        .\.venv\Scripts\python.exe src/Lemmatizer-GRK/tools/scrape_tables.py --start 1 --end 6828 --lemma-concurrency 10 --delay 0.2
       }
+    displayName: 'Run Greek Scraper'
+    env:
+      PYTHONIOENCODING: utf-8
