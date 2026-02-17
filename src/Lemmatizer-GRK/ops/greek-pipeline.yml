@@ -5,15 +5,20 @@ parameters:
     type: boolean
     default: true
 trigger: none
-pool:
-  name: Default
-steps:
+jobs:
+- job: ScrapeGreekLibrary
+  displayName: "Scrape Greek Library Job"
+  timeoutInMinutes: 0
+  pool:
+    name: Default
+  steps:
   # Setup Python
   - task: UsePythonVersion@0
     inputs:
       versionSpec: '3.12'
       addToPath: true
     displayName: 'Setup Python 3.12'
+
   # Setup Virtual Environment, Install Dependencies, Run Scraper
   - powershell: |
       if (-not (Test-Path ".venv")) {
@@ -25,8 +30,10 @@ steps:
       Write-Host "Installing dependencies..."
       .\.venv\Scripts\python.exe -m pip install --upgrade pip
       .\.venv\Scripts\python.exe -m pip install -r src/Lemmatizer-GRK/etl/requirements.txt
+      
       Write-Host "-- Scraper Configuration --"
       $outDir = "$(Build.SourcesDirectory)\src\Lemmatizer-GRK\out"
+      
       if ('${{ parameters.testing }}' -eq 'True') {
         Write-Host "MODE: TEST RUN (Pages 1 - 10)"
         .\.venv\Scripts\python.exe src/Lemmatizer-GRK/tools/scrape_tables.py --start 1 --end 10 --lemma-concurrency 10 --delay 0.2
