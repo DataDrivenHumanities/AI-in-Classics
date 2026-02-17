@@ -299,7 +299,18 @@ def parse_flexion_tables(html_text: str, page_url: str):
                     "voice_hint": v_hint,
                 })
 
-    return lemma_text, rows
+    # Detect active<->passive partner link
+    # e.g. "View the passive form of this verb" -> AMOR100
+    paired_code = None
+    for a in soup.select("a[href*='latin-dictionary-flexion.php?lemma=']"):
+        link_text = a.get_text(strip=True).lower()
+        if "view the passive form" in link_text or "view the active form" in link_text:
+            href = a.get("href", "")
+            q = parse_qs(urlparse(urljoin(BASE, href)).query)
+            paired_code = q.get("lemma", [None])[0]
+            break
+
+    return lemma_text, rows, paired_code
 
 async def fetch_text(session: aiohttp.ClientSession, url: str, timeout: int = 20, retries: int = 4, delay: float = 0.5):
     for attempt in range(retries + 1):
@@ -348,7 +359,11 @@ async def discover_lemmas_dynamic(session, start: int, step: int, sem: asyncio.S
 
 async def fetch_and_aggregate_lemma(session, code: str, sem: asyncio.Semaphore, delay: float,
                                     lemmas: dict, forms: list, process_fn):
-    """Fetch a lemma page, parse it, aggregate in-memory (no per-lemma CSV)."""
+    """Fetch a lemma page, parse it, aggregate in-memory (no per-lemma CSV).
+    
+    If the page links to an active/passive counterpart, also fetches that page
+    and merges forms so both lemma entries contain the full conjugation.
+    """
     url = FLEXION_URL.format(lemma=code)
     async with sem:
         try:
@@ -356,19 +371,45 @@ async def fetch_and_aggregate_lemma(session, code: str, sem: asyncio.Semaphore, 
         except Exception as e:
             print(f"[lemma {code}] warn: {e}")
             return 0
-        _, rows = parse_flexion_tables(html, url)
-        if not rows:
-            return 0
+        lemma_text, rows, paired_code = parse_flexion_tables(html, url)
 
-        lemma_tuple, form_tuples = process_fn(rows)
-        if lemma_tuple:
-            lnod = lemma_tuple[1]
-            lemmas.setdefault(lnod, lemma_tuple)
-        forms.extend(form_tuples)
+        # If there's a paired active/passive page, fetch it and merge rows
+        if paired_code:
+            paired_url = FLEXION_URL.format(lemma=paired_code)
+            try:
+                paired_html = await fetch_text(session, paired_url)
+                _, paired_rows, _ = parse_flexion_tables(paired_html, paired_url)
+                # Override lemma_text in paired rows to match the current lemma
+                for r in paired_rows:
+                    r["lemma_text"] = lemma_text
+                rows.extend(paired_rows)
+            except Exception as e:
+                print(f"[lemma {code}] warn: paired fetch {paired_code}: {e}")
+
+        if rows:
+            lemma_tuple, form_tuples = process_fn(rows)
+            if lemma_tuple:
+                lemmas.setdefault(lemma_tuple[1], lemma_tuple)
+            forms.extend(form_tuples)
+        elif lemma_text:
+            # Invariable words (et, semper, etc.) have no flexion tables
+            # but should still be recorded as lemmas with zero forms.
+            from aggregate_out_to_csvs import norm, lemma_code_from_url
+            soup = BeautifulSoup(html, "html.parser")
+            pos_el = soup.select_one("#myth .grammatica")
+            pos_text = pos_el.get_text(" ", strip=True) if pos_el else ""
+            lnod = norm(lemma_text)
+            lcode = lemma_code_from_url(url)
+            gender = ""
+            pl = pos_text.lower()
+            if "masculine" in pl: gender = "masculine"
+            elif "feminine" in pl: gender = "feminine"
+            elif "neuter" in pl: gender = "neuter"
+            lemmas.setdefault(lnod, (lcode, lnod, lemma_text, pos_text, gender, url))
 
         if delay > 0:
             await asyncio.sleep(delay)
-        return len(form_tuples)
+        return len(rows)
 
 async def main():
     ap = argparse.ArgumentParser()
