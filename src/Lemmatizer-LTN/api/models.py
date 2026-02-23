@@ -56,6 +56,55 @@ class FormsQueryParams(BaseModel):
     verb_form: Optional[str] = None
 
 
+class RandomFormResponse(BaseModel):
+    """A form with its parent lemma info, for random-forms endpoint."""
+
+    id: int
+    lemma_id: int
+    form_nod: str
+    form_diac: Optional[str] = None
+    mood: Optional[str] = None
+    tense: Optional[str] = None
+    voice: Optional[str] = None
+    person: Optional[str] = None
+    number: Optional[str] = None
+    gender: Optional[str] = None
+    case: Optional[str] = None
+    degree: Optional[str] = None
+    verb_form: Optional[str] = None
+    page_url: Optional[str] = None
+    lemma_nod: Optional[str] = None
+    lemma_diac: Optional[str] = None
+    pos: Optional[str] = None
+
+
+class BatchFormQuery(BaseModel):
+    """A single query within a batch forms request."""
+
+    lemma: str
+    mood: Optional[str] = None
+    tense: Optional[str] = None
+    voice: Optional[str] = None
+    person: Optional[str] = None
+    number: Optional[str] = None
+    gender: Optional[str] = None
+    case: Optional[str] = None
+    degree: Optional[str] = None
+    verb_form: Optional[str] = None
+
+
+class BatchFormsRequest(BaseModel):
+    """Request body for POST /forms/batch."""
+
+    queries: List[BatchFormQuery]
+
+
+class BatchFormsResponseItem(BaseModel):
+    """One result set in the batch response."""
+
+    forms: List[FormResponse]
+
+
 class HealthResponse(BaseModel):
     """Health check response."""
 

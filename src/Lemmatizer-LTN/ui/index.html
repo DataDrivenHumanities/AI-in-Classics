@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Latin Lemmatizer</title>
+  <style>
+    :root, [data-theme="dark"] {
+      --bg: #0f1117;
+      --surface: #1a1d27;
+      --surface2: #242734;
+      --border: #2e3241;
+      --text: #e4e6f0;
+      --text-dim: #8b8fa3;
+      --accent: #7c6ef0;
+      --accent-hover: #9589f5;
+      --accent-bg: rgba(124, 110, 240, 0.08);
+      --green: #4ade80;
+      --red: #f87171;
+      --radius: 10px;
+    }
+    [data-theme="light"] {
+      --bg: #f5f6fa;
+      --surface: #ffffff;
+      --surface2: #eef0f5;
+      --border: #d5d8e0;
+      --text: #1a1d27;
+      --text-dim: #6b7085;
+      --accent: #6c5ce7;
+      --accent-hover: #5a4bd1;
+      --accent-bg: rgba(108, 92, 231, 0.06);
+      --green: #16a34a;
+      --red: #dc2626;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Noto Sans', 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    header {
+      width: 100%;
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--border);
+      max-width: 1100px;
+    }
+    header h1 { font-size: 1.25rem; font-weight: 600; letter-spacing: -0.01em; }
+    header h1 span { color: var(--accent); }
+
+    .header-right { display: flex; align-items: center; gap: 1rem; }
+
+    .theme-btn {
+      background: none; border: 1px solid var(--border); border-radius: 6px;
+      color: var(--text-dim); cursor: pointer; padding: 4px 8px; font-size: 1rem;
+      line-height: 1; transition: border-color 0.15s, color 0.15s;
+    }
+    .theme-btn:hover { border-color: var(--accent); color: var(--text); }
+
+    .status {
+      font-size: 0.75rem; display: flex; align-items: center; gap: 6px; color: var(--text-dim);
+    }
+    .status-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--text-dim); }
+    .status-dot.ok { background: var(--green); }
+    .status-dot.err { background: var(--red); }
+
+    main { width: 100%; max-width: 1100px; padding: 2rem; flex: 1; }
+
+    .config-bar { display: flex; gap: 0.75rem; margin-bottom: 2rem; }
+    .config-bar input {
+      flex: 1; padding: 0.6rem 0.85rem;
+      background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+      color: var(--text); font-size: 0.8rem; font-family: 'JetBrains Mono', monospace;
+      outline: none; transition: border-color 0.15s;
+    }
+    .config-bar input:focus { border-color: var(--accent); }
+    .config-bar input::placeholder { color: var(--text-dim); }
+
+    .query-section {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 1.5rem; margin-bottom: 1.5rem;
+    }
+
+    .query-row { display: flex; gap: 0.75rem; align-items: stretch; }
+    .query-row input[type="text"] {
+      flex: 1; padding: 0.75rem 1rem;
+      background: var(--surface2); border: 1px solid var(--border); border-radius: var(--radius);
+      color: var(--text); font-size: 1rem; outline: none; transition: border-color 0.15s;
+    }
+    .query-row input:focus { border-color: var(--accent); }
+    .query-row input::placeholder { color: var(--text-dim); }
+
+    select {
+      padding: 0.75rem 1rem;
+      background: var(--surface2); border: 1px solid var(--border); border-radius: var(--radius);
+      color: var(--text); font-size: 0.9rem; outline: none; cursor: pointer; min-width: 160px;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%238b8fa3'%3E%3Cpath d='M6 8.5L1 3.5h10z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat; background-position: right 12px center; padding-right: 2rem;
+    }
+    select:focus { border-color: var(--accent); }
+
+    button.search-btn {
+      padding: 0.75rem 1.5rem; background: var(--accent); border: none; border-radius: var(--radius);
+      color: #fff; font-size: 0.9rem; font-weight: 500; cursor: pointer;
+      transition: background 0.15s; white-space: nowrap;
+    }
+    button.search-btn:hover { background: var(--accent-hover); }
+
+    .filters {
+      display: none; flex-wrap: wrap; gap: 0.5rem;
+      margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border);
+    }
+    .filters.visible { display: flex; }
+    .filters label { font-size: 0.7rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.05em; }
+    .filter-group { display: flex; flex-direction: column; gap: 4px; }
+    .filter-group select {
+      padding: 0.45rem 0.65rem; background: var(--surface2); border: 1px solid var(--border);
+      border-radius: 6px; color: var(--text); font-size: 0.8rem; outline: none; min-width: 130px;
+      appearance: none; cursor: pointer;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' fill='%238b8fa3'%3E%3Cpath d='M5 7L1 3h8z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat; background-position: right 8px center; padding-right: 1.5rem;
+    }
+    .filter-group select:focus { border-color: var(--accent); }
+
+    .results-section { margin-top: 0.5rem; }
+    .results-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 0.5rem; }
+    .results-header h2 { font-size: 0.85rem; font-weight: 500; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.05em; }
+    .results-count { font-size: 0.8rem; color: var(--text-dim); }
+
+    .empty-state { text-align: center; padding: 3rem 1rem; color: var(--text-dim); font-size: 0.95rem; }
+    .empty-state .hint { font-size: 0.8rem; margin-top: 0.5rem; opacity: 0.7; }
+    .loading { text-align: center; padding: 2rem; color: var(--text-dim); }
+    .error-msg { padding: 1rem; background: rgba(248,113,113,0.08); border: 1px solid rgba(248,113,113,0.2); border-radius: var(--radius); color: var(--red); font-size: 0.85rem; }
+
+    .results-table {
+      width: 100%; border-collapse: separate; border-spacing: 0;
+      background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden;
+    }
+    .results-table th {
+      text-align: left; padding: 0.7rem 0.85rem; font-size: 0.7rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-dim); background: var(--surface2);
+      border-bottom: 1px solid var(--border);
+    }
+    .results-table th.sortable {
+      cursor: pointer; user-select: none; position: relative; padding-right: 1.4rem;
+    }
+    .results-table th.sortable:hover { color: var(--text); }
+    .results-table th.sortable::after {
+      content: '\21C5'; position: absolute; right: 6px; top: 50%; transform: translateY(-50%);
+      font-size: 0.65rem; opacity: 0.4;
+    }
+    .results-table th.sort-asc::after { content: '\25B2'; opacity: 0.8; }
+    .results-table th.sort-desc::after { content: '\25BC'; opacity: 0.8; }
+    .results-table td { padding: 0.6rem 0.85rem; font-size: 0.85rem; border-bottom: 1px solid var(--border); }
+    .results-table tr:last-child td { border-bottom: none; }
+    .results-table tr:hover td { background: var(--accent-bg); }
+
+    .results-table tr.clickable { cursor: pointer; }
+    .results-table tr.clickable:hover td { background: var(--accent-bg); }
+
+    .tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 500; }
+    .tag-pos { background: rgba(124,110,240,0.15); color: var(--accent); }
+    .tag-morph { background: rgba(74,222,128,0.1); color: var(--green); }
+
+    .form-group {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); margin-bottom: 1rem; overflow: hidden;
+    }
+    .form-group-header {
+      display: flex; align-items: center; gap: 0.5rem; padding: 0.65rem 1rem;
+      background: var(--surface2); border-bottom: 1px solid var(--border);
+      cursor: pointer; user-select: none;
+    }
+    .form-group-header:hover { background: var(--accent-bg); }
+    .form-group-header .chevron { font-size: 0.65rem; color: var(--text-dim); transition: transform 0.15s; }
+    .form-group-header.collapsed .chevron { transform: rotate(-90deg); }
+    .form-group-header h3 { font-size: 0.85rem; font-weight: 600; color: var(--text); flex: 1; }
+    .form-group-header .badge { font-size: 0.7rem; color: var(--text-dim); background: var(--bg); padding: 2px 8px; border-radius: 10px; }
+    .form-group-body { padding: 0; }
+    .form-group-body.hidden { display: none; }
+
+    .compact-table { width: 100%; border-collapse: collapse; }
+    .compact-table th {
+      text-align: center; padding: 0.5rem 0.75rem; font-size: 0.7rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-dim);
+      background: var(--surface2); border-bottom: 1px solid var(--border);
+    }
+    .compact-table th:first-child { text-align: left; }
+    .compact-table td { padding: 0.5rem 0.75rem; font-size: 0.85rem; text-align: center; border-bottom: 1px solid var(--border); }
+    .compact-table td:first-child {
+      text-align: left; color: var(--text-dim); font-size: 0.75rem;
+      text-transform: uppercase; letter-spacing: 0.03em; font-weight: 500; white-space: nowrap;
+    }
+    .compact-table tr:last-child td { border-bottom: none; }
+    .compact-table tr:hover td { background: var(--accent-bg); }
+    .compact-table .form-cell { color: var(--text); }
+    .compact-table .empty-cell { color: var(--border); }
+
+    .nonfinite-list { padding: 0.75rem 1rem; display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; }
+    .nonfinite-item { font-size: 0.85rem; }
+
+    .view-toggle {
+      display: inline-flex; background: var(--surface2); border: 1px solid var(--border);
+      border-radius: 6px; overflow: hidden; font-size: 0.75rem;
+    }
+    .view-toggle button {
+      padding: 4px 12px; background: none; border: none; color: var(--text-dim);
+      cursor: pointer; font-size: 0.75rem; font-weight: 500; transition: background 0.12s, color 0.12s;
+    }
+    .view-toggle button:hover { color: var(--text); }
+    .view-toggle button.active { background: var(--accent); color: #fff; }
+
+    .toolbar-btn {
+      background: none; border: 1px solid var(--border); border-radius: 6px;
+      color: var(--text-dim); cursor: pointer; padding: 3px 10px; font-size: 0.7rem;
+      font-weight: 500; transition: border-color 0.15s, color 0.15s;
+    }
+    .toolbar-btn:hover { border-color: var(--accent); color: var(--text); }
+
+    @media (max-width: 640px) {
+      .query-row { flex-direction: column; }
+      .config-bar { flex-direction: column; }
+      main { padding: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><span>Latin</span> Lemmatizer</h1>
+    <div class="header-right">
+      <a href="builder.html" style="font-size:0.8rem;color:var(--accent);text-decoration:none;border:1px solid var(--border);border-radius:6px;padding:4px 12px;">Sentence Generator</a>
+      <button class="theme-btn" id="themeBtn" onclick="toggleTheme()" title="Toggle light/dark mode"></button>
+      <div class="status">
+        <div class="status-dot" id="statusDot"></div>
+        <span id="statusText">Connecting...</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="config-bar">
+      <input type="text" id="apiUrl" placeholder="API URL (e.g. https://your-tunnel.trycloudflare.com)">
+      <input type="password" id="apiToken" placeholder="API Token">
+      <button class="search-btn" onclick="checkHealth()" style="padding:0.5rem 1rem;font-size:0.8rem;">Connect</button>
+    </div>
+
+    <div class="query-section">
+      <div class="query-row">
+        <input type="text" id="wordInput" placeholder="Enter a Latin word (e.g. amo, rosam, amavi)" autocomplete="off">
+        <select id="queryMode" onchange="toggleFilters()">
+          <option value="lemmas">Look up Lemmas</option>
+          <option value="forms-by-lemma">Forms (by lemma)</option>
+          <option value="forms-by-form">Forms (by form)</option>
+        </select>
+        <button class="search-btn" id="searchBtn" onclick="doSearch()">Search</button>
+      </div>
+      <div class="filters" id="filtersPanel">
+        <div class="filter-group"><label>Mood</label><select id="f-mood"><option value="">Any</option><option>indicative</option><option>subjunctive</option><option>imperative</option></select></div>
+        <div class="filter-group"><label>Tense</label><select id="f-tense"><option value="">Any</option><option>present</option><option>imperfect</option><option>future</option><option>perfect</option><option>pluperfect</option><option>future perfect</option></select></div>
+        <div class="filter-group"><label>Voice</label><select id="f-voice"><option value="">Any</option><option>active</option><option>passive</option></select></div>
+        <div class="filter-group"><label>Person</label><select id="f-person"><option value="">Any</option><option>first</option><option>second</option><option>third</option></select></div>
+        <div class="filter-group"><label>Number</label><select id="f-number"><option value="">Any</option><option>singular</option><option>plural</option></select></div>
+        <div class="filter-group"><label>Gender</label><select id="f-gender"><option value="">Any</option><option>masculine</option><option>feminine</option><option>neuter</option></select></div>
+        <div class="filter-group"><label>Case</label><select id="f-case"><option value="">Any</option><option>nominative</option><option>genitive</option><option>dative</option><option>accusative</option><option>ablative</option><option>vocative</option></select></div>
+        <div class="filter-group"><label>Degree</label><select id="f-degree"><option value="">Any</option><option>positive</option><option>comparative</option><option>superlative</option></select></div>
+        <div class="filter-group"><label>Verb Form</label><select id="f-verb_form"><option value="">Any</option><option>participle</option><option>infinitive</option><option>gerund</option><option>gerundive</option><option>supine</option></select></div>
+      </div>
+    </div>
+
+    <div class="results-section" id="results">
+      <div class="empty-state">
+        <div>Type a Latin word and press Search</div>
+        <div class="hint">Try: amo, rosa, amavi, sapiens, et</div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const $ = id => document.getElementById(id);
+
+    /* ========== Theme ========== */
+    const savedTheme = localStorage.getItem('latin_theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    function updateThemeIcon() {
+      const t = document.documentElement.getAttribute('data-theme');
+      $('themeBtn').textContent = t === 'dark' ? '\u2600\uFE0F' : '\uD83C\uDF19';
+    }
+    function toggleTheme() {
+      const cur = document.documentElement.getAttribute('data-theme');
+      const next = cur === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('latin_theme', next);
+      updateThemeIcon();
+    }
+    updateThemeIcon();
+
+    /* ========== Config ========== */
+    const savedUrl = localStorage.getItem('latin_api_url') || '';
+    const savedToken = localStorage.getItem('latin_api_token') || '';
+    $('apiUrl').value = savedUrl;
+    $('apiToken').value = savedToken;
+
+    function getConfig() {
+      const url = $('apiUrl').value.replace(/\/+$/, '');
+      const token = $('apiToken').value;
+      localStorage.setItem('latin_api_url', url);
+      localStorage.setItem('latin_api_token', token);
+      return { url, token };
+    }
+
+    async function apiFetch(path) {
+      const { url, token } = getConfig();
+      if (!url) throw new Error('Set API URL first');
+      const resp = await fetch(url + path, {
+        headers: token ? { 'Authorization': 'Bearer ' + token } : {}
+      });
+      if (!resp.ok) {
+        const buf = await resp.arrayBuffer();
+        const text = new TextDecoder('utf-8').decode(buf);
+        throw new Error(`${resp.status}: ${text.slice(0, 200)}`);
+      }
+      const buf = await resp.arrayBuffer();
+      return JSON.parse(new TextDecoder('utf-8').decode(buf));
+    }
+
+    async function checkHealth() {
+      try {
+        const data = await apiFetch('/api/v1/health');
+        $('statusDot').className = 'status-dot ok';
+        $('statusText').textContent = `Connected (DB: ${data.database})`;
+      } catch (e) {
+        $('statusDot').className = 'status-dot err';
+        $('statusText').textContent = 'Disconnected';
+      }
+    }
+
+    function toggleFilters() {
+      const mode = $('queryMode').value;
+      $('filtersPanel').classList.toggle('visible', mode.startsWith('forms'));
+      $('wordInput').placeholder = mode === 'lemmas'
+        ? 'Enter a Latin word (e.g. amo, rosam, amavi)'
+        : mode === 'forms-by-lemma' ? 'Enter a lemma (e.g. amo, rosa)' : 'Enter a form (e.g. amavi, rosam)';
+    }
+
+    /* ========== State ========== */
+    let currentViewMode = localStorage.getItem('latin_view_mode') || 'grouped';
+    let lastFormsData = null;
+    let lastFormsWord = null;
+    let sortCol = null;
+    let sortDir = 'asc';
+
+    function showLoading() { $('results').innerHTML = '<div class="loading">Searching...</div>'; }
+    function showError(msg) { $('results').innerHTML = `<div class="error-msg">${msg}</div>`; }
+    function tag(text, cls) { return text ? `<span class="tag ${cls}">${text}</span>` : ''; }
+    function esc(s) { return (s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace('\ufffd',''); }
+
+    function setViewMode(mode) {
+      currentViewMode = mode;
+      localStorage.setItem('latin_view_mode', mode);
+      if (lastFormsData) renderForms(lastFormsData, lastFormsWord);
+    }
+
+    function sortTable(col) {
+      if (sortCol === col) { sortDir = sortDir === 'asc' ? 'desc' : 'asc'; }
+      else { sortCol = col; sortDir = 'asc'; }
+      if (lastFormsData) renderForms(lastFormsData, lastFormsWord);
+    }
+
+    /* ========== URL Hash ========== */
+    function pushHash(mode, word, filters) {
+      let h = `#${mode}/${encodeURIComponent(word)}`;
+      if (filters) {
+        const parts = Object.entries(filters).filter(([,v]) => v).map(([k,v]) => `${k}=${encodeURIComponent(v)}`);
+        if (parts.length) h += '?' + parts.join('&');
+      }
+      if (location.hash !== h) history.pushState(null, '', h);
+    }
+
+    function loadFromHash() {
+      const h = location.hash.slice(1);
+      if (!h) return;
+      const [pathPart, queryPart] = h.split('?');
+      const [mode, ...wordParts] = pathPart.split('/');
+      const word = decodeURIComponent(wordParts.join('/'));
+      if (!word) return;
+
+      $('queryMode').value = mode;
+      $('wordInput').value = word;
+      toggleFilters();
+
+      if (queryPart) {
+        for (const pair of queryPart.split('&')) {
+          const [k, v] = pair.split('=');
+          const el = $('f-' + k);
+          if (el) el.value = decodeURIComponent(v || '');
+        }
+      }
+      doSearch(true);
+    }
+
+    window.addEventListener('popstate', loadFromHash);
+
+    /* ========== Clickable Lemma ========== */
+    function lookupForms(lemma) {
+      $('queryMode').value = 'forms-by-lemma';
+      $('wordInput').value = lemma;
+      toggleFilters();
+      for (const f of ['mood','tense','voice','person','number','gender','case','degree','verb_form']) {
+        $('f-' + f).value = '';
+      }
+      doSearch();
+    }
+
+    /* ========== Export CSV ========== */
+    function exportCSV() {
+      if (!lastFormsData || !lastFormsData.length) return;
+      const cols = ['form_diac','form_nod','mood','tense','voice','person','number','gender','case','degree','verb_form'];
+      const activeCols = cols.filter(c => lastFormsData.some(r => r[c]));
+      let csv = activeCols.join(',') + '\n';
+      for (const r of lastFormsData) {
+        csv += activeCols.map(c => {
+          const v = (r[c] || '').replace(/"/g, '""');
+          return v.includes(',') || v.includes('"') ? `"${v}"` : v;
+        }).join(',') + '\n';
+      }
+      const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = `${lastFormsWord || 'forms'}.csv`;
+      a.click();
+      URL.revokeObjectURL(a.href);
+    }
+
+    /* ========== Render: Lemmas ========== */
+    function renderLemmas(data, word) {
+      if (!data.length) { $('results').innerHTML = `<div class="empty-state">No lemmas found for "${esc(word)}"</div>`; return; }
+      let html = `
+        <div class="results-header"><h2>Lemma Results</h2>
+          <span class="results-count">${data.length} result${data.length!==1?'s':''}</span></div>
+        <table class="results-table"><thead><tr>
+          <th>Lemma</th><th>Normalized</th><th>Part of Speech</th><th>Gender</th>
+        </tr></thead><tbody>`;
+      for (const r of data) {
+        const nod = esc(r.lemma_nod);
+        html += `<tr class="clickable" onclick="lookupForms('${nod}')" title="Click to view forms">
+          <td><strong>${esc(r.lemma_diac||r.lemma_nod)}</strong></td>
+          <td style="color:var(--text-dim)">${nod}</td>
+          <td>${tag(r.pos,'tag-pos')}</td>
+          <td>${r.gender||'\u2014'}</td></tr>`;
+      }
+      html += '</tbody></table>';
+      $('results').innerHTML = html;
+    }
+
+    /* ========== Render: Forms ========== */
+    const CASE_ORDER = ['nominative','genitive','dative','accusative','ablative','vocative'];
+    const PERSON_ORDER = ['first','second','third'];
+    const MOOD_ORDER = ['indicative','subjunctive','imperative'];
+    const VOICE_ORDER = ['active','passive'];
+
+    function groupBy(arr, fn) {
+      const m = new Map();
+      for (const x of arr) { const k = fn(x); if (!m.has(k)) m.set(k,[]); m.get(k).push(x); }
+      return m;
+    }
+    function formText(f) { return esc(f.form_diac || f.form_nod); }
+    function capitalize(s) { return s ? s.charAt(0).toUpperCase() + s.slice(1) : ''; }
+    function ordIdx(v, order) { const i = order.indexOf(v); return i === -1 ? 999 : i; }
+
+    function toggleGroup(el) { el.classList.toggle('collapsed'); el.nextElementSibling.classList.toggle('hidden'); }
+    function makeGroupHeader(title, count) {
+      return `<div class="form-group-header" onclick="toggleGroup(this)">
+        <span class="chevron">&#9660;</span><h3>${title}</h3>
+        <span class="badge">${count}</span></div>`;
+    }
+
+    function buildPersonNumberTable(forms) {
+      const numbers = [...new Set(forms.map(f=>f.number).filter(Boolean))].sort((a,b)=>(a==='singular'?0:1)-(b==='singular'?0:1));
+      if (!numbers.length) numbers.push(null);
+      const persons = [...new Set(forms.map(f=>f.person).filter(Boolean))].sort((a,b)=>ordIdx(a,PERSON_ORDER)-ordIdx(b,PERSON_ORDER));
+      if (!persons.length) return `<div class="nonfinite-list">${forms.map(f=>`<span class="nonfinite-item">${formText(f)}</span>`).join('')}</div>`;
+      let h = '<table class="compact-table"><thead><tr><th></th>';
+      for (const n of numbers) h += `<th>${n||''}</th>`;
+      h += '</tr></thead><tbody>';
+      for (const p of persons) {
+        h += `<tr><td>${p}</td>`;
+        for (const n of numbers) {
+          const cell = forms.filter(f=>f.person===p&&f.number===n).map(f=>formText(f)).join(', ');
+          h += `<td class="${cell?'form-cell':'empty-cell'}">${cell||'\u2014'}</td>`;
+        }
+        h += '</tr>';
+      }
+      return h + '</tbody></table>';
+    }
+
+    function buildCaseNumberTable(forms) {
+      const numbers = [...new Set(forms.map(f=>f.number).filter(Boolean))].sort((a,b)=>(a==='singular'?0:1)-(b==='singular'?0:1));
+      if (!numbers.length) numbers.push(null);
+      const cases = [...new Set(forms.map(f=>f.case).filter(Boolean))].sort((a,b)=>ordIdx(a,CASE_ORDER)-ordIdx(b,CASE_ORDER));
+      if (!cases.length) return `<div class="nonfinite-list">${forms.map(f=>`<span class="nonfinite-item">${formText(f)}</span>`).join('')}</div>`;
+      let h = '<table class="compact-table"><thead><tr><th></th>';
+      for (const n of numbers) h += `<th>${n||''}</th>`;
+      h += '</tr></thead><tbody>';
+      for (const c of cases) {
+        h += `<tr><td>${c}</td>`;
+        for (const n of numbers) {
+          const cell = forms.filter(f=>f.case===c&&f.number===n).map(f=>formText(f)).join(', ');
+          h += `<td class="${cell?'form-cell':'empty-cell'}">${cell||'\u2014'}</td>`;
+        }
+        h += '</tr>';
+      }
+      return h + '</tbody></table>';
+    }
+
+    function renderForms(data, word) {
+      lastFormsData = data;
+      lastFormsWord = word;
+      if (!data.length) { $('results').innerHTML = `<div class="empty-state">No forms found for "${esc(word)}"</div>`; return; }
+
+      const gAct = currentViewMode === 'grouped' ? 'active' : '';
+      const tAct = currentViewMode === 'table' ? 'active' : '';
+      let html = `<div class="results-header">
+        <h2>Inflected Forms</h2>
+        <div style="display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap;">
+          <div class="view-toggle">
+            <button class="${gAct}" onclick="setViewMode('grouped')">Grouped</button>
+            <button class="${tAct}" onclick="setViewMode('table')">Table</button>
+          </div>
+          <button class="toolbar-btn" onclick="exportCSV()" title="Download as CSV">Export CSV</button>
+          <span class="results-count">${data.length} form${data.length!==1?'s':''}</span>
+        </div></div>`;
+
+      if (currentViewMode === 'table') {
+        html += renderFlatTable(data);
+      } else {
+        const hasMood = data.some(f => f.mood), hasVF = data.some(f => f.verb_form), hasCase = data.some(f => f.case);
+        if (hasMood || hasVF) html += renderVerbForms(data);
+        else if (hasCase) html += renderNounForms(data);
+        else html += renderGenericForms(data);
+      }
+      $('results').innerHTML = html;
+    }
+
+    function renderFlatTable(data) {
+      const morphCols = ['mood','tense','voice','person','number','gender','case','degree','verb_form'];
+      const activeCols = morphCols.filter(c => data.some(r => r[c]));
+      const allCols = ['form', ...activeCols];
+      const sorted = [...data];
+      if (sortCol) {
+        const key = sortCol === 'form' ? (r => (r.form_nod||'').toLowerCase()) : (r => (r[sortCol]||'').toLowerCase());
+        sorted.sort((a,b) => { const va = key(a), vb = key(b); return va < vb ? (sortDir==='asc'?-1:1) : va > vb ? (sortDir==='asc'?1:-1) : 0; });
+      }
+      let h = '<table class="results-table"><thead><tr>';
+      for (const c of allCols) {
+        const cls = sortCol === c ? `sortable sort-${sortDir}` : 'sortable';
+        h += `<th class="${cls}" onclick="sortTable('${c}')">${c}</th>`;
+      }
+      h += '</tr></thead><tbody>';
+      for (const r of sorted) {
+        h += `<tr><td><strong>${esc(r.form_diac||r.form_nod)}</strong></td>`;
+        for (const c of activeCols) h += `<td>${r[c] ? tag(r[c],'tag-morph') : '\u2014'}</td>`;
+        h += '</tr>';
+      }
+      return h + '</tbody></table>';
+    }
+
+    function renderVerbForms(data) {
+      let h = '';
+      const finite = data.filter(f => f.mood && !f.verb_form);
+      const nonfinite = data.filter(f => f.verb_form);
+      const other = data.filter(f => !f.mood && !f.verb_form);
+      const byVoice = groupBy(finite, f => f.voice || 'unknown');
+      for (const voice of VOICE_ORDER) {
+        if (!byVoice.has(voice)) continue;
+        const byMood = groupBy(byVoice.get(voice), f => f.mood || 'unknown');
+        for (const mood of MOOD_ORDER) {
+          if (!byMood.has(mood)) continue;
+          for (const [tense, tf] of groupBy(byMood.get(mood), f => f.tense || '\u2014')) {
+            h += `<div class="form-group">${makeGroupHeader(`${capitalize(mood)} ${capitalize(tense)} ${capitalize(voice)}`, tf.length)}<div class="form-group-body">${buildPersonNumberTable(tf)}</div></div>`;
+          }
+        }
+      }
+      const byVF = groupBy(nonfinite, f => f.verb_form || 'other');
+      for (const [vf, vfForms] of byVF) {
+        for (const [v, vForms] of groupBy(vfForms, f => f.voice || '')) {
+          for (const [t, tForms] of groupBy(vForms, f => f.tense || '')) {
+            const parts = [capitalize(vf)]; if (t) parts.push(capitalize(t)); if (v) parts.push(capitalize(v));
+            const body = tForms.some(f=>f.case) ? buildCaseNumberTable(tForms) : `<div class="nonfinite-list">${tForms.map(f=>`<span class="nonfinite-item">${formText(f)}</span>`).join('')}</div>`;
+            h += `<div class="form-group">${makeGroupHeader(parts.join(' '), tForms.length)}<div class="form-group-body">${body}</div></div>`;
+          }
+        }
+      }
+      if (other.length) h += `<div class="form-group">${makeGroupHeader('Other', other.length)}<div class="form-group-body"><div class="nonfinite-list">${other.map(f=>`<span class="nonfinite-item">${formText(f)}</span>`).join('')}</div></div></div>`;
+      return h;
+    }
+
+    function renderNounForms(data) {
+      let h = '';
+      const genders = [...new Set(data.map(f => f.gender).filter(Boolean))];
+      if (genders.length > 1) {
+        for (const g of genders) { const gf = data.filter(f=>f.gender===g); h += `<div class="form-group">${makeGroupHeader(capitalize(g),gf.length)}<div class="form-group-body">${buildCaseNumberTable(gf)}</div></div>`; }
+        const ng = data.filter(f=>!f.gender);
+        if (ng.length) h += `<div class="form-group">${makeGroupHeader('Unspecified Gender',ng.length)}<div class="form-group-body">${buildCaseNumberTable(ng)}</div></div>`;
+      } else {
+        h += `<div class="form-group">${makeGroupHeader(genders[0]?capitalize(genders[0]):'Declension',data.length)}<div class="form-group-body">${buildCaseNumberTable(data)}</div></div>`;
+      }
+      return h;
+    }
+
+    function renderGenericForms(data) {
+      return `<div class="form-group">${makeGroupHeader('Forms',data.length)}<div class="form-group-body"><div class="nonfinite-list">${data.map(f=>`<span class="nonfinite-item">${formText(f)}</span>`).join('')}</div></div></div>`;
+    }
+
+    /* ========== Search ========== */
+    async function doSearch(fromHash) {
+      const word = $('wordInput').value.trim();
+      if (!word) return;
+      const mode = $('queryMode').value;
+      showLoading();
+
+      const filters = {};
+      for (const f of ['mood','tense','voice','person','number','gender','case','degree','verb_form']) {
+        filters[f] = $('f-' + f).value.trim();
+      }
+
+      if (!fromHash) pushHash(mode, word, mode.startsWith('forms') ? filters : null);
+
+      try {
+        if (mode === 'lemmas') {
+          renderLemmas(await apiFetch(`/api/v1/lemma/${encodeURIComponent(word)}`), word);
+        } else {
+          const key = mode === 'forms-by-lemma' ? 'lemma' : 'form';
+          let params = `${key}=${encodeURIComponent(word)}`;
+          for (const [f, v] of Object.entries(filters)) { if (v) params += `&${f}=${encodeURIComponent(v)}`; }
+          renderForms(await apiFetch(`/api/v1/forms?${params}`), word);
+        }
+      } catch (e) { showError(e.message); }
+    }
+
+    $('wordInput').addEventListener('keydown', e => { if (e.key === 'Enter') doSearch(); });
+    if (savedUrl) checkHealth();
+    if (location.hash) loadFromHash();
+  </script>
+</body>
+</html>

@@ -211,6 +211,125 @@ def get_forms(
 
 
 # ---------------------------------------------------------------------------
+# Query: random_forms  (no lemma required)
+# ---------------------------------------------------------------------------
+
+def random_forms(
+    n: int = 50,
+    pos: Optional[str] = None,
+    mood: Optional[str] = None,
+    tense: Optional[str] = None,
+    voice: Optional[str] = None,
+    person: Optional[str] = None,
+    number: Optional[str] = None,
+    gender: Optional[str] = None,
+    case: Optional[str] = None,
+    degree: Optional[str] = None,
+    verb_form: Optional[str] = None,
+) -> List[Dict[str, Any]]:
+    """
+    Return *n* random forms matching the given morphological filters.
+    No lemma or form input is needed — it pulls from the whole DB.
+    Optionally filter the parent lemma by *pos* substring.
+    """
+    query = "SELECT f.*, l.lemma_nod, l.lemma_diac, l.pos FROM forms f JOIN lemmas l ON l.id = f.lemma_id WHERE 1=1"
+    params: list[Any] = []
+
+    if pos:
+        query += " AND l.pos ILIKE '%%' || %s || '%%'"
+        params.append(pos)
+
+    filter_values = {
+        "mood": mood, "tense": tense, "voice": voice,
+        "person": person, "number": number, "gender": gender,
+        "case": case, "degree": degree, "verb_form": verb_form,
+    }
+    for col, val in filter_values.items():
+        if val is not None:
+            col_ref = f'f."{col}"' if col == "case" else f"f.{col}"
+            query += f" AND {col_ref} = %s"
+            params.append(val)
+
+    query += " ORDER BY random() LIMIT %s"
+    params.append(n)
+
+    pool = _get_pool()
+    with pool.connection() as conn:
+        rows = conn.execute(query, tuple(params)).fetchall()
+        return [dict(r) for r in rows]
+
+
+# ---------------------------------------------------------------------------
+# Query: random_lemmas
+# ---------------------------------------------------------------------------
+
+def random_lemmas(
+    n: int = 10,
+    pos: Optional[str] = None,
+) -> List[Dict[str, Any]]:
+    """Return *n* random lemmas, optionally filtered by POS substring."""
+    pool = _get_pool()
+    with pool.connection() as conn:
+        if pos:
+            query = """
+                SELECT * FROM lemmas
+                WHERE pos ILIKE '%%' || %s || '%%'
+                ORDER BY random()
+                LIMIT %s
+            """
+            rows = conn.execute(query, (pos, n)).fetchall()
+        else:
+            query = "SELECT * FROM lemmas ORDER BY random() LIMIT %s"
+            rows = conn.execute(query, (n,)).fetchall()
+        return [dict(r) for r in rows]
+
+
+# ---------------------------------------------------------------------------
+# Query: batch_forms
+# ---------------------------------------------------------------------------
+
+def batch_forms(
+    queries: List[Dict[str, Any]],
+) -> List[List[Dict[str, Any]]]:
+    """
+    Resolve multiple form queries in a single DB connection.
+    Each entry in *queries* is a dict with 'lemma' (required) plus
+    optional morphological filters (mood, tense, voice, etc.).
+    Returns a list of result-lists, one per input query.
+    """
+    pool = _get_pool()
+    results: List[List[Dict[str, Any]]] = []
+    with pool.connection() as conn:
+        for q in queries:
+            lemma = q.get("lemma")
+            if not lemma:
+                results.append([])
+                continue
+
+            base = """
+                SELECT f.* FROM lemmas l
+                JOIN forms f ON f.lemma_id = l.id
+                WHERE l.lemma_nod = norm(%s)
+            """
+            params: list[Any] = [lemma]
+
+            for col in _FILTER_COLUMNS:
+                val = q.get(col)
+                if val:
+                    col_ref = f'f."{col}"' if col == "case" else f"f.{col}"
+                    base += f" AND {col_ref} = %s"
+                    params.append(val)
+
+            base += (
+                ' ORDER BY f.mood, f.tense, f.voice, f.person, f.number, '
+                'f.gender, f."case", f.degree, f.verb_form, f.form_nod'
+            )
+            rows = conn.execute(base, tuple(params)).fetchall()
+            results.append([dict(r) for r in rows])
+    return results
+
+
+# ---------------------------------------------------------------------------
 # Health check
 # ---------------------------------------------------------------------------
 

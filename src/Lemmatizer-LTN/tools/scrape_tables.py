@@ -175,26 +175,26 @@ def flatten_ff_value(cell):
                 
                 forms.append(combined)
         
-        # Return comma-separated forms
-        return ", ".join(forms)
+        # Return comma-separated forms, stripping stray U+FFFD from source HTML
+        return ", ".join(forms).replace("\ufffd", "").strip()
     
     # Fallback: if no radice+desinenza pattern, just concatenate everything
     if desinenze:
-        # We have endings but no radice - return them as-is (they'll be combined later)
         result = ", ".join(desinenze)
         if all_suffix:
             result = f"{result}, {all_suffix}" if result else all_suffix
-        return result
+        return result.replace("\ufffd", "").strip()
     
     if radice:
-        # We have a radice but no desinenze - return it with any suffix
         result = radice
         if all_suffix:
             result = f"{result} {all_suffix}"
-        return result
+        return result.replace("\ufffd", "").strip()
     
     # No radice or desinenza - just return other content
-    return all_suffix if all_suffix else ""
+    result = all_suffix if all_suffix else ""
+    # Strip stray U+FFFD replacement characters from source HTML
+    return result.replace("\ufffd", "").strip()
 
 def parse_flexion_tables(html_text: str, page_url: str):
     soup = BeautifulSoup(html_text, "html.parser")

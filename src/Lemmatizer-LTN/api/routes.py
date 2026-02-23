@@ -2,9 +2,12 @@
 API route handlers for the Latin Lemmatizer.
 
 Endpoints:
-    GET /api/v1/health        — health check (no auth)
-    GET /api/v1/lemma/{word}  — look up a lemma
-    GET /api/v1/forms         — query inflected forms
+    GET  /api/v1/health            — health check (no auth)
+    GET  /api/v1/lemma/{word}      — look up a lemma
+    GET  /api/v1/forms             — query inflected forms (requires lemma or form)
+    GET  /api/v1/forms/random      — N random forms by morph filters (no lemma needed)
+    GET  /api/v1/random-lemmas     — random lemmas (optionally by POS)
+    POST /api/v1/forms/batch       — resolve many form queries at once
 """
 
 from typing import List, Optional
@@ -14,8 +17,19 @@ from fastapi import APIRouter, Depends, HTTPException, Query
 from .auth import verify_token
 from .db import get_lemmas as db_get_lemmas
 from .db import get_forms as db_get_forms
+from .db import random_forms as db_random_forms
+from .db import random_lemmas as db_random_lemmas
+from .db import batch_forms as db_batch_forms
 from .db import health_check as db_health_check
-from .models import FormResponse, HealthResponse, LemmaResponse
+from .models import (
+    BatchFormQuery,
+    BatchFormsRequest,
+    BatchFormsResponseItem,
+    FormResponse,
+    HealthResponse,
+    LemmaResponse,
+    RandomFormResponse,
+)
 
 router = APIRouter(prefix="/api/v1")
 
@@ -98,3 +112,72 @@ async def get_forms(
         verb_form=verb_form,
     )
     return results
+
+
+# ------------------------------------------------------------------
+# Random forms (no lemma required)
+# ------------------------------------------------------------------
+
+@router.get("/forms/random", response_model=List[RandomFormResponse])
+async def get_random_forms(
+    n: int = Query(50, ge=1, le=500, description="Number of random forms"),
+    pos: Optional[str] = Query(None, description="Filter parent lemma by POS (e.g. 'verb', 'noun')"),
+    mood: Optional[str] = Query(None),
+    tense: Optional[str] = Query(None),
+    voice: Optional[str] = Query(None),
+    person: Optional[str] = Query(None),
+    number: Optional[str] = Query(None),
+    gender: Optional[str] = Query(None),
+    case: Optional[str] = Query(None),
+    degree: Optional[str] = Query(None),
+    verb_form: Optional[str] = Query(None),
+    _token: str = Depends(verify_token),
+):
+    """
+    Return *n* random forms from the entire database, filtered by
+    morphological features and optionally by parent-lemma POS.
+
+    No lemma or form input needed — useful for generating random
+    sentences or sampling training data.
+    """
+    return db_random_forms(
+        n=n, pos=pos, mood=mood, tense=tense, voice=voice,
+        person=person, number=number, gender=gender,
+        case=case, degree=degree, verb_form=verb_form,
+    )
+
+
+# ------------------------------------------------------------------
+# Random lemmas
+# ------------------------------------------------------------------
+
+@router.get("/random-lemmas", response_model=List[LemmaResponse])
+async def get_random_lemmas(
+    n: int = Query(10, ge=1, le=500, description="Number of random lemmas to return"),
+    pos: Optional[str] = Query(None, description="Filter by POS substring (e.g. 'verb', 'noun')"),
+    _token: str = Depends(verify_token),
+):
+    """Return *n* random lemmas from the database, optionally filtered by POS."""
+    return db_random_lemmas(n=n, pos=pos)
+
+
+# ------------------------------------------------------------------
+# Batch forms
+# ------------------------------------------------------------------
+
+@router.post("/forms/batch", response_model=List[BatchFormsResponseItem])
+async def post_forms_batch(
+    body: BatchFormsRequest,
+    _token: str = Depends(verify_token),
+):
+    """
+    Resolve multiple form queries in a single request.
+
+    Accepts a JSON body with a ``queries`` array. Each query has a
+    ``lemma`` field and optional morphological filters. Returns one
+    result set per query, in the same order.
+    """
+    if len(body.queries) > 500:
+        raise HTTPException(status_code=422, detail="Maximum 500 queries per batch.")
+    raw = db_batch_forms([q.model_dump() for q in body.queries])
+    return [BatchFormsResponseItem(forms=forms) for forms in raw]

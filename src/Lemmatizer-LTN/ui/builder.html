@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Latin Sentence Generator</title>
+  <style>
+    :root,[data-theme="dark"]{
+      --bg:#0f1117;--surface:#1a1d27;--surface2:#242734;--border:#2e3241;
+      --text:#e4e6f0;--text-dim:#8b8fa3;--accent:#7c6ef0;--accent-hover:#9589f5;
+      --accent-bg:rgba(124,110,240,0.08);--green:#4ade80;--red:#f87171;--yellow:#facc15;
+      --radius:10px;
+    }
+    [data-theme="light"]{
+      --bg:#f5f6fa;--surface:#ffffff;--surface2:#eef0f5;--border:#d5d8e0;
+      --text:#1a1d27;--text-dim:#6b7085;--accent:#6c5ce7;--accent-hover:#5a4bd1;
+      --accent-bg:rgba(108,92,231,0.06);--green:#16a34a;--red:#dc2626;--yellow:#ca8a04;
+    }
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{
+      font-family:'Noto Sans','Segoe UI',system-ui,-apple-system,sans-serif;
+      background:var(--bg);color:var(--text);min-height:100vh;
+      display:flex;flex-direction:column;align-items:center;transition:background .2s,color .2s;
+    }
+    header{
+      width:100%;max-width:1200px;padding:1.5rem 2rem;display:flex;
+      justify-content:space-between;align-items:center;border-bottom:1px solid var(--border);
+    }
+    header h1{font-size:1.25rem;font-weight:600;}
+    header h1 span{color:var(--accent);}
+    .header-right{display:flex;align-items:center;gap:1rem;}
+    .header-link{
+      font-size:0.8rem;color:var(--accent);text-decoration:none;
+      border:1px solid var(--border);border-radius:6px;padding:4px 12px;
+    }
+    .header-link:hover{border-color:var(--accent);}
+    .theme-btn{
+      background:none;border:1px solid var(--border);border-radius:6px;
+      color:var(--text-dim);cursor:pointer;padding:4px 8px;font-size:1rem;line-height:1;
+    }
+    .theme-btn:hover{border-color:var(--accent);color:var(--text);}
+    .status{font-size:0.75rem;display:flex;align-items:center;gap:6px;color:var(--text-dim);}
+    .status-dot{width:8px;height:8px;border-radius:50%;background:var(--text-dim);}
+    .status-dot.ok{background:var(--green);}
+    .status-dot.err{background:var(--red);}
+    main{width:100%;max-width:1200px;padding:2rem;flex:1;}
+
+    .config-bar{display:flex;gap:.75rem;margin-bottom:1.5rem;}
+    .config-bar input{
+      flex:1;padding:.6rem .85rem;background:var(--surface);border:1px solid var(--border);
+      border-radius:var(--radius);color:var(--text);font-size:.8rem;
+      font-family:'JetBrains Mono',monospace;outline:none;
+    }
+    .config-bar input:focus{border-color:var(--accent);}
+    .config-bar input::placeholder{color:var(--text-dim);}
+
+    .btn{
+      padding:.5rem 1rem;background:var(--accent);border:none;border-radius:var(--radius);
+      color:#fff;font-size:.85rem;font-weight:500;cursor:pointer;white-space:nowrap;
+    }
+    .btn:hover{background:var(--accent-hover);}
+    .btn-outline{background:none;border:1px solid var(--border);color:var(--text-dim);}
+    .btn-outline:hover{border-color:var(--accent);color:var(--text);}
+    .btn-sm{padding:.35rem .75rem;font-size:.75rem;}
+    .btn-green{background:var(--green);color:#000;font-weight:600;font-size:.95rem;padding:.6rem 1.5rem;}
+    .btn-green:hover{filter:brightness(1.1);}
+
+    .section{
+      background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+      margin-bottom:1.25rem;overflow:hidden;
+    }
+    .section-header{
+      display:flex;align-items:center;justify-content:space-between;
+      padding:.85rem 1.25rem;background:var(--surface2);border-bottom:1px solid var(--border);
+    }
+    .section-title{font-size:.9rem;font-weight:600;}
+    .section-title .num{
+      display:inline-flex;align-items:center;justify-content:center;
+      width:22px;height:22px;border-radius:50%;background:var(--accent);color:#fff;
+      font-size:.7rem;font-weight:700;margin-right:.5rem;
+    }
+    .section-body{padding:1.25rem;}
+
+    .preset-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:.75rem;}
+    .preset-card{
+      background:var(--bg);border:1px solid var(--border);border-radius:8px;
+      padding:1rem;cursor:pointer;transition:border-color .15s,background .15s;
+    }
+    .preset-card:hover{border-color:var(--accent);background:var(--accent-bg);}
+    .preset-card.selected{border-color:var(--accent);background:var(--accent-bg);box-shadow:0 0 0 2px rgba(124,110,240,.25);}
+    .preset-card .pc-name{font-size:.85rem;font-weight:600;margin-bottom:.35rem;}
+    .preset-card .pc-pattern{font-size:.7rem;color:var(--accent);margin-bottom:.35rem;font-family:'JetBrains Mono',monospace;}
+    .preset-card .pc-example{font-size:.75rem;color:var(--text-dim);font-style:italic;}
+    .preset-card .pc-slots{font-size:.65rem;color:var(--text-dim);margin-top:.4rem;line-height:1.4;}
+
+    .slot-summary{display:flex;flex-direction:column;gap:.5rem;margin-top:1rem;}
+    .slot-row{
+      display:flex;gap:.75rem;align-items:center;padding:.5rem .75rem;
+      background:var(--bg);border:1px solid var(--border);border-radius:6px;font-size:.8rem;
+    }
+    .slot-row .sr-num{
+      font-size:.65rem;font-weight:700;color:var(--text-dim);background:var(--surface2);
+      width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+    }
+    .slot-row .sr-role{font-weight:600;min-width:110px;}
+    .slot-row .sr-filters{color:var(--text-dim);font-size:.7rem;flex:1;}
+    .slot-row .sr-pos{color:var(--accent);font-size:.7rem;font-style:italic;min-width:80px;text-align:right;}
+
+    .gen-bar{display:flex;gap:1rem;align-items:center;flex-wrap:wrap;}
+    .gen-bar label{font-size:.8rem;color:var(--text-dim);}
+    .gen-bar input[type=number]{
+      width:90px;padding:.45rem .6rem;background:var(--surface2);border:1px solid var(--border);
+      border-radius:6px;color:var(--text);font-size:.85rem;outline:none;text-align:center;
+    }
+    .gen-bar input:focus{border-color:var(--accent);}
+
+    .progress-bar{height:4px;background:var(--border);border-radius:2px;margin-top:1rem;overflow:hidden;display:none;}
+    .progress-fill{height:100%;background:var(--accent);transition:width .15s;width:0%;}
+    .gen-log{font-size:.75rem;color:var(--text-dim);margin-top:.75rem;max-height:80px;overflow-y:auto;}
+
+    .output-actions{display:flex;gap:.5rem;}
+    .output-stats{font-size:.8rem;color:var(--text-dim);margin-bottom:.75rem;}
+    .output-table{width:100%;border-collapse:collapse;}
+    .output-table th{
+      text-align:left;font-size:.65rem;color:var(--text-dim);text-transform:uppercase;
+      letter-spacing:.04em;padding:.5rem .75rem;border-bottom:1px solid var(--border);
+    }
+    .output-table td{
+      padding:.55rem .75rem;border-bottom:1px solid var(--border);font-size:.85rem;vertical-align:top;
+    }
+    .output-table tr:hover td{background:var(--accent-bg);}
+    .output-table .sent{font-style:italic;color:var(--accent);font-weight:500;}
+    .output-table .idx{color:var(--text-dim);font-size:.75rem;width:40px;}
+    .output-table .breakdown{font-size:.7rem;color:var(--text-dim);}
+
+    @media(max-width:640px){
+      .config-bar,.gen-bar{flex-direction:column;}
+      .preset-grid{grid-template-columns:1fr;}
+      main{padding:1rem;}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><span>Latin</span> Sentence Generator</h1>
+    <div class="header-right">
+      <a class="header-link" href="index.html">Lookup Tool</a>
+      <button class="theme-btn" id="themeBtn" onclick="toggleTheme()"></button>
+      <div class="status">
+        <div class="status-dot" id="statusDot"></div>
+        <span id="statusText">Connecting...</span>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="config-bar">
+      <input type="text" id="apiUrl" placeholder="API URL">
+      <input type="password" id="apiToken" placeholder="API Token">
+      <button class="btn btn-sm" onclick="checkHealth()">Connect</button>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <div class="section-title"><span class="num">1</span>Choose a Pattern</div>
+      </div>
+      <div class="section-body">
+        <div class="preset-grid" id="presetGrid"></div>
+        <div class="slot-summary" id="slotSummary"></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <div class="section-title"><span class="num">2</span>Generate</div>
+      </div>
+      <div class="section-body">
+        <div class="gen-bar">
+          <label>Sentences:</label>
+          <input type="number" id="genCount" min="1" max="5000" value="25">
+          <button class="btn btn-green" onclick="generate()" id="genBtn">Generate</button>
+        </div>
+        <div class="progress-bar" id="progressBar"><div class="progress-fill" id="progressFill"></div></div>
+        <div class="gen-log" id="genLog"></div>
+      </div>
+    </div>
+
+    <div class="section" id="outputSection" style="display:none;">
+      <div class="section-header">
+        <div class="section-title">Output</div>
+        <div class="output-actions">
+          <button class="btn btn-sm btn-outline" onclick="exportCSV()">Export CSV</button>
+          <button class="btn btn-sm btn-outline" onclick="exportJSON()">Export JSON</button>
+          <button class="btn btn-sm btn-outline" onclick="copyAll()">Copy All</button>
+        </div>
+      </div>
+      <div class="section-body">
+        <div class="output-stats" id="outputStats"></div>
+        <div id="outputBody"></div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const $ = id => document.getElementById(id);
+
+    /* ===== Theme ===== */
+    const savedTheme = localStorage.getItem('latin_theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    function updateThemeIcon(){ $('themeBtn').textContent = document.documentElement.getAttribute('data-theme')==='dark'?'\u2600\uFE0F':'\uD83C\uDF19'; }
+    function toggleTheme(){ const n = document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark'; document.documentElement.setAttribute('data-theme',n); localStorage.setItem('latin_theme',n); updateThemeIcon(); }
+    updateThemeIcon();
+
+    /* ===== Config ===== */
+    $('apiUrl').value = localStorage.getItem('latin_api_url')||'';
+    $('apiToken').value = localStorage.getItem('latin_api_token')||'';
+    function getConfig(){ const u=$('apiUrl').value.replace(/\/+$/,''),t=$('apiToken').value; localStorage.setItem('latin_api_url',u); localStorage.setItem('latin_api_token',t); return{url:u,token:t}; }
+
+    async function apiFetch(path){
+      const{url,token}=getConfig();
+      if(!url) throw new Error('Set API URL');
+      const r = await fetch(url+path, {headers:token?{'Authorization':'Bearer '+token}:{}});
+      if(!r.ok) throw new Error(r.status+' '+r.statusText);
+      return JSON.parse(new TextDecoder('utf-8').decode(await r.arrayBuffer()));
+    }
+
+    async function checkHealth(){
+      try{ await apiFetch('/api/v1/health'); $('statusDot').className='status-dot ok'; $('statusText').textContent='Connected'; }
+      catch(e){ $('statusDot').className='status-dot err'; $('statusText').textContent='Error'; }
+    }
+
+    function esc(s){ return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;').replace('\ufffd',''); }
+    function pick(arr){ return arr[Math.floor(Math.random()*arr.length)]; }
+    function apiKey(k){ return k==='case_'?'case':k; }
+
+    function log(msg){
+      const el = $('genLog');
+      el.textContent = msg;
+    }
+
+    /* ===== Presets ===== */
+    const PRESETS = [
+      {
+        key:'svo', name:'Subject + Verb + Object',
+        pattern:'Nom + V(trans) + Acc',
+        example:'Poeta carmen scribit',
+        slots:[
+          {role:'Subject', pos:'noun', filters:{case_:'nominative',number:'singular'}},
+          {role:'Verb',    pos:'verb', filters:{mood:'indicative',tense:'present',voice:'active',person:'third',number:'singular'}},
+          {role:'Object',  pos:'noun', filters:{case_:'accusative',number:'singular'}},
+        ]
+      },
+      {
+        key:'sv', name:'Subject + Verb',
+        pattern:'Nom + V',
+        example:'Miles pugnat',
+        slots:[
+          {role:'Subject', pos:'noun', filters:{case_:'nominative',number:'singular'}},
+          {role:'Verb',    pos:'verb', filters:{mood:'indicative',tense:'present',voice:'active',person:'third',number:'singular'}},
+        ]
+      },
+      {
+        key:'svio', name:'Subject + Verb + Indirect + Direct Obj',
+        pattern:'Nom + V + Dat + Acc',
+        example:'Magister discipulo sapientiam dat',
+        slots:[
+          {role:'Subject',      pos:'noun', filters:{case_:'nominative',number:'singular'}},
+          {role:'Verb',         pos:'verb', filters:{mood:'indicative',tense:'present',voice:'active',person:'third',number:'singular'}},
+          {role:'Indirect Obj', pos:'noun', filters:{case_:'dative',number:'singular'}},
+          {role:'Direct Obj',   pos:'noun', filters:{case_:'accusative',number:'singular'}},
+        ]
+      },
+      {
+        key:'svo-perf', name:'SVO (perfect tense)',
+        pattern:'Nom + V(perf) + Acc',
+        example:'Femina carmen laudavit',
+        slots:[
+          {role:'Subject', pos:'noun', filters:{case_:'nominative',number:'singular'}},
+          {role:'Verb',    pos:'verb', filters:{mood:'indicative',tense:'perfect',voice:'active',person:'third',number:'singular'}},
+          {role:'Object',  pos:'noun', filters:{case_:'accusative',number:'singular'}},
+        ]
+      },
+      {
+        key:'svo-pl', name:'SVO (plural subject)',
+        pattern:'Nom(pl) + V(pl) + Acc',
+        example:'Milites arma capiunt',
+        slots:[
+          {role:'Subject', pos:'noun', filters:{case_:'nominative',number:'plural'}},
+          {role:'Verb',    pos:'verb', filters:{mood:'indicative',tense:'present',voice:'active',person:'third',number:'plural'}},
+          {role:'Object',  pos:'noun', filters:{case_:'accusative',number:'singular'}},
+        ]
+      },
+      {
+        key:'adj-noun', name:'Adjective + Noun',
+        pattern:'Adj(nom) + Noun(nom)',
+        example:'Magnus rex',
+        slots:[
+          {role:'Adjective', pos:'adjective', filters:{case_:'nominative',number:'singular',gender:'masculine'}},
+          {role:'Noun',      pos:'noun', filters:{case_:'nominative',number:'singular'}},
+        ]
+      },
+      {
+        key:'s-adj-v', name:'Subject + Adjective + Verb',
+        pattern:'Nom + Adj(nom) + V',
+        example:'Femina pulchra cantat',
+        slots:[
+          {role:'Subject',   pos:'noun', filters:{case_:'nominative',number:'singular'}},
+          {role:'Adjective', pos:'adjective', filters:{case_:'nominative',number:'singular'}},
+          {role:'Verb',      pos:'verb', filters:{mood:'indicative',tense:'present',voice:'active',person:'third',number:'singular'}},
+        ]
+      },
+      {
+        key:'sv-adv', name:'Subject + Adverb + Verb',
+        pattern:'Nom + Adv + V',
+        example:'Miles fortiter pugnat',
+        slots:[
+          {role:'Subject', pos:'noun', filters:{case_:'nominative',number:'singular'}},
+          {role:'Adverb',  pos:'adverb', filters:{}},
+          {role:'Verb',    pos:'verb', filters:{mood:'indicative',tense:'present',voice:'active',person:'third',number:'singular'}},
+        ]
+      },
+      {
+        key:'abl-means', name:'Subject + Verb + Ablative of Means',
+        pattern:'Nom + V + Abl',
+        example:'Miles gladio pugnat',
+        slots:[
+          {role:'Subject',       pos:'noun', filters:{case_:'nominative',number:'singular'}},
+          {role:'Verb',          pos:'verb', filters:{mood:'indicative',tense:'present',voice:'active',person:'third',number:'singular'}},
+          {role:'Abl. of Means', pos:'noun', filters:{case_:'ablative',number:'singular'}},
+        ]
+      },
+      {
+        key:'svo-passive', name:'SVO Passive',
+        pattern:'Nom + V(passive) + Abl',
+        example:'Carmen a poeta scribitur',
+        slots:[
+          {role:'Subject',     pos:'noun', filters:{case_:'nominative',number:'singular'}},
+          {role:'Verb',        pos:'verb', filters:{mood:'indicative',tense:'present',voice:'passive',person:'third',number:'singular'}},
+          {role:'Agent (abl)', pos:'noun', filters:{case_:'ablative',number:'singular'}},
+        ]
+      },
+      {
+        key:'svo-subj', name:'SVO Subjunctive',
+        pattern:'Nom + V(subj) + Acc',
+        example:'Poeta carmen scribat',
+        slots:[
+          {role:'Subject', pos:'noun', filters:{case_:'nominative',number:'singular'}},
+          {role:'Verb',    pos:'verb', filters:{mood:'subjunctive',tense:'present',voice:'active',person:'third',number:'singular'}},
+          {role:'Object',  pos:'noun', filters:{case_:'accusative',number:'singular'}},
+        ]
+      },
+      {
+        key:'svo-fut', name:'SVO (future tense)',
+        pattern:'Nom + V(fut) + Acc',
+        example:'Rex oppidum ducet',
+        slots:[
+          {role:'Subject', pos:'noun', filters:{case_:'nominative',number:'singular'}},
+          {role:'Verb',    pos:'verb', filters:{mood:'indicative',tense:'future',voice:'active',person:'third',number:'singular'}},
+          {role:'Object',  pos:'noun', filters:{case_:'accusative',number:'singular'}},
+        ]
+      },
+      {
+        key:'svo-imp', name:'SVO (imperfect tense)',
+        pattern:'Nom + V(imperf) + Acc',
+        example:'Nauta terram videbat',
+        slots:[
+          {role:'Subject', pos:'noun', filters:{case_:'nominative',number:'singular'}},
+          {role:'Verb',    pos:'verb', filters:{mood:'indicative',tense:'imperfect',voice:'active',person:'third',number:'singular'}},
+          {role:'Object',  pos:'noun', filters:{case_:'accusative',number:'singular'}},
+        ]
+      },
+      {
+        key:'genitive', name:'Noun + Genitive Noun',
+        pattern:'Nom + Gen',
+        example:'Virtus militis',
+        slots:[
+          {role:'Noun',     pos:'noun', filters:{case_:'nominative',number:'singular'}},
+          {role:'Genitive', pos:'noun', filters:{case_:'genitive',number:'singular'}},
+        ]
+      },
+    ];
+
+    /* ===== State ===== */
+    let selectedPreset = null;
+    let generatedSentences = [];
+
+    /* ===== Render ===== */
+    function renderPresets(){
+      const grid = $('presetGrid');
+      grid.innerHTML = PRESETS.map(p=>`
+        <div class="preset-card ${selectedPreset===p.key?'selected':''}" onclick="selectPreset('${p.key}')">
+          <div class="pc-name">${esc(p.name)}</div>
+          <div class="pc-pattern">${esc(p.pattern)}</div>
+          <div class="pc-example">${esc(p.example)}</div>
+          <div class="pc-slots">${p.slots.map(s=>esc(s.role)+' ('+s.pos+')').join(' &middot; ')}</div>
+        </div>
+      `).join('');
+    }
+
+    function selectPreset(key){
+      selectedPreset = key;
+      renderPresets();
+      renderSlotSummary();
+    }
+
+    function renderSlotSummary(){
+      const el = $('slotSummary');
+      if(!selectedPreset){ el.innerHTML=''; return; }
+      const p = PRESETS.find(x=>x.key===selectedPreset);
+      if(!p){ el.innerHTML=''; return; }
+      el.innerHTML = '<div style="font-size:.75rem;color:var(--text-dim);margin-bottom:.25rem;text-transform:uppercase;letter-spacing:.04em;">Slot breakdown</div>' +
+        p.slots.map((s,i)=>{
+          const fDesc = Object.entries(s.filters).filter(([,v])=>v).map(([,v])=>v).join(', ');
+          return `<div class="slot-row">
+            <div class="sr-num">${i+1}</div>
+            <div class="sr-role">${esc(s.role)}</div>
+            <div class="sr-filters">${esc(fDesc)||'no filters'}</div>
+            <div class="sr-pos">${esc(s.pos)}</div>
+          </div>`;
+        }).join('');
+    }
+
+    /* ===== Generation ===== */
+    async function generate(){
+      if(!selectedPreset){ alert('Pick a sentence pattern first.'); return; }
+      const preset = PRESETS.find(x=>x.key===selectedPreset);
+      if(!preset) return;
+
+      const count = Math.max(1, Math.min(5000, parseInt($('genCount').value)||25));
+      generatedSentences = [];
+
+      $('genBtn').disabled = true;
+      $('genBtn').textContent = 'Generating...';
+      $('progressBar').style.display = 'block';
+      $('progressFill').style.width = '0%';
+
+      try {
+        /* --- Fetch random forms for each slot in one call each --- */
+        const slotPools = [];
+        const poolSize = Math.min(count * 2, 500);
+
+        for(let si = 0; si < preset.slots.length; si++){
+          const slot = preset.slots[si];
+          log(`Fetching random ${slot.role} forms (${slot.pos})...`);
+
+          let params = `n=${poolSize}&pos=${encodeURIComponent(slot.pos)}`;
+          for(const [fk, fv] of Object.entries(slot.filters)){
+            if(fv) params += `&${apiKey(fk)}=${encodeURIComponent(fv)}`;
+          }
+
+          const forms = await apiFetch(`/api/v1/forms/random?${params}`);
+          slotPools.push(forms);
+          log(`Got ${forms.length} ${slot.role} forms`);
+
+          $('progressFill').style.width = ((si+1) / preset.slots.length * 80) + '%';
+          await new Promise(r=>setTimeout(r,0));
+        }
+
+        /* --- Assemble sentences by picking randomly from each pool --- */
+        log('Assembling sentences...');
+        $('progressFill').style.width = '85%';
+        await new Promise(r=>setTimeout(r,0));
+
+        for(let i = 0; i < count; i++){
+          const words = [];
+          const breakdown = [];
+
+          for(let si = 0; si < preset.slots.length; si++){
+            const slot = preset.slots[si];
+            const pool = slotPools[si];
+
+            if(pool.length){
+              const f = pick(pool);
+              const form = f.form_diac || f.form_nod;
+              const lemma = f.lemma_nod || '';
+              words.push(form);
+              breakdown.push({role: slot.role, lemma, form});
+            } else {
+              words.push('___');
+              breakdown.push({role: slot.role, lemma: '', form: null});
+            }
+          }
+
+          generatedSentences.push({
+            sentence: words.join(' '),
+            words,
+            breakdown,
+            ok: breakdown.every(b=>b.form),
+          });
+        }
+
+        $('progressFill').style.width = '100%';
+        log(`Done! ${generatedSentences.length} sentences from ${slotPools.map(p=>p.length).join('x')} form pools.`);
+
+      } catch(e){
+        log('Error: ' + e.message);
+        console.error(e);
+      }
+
+      $('genBtn').disabled = false;
+      $('genBtn').textContent = 'Generate';
+      setTimeout(()=>{ $('progressBar').style.display = 'none'; }, 400);
+      renderOutput();
+    }
+
+    /* ===== Output ===== */
+    function renderOutput(){
+      const sec = $('outputSection'); sec.style.display = 'block';
+      const total = generatedSentences.length;
+      const ok = generatedSentences.filter(s=>s.ok).length;
+      $('outputStats').textContent = `${total} sentences \u2022 ${ok} fully resolved \u2022 ${total-ok} with gaps`;
+
+      const body = $('outputBody');
+      if(!total){ body.innerHTML='<p style="color:var(--text-dim);font-style:italic;padding:1rem;">Nothing generated.</p>'; return; }
+
+      let html = '<table class="output-table"><thead><tr><th>#</th><th>Sentence</th><th>Breakdown</th></tr></thead><tbody>';
+      for(let i = 0; i < total; i++){
+        const s = generatedSentences[i];
+        const bd = s.breakdown.map(b =>
+          `<span style="color:var(--text-dim)">${esc(b.role)}:</span> ${b.form ? esc(b.form) : '<span style="color:var(--red)">'+esc(b.lemma)+'?</span>'}`
+        ).join(' &middot; ');
+        html += `<tr><td class="idx">${i+1}</td><td class="sent">${esc(s.sentence)}</td><td class="breakdown">${bd}</td></tr>`;
+      }
+      html += '</tbody></table>';
+      body.innerHTML = html;
+      sec.scrollIntoView({behavior:'smooth',block:'start'});
+    }
+
+    /* ===== Export ===== */
+    function exportCSV(){
+      if(!generatedSentences.length) return;
+      const preset = PRESETS.find(x=>x.key===selectedPreset);
+      const roles = preset ? preset.slots.map(s=>s.role) : [];
+      let csv = 'index,sentence,' + roles.map(r=>'"'+r+' (lemma)","'+r+' (form)"').join(',') + '\n';
+      generatedSentences.forEach((s,i)=>{
+        const parts = s.breakdown.map(b=>`"${(b.lemma||'').replace(/"/g,'""')}","${(b.form||'').replace(/"/g,'""')}"`).join(',');
+        csv += `${i+1},"${s.sentence.replace(/"/g,'""')}",${parts}\n`;
+      });
+      download('sentences.csv', csv, 'text/csv');
+    }
+
+    function exportJSON(){
+      if(!generatedSentences.length) return;
+      const data = generatedSentences.map((s,i)=>({
+        index:i+1, sentence:s.sentence, resolved:s.ok,
+        words:s.breakdown.map(b=>({role:b.role, lemma:b.lemma, form:b.form}))
+      }));
+      download('sentences.json', JSON.stringify(data,null,2), 'application/json');
+    }
+
+    function copyAll(){
+      const text = generatedSentences.map(s=>s.sentence).join('\n');
+      navigator.clipboard.writeText(text);
+    }
+
+    function download(name,content,type){
+      const blob = new Blob([content],{type:type+';charset=utf-8'});
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob); a.download = name; a.click();
+      URL.revokeObjectURL(a.href);
+    }
+
+    /* ===== Init ===== */
+    if($('apiUrl').value) checkHealth();
+    renderPresets();
+  </script>
+</body>
+</html>
