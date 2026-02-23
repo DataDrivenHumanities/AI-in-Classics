@@ -82,6 +82,8 @@ def get_lemmas(word: str, pos: Optional[str] = None) -> List[Dict[str, Any]]:
 
         order_params: list[Any] = [word]
 
+        # Add diathesis label for lemma lookups so callers can distinguish
+        # active/passive lemma entries (e.g., AMO100 vs AMOR100).
         query = f"""
             WITH exact AS (
                 SELECT l.*, 1 AS _src
@@ -99,7 +101,15 @@ def get_lemmas(word: str, pos: Optional[str] = None) -> List[Dict[str, Any]]:
                 UNION
                 SELECT * FROM via_form
             )
-            SELECT *
+            SELECT
+                combined.*,
+                CASE
+                    WHEN upper(COALESCE(combined.lemma_code, '')) ~ 'OR[0-9]+$' THEN 'passive'
+                    WHEN upper(COALESCE(combined.lemma_code, '')) ~ 'O[0-9]+$' THEN 'active'
+                    WHEN COALESCE(combined.pos, '') ILIKE '%%passive%%' THEN 'passive'
+                    WHEN COALESCE(combined.pos, '') ILIKE '%%active%%' THEN 'active'
+                    ELSE 'unknown'
+                END AS lemma_diathesis
             FROM combined
             ORDER BY
                 _src DESC,

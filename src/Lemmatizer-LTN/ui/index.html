@@ -172,6 +172,7 @@
     .tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 500; }
     .tag-pos { background: rgba(124,110,240,0.15); color: var(--accent); }
     .tag-morph { background: rgba(74,222,128,0.1); color: var(--green); }
+    .tag-voice { background: rgba(74,222,128,0.1); color: var(--green); }
 
     .form-group {
       background: var(--surface); border: 1px solid var(--border);
@@ -449,13 +450,15 @@
         <div class="results-header"><h2>Lemma Results</h2>
           <span class="results-count">${data.length} result${data.length!==1?'s':''}</span></div>
         <table class="results-table"><thead><tr>
-          <th>Lemma</th><th>Normalized</th><th>Part of Speech</th><th>Gender</th>
+          <th>Lemma</th><th>Normalized</th><th>Diathesis</th><th>Part of Speech</th><th>Gender</th>
         </tr></thead><tbody>`;
       for (const r of data) {
         const nod = esc(r.lemma_nod);
+        const diathesis = r.lemma_diathesis || 'unknown';
         html += `<tr class="clickable" onclick="lookupForms('${nod}')" title="Click to view forms">
           <td><strong>${esc(r.lemma_diac||r.lemma_nod)}</strong></td>
           <td style="color:var(--text-dim)">${nod}</td>
+          <td>${diathesis === 'unknown' ? '\u2014' : tag(diathesis, 'tag-voice')}</td>
           <td>${tag(r.pos,'tag-pos')}</td>
           <td>${r.gender||'\u2014'}</td></tr>`;
       }

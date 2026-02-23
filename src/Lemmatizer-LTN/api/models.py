@@ -15,6 +15,7 @@ class LemmaResponse(BaseModel):
     lemma_code: Optional[str] = None
     lemma_nod: str
     lemma_diac: Optional[str] = None
+    lemma_diathesis: Optional[str] = None
     pos: Optional[str] = None
     gender: Optional[str] = None
     page_url: Optional[str] = None
