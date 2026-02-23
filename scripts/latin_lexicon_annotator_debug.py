@@ -21,6 +21,11 @@ def main() -> None:
     ap.add_argument("--fixtures", default="", help="JSON file of passages (list of objects with 'text').")
     ap.add_argument("--top-k", type=int, default=20, help="Top-K sentiment hits to include.")
     ap.add_argument("--link-lila-ids", action="store_true", help="Also link lemma keys to lila.lemmario_clean id_lemma candidates.")
+    ap.add_argument(
+        "--payload-only",
+        action="store_true",
+        help="Print only the compact LLM-injection payload (LEXICON_PRIORS).",
+    )
     args = ap.parse_args()
 
     # Local import: add `src/Lemmatizer-LTN-LiLa/` to sys.path (hyphens are OK in paths).
@@ -40,7 +45,10 @@ def main() -> None:
                 if not isinstance(item, dict) or "text" not in item:
                     continue
                 pid = item.get("id") or item.get("path") or "case"
-                res = ann.annotate(str(item["text"]))
+                if args.payload_only:
+                    res = ann.build_llm_payload(str(item["text"]))
+                else:
+                    res = ann.annotate(str(item["text"]))
                 print(f"\n=== {pid} ===")
                 print(json.dumps(res, ensure_ascii=False, indent=2))
             return
@@ -49,7 +57,10 @@ def main() -> None:
             text = _read_text(args.file)
         else:
             text = sys.stdin.read()
-        res = ann.annotate(text)
+        if args.payload_only:
+            res = ann.build_llm_payload(text)
+        else:
+            res = ann.annotate(text)
         print(json.dumps(res, ensure_ascii=False, indent=2))
 
 

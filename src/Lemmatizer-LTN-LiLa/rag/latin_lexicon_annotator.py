@@ -38,6 +38,9 @@ def _pos_bucket_from_scraped(pos: Optional[str]) -> str:
     p = (pos or "").lower()
     if not p:
         return "other"
+    # Important: "pronoun" contains the substring "noun". Handle pronouns first.
+    if "pron" in p:
+        return "other"
     if "verb" in p:
         return "verb"
     if "adv" in p:
@@ -46,8 +49,6 @@ def _pos_bucket_from_scraped(pos: Optional[str]) -> str:
         return "adj"
     if "noun" in p or "substant" in p:
         return "noun"
-    if "pron" in p:
-        return "other"
     return "other"
 
 
@@ -603,4 +604,43 @@ class LatinLexiconAnnotator:
                 "ambiguous_token_examples": ambiguous_tokens[:25],
                 "fallback_examples": dict(list(fallback_used.items())[:25]),
             },
+        }
+
+    def build_llm_payload(self, text: str) -> dict[str, Any]:
+        """
+        Build the compact "lexicon priors" payload intended for LLM injection.
+
+        This intentionally excludes large debug fields like `lemmas` and `all_matches`.
+        """
+        res = self.annotate(text)
+        cov = res.get("coverage") or {}
+        hits = res.get("top_k") or []
+
+        payload_hits: list[dict[str, Any]] = []
+        for h in hits:
+            payload_hits.append(
+                {
+                    "lemma": h.get("lemma_key"),
+                    "pos": h.get("scraped_pos_bucket"),
+                    "score": h.get("polarity_score"),
+                    "label": h.get("has_polarity"),
+                    "count": h.get("count"),
+                    "source": "LatinAffectus",
+                    "pos_match": bool(h.get("pos_match")),
+                }
+            )
+
+        return {
+            "LEXICON_PRIORS": {
+                "coverage": {
+                    "tokens": cov.get("token_count", 0),
+                    "lemmatized_tokens": cov.get("lookup_hits", 0),
+                    "affectus_hit_tokens": cov.get("affectus_hit_tokens", 0),
+                    "affectus_hit_rate": cov.get("affectus_hit_rate", 0.0),
+                    "ambiguous_tokens": cov.get("ambiguous_tokens", 0),
+                },
+                "negators": res.get("negators") or {},
+                "shifters": res.get("shifters") or {},
+                "hits": payload_hits,
+            }
         }
