@@ -75,7 +75,28 @@ class RandomFormResponse(BaseModel):
     page_url: Optional[str] = None
     lemma_nod: Optional[str] = None
     lemma_diac: Optional[str] = None
+    lemma_code: Optional[str] = None
+    lemma_diathesis: Optional[str] = None
     pos: Optional[str] = None
+
+
+class RandomFormsQueryParams(BaseModel):
+    """Validated query parameters for the /forms/random endpoint."""
+
+    n: int = 50
+    pos: Optional[str] = None
+    mood: Optional[str] = None
+    tense: Optional[str] = None
+    voice: Optional[str] = None
+    person: Optional[str] = None
+    number: Optional[str] = None
+    gender: Optional[str] = None
+    case: Optional[str] = None
+    degree: Optional[str] = None
+    verb_form: Optional[str] = None
+    exclude_proper: bool = True
+    allow_nonfinite: bool = False
+    rarity_mode: str = "balanced"
 
 
 class BatchFormQuery(BaseModel):

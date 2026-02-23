@@ -81,6 +81,15 @@
     }
     .section-body{padding:1.25rem;}
 
+    .preset-groups{display:flex;flex-direction:column;gap:1rem;}
+    .preset-group{
+      border:1px solid var(--border);border-radius:8px;background:var(--bg);
+      padding:.85rem;
+    }
+    .preset-group-title{
+      font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:var(--text-dim);
+      margin-bottom:.65rem;font-weight:700;
+    }
     .preset-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:.75rem;}
     .preset-card{
       background:var(--bg);border:1px solid var(--border);border-radius:8px;
@@ -131,7 +140,17 @@
     .output-table tr:hover td{background:var(--accent-bg);}
     .output-table .sent{font-style:italic;color:var(--accent);font-weight:500;}
     .output-table .idx{color:var(--text-dim);font-size:.75rem;width:40px;}
-    .output-table .breakdown{font-size:.7rem;color:var(--text-dim);}
+    .output-table .slot-cell{font-size:.75rem;line-height:1.35;min-width:130px;}
+    .output-table .slot-form{font-weight:600;color:var(--text);}
+    .output-table .slot-lemma{color:var(--text-dim);font-size:.68rem;}
+    .output-table .slot-diath{color:var(--accent);font-size:.65rem;text-transform:uppercase;letter-spacing:.03em;}
+    .details-row td{background:var(--bg);padding:.4rem .75rem .7rem .75rem;}
+    .details-btn{
+      background:none;border:1px solid var(--border);color:var(--text-dim);
+      font-size:.68rem;border-radius:6px;padding:.15rem .45rem;cursor:pointer;
+    }
+    .details-btn:hover{color:var(--text);border-color:var(--accent);}
+    .details-text{font-size:.72rem;color:var(--text-dim);}
 
     @media(max-width:640px){
       .config-bar,.gen-bar{flex-direction:column;}
@@ -164,7 +183,7 @@
         <div class="section-title"><span class="num">1</span>Choose a Pattern</div>
       </div>
       <div class="section-body">
-        <div class="preset-grid" id="presetGrid"></div>
+        <div class="preset-groups" id="presetGrid"></div>
         <div class="slot-summary" id="slotSummary"></div>
       </div>
     </div>
@@ -244,9 +263,9 @@
         pattern:'Nom + V(trans) + Acc',
         example:'Poeta carmen scribit',
         slots:[
-          {role:'Subject', pos:'noun', filters:{case_:'nominative',number:'singular'}},
-          {role:'Verb',    pos:'verb', filters:{mood:'indicative',tense:'present',voice:'active',person:'third',number:'singular'}},
-          {role:'Object',  pos:'noun', filters:{case_:'accusative',number:'singular'}},
+          {role:'Subject', pos:'noun', filters:{case_:'nominative',number:'singular'}, quality:{excludeProper:true, allowNonfinite:false, rarityMode:'balanced'}},
+          {role:'Verb',    pos:'verb', filters:{mood:'indicative',tense:'present',voice:'active',person:'third',number:'singular'}, quality:{excludeProper:true, allowNonfinite:false, rarityMode:'common'}},
+          {role:'Object',  pos:'noun', filters:{case_:'accusative',number:'singular'}, quality:{excludeProper:true, allowNonfinite:false, rarityMode:'balanced'}},
         ]
       },
       {
@@ -254,8 +273,8 @@
         pattern:'Nom + V',
         example:'Miles pugnat',
         slots:[
-          {role:'Subject', pos:'noun', filters:{case_:'nominative',number:'singular'}},
-          {role:'Verb',    pos:'verb', filters:{mood:'indicative',tense:'present',voice:'active',person:'third',number:'singular'}},
+          {role:'Subject', pos:'noun', filters:{case_:'nominative',number:'singular'}, quality:{excludeProper:true, allowNonfinite:false, rarityMode:'balanced'}},
+          {role:'Verb',    pos:'verb', filters:{mood:'indicative',tense:'present',voice:'active',person:'third',number:'singular'}, quality:{excludeProper:true, allowNonfinite:false, rarityMode:'common'}},
         ]
       },
       {
@@ -263,30 +282,34 @@
         pattern:'Nom + V + Dat + Acc',
         example:'Magister discipulo sapientiam dat',
         slots:[
-          {role:'Subject',      pos:'noun', filters:{case_:'nominative',number:'singular'}},
-          {role:'Verb',         pos:'verb', filters:{mood:'indicative',tense:'present',voice:'active',person:'third',number:'singular'}},
-          {role:'Indirect Obj', pos:'noun', filters:{case_:'dative',number:'singular'}},
-          {role:'Direct Obj',   pos:'noun', filters:{case_:'accusative',number:'singular'}},
+          {role:'Subject',      pos:'noun', filters:{case_:'nominative',number:'singular'}, quality:{excludeProper:true, allowNonfinite:false, rarityMode:'balanced'}},
+          {role:'Verb',         pos:'verb', filters:{mood:'indicative',tense:'present',voice:'active',person:'third',number:'singular'}, quality:{excludeProper:true, allowNonfinite:false, rarityMode:'common'}},
+          {role:'Indirect Obj', pos:'noun', filters:{case_:'dative',number:'singular'}, quality:{excludeProper:true, allowNonfinite:false, rarityMode:'balanced'}},
+          {role:'Direct Obj',   pos:'noun', filters:{case_:'accusative',number:'singular'}, quality:{excludeProper:true, allowNonfinite:false, rarityMode:'balanced'}},
         ]
       },
       {
-        key:'svo-perf', name:'SVO (perfect tense)',
-        pattern:'Nom + V(perf) + Acc',
-        example:'Femina carmen laudavit',
+        key:'svio-two-acc', name:'Subject + Verb + Dat + Acc + et + Acc',
+        pattern:'Nom + Dat + Acc + et + Acc + V',
+        example:'Magister discipulo scientiam et sapientiam dat',
         slots:[
-          {role:'Subject', pos:'noun', filters:{case_:'nominative',number:'singular'}},
-          {role:'Verb',    pos:'verb', filters:{mood:'indicative',tense:'perfect',voice:'active',person:'third',number:'singular'}},
-          {role:'Object',  pos:'noun', filters:{case_:'accusative',number:'singular'}},
+          {role:'Subject',      pos:'noun', filters:{case_:'nominative',number:'singular'}, quality:{excludeProper:true, allowNonfinite:false, rarityMode:'balanced'}},
+          {role:'Indirect Obj', pos:'noun', filters:{case_:'dative',number:'singular'}, quality:{excludeProper:true, allowNonfinite:false, rarityMode:'balanced'}},
+          {role:'Object 1',     pos:'noun', filters:{case_:'accusative',number:'singular'}, quality:{excludeProper:true, allowNonfinite:false, rarityMode:'balanced'}},
+          {role:'Conjunction',  fixedForms:['et']},
+          {role:'Object 2',     pos:'noun', filters:{case_:'accusative',number:'singular'}, quality:{excludeProper:true, allowNonfinite:false, rarityMode:'balanced'}},
+          {role:'Verb',         pos:'verb', filters:{mood:'indicative',tense:'present',voice:'active',person:'third',number:'singular'}, quality:{excludeProper:true, allowNonfinite:false, rarityMode:'common'}},
         ]
       },
       {
-        key:'svo-pl', name:'SVO (plural subject)',
-        pattern:'Nom(pl) + V(pl) + Acc',
-        example:'Milites arma capiunt',
+        key:'svo-genitive', name:'Subject + Object + Genitive Modifier + Verb',
+        pattern:'Nom + Acc + Gen + V',
+        example:'Rex cives urbis videt',
         slots:[
-          {role:'Subject', pos:'noun', filters:{case_:'nominative',number:'plural'}},
-          {role:'Verb',    pos:'verb', filters:{mood:'indicative',tense:'present',voice:'active',person:'third',number:'plural'}},
-          {role:'Object',  pos:'noun', filters:{case_:'accusative',number:'singular'}},
+          {role:'Subject',  pos:'noun', filters:{case_:'nominative',number:'singular'}, quality:{excludeProper:true, allowNonfinite:false, rarityMode:'balanced'}},
+          {role:'Object',   pos:'noun', filters:{case_:'accusative',number:'plural'}, quality:{excludeProper:true, allowNonfinite:false, rarityMode:'balanced'}},
+          {role:'Genitive', pos:'noun', filters:{case_:'genitive',number:'singular'}, quality:{excludeProper:true, allowNonfinite:false, rarityMode:'balanced'}},
+          {role:'Verb',     pos:'verb', filters:{mood:'indicative',tense:'present',voice:'active',person:'third',number:'singular'}, quality:{excludeProper:true, allowNonfinite:false, rarityMode:'common'}},
         ]
       },
       {
@@ -294,18 +317,18 @@
         pattern:'Adj(nom) + Noun(nom)',
         example:'Magnus rex',
         slots:[
-          {role:'Adjective', pos:'adjective', filters:{case_:'nominative',number:'singular',gender:'masculine'}},
-          {role:'Noun',      pos:'noun', filters:{case_:'nominative',number:'singular'}},
+          {role:'Adjective', pos:'adjective', filters:{case_:'nominative',number:'singular',gender:'masculine',degree:'positive'}, quality:{excludeProper:true, allowNonfinite:false, rarityMode:'common'}},
+          {role:'Noun',      pos:'noun', filters:{case_:'nominative',number:'singular',gender:'masculine'}, quality:{excludeProper:true, allowNonfinite:false, rarityMode:'balanced'}},
         ]
       },
       {
-        key:'s-adj-v', name:'Subject + Adjective + Verb',
-        pattern:'Nom + Adj(nom) + V',
-        example:'Femina pulchra cantat',
+        key:'pred-adj', name:'Subject + est + Predicate Adjective',
+        pattern:'Nom + est + Nom Adj',
+        example:'Gladius est gravis',
         slots:[
-          {role:'Subject',   pos:'noun', filters:{case_:'nominative',number:'singular'}},
-          {role:'Adjective', pos:'adjective', filters:{case_:'nominative',number:'singular'}},
-          {role:'Verb',      pos:'verb', filters:{mood:'indicative',tense:'present',voice:'active',person:'third',number:'singular'}},
+          {role:'Subject',     pos:'noun', filters:{case_:'nominative',number:'singular'}, quality:{excludeProper:true, allowNonfinite:false, rarityMode:'balanced'}},
+          {role:'Linking Verb', fixedForms:['est']},
+          {role:'Predicate Adj', pos:'adjective', filters:{case_:'nominative',number:'singular',degree:'positive'}, quality:{excludeProper:true, allowNonfinite:false, rarityMode:'common'}},
         ]
       },
       {
@@ -313,39 +336,50 @@
         pattern:'Nom + Adv + V',
         example:'Miles fortiter pugnat',
         slots:[
-          {role:'Subject', pos:'noun', filters:{case_:'nominative',number:'singular'}},
-          {role:'Adverb',  pos:'adverb', filters:{}},
-          {role:'Verb',    pos:'verb', filters:{mood:'indicative',tense:'present',voice:'active',person:'third',number:'singular'}},
+          {role:'Subject', pos:'noun', filters:{case_:'nominative',number:'singular'}, quality:{excludeProper:true, allowNonfinite:false, rarityMode:'balanced'}},
+          {role:'Adverb',  pos:'adverb', filters:{degree:'positive'}, quality:{excludeProper:true, allowNonfinite:false, rarityMode:'common'}},
+          {role:'Verb',    pos:'verb', filters:{mood:'indicative',tense:'present',voice:'active',person:'third',number:'singular'}, quality:{excludeProper:true, allowNonfinite:false, rarityMode:'common'}},
         ]
       },
       {
-        key:'abl-means', name:'Subject + Verb + Ablative of Means',
-        pattern:'Nom + V + Abl',
+        key:'svo-adv', name:'Subject + Object + Adverb + Verb',
+        pattern:'Nom + Acc + Adv + V',
+        example:'Miles moenia semper servat',
+        slots:[
+          {role:'Subject', pos:'noun', filters:{case_:'nominative',number:'singular'}, quality:{excludeProper:true, allowNonfinite:false, rarityMode:'balanced'}},
+          {role:'Object',  pos:'noun', filters:{case_:'accusative',number:'plural'}, quality:{excludeProper:true, allowNonfinite:false, rarityMode:'balanced'}},
+          {role:'Adverb',  pos:'adverb', filters:{degree:'positive'}, quality:{excludeProper:true, allowNonfinite:false, rarityMode:'common'}},
+          {role:'Verb',    pos:'verb', filters:{mood:'indicative',tense:'present',voice:'active',person:'third',number:'singular'}, quality:{excludeProper:true, allowNonfinite:false, rarityMode:'common'}},
+        ]
+      },
+      {
+        key:'abl-means', name:'Subject + Ablative Means + Verb',
+        pattern:'Nom + Abl + V',
         example:'Miles gladio pugnat',
         slots:[
-          {role:'Subject',       pos:'noun', filters:{case_:'nominative',number:'singular'}},
-          {role:'Verb',          pos:'verb', filters:{mood:'indicative',tense:'present',voice:'active',person:'third',number:'singular'}},
-          {role:'Abl. of Means', pos:'noun', filters:{case_:'ablative',number:'singular'}},
+          {role:'Subject',       pos:'noun', filters:{case_:'nominative',number:'singular'}, quality:{excludeProper:true, allowNonfinite:false, rarityMode:'balanced'}},
+          {role:'Abl. of Means', pos:'noun', filters:{case_:'ablative',number:'singular'}, quality:{excludeProper:true, allowNonfinite:false, rarityMode:'balanced'}},
+          {role:'Verb',          pos:'verb', filters:{mood:'indicative',tense:'present',voice:'active',person:'third',number:'singular'}, quality:{excludeProper:true, allowNonfinite:false, rarityMode:'common'}},
         ]
       },
       {
-        key:'svo-passive', name:'SVO Passive',
-        pattern:'Nom + V(passive) + Abl',
-        example:'Carmen a poeta scribitur',
+        key:'svo-perf', name:'SVO (perfect tense)',
+        pattern:'Nom + V(perf) + Acc',
+        example:'Femina carmen laudavit',
         slots:[
-          {role:'Subject',     pos:'noun', filters:{case_:'nominative',number:'singular'}},
-          {role:'Verb',        pos:'verb', filters:{mood:'indicative',tense:'present',voice:'passive',person:'third',number:'singular'}},
-          {role:'Agent (abl)', pos:'noun', filters:{case_:'ablative',number:'singular'}},
+          {role:'Subject', pos:'noun', filters:{case_:'nominative',number:'singular'}, quality:{excludeProper:true, allowNonfinite:false, rarityMode:'balanced'}},
+          {role:'Verb',    pos:'verb', filters:{mood:'indicative',tense:'perfect',voice:'active',person:'third',number:'singular'}, quality:{excludeProper:true, allowNonfinite:false, rarityMode:'common'}},
+          {role:'Object',  pos:'noun', filters:{case_:'accusative',number:'singular'}, quality:{excludeProper:true, allowNonfinite:false, rarityMode:'balanced'}},
         ]
       },
       {
-        key:'svo-subj', name:'SVO Subjunctive',
+        key:'svo-subj', name:'SVO (present subjunctive)',
         pattern:'Nom + V(subj) + Acc',
         example:'Poeta carmen scribat',
         slots:[
-          {role:'Subject', pos:'noun', filters:{case_:'nominative',number:'singular'}},
-          {role:'Verb',    pos:'verb', filters:{mood:'subjunctive',tense:'present',voice:'active',person:'third',number:'singular'}},
-          {role:'Object',  pos:'noun', filters:{case_:'accusative',number:'singular'}},
+          {role:'Subject', pos:'noun', filters:{case_:'nominative',number:'singular'}, quality:{excludeProper:true, allowNonfinite:false, rarityMode:'balanced'}},
+          {role:'Verb',    pos:'verb', filters:{mood:'subjunctive',tense:'present',voice:'active',person:'third',number:'singular'}, quality:{excludeProper:true, allowNonfinite:false, rarityMode:'common'}},
+          {role:'Object',  pos:'noun', filters:{case_:'accusative',number:'singular'}, quality:{excludeProper:true, allowNonfinite:false, rarityMode:'balanced'}},
         ]
       },
       {
@@ -353,9 +387,9 @@
         pattern:'Nom + V(fut) + Acc',
         example:'Rex oppidum ducet',
         slots:[
-          {role:'Subject', pos:'noun', filters:{case_:'nominative',number:'singular'}},
-          {role:'Verb',    pos:'verb', filters:{mood:'indicative',tense:'future',voice:'active',person:'third',number:'singular'}},
-          {role:'Object',  pos:'noun', filters:{case_:'accusative',number:'singular'}},
+          {role:'Subject', pos:'noun', filters:{case_:'nominative',number:'singular'}, quality:{excludeProper:true, allowNonfinite:false, rarityMode:'balanced'}},
+          {role:'Verb',    pos:'verb', filters:{mood:'indicative',tense:'future',voice:'active',person:'third',number:'singular'}, quality:{excludeProper:true, allowNonfinite:false, rarityMode:'common'}},
+          {role:'Object',  pos:'noun', filters:{case_:'accusative',number:'singular'}, quality:{excludeProper:true, allowNonfinite:false, rarityMode:'balanced'}},
         ]
       },
       {
@@ -363,18 +397,18 @@
         pattern:'Nom + V(imperf) + Acc',
         example:'Nauta terram videbat',
         slots:[
-          {role:'Subject', pos:'noun', filters:{case_:'nominative',number:'singular'}},
-          {role:'Verb',    pos:'verb', filters:{mood:'indicative',tense:'imperfect',voice:'active',person:'third',number:'singular'}},
-          {role:'Object',  pos:'noun', filters:{case_:'accusative',number:'singular'}},
+          {role:'Subject', pos:'noun', filters:{case_:'nominative',number:'singular'}, quality:{excludeProper:true, allowNonfinite:false, rarityMode:'balanced'}},
+          {role:'Verb',    pos:'verb', filters:{mood:'indicative',tense:'imperfect',voice:'active',person:'third',number:'singular'}, quality:{excludeProper:true, allowNonfinite:false, rarityMode:'common'}},
+          {role:'Object',  pos:'noun', filters:{case_:'accusative',number:'singular'}, quality:{excludeProper:true, allowNonfinite:false, rarityMode:'balanced'}},
         ]
       },
       {
         key:'genitive', name:'Noun + Genitive Noun',
         pattern:'Nom + Gen',
-        example:'Virtus militis',
+        example:'Arbores silvae',
         slots:[
-          {role:'Noun',     pos:'noun', filters:{case_:'nominative',number:'singular'}},
-          {role:'Genitive', pos:'noun', filters:{case_:'genitive',number:'singular'}},
+          {role:'Noun',     pos:'noun', filters:{case_:'nominative',number:'plural'}, quality:{excludeProper:true, allowNonfinite:false, rarityMode:'balanced'}},
+          {role:'Genitive', pos:'noun', filters:{case_:'genitive',number:'singular'}, quality:{excludeProper:true, allowNonfinite:false, rarityMode:'balanced'}},
         ]
       },
     ];
@@ -382,24 +416,56 @@
     /* ===== State ===== */
     let selectedPreset = null;
     let generatedSentences = [];
+    const expandedRows = new Set();
+
+    const PRESET_GROUPS = {
+      core: ['sv', 'svo', 'svio', 'svio-two-acc', 'sv-adv', 'svo-adv'],
+      extended: ['abl-means', 'svo-genitive', 'adj-noun', 'pred-adj', 'genitive'],
+      advanced: ['svo-perf', 'svo-subj', 'svo-fut', 'svo-imp'],
+    };
+    const PRESET_GROUP_LABELS = {
+      core: 'Core Patterns',
+      extended: 'Extended Patterns',
+      advanced: 'Advanced Tense/Mode',
+    };
 
     /* ===== Render ===== */
     function renderPresets(){
       const grid = $('presetGrid');
-      grid.innerHTML = PRESETS.map(p=>`
-        <div class="preset-card ${selectedPreset===p.key?'selected':''}" onclick="selectPreset('${p.key}')">
-          <div class="pc-name">${esc(p.name)}</div>
-          <div class="pc-pattern">${esc(p.pattern)}</div>
-          <div class="pc-example">${esc(p.example)}</div>
-          <div class="pc-slots">${p.slots.map(s=>esc(s.role)+' ('+s.pos+')').join(' &middot; ')}</div>
-        </div>
-      `).join('');
+      const grouped = Object.entries(PRESET_GROUPS).map(([groupKey, keys]) => {
+        const presets = keys
+          .map((k) => PRESETS.find((p) => p.key === k))
+          .filter(Boolean);
+        if (!presets.length) return '';
+        const cards = presets.map((p) => `
+          <div class="preset-card ${selectedPreset===p.key?'selected':''}" onclick="selectPreset('${p.key}')">
+            <div class="pc-name">${esc(p.name)}</div>
+            <div class="pc-pattern">${esc(p.pattern)}</div>
+            <div class="pc-example">${esc(p.example)}</div>
+            <div class="pc-slots">${p.slots.map(s=>esc(s.role)+' ('+esc(s.pos || 'fixed')+')').join(' &middot; ')}</div>
+          </div>
+        `).join('');
+        return `
+          <div class="preset-group">
+            <div class="preset-group-title">${esc(PRESET_GROUP_LABELS[groupKey] || groupKey)}</div>
+            <div class="preset-grid">${cards}</div>
+          </div>
+        `;
+      }).join('');
+      grid.innerHTML = grouped;
     }
 
     function selectPreset(key){
       selectedPreset = key;
+      expandedRows.clear();
       renderPresets();
       renderSlotSummary();
+    }
+
+    function toggleDetails(idx){
+      if(expandedRows.has(idx)) expandedRows.delete(idx);
+      else expandedRows.add(idx);
+      renderOutput();
     }
 
     function renderSlotSummary(){
@@ -409,12 +475,13 @@
       if(!p){ el.innerHTML=''; return; }
       el.innerHTML = '<div style="font-size:.75rem;color:var(--text-dim);margin-bottom:.25rem;text-transform:uppercase;letter-spacing:.04em;">Slot breakdown</div>' +
         p.slots.map((s,i)=>{
-          const fDesc = Object.entries(s.filters).filter(([,v])=>v).map(([,v])=>v).join(', ');
+          const fDesc = Object.entries(s.filters || {}).filter(([,v])=>v).map(([,v])=>v).join(', ');
+          const qDesc = s.quality ? ` (${s.quality.rarityMode || 'balanced'})` : '';
           return `<div class="slot-row">
             <div class="sr-num">${i+1}</div>
             <div class="sr-role">${esc(s.role)}</div>
-            <div class="sr-filters">${esc(fDesc)||'no filters'}</div>
-            <div class="sr-pos">${esc(s.pos)}</div>
+            <div class="sr-filters">${esc(fDesc)||'no filters'}${esc(qDesc)}</div>
+            <div class="sr-pos">${esc(s.pos || 'fixed')}</div>
           </div>`;
         }).join('');
     }
@@ -440,12 +507,33 @@
 
         for(let si = 0; si < preset.slots.length; si++){
           const slot = preset.slots[si];
+          if (slot.fixedForms && slot.fixedForms.length) {
+            const fixedPool = slot.fixedForms.map((txt) => ({
+              form_nod: txt,
+              form_diac: txt,
+              lemma_nod: txt,
+              lemma_code: null,
+              lemma_diathesis: 'unknown',
+            }));
+            slotPools.push(fixedPool);
+            $('progressFill').style.width = ((si+1) / preset.slots.length * 80) + '%';
+            await new Promise(r=>setTimeout(r,0));
+            continue;
+          }
+
           log(`Fetching random ${slot.role} forms (${slot.pos})...`);
 
           let params = `n=${poolSize}&pos=${encodeURIComponent(slot.pos)}`;
-          for(const [fk, fv] of Object.entries(slot.filters)){
+          for(const [fk, fv] of Object.entries(slot.filters || {})){
             if(fv) params += `&${apiKey(fk)}=${encodeURIComponent(fv)}`;
           }
+          const quality = slot.quality || {};
+          const excludeProper = quality.excludeProper !== false;
+          const allowNonfinite = quality.allowNonfinite === true;
+          const rarityMode = quality.rarityMode || 'balanced';
+          params += `&exclude_proper=${excludeProper ? 'true' : 'false'}`;
+          params += `&allow_nonfinite=${allowNonfinite ? 'true' : 'false'}`;
+          params += `&rarity_mode=${encodeURIComponent(rarityMode)}`;
 
           const forms = await apiFetch(`/api/v1/forms/random?${params}`);
           slotPools.push(forms);
@@ -473,10 +561,24 @@
               const form = f.form_diac || f.form_nod;
               const lemma = f.lemma_nod || '';
               words.push(form);
-              breakdown.push({role: slot.role, lemma, form});
+              breakdown.push({
+                role: slot.role,
+                pos: slot.pos || 'fixed',
+                lemma,
+                form,
+                lemmaCode: f.lemma_code || '',
+                lemmaDiathesis: f.lemma_diathesis || 'unknown',
+              });
             } else {
               words.push('___');
-              breakdown.push({role: slot.role, lemma: '', form: null});
+              breakdown.push({
+                role: slot.role,
+                pos: slot.pos || 'fixed',
+                lemma: '',
+                form: null,
+                lemmaCode: '',
+                lemmaDiathesis: 'unknown',
+              });
             }
           }
 
@@ -512,13 +614,46 @@
       const body = $('outputBody');
       if(!total){ body.innerHTML='<p style="color:var(--text-dim);font-style:italic;padding:1rem;">Nothing generated.</p>'; return; }
 
-      let html = '<table class="output-table"><thead><tr><th>#</th><th>Sentence</th><th>Breakdown</th></tr></thead><tbody>';
+      const preset = PRESETS.find(x=>x.key===selectedPreset);
+      const roleColumns = (preset?.slots || []).map((s, idx) => ({ idx, role: s.role }));
+
+      let html = '<table class="output-table"><thead><tr><th>#</th><th>Sentence</th>';
+      html += roleColumns.map(c => `<th>${esc(c.role)}</th>`).join('');
+      html += '<th>Details</th></tr></thead><tbody>';
       for(let i = 0; i < total; i++){
         const s = generatedSentences[i];
-        const bd = s.breakdown.map(b =>
-          `<span style="color:var(--text-dim)">${esc(b.role)}:</span> ${b.form ? esc(b.form) : '<span style="color:var(--red)">'+esc(b.lemma)+'?</span>'}`
-        ).join(' &middot; ');
-        html += `<tr><td class="idx">${i+1}</td><td class="sent">${esc(s.sentence)}</td><td class="breakdown">${bd}</td></tr>`;
+        const cells = roleColumns.map((c) => {
+          const b = s.breakdown[c.idx] || {};
+          const formTxt = b.form ? esc(b.form) : '<span style="color:var(--red)">___</span>';
+          const lemmaTxt = b.lemma ? esc(b.lemma) : 'n/a';
+          const diathTxt = b.lemmaDiathesis && b.lemmaDiathesis !== 'unknown'
+            ? `<div class="slot-diath">${esc(b.lemmaDiathesis)}</div>`
+            : '';
+          return `
+            <td class="slot-cell">
+              <div class="slot-form">${formTxt}</div>
+              <div class="slot-lemma">${lemmaTxt}</div>
+              ${diathTxt}
+            </td>
+          `;
+        }).join('');
+        const isOpen = expandedRows.has(i);
+        html += `<tr>
+          <td class="idx">${i+1}</td>
+          <td class="sent">${esc(s.sentence)}</td>
+          ${cells}
+          <td><button class="details-btn" onclick="toggleDetails(${i})">${isOpen ? 'Hide' : 'Show'}</button></td>
+        </tr>`;
+        if (isOpen) {
+          const detailLine = s.breakdown.map((b) => {
+            const lemmaMeta = [b.lemma || 'n/a', b.lemmaCode || '', b.lemmaDiathesis || 'unknown']
+              .filter(Boolean)
+              .join(' | ');
+            const formMeta = b.form || '___';
+            return `<span><b>${esc(b.role)}:</b> ${esc(formMeta)} &larr; ${esc(lemmaMeta)}</span>`;
+          }).join(' &nbsp; • &nbsp; ');
+          html += `<tr class="details-row"><td colspan="${3 + roleColumns.length}" class="details-text">${detailLine}</td></tr>`;
+        }
       }
       html += '</tbody></table>';
       body.innerHTML = html;
@@ -530,9 +665,9 @@
       if(!generatedSentences.length) return;
       const preset = PRESETS.find(x=>x.key===selectedPreset);
       const roles = preset ? preset.slots.map(s=>s.role) : [];
-      let csv = 'index,sentence,' + roles.map(r=>'"'+r+' (lemma)","'+r+' (form)"').join(',') + '\n';
+      let csv = 'index,sentence,' + roles.map(r=>'"'+r+' (lemma)","'+r+' (form)","'+r+' (lemma_code)","'+r+' (diathesis)"').join(',') + '\n';
       generatedSentences.forEach((s,i)=>{
-        const parts = s.breakdown.map(b=>`"${(b.lemma||'').replace(/"/g,'""')}","${(b.form||'').replace(/"/g,'""')}"`).join(',');
+        const parts = s.breakdown.map(b=>`"${(b.lemma||'').replace(/"/g,'""')}","${(b.form||'').replace(/"/g,'""')}","${(b.lemmaCode||'').replace(/"/g,'""')}","${(b.lemmaDiathesis||'').replace(/"/g,'""')}"`).join(',');
         csv += `${i+1},"${s.sentence.replace(/"/g,'""')}",${parts}\n`;
       });
       download('sentences.csv', csv, 'text/csv');
@@ -542,7 +677,14 @@
       if(!generatedSentences.length) return;
       const data = generatedSentences.map((s,i)=>({
         index:i+1, sentence:s.sentence, resolved:s.ok,
-        words:s.breakdown.map(b=>({role:b.role, lemma:b.lemma, form:b.form}))
+        words:s.breakdown.map(b=>({
+          role:b.role,
+          pos:b.pos,
+          lemma:b.lemma,
+          form:b.form,
+          lemma_code:b.lemmaCode || null,
+          lemma_diathesis:b.lemmaDiathesis || 'unknown',
+        }))
       }));
       download('sentences.json', JSON.stringify(data,null,2), 'application/json');
     }

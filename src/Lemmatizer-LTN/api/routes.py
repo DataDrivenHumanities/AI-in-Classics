@@ -10,7 +10,7 @@ Endpoints:
     POST /api/v1/forms/batch       — resolve many form queries at once
 """
 
-from typing import List, Optional
+from typing import List, Optional, Literal
 
 from fastapi import APIRouter, Depends, HTTPException, Query
 
@@ -131,6 +131,9 @@ async def get_random_forms(
     case: Optional[str] = Query(None),
     degree: Optional[str] = Query(None),
     verb_form: Optional[str] = Query(None),
+    exclude_proper: bool = Query(True, description="Exclude likely proper-name lemmas"),
+    allow_nonfinite: bool = Query(False, description="Allow participles/infinitives/gerunds/etc."),
+    rarity_mode: Literal["common", "balanced", "all"] = Query("balanced"),
     _token: str = Depends(verify_token),
 ):
     """
@@ -140,11 +143,25 @@ async def get_random_forms(
     No lemma or form input needed — useful for generating random
     sentences or sampling training data.
     """
-    return db_random_forms(
-        n=n, pos=pos, mood=mood, tense=tense, voice=voice,
-        person=person, number=number, gender=gender,
-        case=case, degree=degree, verb_form=verb_form,
-    )
+    try:
+        return db_random_forms(
+            n=n,
+            pos=pos,
+            mood=mood,
+            tense=tense,
+            voice=voice,
+            person=person,
+            number=number,
+            gender=gender,
+            case=case,
+            degree=degree,
+            verb_form=verb_form,
+            exclude_proper=exclude_proper,
+            allow_nonfinite=allow_nonfinite,
+            rarity_mode=rarity_mode,
+        )
+    except ValueError as exc:
+        raise HTTPException(status_code=422, detail=str(exc)) from exc
 
 
 # ------------------------------------------------------------------

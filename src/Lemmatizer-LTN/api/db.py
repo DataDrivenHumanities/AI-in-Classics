@@ -226,18 +226,42 @@ def random_forms(
     case: Optional[str] = None,
     degree: Optional[str] = None,
     verb_form: Optional[str] = None,
+    exclude_proper: bool = True,
+    allow_nonfinite: bool = False,
+    rarity_mode: str = "balanced",
 ) -> List[Dict[str, Any]]:
     """
     Return *n* random forms matching the given morphological filters.
     No lemma or form input is needed — it pulls from the whole DB.
     Optionally filter the parent lemma by *pos* substring.
     """
-    query = "SELECT f.*, l.lemma_nod, l.lemma_diac, l.pos FROM forms f JOIN lemmas l ON l.id = f.lemma_id WHERE 1=1"
+    query = """
+        SELECT
+            f.*,
+            l.lemma_nod,
+            l.lemma_diac,
+            l.lemma_code,
+            l.pos,
+            CASE
+                WHEN upper(COALESCE(l.lemma_code, '')) ~ 'OR[0-9]+$' THEN 'passive'
+                WHEN upper(COALESCE(l.lemma_code, '')) ~ 'O[0-9]+$' THEN 'active'
+                WHEN COALESCE(l.pos, '') ILIKE '%passive%' THEN 'passive'
+                WHEN COALESCE(l.pos, '') ILIKE '%active%' THEN 'active'
+                ELSE 'unknown'
+            END AS lemma_diathesis
+        FROM forms f
+        JOIN lemmas l ON l.id = f.lemma_id
+        WHERE 1=1
+    """
     params: list[Any] = []
 
     if pos:
         query += " AND l.pos ILIKE '%%' || %s || '%%'"
         params.append(pos)
+
+    if exclude_proper:
+        query += " AND COALESCE(l.pos, '') !~* %s"
+        params.append(r"(proper|name)")
 
     filter_values = {
         "mood": mood, "tense": tense, "voice": voice,
@@ -249,6 +273,32 @@ def random_forms(
             col_ref = f'f."{col}"' if col == "case" else f"f.{col}"
             query += f" AND {col_ref} = %s"
             params.append(val)
+
+    # Prefer finite verb forms unless explicitly allowed.
+    if not allow_nonfinite:
+        query += " AND (f.verb_form IS NULL OR f.verb_form = '')"
+
+    # Heuristic quality/rarity controls:
+    # - common: stricter lexical cleanup
+    # - balanced: mostly clean while keeping variety
+    # - all: no lexical cleanup beyond explicit filters
+    if rarity_mode == "common":
+        query += " AND l.lemma_nod ~ %s"
+        params.append(r"^[a-z]{2,12}$")
+        query += " AND COALESCE(l.pos, '') !~* %s"
+        params.append(r"(abbrev|symbol|interj|particle|indeclin)")
+    elif rarity_mode == "balanced":
+        query += " AND l.lemma_nod ~ %s"
+        params.append(r"^[a-z][a-z-]{1,17}$")
+        query += " AND COALESCE(l.pos, '') !~* %s"
+        params.append(r"(abbrev|symbol)")
+    elif rarity_mode != "all":
+        raise ValueError("rarity_mode must be one of: common, balanced, all")
+
+    # If caller asks for active voice, avoid passive-looking finite endings.
+    if voice == "active":
+        query += " AND f.form_nod !~ %s"
+        params.append(r"(tur|ntur|mur|mini|ris|r)$")
 
     query += " ORDER BY random() LIMIT %s"
     params.append(n)
