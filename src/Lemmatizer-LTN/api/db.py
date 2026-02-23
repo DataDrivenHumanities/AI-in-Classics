@@ -245,8 +245,8 @@ def random_forms(
             CASE
                 WHEN upper(COALESCE(l.lemma_code, '')) ~ 'OR[0-9]+$' THEN 'passive'
                 WHEN upper(COALESCE(l.lemma_code, '')) ~ 'O[0-9]+$' THEN 'active'
-                WHEN COALESCE(l.pos, '') ILIKE '%passive%' THEN 'passive'
-                WHEN COALESCE(l.pos, '') ILIKE '%active%' THEN 'active'
+                WHEN COALESCE(l.pos, '') ILIKE '%%passive%%' THEN 'passive'
+                WHEN COALESCE(l.pos, '') ILIKE '%%active%%' THEN 'active'
                 ELSE 'unknown'
             END AS lemma_diathesis
         FROM forms f
