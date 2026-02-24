@@ -20,11 +20,15 @@ def main() -> None:
     ap.add_argument("--file", default="", help="Path to a Latin text file.")
     ap.add_argument("--fixtures", default="", help="JSON file of passages (list of objects with 'text').")
     ap.add_argument("--top-k", type=int, default=20, help="Top-K sentiment hits to include.")
-    ap.add_argument("--link-lila-ids", action="store_true", help="Also link lemma keys to lila.lemmario_clean id_lemma candidates.")
     ap.add_argument(
         "--payload-only",
         action="store_true",
         help="Print only the compact LLM-injection payload (LEXICON_PRIORS).",
+    )
+    ap.add_argument(
+        "--compact",
+        action="store_true",
+        help="Print compact JSON (no indentation/extra whitespace). Recommended with --payload-only.",
     )
     args = ap.parse_args()
 
@@ -35,7 +39,7 @@ def main() -> None:
 
     from rag.latin_lexicon_annotator import LatinLexiconAnnotator, LatinLexiconAnnotatorConfig  # type: ignore
 
-    cfg = LatinLexiconAnnotatorConfig(top_k=args.top_k, link_lila_ids=bool(args.link_lila_ids))
+    cfg = LatinLexiconAnnotatorConfig(top_k=args.top_k)
     with LatinLexiconAnnotator(dsn=(args.dsn or None), config=cfg) as ann:
         if args.fixtures:
             payload = json.loads(_read_text(args.fixtures))
@@ -50,7 +54,10 @@ def main() -> None:
                 else:
                     res = ann.annotate(str(item["text"]))
                 print(f"\n=== {pid} ===")
-                print(json.dumps(res, ensure_ascii=False, indent=2))
+                if args.compact:
+                    print(json.dumps(res, ensure_ascii=False, separators=(",", ":")))
+                else:
+                    print(json.dumps(res, ensure_ascii=False, indent=2))
             return
 
         if args.file:
@@ -61,7 +68,10 @@ def main() -> None:
             res = ann.build_llm_payload(text)
         else:
             res = ann.annotate(text)
-        print(json.dumps(res, ensure_ascii=False, indent=2))
+        if args.compact:
+            print(json.dumps(res, ensure_ascii=False, separators=(",", ":")))
+        else:
+            print(json.dumps(res, ensure_ascii=False, indent=2))
 
 
 if __name__ == "__main__":

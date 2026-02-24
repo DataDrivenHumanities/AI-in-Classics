@@ -6,7 +6,7 @@ import unicodedata
 from collections import Counter, defaultdict
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import Any, Dict, Iterable, List, Optional, Tuple
+from typing import Any, Iterable, Optional, Tuple
 
 import psycopg
 from psycopg.rows import dict_row
@@ -121,7 +121,6 @@ class LatinLexiconAnnotatorConfig:
     stopwords: set[str] = field(default_factory=lambda: set(DEFAULT_STOPWORDS))
     negators: set[str] = field(default_factory=lambda: set(DEFAULT_NEGATORS))
     shifters: set[str] = field(default_factory=lambda: set(DEFAULT_SHIFTERS))
-    link_lila_ids: bool = False
     enable_orthography_fallbacks: bool = True
     enable_enclitic_fallbacks: bool = True
     enclitics: tuple[str, ...] = ("que", "ve", "ne")
@@ -134,7 +133,6 @@ class LatinLexiconAnnotator:
     Uses:
       - scraped lookup DB in `public.*` to map tokens -> lemma_key (`public.lemmas.lemma_nod`)
       - `lila.sentiment` (LatinAffectus) to attach polarity priors
-      - optional best-effort linking to `lila.lemmario_clean` to surface `id_lemma` candidates
     """
 
     def __init__(
@@ -164,7 +162,6 @@ class LatinLexiconAnnotator:
         self._conn = psycopg.connect(self.dsn, row_factory=dict_row)
 
         # Small optional caches (safe for dev/eval runs).
-        self._token_to_lemma_cache: dict[str, Optional[dict[str, Any]]] = {}
         self._lemma_to_sentiment_cache: dict[str, list[dict[str, Any]]] = {}
 
     def close(self) -> None:
@@ -394,46 +391,6 @@ class LatinLexiconAnnotator:
             out[k] = list(self._lemma_to_sentiment_cache.get(k, []))
         return out
 
-    def _fetch_lila_id_candidates(self, lemma_keys: list[str]) -> dict[str, list[dict[str, Any]]]:
-        """
-        Best-effort linking from lemma_key -> LiLa lemma IDs. Optional.
-        """
-        out: dict[str, list[dict[str, Any]]] = {k: [] for k in lemma_keys}
-        if not lemma_keys:
-            return out
-        with self._conn.cursor() as cur:
-            cur.execute(
-                """
-                SELECT
-                  id_lemma,
-                  norm(lemma_reduced) AS lemma_key,
-                  lemma,
-                  lemma_reduced,
-                  upostag,
-                  upostag_2
-                FROM lila.lemmario_clean
-                WHERE norm(lemma_reduced) = ANY(%s)
-                   OR norm(lemma) = ANY(%s)
-                """,
-                (lemma_keys, lemma_keys),
-            )
-            rows = cur.fetchall()
-        for r in rows:
-            lk = str(r["lemma_key"])
-            out[lk].append(
-                {
-                    "id_lemma": int(r["id_lemma"]),
-                    "upostag": r["upostag"],
-                    "upostag_2": r["upostag_2"],
-                    "lemma": r["lemma"],
-                    "lemma_reduced": r["lemma_reduced"],
-                }
-            )
-        # deterministic order
-        for k in list(out):
-            out[k] = sorted(out[k], key=lambda x: x["id_lemma"])
-        return out
-
     def annotate(self, text: str) -> dict[str, Any]:
         tokens_raw = self.tokenize(text)
         tokens = self._filter_tokens(tokens_raw)
@@ -447,7 +404,6 @@ class LatinLexiconAnnotator:
         direct = self._lookup_direct_lemmas(all_lookup_keys)
         form_candidates = self._lookup_forms_candidates(all_lookup_keys)
 
-        token_lemma_candidates: dict[str, list[int]] = {}
         token_chosen_lemma_id: dict[str, int] = {}
         ambiguous_tokens: list[str] = []
         fallback_used: dict[str, str] = {}
@@ -467,7 +423,6 @@ class LatinLexiconAnnotator:
                     break
 
             cand_list = sorted(cands)
-            token_lemma_candidates[t] = cand_list
             if not cand_list:
                 continue
             if len(cand_list) > 1:
@@ -551,7 +506,6 @@ class LatinLexiconAnnotator:
                     "provenance": chosen.get("provenance"),
                     "pos_match": pos_match,
                     "importance": importance,
-                    "all_matches": rows,
                 }
             )
 
@@ -561,10 +515,6 @@ class LatinLexiconAnnotator:
         negators = {n: int(token_counts.get(n, 0)) for n in sorted(self.config.negators) if token_counts.get(n, 0)}
         shifters = {s: int(token_counts.get(s, 0)) for s in sorted(self.config.shifters) if token_counts.get(s, 0)}
 
-        lila_ids: dict[str, list[dict[str, Any]]] = {}
-        if self.config.link_lila_ids and lemma_keys:
-            lila_ids = self._fetch_lila_id_candidates(lemma_keys)
-
         total_tokens = sum(token_counts.values())
         affectus_hit_rate = (affectus_hit_tokens / lookup_hits) if lookup_hits else 0.0
         fallback_rate = (fallback_joins / len(sentiment_hits)) if sentiment_hits else 0.0
@@ -573,7 +523,6 @@ class LatinLexiconAnnotator:
             "coverage": {
                 "raw_token_count": int(len(tokens_raw)),
                 "token_count": total_tokens,
-                "filtered_token_count": total_tokens,
                 "unique_tokens": len(unique_tokens),
                 "lookup_hits": lookup_hits,
                 "lookup_misses": lookup_misses,
@@ -588,17 +537,6 @@ class LatinLexiconAnnotator:
             },
             "negators": negators,
             "shifters": shifters,
-            "lemmas": [
-                {
-                    "lemma_key": lk,
-                    "count": int(lemma_counts[lk]),
-                    "scraped_pos": lemma_pos_raw.get(lk),
-                    "scraped_pos_bucket": lemma_pos_bucket.get(lk, "other"),
-                    "lila_id_candidates": lila_ids.get(lk, []) if lila_ids else [],
-                }
-                for lk in lemma_keys
-            ],
-            "sentiment_hits": sentiment_hits,
             "top_k": top_k,
             "debug": {
                 "ambiguous_token_examples": ambiguous_tokens[:25],
@@ -610,7 +548,7 @@ class LatinLexiconAnnotator:
         """
         Build the compact "lexicon priors" payload intended for LLM injection.
 
-        This intentionally excludes large debug fields like `lemmas` and `all_matches`.
+        This intentionally excludes large debug fields.
         """
         res = self.annotate(text)
         cov = res.get("coverage") or {}
@@ -618,26 +556,40 @@ class LatinLexiconAnnotator:
 
         payload_hits: list[dict[str, Any]] = []
         for h in hits:
+            score = h.get("polarity_score")
+            # Sentiment priors only: skip neutral/empty rows to keep the payload small and focused.
+            if score is None:
+                continue
+            try:
+                sc = float(score)
+                if sc == 0.0:
+                    continue
+            except Exception:
+                continue
+
             payload_hits.append(
                 {
                     "lemma": h.get("lemma_key"),
                     "pos": h.get("scraped_pos_bucket"),
-                    "score": h.get("polarity_score"),
-                    "label": h.get("has_polarity"),
-                    "count": h.get("count"),
-                    "source": "LatinAffectus",
-                    "pos_match": bool(h.get("pos_match")),
+                    "score": sc,
+                    "count": int(h.get("count") or 0),
                 }
             )
+
+        affectus_hit_rate = cov.get("affectus_hit_rate", 0.0)
+        try:
+            affectus_hit_rate = round(float(affectus_hit_rate), 3)
+        except Exception:
+            affectus_hit_rate = 0.0
 
         return {
             "LEXICON_PRIORS": {
                 "coverage": {
-                    "tokens": cov.get("token_count", 0),
-                    "lemmatized_tokens": cov.get("lookup_hits", 0),
-                    "affectus_hit_tokens": cov.get("affectus_hit_tokens", 0),
-                    "affectus_hit_rate": cov.get("affectus_hit_rate", 0.0),
-                    "ambiguous_tokens": cov.get("ambiguous_tokens", 0),
+                    "tokens": int(cov.get("token_count", 0) or 0),
+                    "lemmatized_tokens": int(cov.get("lookup_hits", 0) or 0),
+                    "affectus_hit_tokens": int(cov.get("affectus_hit_tokens", 0) or 0),
+                    "affectus_hit_rate": affectus_hit_rate,
+                    "ambiguous_tokens": int(cov.get("ambiguous_tokens", 0) or 0),
                 },
                 "negators": res.get("negators") or {},
                 "shifters": res.get("shifters") or {},

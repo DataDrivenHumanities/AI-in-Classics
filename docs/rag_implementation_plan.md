@@ -207,19 +207,15 @@ LEXICON_PRIORS:
   coverage:
     tokens: <n>
     lemmatized_tokens: <n>
-    affectus_hits: <n>
+    affectus_hit_tokens: <n>
     affectus_hit_rate: <0..1>
     ambiguous_tokens: <n>
   negators: { non: 3, nec: 1, sine: 1 }
   shifters: { valde: 1, vix: 1 }
   hits: [
-    { lemma: "ferox", pos: "adj", score: 0.5, label: "positive", count: 2, source: "LatinAffectus", pos_match: true },
+    { lemma: "ferox", pos: "adj", score: 0.5, count: 2 },
     ...
   ]
-RULES:
-  - "Use hit scores as priors; do not invent lemma polarity not supported by hits."
-  - "Apply negation/shifters: negation flips/dampens; intensifiers amplify."
-  - "If hit_rate is low, explicitly report uncertainty."
 ```
 
 This is usually a few hundred tokens even at K≈20.
@@ -351,10 +347,8 @@ Link `public.lemmas.lemma_nod` to `norm(lila.lemmario_clean.lemma_reduced)` (fal
 
 `LatinLexiconAnnotator.annotate(text)` should return a dict with:
 
-- `coverage`: token_count, lookup_hits, lookup_misses, affectus_hits, affectus_hit_rate, fallback_rate, ambiguous_lemma_ids
+- `coverage`: token_count, lookup_hits, lookup_misses, affectus_hit_tokens, affectus_hit_rate, fallback_rate, ambiguous_tokens
 - `negators` / `shifters`: counts by token
-- `lemmas`: per-lemma aggregates (lemma_key, count, scraped_pos_bucket)
-- `sentiment_hits`: per-lemma sentiment (score/label, pos_match flag, provenance, count, importance)
 - `top_k`: top-K list for inspection (ranked by `abs(score) * count`)
 
 This gives us a deterministic “ground truth features” layer we can validate before adding any prompt injection.
@@ -402,7 +396,15 @@ This gives us a deterministic “ground truth features” layer we can validate 
 - [ ] Build a simple CLI/dev script to run on Latin passages and print:
   - token coverage (hit/miss)
   - top-K sentiment-bearing lemmas with counts/scores
-  - ambiguous joins (multiple sentiment rows or multiple `id_lemma` candidates)
+  - ambiguous joins (multiple sentiment rows; optional `id_lemma` linking can be added later)
+
+Quick run (prints only the LLM injection payload):
+
+```bash
+./.venv/bin/python3 scripts/latin_lexicon_annotator_debug.py \
+  --file src/sample_text/latin/rag_test_sample_1.txt \
+  --payload-only --compact --top-k 10
+```
 
 **Relevant files to touch/create (Phase 2):**
 
