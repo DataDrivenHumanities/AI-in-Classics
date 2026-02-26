@@ -41,6 +41,9 @@ jobs:
         Write-Host "MODE: PRODUCTION RUN (Full Perseus Greek Library)"
         .\.venv\Scripts\python.exe src/Lemmatizer-GRK/tools/scrape_tables.py --start 1 --end 6828 --lemma-concurrency 10 --delay 0.2
       }
+
+       Write-Host "Running Validation..."
+      .\.venv\Scripts\python.exe src/Lemmatizer-GRK/tools/validate_scrape.py
     displayName: 'Run Greek Scraper'
     env:
       PYTHONIOENCODING: utf-8

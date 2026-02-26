@@ -88,6 +88,7 @@ def parse_flexion_tables(html_text, page_url):
         raw_form = tds[0].get_text(" ", strip=True)
         if raw_form.lower() == "form": continue
         form_val = clean_perseus_cell(raw_form)
+        if not form_val: continue
         parse_string = tds[1].get_text(strip=True)
         pos = ""
         person = ""
@@ -103,13 +104,14 @@ def parse_flexion_tables(html_text, page_url):
             subparts = part.split('.')
             for tag in subparts:
                 tag = tag.upper()
+                # Replace your current tag conditions with these expanded ones:
                 if tag in ['NOM', 'GEN', 'DAT', 'ACC', 'VOC']: case = tag
                 elif tag in ['SG', 'PL', 'DU']: number = tag
                 elif tag in ['MASC', 'FEM', 'NEUT']: gender = tag
                 elif tag in ['1ST', '2ND', '3RD']: person = tag
-                elif tag in ['PRES', 'IMPF', 'FUT', 'AOR', 'PERF', 'PLUP']: tense = tag
-                elif tag in ['IND', 'SUBJ', 'OPT', 'IMPERAT', 'INF', 'PTCP']: mood = tag
-                elif tag in ['ACT', 'MID', 'PASS', 'MP']: voice = tag
+                elif tag in ['PRES', 'IMPF', 'FUT', 'AOR', 'AOR2', 'PERF', 'PLUP', 'FUTPERF']: tense = tag
+                elif tag in ['IND', 'SUBJ', 'OPT', 'IMPERAT', 'IMP', 'INF', 'PTCP', 'PART']: mood = tag
+                elif tag in ['ACT', 'MID', 'PASS', 'MP', 'MID-PASS']: voice = tag
         rows.append({
             "lemma_text": lemma_text,
             "form": form_val,
@@ -164,7 +166,9 @@ async def fetch_and_write_lemma(session, url, outdir, sem, delay):
         safe_name = slugify_lemma(lemma_text)
         if not safe_name: safe_name = "unknown_lemma"
         # save to csv
-        path = outdir / f"{safe_name}.csv"
+        lemma_id = url.strip("/").split("/")[-1]
+        file_name = f"{lemma_id}_{safe_name}.csv"
+        path = outdir / file_name
         headers = [
             "lemma_text", "form", "pos", "case", "number", "gender",
             "person", "tense", "mood", "voice", "page_url", "raw_parse"
@@ -218,6 +222,9 @@ async def main():
         for res in results:
             all_lemmas_urls.update(res)
         print(f"Found {len(all_lemmas_urls)} unique lemmas.")
+        meta_path = outdir / "_meta_expected_count.txt"
+        with open(meta_path, "w", encoding="utf-8") as f:
+            f.write(str(len(all_lemmas_urls)))
         print("Scraping Details...")
         # New semaphore for grabbing lemma
         lemma_sem = asyncio.Semaphore(args.lemma_concurrency)
