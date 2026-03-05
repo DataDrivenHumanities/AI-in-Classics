@@ -65,7 +65,11 @@ jobs:
       $folderId = "1vysIYLsUlikIM_IDj3N5YtG0dZgYF9d_" 
       $outDir = "$(Build.SourcesDirectory)\src\Lemmatizer-GRK\out"
       
-      .\.venv\Scripts\python.exe src/Lemmatizer-GRK/tools/upload_to_drive.py --service-account-json "$jsonPath" --folder-id "$folderId" --files "$outDir" --max-workers 5
+      # Force PowerShell and Python to use UTF-8 natively and unbuffer logs
+      [console]::InputEncoding = [console]::OutputEncoding = New-Object System.Text.UTF8Encoding
+      $env:PYTHONUTF8="1"
+      $env:PYTHONUNBUFFERED="1"
+      
+      # 2>&1 merges stderr into stdout so PowerShell doesn't hide errors
+      .\.venv\Scripts\python.exe src/Lemmatizer-GRK/tools/upload_to_drive.py --service-account-json "$jsonPath" --folder-id "$folderId" --files "$outDir" --max-workers 5 2>&1
     displayName: 'Deliver Data to Google Drive'
-    env:
-      PYTHONIOENCODING: utf-8
