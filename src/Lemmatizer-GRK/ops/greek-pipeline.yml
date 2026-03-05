@@ -10,7 +10,7 @@ jobs:
   displayName: "Scrape Greek Library Job"
   timeoutInMinutes: 0
   pool:
-    name: LaptopPool
+    name: Default
   steps:
   # Setup Python
   - task: UsePythonVersion@0
