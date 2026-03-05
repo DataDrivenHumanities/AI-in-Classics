@@ -10,7 +10,7 @@ jobs:
   displayName: "Scrape Greek Library Job"
   timeoutInMinutes: 0
   pool:
-    name: Default
+    name: LaptopPool
   steps:
   # Setup Python
   - task: UsePythonVersion@0
@@ -47,6 +47,8 @@ jobs:
     displayName: 'Run Greek Scraper'
     env:
       PYTHONIOENCODING: utf-8
+
+  # 1. Securely download the Google JSON key to the agent
   - task: DownloadSecureFile@1
     name: googleAuth
     displayName: 'Download Google Service Account JSON'
@@ -60,8 +62,10 @@ jobs:
 
       Write-Host "Uploading scraped CSVs to Google Drive..."
       $jsonPath = "$(googleAuth.secureFilePath)"
-      $folderId = "1vysIYLsUlikIM_IDj3N5YtG0dZgYF9d_" # <-- UPDATE THIS
+      $folderId = "1vysIYLsUlikIM_IDj3N5YtG0dZgYF9d_" 
       $outDir = "$(Build.SourcesDirectory)\src\Lemmatizer-GRK\out"
       
       .\.venv\Scripts\python.exe src/Lemmatizer-GRK/tools/upload_to_drive.py --service-account-json "$jsonPath" --folder-id "$folderId" --files "$outDir" --max-workers 5
     displayName: 'Deliver Data to Google Drive'
+    env:
+      PYTHONIOENCODING: utf-8
