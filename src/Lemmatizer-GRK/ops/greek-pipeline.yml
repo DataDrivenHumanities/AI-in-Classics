@@ -42,8 +42,26 @@ jobs:
         .\.venv\Scripts\python.exe src/Lemmatizer-GRK/tools/scrape_tables.py --start 1 --end 6828 --lemma-concurrency 10 --delay 0.2
       }
 
-       Write-Host "Running Validation..."
+      Write-Host "Running Validation..."
       .\.venv\Scripts\python.exe src/Lemmatizer-GRK/tools/validate_scrape.py
     displayName: 'Run Greek Scraper'
     env:
       PYTHONIOENCODING: utf-8
+  - task: DownloadSecureFile@1
+    name: googleAuth
+    displayName: 'Download Google Service Account JSON'
+    inputs:
+      secureFile: 'greek-lemmatizer-ce51f349a136.json'
+
+  # 2. Run the Drive Uploader
+  - powershell: |
+      Write-Host "Installing Google Drive dependencies..."
+      .\.venv\Scripts\python.exe -m pip install google-api-python-client google-auth
+
+      Write-Host "Uploading scraped CSVs to Google Drive..."
+      $jsonPath = "$(googleAuth.secureFilePath)"
+      $folderId = "1vysIYLsUlikIM_IDj3N5YtG0dZgYF9d_" # <-- UPDATE THIS
+      $outDir = "$(Build.SourcesDirectory)\src\Lemmatizer-GRK\out"
+      
+      .\.venv\Scripts\python.exe src/Lemmatizer-GRK/tools/upload_to_drive.py --service-account-json "$jsonPath" --folder-id "$folderId" --files "$outDir" --max-workers 5
+    displayName: 'Deliver Data to Google Drive'
