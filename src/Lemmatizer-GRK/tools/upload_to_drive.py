@@ -5,12 +5,14 @@ from pathlib import Path
 from typing import List, Dict, Tuple
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from threading import Lock
+import httplib2
 import time
 
 from google.oauth2.service_account import Credentials
 from googleapiclient.discovery import build
 from googleapiclient.http import MediaFileUpload
 from googleapiclient.errors import HttpError
+from google_auth_httplib2 import AuthorizedHttp
 import ssl
 
 
@@ -18,14 +20,15 @@ def build_drive(sa_path: str):
     """Build a Drive service client with drive scope."""
     scopes = ["https://www.googleapis.com/auth/drive"]
     creds = Credentials.from_service_account_file(sa_path, scopes=scopes)
-    
-    # Build with explicit retry configuration
-    service = build("drive", "v3", credentials=creds)
-    
+    # BYPASS SSL FOR CAMPUS NETWORK / FIREWALLS
+    http = httplib2.Http(disable_ssl_certificate_validation=True)
+    authed_http = AuthorizedHttp(creds, http=http)
+    # Build with the customized http object
+    service = build("drive", "v3", http=authed_http)
     # Test connection
     try:
         service.about().get(fields="user").execute()
-        print("Successfully authenticated with Google Drive")
+        print("Successfully authenticated with Google Drive (SSL bypassed)")
     except Exception as e:
         print(f"Warning: Failed to verify Drive connection: {e}")
     
