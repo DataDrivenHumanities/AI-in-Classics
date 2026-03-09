@@ -15,6 +15,8 @@ from googleapiclient.errors import HttpError
 from google_auth_httplib2 import AuthorizedHttp
 import ssl
 
+ssl._create_default_https_context = ssl._create_unverified_context
+
 
 def build_drive(sa_path: str):
     """Build a Drive service client with drive scope."""
