@@ -121,8 +121,7 @@ def upsert_file(svc, parent_id: str, local_path: Path, existing_files_cache: Dic
                     media = MediaFileUpload(
                         str(local_path), 
                         mimetype="text/csv", 
-                        resumable=True,
-                        chunksize=5 * 1024 * 1024  # 5MB chunks
+                        resumable=False,
                     )
                     request = svc.files().update(
                         fileId=fid,
@@ -154,8 +153,7 @@ def upsert_file(svc, parent_id: str, local_path: Path, existing_files_cache: Dic
             media = MediaFileUpload(
                 str(local_path), 
                 mimetype="text/csv", 
-                resumable=True,
-                chunksize=5 * 1024 * 1024  # 5MB chunks
+                resumable=False
             )
 
             if files:
