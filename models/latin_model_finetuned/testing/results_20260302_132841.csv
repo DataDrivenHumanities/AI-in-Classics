@@ -1,0 +1,71 @@
+idx,sentence,translation,expected_sentiment,expected_7,predicted_raw,predicted_7,expected_3,predicted_3,is_correct_7,is_correct_3,latency_s
+1,Caelum pulchrum est.,The sky is beautiful.,MODERATELY POSITIVE (+1),MODERATELY POSITIVE,NEUTRAL,NEUTRAL,POSITIVE,NEUTRAL,False,False,3.979
+2,Puer discipulus malus est.,The boy is a bad student.,MODERATELY NEGATIVE (-1),MODERATELY NEGATIVE,MODERATELY NEGATIVE,MODERATELY NEGATIVE,NEGATIVE,NEGATIVE,True,True,4.298
+3,Copiae amiserunt bellum.,The troops lost the war.,VERY NEGATIVE (-2),VERY NEGATIVE,MODERATELY NEGATIVE,MODERATELY NEGATIVE,NEGATIVE,NEGATIVE,False,True,4.414
+4,Pater laudabat filium.,The father was praising his son.,MODERATELY POSITIVE (+1),MODERATELY POSITIVE,MODERATELY POSITIVE,MODERATELY POSITIVE,POSITIVE,POSITIVE,True,True,4.239
+5,Marcus Brutus tradidit suum amicum.,Marcus Brutus betrayed his friend.,VERY NEGATIVE (-2),VERY NEGATIVE,MODERATELY POSITIVE,MODERATELY POSITIVE,NEGATIVE,POSITIVE,False,False,5.178
+6,Ego optimus miles eram.,I was the best student,VERY POSITIVE (+2),VERY POSITIVE,MODERATELY POSITIVE,MODERATELY POSITIVE,POSITIVE,POSITIVE,False,True,4.217
+7,Quae scelera videmus?,What evil deed do we see?,VERY NEGATIVE (-2),VERY NEGATIVE,MODERATELY NEGATIVE,MODERATELY NEGATIVE,NEGATIVE,NEGATIVE,False,True,4.674
+8,Malum consilium est.,The plan is bad,MODERATELY NEGATIVE (-1),MODERATELY NEGATIVE,MODERATELY NEGATIVE,MODERATELY NEGATIVE,NEGATIVE,NEGATIVE,True,True,4.137
+9,Sum amicus eius,I am his friend,MODERATELY POSITIVE (+1),MODERATELY POSITIVE,NEUTRAL,NEUTRAL,POSITIVE,NEUTRAL,False,False,4.177
+10,Brutus te laudavit,Brutus praised you,MODERATELY POSITIVE (+1),MODERATELY POSITIVE,MODERATELY POSITIVE,MODERATELY POSITIVE,POSITIVE,POSITIVE,True,True,4.873
+11,Patria delebatur,The country was being destroyed,VERY NEGATIVE (-2),VERY NEGATIVE,MODERATELY NEGATIVE,MODERATELY NEGATIVE,NEGATIVE,NEGATIVE,False,True,4.253
+12,Domus ustus erat.,The home had been burned down.,VERY NEGATIVE (-2),VERY NEGATIVE,NEUTRAL,NEUTRAL,NEGATIVE,NEUTRAL,False,False,3.878
+13,Gladiator praemium vicit.,The gladiator won a prize.,MODERATELY POSITIVE (+1),MODERATELY POSITIVE,MODERATELY POSITIVE,MODERATELY POSITIVE,POSITIVE,POSITIVE,True,True,4.416
+14,Vita eius erat nimis brevis.,Her life was too brief.,MODERATELY NEGATIVE (-1),MODERATELY NEGATIVE,NEUTRAL,NEUTRAL,NEGATIVE,NEUTRAL,False,False,3.915
+15,Panis fuit bonus.,The bread was good.,MODERATELY POSITIVE (+1),MODERATELY POSITIVE,NEUTRAL,NEUTRAL,POSITIVE,NEUTRAL,False,False,3.725
+16,Post paucas horas Caesar Asiam cepit,"After a few hours, Caesar captured Asia.",VERY NEGATIVE (-2),VERY NEGATIVE,NEUTRAL,NEUTRAL,NEGATIVE,NEUTRAL,False,False,4.269
+17,Mater beatum infantem bene curat.,The mother cares well for the fortunate baby.,MODERATELY POSITIVE (+1),MODERATELY POSITIVE,MODERATELY POSITIVE,MODERATELY POSITIVE,POSITIVE,POSITIVE,True,True,4.636
+18,Imperator non curat de salute suae nationis.,The emperor does not care for the safety of his own people.,VERY NEGATIVE (-2),VERY NEGATIVE,MODERATELY NEGATIVE,MODERATELY NEGATIVE,NEGATIVE,NEGATIVE,False,True,5.328
+19,Mater paterque suos pueros neglexerunt.,The mother and father neglected their children.,MODERATELY NEGATIVE (-1),MODERATELY NEGATIVE,MODERATELY NEGATIVE,MODERATELY NEGATIVE,NEGATIVE,NEGATIVE,True,True,4.574
+20,Puer miser ab animali saevo necatus erat.,The poor boy had been killed by a savage animal.,EXTREMELY NEGATIVE (-3),EXTREMELY NEGATIVE,MODERATELY NEGATIVE,MODERATELY NEGATIVE,NEGATIVE,NEGATIVE,False,True,4.439
+21,Venator ursam post longam pugnam necavit.,The hunter killed the bear after a long battle.,MODERATELY NEGATIVE (-1),MODERATELY NEGATIVE,MODERATELY NEGATIVE,MODERATELY NEGATIVE,NEGATIVE,NEGATIVE,True,True,4.348
+22,"Post redierunt Romam, nautae usi sunt otium.","After they returned to Rome, the sailors enjoyed leisure time.",VERY POSITIVE (+2),VERY POSITIVE,NEUTRAL,NEUTRAL,POSITIVE,NEUTRAL,False,False,4.270
+23,Puella est laeta videre suum fratrem minorem.,The girl is happy to see her younger brother.,VERY POSITIVE (+2),VERY POSITIVE,MODERATELY POSITIVE,MODERATELY POSITIVE,POSITIVE,POSITIVE,False,True,4.200
+24,Navis confractus est ab hostibus Romae.,The ship was broken by the enemies of Rome,VERY NEGATIVE (-2),VERY NEGATIVE,MODERATELY NEGATIVE,MODERATELY NEGATIVE,NEGATIVE,NEGATIVE,False,True,4.469
+25,Heros erat qui multos cives servavit.,He was a hero who saved many citizens.,VERY POSITIVE (+2),VERY POSITIVE,NEUTRAL,NEUTRAL,POSITIVE,NEUTRAL,False,False,4.078
+26,Urbs ab hostibus malis victa deletaque est.,The city was conquered and destroyed by the wicked enemy.,EXTREMELY NEGATIVE (-3),EXTREMELY NEGATIVE,MODERATELY NEGATIVE,MODERATELY NEGATIVE,NEGATIVE,NEGATIVE,False,True,4.441
+27,Magna facta discipulorum eius magistro veteri placuerunt.,The great achievements of his students pleased the old teacher.,MODERATELY POSITIVE (+1),MODERATELY POSITIVE,MODERATELY POSITIVE,MODERATELY POSITIVE,POSITIVE,POSITIVE,True,True,4.274
+28,Puellae iuveni curiosaeque libet in agros migrare.,The young and curious girl likes to wander into fields.,MODERATELY POSITIVE (+1),MODERATELY POSITIVE,NEUTRAL,NEUTRAL,POSITIVE,NEUTRAL,False,False,3.911
+29,Sol ita lucet ut fruges celeriter crescant.,The sun shines in such a way that the crops grow quickly.,MODERATELY POSITIVE (+1),MODERATELY POSITIVE,NEUTRAL,NEUTRAL,POSITIVE,NEUTRAL,False,False,3.955
+30,Imperator iussit milites interficere sine misericordia.,The emperor ordered the soldiers to kill without mercy.,EXTREMELY NEGATIVE (-3),EXTREMELY NEGATIVE,MODERATELY NEGATIVE,MODERATELY NEGATIVE,NEGATIVE,NEGATIVE,False,True,5.001
+31,Princeps sensit fas suum custodire patriam.,The ruler felt it was his sacred duty to protect his country.,VERY POSITIVE (+2),VERY POSITIVE,MODERATELY POSITIVE,MODERATELY POSITIVE,POSITIVE,POSITIVE,False,True,5.019
+32,Amici Scipionis invitaverunt ad cenam post victoriam magnam vixit.,Scipio's friends invited him to dinner after he won a great victory.,VERY POSITIVE (+2),VERY POSITIVE,MODERATELY POSITIVE,MODERATELY POSITIVE,POSITIVE,POSITIVE,False,True,4.557
+33,Vir egit gratias Venerem uxori pulchrae et Iunonem liberis.,The man gave thanks to Venus for his beautiful wife and to Juno for his children.,VERY POSITIVE (+2),VERY POSITIVE,MODERATELY POSITIVE,MODERATELY POSITIVE,POSITIVE,POSITIVE,False,True,4.507
+34,Sceleratus vehemens expulsus erat sicut poena vitae vitiosae.,The violent criminal was exiled as punishment for a life full of vice.,VERY NEGATIVE (-2),VERY NEGATIVE,MODERATELY NEGATIVE,MODERATELY NEGATIVE,NEGATIVE,NEGATIVE,False,True,4.471
+35,Fabulae a patre eorum narratae sororem fratremque oblectaverunt.,The stories told by their father delighted the brother and sister.,VERY POSITIVE (+2),VERY POSITIVE,MODERATELY POSITIVE,MODERATELY POSITIVE,POSITIVE,POSITIVE,False,True,5.683
+36,"Cupiditate aeterna devotus, desidero aliquam quae non desiderat me.","Accursed by eternal longing, I long for someone who does not long for me.",EXTREMELY NEGATIVE (-3),EXTREMELY NEGATIVE,MODERATELY NEGATIVE,MODERATELY NEGATIVE,NEGATIVE,NEGATIVE,False,True,5.043
+37,"Cum peste adfecti essent, boves iam moriebantur.","Since they had been afflicted by the plague, the cows soon died.",VERY NEGATIVE (-2),VERY NEGATIVE,MODERATELY NEGATIVE,MODERATELY NEGATIVE,NEGATIVE,NEGATIVE,False,True,4.603
+38,Puella puero nervoso dixit se reddere amorem eius.,The girl told the nervous boy that she returned his love.,VERY POSITIVE (+2),VERY POSITIVE,MODERATELY POSITIVE,MODERATELY POSITIVE,POSITIVE,POSITIVE,False,True,4.466
+39,"Cum bellum tandem vicissent, cives magno gaudio celebrabant.","When at last they had won the war, the citizens celebrated with great joy.",VERY POSITIVE (+2),VERY POSITIVE,MODERATELY POSITIVE,MODERATELY POSITIVE,POSITIVE,POSITIVE,False,True,4.978
+40,Umbra uxoris mortuae illum miserum ita persequitur ut otium numquam reperiat.,The ghost of his dead wife haunts that wretched man so that he will never find peace.,EXTREMELY NEGATIVE (-3),EXTREMELY NEGATIVE,MODERATELY NEGATIVE,MODERATELY NEGATIVE,NEGATIVE,NEGATIVE,False,True,4.297
+41,"Cum nemo audiat, poeta tristis queritur dominam eum relinquisse.","Although no one is listening, the sad poet laments that his mistress has abandoned him.",VERY NEGATIVE (-2),VERY NEGATIVE,MODERATELY NEGATIVE,MODERATELY NEGATIVE,NEGATIVE,NEGATIVE,False,True,5.084
+42,"Bono nuntio accepto, nuntius delectatus civibus nuntiat opem iam adventuram esse.","With the good news having been received, the delighted messenger announces to the citizens that aid will soon arrive.",VERY POSITIVE (+2),VERY POSITIVE,MODERATELY POSITIVE,MODERATELY POSITIVE,POSITIVE,POSITIVE,False,True,5.077
+43,"Vulgus surrexerunt fores aedis, necatatum et consauciatum multos.","The mob surged the gates of the temple, killing and injuring many.",EXTREMELY NEGATIVE (-3),EXTREMELY NEGATIVE,MODERATELY NEGATIVE,MODERATELY NEGATIVE,NEGATIVE,NEGATIVE,False,True,5.304
+44,Canes denique invenerunt aprum post diem longum et miserum ita venatores id potuerunt necare,"The dogs finally found the boar after a long, miserable day outside so the hunters could kill it.",VERY NEGATIVE (-2),VERY NEGATIVE,MODERATELY NEGATIVE,MODERATELY NEGATIVE,NEGATIVE,NEGATIVE,False,True,4.131
+45,"Quod ea voluerat fratrem tam diu, puella celebravit quando mater peperit iterum.","Because she had wanted a brother for such a long time, the girl celebrated when her mother gave birth again.",VERY POSITIVE (+2),VERY POSITIVE,MODERATELY POSITIVE,MODERATELY POSITIVE,POSITIVE,POSITIVE,False,True,5.898
+46,"In oratone, orator optimus fuit et igitur multas coronas laurinas vicit.","In his speech, the orator was the best and accordingly, he won many wreaths of laurel.",VERY POSITIVE (+2),VERY POSITIVE,MODERATELY POSITIVE,MODERATELY POSITIVE,POSITIVE,POSITIVE,False,True,4.474
+47,"Stultitiast, mater, venatum ducere invitas canes","It is foolish, mother, to lead the unwilling dogs to the hunt",MODERATELY NEGATIVE (-1),MODERATELY NEGATIVE,MODERATELY NEGATIVE,MODERATELY NEGATIVE,NEGATIVE,NEGATIVE,True,True,5.453
+48,"Si quis metuens vivet, liber mihi non erit umquam","If anyone lives in fear, he will not ever be free - in my opinion",VERY NEGATIVE (-2),VERY NEGATIVE,MODERATELY NEGATIVE,MODERATELY NEGATIVE,NEGATIVE,NEGATIVE,False,True,4.468
+49,"imperator promisit decem milia militum celerrime discessura esse, dummodo satis copiarum reciperent.","The general promises ten thousand soldiers to depart most quickly, so long as they receive satisfactory supplies.",MODERATELY POSITIVE (+1),MODERATELY POSITIVE,MODERATELY POSITIVE,MODERATELY POSITIVE,POSITIVE,POSITIVE,True,True,3.978
+50,Cum cūrā docet ut discipulī bene discant,He teaches them with care so the students may learn well,MODERATELY POSITIVE (+1),MODERATELY POSITIVE,MODERATELY POSITIVE,MODERATELY POSITIVE,POSITIVE,POSITIVE,True,True,4.221
+51,Sol lucet in caelo.,The sun shines in the sky.,NEUTRAL (0),NEUTRAL,NEUTRAL,NEUTRAL,NEUTRAL,NEUTRAL,True,True,4.214
+52,Urbs Roma in Italia est.,The city of Rome is in Italy.,NEUTRAL (0),NEUTRAL,NEUTRAL,NEUTRAL,NEUTRAL,NEUTRAL,True,True,3.635
+53,Ego in villa ambulo.,I walk in the villa.,NEUTRAL (0),NEUTRAL,NEUTRAL,NEUTRAL,NEUTRAL,NEUTRAL,True,True,3.770
+54,Annus habet duodecim menses.,The year has twelve months.,NEUTRAL (0),NEUTRAL,NEUTRAL,NEUTRAL,NEUTRAL,NEUTRAL,True,True,4.036
+55,Quid est vita sine amore?,What is life without love?,VERY NEGATIVE (-2),VERY NEGATIVE,MODERATELY NEGATIVE,MODERATELY NEGATIVE,NEGATIVE,NEGATIVE,False,True,4.264
+56,"O quam felix es, qui omnia perdidisti!","O how fortunate you are, who have lost everything!",VERY NEGATIVE (-2),VERY NEGATIVE,MODERATELY NEGATIVE,MODERATELY NEGATIVE,NEGATIVE,NEGATIVE,False,True,4.297
+57,"Si Roma caderet, quid faceremus?","If Rome were to fall, what would we do?",NEUTRAL (0),NEUTRAL,MODERATELY NEGATIVE,MODERATELY NEGATIVE,NEUTRAL,NEGATIVE,False,False,4.007
+58,Utinam pax in mundo sit.,Would that there be peace in the world.,VERY POSITIVE (+2),VERY POSITIVE,NEUTRAL,NEUTRAL,POSITIVE,NEUTRAL,False,False,3.875
+59,Puellula mea in villa cantat.,My little girl sings in the villa.,MODERATELY POSITIVE (+1),MODERATELY POSITIVE,MODERATELY POSITIVE,MODERATELY POSITIVE,POSITIVE,POSITIVE,True,True,4.449
+60,Homunculus ille nihil scit.,That little man knows nothing.,MODERATELY NEGATIVE (-1),MODERATELY NEGATIVE,MODERATELY NEGATIVE,MODERATELY NEGATIVE,NEGATIVE,NEGATIVE,True,True,4.764
+61,"Domine, salvum me fac.","Lord, save me.",VERY POSITIVE (+2),VERY POSITIVE,NEUTRAL,NEUTRAL,POSITIVE,NEUTRAL,False,False,3.863
+62,Scientia nova in libris invenitur.,New knowledge is found in books.,MODERATELY POSITIVE (+1),MODERATELY POSITIVE,NEUTRAL,NEUTRAL,POSITIVE,NEUTRAL,False,False,4.362
+63,Ego sum lux mundi.,I am the light of the world.,VERY POSITIVE (+2),VERY POSITIVE,MODERATELY POSITIVE,MODERATELY POSITIVE,POSITIVE,POSITIVE,False,True,4.204
+64,Respublica in periculis versatur.,The republic is embroiled in dangers.,VERY NEGATIVE (-2),VERY NEGATIVE,MODERATELY NEGATIVE,MODERATELY NEGATIVE,NEGATIVE,NEGATIVE,False,True,4.529
+65,"Deus meus, quare me dereliquisti?","My God, why have you forsaken me?",EXTREMELY NEGATIVE (-3),EXTREMELY NEGATIVE,MODERATELY NEGATIVE,MODERATELY NEGATIVE,NEGATIVE,NEGATIVE,False,True,4.333
+66,Timor Domini initium sapientiae est.,The fear of the Lord is the beginning of wisdom.,MODERATELY POSITIVE (+1),MODERATELY POSITIVE,MODERATELY NEGATIVE,MODERATELY NEGATIVE,POSITIVE,NEGATIVE,False,False,4.618
+67,Ego felum in villa vidi.,I saw a cat in the villa.,NEUTRAL (0),NEUTRAL,NEUTRAL,NEUTRAL,NEUTRAL,NEUTRAL,True,True,3.959
+68,"Postquam milites in silvam intraverunt, ferae saevae eos insequebantur, et multi perierunt.","After the soldiers entered the forest, savage beasts pursued them, and many perished.",EXTREMELY NEGATIVE (-3),EXTREMELY NEGATIVE,MODERATELY NEGATIVE,MODERATELY NEGATIVE,NEGATIVE,NEGATIVE,False,True,3.973
+69,"Cum philosophi in academia disputarent, discipuli eorum nova praecepta didicerunt.","While the philosophers debated in the academy, their students learned new teachings.",MODERATELY POSITIVE (+1),MODERATELY POSITIVE,MODERATELY POSITIVE,MODERATELY POSITIVE,POSITIVE,POSITIVE,True,True,4.564
+70,Domus mea igne consumpta est.,My house was consumed by fire.,VERY NEGATIVE (-2),VERY NEGATIVE,MODERATELY NEGATIVE,MODERATELY NEGATIVE,NEGATIVE,NEGATIVE,False,True,4.881
