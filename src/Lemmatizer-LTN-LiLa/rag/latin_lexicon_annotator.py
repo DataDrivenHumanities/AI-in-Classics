@@ -187,6 +187,242 @@ class LatinLexiconAnnotator:
             out.append(tn)
         return out
 
+    def annotate_spans(self, text: str) -> dict[str, Any]:
+        """
+        Span-preserving annotator intended for UI highlighting.
+
+        Returns:
+          - spans: per-surface-word offsets + chosen lemma + (optional) sentiment
+          - lemma_details: aggregated metadata for sentiment-bearing lemmas
+
+        Notes:
+          - We preserve the original text by returning start/end offsets into the NFC-normalized text.
+          - Stopwords (except negators) may be skipped for lookup (config.drop_stopwords=True),
+            but the surface spans are still returned (with no lemma/sentiment attached).
+        """
+        text_nfc = unicodedata.normalize("NFC", text or "")
+        raw_matches = list(_WORD_RE.finditer(text_nfc))
+
+        spans_raw: list[dict[str, Any]] = []
+        token_norms_all: list[str] = []
+        for m in raw_matches:
+            surface = m.group(0)
+            tn = basic_norm_token(surface)
+            spans_raw.append(
+                {
+                    "start": int(m.start()),
+                    "end": int(m.end()),
+                    "surface": surface,
+                    "token_norm": tn,
+                }
+            )
+            token_norms_all.append(tn)
+
+        # Determine which normalized tokens we will attempt to lemmatize.
+        lookup_tokens: list[str] = []
+        for t in token_norms_all:
+            if not t:
+                continue
+            if (
+                self.config.drop_stopwords
+                and t in self.config.stopwords
+                and t not in self.config.negators
+            ):
+                continue
+            lookup_tokens.append(t)
+
+        token_counts = Counter(lookup_tokens)
+        unique_tokens = sorted(token_counts.keys())
+
+        token_lookup_order: dict[str, list[str]] = {
+            t: self._lookup_variants_for_token(t) for t in unique_tokens
+        }
+        all_lookup_keys: list[str] = sorted(
+            {k for ks in token_lookup_order.values() for k in ks}
+        )
+
+        direct = self._lookup_direct_lemmas(all_lookup_keys)
+        form_candidates = self._lookup_forms_candidates(all_lookup_keys)
+
+        token_chosen_lemma_id: dict[str, int] = {}
+        ambiguous_tokens: list[str] = []
+        lookup_hits = 0
+        lookup_misses = 0
+
+        for t, cnt in token_counts.items():
+            ordered_keys = token_lookup_order.get(t) or [t]
+            chosen_key = ""
+            cand_list: list[int] = []
+            for k in ordered_keys:
+                if k in direct:
+                    chosen_key = k
+                    cand_list = [int(direct[k])]
+                    break
+                if k in form_candidates:
+                    cands = list(form_candidates.get(k) or [])
+                    if cands:
+                        chosen_key = k
+                        cand_list = [int(x) for x in cands]
+                        break
+
+            if not cand_list:
+                lookup_misses += cnt
+                continue
+
+            lookup_hits += cnt
+            if len(cand_list) > 1:
+                ambiguous_tokens.append(t)
+
+            # deterministic choice: prefer direct lemma match for chosen_key, else smallest lemma_id
+            cand_list = sorted(set(int(x) for x in cand_list))
+            chosen = direct.get(chosen_key) or cand_list[0]
+            token_chosen_lemma_id[t] = int(chosen)
+
+        chosen_ids = sorted(set(token_chosen_lemma_id.values()))
+        lemma_meta_by_id = self._fetch_lemmas_by_id(chosen_ids)
+
+        token_to_lemma: dict[str, dict[str, Any]] = {}
+        lemma_counts: Counter[str] = Counter()
+        lemma_pos_bucket: dict[str, str] = {}
+        lemma_pos_raw: dict[str, Optional[str]] = {}
+
+        for tok, cnt in token_counts.items():
+            lemma_id = token_chosen_lemma_id.get(tok)
+            if not lemma_id or lemma_id not in lemma_meta_by_id:
+                continue
+            m = lemma_meta_by_id[lemma_id]
+            lemma_key = str(m["lemma_nod"])
+            pos_raw = m.get("pos")
+            bucket = _pos_bucket_from_scraped(pos_raw)
+            token_to_lemma[tok] = {
+                "lemma_key": lemma_key,
+                "pos_bucket": bucket,
+                "pos_raw": pos_raw,
+            }
+            lemma_counts[lemma_key] += int(cnt)
+            lemma_pos_bucket[lemma_key] = bucket
+            lemma_pos_raw[lemma_key] = pos_raw
+
+        lemma_keys = sorted(lemma_counts.keys())
+        sentiment_rows = self._fetch_sentiment_rows(lemma_keys)
+
+        chosen_sentiment_by_lemma: dict[str, dict[str, Any]] = {}
+        fallback_joins = 0
+        affectus_hit_tokens = 0
+
+        for lemma_key in lemma_keys:
+            rows = sentiment_rows.get(lemma_key, [])
+            if not rows:
+                continue
+            bucket = lemma_pos_bucket.get(lemma_key, "other")
+            matching = [
+                r
+                for r in rows
+                if r.get("pos_bucket") == bucket and bucket != "other"
+            ]
+            candidates = matching or rows
+
+            def _score_key(r: dict[str, Any]) -> Tuple[float, str]:
+                sc = r.get("polarity_score")
+                return (
+                    abs(float(sc)) if sc is not None else 0.0,
+                    str(r.get("pos") or ""),
+                )
+
+            chosen = sorted(candidates, key=_score_key, reverse=True)[0]
+            pos_match = bool(matching)
+
+            score = chosen.get("polarity_score")
+            # Only keep sentiment-bearing entries for UI highlighting (skip neutral).
+            try:
+                sc = float(score) if score is not None else None
+            except Exception:
+                sc = None
+            if sc is None or sc == 0.0:
+                continue
+            if not pos_match:
+                fallback_joins += 1
+
+            count = int(lemma_counts.get(lemma_key, 0))
+            affectus_hit_tokens += count
+            chosen_sentiment_by_lemma[lemma_key] = {
+                "lemma_key": lemma_key,
+                "count": count,
+                "scraped_pos": lemma_pos_raw.get(lemma_key),
+                "scraped_pos_bucket": bucket,
+                "affectus_lemma": chosen.get("lemma_raw"),
+                "affectus_pos": chosen.get("pos"),
+                "affectus_pos_bucket": chosen.get("pos_bucket"),
+                "polarity_score": sc,
+                "has_polarity": chosen.get("has_polarity"),
+                "provenance": chosen.get("provenance"),
+                "pos_match": pos_match,
+            }
+
+        spans_out: list[dict[str, Any]] = []
+        for sp in spans_raw:
+            tn = str(sp.get("token_norm") or "")
+            m = token_to_lemma.get(tn)
+            if not m:
+                spans_out.append(
+                    {
+                        "start": sp["start"],
+                        "end": sp["end"],
+                        "surface": sp["surface"],
+                        "lemma_key": None,
+                        "pos_bucket": None,
+                        "polarity_score": None,
+                        "has_polarity": None,
+                        "provenance": None,
+                        "pos_match": None,
+                    }
+                )
+                continue
+
+            lemma_key = str(m.get("lemma_key"))
+            chosen_sent = chosen_sentiment_by_lemma.get(lemma_key)
+            spans_out.append(
+                {
+                    "start": sp["start"],
+                    "end": sp["end"],
+                    "surface": sp["surface"],
+                    "lemma_key": lemma_key,
+                    "pos_bucket": m.get("pos_bucket"),
+                    "polarity_score": (chosen_sent.get("polarity_score") if chosen_sent else None),
+                    "has_polarity": (chosen_sent.get("has_polarity") if chosen_sent else None),
+                    "provenance": (chosen_sent.get("provenance") if chosen_sent else None),
+                    "pos_match": (chosen_sent.get("pos_match") if chosen_sent else None),
+                }
+            )
+
+        total_tokens = sum(token_counts.values())
+        affectus_hit_rate = (affectus_hit_tokens / lookup_hits) if lookup_hits else 0.0
+        fallback_rate = (
+            (fallback_joins / len(chosen_sentiment_by_lemma))
+            if chosen_sentiment_by_lemma
+            else 0.0
+        )
+
+        return {
+            "coverage": {
+                "raw_token_count": int(len(token_norms_all)),
+                "token_count": int(total_tokens),
+                "unique_tokens": int(len(unique_tokens)),
+                "lookup_hits": int(lookup_hits),
+                "lookup_misses": int(lookup_misses),
+                "lookup_hit_rate": (lookup_hits / total_tokens) if total_tokens else 0.0,
+                "affectus_hit_tokens": int(affectus_hit_tokens),
+                "affectus_hit_rate": float(affectus_hit_rate),
+                "sentiment_lemma_hits": int(len(chosen_sentiment_by_lemma)),
+                "fallback_rate": float(fallback_rate),
+                "ambiguous_tokens": int(len(ambiguous_tokens)),
+            },
+            "spans": spans_out,
+            "lemma_details": {
+                k: dict(v) for k, v in chosen_sentiment_by_lemma.items()
+            },
+        }
+
     def _variant_enclitic_bases(self, token: str) -> list[str]:
         """
         Fallback: split enclitics like -que/-ve/-ne for lookup only.

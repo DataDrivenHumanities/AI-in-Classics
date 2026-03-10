@@ -60,6 +60,27 @@ def cltk_normalize(text: str) -> str:
     return unicodedata.normalize("NFC", text).strip()
 
 
+@lru_cache(maxsize=1)
+def resolve_database_url() -> str:
+    """
+    Resolve DATABASE_URL for local dev.
+
+    Streamlit does not automatically load `.env`, so we try to load it here
+    (best-effort) and then return the environment variable.
+    """
+    try:
+        from dotenv import load_dotenv  # type: ignore
+
+        project_root = BASE_DIR
+        for env_path in (Path.cwd() / ".env", project_root / ".env"):
+            if env_path.exists():
+                load_dotenv(env_path)
+                break
+    except Exception:
+        pass
+    return (os.getenv("DATABASE_URL") or "").strip()
+
+
 def _extract_lemmas(analysis: Any) -> list[str]:
     if analysis is None:
         return []
@@ -455,6 +476,145 @@ def llm_sentiment(text: str, model_name: str) -> str:
         )
     )
     return json.dumps(parsed, ensure_ascii=False)
+
+
+def _clip_latin_text(text: str, *, max_chars: int = 6000) -> str:
+    t = cltk_normalize(text or "")
+    if len(t) <= max_chars:
+        return t
+    return t[:max_chars] + "\n\n[...truncated...]"
+
+
+def _latin_lexicon_priors_json(clip: str) -> str:
+    """
+    Best-effort lexicon priors JSON for injection. Returns "" when unavailable.
+    """
+    dsn = resolve_database_url()
+    if not dsn:
+        return ""
+    try:
+        annotator = _latin_lexicon_annotator(dsn)
+        priors = annotator.build_llm_payload(clip)
+        if not isinstance(priors, dict):
+            return ""
+        return json.dumps(priors, ensure_ascii=False, separators=(",", ":")) + "\n\n"
+    except Exception:
+        return ""
+
+
+def latin_llm_analyze(
+    text: str,
+    model_name: str,
+    *,
+    mode: int,
+    period: str = "",
+    genre: str = "",
+    output_length: str = "medium",
+    include_lexicon_priors: bool = True,
+) -> str:
+    """
+    Mode-driven Latin analysis. UI owns mode selection; we keep prompts small.
+    """
+    clip = _clip_latin_text(text)
+    priors_json = _latin_lexicon_priors_json(clip) if include_lexicon_priors else ""
+
+    meta = []
+    if period.strip():
+        meta.append(f"Period: {period.strip()}")
+    if genre.strip():
+        meta.append(f"Genre/Context: {genre.strip()}")
+    meta_block = ("\n".join(meta) + "\n\n") if meta else ""
+
+    if str(output_length).lower().startswith("short"):
+        num_predict = 320
+    elif str(output_length).lower().startswith("long"):
+        num_predict = 1200
+    else:
+        num_predict = 700
+
+    if mode == 1:
+        task = (
+            "Provide a faithful English translation of the Latin text. "
+            "Then give 3–6 short translation notes for any tricky phrases."
+        )
+    elif mode == 2:
+        task = (
+            "Give a word/lemma-focused sentiment analysis. "
+            "List the key sentiment-bearing Latin words/lemmas (5–15 items) with a brief explanation each, "
+            "and explain negation/intensifiers if present. Include a one-paragraph overall sentiment summary."
+        )
+    elif mode == 3:
+        task = (
+            "Give a document-level sentiment assessment: label (positive/negative/neutral/mixed), "
+            "confidence (0–1), and a concise rationale grounded in the text."
+        )
+    elif mode == 4:
+        task = (
+            "Do aspect-based sentiment: identify 3–6 aspects/entities/themes, and for each give sentiment + evidence. "
+            "Finish with a short comparison of aspects."
+        )
+    elif mode == 5:
+        task = (
+            "Do sentence/paragraph-level sentiment: pick 5–10 representative units (sentences or short segments), "
+            "translate each briefly, label sentiment, and summarize progression across the text."
+        )
+    elif mode == 6:
+        task = (
+            "Provide all analyses in this order with clear headings: "
+            "1) Translation  2) Word/Lemma Sentiment  3) Document-Level Sentiment  "
+            "4) Aspect-Based Sentiment  5) Sentence/Paragraph-Level Sentiment."
+        )
+    else:
+        raise ValueError("mode must be an integer 1–6")
+
+    prompt = (
+        "You are a Latin text analysis assistant.\n"
+        "Answer using the provided Latin text; do not ask the user to paste it.\n"
+        "If lexicon priors are included, treat them as weak evidence (coverage may be incomplete).\n\n"
+        f"{priors_json}"
+        f"{meta_block}"
+        f"Task:\n{task}\n\n"
+        f"Latin text:\n{clip}\n"
+    )
+
+    from .ollama_client import generate_text, resolve_available_model_tag
+
+    model_tag = resolve_available_model_tag(model_name)
+    return asyncio.run(
+        generate_text(
+            model_tag,
+            prompt,
+            temperature=0.2,
+            num_predict=num_predict,
+        )
+    )
+
+
+def build_latin_chat_system_prompt(
+    text: str,
+    *,
+    period: str = "",
+    genre: str = "",
+    include_lexicon_priors: bool = True,
+) -> str:
+    clip = _clip_latin_text(text)
+    priors_json = _latin_lexicon_priors_json(clip) if include_lexicon_priors else ""
+    meta = []
+    if period.strip():
+        meta.append(f"Period: {period.strip()}")
+    if genre.strip():
+        meta.append(f"Genre/Context: {genre.strip()}")
+    meta_block = ("\n".join(meta) + "\n\n") if meta else ""
+    return (
+        "You are a Latin text analysis assistant.\n"
+        "The user will ask questions about the provided Latin text.\n"
+        "Do not ask the user to paste the text; it is included below.\n"
+        "If the question cannot be answered from the text, say what is missing.\n"
+        "If lexicon priors are included, treat them as weak evidence.\n\n"
+        f"{priors_json}"
+        f"{meta_block}"
+        f"Latin text:\n{clip}\n"
+    )
 
 
 @lru_cache(maxsize=1)
