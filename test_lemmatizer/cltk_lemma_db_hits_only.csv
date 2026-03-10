@@ -1,0 +1,148 @@
+idx,sentence,token,lemma,in_db,db_pos,db_polarity_score,db_has_polarity,db_provenance
+1,Caelum pulchrum est.,caelum,caelum,True,noun,0.5,positive,GOLD
+1,Caelum pulchrum est.,pulchrum,pulcher,True,adj,1.0,positive,GOLD
+2,Puer discipulus malus est.,puer,puer,True,noun,0.0,neutral,GOLD
+2,Puer discipulus malus est.,discipulus,discipulus,True,noun,0.0,neutral,GOLD
+2,Puer discipulus malus est.,malus,malus,True,adj,-1.0,negative,GOLD
+3,Copiae amiserunt bellum.,copiae,copia,True,noun,0.5,positive,GOLD
+3,Copiae amiserunt bellum.,bellum,bellum,True,noun,0.0,neutral,GOLD
+4,Pater laudabat filium.,pater,pater,True,noun,0.0,neutral,GOLD
+4,Pater laudabat filium.,filium,filius,True,noun,0.0,neutral,GOLD
+5,Marcus Brutus tradidit suum amicum.,brutus,brutus,True,adj,-1.0,negative,SILVER
+5,Marcus Brutus tradidit suum amicum.,amicum,amicus,True,noun,1.0,positive,GOLD
+6,Ego optimus miles eram.,optimus,bonus,True,noun,1.0,positive,SILVER
+6,Ego optimus miles eram.,miles,miles,True,noun,0.0,neutral,GOLD
+7,Quae scelera videmus?,scelera,scelus,True,noun,-1.0,negative,GOLD
+8,Malum consilium est.,malum,malus,True,adj,-1.0,negative,GOLD
+8,Malum consilium est.,consilium,consilium,True,noun,0.5,positive,GOLD
+9,Sum amicus eius,amicus,amicus,True,noun,1.0,positive,GOLD
+10,Brutus te laudavit,brutus,brutus,True,adj,-1.0,negative,SILVER
+11,Patria delebatur,patria,patria,True,noun,0.0,neutral,GOLD
+12,Domus ustus erat.,domus,domus,True,noun,0.0,neutral,GOLD
+13,Gladiator praemium vicit.,gladiator,gladiator,True,noun,0.0,neutral,GOLD
+13,Gladiator praemium vicit.,praemium,praemium,True,noun,1.0,positive,GOLD
+15,Panis fuit bonus.,panis,panis,True,noun,0.0,neutral,GOLD
+15,Panis fuit bonus.,bonus,bonus,True,noun,1.0,positive,SILVER
+16,Post paucas horas Caesar Asiam cepit,paucas,paucus,True,adj,0.0,neutral,GOLD
+16,Post paucas horas Caesar Asiam cepit,horas,hora,True,noun,0.0,neutral,GOLD
+16,Post paucas horas Caesar Asiam cepit,caesar,caesar,True,noun,0.5,positive,SILVER
+17,Mater beatum infantem bene curat.,mater,mater,True,noun,0.0,neutral,GOLD
+17,Mater beatum infantem bene curat.,beatum,beatus,True,adj,1.0,positive,GOLD
+18,Imperator non curat de salute suae nationis.,imperator,imperator,True,noun,0.5,positive,SILVER
+18,Imperator non curat de salute suae nationis.,salute,salus,True,noun,1.0,positive,GOLD
+18,Imperator non curat de salute suae nationis.,nationis,natio,True,noun,0.0,neutral,SILVER
+19,Mater paterque suos pueros neglexerunt.,mater,mater,True,noun,0.0,neutral,GOLD
+19,Mater paterque suos pueros neglexerunt.,paterque,pater,True,noun,0.0,neutral,GOLD
+19,Mater paterque suos pueros neglexerunt.,pueros,puer,True,noun,0.0,neutral,GOLD
+20,Puer miser ab animali saevo necatus erat.,puer,puer,True,noun,0.0,neutral,GOLD
+20,Puer miser ab animali saevo necatus erat.,miser,miser,True,adj,-1.0,negative,GOLD
+20,Puer miser ab animali saevo necatus erat.,animali,animal,True,noun,0.0,neutral,GOLD
+21,Venator ursam post longam pugnam necavit.,longam,longus,True,adj,0.0,neutral,GOLD
+21,Venator ursam post longam pugnam necavit.,pugnam,pugna,True,noun,-1.0,negative,SILVER
+22,"Post redierunt Romam, nautae usi sunt otium.",nautae,nauta,True,noun,0.0,neutral,GOLD
+22,"Post redierunt Romam, nautae usi sunt otium.",otium,otium,True,noun,0.5,positive,SILVER
+23,Puella est laeta videre suum fratrem minorem.,puella,puella,True,noun,0.0,neutral,GOLD
+23,Puella est laeta videre suum fratrem minorem.,laeta,laetus,True,adj,1.0,positive,GOLD
+23,Puella est laeta videre suum fratrem minorem.,fratrem,frater,True,noun,0.0,neutral,GOLD
+23,Puella est laeta videre suum fratrem minorem.,minorem,paruus,True,adj,0.0,neutral,GOLD
+24,Navis confractus est ab hostibus Romae.,hostibus,hostis,True,noun,-1.0,negative,GOLD
+25,Heros erat qui multos cives servavit.,multos,multus,True,adj,0.0,neutral,GOLD
+26,Urbs ab hostibus malis victa deletaque est.,urbs,urbs,True,noun,0.5,positive,GOLD
+26,Urbs ab hostibus malis victa deletaque est.,hostibus,hostis,True,noun,-1.0,negative,GOLD
+26,Urbs ab hostibus malis victa deletaque est.,malis,malus,True,adj,-1.0,negative,GOLD
+27,Magna facta discipulorum eius magistro veteri placuerunt.,magna,magnus,True,adj,0.0,neutral,GOLD
+27,Magna facta discipulorum eius magistro veteri placuerunt.,discipulorum,discipulus,True,noun,0.0,neutral,GOLD
+27,Magna facta discipulorum eius magistro veteri placuerunt.,magistro,magister,True,noun,0.5,positive,GOLD
+28,Puellae iuveni curiosaeque libet in agros migrare.,puellae,puella,True,noun,0.0,neutral,GOLD
+28,Puellae iuveni curiosaeque libet in agros migrare.,agros,ager,True,noun,0.0,neutral,GOLD
+29,Sol ita lucet ut fruges celeriter crescant.,sol,sol,True,noun,0.0,neutral,GOLD
+30,Imperator iussit milites interficere sine misericordia.,imperator,imperator,True,noun,0.5,positive,SILVER
+30,Imperator iussit milites interficere sine misericordia.,milites,miles,True,noun,0.0,neutral,GOLD
+30,Imperator iussit milites interficere sine misericordia.,misericordia,misericordia,True,noun,1.0,positive,GOLD
+31,Princeps sensit fas suum custodire patriam.,princeps,princeps,True,noun,0.5,positive,GOLD
+31,Princeps sensit fas suum custodire patriam.,fas,fas,True,noun,1.0,positive,GOLD
+31,Princeps sensit fas suum custodire patriam.,patriam,patria,True,noun,0.0,neutral,GOLD
+32,Amici Scipionis invitaverunt ad cenam post victoriam magnam vixit.,amici,amicus,True,noun,1.0,positive,GOLD
+32,Amici Scipionis invitaverunt ad cenam post victoriam magnam vixit.,cenam,cena,True,noun,0.0,neutral,GOLD
+32,Amici Scipionis invitaverunt ad cenam post victoriam magnam vixit.,magnam,magnus,True,adj,0.0,neutral,GOLD
+33,Vir egit gratias Venerem uxori pulchrae et Iunonem liberis.,gratias,gratia,True,noun,1.0,positive,GOLD
+33,Vir egit gratias Venerem uxori pulchrae et Iunonem liberis.,uxori,uxor,True,noun,0.0,neutral,SILVER
+33,Vir egit gratias Venerem uxori pulchrae et Iunonem liberis.,pulchrae,pulcher,True,adj,1.0,positive,GOLD
+33,Vir egit gratias Venerem uxori pulchrae et Iunonem liberis.,liberis,liber,True,noun,0.0,neutral,GOLD
+34,Sceleratus vehemens expulsus erat sicut poena vitae vitiosae.,poena,poena,True,noun,-1.0,negative,GOLD
+35,Fabulae a patre eorum narratae sororem fratremque oblectaverunt.,fabulae,fabula,True,noun,0.0,neutral,GOLD
+35,Fabulae a patre eorum narratae sororem fratremque oblectaverunt.,patre,pater,True,noun,0.0,neutral,GOLD
+35,Fabulae a patre eorum narratae sororem fratremque oblectaverunt.,sororem,soror,True,noun,0.0,neutral,GOLD
+35,Fabulae a patre eorum narratae sororem fratremque oblectaverunt.,fratremque,frater,True,noun,0.0,neutral,GOLD
+36,"Cupiditate aeterna devotus, desidero aliquam quae non desiderat me.",cupiditate,cupiditas,True,noun,-0.5,negative,GOLD
+36,"Cupiditate aeterna devotus, desidero aliquam quae non desiderat me.",aeterna,aeternus,True,adj,0.5,positive,SILVER
+37,"Cum peste adfecti essent, boves iam moriebantur.",peste,pestis,True,noun,-1.0,negative,GOLD
+37,"Cum peste adfecti essent, boves iam moriebantur.",boves,bos,True,noun,0.0,neutral,GOLD
+38,Puella puero nervoso dixit se reddere amorem eius.,puella,puella,True,noun,0.0,neutral,GOLD
+38,Puella puero nervoso dixit se reddere amorem eius.,puero,puer,True,noun,0.0,neutral,GOLD
+38,Puella puero nervoso dixit se reddere amorem eius.,amorem,amor,True,noun,1.0,positive,GOLD
+39,"Cum bellum tandem vicissent, cives magno gaudio celebrabant.",bellum,bellum,True,noun,0.0,neutral,GOLD
+39,"Cum bellum tandem vicissent, cives magno gaudio celebrabant.",magno,magnus,True,adj,0.0,neutral,GOLD
+39,"Cum bellum tandem vicissent, cives magno gaudio celebrabant.",gaudio,gaudium,True,noun,1.0,positive,SILVER
+40,Umbra uxoris mortuae illum miserum ita persequitur ut otium numquam reperiat.,umbra,umbra,True,noun,0.0,neutral,GOLD
+40,Umbra uxoris mortuae illum miserum ita persequitur ut otium numquam reperiat.,uxoris,uxor,True,noun,0.0,neutral,SILVER
+40,Umbra uxoris mortuae illum miserum ita persequitur ut otium numquam reperiat.,miserum,miser,True,adj,-1.0,negative,GOLD
+40,Umbra uxoris mortuae illum miserum ita persequitur ut otium numquam reperiat.,otium,otium,True,noun,0.5,positive,SILVER
+41,"Cum nemo audiat, poeta tristis queritur dominam eum relinquisse.",nemo,nemo,True,adj,-0.5,negative,SILVER
+41,"Cum nemo audiat, poeta tristis queritur dominam eum relinquisse.",poeta,poeta,True,noun,0.0,neutral,GOLD
+41,"Cum nemo audiat, poeta tristis queritur dominam eum relinquisse.",tristis,tristis,True,adj,-1.0,negative,GOLD
+41,"Cum nemo audiat, poeta tristis queritur dominam eum relinquisse.",dominam,domina,True,noun,0.5,positive,GOLD
+42,"Bono nuntio accepto, nuntius delectatus civibus nuntiat opem iam adventuram esse.",bono,bonus,True,noun,1.0,positive,SILVER
+42,"Bono nuntio accepto, nuntius delectatus civibus nuntiat opem iam adventuram esse.",nuntius,nuntius,True,noun,0.0,neutral,GOLD
+42,"Bono nuntio accepto, nuntius delectatus civibus nuntiat opem iam adventuram esse.",opem,ops,True,noun,0.0,neutral,GOLD
+43,"Vulgus surrexerunt fores aedis, necatatum et consauciatum multos.",fores,foris,True,noun,0.0,neutral,GOLD
+43,"Vulgus surrexerunt fores aedis, necatatum et consauciatum multos.",aedis,aedes,True,noun,0.0,neutral,SILVER
+43,"Vulgus surrexerunt fores aedis, necatatum et consauciatum multos.",multos,multus,True,adj,0.0,neutral,GOLD
+44,Canes denique invenerunt aprum post diem longum et miserum ita venatores id potuerunt necare,aprum,aper,True,noun,0.0,neutral,GOLD
+44,Canes denique invenerunt aprum post diem longum et miserum ita venatores id potuerunt necare,diem,dies,True,noun,0.0,neutral,GOLD
+44,Canes denique invenerunt aprum post diem longum et miserum ita venatores id potuerunt necare,longum,longus,True,adj,0.0,neutral,GOLD
+44,Canes denique invenerunt aprum post diem longum et miserum ita venatores id potuerunt necare,miserum,miser,True,adj,-1.0,negative,GOLD
+45,"Quod ea voluerat fratrem tam diu, puella celebravit quando mater peperit iterum.",fratrem,frater,True,noun,0.0,neutral,GOLD
+45,"Quod ea voluerat fratrem tam diu, puella celebravit quando mater peperit iterum.",puella,puella,True,noun,0.0,neutral,GOLD
+45,"Quod ea voluerat fratrem tam diu, puella celebravit quando mater peperit iterum.",mater,mater,True,noun,0.0,neutral,GOLD
+46,"In oratone, orator optimus fuit et igitur multas coronas laurinas vicit.",orator,orator,True,noun,0.0,neutral,GOLD
+46,"In oratone, orator optimus fuit et igitur multas coronas laurinas vicit.",optimus,bonus,True,noun,1.0,positive,SILVER
+46,"In oratone, orator optimus fuit et igitur multas coronas laurinas vicit.",multas,multus,True,adj,0.0,neutral,GOLD
+47,"Stultitiast, mater, venatum ducere invitas canes",stultitiast,stultitia,True,noun,-1.0,negative,GOLD
+47,"Stultitiast, mater, venatum ducere invitas canes",mater,mater,True,noun,0.0,neutral,GOLD
+48,"Si quis metuens vivet, liber mihi non erit umquam",liber,liber,True,noun,0.0,neutral,GOLD
+49,"imperator promisit decem milia militum celerrime discessura esse, dummodo satis copiarum reciperent.",imperator,imperator,True,noun,0.5,positive,SILVER
+49,"imperator promisit decem milia militum celerrime discessura esse, dummodo satis copiarum reciperent.",militum,miles,True,noun,0.0,neutral,GOLD
+49,"imperator promisit decem milia militum celerrime discessura esse, dummodo satis copiarum reciperent.",satis,satis,True,adj,0.5,positive,GOLD
+49,"imperator promisit decem milia militum celerrime discessura esse, dummodo satis copiarum reciperent.",copiarum,copia,True,noun,0.5,positive,GOLD
+50,Cum cūrā docet ut discipulī bene discant,r,romanus,True,adj,0.0,neutral,GOLD
+51,Sol lucet in caelo.,sol,sol,True,noun,0.0,neutral,GOLD
+51,Sol lucet in caelo.,caelo,caelum,True,noun,0.5,positive,GOLD
+52,Urbs Roma in Italia est.,urbs,urbs,True,noun,0.5,positive,GOLD
+54,Annus habet duodecim menses.,annus,annus,True,noun,0.0,neutral,GOLD
+54,Annus habet duodecim menses.,menses,mensis,True,noun,0.0,neutral,GOLD
+55,Quid est vita sine amore?,amore,amor,True,noun,1.0,positive,GOLD
+56,"O quam felix es, qui omnia perdidisti!",felix,felix,True,adj,1.0,positive,GOLD
+58,Utinam pax in mundo sit.,pax,pax,True,noun,0.5,positive,SILVER
+58,Utinam pax in mundo sit.,mundo,mundus,True,adj,1.0,positive,GOLD
+59,Puellula mea in villa cantat.,mea,meus,True,adj,0.0,neutral,SILVER
+59,Puellula mea in villa cantat.,cantat,canto,True,noun,0.0,neutral,SILVER
+62,Scientia nova in libris invenitur.,scientia,scientia,True,noun,0.0,neutral,GOLD
+62,Scientia nova in libris invenitur.,libris,liber,True,noun,0.0,neutral,GOLD
+63,Ego sum lux mundi.,lux,lux,True,noun,0.0,neutral,GOLD
+63,Ego sum lux mundi.,mundi,mundus,True,adj,1.0,positive,GOLD
+64,Respublica in periculis versatur.,respublica,respublica,True,noun,0.5,positive,GOLD
+64,Respublica in periculis versatur.,periculis,periculum,True,noun,-1.0,negative,GOLD
+65,"Deus meus, quare me dereliquisti?",deus,deus,True,noun,0.0,neutral,GOLD
+65,"Deus meus, quare me dereliquisti?",meus,meus,True,adj,0.0,neutral,SILVER
+66,Timor Domini initium sapientiae est.,timor,timor,True,noun,-0.5,negative,GOLD
+66,Timor Domini initium sapientiae est.,initium,initium,True,noun,0.0,neutral,GOLD
+66,Timor Domini initium sapientiae est.,sapientiae,sapientia,True,noun,1.0,positive,GOLD
+67,Ego felum in villa vidi.,felum,felis,True,noun,0.0,neutral,GOLD
+68,"Postquam milites in silvam intraverunt, ferae saevae eos insequebantur, et multi perierunt.",milites,miles,True,noun,0.0,neutral,GOLD
+68,"Postquam milites in silvam intraverunt, ferae saevae eos insequebantur, et multi perierunt.",ferae,fera,True,noun,0.0,neutral,GOLD
+68,"Postquam milites in silvam intraverunt, ferae saevae eos insequebantur, et multi perierunt.",multi,multus,True,adj,0.0,neutral,GOLD
+69,"Cum philosophi in academia disputarent, discipuli eorum nova praecepta didicerunt.",philosophi,philosophus,True,noun,0.0,neutral,GOLD
+70,Domus mea igne consumpta est.,domus,domus,True,noun,0.0,neutral,GOLD
+70,Domus mea igne consumpta est.,mea,meus,True,adj,0.0,neutral,SILVER
+70,Domus mea igne consumpta est.,igne,ignis,True,noun,0.0,neutral,GOLD

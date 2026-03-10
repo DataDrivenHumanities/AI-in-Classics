@@ -100,6 +100,14 @@ psql -d lemlat_db -c "select count(*) as sentiment_map from public.lemma_sentime
 psql -d lemlat_db -c "select count(*) as word_lookup from public.word_lookup;"
 ```
 
+### 6) Quick payload smoke-test (lexicon priors)
+
+```bash
+./.venv/bin/python3 scripts/latin_lexicon_annotator_debug.py \
+  --file src/sample_text/latin/rag_test_sample_1.txt \
+  --payload-only --compact --top-k 10
+```
+
 ### Tracked
 
 - `LatinAffectusv4.tsv`: lemma-level sentiment lexicon. To be used for RAG pipeline for Llama Model 
