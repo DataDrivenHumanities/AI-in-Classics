@@ -29,8 +29,8 @@ ollama pull llama3.1:8b-instruct
 From repo root:
 
 ```bash
-make build-latin LATIN_TAG=latin_model:1.0.0
-make build-greek GREEK_TAG=greek_model:1.0.0
+make build-latin LATIN_TAG=latin_ollama_model:1.0.0
+make build-greek GREEK_TAG=greek_ollama_model:1.0.0
 ```
 
 ### Verify tags exist
@@ -38,8 +38,8 @@ make build-greek GREEK_TAG=greek_model:1.0.0
 ```bash
 ollama list
 # expect lines like:
-# latin_model:1.0.0
-# greek_model:1.0.0
+# latin_ollama_model:1.0.0
+# greek_ollama_model:1.0.0
 # llama3.1:8b-instruct
 ```
 

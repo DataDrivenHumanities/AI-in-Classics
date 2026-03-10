@@ -8,7 +8,7 @@ from typing import Dict, List, Any, Tuple
 import psycopg
 from dotenv import load_dotenv
 
-from cltk.lemmatize.lat import LatinBackoffLemmatizer  # uses lat_models_cltk backoff pickles [web:39]
+from cltk.lemmatize.latin.backoff import BackoffLatinLemmatizer as LatinBackoffLemmatizer  # uses lat_models_cltk backoff pickles [web:39]
 
 
 HERE = Path(__file__).resolve().parent

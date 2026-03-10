@@ -78,7 +78,7 @@ def resolve_model(model_id: Optional[str]):
                     return d
             except Exception:
                 pass
-    return "latin_model:1.0.0"
+    return "latin_ollama_model:1.0.0"
 
 def resolve_engine(model_id: str) -> str:
     try:

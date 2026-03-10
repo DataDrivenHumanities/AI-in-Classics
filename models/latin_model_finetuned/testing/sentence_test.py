@@ -46,19 +46,17 @@ def expected_category_7(expected_sentiment: str) -> str:
 
 def normalize_prediction_7(text: str) -> str:
     s = (text or "").strip()
-    s = s.splitlines()[0].strip()
-    s = s.strip(" \t\r\n\"'`.,:;!")
     up = s.upper()
 
-    if up in LABEL_SET_7:
-        return up
-
-    # salvage label if extra text appears
+    # salvage label if extra text appears anywhere in the output
     for lab in LABELS_7:
         if lab in up:
             return lab
 
-    return up  # unknown
+    if s:
+        s = s.splitlines()[0].strip()
+        s = s.strip(" \t\r\n\"'`.,:;!")
+    return s.upper()  # unknown
 
 
 def collapse_to_3(label_7: str) -> str:

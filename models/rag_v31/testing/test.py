@@ -25,7 +25,7 @@ import requests
 import psycopg
 from dotenv import load_dotenv
 
-from cltk.lemmatize.lat import LatinBackoffLemmatizer
+from cltk.lemmatize.latin.backoff import BackoffLatinLemmatizer as LatinBackoffLemmatizer
 
 
 OLLAMA_API_URL = "http://localhost:11434/api/generate"
@@ -71,18 +71,18 @@ def expected_category_7(expected_sentiment: str) -> str:
 
 def normalize_prediction_7(text: str) -> str:
     s = (text or "").strip()
-    s = s.splitlines()[0].strip()
-    s = s.strip(" \t\r\n\"'`.,:;!")
     up = s.upper()
 
-    if up in LABEL_SET_7:
-        return up
-
+    # Search the entire output first, in case it's buried in markdown or explanation
     for lab in LABELS_7:
         if lab in up:
             return lab
 
-    return up  # unknown
+    # Fallback parsing
+    if s:
+        s = s.splitlines()[0].strip()
+        s = s.strip(" \t\r\n\"'`.,:;!")
+    return s.upper()  # unknown
 
 
 def collapse_to_3(label_7: str) -> str:
