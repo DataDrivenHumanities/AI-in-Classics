@@ -48,11 +48,20 @@ ollama list
 ```bash
 # Latin
 curl -s http://localhost:11434/api/generate \
-  -d '{"model":"latin_model:1.0.0","prompt":"Classify: Caelum pulchrum est.","stream":false}'
+  -d '{"model":"latin_ollama_model:1.0.0","prompt":"Classify: Caelum pulchrum est.","stream":false}'
 
 # Greek (example)
 curl -s http://localhost:11434/api/generate \
-  -d '{"model":"greek_model:1.0.0","prompt":"Classify: ἀγαθὸς ἀνήρ.","stream":false}'
+  -d '{"model":"greek_ollama_model:1.0.0","prompt":"Classify: ἀγαθὸς ἀνήρ.","stream":false}'
+```
+
+### App-style JSON calls (recommended)
+
+For task-specific prompts from Python, prefer `raw:true` + `format:"json"`:
+
+```bash
+curl -s http://localhost:11434/api/generate \
+  -d '{"model":"latin_ollama_model:1.0.0","prompt":"Return ONLY JSON: {\"label\":\"positive|negative|neutral\"}\\n\\nText: Caelum pulchrum est.","stream":false,"raw":true,"format":"json"}'
 ```
 
 ## Run Current latin Test

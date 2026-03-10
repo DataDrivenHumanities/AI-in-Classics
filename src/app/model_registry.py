@@ -201,7 +201,7 @@ def available_model_ids() -> Iterable[str]:
 
 def resolve_model(preferred: Optional[str]):
     data = json.loads(_REG_PATH.read_text(encoding="utf-8"))
-    default_id = data.get("default") or "latin_model:1.0.0"
+    default_id = data.get("default") or "latin_ollama_model:1.0.0"
     raw_models = data.get("models", [])
     if isinstance(raw_models, dict):
         entry_iter = list(raw_models.values())

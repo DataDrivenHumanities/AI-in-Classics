@@ -13,7 +13,7 @@ This is the “Hard-to-Soft” bridge: hard facts from DB → small injection �
 
 ---
 
-## Current State (as of today)
+## Current State (as of 2026-02-24)
 
 ### Data sources on disk
 
@@ -32,6 +32,12 @@ Convenience views for trimming fixed-width CHAR columns:
 - `lila.analysis_with_lemma` (analysis joined to lemma inventory)
 
 These are created in: `src/Lemmatizer-LTN-LiLa/ops/create_lila_schema.sql` and `src/Lemmatizer-LTN-LiLa/ops/create_lila_views.sql`.
+
+### Confirmed row counts (sanity check)
+
+- `lila.sentiment`: 6,018 rows (LatinAffectus)
+- `public.lemmas`: 65,686 rows (scraped lemma inventory)
+- `public.forms`: 2,392,406 rows (scraped inflected forms)
 
 ---
 
@@ -355,17 +361,39 @@ This gives us a deterministic “ground truth features” layer we can validate 
 
 ---
 
+## Prompt/Model Strategy (KISS)
+
+### Principle
+
+Do **not** encode UI/menu logic or “six analysis modes” into the model. The **Streamlit app** chooses the task; the LLM only receives the task-specific prompt.
+
+### Recommended approach
+
+- Keep **one** Ollama tag for Latin (the base model + sensible defaults).
+- For app calls, build **task prompts in Python** and call Ollama with:
+  - `/api/generate`
+  - `raw: true` (don’t pay the Modelfile/system-prompt token tax)
+  - `format: "json"` when you need structured output
+- Inject `LEXICON_PRIORS` by **prepending a compact JSON block** (from `LatinLexiconAnnotator.build_llm_payload(text)`) before the task instructions and the text.
+
+### What to do with the big `models/latin_model/Modelfile`
+
+- Treat it as **interactive / legacy** (nice for manual chatting), but **don’t rely on it** for the app’s deterministic pipelines.
+- If it’s causing confusion or token bloat, shrink it so it only sets identity/refusals and leaves task behavior to the runtime prompt.
+
+---
+
 ## Implementation Tasks (actionable checklist)
 
 ### Phase 1 — Data readiness
 
-- [ ] Bootstrap schema objects (one DB):
+- [x] Bootstrap schema objects (one DB):
   - `scripts/bootstrap_latin_db.py` (applies scraped schema + LiLa sentiment table)
   - `src/Lemmatizer-LTN-LiLa/ops/import_lila_data.py` (imports LEMLAT into schema `lila`, then creates views)
-- [ ] Finish scraping to populate `src/Lemmatizer-LTN/out/`
-- [ ] Initialize scraped schema (`lemmas`, `forms`, `norm()` via `src/Lemmatizer-LTN/ops/init_db.sql`)
-- [ ] Load scraped data into Postgres (per-lemma loader or aggregate loader)
-- [ ] Confirm LiLa tables + sentiment table exist and are populated
+- [x] Finish scraping to populate `src/Lemmatizer-LTN/out/`
+- [x] Initialize scraped schema (`lemmas`, `forms`, `norm()` via `src/Lemmatizer-LTN/ops/init_db.sql`)
+- [x] Load scraped data into Postgres (per-lemma loader or aggregate loader)
+- [x] Confirm LiLa tables + sentiment table exist and are populated
 
 **Relevant files (Phase 1):**
 
@@ -380,23 +408,21 @@ This gives us a deterministic “ground truth features” layer we can validate 
 
 ### Phase 2 — Testing-first “lexicon priors” (no LLM yet)
 
-- [ ] Implement `LatinLexiconAnnotator.annotate(text)` to return the deterministic priors/annotations for a passage.
-- [ ] Implement **token → lemma** via scraped lookup:
+- [x] Implement `LatinLexiconAnnotator.annotate(text)` to return the deterministic priors/annotations for a passage.
+- [x] Implement **token → lemma** via scraped lookup:
   - token → `public.forms.form_nod = norm(token)` → `lemma_id`
   - `lemma_id` → `public.lemmas.lemma_nod` (+ `public.lemmas.pos`)
-- [ ] Implement **lemma → sentiment** join (POS-disambiguated):
+- [x] Implement **lemma → sentiment** join (POS-disambiguated):
   - primary: `public.lemmas.lemma_nod = norm(lila.sentiment.lemma)` AND `pos_bucket_match`
   - fallback: `public.lemmas.lemma_nod = norm(lila.sentiment.lemma)` (lemma-only)
-- [ ] Implement POS normalization/mapping:
+- [x] Implement POS normalization/mapping:
   - map `public.lemmas.pos` into LatinAffectus buckets (`noun|adj|verb|adv|other`)
   - map `lila.sentiment.pos` into the same buckets
-- [ ] (Optional) Link lemma → `lila.lemmario_clean.id_lemma` (for stable IDs/caching):
-  - `public.lemmas.lemma_nod = norm(lila.lemmario_clean.lemma_reduced)` (fallback to `lemma`)
-  - disambiguate with POS when possible (`public.lemmas.pos` vs `lila.lemmario_clean.upostag`)
-- [ ] Build a simple CLI/dev script to run on Latin passages and print:
+- [ ] (Optional) Link lemma → `lila.lemmario_clean.id_lemma` (for stable IDs/caching)
+- [x] Build a simple CLI/dev script to run on Latin passages and print:
   - token coverage (hit/miss)
   - top-K sentiment-bearing lemmas with counts/scores
-  - ambiguous joins (multiple sentiment rows; optional `id_lemma` linking can be added later)
+  - ambiguity reports (multiple lemma candidates; lemma-only sentiment fallback rate)
 
 Quick run (prints only the LLM injection payload):
 
@@ -429,6 +455,7 @@ Quick run (prints only the LLM injection payload):
 Once the priors look correct and stable:
 
 - [ ] Inject the compact priors block into the Ollama sentiment prompt (top-K only).
+- [ ] Prefer `/api/generate` with `raw:true` and `format:"json"` for app calls.
 - [ ] A/B test with injection on/off and confirm improved consistency under negation + low coverage cases.
 
 ### Phase 5 — Cleanup/consolidation (optional but recommended)

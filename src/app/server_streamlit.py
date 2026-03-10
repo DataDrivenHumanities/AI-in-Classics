@@ -162,18 +162,22 @@ def main():
                             with st.expander("Raw scores"):
                                 st.json(res["scores"])
             else:
-                with st.spinner("Asking model..."):
-                    raw = app_func.llm_sentiment(text, model_choice)
-                parsed = app_func.parse_llm_json(raw) or {}
-                with st.container():
-                    col1, col2 = st.columns(2)
-                    with col1:
-                        st.metric("Label", (parsed.get("label") or "unknown").title())
-                    with col2:
-                        conf = parsed.get("confidence")
-                        st.metric("Confidence", conf if conf is not None else "—")
-                    with st.expander("Model output (raw)"):
-                        st.code(raw)
+                try:
+                    with st.spinner("Asking model..."):
+                        raw = app_func.llm_sentiment(text, model_choice)
+                except RuntimeError as exc:
+                    st.error(str(exc))
+                else:
+                    parsed = app_func.parse_llm_json(raw) or {}
+                    with st.container():
+                        col1, col2 = st.columns(2)
+                        with col1:
+                            st.metric("Label", (parsed.get("label") or "unknown").title())
+                        with col2:
+                            conf = parsed.get("confidence")
+                            st.metric("Confidence", conf if conf is not None else "—")
+                        with st.expander("Model output (raw)"):
+                            st.code(raw)
 
     # ---------- LLM Chat ----------
     st.markdown("---")
@@ -187,10 +191,13 @@ def main():
         messages = [{"role": "user", "content": user_q}]
         out = st.empty()
         buf = []
-        for token in chat_stream(messages, model=model_choice):
-            buf.append(token)
+        try:
+            for token in chat_stream(messages, model=model_choice):
+                buf.append(token)
+                out.markdown("".join(buf))
             out.markdown("".join(buf))
-        out.markdown("".join(buf))
+        except RuntimeError as exc:
+            st.error(str(exc))
 
 
 if __name__ == "__main__":

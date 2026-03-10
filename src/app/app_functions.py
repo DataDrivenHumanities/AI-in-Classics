@@ -3,11 +3,14 @@ import os
 import shutil
 import json
 import re
+import sys
 import uuid
 import tempfile
 import unicodedata
 from pathlib import Path
 from typing import Optional, Dict, Any
+from functools import lru_cache
+import asyncio
 import numpy as np
 import pandas as pd
 import tqdm
@@ -110,7 +113,7 @@ except Exception:
     VADER_OK = False
 
 try:
-    from .ollama_client import chat_stream
+    from .ollama_client import chat_stream, generate_json, resolve_available_model_tag
 except Exception:
     st.error(
         "Cannot import ollama_client. Make sure src/ollama_client.py exists and is importable."
@@ -405,31 +408,75 @@ def builtin_sentiment(text: str) -> Optional[dict]:
 
 def llm_sentiment(text: str, model_name: str) -> str:
     """
-    Ask the LLM to classify sentiment. We request strict JSON:
-      {"label": "positive|neutral|negative", "confidence": 0.0-1.0}
-    Streams output and returns the final collected string (may be JSON or text).
+    Ask the LLM to classify sentiment. Returns a JSON string.
+
+    Uses deterministic `LEXICON_PRIORS` (when DATABASE_URL is configured) and
+    prefers `/api/generate` with `raw:true` + `format:"json"` to avoid paying the
+    Modelfile prompt tax on every request.
     """
     # keep text reasonable for prompt size
     MAX = 6000
     clip = text[:MAX] + ("\n\n[...truncated...]" if len(text) > MAX else "")
 
-    system = (
-        "You are a strict sentiment classifier for classical text. "
-        "Return EXACT JSON with keys 'label' and 'confidence'. "
-        "Label must be one of: positive, neutral, negative. "
-        "Confidence is a float in [0,1]. No extra text."
+    priors = None
+    dsn = (os.getenv("DATABASE_URL") or "").strip()
+    if dsn:
+        try:
+            annotator = _latin_lexicon_annotator(dsn)
+            priors = annotator.build_llm_payload(clip)
+        except Exception:
+            priors = None
+
+    priors_json = (
+        json.dumps(priors, ensure_ascii=False, separators=(",", ":")) + "\n\n"
+        if isinstance(priors, dict)
+        else ""
     )
-    user = f"TEXT:\n<<<\n{clip}\n>>>"
 
-    messages = [
-        {"role": "system", "content": system},
-        {"role": "user", "content": user},
-    ]
+    prompt = (
+        "Return ONLY JSON with exactly these keys:\n"
+        '{"label":"positive|negative|neutral","confidence":number,"analysis":{"rationale":string}}.\n'
+        "No extra keys. No prose outside JSON.\n"
+        "You are classifying sentiment for LATIN text.\n"
+        "If lexicon priors are provided, treat them as weak evidence (coverage may be incomplete).\n\n"
+        f"{priors_json}"
+        f"Text:\n{clip}"
+    )
 
-    buf = []
-    for tok in chat_stream(messages, model=model_name):
-        buf.append(tok)
-    return "".join(buf)
+    model_tag = resolve_available_model_tag(model_name)
+    parsed, _raw = asyncio.run(
+        generate_json(
+            model_tag,
+            prompt,
+            num_predict=384,
+            retries=1,
+            raw=True,
+            out_format="json",
+        )
+    )
+    return json.dumps(parsed, ensure_ascii=False)
+
+
+@lru_cache(maxsize=1)
+def _latin_lexicon_import_root() -> Optional[Path]:
+    root = BASE_DIR / "src" / "Lemmatizer-LTN-LiLa"
+    return root if root.exists() else None
+
+
+@lru_cache(maxsize=1)
+def _latin_lexicon_annotator(dsn: str):
+    lex_root = _latin_lexicon_import_root()
+    if lex_root is None:
+        raise RuntimeError("Missing src/Lemmatizer-LTN-LiLa; cannot import lexicon annotator.")
+    if str(lex_root) not in sys.path:
+        sys.path.insert(0, str(lex_root))
+
+    from rag.latin_lexicon_annotator import LatinLexiconAnnotator, LatinLexiconAnnotatorConfig
+
+    return LatinLexiconAnnotator(
+        dsn=dsn,
+        config=LatinLexiconAnnotatorConfig(top_k=12),
+    )
 
 def hf_sentiment(text: str, hf_classifier_params: Dict[str, Any]):
     """
