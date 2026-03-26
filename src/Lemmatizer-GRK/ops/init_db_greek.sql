@@ -3,7 +3,7 @@ CREATE EXTENSION IF NOT EXISTS unaccent;
 CREATE EXTENSION IF NOT EXISTS pg_trgm;
 CREATE EXTENSION IF NOT EXISTS citext;
 
--- Immutable normalizer for indexes/expressions
+-- Immutable normalizer for indexes/expressions (Kept for backwards compatibility)
 CREATE OR REPLACE FUNCTION norm(t text) RETURNS text
 LANGUAGE sql IMMUTABLE PARALLEL SAFE AS $$
   SELECT unaccent(lower(t));
@@ -12,17 +12,17 @@ $$;
 -- 1. Lemmas Table
 CREATE TABLE IF NOT EXISTS lemmas (
   id          BIGSERIAL PRIMARY KEY,
-  lemma_code  TEXT,
+  lemma_code  TEXT UNIQUE,  -- 🌟 UPGRADED: Unique on Perseus ID to prevent heteronym overwriting
   lemma_nod   CITEXT NOT NULL,
   lemma_diac  TEXT,
   english_definition TEXT,
   pos         TEXT,
   gender      TEXT,
   page_url    TEXT,
-  created_at  TIMESTAMPTZ DEFAULT now(),
-  UNIQUE (lemma_nod)
+  created_at  TIMESTAMPTZ DEFAULT now()
 );
 
+CREATE INDEX IF NOT EXISTS lemmas_nod_idx ON lemmas(lemma_nod);
 CREATE INDEX IF NOT EXISTS lemmas_trgm_idx ON lemmas USING gin (lemma_nod gin_trgm_ops);
 
 -- 2. Forms Table
@@ -49,11 +49,12 @@ CREATE INDEX IF NOT EXISTS forms_form_nod_idx ON forms(form_nod);
 CREATE INDEX IF NOT EXISTS forms_form_trgm_idx ON forms USING gin (form_nod gin_trgm_ops);
 
 -- 3. Full Text Search (FTS) Columns
+-- 🌟 UPGRADED: Uses the perfectly stripped _nod columns from Python instead of Postgres unaccent
 ALTER TABLE lemmas ADD COLUMN IF NOT EXISTS lemma_fts tsvector
-  GENERATED ALWAYS AS (to_tsvector('simple', norm(coalesce(lemma_diac,'')))) STORED;
+  GENERATED ALWAYS AS (to_tsvector('simple', coalesce(lemma_nod,''))) STORED;
 
 ALTER TABLE forms  ADD COLUMN IF NOT EXISTS form_fts tsvector
-  GENERATED ALWAYS AS (to_tsvector('simple', norm(coalesce(form_diac ,'')))) STORED;
+  GENERATED ALWAYS AS (to_tsvector('simple', coalesce(form_nod,''))) STORED;
 
 CREATE INDEX IF NOT EXISTS lemmas_fts_idx ON lemmas USING gin(lemma_fts);
 CREATE INDEX IF NOT EXISTS forms_fts_idx  ON forms  USING gin(form_fts);

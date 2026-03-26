@@ -13,11 +13,11 @@ jobs:
     name: Default
   steps:
   # Setup Python
-  - task: UsePythonVersion@0
-    inputs:
-      versionSpec: '3.12'
-      addToPath: true
-    displayName: 'Setup Python 3.12'
+  # - task: UsePythonVersion@0
+  #   inputs:
+  #     versionSpec: '3.12'
+  #     addToPath: true
+  #   displayName: 'Setup Python 3.12'
 
   # Setup Virtual Environment, Install Dependencies, Run Scraper
   - powershell: |
