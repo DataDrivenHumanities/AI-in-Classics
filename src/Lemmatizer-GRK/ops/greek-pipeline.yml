@@ -21,12 +21,13 @@ jobs:
 
   # Setup Virtual Environment, Install Dependencies, Run Scraper
   - powershell: |
-      if (-not (Test-Path ".venv")) {
-        Write-Host "Creating new virtual environment..."
-        python -m venv .venv
-      } else {
-        Write-Host "Using existing virtual environment..."
+      if (Test-Path ".venv") {
+        Write-Host "Removing leftover broken environment..."
+        Remove-Item -Recurse -Force ".venv"
       }
+      Write-Host "Creating fresh virtual environment..."
+      py -m venv .venv
+      
       Write-Host "Installing dependencies..."
       .\.venv\Scripts\python.exe -m pip install --upgrade pip
       .\.venv\Scripts\python.exe -m pip install -r src/Lemmatizer-GRK/etl/requirements.txt
@@ -74,3 +75,14 @@ jobs:
       # (UPDATED to --max-workers 10 for much faster cloud uploading)
       .\.venv\Scripts\python.exe src/Lemmatizer-GRK/tools/upload_to_drive.py --service-account-json "$jsonPath" --folder-id "$folderId" --files "$outDir" --max-workers 10 2>&1
     displayName: 'Deliver Data to Google Drive'
+
+  # 3. Clean up local files to save hard drive space
+  - powershell: |
+      Write-Host "Cleaning up local CSV files..."
+      $outDir = "$(Build.SourcesDirectory)\src\Lemmatizer-GRK\out"
+      if (Test-Path $outDir) {
+        Remove-Item "$outDir\*.csv" -Force
+        Write-Host "Cleanup complete! Hard drive space saved."
+      }
+    displayName: 'Clean Up Local Files'
+    condition: always()
