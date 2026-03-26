@@ -73,7 +73,7 @@ jobs:
       
       # 2>&1 merges stderr into stdout so PowerShell doesn't hide errors
       # (UPDATED to --max-workers 10 for much faster cloud uploading)
-      .\.venv\Scripts\python.exe src/Lemmatizer-GRK/tools/upload_to_drive.py --service-account-json "$jsonPath" --folder-id "$folderId" --files "$outDir" --max-workers 10 2>&1
+      .\.venv\Scripts\python.exe src/Lemmatizer-GRK/tools/upload_to_drive.py --service-account-json "$jsonPath" --folder-id "$folderId" --files "$outDir" --max-workers 1 2>&1
     displayName: 'Deliver Data to Google Drive'
 
   # 3. Clean up local files to save hard drive space
