@@ -26,7 +26,7 @@ jobs:
         Remove-Item -Recurse -Force ".venv"
       }
       Write-Host "Creating fresh virtual environment..."
-      py -m venv .venv
+      python -m venv .venv
       
       Write-Host "Installing dependencies..."
       .\.venv\Scripts\python.exe -m pip install --upgrade pip
