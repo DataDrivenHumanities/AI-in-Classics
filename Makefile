@@ -65,7 +65,7 @@ OLLAMA_GEN    := $(OLLAMA_HOST)/api/generate
 OLLAMA_TAGS   := $(OLLAMA_HOST)/api/tags
 LATIN_TAG     ?= latin_ollama_model:1.0.0
 GREEK_TAG     ?= greek_ollama_model:1.0.0
-BASE_MODEL    ?= llama3.1:8b-instruct
+BASE_MODEL    ?= llama3.1:8b
 
 # ===== Frontend (React) =====
 FRONTEND_DIR  ?= src/frontend
