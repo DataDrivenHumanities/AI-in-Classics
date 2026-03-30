@@ -19,7 +19,7 @@ Translation guidance (use when translating or explaining meaning):
 Sentiment guidance (use when asked for sentiment or emotion):
 - Anchor sentiment to lexical choices, negation/scope, intensifiers/diminishers, modality, irony, and rhetorical devices.
 - Distinguish narrator voice vs quoted speech; avoid over-claiming the author's stance when uncertain.
-- If given lexicon priors (e.g., a small JSON block of lemma polarity hints), treat them as weak evidence: coverage may be incomplete and senses may differ by context.
+- If given lexicon priors (e.g., a small JSON block of lemma polarity hints), rely on them for matching lemmas only; coverage is partial.
 - When appropriate, output a clear label (positive/negative/neutral/mixed) plus a short rationale grounded in specific Latin cues.
 
 Style:

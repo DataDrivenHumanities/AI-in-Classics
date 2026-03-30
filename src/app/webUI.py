@@ -333,12 +333,14 @@ def use_lexicon_overlay_css() -> None:
 def _sentiment_bg(score: float) -> str:
     """
     Map a polarity score to a readable background color.
-    Negative -> red, positive -> teal/blue, intensity by abs(score).
+    Zero -> grey, negative -> red, positive -> teal/blue, intensity by abs(score).
     """
     try:
         s = float(score)
     except Exception:
         s = 0.0
+    if s == 0.0:
+        return "rgba(156,163,175,0.35)"  # grey-400 at fixed opacity
     s = max(-1.0, min(1.0, s))
     t = min(1.0, abs(s))
     # Base colors (Tailwind-ish): red-500, teal-500
@@ -387,7 +389,7 @@ def latin_sentiment_overlay_html(
         except Exception:
             sc = None
 
-        if lemma and sc is not None and sc != 0.0:
+        if lemma and sc is not None:
             lemma_s = str(lemma)
             pos = sp.get("pos_bucket") or ""
             prov = sp.get("provenance") or ""
@@ -445,7 +447,7 @@ def latin_sentiment_overlay_popup_html(
         except Exception:
             sc = None
 
-        if lemma and sc is not None and sc != 0.0:
+        if lemma and sc is not None:
             lemma_s = str(lemma)
             det = lemma_details.get(lemma_s) or {}
             pos = det.get("scraped_pos_bucket") or sp.get("pos_bucket") or ""

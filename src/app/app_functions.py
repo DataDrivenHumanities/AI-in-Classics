@@ -459,7 +459,7 @@ def llm_sentiment(text: str, model_name: str) -> str:
         '{"label":"positive|negative|neutral","confidence":number,"analysis":{"rationale":string}}.\n'
         "No extra keys. No prose outside JSON.\n"
         "You are classifying sentiment for LATIN text.\n"
-        "If lexicon priors are provided, treat them as weak evidence (coverage may be incomplete).\n\n"
+        "If lexicon priors are present, rely on them for matching lemmas only; coverage is partial.\n\n"
         f"{priors_json}"
         f"Text:\n{clip}"
     )
@@ -570,7 +570,7 @@ def latin_llm_analyze(
     prompt = (
         "You are a Latin text analysis assistant.\n"
         "Answer using the provided Latin text; do not ask the user to paste it.\n"
-        "If lexicon priors are included, treat them as weak evidence (coverage may be incomplete).\n\n"
+        "If lexicon priors are present, rely on them for matching lemmas only; coverage is partial.\n\n"
         f"{priors_json}"
         f"{meta_block}"
         f"Task:\n{task}\n\n"
@@ -610,7 +610,7 @@ def build_latin_chat_system_prompt(
         "The user will ask questions about the provided Latin text.\n"
         "Do not ask the user to paste the text; it is included below.\n"
         "If the question cannot be answered from the text, say what is missing.\n"
-        "If lexicon priors are included, treat them as weak evidence.\n\n"
+        "If lexicon priors are present, rely on them for matching lemmas only; coverage is partial.\n\n"
         f"{priors_json}"
         f"{meta_block}"
         f"Latin text:\n{clip}\n"
