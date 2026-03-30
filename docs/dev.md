@@ -101,7 +101,7 @@ models/
 > If your repo instead uses `models/latin_model/Modelfile` and `models/greek_model/Modelfile`, either rename to `latin/` and `greek/`, **or** update the Makefile paths accordingly.
 
 Build:
-
+(linux only req apt install jq -y)
 ```bash
 make build-latin
 make build-greek

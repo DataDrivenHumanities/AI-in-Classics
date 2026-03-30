@@ -5,9 +5,20 @@ import csv
 import argparse
 from pathlib import Path
 import psycopg
+from dotenv import load_dotenv
 
 BASE = Path(__file__).resolve().parents[1]
 OUT_DIR = BASE / "out"
+
+# Load .env from current directory or parents
+env_path = Path(".env")
+if not env_path.exists():
+    # Try looking up
+    for parent in Path.cwd().parents:
+        if (parent / ".env").exists():
+            env_path = parent / ".env"
+            break
+load_dotenv(env_path)
 
 
 def main():
@@ -18,6 +29,7 @@ def main():
     args = ap.parse_args()
 
     dsn = os.getenv("DATABASE_URL")
+    print(dsn)
     if not dsn:
         raise SystemExit("DATABASE_URL not set")
 
