@@ -117,7 +117,7 @@ FE_PM_DEV     := npm run dev -- -p $(FRONTEND_PORT)
 FE_PM_BUILD   := npm run build
 FE_PM_PREVIEW := npm run start -- -p $(FRONTEND_PORT)
 FE_PM_INSTALL := npm install
-endif
+
 
 .PHONY: help setup setup-venv env run web check fix test \
         docker-build docker-run docker-dev docker-bash docker-clean \

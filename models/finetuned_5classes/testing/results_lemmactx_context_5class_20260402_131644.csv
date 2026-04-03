@@ -1,0 +1,782 @@
+idx,sentence,lemmas,context_hits,context_lemmas_used,context_polarities,context_debug,prompt_context_text
+1,Caelum pulchrum est.,. caelum pulcher sum,2,pulcher | caelum,pulcher:1.0 | caelum:0.5,lemma=pulcher; pos=adj; polarity_score=1.0; has_polarity=positive; provenance=GOLD || lemma=caelum; pos=noun; polarity_score=0.5; has_polarity=positive; provenance=GOLD,"Lexicon evidence (lila.sentiment; lemma-matched):
+- lemma=pulcher pos=adj polarity_score=1.0 has_polarity=positive provenance=GOLD
+- lemma=caelum pos=noun polarity_score=0.5 has_polarity=positive provenance=GOLD
+
+Return exactly one label from this set:
+VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUTRAL
+SOMEWHAT NEGATIVE
+VERY NEGATIVE
+"
+2,Puer discipulus malus est.,. discipulus malus puer sum,4,malus | malus | discipulus | puer,malus:-1.0 | malus:-1.0 | discipulus:0.0 | puer:0.0,lemma=malus; pos=noun; polarity_score=-1.0; has_polarity=negative; provenance=SILVER || lemma=malus; pos=adj; polarity_score=-1.0; has_polarity=negative; provenance=GOLD || lemma=discipulus; pos=noun; polarity_score=0.0; has_polarity=neutral; provenance=GOLD || lemma=puer; pos=noun; polarity_score=0.0; has_polarity=neutral; provenance=GOLD,"Lexicon evidence (lila.sentiment; lemma-matched):
+- lemma=malus pos=noun polarity_score=-1.0 has_polarity=negative provenance=SILVER
+- lemma=malus pos=adj polarity_score=-1.0 has_polarity=negative provenance=GOLD
+- lemma=discipulus pos=noun polarity_score=0.0 has_polarity=neutral provenance=GOLD
+- lemma=puer pos=noun polarity_score=0.0 has_polarity=neutral provenance=GOLD
+
+Return exactly one label from this set:
+VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUTRAL
+SOMEWHAT NEGATIVE
+VERY NEGATIVE
+"
+3,Copiae amiserunt bellum.,. amitto bellum copia,2,copia | bellum,copia:0.5 | bellum:0.0,lemma=copia; pos=noun; polarity_score=0.5; has_polarity=positive; provenance=GOLD || lemma=bellum; pos=noun; polarity_score=0.0; has_polarity=neutral; provenance=GOLD,"Lexicon evidence (lila.sentiment; lemma-matched):
+- lemma=copia pos=noun polarity_score=0.5 has_polarity=positive provenance=GOLD
+- lemma=bellum pos=noun polarity_score=0.0 has_polarity=neutral provenance=GOLD
+
+Return exactly one label from this set:
+VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUTRAL
+SOMEWHAT NEGATIVE
+VERY NEGATIVE
+"
+4,Pater laudabat filium.,. filius laudo pater,2,filius | pater,filius:0.0 | pater:0.0,lemma=filius; pos=noun; polarity_score=0.0; has_polarity=neutral; provenance=GOLD || lemma=pater; pos=noun; polarity_score=0.0; has_polarity=neutral; provenance=GOLD,"Lexicon evidence (lila.sentiment; lemma-matched):
+- lemma=filius pos=noun polarity_score=0.0 has_polarity=neutral provenance=GOLD
+- lemma=pater pos=noun polarity_score=0.0 has_polarity=neutral provenance=GOLD
+
+Return exactly one label from this set:
+VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUTRAL
+SOMEWHAT NEGATIVE
+VERY NEGATIVE
+"
+5,Marcus Brutus tradidit suum amicum.,. amicus brutus marcus suus trado,3,amicus | amicus | brutus,amicus:1.0 | amicus:1.0 | brutus:-1.0,lemma=amicus; pos=adj; polarity_score=1.0; has_polarity=positive; provenance=GOLD || lemma=amicus; pos=noun; polarity_score=1.0; has_polarity=positive; provenance=GOLD || lemma=brutus; pos=adj; polarity_score=-1.0; has_polarity=negative; provenance=SILVER,"Lexicon evidence (lila.sentiment; lemma-matched):
+- lemma=amicus pos=adj polarity_score=1.0 has_polarity=positive provenance=GOLD
+- lemma=amicus pos=noun polarity_score=1.0 has_polarity=positive provenance=GOLD
+- lemma=brutus pos=adj polarity_score=-1.0 has_polarity=negative provenance=SILVER
+
+Return exactly one label from this set:
+VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUTRAL
+SOMEWHAT NEGATIVE
+VERY NEGATIVE
+"
+6,Ego optimus miles eram.,. bonus ego miles sum,3,bonus | bonus | miles,bonus:1.0 | bonus:1.0 | miles:0.0,lemma=bonus; pos=adj; polarity_score=1.0; has_polarity=positive; provenance=GOLD || lemma=bonus; pos=noun; polarity_score=1.0; has_polarity=positive; provenance=SILVER || lemma=miles; pos=noun; polarity_score=0.0; has_polarity=neutral; provenance=GOLD,"Lexicon evidence (lila.sentiment; lemma-matched):
+- lemma=bonus pos=adj polarity_score=1.0 has_polarity=positive provenance=GOLD
+- lemma=bonus pos=noun polarity_score=1.0 has_polarity=positive provenance=SILVER
+- lemma=miles pos=noun polarity_score=0.0 has_polarity=neutral provenance=GOLD
+
+Return exactly one label from this set:
+VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUTRAL
+SOMEWHAT NEGATIVE
+VERY NEGATIVE
+"
+7,Quae scelera videmus?,? qui scelus video,1,scelus,scelus:-1.0,lemma=scelus; pos=noun; polarity_score=-1.0; has_polarity=negative; provenance=GOLD,"Lexicon evidence (lila.sentiment; lemma-matched):
+- lemma=scelus pos=noun polarity_score=-1.0 has_polarity=negative provenance=GOLD
+
+Return exactly one label from this set:
+VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUTRAL
+SOMEWHAT NEGATIVE
+VERY NEGATIVE
+"
+8,Malum consilium est.,. consilium malum sum,2,malum | consilium,malum:-1.0 | consilium:0.5,lemma=malum; pos=noun; polarity_score=-1.0; has_polarity=negative; provenance=GOLD || lemma=consilium; pos=noun; polarity_score=0.5; has_polarity=positive; provenance=GOLD,"Lexicon evidence (lila.sentiment; lemma-matched):
+- lemma=malum pos=noun polarity_score=-1.0 has_polarity=negative provenance=GOLD
+- lemma=consilium pos=noun polarity_score=0.5 has_polarity=positive provenance=GOLD
+
+Return exactly one label from this set:
+VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUTRAL
+SOMEWHAT NEGATIVE
+VERY NEGATIVE
+"
+9,Sum amicus eius,amicus is sum,2,amicus | amicus,amicus:1.0 | amicus:1.0,lemma=amicus; pos=adj; polarity_score=1.0; has_polarity=positive; provenance=GOLD || lemma=amicus; pos=noun; polarity_score=1.0; has_polarity=positive; provenance=GOLD,"Lexicon evidence (lila.sentiment; lemma-matched):
+- lemma=amicus pos=adj polarity_score=1.0 has_polarity=positive provenance=GOLD
+- lemma=amicus pos=noun polarity_score=1.0 has_polarity=positive provenance=GOLD
+
+Return exactly one label from this set:
+VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUTRAL
+SOMEWHAT NEGATIVE
+VERY NEGATIVE
+"
+10,Brutus te laudavit,brutus laudo tu,1,brutus,brutus:-1.0,lemma=brutus; pos=adj; polarity_score=-1.0; has_polarity=negative; provenance=SILVER,"Lexicon evidence (lila.sentiment; lemma-matched):
+- lemma=brutus pos=adj polarity_score=-1.0 has_polarity=negative provenance=SILVER
+
+Return exactly one label from this set:
+VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUTRAL
+SOMEWHAT NEGATIVE
+VERY NEGATIVE
+"
+11,Patria delebatur,deleo patrius,1,patrius,patrius:0.0,lemma=patrius; pos=adj; polarity_score=0.0; has_polarity=neutral; provenance=GOLD,"Lexicon evidence (lila.sentiment; lemma-matched):
+- lemma=patrius pos=adj polarity_score=0.0 has_polarity=neutral provenance=GOLD
+
+Return exactly one label from this set:
+VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUTRAL
+SOMEWHAT NEGATIVE
+VERY NEGATIVE
+"
+12,Domus ustus erat.,. domus sum ustus,1,domus,domus:0.0,lemma=domus; pos=noun; polarity_score=0.0; has_polarity=neutral; provenance=GOLD,"Lexicon evidence (lila.sentiment; lemma-matched):
+- lemma=domus pos=noun polarity_score=0.0 has_polarity=neutral provenance=GOLD
+
+Return exactly one label from this set:
+VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUTRAL
+SOMEWHAT NEGATIVE
+VERY NEGATIVE
+"
+13,Gladiator praemium vicit.,. gladiator praemium vico,2,praemium | gladiator,praemium:1.0 | gladiator:0.0,lemma=praemium; pos=noun; polarity_score=1.0; has_polarity=positive; provenance=GOLD || lemma=gladiator; pos=noun; polarity_score=0.0; has_polarity=neutral; provenance=GOLD,"Lexicon evidence (lila.sentiment; lemma-matched):
+- lemma=praemium pos=noun polarity_score=1.0 has_polarity=positive provenance=GOLD
+- lemma=gladiator pos=noun polarity_score=0.0 has_polarity=neutral provenance=GOLD
+
+Return exactly one label from this set:
+VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUTRAL
+SOMEWHAT NEGATIVE
+VERY NEGATIVE
+"
+14,Vita eius erat nimis brevis.,. brevus is nimis sum vita,0,,,,"Lexicon evidence (lila.sentiment): (no lemma matches found)
+
+Return exactly one label from this set:
+VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUTRAL
+SOMEWHAT NEGATIVE
+VERY NEGATIVE
+"
+15,Panis fuit bonus.,. bonus panis sum,3,bonus | bonus | panis,bonus:1.0 | bonus:1.0 | panis:0.0,lemma=bonus; pos=adj; polarity_score=1.0; has_polarity=positive; provenance=GOLD || lemma=bonus; pos=noun; polarity_score=1.0; has_polarity=positive; provenance=SILVER || lemma=panis; pos=noun; polarity_score=0.0; has_polarity=neutral; provenance=GOLD,"Lexicon evidence (lila.sentiment; lemma-matched):
+- lemma=bonus pos=adj polarity_score=1.0 has_polarity=positive provenance=GOLD
+- lemma=bonus pos=noun polarity_score=1.0 has_polarity=positive provenance=SILVER
+- lemma=panis pos=noun polarity_score=0.0 has_polarity=neutral provenance=GOLD
+
+Return exactly one label from this set:
+VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUTRAL
+SOMEWHAT NEGATIVE
+VERY NEGATIVE
+"
+16,Post paucas horas Caesar Asiam cepit,asia caesar cepio hora paucus post,3,caesar | hora | paucus,caesar:0.5 | hora:0.0 | paucus:0.0,lemma=caesar; pos=noun; polarity_score=0.5; has_polarity=positive; provenance=SILVER || lemma=hora; pos=noun; polarity_score=0.0; has_polarity=neutral; provenance=GOLD || lemma=paucus; pos=adj; polarity_score=0.0; has_polarity=neutral; provenance=GOLD,"Lexicon evidence (lila.sentiment; lemma-matched):
+- lemma=caesar pos=noun polarity_score=0.5 has_polarity=positive provenance=SILVER
+- lemma=hora pos=noun polarity_score=0.0 has_polarity=neutral provenance=GOLD
+- lemma=paucus pos=adj polarity_score=0.0 has_polarity=neutral provenance=GOLD
+
+Return exactly one label from this set:
+VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUTRAL
+SOMEWHAT NEGATIVE
+VERY NEGATIVE
+"
+17,Mater beatum infantem bene curat.,. beatus bene curo infans mater,4,beatus | infans | infans | mater,beatus:1.0 | infans:-0.5 | infans:0.0 | mater:0.0,lemma=beatus; pos=adj; polarity_score=1.0; has_polarity=positive; provenance=GOLD || lemma=infans; pos=adj; polarity_score=-0.5; has_polarity=negative; provenance=SILVER || lemma=infans; pos=noun; polarity_score=0.0; has_polarity=neutral; provenance=SILVER || lemma=mater; pos=noun; polarity_score=0.0; has_polarity=neutral; provenance=GOLD,"Lexicon evidence (lila.sentiment; lemma-matched):
+- lemma=beatus pos=adj polarity_score=1.0 has_polarity=positive provenance=GOLD
+- lemma=infans pos=adj polarity_score=-0.5 has_polarity=negative provenance=SILVER
+- lemma=infans pos=noun polarity_score=0.0 has_polarity=neutral provenance=SILVER
+- lemma=mater pos=noun polarity_score=0.0 has_polarity=neutral provenance=GOLD
+
+Return exactly one label from this set:
+VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUTRAL
+SOMEWHAT NEGATIVE
+VERY NEGATIVE
+"
+18,Imperator non curat de salute suae nationis.,. curo de imperator natio non salus suus,3,salus | imperator | natio,salus:1.0 | imperator:0.5 | natio:0.0,lemma=salus; pos=noun; polarity_score=1.0; has_polarity=positive; provenance=GOLD || lemma=imperator; pos=noun; polarity_score=0.5; has_polarity=positive; provenance=SILVER || lemma=natio; pos=noun; polarity_score=0.0; has_polarity=neutral; provenance=SILVER,"Lexicon evidence (lila.sentiment; lemma-matched):
+- lemma=salus pos=noun polarity_score=1.0 has_polarity=positive provenance=GOLD
+- lemma=imperator pos=noun polarity_score=0.5 has_polarity=positive provenance=SILVER
+- lemma=natio pos=noun polarity_score=0.0 has_polarity=neutral provenance=SILVER
+
+Return exactly one label from this set:
+VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUTRAL
+SOMEWHAT NEGATIVE
+VERY NEGATIVE
+"
+19,Mater paterque suos pueros neglexerunt.,. mater neglego paterqum puer suus,2,mater | puer,mater:0.0 | puer:0.0,lemma=mater; pos=noun; polarity_score=0.0; has_polarity=neutral; provenance=GOLD || lemma=puer; pos=noun; polarity_score=0.0; has_polarity=neutral; provenance=GOLD,"Lexicon evidence (lila.sentiment; lemma-matched):
+- lemma=mater pos=noun polarity_score=0.0 has_polarity=neutral provenance=GOLD
+- lemma=puer pos=noun polarity_score=0.0 has_polarity=neutral provenance=GOLD
+
+Return exactly one label from this set:
+VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUTRAL
+SOMEWHAT NEGATIVE
+VERY NEGATIVE
+"
+20,Puer miser ab animali saevo necatus erat.,. ab animal miser neco puer saevo sum,3,miser | animal | puer,miser:-1.0 | animal:0.0 | puer:0.0,lemma=miser; pos=adj; polarity_score=-1.0; has_polarity=negative; provenance=GOLD || lemma=animal; pos=noun; polarity_score=0.0; has_polarity=neutral; provenance=GOLD || lemma=puer; pos=noun; polarity_score=0.0; has_polarity=neutral; provenance=GOLD,"Lexicon evidence (lila.sentiment; lemma-matched):
+- lemma=miser pos=adj polarity_score=-1.0 has_polarity=negative provenance=GOLD
+- lemma=animal pos=noun polarity_score=0.0 has_polarity=neutral provenance=GOLD
+- lemma=puer pos=noun polarity_score=0.0 has_polarity=neutral provenance=GOLD
+
+Return exactly one label from this set:
+VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUTRAL
+SOMEWHAT NEGATIVE
+VERY NEGATIVE
+"
+21,Venator ursam post longam pugnam necavit.,. longus necahio post pugna urdeo venator,2,pugna | longus,pugna:-1.0 | longus:0.0,lemma=pugna; pos=noun; polarity_score=-1.0; has_polarity=negative; provenance=SILVER || lemma=longus; pos=adj; polarity_score=0.0; has_polarity=neutral; provenance=GOLD,"Lexicon evidence (lila.sentiment; lemma-matched):
+- lemma=pugna pos=noun polarity_score=-1.0 has_polarity=negative provenance=SILVER
+- lemma=longus pos=adj polarity_score=0.0 has_polarity=neutral provenance=GOLD
+
+Return exactly one label from this set:
+VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUTRAL
+SOMEWHAT NEGATIVE
+VERY NEGATIVE
+"
+22,"Post redierunt Romam, nautae usi sunt otium.",", . nauta otium post redeo roma sum utor",2,otium | nauta,otium:0.5 | nauta:0.0,lemma=otium; pos=noun; polarity_score=0.5; has_polarity=positive; provenance=SILVER || lemma=nauta; pos=noun; polarity_score=0.0; has_polarity=neutral; provenance=GOLD,"Lexicon evidence (lila.sentiment; lemma-matched):
+- lemma=otium pos=noun polarity_score=0.5 has_polarity=positive provenance=SILVER
+- lemma=nauta pos=noun polarity_score=0.0 has_polarity=neutral provenance=GOLD
+
+Return exactly one label from this set:
+VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUTRAL
+SOMEWHAT NEGATIVE
+VERY NEGATIVE
+"
+23,Puella est laeta videre suum fratrem minorem.,. frater laetus paruus puella sum suus vido,4,laetus | frater | paruus | puella,laetus:1.0 | frater:0.0 | paruus:0.0 | puella:0.0,lemma=laetus; pos=adj; polarity_score=1.0; has_polarity=positive; provenance=GOLD || lemma=frater; pos=noun; polarity_score=0.0; has_polarity=neutral; provenance=GOLD || lemma=paruus; pos=adj; polarity_score=0.0; has_polarity=neutral; provenance=GOLD || lemma=puella; pos=noun; polarity_score=0.0; has_polarity=neutral; provenance=GOLD,"Lexicon evidence (lila.sentiment; lemma-matched):
+- lemma=laetus pos=adj polarity_score=1.0 has_polarity=positive provenance=GOLD
+- lemma=frater pos=noun polarity_score=0.0 has_polarity=neutral provenance=GOLD
+- lemma=paruus pos=adj polarity_score=0.0 has_polarity=neutral provenance=GOLD
+- lemma=puella pos=noun polarity_score=0.0 has_polarity=neutral provenance=GOLD
+
+Return exactly one label from this set:
+VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUTRAL
+SOMEWHAT NEGATIVE
+VERY NEGATIVE
+"
+24,Navis confractus est ab hostibus Romae.,. ab confraho hostus nav roma sum,0,,,,"Lexicon evidence (lila.sentiment): (no lemma matches found)
+
+Return exactly one label from this set:
+VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUTRAL
+SOMEWHAT NEGATIVE
+VERY NEGATIVE
+"
+25,Heros erat qui multos cives servavit.,. civis herus multus qui servo sum,2,herus | multus,herus:0.0 | multus:0.0,lemma=herus; pos=noun; polarity_score=0.0; has_polarity=neutral; provenance=GOLD || lemma=multus; pos=adj; polarity_score=0.0; has_polarity=neutral; provenance=GOLD,"Lexicon evidence (lila.sentiment; lemma-matched):
+- lemma=herus pos=noun polarity_score=0.0 has_polarity=neutral provenance=GOLD
+- lemma=multus pos=adj polarity_score=0.0 has_polarity=neutral provenance=GOLD
+
+Return exactly one label from this set:
+VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUTRAL
+SOMEWHAT NEGATIVE
+VERY NEGATIVE
+"
+26,Urbs ab hostibus malis victa deletaque est.,. ab deleo hostus malus sum urbs vico,3,malus | malus | urbs,malus:-1.0 | malus:-1.0 | urbs:0.5,lemma=malus; pos=noun; polarity_score=-1.0; has_polarity=negative; provenance=SILVER || lemma=malus; pos=adj; polarity_score=-1.0; has_polarity=negative; provenance=GOLD || lemma=urbs; pos=noun; polarity_score=0.5; has_polarity=positive; provenance=GOLD,"Lexicon evidence (lila.sentiment; lemma-matched):
+- lemma=malus pos=noun polarity_score=-1.0 has_polarity=negative provenance=SILVER
+- lemma=malus pos=adj polarity_score=-1.0 has_polarity=negative provenance=GOLD
+- lemma=urbs pos=noun polarity_score=0.5 has_polarity=positive provenance=GOLD
+
+Return exactly one label from this set:
+VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUTRAL
+SOMEWHAT NEGATIVE
+VERY NEGATIVE
+"
+27,Magna facta discipulorum eius magistro veteri placuerunt.,. discipulus facio is magister magnus placeo veterus,3,magister | discipulus | magnus,magister:0.5 | discipulus:0.0 | magnus:0.0,lemma=magister; pos=noun; polarity_score=0.5; has_polarity=positive; provenance=GOLD || lemma=discipulus; pos=noun; polarity_score=0.0; has_polarity=neutral; provenance=GOLD || lemma=magnus; pos=adj; polarity_score=0.0; has_polarity=neutral; provenance=GOLD,"Lexicon evidence (lila.sentiment; lemma-matched):
+- lemma=magister pos=noun polarity_score=0.5 has_polarity=positive provenance=GOLD
+- lemma=discipulus pos=noun polarity_score=0.0 has_polarity=neutral provenance=GOLD
+- lemma=magnus pos=adj polarity_score=0.0 has_polarity=neutral provenance=GOLD
+
+Return exactly one label from this set:
+VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUTRAL
+SOMEWHAT NEGATIVE
+VERY NEGATIVE
+"
+28,Puellae iuveni curiosaeque libet in agros migrare.,. ager curiosus in iuven libeo migro puella,2,ager | puella,ager:0.0 | puella:0.0,lemma=ager; pos=noun; polarity_score=0.0; has_polarity=neutral; provenance=GOLD || lemma=puella; pos=noun; polarity_score=0.0; has_polarity=neutral; provenance=GOLD,"Lexicon evidence (lila.sentiment; lemma-matched):
+- lemma=ager pos=noun polarity_score=0.0 has_polarity=neutral provenance=GOLD
+- lemma=puella pos=noun polarity_score=0.0 has_polarity=neutral provenance=GOLD
+
+Return exactly one label from this set:
+VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUTRAL
+SOMEWHAT NEGATIVE
+VERY NEGATIVE
+"
+29,Sol ita lucet ut fruges celeriter crescant.,. celeriter cresco frus ita luceo sol ut,2,frus | sol,frus:0.0 | sol:0.0,lemma=frus; pos=noun; polarity_score=0.0; has_polarity=neutral; provenance=SILVER || lemma=sol; pos=noun; polarity_score=0.0; has_polarity=neutral; provenance=GOLD,"Lexicon evidence (lila.sentiment; lemma-matched):
+- lemma=frus pos=noun polarity_score=0.0 has_polarity=neutral provenance=SILVER
+- lemma=sol pos=noun polarity_score=0.0 has_polarity=neutral provenance=GOLD
+
+Return exactly one label from this set:
+VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUTRAL
+SOMEWHAT NEGATIVE
+VERY NEGATIVE
+"
+30,Imperator iussit milites interficere sine misericordia.,. imperator interficio iusso miles misericordia sine,3,misericordia | imperator | miles,misericordia:1.0 | imperator:0.5 | miles:0.0,lemma=misericordia; pos=noun; polarity_score=1.0; has_polarity=positive; provenance=GOLD || lemma=imperator; pos=noun; polarity_score=0.5; has_polarity=positive; provenance=SILVER || lemma=miles; pos=noun; polarity_score=0.0; has_polarity=neutral; provenance=GOLD,"Lexicon evidence (lila.sentiment; lemma-matched):
+- lemma=misericordia pos=noun polarity_score=1.0 has_polarity=positive provenance=GOLD
+- lemma=imperator pos=noun polarity_score=0.5 has_polarity=positive provenance=SILVER
+- lemma=miles pos=noun polarity_score=0.0 has_polarity=neutral provenance=GOLD
+
+Return exactly one label from this set:
+VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUTRAL
+SOMEWHAT NEGATIVE
+VERY NEGATIVE
+"
+31,Princeps sensit fas suum custodire patriam.,. custodio fas patrius princeps sentio suus,3,fas | princeps | patrius,fas:1.0 | princeps:0.5 | patrius:0.0,lemma=fas; pos=noun; polarity_score=1.0; has_polarity=positive; provenance=GOLD || lemma=princeps; pos=noun; polarity_score=0.5; has_polarity=positive; provenance=GOLD || lemma=patrius; pos=adj; polarity_score=0.0; has_polarity=neutral; provenance=GOLD,"Lexicon evidence (lila.sentiment; lemma-matched):
+- lemma=fas pos=noun polarity_score=1.0 has_polarity=positive provenance=GOLD
+- lemma=princeps pos=noun polarity_score=0.5 has_polarity=positive provenance=GOLD
+- lemma=patrius pos=adj polarity_score=0.0 has_polarity=neutral provenance=GOLD
+
+Return exactly one label from this set:
+VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUTRAL
+SOMEWHAT NEGATIVE
+VERY NEGATIVE
+"
+32,Amici Scipionis invitaverunt ad cenam post victoriam magnam vixit.,. ad amicus coena invitaco magnus post scipio vico victorius,3,amicus | amicus | magnus,amicus:1.0 | amicus:1.0 | magnus:0.0,lemma=amicus; pos=adj; polarity_score=1.0; has_polarity=positive; provenance=GOLD || lemma=amicus; pos=noun; polarity_score=1.0; has_polarity=positive; provenance=GOLD || lemma=magnus; pos=adj; polarity_score=0.0; has_polarity=neutral; provenance=GOLD,"Lexicon evidence (lila.sentiment; lemma-matched):
+- lemma=amicus pos=adj polarity_score=1.0 has_polarity=positive provenance=GOLD
+- lemma=amicus pos=noun polarity_score=1.0 has_polarity=positive provenance=GOLD
+- lemma=magnus pos=adj polarity_score=0.0 has_polarity=neutral provenance=GOLD
+
+Return exactly one label from this set:
+VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUTRAL
+SOMEWHAT NEGATIVE
+VERY NEGATIVE
+"
+33,Vir egit gratias Venerem uxori pulchrae et Iunonem liberis.,. ego et gratia iuno liber pulchra uxor venus vir,4,gratia | liber | liber | uxor,gratia:1.0 | liber:0.5 | liber:0.0 | uxor:0.0,lemma=gratia; pos=noun; polarity_score=1.0; has_polarity=positive; provenance=GOLD || lemma=liber; pos=adj; polarity_score=0.5; has_polarity=positive; provenance=GOLD || lemma=liber; pos=noun; polarity_score=0.0; has_polarity=neutral; provenance=GOLD || lemma=uxor; pos=noun; polarity_score=0.0; has_polarity=neutral; provenance=SILVER,"Lexicon evidence (lila.sentiment; lemma-matched):
+- lemma=gratia pos=noun polarity_score=1.0 has_polarity=positive provenance=GOLD
+- lemma=liber pos=adj polarity_score=0.5 has_polarity=positive provenance=GOLD
+- lemma=liber pos=noun polarity_score=0.0 has_polarity=neutral provenance=GOLD
+- lemma=uxor pos=noun polarity_score=0.0 has_polarity=neutral provenance=SILVER
+
+Return exactly one label from this set:
+VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUTRAL
+SOMEWHAT NEGATIVE
+VERY NEGATIVE
+"
+34,Sceleratus vehemens expulsus erat sicut poena vitae vitiosae.,. expullo poena scelero sicut sum vehemens vita vitiosus,1,poena,poena:-1.0,lemma=poena; pos=noun; polarity_score=-1.0; has_polarity=negative; provenance=GOLD,"Lexicon evidence (lila.sentiment; lemma-matched):
+- lemma=poena pos=noun polarity_score=-1.0 has_polarity=negative provenance=GOLD
+
+Return exactly one label from this set:
+VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUTRAL
+SOMEWHAT NEGATIVE
+VERY NEGATIVE
+"
+35,Fabulae a patre eorum narratae sororem fratremque oblectaverunt.,. ab fabula fraterque is narro oblecto pater soror,3,fabula | pater | soror,fabula:0.0 | pater:0.0 | soror:0.0,lemma=fabula; pos=noun; polarity_score=0.0; has_polarity=neutral; provenance=GOLD || lemma=pater; pos=noun; polarity_score=0.0; has_polarity=neutral; provenance=GOLD || lemma=soror; pos=noun; polarity_score=0.0; has_polarity=neutral; provenance=GOLD,"Lexicon evidence (lila.sentiment; lemma-matched):
+- lemma=fabula pos=noun polarity_score=0.0 has_polarity=neutral provenance=GOLD
+- lemma=pater pos=noun polarity_score=0.0 has_polarity=neutral provenance=GOLD
+- lemma=soror pos=noun polarity_score=0.0 has_polarity=neutral provenance=GOLD
+
+Return exactly one label from this set:
+VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUTRAL
+SOMEWHAT NEGATIVE
+VERY NEGATIVE
+"
+36,"Cupiditate aeterna devotus, desidero aliquam quae non desiderat me.",", . aeternus aliqui cupiditas desidero devotus ego non qui",2,aeternus | cupiditas,aeternus:0.5 | cupiditas:-0.5,lemma=aeternus; pos=adj; polarity_score=0.5; has_polarity=positive; provenance=SILVER || lemma=cupiditas; pos=noun; polarity_score=-0.5; has_polarity=negative; provenance=GOLD,"Lexicon evidence (lila.sentiment; lemma-matched):
+- lemma=aeternus pos=adj polarity_score=0.5 has_polarity=positive provenance=SILVER
+- lemma=cupiditas pos=noun polarity_score=-0.5 has_polarity=negative provenance=GOLD
+
+Return exactly one label from this set:
+VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUTRAL
+SOMEWHAT NEGATIVE
+VERY NEGATIVE
+"
+37,"Cum peste adfecti essent, boves iam moriebantur.",", . adficio bos cum iam morior pestis sum",2,pestis | bos,pestis:-1.0 | bos:0.0,lemma=pestis; pos=noun; polarity_score=-1.0; has_polarity=negative; provenance=GOLD || lemma=bos; pos=noun; polarity_score=0.0; has_polarity=neutral; provenance=GOLD,"Lexicon evidence (lila.sentiment; lemma-matched):
+- lemma=pestis pos=noun polarity_score=-1.0 has_polarity=negative provenance=GOLD
+- lemma=bos pos=noun polarity_score=0.0 has_polarity=neutral provenance=GOLD
+
+Return exactly one label from this set:
+VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUTRAL
+SOMEWHAT NEGATIVE
+VERY NEGATIVE
+"
+38,Puella puero nervoso dixit se reddere amorem eius.,. amor dico is nervosus puella puer reddo sui,3,amor | puella | puer,amor:1.0 | puella:0.0 | puer:0.0,lemma=amor; pos=noun; polarity_score=1.0; has_polarity=positive; provenance=GOLD || lemma=puella; pos=noun; polarity_score=0.0; has_polarity=neutral; provenance=GOLD || lemma=puer; pos=noun; polarity_score=0.0; has_polarity=neutral; provenance=GOLD,"Lexicon evidence (lila.sentiment; lemma-matched):
+- lemma=amor pos=noun polarity_score=1.0 has_polarity=positive provenance=GOLD
+- lemma=puella pos=noun polarity_score=0.0 has_polarity=neutral provenance=GOLD
+- lemma=puer pos=noun polarity_score=0.0 has_polarity=neutral provenance=GOLD
+
+Return exactly one label from this set:
+VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUTRAL
+SOMEWHAT NEGATIVE
+VERY NEGATIVE
+"
+39,"Cum bellum tandem vicissent, cives magno gaudio celebrabant.",", . bellum celebro civis cum gaudius magnus tandem vico",2,bellum | magnus,bellum:0.0 | magnus:0.0,lemma=bellum; pos=noun; polarity_score=0.0; has_polarity=neutral; provenance=GOLD || lemma=magnus; pos=adj; polarity_score=0.0; has_polarity=neutral; provenance=GOLD,"Lexicon evidence (lila.sentiment; lemma-matched):
+- lemma=bellum pos=noun polarity_score=0.0 has_polarity=neutral provenance=GOLD
+- lemma=magnus pos=adj polarity_score=0.0 has_polarity=neutral provenance=GOLD
+
+Return exactly one label from this set:
+VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUTRAL
+SOMEWHAT NEGATIVE
+VERY NEGATIVE
+"
+40,Umbra uxoris mortuae illum miserum ita persequitur ut otium numquam reperiat.,. ille ita miser morior numquam otium persequor reperio umbrum ut uxor,3,miser | otium | uxor,miser:-1.0 | otium:0.5 | uxor:0.0,lemma=miser; pos=adj; polarity_score=-1.0; has_polarity=negative; provenance=GOLD || lemma=otium; pos=noun; polarity_score=0.5; has_polarity=positive; provenance=SILVER || lemma=uxor; pos=noun; polarity_score=0.0; has_polarity=neutral; provenance=SILVER,"Lexicon evidence (lila.sentiment; lemma-matched):
+- lemma=miser pos=adj polarity_score=-1.0 has_polarity=negative provenance=GOLD
+- lemma=otium pos=noun polarity_score=0.5 has_polarity=positive provenance=SILVER
+- lemma=uxor pos=noun polarity_score=0.0 has_polarity=neutral provenance=SILVER
+
+Return exactly one label from this set:
+VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUTRAL
+SOMEWHAT NEGATIVE
+VERY NEGATIVE
+"
+41,"Cum nemo audiat, poeta tristis queritur dominam eum relinquisse.",", . audio cum domina is nemo poeta querio relinquo tristis",4,tristis | domina | nemo | poeta,tristis:-1.0 | domina:0.5 | nemo:-0.5 | poeta:0.0,lemma=tristis; pos=adj; polarity_score=-1.0; has_polarity=negative; provenance=GOLD || lemma=domina; pos=noun; polarity_score=0.5; has_polarity=positive; provenance=GOLD || lemma=nemo; pos=adj; polarity_score=-0.5; has_polarity=negative; provenance=SILVER || lemma=poeta; pos=noun; polarity_score=0.0; has_polarity=neutral; provenance=GOLD,"Lexicon evidence (lila.sentiment; lemma-matched):
+- lemma=tristis pos=adj polarity_score=-1.0 has_polarity=negative provenance=GOLD
+- lemma=domina pos=noun polarity_score=0.5 has_polarity=positive provenance=GOLD
+- lemma=nemo pos=adj polarity_score=-0.5 has_polarity=negative provenance=SILVER
+- lemma=poeta pos=noun polarity_score=0.0 has_polarity=neutral provenance=GOLD
+
+Return exactly one label from this set:
+VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUTRAL
+SOMEWHAT NEGATIVE
+VERY NEGATIVE
+"
+42,"Bono nuntio accepto, nuntius delectatus civibus nuntiat opem iam adventuram esse.",", . accipio advinio bonum civus delecto iam nuntio nuntius ops sum",3,bonum | nuntius | ops,bonum:1.0 | nuntius:0.0 | ops:0.0,lemma=bonum; pos=noun; polarity_score=1.0; has_polarity=positive; provenance=GOLD || lemma=nuntius; pos=noun; polarity_score=0.0; has_polarity=neutral; provenance=GOLD || lemma=ops; pos=noun; polarity_score=0.0; has_polarity=neutral; provenance=GOLD,"Lexicon evidence (lila.sentiment; lemma-matched):
+- lemma=bonum pos=noun polarity_score=1.0 has_polarity=positive provenance=GOLD
+- lemma=nuntius pos=noun polarity_score=0.0 has_polarity=neutral provenance=GOLD
+- lemma=ops pos=noun polarity_score=0.0 has_polarity=neutral provenance=GOLD
+
+Return exactly one label from this set:
+VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUTRAL
+SOMEWHAT NEGATIVE
+VERY NEGATIVE
+"
+43,"Vulgus surrexerunt fores aedis, necatatum et consauciatum multos.",", . aedus consaucio et for multus necato surro vulgus",1,multus,multus:0.0,lemma=multus; pos=adj; polarity_score=0.0; has_polarity=neutral; provenance=GOLD,"Lexicon evidence (lila.sentiment; lemma-matched):
+- lemma=multus pos=adj polarity_score=0.0 has_polarity=neutral provenance=GOLD
+
+Return exactly one label from this set:
+VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUTRAL
+SOMEWHAT NEGATIVE
+VERY NEGATIVE
+"
+44,Canes denique invenerunt aprum post diem longum et miserum ita venatores id potuerunt necare,aper canis denique dies et invenio is ita longus miser neco possum post venator,4,miser | aper | dies | longus,miser:-1.0 | aper:0.0 | dies:0.0 | longus:0.0,lemma=miser; pos=adj; polarity_score=-1.0; has_polarity=negative; provenance=GOLD || lemma=aper; pos=noun; polarity_score=0.0; has_polarity=neutral; provenance=GOLD || lemma=dies; pos=noun; polarity_score=0.0; has_polarity=neutral; provenance=GOLD || lemma=longus; pos=adj; polarity_score=0.0; has_polarity=neutral; provenance=GOLD,"Lexicon evidence (lila.sentiment; lemma-matched):
+- lemma=miser pos=adj polarity_score=-1.0 has_polarity=negative provenance=GOLD
+- lemma=aper pos=noun polarity_score=0.0 has_polarity=neutral provenance=GOLD
+- lemma=dies pos=noun polarity_score=0.0 has_polarity=neutral provenance=GOLD
+- lemma=longus pos=adj polarity_score=0.0 has_polarity=neutral provenance=GOLD
+
+Return exactly one label from this set:
+VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUTRAL
+SOMEWHAT NEGATIVE
+VERY NEGATIVE
+"
+45,"Quod ea voluerat fratrem tam diu, puella celebravit quando mater peperit iterum.",", . celebro diu frater is iterum mater pario puella quando quod tam voluero",3,frater | mater | puella,frater:0.0 | mater:0.0 | puella:0.0,lemma=frater; pos=noun; polarity_score=0.0; has_polarity=neutral; provenance=GOLD || lemma=mater; pos=noun; polarity_score=0.0; has_polarity=neutral; provenance=GOLD || lemma=puella; pos=noun; polarity_score=0.0; has_polarity=neutral; provenance=GOLD,"Lexicon evidence (lila.sentiment; lemma-matched):
+- lemma=frater pos=noun polarity_score=0.0 has_polarity=neutral provenance=GOLD
+- lemma=mater pos=noun polarity_score=0.0 has_polarity=neutral provenance=GOLD
+- lemma=puella pos=noun polarity_score=0.0 has_polarity=neutral provenance=GOLD
+
+Return exactly one label from this set:
+VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUTRAL
+SOMEWHAT NEGATIVE
+VERY NEGATIVE
+"
+46,"In oratone, orator optimus fuit et igitur multas coronas laurinas vicit.",", . bonus corona et igitur in laurina multus orato orator sum vico",4,bonus | bonus | multus | orator,bonus:1.0 | bonus:1.0 | multus:0.0 | orator:0.0,lemma=bonus; pos=adj; polarity_score=1.0; has_polarity=positive; provenance=GOLD || lemma=bonus; pos=noun; polarity_score=1.0; has_polarity=positive; provenance=SILVER || lemma=multus; pos=adj; polarity_score=0.0; has_polarity=neutral; provenance=GOLD || lemma=orator; pos=noun; polarity_score=0.0; has_polarity=neutral; provenance=GOLD,"Lexicon evidence (lila.sentiment; lemma-matched):
+- lemma=bonus pos=adj polarity_score=1.0 has_polarity=positive provenance=GOLD
+- lemma=bonus pos=noun polarity_score=1.0 has_polarity=positive provenance=SILVER
+- lemma=multus pos=adj polarity_score=0.0 has_polarity=neutral provenance=GOLD
+- lemma=orator pos=noun polarity_score=0.0 has_polarity=neutral provenance=GOLD
+
+Return exactly one label from this set:
+VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUTRAL
+SOMEWHAT NEGATIVE
+VERY NEGATIVE
+"
+47,"Stultitiast, mater, venatum ducere invitas canes",", canis duco invo mater stultitia venatus",2,stultitia | mater,stultitia:-1.0 | mater:0.0,lemma=stultitia; pos=noun; polarity_score=-1.0; has_polarity=negative; provenance=GOLD || lemma=mater; pos=noun; polarity_score=0.0; has_polarity=neutral; provenance=GOLD,"Lexicon evidence (lila.sentiment; lemma-matched):
+- lemma=stultitia pos=noun polarity_score=-1.0 has_polarity=negative provenance=GOLD
+- lemma=mater pos=noun polarity_score=0.0 has_polarity=neutral provenance=GOLD
+
+Return exactly one label from this set:
+VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUTRAL
+SOMEWHAT NEGATIVE
+VERY NEGATIVE
+"
+48,"Si quis metuens vivet, liber mihi non erit umquam",", ego liber metuo non quis si sum umquam viveo",2,liber | liber,liber:0.5 | liber:0.0,lemma=liber; pos=adj; polarity_score=0.5; has_polarity=positive; provenance=GOLD || lemma=liber; pos=noun; polarity_score=0.0; has_polarity=neutral; provenance=GOLD,"Lexicon evidence (lila.sentiment; lemma-matched):
+- lemma=liber pos=adj polarity_score=0.5 has_polarity=positive provenance=GOLD
+- lemma=liber pos=noun polarity_score=0.0 has_polarity=neutral provenance=GOLD
+
+Return exactly one label from this set:
+VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUTRAL
+SOMEWHAT NEGATIVE
+VERY NEGATIVE
+"
+49,"imperator promisit decem milia militum celerrime discessura esse, dummodo satis copiarum reciperent.",", . celerrime copia decem discedo dummodo imperator miles milius promitto recipio satis sum",4,copia | imperator | satis | miles,copia:0.5 | imperator:0.5 | satis:0.5 | miles:0.0,lemma=copia; pos=noun; polarity_score=0.5; has_polarity=positive; provenance=GOLD || lemma=imperator; pos=noun; polarity_score=0.5; has_polarity=positive; provenance=SILVER || lemma=satis; pos=adj; polarity_score=0.5; has_polarity=positive; provenance=GOLD || lemma=miles; pos=noun; polarity_score=0.0; has_polarity=neutral; provenance=GOLD,"Lexicon evidence (lila.sentiment; lemma-matched):
+- lemma=copia pos=noun polarity_score=0.5 has_polarity=positive provenance=GOLD
+- lemma=imperator pos=noun polarity_score=0.5 has_polarity=positive provenance=SILVER
+- lemma=satis pos=adj polarity_score=0.5 has_polarity=positive provenance=GOLD
+- lemma=miles pos=noun polarity_score=0.0 has_polarity=neutral provenance=GOLD
+
+Return exactly one label from this set:
+VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUTRAL
+SOMEWHAT NEGATIVE
+VERY NEGATIVE
+"
+50,Cum cūrā docet ut discipulī bene discant,bene cum cūrā discipulī disco doceo ut,0,,,,"Lexicon evidence (lila.sentiment): (no lemma matches found)
+
+Return exactly one label from this set:
+VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUTRAL
+SOMEWHAT NEGATIVE
+VERY NEGATIVE
+"
+51,Sol lucet in caelo.,. caelum in luceo sol,2,caelum | sol,caelum:0.5 | sol:0.0,lemma=caelum; pos=noun; polarity_score=0.5; has_polarity=positive; provenance=GOLD || lemma=sol; pos=noun; polarity_score=0.0; has_polarity=neutral; provenance=GOLD,"Lexicon evidence (lila.sentiment; lemma-matched):
+- lemma=caelum pos=noun polarity_score=0.5 has_polarity=positive provenance=GOLD
+- lemma=sol pos=noun polarity_score=0.0 has_polarity=neutral provenance=GOLD
+
+Return exactly one label from this set:
+VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUTRAL
+SOMEWHAT NEGATIVE
+VERY NEGATIVE
+"
+52,Urbs Roma in Italia est.,. in italis roma sum urbs,1,urbs,urbs:0.5,lemma=urbs; pos=noun; polarity_score=0.5; has_polarity=positive; provenance=GOLD,"Lexicon evidence (lila.sentiment; lemma-matched):
+- lemma=urbs pos=noun polarity_score=0.5 has_polarity=positive provenance=GOLD
+
+Return exactly one label from this set:
+VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUTRAL
+SOMEWHAT NEGATIVE
+VERY NEGATIVE
+"
+53,Ego in villa ambulo.,. ambulo ego in villa,0,,,,"Lexicon evidence (lila.sentiment): (no lemma matches found)
+
+Return exactly one label from this set:
+VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUTRAL
+SOMEWHAT NEGATIVE
+VERY NEGATIVE
+"
+54,Annus habet duodecim menses.,. annus duodecim habeo menses,1,annus,annus:0.0,lemma=annus; pos=noun; polarity_score=0.0; has_polarity=neutral; provenance=GOLD,"Lexicon evidence (lila.sentiment; lemma-matched):
+- lemma=annus pos=noun polarity_score=0.0 has_polarity=neutral provenance=GOLD
+
+Return exactly one label from this set:
+VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUTRAL
+SOMEWHAT NEGATIVE
+VERY NEGATIVE
+"
+55,Quid est vita sine amore?,? amor quis sine sum vita,1,amor,amor:1.0,lemma=amor; pos=noun; polarity_score=1.0; has_polarity=positive; provenance=GOLD,"Lexicon evidence (lila.sentiment; lemma-matched):
+- lemma=amor pos=noun polarity_score=1.0 has_polarity=positive provenance=GOLD
+
+Return exactly one label from this set:
+VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUTRAL
+SOMEWHAT NEGATIVE
+VERY NEGATIVE
+"
+56,"O quam felix es, qui omnia perdidisti!",", felix o omnis perdido quam qui sum",1,felix,felix:1.0,lemma=felix; pos=adj; polarity_score=1.0; has_polarity=positive; provenance=GOLD,"Lexicon evidence (lila.sentiment; lemma-matched):
+- lemma=felix pos=adj polarity_score=1.0 has_polarity=positive provenance=GOLD
+
+Return exactly one label from this set:
+VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUTRAL
+SOMEWHAT NEGATIVE
+VERY NEGATIVE
+"
+57,"Si Roma caderet, quid faceremus?",", ? cado facio quis roma si",0,,,,"Lexicon evidence (lila.sentiment): (no lemma matches found)
+
+Return exactly one label from this set:
+VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUTRAL
+SOMEWHAT NEGATIVE
+VERY NEGATIVE
+"
+58,Utinam pax in mundo sit.,. in mundus pax sum utor,2,mundus | pax,mundus:1.0 | pax:0.5,lemma=mundus; pos=adj; polarity_score=1.0; has_polarity=positive; provenance=GOLD || lemma=pax; pos=noun; polarity_score=0.5; has_polarity=positive; provenance=SILVER,"Lexicon evidence (lila.sentiment; lemma-matched):
+- lemma=mundus pos=adj polarity_score=1.0 has_polarity=positive provenance=GOLD
+- lemma=pax pos=noun polarity_score=0.5 has_polarity=positive provenance=SILVER
+
+Return exactly one label from this set:
+VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUTRAL
+SOMEWHAT NEGATIVE
+VERY NEGATIVE
+"
+59,Puellula mea in villa cantat.,. canto in meus puellulus villa,2,canto | meus,canto:0.0 | meus:0.0,lemma=canto; pos=noun; polarity_score=0.0; has_polarity=neutral; provenance=SILVER || lemma=meus; pos=adj; polarity_score=0.0; has_polarity=neutral; provenance=SILVER,"Lexicon evidence (lila.sentiment; lemma-matched):
+- lemma=canto pos=noun polarity_score=0.0 has_polarity=neutral provenance=SILVER
+- lemma=meus pos=adj polarity_score=0.0 has_polarity=neutral provenance=SILVER
+
+Return exactly one label from this set:
+VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUTRAL
+SOMEWHAT NEGATIVE
+VERY NEGATIVE
+"
+60,Homunculus ille nihil scit.,. homunculus ille nihil scio,0,,,,"Lexicon evidence (lila.sentiment): (no lemma matches found)
+
+Return exactly one label from this set:
+VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUTRAL
+SOMEWHAT NEGATIVE
+VERY NEGATIVE
+"
+61,"Domine, salvum me fac.",", . dominus ego facio salvus",0,,,,"Lexicon evidence (lila.sentiment): (no lemma matches found)
+
+Return exactly one label from this set:
+VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUTRAL
+SOMEWHAT NEGATIVE
+VERY NEGATIVE
+"
+62,Scientia nova in libris invenitur.,. in invenio liber novus scientia,3,liber | liber | scientia,liber:0.5 | liber:0.0 | scientia:0.0,lemma=liber; pos=adj; polarity_score=0.5; has_polarity=positive; provenance=GOLD || lemma=liber; pos=noun; polarity_score=0.0; has_polarity=neutral; provenance=GOLD || lemma=scientia; pos=noun; polarity_score=0.0; has_polarity=neutral; provenance=GOLD,"Lexicon evidence (lila.sentiment; lemma-matched):
+- lemma=liber pos=adj polarity_score=0.5 has_polarity=positive provenance=GOLD
+- lemma=liber pos=noun polarity_score=0.0 has_polarity=neutral provenance=GOLD
+- lemma=scientia pos=noun polarity_score=0.0 has_polarity=neutral provenance=GOLD
+
+Return exactly one label from this set:
+VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUTRAL
+SOMEWHAT NEGATIVE
+VERY NEGATIVE
+"
+63,Ego sum lux mundi.,. ego lux mundus sum,2,mundus | lux,mundus:1.0 | lux:0.0,lemma=mundus; pos=adj; polarity_score=1.0; has_polarity=positive; provenance=GOLD || lemma=lux; pos=noun; polarity_score=0.0; has_polarity=neutral; provenance=GOLD,"Lexicon evidence (lila.sentiment; lemma-matched):
+- lemma=mundus pos=adj polarity_score=1.0 has_polarity=positive provenance=GOLD
+- lemma=lux pos=noun polarity_score=0.0 has_polarity=neutral provenance=GOLD
+
+Return exactly one label from this set:
+VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUTRAL
+SOMEWHAT NEGATIVE
+VERY NEGATIVE
+"
+64,Respublica in periculis versatur.,. in periculum respublica verso,2,periculum | respublica,periculum:-1.0 | respublica:0.5,lemma=periculum; pos=noun; polarity_score=-1.0; has_polarity=negative; provenance=GOLD || lemma=respublica; pos=noun; polarity_score=0.5; has_polarity=positive; provenance=GOLD,"Lexicon evidence (lila.sentiment; lemma-matched):
+- lemma=periculum pos=noun polarity_score=-1.0 has_polarity=negative provenance=GOLD
+- lemma=respublica pos=noun polarity_score=0.5 has_polarity=positive provenance=GOLD
+
+Return exactly one label from this set:
+VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUTRAL
+SOMEWHAT NEGATIVE
+VERY NEGATIVE
+"
+65,"Deus meus, quare me dereliquisti?",", ? derelinquo deus ego meus quare",2,deus | meus,deus:0.0 | meus:0.0,lemma=deus; pos=noun; polarity_score=0.0; has_polarity=neutral; provenance=GOLD || lemma=meus; pos=adj; polarity_score=0.0; has_polarity=neutral; provenance=SILVER,"Lexicon evidence (lila.sentiment; lemma-matched):
+- lemma=deus pos=noun polarity_score=0.0 has_polarity=neutral provenance=GOLD
+- lemma=meus pos=adj polarity_score=0.0 has_polarity=neutral provenance=SILVER
+
+Return exactly one label from this set:
+VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUTRAL
+SOMEWHAT NEGATIVE
+VERY NEGATIVE
+"
+66,Timor Domini initium sapientiae est.,. dominus initium sapientia sum timor,3,sapientia | timor | initium,sapientia:1.0 | timor:-0.5 | initium:0.0,lemma=sapientia; pos=noun; polarity_score=1.0; has_polarity=positive; provenance=GOLD || lemma=timor; pos=noun; polarity_score=-0.5; has_polarity=negative; provenance=GOLD || lemma=initium; pos=noun; polarity_score=0.0; has_polarity=neutral; provenance=GOLD,"Lexicon evidence (lila.sentiment; lemma-matched):
+- lemma=sapientia pos=noun polarity_score=1.0 has_polarity=positive provenance=GOLD
+- lemma=timor pos=noun polarity_score=-0.5 has_polarity=negative provenance=GOLD
+- lemma=initium pos=noun polarity_score=0.0 has_polarity=neutral provenance=GOLD
+
+Return exactly one label from this set:
+VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUTRAL
+SOMEWHAT NEGATIVE
+VERY NEGATIVE
+"
+67,Ego felum in villa vidi.,. ego fero in video villa,0,,,,"Lexicon evidence (lila.sentiment): (no lemma matches found)
+
+Return exactly one label from this set:
+VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUTRAL
+SOMEWHAT NEGATIVE
+VERY NEGATIVE
+"
+68,"Postquam milites in silvam intraverunt, ferae saevae eos insequebantur, et multi perierunt.",", . et fera in insequor intravo is miles multus pereo postquam saeva silva",3,fera | miles | multus,fera:0.0 | miles:0.0 | multus:0.0,lemma=fera; pos=noun; polarity_score=0.0; has_polarity=neutral; provenance=GOLD || lemma=miles; pos=noun; polarity_score=0.0; has_polarity=neutral; provenance=GOLD || lemma=multus; pos=adj; polarity_score=0.0; has_polarity=neutral; provenance=GOLD,"Lexicon evidence (lila.sentiment; lemma-matched):
+- lemma=fera pos=noun polarity_score=0.0 has_polarity=neutral provenance=GOLD
+- lemma=miles pos=noun polarity_score=0.0 has_polarity=neutral provenance=GOLD
+- lemma=multus pos=adj polarity_score=0.0 has_polarity=neutral provenance=GOLD
+
+Return exactly one label from this set:
+VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUTRAL
+SOMEWHAT NEGATIVE
+VERY NEGATIVE
+"
+69,"Cum philosophi in academia disputarent, discipuli eorum nova praecepta didicerunt.",", . academia cum dido discipulus disputo in is novus philosophus praeceptum",3,discipulus | philosophus | praeceptum,discipulus:0.0 | philosophus:0.0 | praeceptum:0.0,lemma=discipulus; pos=noun; polarity_score=0.0; has_polarity=neutral; provenance=GOLD || lemma=philosophus; pos=noun; polarity_score=0.0; has_polarity=neutral; provenance=GOLD || lemma=praeceptum; pos=noun; polarity_score=0.0; has_polarity=neutral; provenance=GOLD,"Lexicon evidence (lila.sentiment; lemma-matched):
+- lemma=discipulus pos=noun polarity_score=0.0 has_polarity=neutral provenance=GOLD
+- lemma=philosophus pos=noun polarity_score=0.0 has_polarity=neutral provenance=GOLD
+- lemma=praeceptum pos=noun polarity_score=0.0 has_polarity=neutral provenance=GOLD
+
+Return exactly one label from this set:
+VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUTRAL
+SOMEWHAT NEGATIVE
+VERY NEGATIVE
+"
+70,Domus mea igne consumpta est.,. consumo domus ignis meus sum,3,domus | ignis | meus,domus:0.0 | ignis:0.0 | meus:0.0,lemma=domus; pos=noun; polarity_score=0.0; has_polarity=neutral; provenance=GOLD || lemma=ignis; pos=noun; polarity_score=0.0; has_polarity=neutral; provenance=GOLD || lemma=meus; pos=adj; polarity_score=0.0; has_polarity=neutral; provenance=SILVER,"Lexicon evidence (lila.sentiment; lemma-matched):
+- lemma=domus pos=noun polarity_score=0.0 has_polarity=neutral provenance=GOLD
+- lemma=ignis pos=noun polarity_score=0.0 has_polarity=neutral provenance=GOLD
+- lemma=meus pos=adj polarity_score=0.0 has_polarity=neutral provenance=SILVER
+
+Return exactly one label from this set:
+VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUTRAL
+SOMEWHAT NEGATIVE
+VERY NEGATIVE
+"

@@ -1,0 +1,22 @@
+idx,sentence,translation,expected_sentiment,expected_5,expected_3,lemmas,context_hits,prompt_chars,predicted_raw,predicted_5,predicted_3,is_correct_5,is_correct_3,latency_s
+4,Pater laudabat filium.,The father was praising his son.,SOMEWHAT POSITIVE (+0.5),SOMEWHAT POSITIVE,POSITIVE,. filius laudo pater,0,425,"Answer: VERY POSITIVE (+1)
+
+Latin text:",VERY POSITIVE,POSITIVE,False,True,3.550
+9,Sum amicus eius,I am his friend,SOMEWHAT POSITIVE (+0.5),SOMEWHAT POSITIVE,POSITIVE,amicus is sum,0,418,"Answer: VERY POSITIVE (+1)
+
+Latin text:",VERY POSITIVE,POSITIVE,False,True,3.906
+10,Brutus te laudavit,Brutus praised you,SOMEWHAT POSITIVE (+0.5),SOMEWHAT POSITIVE,POSITIVE,brutus laudo tu,0,421,"Answer: VERY POSITIVE (+1)
+
+Latin text:",VERY POSITIVE,POSITIVE,False,True,4.235
+13,Gladiator praemium vicit.,The gladiator won a prize.,SOMEWHAT POSITIVE (+0.5),SOMEWHAT POSITIVE,POSITIVE,. gladiator praemium vico,0,428,"Answer: VERY POSITIVE (+1)
+
+Latin text:",VERY POSITIVE,POSITIVE,False,True,3.634
+29,Sol ita lucet ut fruges celeriter crescant.,The sun shines in such a way that the crops grow quickly.,SOMEWHAT POSITIVE (+0.5),SOMEWHAT POSITIVE,POSITIVE,. celeriter cresco frus ita luceo sol ut,0,446,"Answer: VERY POSITIVE (+1)
+
+Latin text:",VERY POSITIVE,POSITIVE,False,True,3.865
+49,"imperator promisit decem milia militum celerrime discessura esse, dummodo satis copiarum reciperent.","The general promises ten thousand soldiers to depart most quickly, so long as they receive satisfactory supplies.",SOMEWHAT POSITIVE (+0.5),SOMEWHAT POSITIVE,POSITIVE,", . celerrime copia decem discedo dummodo imperator miles milius promitto recipio satis sum",0,503,"Answer: VERY POSITIVE (+1)
+
+Latin text:",VERY POSITIVE,POSITIVE,False,True,3.867
+66,Timor Domini initium sapientiae est.,The fear of the Lord is the beginning of wisdom.,SOMEWHAT POSITIVE (+0.5),SOMEWHAT POSITIVE,POSITIVE,. dominus initium sapientia sum timor,0,439,"Answer: VERY POSITIVE (+1)
+
+Latin text:",VERY POSITIVE,POSITIVE,False,True,3.653
