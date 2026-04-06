@@ -1,0 +1,249 @@
+idx,sentence,translation,expected_sentiment,expected_5,expected_3,lemmas,context_hits,prompt_chars,predicted_raw,predicted_5,predicted_3,is_correct_5,is_correct_3,latency_s
+1,Caelum pulchrum est.,The sky is beautiful.,SOMEWHAT POSITIVE (+0.5),SOMEWHAT POSITIVE,POSITIVE,. caelum pulcher sum,2,452,"VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUT",VERY POSITIVE,POSITIVE,False,True,9.856
+2,Puer discipulus malus est.,The boy is a bad student.,SOMEWHAT NEGATIVE (-0.5),SOMEWHAT NEGATIVE,NEGATIVE,. discipulus malus puer sum,4,621,"VERY NEGATIVE
+
+
+```
+The final answer is VERY",VERY NEGATIVE,NEGATIVE,False,True,4.199
+3,Copiae amiserunt bellum.,The troops lost the war.,VERY NEGATIVE (-1),VERY NEGATIVE,NEGATIVE,. amitto bellum copia,2,454,"VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUT",VERY POSITIVE,POSITIVE,False,False,3.254
+4,Pater laudabat filium.,The father was praising his son.,SOMEWHAT POSITIVE (+0.5),SOMEWHAT POSITIVE,POSITIVE,. filius laudo pater,2,451,"NEUTRAL
+
+
+The final answer is NEUTRAL",NEUTRAL,NEUTRAL,False,False,4.078
+5,Marcus Brutus tradidit suum amicum.,Marcus Brutus betrayed his friend.,VERY NEGATIVE (-1),VERY NEGATIVE,NEGATIVE,. amicus brutus marcus suus trado,3,549,"VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUT",VERY POSITIVE,POSITIVE,False,False,3.971
+6,Ego optimus miles eram.,I was the best student,VERY POSITIVE (+1),VERY POSITIVE,POSITIVE,. bonus ego miles sum,3,533,"VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUT",VERY POSITIVE,POSITIVE,True,True,3.867
+7,Quae scelera videmus?,What evil deed do we see?,VERY NEGATIVE (-1),VERY NEGATIVE,NEGATIVE,? qui scelus video,1,373,"VERY NEGATIVE
+
+
+The final answer is VERY NEGATIVE",VERY NEGATIVE,NEGATIVE,True,True,4.108
+8,Malum consilium est.,The plan is bad,SOMEWHAT NEGATIVE (-0.5),SOMEWHAT NEGATIVE,NEGATIVE,. consilium malum sum,2,455,"VERY NEGATIVE
+
+
+```
+The final answer is VERY",VERY NEGATIVE,NEGATIVE,False,True,3.405
+9,Sum amicus eius,I am his friend,SOMEWHAT POSITIVE (+0.5),SOMEWHAT POSITIVE,POSITIVE,amicus is sum,2,446,"VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUT",VERY POSITIVE,POSITIVE,False,True,3.755
+10,Brutus te laudavit,Brutus praised you,SOMEWHAT POSITIVE (+0.5),SOMEWHAT POSITIVE,POSITIVE,brutus laudo tu,1,371,"VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUT",VERY POSITIVE,POSITIVE,False,True,3.831
+11,Patria delebatur,The country was being destroyed,VERY NEGATIVE (-1),VERY NEGATIVE,NEGATIVE,deleo patrius,1,366,"NEUTRAL
+
+
+Context (lemma lexicon evidence)",NEUTRAL,NEUTRAL,False,False,3.601
+12,Domus ustus erat.,The home had been burned down.,VERY NEGATIVE (-1),VERY NEGATIVE,NEGATIVE,. domus sum ustus,1,366,"NEUTRAL
+
+
+Context (lemma lexicon evidence)",NEUTRAL,NEUTRAL,False,False,3.889
+13,Gladiator praemium vicit.,The gladiator won a prize.,SOMEWHAT POSITIVE (+0.5),SOMEWHAT POSITIVE,POSITIVE,. gladiator praemium vico,2,461,"VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUT",VERY POSITIVE,POSITIVE,False,True,3.897
+14,Vita eius erat nimis brevis.,Her life was too brief.,SOMEWHAT NEGATIVE (-0.5),SOMEWHAT NEGATIVE,NEGATIVE,. brevus is nimis sum vita,0,308,"VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUT",VERY POSITIVE,POSITIVE,False,False,4.052
+15,Panis fuit bonus.,The bread was good.,SOMEWHAT POSITIVE (+0.5),SOMEWHAT POSITIVE,POSITIVE,. bonus panis sum,3,527,"VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUT",VERY POSITIVE,POSITIVE,False,True,4.047
+16,Post paucas horas Caesar Asiam cepit,"After a few hours, Caesar captured Asia.",VERY NEGATIVE (-1),VERY NEGATIVE,NEGATIVE,asia caesar cepio hora paucus post,3,546,"VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUT",VERY POSITIVE,POSITIVE,False,False,3.904
+17,Mater beatum infantem bene curat.,The mother cares well for the fortunate baby.,SOMEWHAT POSITIVE (+0.5),SOMEWHAT POSITIVE,POSITIVE,. beatus bene curo infans mater,4,627,"VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUT",VERY POSITIVE,POSITIVE,False,True,4.493
+18,Imperator non curat de salute suae nationis.,The emperor does not care for the safety of his own people.,VERY NEGATIVE (-1),VERY NEGATIVE,NEGATIVE,. curo de imperator natio non salus suus,3,561,"VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUT",VERY POSITIVE,POSITIVE,False,False,3.840
+19,Mater paterque suos pueros neglexerunt.,The mother and father neglected their children.,SOMEWHAT NEGATIVE (-0.5),SOMEWHAT NEGATIVE,NEGATIVE,. mater neglego paterqum puer suus,2,466,"NEUTRAL
+
+
+The final answer is: NEUT",NEUTRAL,NEUTRAL,False,False,4.037
+20,Puer miser ab animali saevo necatus erat.,The poor boy had been killed by a savage animal.,VERY NEGATIVE (-1),VERY NEGATIVE,NEGATIVE,. ab animal miser neco puer saevo sum,3,549,"VERY NEGATIVE
+
+
+The final answer is VERY NEGATIVE",VERY NEGATIVE,NEGATIVE,True,True,4.066
+21,Venator ursam post longam pugnam necavit.,The hunter killed the bear after a long battle.,SOMEWHAT NEGATIVE (-0.5),SOMEWHAT NEGATIVE,NEGATIVE,. longus necahio post pugna urdeo venator,2,473,"VERY NEGATIVE
+
+
+```
+The final answer is VERY",VERY NEGATIVE,NEGATIVE,False,True,3.759
+22,"Post redierunt Romam, nautae usi sunt otium.","After they returned to Rome, the sailors enjoyed leisure time.",VERY POSITIVE (+1),VERY POSITIVE,POSITIVE,", . nauta otium post redeo roma sum utor",2,475,"SOMEWHAT POSITIVE
+
+
+```
+The final answer",SOMEWHAT POSITIVE,POSITIVE,False,True,3.928
+23,Puella est laeta videre suum fratrem minorem.,The girl is happy to see her younger brother.,VERY POSITIVE (+1),VERY POSITIVE,POSITIVE,. frater laetus paruus puella sum suus vido,4,634,"VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUT",VERY POSITIVE,POSITIVE,True,True,3.953
+24,Navis confractus est ab hostibus Romae.,The ship was broken by the enemies of Rome,VERY NEGATIVE (-1),VERY NEGATIVE,NEGATIVE,. ab confraho hostus nav roma sum,0,319,"VERY NEGATIVE
+
+
+```
+The final answer is VERY",VERY NEGATIVE,NEGATIVE,True,True,3.840
+25,Heros erat qui multos cives servavit.,He was a hero who saved many citizens.,VERY POSITIVE (+1),VERY POSITIVE,POSITIVE,. civis herus multus qui servo sum,2,465,"NEUTRAL
+
+
+The final answer is NEUTRAL",NEUTRAL,NEUTRAL,False,False,3.750
+26,Urbs ab hostibus malis victa deletaque est.,The city was conquered and destroyed by the wicked enemy.,VERY NEGATIVE (-1),VERY NEGATIVE,NEGATIVE,. ab deleo hostus malus sum urbs vico,3,555,"VERY NEGATIVE
+
+
+Context (lemma lexicon evidence)",VERY NEGATIVE,NEGATIVE,True,True,4.217
+27,Magna facta discipulorum eius magistro veteri placuerunt.,The great achievements of his students pleased the old teacher.,SOMEWHAT POSITIVE (+0.5),SOMEWHAT POSITIVE,POSITIVE,. discipulus facio is magister magnus placeo veterus,3,573,"VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUT",VERY POSITIVE,POSITIVE,False,True,3.982
+28,Puellae iuveni curiosaeque libet in agros migrare.,The young and curious girl likes to wander into fields.,SOMEWHAT POSITIVE (+0.5),SOMEWHAT POSITIVE,POSITIVE,. ager curiosus in iuven libeo migro puella,2,478,"VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUT",VERY POSITIVE,POSITIVE,False,True,3.488
+29,Sol ita lucet ut fruges celeriter crescant.,The sun shines in such a way that the crops grow quickly.,SOMEWHAT POSITIVE (+0.5),SOMEWHAT POSITIVE,POSITIVE,. celeriter cresco frus ita luceo sol ut,2,470,"NEUTRAL
+
+
+Context (lemma lexicon evidence)",NEUTRAL,NEUTRAL,False,False,3.481
+30,Imperator iussit milites interficere sine misericordia.,The emperor ordered the soldiers to kill without mercy.,VERY NEGATIVE (-1),VERY NEGATIVE,NEGATIVE,. imperator interficio iusso miles misericordia sine,3,577,"VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUT",VERY POSITIVE,POSITIVE,False,False,3.685
+31,Princeps sensit fas suum custodire patriam.,The ruler felt it was his sacred duty to protect his country.,VERY POSITIVE (+1),VERY POSITIVE,POSITIVE,. custodio fas patrius princeps sentio suus,3,554,"VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUT",VERY POSITIVE,POSITIVE,True,True,3.799
+32,Amici Scipionis invitaverunt ad cenam post victoriam magnam vixit.,Scipio's friends invited him to dinner after he won a great victory.,VERY POSITIVE (+1),VERY POSITIVE,POSITIVE,. ad amicus coena invitaco magnus post scipio vico victorius,3,576,"VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUT",VERY POSITIVE,POSITIVE,True,True,3.832
+33,Vir egit gratias Venerem uxori pulchrae et Iunonem liberis.,The man gave thanks to Venus for his beautiful wife and to Juno for his children.,VERY POSITIVE (+1),VERY POSITIVE,POSITIVE,. ego et gratia iuno liber pulchra uxor venus vir,4,648,"VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUT",VERY POSITIVE,POSITIVE,True,True,3.721
+34,Sceleratus vehemens expulsus erat sicut poena vitae vitiosae.,The violent criminal was exiled as punishment for a life full of vice.,VERY NEGATIVE (-1),VERY NEGATIVE,NEGATIVE,. expullo poena scelero sicut sum vehemens vita vitiosus,1,412,"VERY NEGATIVE
+
+
+The final answer is VERY NEGATIVE",VERY NEGATIVE,NEGATIVE,True,True,4.155
+35,Fabulae a patre eorum narratae sororem fratremque oblectaverunt.,The stories told by their father delighted the brother and sister.,VERY POSITIVE (+1),VERY POSITIVE,POSITIVE,. ab fabula fraterque is narro oblecto pater soror,3,572,"VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUT",VERY POSITIVE,POSITIVE,True,True,3.529
+36,"Cupiditate aeterna devotus, desidero aliquam quae non desiderat me.","Accursed by eternal longing, I long for someone who does not long for me.",VERY NEGATIVE (-1),VERY NEGATIVE,NEGATIVE,", . aeternus aliqui cupiditas desidero devotus ego non qui",2,506,"VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUT",VERY POSITIVE,POSITIVE,False,False,3.652
+37,"Cum peste adfecti essent, boves iam moriebantur.","Since they had been afflicted by the plague, the cows soon died.",VERY NEGATIVE (-1),VERY NEGATIVE,NEGATIVE,", . adficio bos cum iam morior pestis sum",2,477,"VERY NEGATIVE
+
+
+```
+The final answer is VERY",VERY NEGATIVE,NEGATIVE,True,True,3.533
+38,Puella puero nervoso dixit se reddere amorem eius.,The girl told the nervous boy that she returned his love.,VERY POSITIVE (+1),VERY POSITIVE,POSITIVE,. amor dico is nervosus puella puer reddo sui,3,557,"VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUT",VERY POSITIVE,POSITIVE,True,True,4.016
+39,"Cum bellum tandem vicissent, cives magno gaudio celebrabant.","When at last they had won the war, the citizens celebrated with great joy.",VERY POSITIVE (+1),VERY POSITIVE,POSITIVE,", . bellum celebro civis cum gaudius magnus tandem vico",2,489,"VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUT",VERY POSITIVE,POSITIVE,True,True,4.090
+40,Umbra uxoris mortuae illum miserum ita persequitur ut otium numquam reperiat.,The ghost of his dead wife haunts that wretched man so that he will never find peace.,VERY NEGATIVE (-1),VERY NEGATIVE,NEGATIVE,. ille ita miser morior numquam otium persequor reperio umbrum ut uxor,3,589,"VERY NEGATIVE
+
+
+```
+The final answer is VERY",VERY NEGATIVE,NEGATIVE,True,True,3.797
+41,"Cum nemo audiat, poeta tristis queritur dominam eum relinquisse.","Although no one is listening, the sad poet laments that his mistress has abandoned him.",VERY NEGATIVE (-1),VERY NEGATIVE,NEGATIVE,", . audio cum domina is nemo poeta querio relinquo tristis",4,657,"VERY NEGATIVE
+
+
+```
+The final answer is VERY",VERY NEGATIVE,NEGATIVE,True,True,3.402
+42,"Bono nuntio accepto, nuntius delectatus civibus nuntiat opem iam adventuram esse.","With the good news having been received, the delighted messenger announces to the citizens that aid will soon arrive.",VERY POSITIVE (+1),VERY POSITIVE,POSITIVE,", . accipio advinio bonum civus delecto iam nuntio nuntius ops sum",3,589,"VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUT",VERY POSITIVE,POSITIVE,True,True,3.663
+43,"Vulgus surrexerunt fores aedis, necatatum et consauciatum multos.","The mob surged the gates of the temple, killing and injuring many.",VERY NEGATIVE (-1),VERY NEGATIVE,NEGATIVE,", . aedus consaucio et for multus necato surro vulgus",1,414,"VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUT",VERY POSITIVE,POSITIVE,False,False,3.551
+44,Canes denique invenerunt aprum post diem longum et miserum ita venatores id potuerunt necare,"The dogs finally found the boar after a long, miserable day outside so the hunters could kill it.",VERY NEGATIVE (-1),VERY NEGATIVE,NEGATIVE,aper canis denique dies et invenio is ita longus miser neco possum post venator,4,677,"VERY NEGATIVE
+
+
+The final answer is VERY NEGATIVE",VERY NEGATIVE,NEGATIVE,True,True,3.788
+45,"Quod ea voluerat fratrem tam diu, puella celebravit quando mater peperit iterum.","Because she had wanted a brother for such a long time, the girl celebrated when her mother gave birth again.",VERY POSITIVE (+1),VERY POSITIVE,POSITIVE,", . celebro diu frater is iterum mater pario puella quando quod tam voluero",3,589,"VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUT",VERY POSITIVE,POSITIVE,True,True,4.356
+46,"In oratone, orator optimus fuit et igitur multas coronas laurinas vicit.","In his speech, the orator was the best and accordingly, he won many wreaths of laurel.",VERY POSITIVE (+1),VERY POSITIVE,POSITIVE,", . bonus corona et igitur in laurina multus orato orator sum vico",4,662,"VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUT",VERY POSITIVE,POSITIVE,True,True,4.227
+47,"Stultitiast, mater, venatum ducere invitas canes","It is foolish, mother, to lead the unwilling dogs to the hunt",SOMEWHAT NEGATIVE (-0.5),SOMEWHAT NEGATIVE,NEGATIVE,", canis duco invo mater stultitia venatus",2,482,"VERY NEGATIVE
+
+
+The final answer is VERY NEGATIVE",VERY NEGATIVE,NEGATIVE,False,True,3.591
+48,"Si quis metuens vivet, liber mihi non erit umquam","If anyone lives in fear, he will not ever be free - in my opinion",VERY NEGATIVE (-1),VERY NEGATIVE,NEGATIVE,", ego liber metuo non quis si sum umquam viveo",2,477,"SOMEWHAT POSITIVE
+
+
+The final answer is SOME",SOMEWHAT POSITIVE,POSITIVE,False,False,3.545
+49,"imperator promisit decem milia militum celerrime discessura esse, dummodo satis copiarum reciperent.","The general promises ten thousand soldiers to depart most quickly, so long as they receive satisfactory supplies.",SOMEWHAT POSITIVE (+0.5),SOMEWHAT POSITIVE,POSITIVE,", . celerrime copia decem discedo dummodo imperator miles milius promitto recipio satis sum",4,694,"VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUT",VERY POSITIVE,POSITIVE,False,True,4.436
+50,Cum cūrā docet ut discipulī bene discant,He teaches them with care so the students may learn well,SOMEWHAT POSITIVE (+0.5),SOMEWHAT POSITIVE,POSITIVE,bene cum cūrā discipulī disco doceo ut,0,320,"VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUT",VERY POSITIVE,POSITIVE,False,True,4.081
+51,Sol lucet in caelo.,The sun shines in the sky.,NEUTRAL (0),NEUTRAL,NEUTRAL,. caelum in luceo sol,2,447,"VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUT",VERY POSITIVE,POSITIVE,False,False,3.910
+52,Urbs Roma in Italia est.,The city of Rome is in Italy.,NEUTRAL (0),NEUTRAL,NEUTRAL,. in italis roma sum urbs,1,373,"SOMEWHAT POSITIVE
+
+
+Context (lemma lexicon",SOMEWHAT POSITIVE,POSITIVE,False,False,4.433
+53,Ego in villa ambulo.,I walk in the villa.,NEUTRAL (0),NEUTRAL,NEUTRAL,. ambulo ego in villa,0,300,"NEUTRAL
+
+
+The final answer is: NEUT",NEUTRAL,NEUTRAL,True,True,4.565
+54,Annus habet duodecim menses.,The year has twelve months.,NEUTRAL (0),NEUTRAL,NEUTRAL,. annus duodecim habeo menses,1,377,"NEUTRAL
+
+
+Context (lemma lexicon evidence)",NEUTRAL,NEUTRAL,True,True,3.645
+55,Quid est vita sine amore?,What is life without love?,VERY NEGATIVE (-1),VERY NEGATIVE,NEGATIVE,? amor quis sine sum vita,1,374,"VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUT",VERY POSITIVE,POSITIVE,False,False,4.064
+56,"O quam felix es, qui omnia perdidisti!","O how fortunate you are, who have lost everything!",VERY NEGATIVE (-1),VERY NEGATIVE,NEGATIVE,", felix o omnis perdido quam qui sum",1,387,"VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUT",VERY POSITIVE,POSITIVE,False,False,4.342
+57,"Si Roma caderet, quid faceremus?","If Rome were to fall, what would we do?",NEUTRAL (0),NEUTRAL,NEUTRAL,", ? cado facio quis roma si",0,312,"VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUT",VERY POSITIVE,POSITIVE,False,False,4.252
+58,Utinam pax in mundo sit.,Would that there be peace in the world.,VERY POSITIVE (+1),VERY POSITIVE,POSITIVE,. in mundus pax sum utor,2,454,"VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUT",VERY POSITIVE,POSITIVE,True,True,4.120
+59,Puellula mea in villa cantat.,My little girl sings in the villa.,SOMEWHAT POSITIVE (+0.5),SOMEWHAT POSITIVE,POSITIVE,. canto in meus puellulus villa,2,459,"NEUTRAL
+
+
+The final answer is NEUTRAL",NEUTRAL,NEUTRAL,False,False,4.292
+60,Homunculus ille nihil scit.,That little man knows nothing.,SOMEWHAT NEGATIVE (-0.5),SOMEWHAT NEGATIVE,NEGATIVE,. homunculus ille nihil scio,0,307,"VERY NEGATIVE
+
+
+The final answer is VERY NEGATIVE",VERY NEGATIVE,NEGATIVE,False,True,4.422
+61,"Domine, salvum me fac.","Lord, save me.",VERY POSITIVE (+1),VERY POSITIVE,POSITIVE,", . dominus ego facio salvus",0,302,"VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUT",VERY POSITIVE,POSITIVE,True,True,5.003
+62,Scientia nova in libris invenitur.,New knowledge is found in books.,SOMEWHAT POSITIVE (+0.5),SOMEWHAT POSITIVE,POSITIVE,. in invenio liber novus scientia,3,544,"VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUT",VERY POSITIVE,POSITIVE,False,True,4.426
+63,Ego sum lux mundi.,I am the light of the world.,VERY POSITIVE (+1),VERY POSITIVE,POSITIVE,. ego lux mundus sum,2,445,"VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUT",VERY POSITIVE,POSITIVE,True,True,3.599
+64,Respublica in periculis versatur.,The republic is embroiled in dangers.,VERY NEGATIVE (-1),VERY NEGATIVE,NEGATIVE,. in periculum respublica verso,2,473,"VERY NEGATIVE
+
+
+```
+The final answer is VERY",VERY NEGATIVE,NEGATIVE,True,True,3.930
+65,"Deus meus, quare me dereliquisti?","My God, why have you forsaken me?",VERY NEGATIVE (-1),VERY NEGATIVE,NEGATIVE,", ? derelinquo deus ego meus quare",2,460,"NEUTRAL
+
+
+The final answer is: NEUT",NEUTRAL,NEUTRAL,False,False,4.037
+66,Timor Domini initium sapientiae est.,The fear of the Lord is the beginning of wisdom.,SOMEWHAT POSITIVE (+0.5),SOMEWHAT POSITIVE,POSITIVE,. dominus initium sapientia sum timor,3,552,"VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUT",VERY POSITIVE,POSITIVE,False,True,4.210
+67,Ego felum in villa vidi.,I saw a cat in the villa.,NEUTRAL (0),NEUTRAL,NEUTRAL,. ego fero in video villa,0,304,"VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUT",VERY POSITIVE,POSITIVE,False,False,4.060
+68,"Postquam milites in silvam intraverunt, ferae saevae eos insequebantur, et multi perierunt.","After the soldiers entered the forest, savage beasts pursued them, and many perished.",VERY NEGATIVE (-1),VERY NEGATIVE,NEGATIVE,", . et fera in insequor intravo is miles multus pereo postquam saeva silva",3,597,"VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUT",VERY POSITIVE,POSITIVE,False,False,4.398
+69,"Cum philosophi in academia disputarent, discipuli eorum nova praecepta didicerunt.","While the philosophers debated in the academy, their students learned new teachings.",SOMEWHAT POSITIVE (+0.5),SOMEWHAT POSITIVE,POSITIVE,", . academia cum dido discipulus disputo in is novus philosophus praeceptum",3,605,"NEUTRAL
+
+
+Context (lemma lexicon evidence)",NEUTRAL,NEUTRAL,False,False,4.107
+70,Domus mea igne consumpta est.,My house was consumed by fire.,VERY NEGATIVE (-1),VERY NEGATIVE,NEGATIVE,. consumo domus ignis meus sum,3,536,"VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUT",VERY POSITIVE,POSITIVE,False,False,4.419

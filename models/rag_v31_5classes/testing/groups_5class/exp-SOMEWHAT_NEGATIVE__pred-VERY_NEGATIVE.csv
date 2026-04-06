@@ -1,0 +1,8 @@
+idx,sentence,translation,expected_sentiment,expected_5,expected_3,lemmas,context_hits,prompt_chars,predicted_raw,predicted_5,predicted_3,is_correct_5,is_correct_3,latency_s
+2,Puer discipulus malus est.,The boy is a bad student.,SOMEWHAT NEGATIVE (-0.5),SOMEWHAT NEGATIVE,NEGATIVE,. discipulus malus puer sum,4,621,VERY NEGATIVE,VERY NEGATIVE,NEGATIVE,False,True,3.122
+8,Malum consilium est.,The plan is bad,SOMEWHAT NEGATIVE (-0.5),SOMEWHAT NEGATIVE,NEGATIVE,. consilium malum sum,2,455,VERY NEGATIVE,VERY NEGATIVE,NEGATIVE,False,True,3.103
+14,Vita eius erat nimis brevis.,Her life was too brief.,SOMEWHAT NEGATIVE (-0.5),SOMEWHAT NEGATIVE,NEGATIVE,. brevus is nimis sum vita,0,308,VERY NEGATIVE,VERY NEGATIVE,NEGATIVE,False,True,2.923
+19,Mater paterque suos pueros neglexerunt.,The mother and father neglected their children.,SOMEWHAT NEGATIVE (-0.5),SOMEWHAT NEGATIVE,NEGATIVE,. mater neglego paterqum puer suus,2,466,VERY NEGATIVE,VERY NEGATIVE,NEGATIVE,False,True,2.850
+21,Venator ursam post longam pugnam necavit.,The hunter killed the bear after a long battle.,SOMEWHAT NEGATIVE (-0.5),SOMEWHAT NEGATIVE,NEGATIVE,. longus necahio post pugna urdeo venator,2,473,VERY NEGATIVE,VERY NEGATIVE,NEGATIVE,False,True,2.821
+47,"Stultitiast, mater, venatum ducere invitas canes","It is foolish, mother, to lead the unwilling dogs to the hunt",SOMEWHAT NEGATIVE (-0.5),SOMEWHAT NEGATIVE,NEGATIVE,", canis duco invo mater stultitia venatus",2,482,VERY NEGATIVE,VERY NEGATIVE,NEGATIVE,False,True,2.810
+60,Homunculus ille nihil scit.,That little man knows nothing.,SOMEWHAT NEGATIVE (-0.5),SOMEWHAT NEGATIVE,NEGATIVE,. homunculus ille nihil scio,0,307,VERY NEGATIVE,VERY NEGATIVE,NEGATIVE,False,True,3.167

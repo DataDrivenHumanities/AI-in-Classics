@@ -1,0 +1,4 @@
+idx,sentence,translation,expected_sentiment,expected_5,expected_3,lemmas,context_hits,prompt_chars,predicted_raw,predicted_5,predicted_3,is_correct_5,is_correct_3,latency_s
+14,Vita eius erat nimis brevis.,Her life was too brief.,SOMEWHAT NEGATIVE (-0.5),SOMEWHAT NEGATIVE,NEGATIVE,. brevus is nimis sum vita,0,308,"VERY POSITIVE
+SOMEWHAT POSITIVE
+NEUT",VERY POSITIVE,POSITIVE,False,False,4.052

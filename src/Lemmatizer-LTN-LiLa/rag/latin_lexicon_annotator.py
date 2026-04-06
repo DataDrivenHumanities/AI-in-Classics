@@ -161,9 +161,6 @@ class LatinLexiconAnnotator:
 
         self._conn = psycopg.connect(self.dsn, row_factory=dict_row)
 
-        # Small optional caches (safe for dev/eval runs).
-        self._lemma_to_sentiment_cache: dict[str, list[dict[str, Any]]] = {}
-
     def close(self) -> None:
         try:
             self._conn.close()
@@ -241,45 +238,40 @@ class LatinLexiconAnnotator:
             {k for ks in token_lookup_order.values() for k in ks}
         )
 
-        direct = self._lookup_direct_lemmas(all_lookup_keys)
-        form_candidates = self._lookup_forms_candidates(all_lookup_keys)
+        word_dict, word_sent = self._lookup_words(all_lookup_keys)
 
         token_chosen_lemma_id: dict[str, int] = {}
+        token_chosen_sent_id: dict[str, int] = {}
         ambiguous_tokens: list[str] = []
         lookup_hits = 0
         lookup_misses = 0
 
         for t, cnt in token_counts.items():
             ordered_keys = token_lookup_order.get(t) or [t]
-            chosen_key = ""
-            cand_list: list[int] = []
+            found = False
             for k in ordered_keys:
-                if k in direct:
-                    chosen_key = k
-                    cand_list = [int(direct[k])]
-                    break
-                if k in form_candidates:
-                    cands = list(form_candidates.get(k) or [])
+                if k in word_dict:
+                    cands = sorted(set(word_dict[k]))
                     if cands:
-                        chosen_key = k
-                        cand_list = [int(x) for x in cands]
+                        if len(cands) > 1:
+                            ambiguous_tokens.append(t)
+                        token_chosen_lemma_id[t] = cands[0]
+                        lookup_hits += cnt
+                        found = True
                         break
-
-            if not cand_list:
+                if k in word_sent:
+                    sids = word_sent[k]
+                    if sids:
+                        token_chosen_sent_id[t] = sids[0]
+                        lookup_hits += cnt
+                        found = True
+                        break
+            if not found:
                 lookup_misses += cnt
-                continue
 
-            lookup_hits += cnt
-            if len(cand_list) > 1:
-                ambiguous_tokens.append(t)
-
-            # deterministic choice: prefer direct lemma match for chosen_key, else smallest lemma_id
-            cand_list = sorted(set(int(x) for x in cand_list))
-            chosen = direct.get(chosen_key) or cand_list[0]
-            token_chosen_lemma_id[t] = int(chosen)
-
-        chosen_ids = sorted(set(token_chosen_lemma_id.values()))
-        lemma_meta_by_id = self._fetch_lemmas_by_id(chosen_ids)
+        # --- Resolve dictionary matches ---
+        dict_lemma_ids = sorted(set(token_chosen_lemma_id.values()))
+        lemma_meta_by_id = self._fetch_lemmas_by_id(dict_lemma_ids)
 
         token_to_lemma: dict[str, dict[str, Any]] = {}
         lemma_counts: Counter[str] = Counter()
@@ -303,42 +295,64 @@ class LatinLexiconAnnotator:
             lemma_pos_bucket[lemma_key] = bucket
             lemma_pos_raw[lemma_key] = pos_raw
 
-        lemma_keys = sorted(lemma_counts.keys())
-        sentiment_rows = self._fetch_sentiment_rows(lemma_keys)
+        # --- Resolve sentiment-only matches ---
+        sent_ids = sorted(set(token_chosen_sent_id.values()))
+        sent_meta_by_id = self._fetch_sentiment_by_sentiment_id(sent_ids)
+
+        for tok, cnt in token_counts.items():
+            sid = token_chosen_sent_id.get(tok)
+            if not sid or sid not in sent_meta_by_id:
+                continue
+            m = sent_meta_by_id[sid]
+            lemma_key = str(m["lemma_raw"])
+            bucket = _pos_bucket_from_affectus(m["pos"])
+            token_to_lemma[tok] = {
+                "lemma_key": lemma_key,
+                "pos_bucket": bucket,
+                "pos_raw": m["pos"],
+            }
+            lemma_counts[lemma_key] += int(cnt)
+            lemma_pos_bucket[lemma_key] = bucket
+
+        # --- Fetch sentiment from lemma_sentiment_map ---
+        dict_sentiment = self._fetch_sentiment_by_lemma_id(dict_lemma_ids)
 
         chosen_sentiment_by_lemma: dict[str, dict[str, Any]] = {}
         fallback_joins = 0
         affectus_hit_tokens = 0
 
-        for lemma_key in lemma_keys:
-            rows = sentiment_rows.get(lemma_key, [])
+        lemma_id_to_key: dict[int, str] = {}
+        for lid, m in lemma_meta_by_id.items():
+            lemma_id_to_key[lid] = str(m["lemma_nod"])
+
+        # Dictionary path: POS-aware selection from multiple sentiment rows
+        for lid in dict_lemma_ids:
+            lemma_key = lemma_id_to_key.get(lid)
+            if not lemma_key:
+                continue
+            rows = dict_sentiment.get(lid, [])
             if not rows:
                 continue
             bucket = lemma_pos_bucket.get(lemma_key, "other")
             matching = [
-                r
-                for r in rows
+                r for r in rows
                 if r.get("pos_bucket") == bucket and bucket != "other"
             ]
             candidates = matching or rows
 
             def _score_key(r: dict[str, Any]) -> Tuple[float, str]:
                 sc = r.get("polarity_score")
-                return (
-                    abs(float(sc)) if sc is not None else 0.0,
-                    str(r.get("pos") or ""),
-                )
+                return (abs(float(sc)) if sc is not None else 0.0, str(r.get("pos") or ""))
 
-            chosen = sorted(candidates, key=_score_key, reverse=True)[0]
+            chosen_row = sorted(candidates, key=_score_key, reverse=True)[0]
             pos_match = bool(matching)
 
-            score = chosen.get("polarity_score")
-            # Only keep sentiment-bearing entries for UI highlighting (skip neutral).
+            score = chosen_row.get("polarity_score")
             try:
                 sc = float(score) if score is not None else None
             except Exception:
                 sc = None
-            if sc is None or sc == 0.0:
+            if sc is None:
                 continue
             if not pos_match:
                 fallback_joins += 1
@@ -350,15 +364,48 @@ class LatinLexiconAnnotator:
                 "count": count,
                 "scraped_pos": lemma_pos_raw.get(lemma_key),
                 "scraped_pos_bucket": bucket,
-                "affectus_lemma": chosen.get("lemma_raw"),
-                "affectus_pos": chosen.get("pos"),
-                "affectus_pos_bucket": chosen.get("pos_bucket"),
+                "affectus_lemma": chosen_row.get("lemma_raw"),
+                "affectus_pos": chosen_row.get("pos"),
+                "affectus_pos_bucket": chosen_row.get("pos_bucket"),
                 "polarity_score": sc,
-                "has_polarity": chosen.get("has_polarity"),
-                "provenance": chosen.get("provenance"),
+                "has_polarity": chosen_row.get("has_polarity"),
+                "provenance": chosen_row.get("provenance"),
                 "pos_match": pos_match,
             }
 
+        # Sentiment-only path: direct from lemma_sentiment_map
+        for sid in sent_ids:
+            m = sent_meta_by_id.get(sid)
+            if not m:
+                continue
+            lemma_key = str(m["lemma_raw"])
+            if lemma_key in chosen_sentiment_by_lemma:
+                continue
+            score = m.get("polarity_score")
+            try:
+                sc = float(score) if score is not None else None
+            except Exception:
+                sc = None
+            if sc is None:
+                continue
+            count = int(lemma_counts.get(lemma_key, 0))
+            affectus_hit_tokens += count
+            bucket = _pos_bucket_from_affectus(m.get("pos"))
+            chosen_sentiment_by_lemma[lemma_key] = {
+                "lemma_key": lemma_key,
+                "count": count,
+                "scraped_pos": None,
+                "scraped_pos_bucket": bucket,
+                "affectus_lemma": m.get("lemma_raw"),
+                "affectus_pos": m.get("pos"),
+                "affectus_pos_bucket": bucket,
+                "polarity_score": sc,
+                "has_polarity": m.get("has_polarity"),
+                "provenance": m.get("provenance"),
+                "pos_match": True,
+            }
+
+        # --- Build output spans ---
         spans_out: list[dict[str, Any]] = []
         for sp in spans_raw:
             tn = str(sp.get("token_norm") or "")
@@ -529,41 +576,39 @@ class LatinLexiconAnnotator:
             out.append(t)
         return out
 
-    def _lookup_forms_candidates(self, token_norms: list[str]) -> dict[str, list[int]]:
+    def _lookup_words(self, token_norms: list[str]) -> tuple[dict[str, list[int]], dict[str, list[int]]]:
+        """
+        Look up tokens via public.word_lookup.
+
+        Returns (dict_matches, sentiment_only_matches):
+          - dict_matches:  {form_nod: [lemma_ids]}  for dictionary-form hits
+          - sentiment_only_matches: {form_nod: [sentiment_lemma_ids]}  for unmatched-sentiment hits
+        """
         if not token_norms:
-            return {}
+            return {}, {}
         with self._conn.cursor() as cur:
             cur.execute(
                 """
-                SELECT form_nod::text AS token, array_agg(DISTINCT lemma_id) AS lemma_ids
-                FROM public.forms
-                WHERE form_nod = ANY(%s)
-                GROUP BY form_nod
+                SELECT LOWER(form_nod)::text AS token, lemma_id, sentiment_lemma_id
+                FROM public.word_lookup
+                WHERE LOWER(form_nod) = ANY(%s)
                 """,
                 (token_norms,),
             )
             rows = cur.fetchall()
-        out: dict[str, list[int]] = {}
+        dict_matches: dict[str, list[int]] = defaultdict(list)
+        sent_matches: dict[str, list[int]] = defaultdict(list)
         for r in rows:
             token = str(r["token"])
-            lemma_ids = list(r["lemma_ids"] or [])
-            out[token] = sorted(set(int(x) for x in lemma_ids))
-        return out
-
-    def _lookup_direct_lemmas(self, token_norms: list[str]) -> dict[str, int]:
-        if not token_norms:
-            return {}
-        with self._conn.cursor() as cur:
-            cur.execute(
-                """
-                SELECT lemma_nod::text AS token, id AS lemma_id
-                FROM public.lemmas
-                WHERE lemma_nod = ANY(%s)
-                """,
-                (token_norms,),
-            )
-            rows = cur.fetchall()
-        return {str(r["token"]): int(r["lemma_id"]) for r in rows}
+            if r["lemma_id"] is not None:
+                lid = int(r["lemma_id"])
+                if lid not in dict_matches[token]:
+                    dict_matches[token].append(lid)
+            elif r["sentiment_lemma_id"] is not None:
+                sid = int(r["sentiment_lemma_id"])
+                if sid not in sent_matches[token]:
+                    sent_matches[token].append(sid)
+        return dict(dict_matches), dict(sent_matches)
 
     def _fetch_lemmas_by_id(self, lemma_ids: list[int]) -> dict[int, dict[str, Any]]:
         if not lemma_ids:
@@ -580,51 +625,58 @@ class LatinLexiconAnnotator:
             rows = cur.fetchall()
         return {int(r["id"]): dict(r) for r in rows}
 
-    def _fetch_sentiment_rows(self, lemma_keys: list[str]) -> dict[str, list[dict[str, Any]]]:
-        """
-        Returns mapping lemma_key -> list of affectus rows.
-        """
-        out: dict[str, list[dict[str, Any]]] = {k: [] for k in lemma_keys}
-        if not lemma_keys:
-            return out
+    def _fetch_sentiment_by_lemma_id(self, lemma_ids: list[int]) -> dict[int, list[dict[str, Any]]]:
+        """Sentiment rows from lemma_sentiment_map keyed by dictionary_lemma_id."""
+        if not lemma_ids:
+            return {}
+        with self._conn.cursor() as cur:
+            cur.execute(
+                """
+                SELECT dictionary_lemma_id, sentiment_lemma, pos,
+                       polarity_score, has_polarity, match_source
+                FROM public.lemma_sentiment_map
+                WHERE dictionary_lemma_id = ANY(%s) AND match = TRUE
+                """,
+                (lemma_ids,),
+            )
+            rows = cur.fetchall()
+        grouped: dict[int, list[dict[str, Any]]] = defaultdict(list)
+        for r in rows:
+            grouped[int(r["dictionary_lemma_id"])].append({
+                "lemma_raw": r["sentiment_lemma"],
+                "pos": r["pos"],
+                "polarity_score": float(r["polarity_score"]) if r["polarity_score"] is not None else None,
+                "has_polarity": r["has_polarity"],
+                "provenance": r["match_source"],
+                "pos_bucket": _pos_bucket_from_affectus(r["pos"]),
+            })
+        return dict(grouped)
 
-        # Cache-aware fetch: query only missing lemma_keys.
-        missing = [k for k in lemma_keys if k not in self._lemma_to_sentiment_cache]
-        if missing:
-            with self._conn.cursor() as cur:
-                cur.execute(
-                    """
-                    SELECT
-                      norm(lemma) AS lemma_key,
-                      lemma AS lemma_raw,
-                      pos,
-                      polarity_score,
-                      has_polarity,
-                      provenance
-                    FROM lila.sentiment
-                    WHERE norm(lemma) = ANY(%s)
-                    """,
-                    (missing,),
-                )
-                rows = cur.fetchall()
-            grouped: dict[str, list[dict[str, Any]]] = defaultdict(list)
-            for r in rows:
-                lk = str(r["lemma_key"])
-                grouped[lk].append(
-                    {
-                        "lemma_raw": r["lemma_raw"],
-                        "pos": r["pos"],
-                        "polarity_score": float(r["polarity_score"]) if r["polarity_score"] is not None else None,
-                        "has_polarity": r["has_polarity"],
-                        "provenance": r["provenance"],
-                        "pos_bucket": _pos_bucket_from_affectus(r["pos"]),
-                    }
-                )
-            for k in missing:
-                self._lemma_to_sentiment_cache[k] = grouped.get(k, [])
-
-        for k in lemma_keys:
-            out[k] = list(self._lemma_to_sentiment_cache.get(k, []))
+    def _fetch_sentiment_by_sentiment_id(self, sentiment_ids: list[int]) -> dict[int, dict[str, Any]]:
+        """Sentiment rows from lemma_sentiment_map keyed by sentiment_id (unmatched entries)."""
+        if not sentiment_ids:
+            return {}
+        with self._conn.cursor() as cur:
+            cur.execute(
+                """
+                SELECT sentiment_id, sentiment_lemma, pos,
+                       polarity_score, has_polarity, match_source
+                FROM public.lemma_sentiment_map
+                WHERE sentiment_id = ANY(%s)
+                """,
+                (sentiment_ids,),
+            )
+            rows = cur.fetchall()
+        out: dict[int, dict[str, Any]] = {}
+        for r in rows:
+            out[int(r["sentiment_id"])] = {
+                "lemma_raw": r["sentiment_lemma"],
+                "pos": r["pos"],
+                "polarity_score": float(r["polarity_score"]) if r["polarity_score"] is not None else None,
+                "has_polarity": r["has_polarity"],
+                "provenance": r["match_source"],
+                "pos_bucket": _pos_bucket_from_affectus(r["pos"]),
+            }
         return out
 
     def annotate(self, text: str) -> dict[str, Any]:
@@ -633,38 +685,41 @@ class LatinLexiconAnnotator:
         token_counts = Counter(tokens)
         unique_tokens = sorted(token_counts.keys())
 
-        # Build a bounded set of lookup keys (token + fallbacks) and remember their priority per token.
         token_lookup_order: dict[str, list[str]] = {t: self._lookup_variants_for_token(t) for t in unique_tokens}
         all_lookup_keys: list[str] = sorted({k for ks in token_lookup_order.values() for k in ks})
 
-        direct = self._lookup_direct_lemmas(all_lookup_keys)
-        form_candidates = self._lookup_forms_candidates(all_lookup_keys)
+        word_dict, word_sent = self._lookup_words(all_lookup_keys)
 
         token_chosen_lemma_id: dict[str, int] = {}
+        token_chosen_sent_id: dict[str, int] = {}
         ambiguous_tokens: list[str] = []
         fallback_used: dict[str, str] = {}
         fallback_counts = {"orthography": 0, "enclitic": 0}
 
         for t in unique_tokens:
             chosen_key = ""
-            cands: set[int] = set()
+            found = False
             for key in token_lookup_order.get(t, [t]):
-                key_cands: set[int] = set()
-                if key in direct:
-                    key_cands.add(int(direct[key]))
-                key_cands.update(int(x) for x in (form_candidates.get(key, []) or []))
-                if key_cands:
-                    chosen_key = key
-                    cands = key_cands
-                    break
+                if key in word_dict:
+                    cands = sorted(set(word_dict[key]))
+                    if cands:
+                        chosen_key = key
+                        if len(cands) > 1:
+                            ambiguous_tokens.append(t)
+                        token_chosen_lemma_id[t] = cands[0]
+                        found = True
+                        break
+                if key in word_sent:
+                    sids = word_sent[key]
+                    if sids:
+                        chosen_key = key
+                        token_chosen_sent_id[t] = sids[0]
+                        found = True
+                        break
 
-            cand_list = sorted(cands)
-            if not cand_list:
+            if not found:
                 continue
-            if len(cand_list) > 1:
-                ambiguous_tokens.append(t)
 
-            # Track whether a fallback key was used (for debugging/coverage).
             if chosen_key and chosen_key != t:
                 fallback_used[t] = chosen_key
                 if any(t.endswith(suf) and chosen_key == t[: -len(suf)] for suf in self.config.enclitics if suf):
@@ -672,14 +727,10 @@ class LatinLexiconAnnotator:
                 else:
                     fallback_counts["orthography"] += 1
 
-            # deterministic choice: prefer direct lemma match for the chosen lookup key, else smallest lemma_id
-            chosen = direct.get(chosen_key) or cand_list[0]
-            token_chosen_lemma_id[t] = int(chosen)
+        # --- Dictionary path ---
+        dict_lemma_ids = sorted(set(token_chosen_lemma_id.values()))
+        lemma_meta_by_id = self._fetch_lemmas_by_id(dict_lemma_ids)
 
-        chosen_ids = sorted(set(token_chosen_lemma_id.values()))
-        lemma_meta_by_id = self._fetch_lemmas_by_id(chosen_ids)
-
-        # Aggregate by lemma_key
         lemma_counts: Counter[str] = Counter()
         lemma_pos_bucket: dict[str, str] = {}
         lemma_pos_raw: dict[str, Optional[str]] = {}
@@ -688,44 +739,66 @@ class LatinLexiconAnnotator:
         lookup_misses = 0
         for tok, cnt in token_counts.items():
             lemma_id = token_chosen_lemma_id.get(tok)
-            if not lemma_id or lemma_id not in lemma_meta_by_id:
+            if lemma_id and lemma_id in lemma_meta_by_id:
+                lookup_hits += cnt
+                m = lemma_meta_by_id[lemma_id]
+                lemma_key = str(m["lemma_nod"])
+                lemma_counts[lemma_key] += cnt
+                pos_raw = m.get("pos")
+                lemma_pos_raw[lemma_key] = pos_raw
+                lemma_pos_bucket[lemma_key] = _pos_bucket_from_scraped(pos_raw)
+            elif token_chosen_sent_id.get(tok):
+                lookup_hits += cnt
+            else:
                 lookup_misses += cnt
+
+        # --- Sentiment-only path ---
+        sent_ids = sorted(set(token_chosen_sent_id.values()))
+        sent_meta_by_id = self._fetch_sentiment_by_sentiment_id(sent_ids)
+
+        for tok, cnt in token_counts.items():
+            sid = token_chosen_sent_id.get(tok)
+            if not sid or sid not in sent_meta_by_id:
                 continue
-            lookup_hits += cnt
-            m = lemma_meta_by_id[lemma_id]
-            lemma_key = str(m["lemma_nod"])
+            m = sent_meta_by_id[sid]
+            lemma_key = str(m["lemma_raw"])
             lemma_counts[lemma_key] += cnt
-            pos_raw = m.get("pos")
-            lemma_pos_raw[lemma_key] = pos_raw
-            lemma_pos_bucket[lemma_key] = _pos_bucket_from_scraped(pos_raw)
+            lemma_pos_bucket[lemma_key] = _pos_bucket_from_affectus(m["pos"])
 
-        lemma_keys = sorted(lemma_counts.keys())
+        # --- Fetch sentiment from map ---
+        dict_sentiment = self._fetch_sentiment_by_lemma_id(dict_lemma_ids)
 
-        sentiment_rows = self._fetch_sentiment_rows(lemma_keys)
+        lemma_id_to_key: dict[int, str] = {}
+        for lid, m in lemma_meta_by_id.items():
+            lemma_id_to_key[lid] = str(m["lemma_nod"])
 
         sentiment_hits: list[dict[str, Any]] = []
         affectus_hit_tokens = 0
         fallback_joins = 0
 
-        for lemma_key in lemma_keys:
-            rows = sentiment_rows.get(lemma_key, [])
+        # Dictionary path: POS-aware selection
+        for lid in dict_lemma_ids:
+            lemma_key = lemma_id_to_key.get(lid)
+            if not lemma_key:
+                continue
+            rows = dict_sentiment.get(lid, [])
             if not rows:
                 continue
             bucket = lemma_pos_bucket.get(lemma_key, "other")
             matching = [r for r in rows if r.get("pos_bucket") == bucket and bucket != "other"]
             candidates = matching or rows
-            # choose strongest signal by abs(score) (ties stable by order)
+
             def _score_key(r: dict[str, Any]) -> Tuple[float, str]:
                 sc = r.get("polarity_score")
                 return (abs(float(sc)) if sc is not None else 0.0, str(r.get("pos") or ""))
 
-            chosen = sorted(candidates, key=_score_key, reverse=True)[0]
+            chosen_row = sorted(candidates, key=_score_key, reverse=True)[0]
             pos_match = bool(matching)
             if not pos_match:
                 fallback_joins += 1
 
             count = int(lemma_counts[lemma_key])
-            score = chosen.get("polarity_score")
+            score = chosen_row.get("polarity_score")
             importance = (abs(float(score)) if score is not None else 0.0) * count
             affectus_hit_tokens += count
             sentiment_hits.append(
@@ -734,13 +807,44 @@ class LatinLexiconAnnotator:
                     "count": count,
                     "scraped_pos": lemma_pos_raw.get(lemma_key),
                     "scraped_pos_bucket": bucket,
-                    "affectus_lemma": chosen.get("lemma_raw"),
-                    "affectus_pos": chosen.get("pos"),
-                    "affectus_pos_bucket": chosen.get("pos_bucket"),
+                    "affectus_lemma": chosen_row.get("lemma_raw"),
+                    "affectus_pos": chosen_row.get("pos"),
+                    "affectus_pos_bucket": chosen_row.get("pos_bucket"),
                     "polarity_score": score,
-                    "has_polarity": chosen.get("has_polarity"),
-                    "provenance": chosen.get("provenance"),
+                    "has_polarity": chosen_row.get("has_polarity"),
+                    "provenance": chosen_row.get("provenance"),
                     "pos_match": pos_match,
+                    "importance": importance,
+                }
+            )
+
+        # Sentiment-only path
+        seen_lemma_keys = {h["lemma_key"] for h in sentiment_hits}
+        for sid in sent_ids:
+            m = sent_meta_by_id.get(sid)
+            if not m:
+                continue
+            lemma_key = str(m["lemma_raw"])
+            if lemma_key in seen_lemma_keys:
+                continue
+            score = m.get("polarity_score")
+            count = int(lemma_counts.get(lemma_key, 0))
+            importance = (abs(float(score)) if score is not None else 0.0) * count
+            affectus_hit_tokens += count
+            bucket = _pos_bucket_from_affectus(m.get("pos"))
+            sentiment_hits.append(
+                {
+                    "lemma_key": lemma_key,
+                    "count": count,
+                    "scraped_pos": None,
+                    "scraped_pos_bucket": bucket,
+                    "affectus_lemma": m.get("lemma_raw"),
+                    "affectus_pos": m.get("pos"),
+                    "affectus_pos_bucket": bucket,
+                    "polarity_score": score,
+                    "has_polarity": m.get("has_polarity"),
+                    "provenance": m.get("provenance"),
+                    "pos_match": True,
                     "importance": importance,
                 }
             )
@@ -774,6 +878,7 @@ class LatinLexiconAnnotator:
             "negators": negators,
             "shifters": shifters,
             "top_k": top_k,
+            "all_hits": sentiment_hits,
             "debug": {
                 "ambiguous_token_examples": ambiguous_tokens[:25],
                 "fallback_examples": dict(list(fallback_used.items())[:25]),
@@ -788,7 +893,7 @@ class LatinLexiconAnnotator:
         """
         res = self.annotate(text)
         cov = res.get("coverage") or {}
-        hits = res.get("top_k") or []
+        hits = res.get("all_hits") or res.get("top_k") or []
 
         payload_hits: list[dict[str, Any]] = []
         for h in hits:
