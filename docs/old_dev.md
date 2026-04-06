@@ -1,40 +1,9 @@
 # Development Guide
 
-# INSTALL
-Install Node.js and UV and Ollama  
-Included a bat file for windows and an sh file for linux  
-You can also do it manually with plaform specific commands
-## Windows
-```
-#Right click run as admin
-install.bat
-```
+Pick **one** setup path: **Poetry**, **plain Python (venv)**, or **Docker**.  
+Then (optionally) build the **Ollama** models for sentiment tests.
 
-## Linux
-```
-chmod +x install.sh
-./install.sh
-```
----
-
-# INIT
-```
-uv venv --python 3.12
-uv pip install -r requirements.txt
-
-cd src/frontend/
-npm install
-
-ollama pull llama3.1:8b
-ollama pull gemma4:26b
-
-ollama create latin_model:1.0.0 -f models/latin_model/Modelfile
-ollama create greek_model:1.0.0 -f models/greek_model/Modelfile
-
-ollama serve
-
-```
-
+> We recommend **Poetry** or **Docker** for the smoothest experience.
 
 ---
 
