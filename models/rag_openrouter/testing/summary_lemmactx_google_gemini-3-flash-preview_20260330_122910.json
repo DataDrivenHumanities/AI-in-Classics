@@ -1,0 +1,172 @@
+{
+  "model": "google/gemini-3-flash-preview",
+  "api": "openrouter.ai/api/v1/chat/completions",
+  "input_file": "/Users/lukaskanopka/Desktop/AI-in-Classics/models/rag_openrouter/testing/LatinSentenceTestDatav2.json",
+  "results_csv": "/Users/lukaskanopka/Desktop/AI-in-Classics/models/rag_openrouter/testing/results_lemmactx_google_gemini-3-flash-preview_20260330_122910.csv",
+  "total_tests": 70,
+  "context_mode": "POLAR_ONLY",
+  "max_context_items": 3,
+  "overall": {
+    "correct_7": 38,
+    "accuracy_7": 0.5428571428571428,
+    "unknown_7": 6,
+    "correct_3": 59,
+    "accuracy_3": 0.8428571428571429,
+    "unknown_3": 4
+  },
+  "per_label_7": {
+    "EXTREMELY POSITIVE": {
+      "correct": 0,
+      "total": 0,
+      "accuracy": 0.0
+    },
+    "VERY POSITIVE": {
+      "correct": 8,
+      "total": 16,
+      "accuracy": 0.5
+    },
+    "MODERATELY POSITIVE": {
+      "correct": 8,
+      "total": 16,
+      "accuracy": 0.5
+    },
+    "NEUTRAL": {
+      "correct": 6,
+      "total": 6,
+      "accuracy": 1.0
+    },
+    "MODERATELY NEGATIVE": {
+      "correct": 6,
+      "total": 7,
+      "accuracy": 0.8571428571428571
+    },
+    "VERY NEGATIVE": {
+      "correct": 3,
+      "total": 17,
+      "accuracy": 0.17647058823529413
+    },
+    "EXTREMELY NEGATIVE": {
+      "correct": 7,
+      "total": 8,
+      "accuracy": 0.875
+    }
+  },
+  "per_label_3": {
+    "POSITIVE": {
+      "correct": 26,
+      "total": 32,
+      "accuracy": 0.8125
+    },
+    "NEUTRAL": {
+      "correct": 6,
+      "total": 6,
+      "accuracy": 1.0
+    },
+    "NEGATIVE": {
+      "correct": 27,
+      "total": 32,
+      "accuracy": 0.84375
+    }
+  },
+  "confusion_7": {
+    "matrix": {
+      "EXTREMELY POSITIVE": {
+        "EXTREMELY POSITIVE": 0,
+        "VERY POSITIVE": 0,
+        "MODERATELY POSITIVE": 0,
+        "NEUTRAL": 0,
+        "MODERATELY NEGATIVE": 0,
+        "VERY NEGATIVE": 0,
+        "EXTREMELY NEGATIVE": 0
+      },
+      "VERY POSITIVE": {
+        "EXTREMELY POSITIVE": 1,
+        "VERY POSITIVE": 8,
+        "MODERATELY POSITIVE": 4,
+        "NEUTRAL": 0,
+        "MODERATELY NEGATIVE": 0,
+        "VERY NEGATIVE": 0,
+        "EXTREMELY NEGATIVE": 0
+      },
+      "MODERATELY POSITIVE": {
+        "EXTREMELY POSITIVE": 0,
+        "VERY POSITIVE": 5,
+        "MODERATELY POSITIVE": 8,
+        "NEUTRAL": 3,
+        "MODERATELY NEGATIVE": 0,
+        "VERY NEGATIVE": 0,
+        "EXTREMELY NEGATIVE": 0
+      },
+      "NEUTRAL": {
+        "EXTREMELY POSITIVE": 0,
+        "VERY POSITIVE": 0,
+        "MODERATELY POSITIVE": 0,
+        "NEUTRAL": 6,
+        "MODERATELY NEGATIVE": 0,
+        "VERY NEGATIVE": 0,
+        "EXTREMELY NEGATIVE": 0
+      },
+      "MODERATELY NEGATIVE": {
+        "EXTREMELY POSITIVE": 0,
+        "VERY POSITIVE": 0,
+        "MODERATELY POSITIVE": 0,
+        "NEUTRAL": 1,
+        "MODERATELY NEGATIVE": 6,
+        "VERY NEGATIVE": 0,
+        "EXTREMELY NEGATIVE": 0
+      },
+      "VERY NEGATIVE": {
+        "EXTREMELY POSITIVE": 1,
+        "VERY POSITIVE": 1,
+        "MODERATELY POSITIVE": 1,
+        "NEUTRAL": 0,
+        "MODERATELY NEGATIVE": 3,
+        "VERY NEGATIVE": 3,
+        "EXTREMELY NEGATIVE": 5
+      },
+      "EXTREMELY NEGATIVE": {
+        "EXTREMELY POSITIVE": 0,
+        "VERY POSITIVE": 0,
+        "MODERATELY POSITIVE": 0,
+        "NEUTRAL": 0,
+        "MODERATELY NEGATIVE": 1,
+        "VERY NEGATIVE": 0,
+        "EXTREMELY NEGATIVE": 7
+      }
+    },
+    "unknown_by_expected": {
+      "EXTREMELY POSITIVE": 0,
+      "VERY POSITIVE": 3,
+      "MODERATELY POSITIVE": 0,
+      "NEUTRAL": 0,
+      "MODERATELY NEGATIVE": 0,
+      "VERY NEGATIVE": 3,
+      "EXTREMELY NEGATIVE": 0
+    }
+  },
+  "confusion_3": {
+    "matrix": {
+      "POSITIVE": {
+        "POSITIVE": 26,
+        "NEUTRAL": 3,
+        "NEGATIVE": 0
+      },
+      "NEUTRAL": {
+        "POSITIVE": 0,
+        "NEUTRAL": 6,
+        "NEGATIVE": 0
+      },
+      "NEGATIVE": {
+        "POSITIVE": 3,
+        "NEUTRAL": 1,
+        "NEGATIVE": 27
+      }
+    },
+    "unknown_by_expected": {
+      "POSITIVE": 3,
+      "NEUTRAL": 0,
+      "NEGATIVE": 1
+    }
+  },
+  "elapsed_seconds": 702.0910863750614
+}

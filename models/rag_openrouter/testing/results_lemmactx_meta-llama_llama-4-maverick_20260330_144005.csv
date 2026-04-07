@@ -1,0 +1,197 @@
+idx,sentence,translation,expected_sentiment,expected_7,expected_3,lemmas,context_hits,prompt_chars,predicted_raw,predicted_7,predicted_3,is_correct_7,is_correct_3,latency_s
+1,Caelum pulchrum est.,The sky is beautiful.,MODERATELY POSITIVE (+1),MODERATELY POSITIVE,POSITIVE,caelum pulcher sum,2,304,MODERATELY POSITIVE (+1),MODERATELY POSITIVE,POSITIVE,True,True,0.732
+2,Puer discipulus malus est.,The boy is a bad student.,MODERATELY NEGATIVE (-1),MODERATELY NEGATIVE,NEGATIVE,discipulus malus puer sum,4,473,MODERATELY NEGATIVE (-1),MODERATELY NEGATIVE,NEGATIVE,True,True,0.561
+3,Copiae amiserunt bellum.,The troops lost the war.,VERY NEGATIVE (-2),VERY NEGATIVE,NEGATIVE,amitto bellum copia,2,306,"MODERATELY NEGATIVE (-1) is not the response format; the correct response is: MODERATELY NEGATIVE 
+
+Here is the answer:
+MODERATELY NEGATIVE",MODERATELY NEGATIVE,NEGATIVE,False,True,2.286
+4,Pater laudabat filium.,The father was praising his son.,MODERATELY POSITIVE (+1),MODERATELY POSITIVE,POSITIVE,filius laudo pater,2,303,VERY POSITIVE (+2),VERY POSITIVE,POSITIVE,False,True,0.533
+5,Marcus Brutus tradidit suum amicum.,Marcus Brutus betrayed his friend.,VERY NEGATIVE (-2),VERY NEGATIVE,NEGATIVE,amicus brutus marcus suus trado,3,401,MODERATELY NEGATIVE (-1),MODERATELY NEGATIVE,NEGATIVE,False,True,0.759
+6,Ego optimus miles eram.,I was the best student,VERY POSITIVE (+2),VERY POSITIVE,POSITIVE,bonus ego miles sum,3,385,"MODERATELY POSITIVE (+1) is not the best answer because ""optimus"" is related to ""bonus"" (both mean ""good"") and has a positive connotation, but ""miles"" is neutral according to the lexicon evidence. The overall sentiment leans positive due to ""optimus"" but the direct lexicon evidence for ""optimus"" is not given.
+
+The correct sentiment can be derived by understanding that ""optimus"" is a superlative form of ""bonus"", and since ""bonus"" as an adjective has a strong positive polarity (1.0), it's reasonable to infer ""optimus"" has a positive sentiment. However, ""miles"" is neutral. Thus, the overall sentiment is not strongly positive but rather moderately positive due to the positive adjective ""optimus"".
+
+Therefore, the response should be: MODERATELY POSITIVE (+1) 
+
+MODERATELY POSITIVE (+1)",MODERATELY POSITIVE,POSITIVE,False,True,9.663
+7,Quae scelera videmus?,What evil deed do we see?,VERY NEGATIVE (-2),VERY NEGATIVE,NEGATIVE,qui scelus video,1,225,VERY NEGATIVE (-2),VERY NEGATIVE,NEGATIVE,True,True,0.563
+8,Malum consilium est.,The plan is bad,MODERATELY NEGATIVE (-1),MODERATELY NEGATIVE,NEGATIVE,consilium malus sum,3,389,MODERATELY NEGATIVE (-1),MODERATELY NEGATIVE,NEGATIVE,True,True,0.613
+9,Sum amicus eius,I am his friend,MODERATELY POSITIVE (+1),MODERATELY POSITIVE,POSITIVE,amicus is sum,2,298,VERY POSITIVE (+2),VERY POSITIVE,POSITIVE,False,True,2.461
+10,Brutus te laudavit,Brutus praised you,MODERATELY POSITIVE (+1),MODERATELY POSITIVE,POSITIVE,brutus laudo tu,1,223,"VERY POSITIVE (+2) is not correct because ""Brutus"" has a negative polarity score. 
+The word ""laudavit"" has a positive connotation. 
+Considering the negative connotation of ""Brutus"" and the positive connotation of ""laudavit"", we can infer that the sentiment is NEUTRAL or slightly positive, but the negative score associated with ""Brutus"" tempers the positivity of ""laudavit"".
+
+The sentiment is thus NEUTRAL (0).",VERY POSITIVE,POSITIVE,False,True,1.419
+11,Patria delebatur,The country was being destroyed,VERY NEGATIVE (-2),VERY NEGATIVE,NEGATIVE,delebatur patria,1,218,"MODERATELY NEGATIVE (-1) is the correct classification because ""delebatur"" implies destruction, which has a negative connotation. Although ""patria"" is neutral, the verb associated with it in the sentence (""delebatur"", was being destroyed) suggests a negative event occurred, leaning the overall sentiment towards MODERATELY NEGATIVE (-1).
+
+So, the response is: MODERATELY NEGATIVE (-1) is not just a number but a category. The correct category name is: MODERATELY NEGATIVE.
+
+The final answer is: MODERATELY NEGATIVE",NEUTRAL,NEUTRAL,False,False,1.657
+12,Domus ustus erat.,The home had been burned down.,VERY NEGATIVE (-2),VERY NEGATIVE,NEGATIVE,domus sum uro,1,218,"MODERATELY NEGATIVE (-1) is the solution because ""ustus"" has a negative connotation, implying damage or destruction. Therefore, the sentiment is: MODERATELY NEGATIVE",MODERATELY NEGATIVE,NEGATIVE,False,True,1.898
+13,Gladiator praemium vicit.,The gladiator won a prize.,MODERATELY POSITIVE (+1),MODERATELY POSITIVE,POSITIVE,gladiator praemium vinco,2,313,VERY POSITIVE (+2),VERY POSITIVE,POSITIVE,False,True,0.560
+14,Vita eius erat nimis brevis.,Her life was too brief.,MODERATELY NEGATIVE (-1),MODERATELY NEGATIVE,NEGATIVE,brevis is nimis sum vito,0,160,"MODERATELY NEGATIVE (-1) is the correct sentiment, as ""brevis"" has a somewhat negative connotation in the context of someone's life being ""too short"". The correct response is: MODERATELY NEGATIVE",MODERATELY NEGATIVE,NEGATIVE,True,True,2.154
+15,Panis fuit bonus.,The bread was good.,MODERATELY POSITIVE (+1),MODERATELY POSITIVE,POSITIVE,bonus panis sum,3,379,MODERATELY POSITIVE (+1),MODERATELY POSITIVE,POSITIVE,True,True,0.883
+16,Post paucas horas Caesar Asiam cepit,"After a few hours, Caesar captured Asia.",VERY NEGATIVE (-2),VERY NEGATIVE,NEGATIVE,asia caesar capio hora paucus post,3,398,VERY POSITIVE (+2),VERY POSITIVE,POSITIVE,False,False,1.079
+17,Mater beatum infantem bene curat.,The mother cares well for the fortunate baby.,MODERATELY POSITIVE (+1),MODERATELY POSITIVE,POSITIVE,beatus bene curo infer mater,2,314,MODERATELY POSITIVE (+1),MODERATELY POSITIVE,POSITIVE,True,True,0.609
+18,Imperator non curat de salute suae nationis.,The emperor does not care for the safety of his own people.,VERY NEGATIVE (-2),VERY NEGATIVE,NEGATIVE,curo de imperator natio non salus suus,3,413,"MODERATELY NEGATIVE (-1) is the sentiment given the presence of ""non curat"" (does not care) which has negative connotations, despite the positive sentiment associated with ""salus"" (safety/well-being) and ""imperator"" (commander/emperor). The overall sentiment leans towards negative due to the indication of neglect.
+
+The best answer is MODERATELY NEGATIVE (-1).",MODERATELY NEGATIVE,NEGATIVE,False,True,1.431
+19,Mater paterque suos pueros neglexerunt.,The mother and father neglected their children.,MODERATELY NEGATIVE (-1),MODERATELY NEGATIVE,NEGATIVE,mater neglego pater puer suus,3,397,"MODERATELY NEGATIVE (-1) is the correct classification based on the sentence. However, the exact category name is required.
+
+MODERATELY NEGATIVE",MODERATELY NEGATIVE,NEGATIVE,True,True,0.866
+20,Puer miser ab animali saevo necatus erat.,The poor boy had been killed by a savage animal.,EXTREMELY NEGATIVE (-3),EXTREMELY NEGATIVE,NEGATIVE,ab animal miser neco puer saevus sum,3,401,"VERY NEGATIVE (-2) is the correct sentiment category.
+
+ Sentiment: VERY NEGATIVE",VERY NEGATIVE,NEGATIVE,False,True,1.456
+21,Venator ursam post longam pugnam necavit.,The hunter killed the bear after a long battle.,MODERATELY NEGATIVE (-1),MODERATELY NEGATIVE,NEGATIVE,longus neco post pugna ursa venator,2,325,VERY NEGATIVE (-2),VERY NEGATIVE,NEGATIVE,False,True,0.743
+22,"Post redierunt Romam, nautae usi sunt otium.","After they returned to Rome, the sailors enjoyed leisure time.",VERY POSITIVE (+2),VERY POSITIVE,POSITIVE,nauta otium post redeo roma sum utor,2,327,MODERATELY POSITIVE (+1),MODERATELY POSITIVE,POSITIVE,False,True,0.708
+23,Puella est laeta videre suum fratrem minorem.,The girl is happy to see her younger brother.,VERY POSITIVE (+2),VERY POSITIVE,POSITIVE,frater laetus paruus puella sum suus video,4,486,"VERY POSITIVE (+2) is not the best choice because ""laeta videre"" is not as intense as gaudium or laetitia. The sentiment is more aligned with being happy or felix.
+
+MODERATELY POSITIVE (+1) is the best choice because ""laeta"" has a strong positive polarity_score of 1.0, indicating a positive sentiment, and ""felix"" is listed as a MODERATELY POSITIVE (+1) example.
+
+The best answer is MODERATELY POSITIVE (+1). 
+
+MODERATELY POSITIVE (+1)",VERY POSITIVE,POSITIVE,True,True,1.300
+24,Navis confractus est ab hostibus Romae.,The ship was broken by the enemies of Rome,VERY NEGATIVE (-2),VERY NEGATIVE,NEGATIVE,ab confringo hostis navus roma sum,1,243,VERY NEGATIVE (-2),VERY NEGATIVE,NEGATIVE,True,True,1.756
+25,Heros erat qui multos cives servavit.,He was a hero who saved many citizens.,VERY POSITIVE (+2),VERY POSITIVE,POSITIVE,civis heros multus qui servo sum,1,238,MODERATELY POSITIVE (+1),MODERATELY POSITIVE,POSITIVE,False,True,1.382
+26,Urbs ab hostibus malis victa deletaque est.,The city was conquered and destroyed by the wicked enemy.,EXTREMELY NEGATIVE (-3),EXTREMELY NEGATIVE,NEGATIVE,ab deleo hostis malus sum urbs vinco,4,489,VERY NEGATIVE (-2),VERY NEGATIVE,NEGATIVE,False,True,0.906
+27,Magna facta discipulorum eius magistro veteri placuerunt.,The great achievements of his students pleased the old teacher.,MODERATELY POSITIVE (+1),MODERATELY POSITIVE,POSITIVE,discipulus facio is magister magnus placeo vetus,3,425,VERY POSITIVE (+2),VERY POSITIVE,POSITIVE,False,True,0.565
+28,Puellae iuveni curiosaeque libet in agros migrare.,The young and curious girl likes to wander into fields.,MODERATELY POSITIVE (+1),MODERATELY POSITIVE,POSITIVE,ager curiosaeque in juvenis libet migraris puella,2,330,"VERY POSITIVE (+2) is not the best fit here. 
+The sentiment of the sentence ""Puellae iuveni curiosaeque libet in agros migrare"" can be broken down by understanding its components. ""Puellae iuveni curiosaeque"" suggests young girls or a young girl who is curious, and ""libet in agros migrare"" means it pleases her to migrate or move into the fields. The verb ""libet"" is key here, as it means ""it pleases"" or ""it is pleasing,"" which has a positive connotation. 
+
+Given that ""libet"" carries a positive sentiment because it indicates pleasure or enjoyment, and there's no strongly negative word in the sentence, we lean towards a positive interpretation. However, ""libet"" is more closely associated with a mild or moderate pleasure rather than extreme joy or jubilation.
+
+The lexicon evidence provided for ""puella"" (girl) and ""ager"" (field) is neutral, which doesn't directly influence the sentiment of the sentence towards being positive or negative since they are nouns and their sentiment is context-dependent.
+
+Therefore, considering the positive connotation of ""libet"" and the overall context, the sentiment is best categorized as MODERATELY POSITIVE (+1) due to the pleasant or agreeable nature of the action described, rather than an intense or extreme positive emotion.
+
+MODERATELY POSITIVE (+1)",VERY POSITIVE,POSITIVE,False,True,13.914
+29,Sol ita lucet ut fruges celeriter crescant.,The sun shines in such a way that the crops grow quickly.,MODERATELY POSITIVE (+1),MODERATELY POSITIVE,POSITIVE,celer cresco frugis ita luceo sol ut,1,242,MODERATELY POSITIVE (+1),MODERATELY POSITIVE,POSITIVE,True,True,0.628
+30,Imperator iussit milites interficere sine misericordia.,The emperor ordered the soldiers to kill without mercy.,EXTREMELY NEGATIVE (-3),EXTREMELY NEGATIVE,NEGATIVE,imperator interficio iubeo miles misericordia sine,3,429,"VERY NEGATIVE (-2) is the correct classification.
+
+ Reasoning: 
+The sentence ""Imperator iussit milites interficere sine misericordia"" translates to ""The commander ordered the soldiers to be killed without mercy."" The presence of ""sine misericordia"" (without mercy) is significant. The lexicon evidence indicates that ""misericordia"" has a strong positive polarity score of 1.0, implying that its absence is negative. The verb ""interficere"" (to kill) inherently carries a negative connotation. Although ""imperator"" has a mildly positive polarity score (0.5), and ""miles"" (soldiers) is neutral, the overall sentiment is dominated by the negative aspects of the sentence, particularly the act of killing and the lack of mercy. Thus, the sentiment is classified as VERY NEGATIVE (-2) due to the significant negative elements present. 
+
+The response should be: VERY NEGATIVE (-2) 
+
+However, to follow the format to the letter as requested:
+VERY NEGATIVE",NEUTRAL,NEUTRAL,False,False,2.827
+31,Princeps sensit fas suum custodire patriam.,The ruler felt it was his sacred duty to protect his country.,VERY POSITIVE (+2),VERY POSITIVE,POSITIVE,custodio fas patria princeps sentio suus,3,406,VERY POSITIVE (+2),VERY POSITIVE,POSITIVE,True,True,0.753
+32,Amici Scipionis invitaverunt ad cenam post victoriam magnam vixit.,Scipio's friends invited him to dinner after he won a great victory.,VERY POSITIVE (+2),VERY POSITIVE,POSITIVE,ad amicus cena invitaverunt magnus post scipio victoria vivo,4,506,VERY POSITIVE (+2),VERY POSITIVE,POSITIVE,True,True,1.255
+33,Vir egit gratias Venerem uxori pulchrae et Iunonem liberis.,The man gave thanks to Venus for his beautiful wife and to Juno for his children.,VERY POSITIVE (+2),VERY POSITIVE,POSITIVE,ago et gratia iuno liber pulcher uxor venerem vir,5,581,VERY POSITIVE (+2),VERY POSITIVE,POSITIVE,True,True,0.567
+34,Sceleratus vehemens expulsus erat sicut poena vitae vitiosae.,The violent criminal was exiled as punishment for a life full of vice.,VERY NEGATIVE (-2),VERY NEGATIVE,NEGATIVE,expello poena scelero sicut sum vehemens vita vitiosus,1,264,"VERY NEGATIVE (-2) is the category that matches the sentiment of ""dolor magnus, timor vehemens, ira, furor"". However, the exact category name to be provided is ""VERY NEGATIVE"". 
+
+The sentiment of the given sentence is negative. ""Sceleratus"" has a strong negative valence, ""vehemens"" intensifies it, ""expulsus erat"" is a negative action, and ""poena"" is matched with a strong negative polarity score (-1.0). ""Vitae vitiosae"" also carries a negative connotation. 
+
+The best answer is VERY NEGATIVE.",VERY NEGATIVE,NEGATIVE,True,True,1.799
+35,Fabulae a patre eorum narratae sororem fratremque oblectaverunt.,The stories told by their father delighted the brother and sister.,VERY POSITIVE (+2),VERY POSITIVE,POSITIVE,ab fabula frater is narro oblectaverunt pater soror,4,504,VERY POSITIVE (+2),VERY POSITIVE,POSITIVE,True,True,0.942
+36,"Cupiditate aeterna devotus, desidero aliquam quae non desiderat me.","Accursed by eternal longing, I long for someone who does not long for me.",EXTREMELY NEGATIVE (-3),EXTREMELY NEGATIVE,NEGATIVE,aeternus aliqui cupiditas de_-voveo desidero ego non qui,2,358,"MODERATELY NEGATIVE (-1) is not the best fit. The sentence has a negative sentiment due to ""cupiditas"" (desire, often with a negative connotation) and the unrequited nature of the speaker's desire (""desidero aliquam quae non desiderat me""). However, the word ""aeternus"" has a positive polarity score. The unrequited love and the negative connotation of ""cupiditas"" (or ""cupiditate"" in the given sentence) lean the sentiment towards the negative. The overall sentiment is more negative than neutral but not as strong as VERY NEGATIVE. Considering the context and the specific words used, the sentiment is best categorized as MODERATELY NEGATIVE (-1).
+
+The best answer is: MODERATELY NEGATIVE (-1)",NEUTRAL,NEUTRAL,False,False,8.902
+37,"Cum peste adfecti essent, boves iam moriebantur.","Since they had been afflicted by the plague, the cows soon died.",VERY NEGATIVE (-2),VERY NEGATIVE,NEGATIVE,afficio bos cum iam morior pestis sum,2,329,"MODERATELY NEGATIVE (-1) is the sentiment of the sentence, as indicated by ""peste"" and ""moriebantur"". The correct category name is: MODERATELY NEGATIVE 
+
+MODERATELY NEGATIVE",MODERATELY NEGATIVE,NEGATIVE,False,True,1.187
+38,Puella puero nervoso dixit se reddere amorem eius.,The girl told the nervous boy that she returned his love.,VERY POSITIVE (+2),VERY POSITIVE,POSITIVE,amor dico is nervoso puella puer reddo sui,3,409,VERY POSITIVE (+2),VERY POSITIVE,POSITIVE,True,True,0.581
+39,"Cum bellum tandem vicissent, cives magno gaudio celebrabant.","When at last they had won the war, the citizens celebrated with great joy.",VERY POSITIVE (+2),VERY POSITIVE,POSITIVE,bellum celebro civis cum gaudium magnus tandem vinco,3,425,VERY POSITIVE (+2),VERY POSITIVE,POSITIVE,True,True,1.357
+40,Umbra uxoris mortuae illum miserum ita persequitur ut otium numquam reperiat.,The ghost of his dead wife haunts that wretched man so that he will never find peace.,EXTREMELY NEGATIVE (-3),EXTREMELY NEGATIVE,NEGATIVE,ille ita miser morior numquam otium persequor reperio umbra ut uxor,4,520,"VERY NEGATIVE (+2 is not suitable here, the correct response should be one of the 7 categories)
+
+The sentence ""Umbra uxoris mortuae illum miserum ita persequitur ut otium numquam reperiat"" can be translated to ""The shadow of his dead wife pursues that wretched man so that he never finds peace."" 
+
+The word ""miserum"" (wretched) has a strong negative polarity (-1.0), indicating a strong negative sentiment. Although ""otium"" (peace) has a mildly positive polarity (0.5), the overall sentiment is negated by ""numquam reperiat"" (never finds), which maintains the negative tone.
+
+Thus, considering the overall negative sentiment driven by ""miserum"" and the negation of a positive state (""otium numquam reperiat""), the sentiment is VERY NEGATIVE (-2).
+
+VERY NEGATIVE",VERY NEGATIVE,NEGATIVE,False,True,8.313
+41,"Cum nemo audiat, poeta tristis queritur dominam eum relinquisse.","Although no one is listening, the sad poet laments that his mistress has abandoned him.",VERY NEGATIVE (-2),VERY NEGATIVE,NEGATIVE,audio cum domina is nemo poeta queror relinquisse tristis,4,509,"VERY NEGATIVE (+2 is not suitable due to negative tone; the overall sentiment is negative but not extreme enough for -3)
+
+Since ""tristis"" has a strong negative polarity (-1.0), ""nemo"" has a mild negative polarity (-0.5), and the overall sentence expresses a negative situation (poeta tristis queritur), we should lean towards a negative category. The presence of ""domina"" with a mild positive polarity (0.5) is not enough to counterbalance the negative sentiment.
+
+The best fit is VERY NEGATIVE (-2). 
+
+VERY NEGATIVE (-2)",VERY NEGATIVE,NEGATIVE,True,True,5.757
+42,"Bono nuntio accepto, nuntius delectatus civibus nuntiat opem iam adventuram esse.","With the good news having been received, the delighted messenger announces to the citizens that aid will soon arrive.",VERY POSITIVE (+2),VERY POSITIVE,POSITIVE,accipio advenio bonus civis delector iam nuntio nuntius ops sum,4,522,VERY POSITIVE (+2),VERY POSITIVE,POSITIVE,True,True,0.553
+43,"Vulgus surrexerunt fores aedis, necatatum et consauciatum multos.","The mob surged the gates of the temple, killing and injuring many.",EXTREMELY NEGATIVE (-3),EXTREMELY NEGATIVE,NEGATIVE,aedes consauciatum et foris multus necatas surgo vulgus,3,426,"VERY NEGATIVE (-2) is the correct classification for the sentence, given the violent actions described (necatatum et consauciatum, meaning ""killed and severely wounded""). 
+
+The lexicon evidence provided does not directly indicate a strong negative sentiment since the lemmas are mostly neutral. However, upon analyzing the sentence, it's clear that the actions described are violent and negative.
+
+Therefore, the sentiment category is: VERY NEGATIVE",NEUTRAL,NEUTRAL,False,False,4.847
+44,Canes denique invenerunt aprum post diem longum et miserum ita venatores id potuerunt necare,"The dogs finally found the boar after a long, miserable day outside so the hunters could kill it.",VERY NEGATIVE (-2),VERY NEGATIVE,NEGATIVE,aper canis denique dies et invenio is ita longus miser neco possum post venator,4,529,"MODERATELY NEGATIVE (-1) is the correct response based on the given text and context, so the answer is: MODERATELY NEGATIVE",MODERATELY NEGATIVE,NEGATIVE,False,True,1.677
+45,"Quod ea voluerat fratrem tam diu, puella celebravit quando mater peperit iterum.","Because she had wanted a brother for such a long time, the girl celebrated when her mother gave birth again.",VERY POSITIVE (+2),VERY POSITIVE,POSITIVE,celebro diu frater is iterum mater pario puella quando qui tam volo,3,441,NEUTRAL,NEUTRAL,NEUTRAL,False,False,0.553
+46,"In oratone, orator optimus fuit et igitur multas coronas laurinas vicit.","In his speech, the orator was the best and accordingly, he won many wreaths of laurel.",VERY POSITIVE (+2),VERY POSITIVE,POSITIVE,bonus corona et igitur in laurinas multus oratone orator sum vinco,4,514,"VERY POSITIVE (+2) is not the correct response as per the given instructions. The correct category name should be used.
+
+The Latin text translates to ""In oratory, he was an excellent orator and thus won many laurel wreaths."" The word ""optimus"" (best, excellent) has a very positive connotation, and ""vicit"" (won) along with ""coronas laurinas"" (laurel wreaths, a symbol of victory and honor) also contribute to a positive sentiment. ""Multas"" (many) is neutral, as indicated by the lexicon evidence for ""multus."" The overall sentiment is positive, but not extremely so because it is a statement about someone's skill and achievement rather than an expression of extreme joy or jubilation.
+
+Given the context and lexicon evidence, the sentiment is best classified as VERY POSITIVE (+2) due to the positive connotations of ""optimus"" and the achievement implied by ""vicit"" and ""coronas laurinas."" However, the exact category name should be provided.
+
+The best answer is VERY POSITIVE.",VERY POSITIVE,POSITIVE,True,True,1.516
+47,"Stultitiast, mater, venatum ducere invitas canes","It is foolish, mother, to lead the unwilling dogs to the hunt",MODERATELY NEGATIVE (-1),MODERATELY NEGATIVE,NEGATIVE,canis duco invito mater stultitia venor,2,334,"MODERATELY NEGATIVE (-1) is not the best choice due to the presence of a stronger negative sentiment. The sentence contains ""stultitia"" which has a strong negative polarity score (-1.0), indicating a strong negative valence, and it is used in a vocative form to address someone, intensifying the negative sentiment. The overall sentiment leans towards being very negative due to the strong negative connotation of ""stultitia"" and the context in which it is used.
+
+The best answer is VERY NEGATIVE.",MODERATELY NEGATIVE,NEGATIVE,True,True,5.089
+48,"Si quis metuens vivet, liber mihi non erit umquam","If anyone lives in fear, he will not ever be free - in my opinion",VERY NEGATIVE (-2),VERY NEGATIVE,NEGATIVE,ego liber metuo non quis si sum umquam vivo,2,329,MODERATELY NEGATIVE (-1),MODERATELY NEGATIVE,NEGATIVE,False,True,0.791
+49,"imperator promisit decem milia militum celerrime discessura esse, dummodo satis copiarum reciperent.","The general promises ten thousand soldiers to depart most quickly, so long as they receive satisfactory supplies.",MODERATELY POSITIVE (+1),MODERATELY POSITIVE,POSITIVE,celer copia decem discedo dummodo imperator miles mille promitto recipio satis sum,4,546,MODERATELY POSITIVE (+1),MODERATELY POSITIVE,POSITIVE,True,True,0.585
+50,Cum cūrā docet ut discipulī bene discant,He teaches them with care so the students may learn well,MODERATELY POSITIVE (+1),MODERATELY POSITIVE,POSITIVE,-que bene cum discipul disco doceo romanus ut,1,242,NEUTRAL,NEUTRAL,NEUTRAL,False,False,1.649
+51,Sol lucet in caelo.,The sun shines in the sky.,NEUTRAL (0),NEUTRAL,NEUTRAL,caelum in luceo sol,2,299,MODERATELY POSITIVE (+1),MODERATELY POSITIVE,POSITIVE,False,False,0.619
+52,Urbs Roma in Italia est.,The city of Rome is in Italy.,NEUTRAL (0),NEUTRAL,NEUTRAL,in italia roma sum urbs,1,225,NEUTRAL,NEUTRAL,NEUTRAL,True,True,0.866
+53,Ego in villa ambulo.,I walk in the villa.,NEUTRAL (0),NEUTRAL,NEUTRAL,ambulo ego in villa,0,152,NEUTRAL,NEUTRAL,NEUTRAL,True,True,1.895
+54,Annus habet duodecim menses.,The year has twelve months.,NEUTRAL (0),NEUTRAL,NEUTRAL,annus duodecim habeo mensis,2,309,NEUTRAL,NEUTRAL,NEUTRAL,True,True,0.427
+55,Quid est vita sine amore?,What is life without love?,VERY NEGATIVE (-2),VERY NEGATIVE,NEGATIVE,amor quis sine sum vito,1,226,"MODERATELY NEGATIVE (-1) is the solution. The sentence is a rhetorical question that implies a negative sentiment towards a life without love. 
+
+Here is the step-by-step thought process:
+1. The given Latin text is ""Quid est vita sine amore?"" which translates to ""What is life without love?""
+2. The lexicon evidence indicates that ""amor"" (love) has a strong positive polarity score of 1.0.
+3. The sentence is a rhetorical question that implies life without love is not worth living or is meaningless.
+4. The absence of something positive (amor) is being highlighted, indicating a negative sentiment.
+5. The sentiment is not extremely negative because it is a question rather than a statement, and it does not directly express desperatio, exitium, cruciatus, or malum.
+6. Therefore, the sentiment is MODERATELY NEGATIVE (-1).
+
+MODERATELY NEGATIVE",MODERATELY NEGATIVE,NEGATIVE,False,True,6.291
+56,"O quam felix es, qui omnia perdidisti!","O how fortunate you are, who have lost everything!",VERY NEGATIVE (-2),VERY NEGATIVE,NEGATIVE,felix o omnis perdo quam qui sum,1,239,"VERY POSITIVE (+2) is not the best fit because the sentence is ironic. 
+The word ""felix"" has a strong positive polarity_score of 1.0, but the context of ""omnia perdidisti"" (having lost everything) suggests that the sentiment is not genuinely positive.
+
+Considering the irony and the overall context, the sentiment is likely to be negative, but not extremely negative since it's somewhat tempered by the irony.
+
+MODERATELY NEGATIVE (-1) is a suitable classification as it reflects a negative sentiment due to ""omnia perdidisti"" and the possibly ironic or sarcastic tone of ""felix es.""
+
+The best answer is MODERATELY NEGATIVE (-1).",VERY POSITIVE,POSITIVE,False,False,5.053
+57,"Si Roma caderet, quid faceremus?","If Rome were to fall, what would we do?",NEUTRAL (0),NEUTRAL,NEUTRAL,cado facio quis roma si,0,164,"MODERATELY NEGATIVE (-1) is the solution. 
+
+The sentence ""Si Roma caderet, quid faceremus?"" translates to ""If Rome were to fall, what would we do?"" The sentiment is negative because it implies a catastrophic event (Rome falling) and expresses uncertainty or anxiety about the future. The tone is not extremely negative since it's framed as a hypothetical situation rather than a statement of fact or a dire prediction. Therefore, the sentiment is MODERATELY NEGATIVE.
+
+MODERATELY NEGATIVE",MODERATELY NEGATIVE,NEGATIVE,False,False,5.120
+58,Utinam pax in mundo sit.,Would that there be peace in the world.,VERY POSITIVE (+2),VERY POSITIVE,POSITIVE,in mundus pax sum utinam,2,306,MODERATELY POSITIVE (+1),MODERATELY POSITIVE,POSITIVE,False,True,0.687
+59,Puellula mea in villa cantat.,My little girl sings in the villa.,MODERATELY POSITIVE (+1),MODERATELY POSITIVE,POSITIVE,canto in meus puellula villa,2,311,MODERATELY POSITIVE (+1),MODERATELY POSITIVE,POSITIVE,True,True,1.166
+60,Homunculus ille nihil scit.,That little man knows nothing.,MODERATELY NEGATIVE (-1),MODERATELY NEGATIVE,NEGATIVE,homunculus ille nihil scio,0,159,"MODERATELY NEGATIVE (-1) is the solution. 
+
+Reasoning: The given Latin sentence is ""Homunculus ille nihil scit."" The word ""homunculus"" is a diminutive form of ""homo,"" meaning ""little man"" or ""weak man,"" which can sometimes carry a slightly negative or belittling connotation depending on the context. ""Nihil scit"" means ""knows nothing."" The overall sentiment of the sentence leans towards being somewhat negative due to the implication that the person in question lacks knowledge or understanding. There is no strong emotion like anger, fear, or extreme joy expressed. Hence, it is not EXTREMELY NEGATIVE or VERY NEGATIVE. It is more aligned with a moderate negative sentiment due to the somewhat derogatory or dismissive tone implied by ""homunculus"" and the fact that the person knows nothing.
+
+The best answer is MODERATELY NEGATIVE.",MODERATELY NEGATIVE,NEGATIVE,True,True,7.689
+61,"Domine, salvum me fac.","Lord, save me.",VERY POSITIVE (+2),VERY POSITIVE,POSITIVE,dominus ego facio salvus,0,154,"MODERATELY NEGATIVE (-1) is not the best fit here as the sentence is a plea for salvation. The lack of direct lexicon evidence makes it necessary to interpret the sentence. ""Domine, salvum me fac"" translates to ""Lord, save me,"" which is a plea or prayer indicating a negative situation the speaker is in, but the act of praying itself and the request for salvation implies a certain level of hope or positive expectation for a better future. However, the primary sentiment expressed is one of need or distress.
+
+VERY NEGATIVE (-2) is a possible fit because the sentence implies the speaker is in a difficult or dangerous situation. The request for salvation suggests a significant level of distress or fear.
+
+Given the context is a plea for help, the sentiment leans towards being negative due to the implied distress. However, it's a request for salvation, not a statement of despair.
+
+The best fit is MODERATELY NEGATIVE (-1) because it reflects the negative situation or feeling of distress without overstating it to desperation or extreme negative categories. The plea for salvation indicates some level of hope.
+
+MODERATELY NEGATIVE (-1)",MODERATELY NEGATIVE,NEGATIVE,False,False,11.373
+62,Scientia nova in libris invenitur.,New knowledge is found in books.,MODERATELY POSITIVE (+1),MODERATELY POSITIVE,POSITIVE,in invenio liber novo scientia,3,396,NEUTRAL,NEUTRAL,NEUTRAL,False,False,0.541
+63,Ego sum lux mundi.,I am the light of the world.,VERY POSITIVE (+2),VERY POSITIVE,POSITIVE,ego lux mundus sum,2,297,"MODERATELY POSITIVE (+1) is not the best answer because ""lux mundi"" is a phrase with a deeper meaning and ""mundus"" has a strong positive valence.
+
+The phrase ""Ego sum lux mundi"" is a famous biblical quote (John 8:12), and the word ""lux"" (light) is often associated with positive connotations. The adjective ""mundus"" (of the world) is also positive with a score of 1.0. 
+
+The best answer is VERY POSITIVE (+2).",VERY POSITIVE,POSITIVE,True,True,1.178
+64,Respublica in periculis versatur.,The republic is embroiled in dangers.,VERY NEGATIVE (-2),VERY NEGATIVE,NEGATIVE,in periculum respublica verso,2,325,MODERATELY NEGATIVE (-1),MODERATELY NEGATIVE,NEGATIVE,False,True,0.679
+65,"Deus meus, quare me dereliquisti?","My God, why have you forsaken me?",EXTREMELY NEGATIVE (-3),EXTREMELY NEGATIVE,NEGATIVE,derelinquo deus ego meus quare,2,312,"VERY NEGATIVE (-2) is the correct sentiment category for the given text because it contains a sentiment of despair or anguish. The sentence is a quote from the Psalms (Psalm 22:1) and is expressing a feeling of abandonment by God, which is a negative emotional state.
+
+Although the individual lemmas 'deus' and 'meus' have neutral polarity, the overall sentence sentiment is not neutral. The verb 'dereliquisti' (you have abandoned or forsaken) carries a negative connotation, and the context of the sentence as a whole conveys a sense of distress or sorrow.
+
+Thus, the sentiment is classified as VERY NEGATIVE.
+
+VERY NEGATIVE",NEUTRAL,NEUTRAL,False,False,5.542
+66,Timor Domini initium sapientiae est.,The fear of the Lord is the beginning of wisdom.,MODERATELY POSITIVE (+1),MODERATELY POSITIVE,POSITIVE,dominus initium sapientia sum timor,3,404,MODERATELY POSITIVE (+1),MODERATELY POSITIVE,POSITIVE,True,True,0.712
+67,Ego felum in villa vidi.,I saw a cat in the villa.,NEUTRAL (0),NEUTRAL,NEUTRAL,ego felis in video villa,1,225,NEUTRAL,NEUTRAL,NEUTRAL,True,True,0.553
+68,"Postquam milites in silvam intraverunt, ferae saevae eos insequebantur, et multi perierunt.","After the soldiers entered the forest, savage beasts pursued them, and many perished.",EXTREMELY NEGATIVE (-3),EXTREMELY NEGATIVE,NEGATIVE,et fera in insequor intro is miles multus pereo postquam saevus silva,3,449,"VERY NEGATIVE (-2) is the correct classification due to the presence of words like ""saevae"" ( fierce, cruel) and ""perierunt"" (perished), which convey a strong negative sentiment, even though the lexicon evidence provided doesn't directly annotate these words. The overall sentence describes a dire situation, aligning with a VERY NEGATIVE sentiment.
+
+MODERATELY NEGATIVE (-1) doesn't capture the severity of the situation described. 
+The correct response is: VERY NEGATIVE",MODERATELY NEGATIVE,NEGATIVE,False,True,3.738
+69,"Cum philosophi in academia disputarent, discipuli eorum nova praecepta didicerunt.","While the philosophers debated in the academy, their students learned new teachings.",MODERATELY POSITIVE (+1),MODERATELY POSITIVE,POSITIVE,academia cum discipulis disco disputo in is novo philosophus praecipio,1,289,NEUTRAL,NEUTRAL,NEUTRAL,False,False,0.513
+70,Domus mea igne consumpta est.,My house was consumed by fire.,VERY NEGATIVE (-2),VERY NEGATIVE,NEGATIVE,consumo domus ignis meus sum,3,388,"VERY NEGATIVE (-2) is the correct answer due to ""consumpta est"", implying destruction. Thus, the sentiment category is: VERY NEGATIVE",VERY NEGATIVE,NEGATIVE,True,True,1.456
