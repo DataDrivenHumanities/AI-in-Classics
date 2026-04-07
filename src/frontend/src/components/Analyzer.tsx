@@ -5,6 +5,7 @@ import ModelModal from "@/components/ModelModal";
 import ModelSettingsModal, {ModelOptions} from "@/components/ModelSettingsModal";
 import FeedbackModal from "@/components/FeedbackModal";
 import ModelShopModal from "@/components/ModelShopModal";
+import LatinLexiconOverlay from "@/components/LatinLexiconOverlay";
 
 
 const API_BASE = process.env.NEXT_PUBLIC_API_BASE || "http://localhost:5050/api";
@@ -27,7 +28,26 @@ export default function Analyzer() {
     const [shopOpen, setShopOpen] = useState(false);
     const [isHuggingFaceModel, setIsHuggingFaceModel] = useState(false);
 
-    const [text, setText] = useState<string>("");
+    const [providerMode, setProviderMode] = useState<"registry" | "openrouter">(
+        "registry"
+    );
+    const [openrouterKey, setOpenrouterKey] = useState<string>("");
+    const [openrouterModel, setOpenrouterModel] = useState<string>("");
+
+    const [activeText, setActiveText] = useState<string>("");
+    const [pasteDraft, setPasteDraft] = useState<string>("");
+    const [workspaceTab, setWorkspaceTab] = useState<
+        "paste" | "upload" | "sample"
+    >("paste");
+    const [editMode, setEditMode] = useState<boolean>(true);
+    const [textView, setTextView] = useState<"plain" | "lexicon">("plain");
+    const [extractWarnings, setExtractWarnings] = useState<string[]>([]);
+
+    const [samples, setSamples] = useState<
+        Array<{id: string; name: string; bytes: number}>
+    >([]);
+    const [samplesLoaded, setSamplesLoaded] = useState<boolean>(false);
+    const [pickedSampleId, setPickedSampleId] = useState<string>("");
     const [resp, setResp] = useState<AnalyzeResponse | null>(null);
     const [error, setError] = useState<string>("");
     const [loading, setLoading] = useState<boolean>(false);
@@ -36,6 +56,12 @@ export default function Analyzer() {
 
     const fileRef = useRef<HTMLInputElement | null>(null);
     const controllerRef = useRef<AbortController | null>(null);
+    const lexControllerRef = useRef<AbortController | null>(null);
+
+    const [lexLoading, setLexLoading] = useState(false);
+    const [lexError, setLexError] = useState<string>("");
+    const [lexAuto, setLexAuto] = useState<boolean>(true);
+    const [lexRes, setLexRes] = useState<any | null>(null);
 
     const [modelOpts, setModelOpts] = useState<ModelOptions>({
         temperature: 0.0,
@@ -137,9 +163,70 @@ export default function Analyzer() {
         setIsHuggingFaceModel(engine === "hugging face");
     }, [engine])
 
+    function commitActiveText(next: string) {
+        setActiveText(next || "");
+        setEditMode(false);
+        lexControllerRef.current?.abort();
+        setLexRes(null);
+        setLexError("");
+        setExtractWarnings([]);
+        if (resp || error) {
+            setResp(null);
+            setError("");
+        }
+    }
+
+    useEffect(() => {
+        if (typeof window === "undefined") return;
+        try {
+            const k = window.sessionStorage.getItem("openrouter_api_key") || "";
+            const m = window.sessionStorage.getItem("openrouter_model") || "";
+            if (k) setOpenrouterKey(k);
+            if (m) setOpenrouterModel(m);
+        } catch {
+            // ignore
+        }
+    }, []);
+
+    useEffect(() => {
+        if (typeof window === "undefined") return;
+        try {
+            if (openrouterKey) window.sessionStorage.setItem("openrouter_api_key", openrouterKey);
+        } catch {
+            // ignore
+        }
+    }, [openrouterKey]);
+
+    useEffect(() => {
+        if (typeof window === "undefined") return;
+        try {
+            if (openrouterModel) window.sessionStorage.setItem("openrouter_model", openrouterModel);
+        } catch {
+            // ignore
+        }
+    }, [openrouterModel]);
+
     async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
-        if (!model || !text.trim()) return;
+        const text = activeText || "";
+        if (!text.trim()) {
+            setError("Load or paste text first.");
+            return;
+        }
+        if (providerMode === "registry" && !model) {
+            setError("Please select a model.");
+            return;
+        }
+        if (providerMode === "openrouter") {
+            if (!openrouterKey.trim()) {
+                setError("Enter an OpenRouter API key.");
+                return;
+            }
+            if (!openrouterModel.trim()) {
+                setError("Enter an OpenRouter model id.");
+                return;
+            }
+        }
 
         controllerRef.current?.abort();
         controllerRef.current = new AbortController();
@@ -149,9 +236,11 @@ export default function Analyzer() {
         setResp(null);
 
         try {
-            const payload = {
+            const payload: any = {
                 text,
-                model_id: model,
+                model_id: providerMode === "registry" ? model : undefined,
+                provider: providerMode === "openrouter" ? "openrouter" : undefined,
+                openrouter_model: providerMode === "openrouter" ? openrouterModel : undefined,
                 options: {
                     temperature: modelOpts.temperature,
                     top_p: modelOpts.top_p,
@@ -162,9 +251,11 @@ export default function Analyzer() {
                 raw: modelOpts.raw,
                 format: modelOpts.format,
             };
+            const headers: any = {"Content-Type": "application/json"};
+            if (providerMode === "openrouter") headers["Authorization"] = `Bearer ${openrouterKey}`;
             const rr = await fetch(`${API_BASE}/analyze`, {
                 method: "POST",
-                headers: {"Content-Type": "application/json"},
+                headers,
                 body: JSON.stringify(payload),
                 signal: controllerRef.current.signal,
             });
@@ -188,10 +279,6 @@ export default function Analyzer() {
         const f = e.target.files?.[0] || null;
         e.target.value = "";
         if (!f) return;
-        if (!model) {
-            setError("Please select a model before uploading a file.");
-            return;
-        }
 
         controllerRef.current?.abort();
         controllerRef.current = new AbortController();
@@ -199,35 +286,24 @@ export default function Analyzer() {
         setLoading(true);
         setError("");
         setResp(null);
+        setExtractWarnings([]);
 
         try {
             const form = new FormData();
             form.append("file", f);
-            form.append("engine", "model");
-            form.append("model_id", model);
-            form.append("raw", String(modelOpts.raw));
-            form.append("format", modelOpts.format);
-            form.append(
-                "options",
-                JSON.stringify({
-                    temperature: modelOpts.temperature,
-                    top_p: modelOpts.top_p,
-                    repeat_penalty: modelOpts.repeat_penalty,
-                    num_predict: modelOpts.num_predict,
-                    stop: modelOpts.stop,
-                })
-            );
-
-            const rr = await fetch(`${API_BASE}/analyze/upload`, {
+            const rr = await fetch(`${API_BASE}/text/extract`, {
                 method: "POST",
                 body: form,
                 signal: controllerRef.current.signal,
             });
             if (!rr.ok) throw new Error(`Upload failed: ${rr.status}`);
             const data: any = await rr.json();
-            if (data?.text) setText(String(data.text));
-            setResp(data as AnalyzeResponse);
-            setProgress(100);
+            const nextText = data?.text ? String(data.text) : "";
+            commitActiveText(nextText);
+            setPasteDraft(nextText);
+            setWorkspaceTab("paste");
+            setEditMode(false);
+            if (Array.isArray(data?.warnings)) setExtractWarnings(data.warnings.map((w: any) => String(w)));
         } catch (err: any) {
             if (err?.name !== "AbortError") setError(err?.message || "Upload failed");
         } finally {
@@ -236,7 +312,11 @@ export default function Analyzer() {
     }
 
     function exportJSON() {
-        const payload = JSON.stringify(resp ?? {model, text}, null, 2);
+        const payload = JSON.stringify(
+            resp ?? {model, providerMode, openrouterModel: openrouterModel || null, text: activeText},
+            null,
+            2
+        );
         const blob = new Blob([payload], {type: "application/json"});
         const url = URL.createObjectURL(blob);
         const a = document.createElement("a");
@@ -248,7 +328,8 @@ export default function Analyzer() {
 
     const miniDebug = {
         model: model || null,
-        textLen: text.length,
+        providerMode,
+        textLen: activeText.length,
         loading,
     };
 
@@ -317,6 +398,94 @@ export default function Analyzer() {
         }
         return <span>{String(val)}</span>;
     }
+
+    async function ensureSamplesLoaded() {
+        if (samplesLoaded) return;
+        try {
+            const rr = await fetch(`${API_BASE}/samples/latin`);
+            if (!rr.ok) throw new Error(`Failed to load samples: ${rr.status}`);
+            const data: any = await rr.json();
+            const list = Array.isArray(data?.samples) ? data.samples : [];
+            const normalized = list
+                .map((s: any) => ({
+                    id: String(s.id || ""),
+                    name: String(s.name || s.id || ""),
+                    bytes: Number(s.bytes || 0),
+                }))
+                .filter((s: any) => s.id);
+            setSamples(normalized);
+            if (!pickedSampleId && normalized.length > 0) setPickedSampleId(normalized[0].id);
+        } catch {
+            setSamples([]);
+        } finally {
+            setSamplesLoaded(true);
+        }
+    }
+
+    async function loadPickedSample() {
+        if (!pickedSampleId) return;
+        setLoading(true);
+        setError("");
+        setResp(null);
+        try {
+            const rr = await fetch(`${API_BASE}/samples/latin/${encodeURIComponent(pickedSampleId)}`);
+            if (!rr.ok) throw new Error(`Failed to load sample: ${rr.status}`);
+            const data: any = await rr.json();
+            const nextText = data?.text ? String(data.text) : "";
+            commitActiveText(nextText);
+            setPasteDraft(nextText);
+            setWorkspaceTab("paste");
+            setEditMode(false);
+        } catch (err: any) {
+            setError(err?.message || "Failed to load sample");
+        } finally {
+            setLoading(false);
+        }
+    }
+
+    async function computeLexicon(text: string) {
+        if (!text.trim()) return;
+        lexControllerRef.current?.abort();
+        lexControllerRef.current = new AbortController();
+        setLexLoading(true);
+        setLexError("");
+        try {
+            const rr = await fetch(`${API_BASE}/latin/lexicon/annotate`, {
+                method: "POST",
+                headers: {"Content-Type": "application/json"},
+                body: JSON.stringify({text, max_chars: 12000}),
+                signal: lexControllerRef.current.signal,
+            });
+            if (!rr.ok) {
+                let msg = `Lexicon request failed: ${rr.status}`;
+                try {
+                    const j = await rr.json();
+                    if (j?.detail) msg = String(j.detail);
+                } catch {
+                    // ignore
+                }
+                throw new Error(msg);
+            }
+            const data: any = await rr.json();
+            setLexRes(data);
+        } catch (err: any) {
+            if (err?.name !== "AbortError") setLexError(err?.message || "Lexicon failed");
+        } finally {
+            setLexLoading(false);
+        }
+    }
+
+    useEffect(() => {
+        if (editMode) return;
+        if (textView !== "lexicon") return;
+        if (!lexAuto) return;
+        if (!activeText.trim()) return;
+        const id = setTimeout(() => {
+            computeLexicon(activeText);
+        }, 650);
+        return () => clearTimeout(id);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [activeText, lexAuto, textView, editMode]);
 
 // typescript
 // Insert this inside the Analyzer component (e.g. after renderValue) and replace the existing HF panel JSX with the usage shown below.
@@ -435,6 +604,19 @@ export default function Analyzer() {
             <div className="bar-row">
                 <form className="bar" onSubmit={handleSubmit}>
                     <select
+                        value={providerMode}
+                        onChange={(e) => {
+                            setProviderMode((e.target.value as any) || "registry");
+                            setError("");
+                            setResp(null);
+                        }}
+                        title="Provider"
+                    >
+                        <option value="registry">From registry</option>
+                        <option value="openrouter">OpenRouter</option>
+                    </select>
+
+                    <select
                         value={model}
                         onChange={(e) => {
                             setModel(e.target.value);
@@ -443,6 +625,12 @@ export default function Analyzer() {
                                 setError("");
                             }
                         }}
+                        disabled={providerMode !== "registry"}
+                        title={
+                            providerMode === "registry"
+                                ? "Model"
+                                : "Model (disabled for OpenRouter)"
+                        }
                     >
                         <option value="">Select a model…</option>
                         {availableModels.map((m) => (
@@ -452,20 +640,39 @@ export default function Analyzer() {
                         ))}
                     </select>
 
-                    <div style={{flex: 1, display: "flex", flexDirection: "column", gap: 6}}>
-                        <input
-                            type="text"
-                            placeholder="Paste or type text to analyze…"
-                            value={text}
-                            onChange={(e) => {
-                                setText(e.target.value);
-                                if (resp || error) {
-                                    setResp(null);
-                                    setError("");
-                                }
-                            }}
-                        />
-                    </div>
+                    {providerMode === "openrouter" && (
+                        <>
+                            <input
+                                type="password"
+                                placeholder="OpenRouter API key…"
+                                value={openrouterKey}
+                                onChange={(e) => setOpenrouterKey(e.target.value)}
+                                style={{minWidth: 220}}
+                            />
+                            <input
+                                type="text"
+                                placeholder="OpenRouter model id…"
+                                value={openrouterModel}
+                                onChange={(e) => setOpenrouterModel(e.target.value)}
+                                style={{minWidth: 220}}
+                            />
+                            <button
+                                type="button"
+                                onClick={() => {
+                                    setOpenrouterKey("");
+                                    try {
+                                        window.sessionStorage.removeItem("openrouter_api_key");
+                                    } catch {
+                                        // ignore
+                                    }
+                                }}
+                                disabled={!openrouterKey}
+                                title="Clear stored key"
+                            >
+                                Clear key
+                            </button>
+                        </>
+                    )}
 
                     <button type="submit" disabled={loading}>
                         {loading ? "Analyzing…" : "Submit"}
@@ -478,7 +685,7 @@ export default function Analyzer() {
                     <input
                         ref={fileRef}
                         type="file"
-                        accept=".txt,.md,.rtf,.html,.pdf,.doc,.docx"
+                        accept=".txt,.md,.csv,.tsv,.pdf"
                         onChange={onPickFile}
                         style={{display: "none"}}
                     />
@@ -553,11 +760,15 @@ export default function Analyzer() {
                                         className="tool-cta"
                                         onClick={() => {
                                             controllerRef.current?.abort();
-                                            setText("");
+                                            commitActiveText("");
+                                            setPasteDraft("");
+                                            setEditMode(true);
                                             setResp(null);
                                             setError("");
                                             setLoading(false);
                                             setProgress(0);
+                                            setLexRes(null);
+                                            setLexError("");
                                         }}
                                     >
                                         Clear
@@ -565,6 +776,242 @@ export default function Analyzer() {
                                 </div>
                             </div>
                         </div>
+                    )}
+                </div>
+            </div>
+
+            <div className="workspace">
+                <div className="workspace-header">
+                    <h2 className="workspace-title">Latin Text</h2>
+                    <div
+                        className="workspace-tabs"
+                        role="tablist"
+                        aria-label="Latin text input modes"
+                    >
+                        <button
+                            type="button"
+                            className={`tab-btn ${workspaceTab === "paste" ? "active" : ""}`}
+                            onClick={() => setWorkspaceTab("paste")}
+                        >
+                            Paste
+                        </button>
+                        <button
+                            type="button"
+                            className={`tab-btn ${workspaceTab === "upload" ? "active" : ""}`}
+                            onClick={() => setWorkspaceTab("upload")}
+                        >
+                            Upload
+                        </button>
+                        <button
+                            type="button"
+                            className={`tab-btn ${workspaceTab === "sample" ? "active" : ""}`}
+                            onClick={() => {
+                                setWorkspaceTab("sample");
+                                ensureSamplesLoaded();
+                            }}
+                        >
+                            Sample
+                        </button>
+                    </div>
+                </div>
+
+                <div className="workspace-card">
+                    {workspaceTab === "paste" && editMode && (
+                        <>
+                            <textarea
+                                className="workspace-textarea"
+                                placeholder="Paste Latin text here…"
+                                value={pasteDraft}
+                                onChange={(e) => setPasteDraft(e.target.value)}
+                            />
+                            <div className="workspace-row">
+                                <button
+                                    type="button"
+                                    onClick={() => commitActiveText(pasteDraft)}
+                                    disabled={loading}
+                                >
+                                    Use pasted text
+                                </button>
+                            </div>
+                        </>
+                    )}
+
+                    {workspaceTab === "upload" && (
+                        <>
+                            <div className="workspace-meta" style={{marginBottom: 10}}>
+                                <span className="pill">Supported: txt, md, csv, tsv, pdf</span>
+                                <span className="pill">Use Upload in the top bar</span>
+                            </div>
+                            <button type="button" onClick={triggerUpload} disabled={loading}>
+                                Choose file…
+                            </button>
+                        </>
+                    )}
+
+                    {workspaceTab === "sample" && (
+                        <>
+                            {samples.length === 0 ? (
+                                <div className="workspace-meta">
+                                    <span className="pill">
+                                        No samples found in `src/sample_text/latin/`.
+                                    </span>
+                                </div>
+                            ) : (
+                                <div className="workspace-row">
+                                    <select
+                                        value={pickedSampleId}
+                                        onChange={(e) => setPickedSampleId(e.target.value)}
+                                        style={{minWidth: 260}}
+                                    >
+                                        {samples.map((s) => (
+                                            <option key={s.id} value={s.id}>
+                                                {s.name} ({Math.round((s.bytes || 0) / 1024)} KB)
+                                            </option>
+                                        ))}
+                                    </select>
+                                    <button
+                                        type="button"
+                                        onClick={loadPickedSample}
+                                        disabled={!pickedSampleId || loading}
+                                    >
+                                        Load sample
+                                    </button>
+                                </div>
+                            )}
+                        </>
+                    )}
+
+                    {extractWarnings.length > 0 && (
+                        <div className="workspace-row">
+                            <div className="error" style={{marginTop: 0}}>
+                                {extractWarnings.map((w, i) => (
+                                    <div key={i}>{w}</div>
+                                ))}
+                            </div>
+                        </div>
+                    )}
+
+                    <div className="workspace-row" style={{justifyContent: "space-between", gap: 12}}>
+                        <div className="workspace-meta">
+                            <span className="pill">
+                                Chars: {(activeText || "").length.toLocaleString()}
+                            </span>
+                            <span className="pill">
+                                Words:{" "}
+                                {(activeText || "").trim()
+                                    ? activeText.trim().split(/\s+/).length.toLocaleString()
+                                    : "0"}
+                            </span>
+                            {(activeText || "").length > 12000 && (
+                                <span className="pill">Showing first 12k</span>
+                            )}
+                        </div>
+
+                        <div className="workspace-tabs" aria-label="Text view" style={{justifyContent: "flex-end"}}>
+                            <button
+                                type="button"
+                                className={`tab-btn ${textView === "plain" ? "active" : ""}`}
+                                onClick={() => setTextView("plain")}
+                                disabled={editMode}
+                            >
+                                Plain
+                            </button>
+                            <button
+                                type="button"
+                                className={`tab-btn ${textView === "lexicon" ? "active" : ""}`}
+                                onClick={() => setTextView("lexicon")}
+                                disabled={editMode}
+                            >
+                                Lexicon highlight
+                            </button>
+                            <button
+                                type="button"
+                                className="tab-btn"
+                                onClick={() => {
+                                    setWorkspaceTab("paste");
+                                    setPasteDraft(activeText || "");
+                                    setEditMode(true);
+                                }}
+                                disabled={loading}
+                                title="Edit the current text"
+                            >
+                                Edit
+                            </button>
+                        </div>
+                    </div>
+
+                    {!editMode && (
+                        <>
+                            {textView === "lexicon" && (
+                                <div className="workspace-row" style={{justifyContent: "space-between", gap: 12}}>
+                                    <div className="workspace-meta">
+                                        <label style={{display: "flex", gap: 6, alignItems: "center"}}>
+                                            <input
+                                                type="checkbox"
+                                                checked={lexAuto}
+                                                onChange={(e) => setLexAuto(e.target.checked)}
+                                            />
+                                            Auto
+                                        </label>
+                                    </div>
+                                    <div style={{display: "flex", gap: 10, alignItems: "center", flexWrap: "wrap"}}>
+                                        <button
+                                            type="button"
+                                            onClick={() => computeLexicon(activeText)}
+                                            disabled={lexLoading || !(activeText || "").trim()}
+                                        >
+                                            {lexLoading ? "Computing…" : "Compute highlights"}
+                                        </button>
+                                    </div>
+                                </div>
+                            )}
+
+                            {textView === "lexicon" && lexError && (
+                                <div className="error" style={{marginTop: 10}}>
+                                    {lexError}
+                                </div>
+                            )}
+
+                            {textView === "lexicon" && lexRes?.coverage && (
+                                <div className="workspace-meta" style={{marginTop: 10}}>
+                                    <span className="pill">
+                                        Tokens: {Number(lexRes.coverage.token_count || 0).toLocaleString()}
+                                    </span>
+                                    <span className="pill">
+                                        Hit rate: {Number(lexRes.coverage.affectus_hit_rate || 0).toFixed(3)}
+                                    </span>
+                                    <span className="pill">
+                                        Sentiment lemmas: {Number(lexRes.coverage.sentiment_lemma_hits || 0).toLocaleString()}
+                                    </span>
+                                </div>
+                            )}
+
+                            <div className="text-view">
+                                {!(activeText || "").trim() ? (
+                                    <div style={{color: "rgba(255,255,255,0.85)"}}>
+                                        No Latin text loaded yet. Paste, upload, or pick a sample above.
+                                    </div>
+                                ) : textView === "lexicon" && lexRes?.spans && Array.isArray(lexRes.spans) ? (
+                                    <>
+                                        {lexRes?.truncated && (
+                                            <div style={{marginBottom: 10, color: "rgba(255,255,255,0.85)"}}>
+                                                Overlay shown on the first 12k characters for performance.
+                                            </div>
+                                        )}
+                                        <LatinLexiconOverlay
+                                            text={(activeText || "").slice(0, 12000)}
+                                            spans={lexRes.spans}
+                                            lemmaDetails={lexRes.lemma_details || {}}
+                                        />
+                                    </>
+                                ) : (
+                                    <pre className="plain-text">
+                                        {(activeText || "").slice(0, 12000)}
+                                        {(activeText || "").length > 12000 ? "\n\n[…truncated…]" : ""}
+                                    </pre>
+                                )}
+                            </div>
+                        </>
                     )}
                 </div>
             </div>
@@ -582,7 +1029,7 @@ export default function Analyzer() {
                     <button
                         className="ghost-btn"
                         onClick={() => setFeedbackOpen(true)}
-                        disabled={!resp || !model || !text}
+                        disabled={!resp || !(activeText || "").trim()}
                     >
                         Send Feedback
                     </button>
@@ -731,8 +1178,8 @@ export default function Analyzer() {
                 open={feedbackOpen}
                 onClose={() => setFeedbackOpen(false)}
                 apiBase={API_BASE}
-                modelId={model}
-                text={text}
+                modelId={providerMode === "registry" ? model : openrouterModel}
+                text={activeText}
                 got={resp}
             />
 

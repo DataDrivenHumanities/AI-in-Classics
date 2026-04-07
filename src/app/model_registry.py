@@ -144,12 +144,13 @@ def _load_registry_from_path(path: Path) -> ModelRegistry:
     for entry in entry_iter:
         if not isinstance(entry, dict):
             continue
-        models.append(
+            models.append(
             ModelInfo(
                 model_id=entry.get("id", ""),
                 name=entry.get("name", ""),
                 description=entry.get("description", ""),
                 provider=entry.get("provider", ""),
+                hf_classifier_params=entry.get("hf_classifier_params", {}) or {},
                 available=bool(entry.get("available", True)),
                 tags=entry.get("tags", ()),
                 metadata=entry.get("metadata", {}),

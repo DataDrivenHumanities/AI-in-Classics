@@ -1,6 +1,6 @@
-from fastapi import FastAPI, UploadFile, File, Form, HTTPException
+from fastapi import FastAPI, UploadFile, File, Form, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import JSONResponse
+from fastapi.responses import JSONResponse, StreamingResponse
 from pydantic import BaseModel, Field
 from typing import Dict, Iterable, List, Literal, Optional, Any
 from pathlib import Path
@@ -15,8 +15,8 @@ from .routers.sentiment_router import make_default_sentiment_router
 from .routers import presets_router
 from .routers import feedback_router
 from .routers import train_router
+from .routers.latin_workspace_router import router as latin_workspace_router
 
-from .app_functions import hf_sentiment
 from .model_registry import get_registry, available_model_ids
 from .ollama_client import (
     generate_json_with_analysis,
@@ -47,6 +47,7 @@ app.include_router(probing.router, prefix="/api")
 app.include_router(presets_router.router)
 app.include_router(feedback_router.router)
 app.include_router(train_router.router)
+app.include_router(latin_workspace_router, prefix="/api")
 
 DEFAULT_OLLAMA_MODEL = os.getenv("DEFAULT_OLLAMA_MODEL", "llama3.1")
 chat_router = make_chat_router(DEFAULT_OLLAMA_MODEL)
@@ -59,6 +60,8 @@ class AnalyzeBody(BaseModel):
     options: Optional[Dict[str, Any]] = None
     raw: Optional[bool] = None
     format: Optional[str] = None
+    provider: Optional[str] = None
+    openrouter_model: Optional[str] = None
 
 
 def resolve_model(model_id: Optional[str]):
@@ -98,6 +101,57 @@ def resolve_hf_params(model_id: str):
         print(f"Model with id {model_id} not found in registry: {e}")
         return {}
 
+def _hf_sentiment(text: str, hf_classifier_params: Optional[Dict[str, Any]] | None):
+    """
+    Lightweight Hugging Face sentiment runner, intentionally Streamlit-free.
+    """
+    try:
+        from transformers import pipeline  # type: ignore
+    except Exception as e:
+        raise RuntimeError(
+            f"transformers is not installed; cannot run Hugging Face sentiment: {e}"
+        )
+    import re
+
+    params = hf_classifier_params or {}
+    model = params.get("model")
+    task = params.get("task")
+    if not model or not task:
+        raise RuntimeError(
+            "Invalid Hugging Face model registry entry: missing hf_classifier_params.model/task"
+        )
+
+    classifier = pipeline(task=task, model=model)
+    sentences = [s.strip() for s in re.split(r"(?<=[.!?])\s+", text or "") if s.strip()]
+    out = []
+    for s in sentences:
+        r = classifier(s)
+        try:
+            r[0]["sentence"] = s
+        except Exception:
+            pass
+        out.append(r)
+    return out
+
+
+def _safe_parse_json_text(s: str) -> Dict[str, Any]:
+    """
+    Parse a model output that is supposed to be JSON. Be forgiving if it contains noise.
+    """
+    try:
+        return json.loads(s)
+    except Exception:
+        pass
+    import re
+
+    m = re.search(r"\{.*\}", s, flags=re.DOTALL)
+    if m:
+        try:
+            return json.loads(m.group(0))
+        except Exception:
+            pass
+    return {}
+
 # ------------------------------------------------------------------------------
 #  -----------   Chat endpoint  -----------   -----------   -----------
 # ------------------------------------------------------------------------------
@@ -134,7 +188,7 @@ class AnalyzeRequest(BaseModel):
     extra: Dict[str, Any] = Field(default_factory=dict)
 
 
-@app.post("api/chat", response_model=ChatResponse)
+@app.post("/api/chat", response_model=ChatResponse)
 def chat(req: ChatRequest):
     try:
         if not req.messages:
@@ -191,7 +245,7 @@ async def _analyze_with_model(
 ) -> Dict[str, Any]:
 
     if engine == "hugging face":
-        res = hf_sentiment(text, hf_classifier_params)
+        res = _hf_sentiment(text, hf_classifier_params)
         return {
             "engine": "hugging face",
             "labels and scores by sentence": res
@@ -254,19 +308,154 @@ async def _analyze_with_model(
     }
 
 
+async def _analyze_with_openrouter(
+    text: str,
+    *,
+    openrouter_model: str,
+    auth_header: str,
+    options: Optional[Dict[str, Any]] = None,
+) -> Dict[str, Any]:
+    endpoint = os.getenv(
+        "OPENROUTER_API_URL", "https://openrouter.ai/api/v1/chat/completions"
+    )
+    prompt = (
+        "Return ONLY a JSON object with these exact keys and types; no extra keys and no prose. "
+        'label: one of ["positive","negative","neutral"]; confidence: number in [0,1]; '
+        'scores: {"positive":number,"negative":number,"neutral":number}; translation: string|null; analysis: object|null. '
+        f"Text: {text}"
+    )
+
+    # best-effort option mapping
+    temp = float((options or {}).get("temperature", 0.0) or 0.0)
+    top_p = float((options or {}).get("top_p", 0.9) or 0.9)
+    max_tokens = int((options or {}).get("num_predict", 1024) or 1024)
+
+    headers = {
+        "Authorization": auth_header,
+        "Content-Type": "application/json",
+    }
+    # Optional attribution headers; safe defaults for local dev.
+    if os.getenv("OPENROUTER_REFERER"):
+        headers["HTTP-Referer"] = os.getenv("OPENROUTER_REFERER", "")
+    if os.getenv("OPENROUTER_TITLE"):
+        headers["X-Title"] = os.getenv("OPENROUTER_TITLE", "")
+
+    payload = {
+        "model": openrouter_model,
+        "messages": [{"role": "user", "content": prompt}],
+        "temperature": temp,
+        "top_p": top_p,
+        "max_tokens": max_tokens,
+    }
+
+    async with httpx.AsyncClient(timeout=75.0) as client:
+        try:
+            rr = await client.post(endpoint, headers=headers, json=payload)
+            rr.raise_for_status()
+            data = rr.json()
+        except httpx.HTTPStatusError as e:
+            detail = ""
+            try:
+                j = e.response.json()
+                detail = str(j.get("error") or j.get("message") or j)
+            except Exception:
+                detail = (e.response.text or "").strip()
+            raise HTTPException(
+                status_code=int(e.response.status_code),
+                detail=detail or f"OpenRouter request failed: {e.response.status_code}",
+            )
+
+    raw_content = (
+        (((data or {}).get("choices") or [{}])[0].get("message") or {}).get("content")
+        or ""
+    )
+    parsed = _safe_parse_json_text(str(raw_content))
+
+    label = str(parsed.get("label") or "neutral").lower()
+    if label not in {"positive", "negative", "neutral"}:
+        label = "neutral"
+
+    confidence = parsed.get("confidence")
+    try:
+        confidence = float(confidence)
+    except Exception:
+        confidence = 0.5
+
+    scores = parsed.get("scores") or {}
+    try:
+        scores = {
+            "positive": float(scores.get("positive") or (1.0 if label == "positive" else 0.0)),
+            "negative": float(scores.get("negative") or (1.0 if label == "negative" else 0.0)),
+            "neutral": float(scores.get("neutral") or (1.0 if label == "neutral" else 0.0)),
+        }
+    except Exception:
+        scores = {
+            "positive": 0.0,
+            "negative": 0.0,
+            "neutral": 1.0,
+        }
+
+    return {
+        "engine": "openrouter",
+        "label": label,
+        "confidence": confidence,
+        "scores": scores,
+        "raw_model_output": str(raw_content),
+        "translation": parsed.get("translation", None),
+        "analysis": parsed.get("analysis", None),
+    }
+
+
 @app.post("/api/analyze")
-async def analyze(body: AnalyzeBody):
+async def analyze(body: AnalyzeBody, request: Request):
     text = body.text
     try:
-        engine = (resolve_engine(body.model_id) or "builtin").lower()
-        print(engine)
-        if engine == "ollama" or engine == "hugging face":
+        provider = (body.provider or resolve_engine(body.model_id) or "builtin").lower()
+        if provider in {"ollama", "hugging face"}:
             model_id = resolve_model(body.model_id)
             hf_classifier_params = resolve_hf_params(body.model_id)
-            print(model_id, hf_classifier_params)
-            res = await _analyze_with_model(text, model_id, engine, options=body.options, raw=body.raw, fmt=body.format, hf_classifier_params=hf_classifier_params)
+            res = await _analyze_with_model(
+                text,
+                model_id,
+                provider,
+                options=body.options,
+                raw=body.raw,
+                fmt=body.format,
+                hf_classifier_params=hf_classifier_params,
+            )
             return JSONResponse(res)
-        return JSONResponse({"engine": "builtin", "label": "neutral", "confidence": 0.5, "scores": {"positive": 0.25, "negative": 0.25, "neutral": 0.5}, "raw_model_output": "", "translation": None, "analysis": None})
+        if provider == "openrouter":
+            openrouter_model = (body.openrouter_model or "").strip()
+            if not openrouter_model:
+                raise HTTPException(
+                    status_code=400, detail="openrouter_model is required for provider=openrouter"
+                )
+            auth_header = request.headers.get("authorization") or ""
+            if not auth_header.lower().startswith("bearer "):
+                raise HTTPException(
+                    status_code=401,
+                    detail="Missing Authorization: Bearer <OPENROUTER_API_KEY>",
+                )
+            res = await _analyze_with_openrouter(
+                text,
+                openrouter_model=openrouter_model,
+                auth_header=auth_header,
+                options=body.options,
+            )
+            return JSONResponse(res)
+        return JSONResponse(
+            {
+                "engine": "builtin",
+                "label": "neutral",
+                "confidence": 0.5,
+                "scores": {"positive": 0.25, "negative": 0.25, "neutral": 0.5},
+                "raw_model_output": "",
+                "translation": None,
+                "analysis": None,
+            }
+        )
+    except HTTPException:
+        raise
     except (httpx.ReadTimeout, httpx.ConnectTimeout):
         raise HTTPException(status_code=504, detail="Model backend timeout")
     except httpx.HTTPError as e:
@@ -307,6 +496,8 @@ async def analyze_upload(
             res["text"] = text
             return JSONResponse(res)
         return JSONResponse({"engine": "builtin", "label": "neutral", "confidence": 0.5, "scores": {"positive": 0.25, "negative": 0.25, "neutral": 0.5}, "raw_model_output": "", "translation": None, "analysis": None, "text": text})
+    except HTTPException:
+        raise
     except (httpx.ReadTimeout, httpx.ConnectTimeout):
         raise HTTPException(status_code=504, detail="Model backend timeout")
     except httpx.HTTPError as e:
