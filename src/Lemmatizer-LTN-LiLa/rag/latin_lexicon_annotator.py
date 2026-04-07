@@ -285,6 +285,7 @@ class LatinLexiconAnnotator:
         lemma_counts: Counter[str] = Counter()
         lemma_pos_bucket: dict[str, str] = {}
         lemma_pos_raw: dict[str, Optional[str]] = {}
+        lemma_definition_raw: dict[str, Optional[str]] = {}
 
         for tok, cnt in token_counts.items():
             lemma_id = token_chosen_lemma_id.get(tok)
@@ -302,6 +303,7 @@ class LatinLexiconAnnotator:
             lemma_counts[lemma_key] += int(cnt)
             lemma_pos_bucket[lemma_key] = bucket
             lemma_pos_raw[lemma_key] = pos_raw
+            lemma_definition_raw[lemma_key] = m.get("definition")
 
         lemma_keys = sorted(lemma_counts.keys())
         sentiment_rows = self._fetch_sentiment_rows(lemma_keys)
@@ -312,9 +314,21 @@ class LatinLexiconAnnotator:
 
         for lemma_key in lemma_keys:
             rows = sentiment_rows.get(lemma_key, [])
-            if not rows:
-                continue
             bucket = lemma_pos_bucket.get(lemma_key, "other")
+            definition = lemma_definition_raw.get(lemma_key)
+            if not rows:
+                # Still include definition-only lemmas so the UI can show hover definitions.
+                if not definition:
+                    continue
+                chosen_sentiment_by_lemma[lemma_key] = {
+                    "lemma_key": lemma_key,
+                    "count": int(lemma_counts.get(lemma_key, 0)),
+                    "scraped_pos": lemma_pos_raw.get(lemma_key),
+                    "scraped_pos_bucket": bucket,
+                    "definition": definition,
+                    "pos_match": False,
+                }
+                continue
             matching = [
                 r
                 for r in rows
@@ -333,12 +347,12 @@ class LatinLexiconAnnotator:
             pos_match = bool(matching)
 
             score = chosen.get("polarity_score")
-            # Only keep sentiment-bearing entries for UI highlighting (skip neutral).
+            # Keep sentiment-bearing entries OR definition-only lemmas for UI highlighting.
             try:
                 sc = float(score) if score is not None else None
             except Exception:
                 sc = None
-            if sc is None or sc == 0.0:
+            if (sc is None or sc == 0.0) and not definition:
                 continue
             if not pos_match:
                 fallback_joins += 1
@@ -357,6 +371,7 @@ class LatinLexiconAnnotator:
                 "has_polarity": chosen.get("has_polarity"),
                 "provenance": chosen.get("provenance"),
                 "pos_match": pos_match,
+                "definition": definition,
             }
 
         spans_out: list[dict[str, Any]] = []
@@ -569,15 +584,31 @@ class LatinLexiconAnnotator:
         if not lemma_ids:
             return {}
         with self._conn.cursor() as cur:
-            cur.execute(
-                """
-                SELECT id, lemma_nod::text AS lemma_nod, lemma_diac, pos
-                FROM public.lemmas
-                WHERE id = ANY(%s)
-                """,
-                (lemma_ids,),
-            )
-            rows = cur.fetchall()
+            try:
+                cur.execute(
+                    """
+                    SELECT id, lemma_nod::text AS lemma_nod, lemma_diac, pos, definition
+                    FROM public.lemmas
+                    WHERE id = ANY(%s)
+                    """,
+                    (lemma_ids,),
+                )
+                rows = cur.fetchall()
+            except psycopg.Error as e:
+                # If the DB hasn't been upgraded yet, fall back to the old schema.
+                if getattr(e, "sqlstate", "") != "42703":  # undefined_column
+                    raise
+                cur.execute(
+                    """
+                    SELECT id, lemma_nod::text AS lemma_nod, lemma_diac, pos
+                    FROM public.lemmas
+                    WHERE id = ANY(%s)
+                    """,
+                    (lemma_ids,),
+                )
+                rows = cur.fetchall()
+                for r in rows:
+                    r["definition"] = None
         return {int(r["id"]): dict(r) for r in rows}
 
     def _fetch_sentiment_rows(self, lemma_keys: list[str]) -> dict[str, list[dict[str, Any]]]:

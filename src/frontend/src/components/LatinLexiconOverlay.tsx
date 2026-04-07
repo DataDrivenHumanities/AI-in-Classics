@@ -39,7 +39,8 @@ export default function LatinLexiconOverlay(props: {
 
     const [popup, setPopup] = useState<null | {
         lemma: string;
-        score: string;
+        scoreText: string;
+        scoreValue: number | null;
         label: string;
         pos: string;
         count: string;
@@ -58,7 +59,14 @@ export default function LatinLexiconOverlay(props: {
 
         const out: Array<
             | {k: string; kind: "plain"; text: string}
-            | {k: string; kind: "hit"; text: string; lemma: string; score: number}
+            | {
+            k: string;
+            kind: "hit";
+            text: string;
+            lemma: string;
+            score: number;
+            isNeutral: boolean;
+        }
         > = [];
 
         let last = 0;
@@ -76,7 +84,14 @@ export default function LatinLexiconOverlay(props: {
             const hasDefinition = !!det.definition;
 
             if (lemma && ((Number.isFinite(score) && score !== 0) || hasDefinition)) {
-                out.push({k: `h-${i}-${start}`, kind: "hit", text: surface, lemma, score});
+                out.push({
+                    k: `h-${i}-${start}`,
+                    kind: "hit",
+                    text: surface,
+                    lemma,
+                    score: Number.isFinite(score) ? score : 0,
+                    isNeutral: !(Number.isFinite(score) && score !== 0) && hasDefinition,
+                });
             } else {
                 out.push({k: `s-${i}-${start}`, kind: "plain", text: surface});
             }
@@ -118,9 +133,13 @@ export default function LatinLexiconOverlay(props: {
         const x = clamp(rect.left + rect.width / 2, pad, window.innerWidth - pad);
         const y = clamp(rect.bottom + 8, pad, window.innerHeight - pad);
 
+        const scoreValue = Number.isFinite(score) && score !== 0 ? score : null;
+        const scoreText = scoreValue == null ? "" : `${scoreValue >= 0 ? "+" : ""}${scoreValue.toFixed(2)}`;
+
         setPopup({
             lemma,
-            score: `${score >= 0 ? "+" : ""}${score.toFixed(2)}`,
+            scoreText,
+            scoreValue,
             label: String(pol),
             pos,
             count: String(cnt),
@@ -138,7 +157,7 @@ export default function LatinLexiconOverlay(props: {
                 {parts.map((p) => {
                     if (p.kind === "plain") return <React.Fragment key={p.k}>{p.text}</React.Fragment>;
                     const bg = sentimentBg(p.score);
-                    const isNeutral = p.score === 0;
+                    const isNeutral = p.isNeutral;
                     return (
                         <span
                             key={p.k}
@@ -169,14 +188,30 @@ export default function LatinLexiconOverlay(props: {
                             <span>{popup.definition}</span>
                         </div>
                     )}
-                    {popup.score !== "0.00" && <div className="lex-popup-row"><span className="k">score</span> <span>{popup.score}</span></div>}
-                    {popup.label && <div className="lex-popup-row"><span className="k">label</span> <span>{popup.label}</span></div>}
+                    {popup.scoreValue != null && (
+                        <div className="lex-popup-row">
+                            <span className="k">score</span> <span>{popup.scoreText}</span>
+                        </div>
+                    )}
+                    {popup.scoreValue != null && popup.label && (
+                        <div className="lex-popup-row">
+                            <span className="k">label</span> <span>{popup.label}</span>
+                        </div>
+                    )}
                     <div className="lex-popup-row"><span className="k">pos</span> <span>{popup.pos || "—"}</span></div>
                     <div className="lex-popup-row"><span className="k">count</span> <span>{popup.count || "—"}</span></div>
-                    {popup.score !== "0.00" && <div className="lex-popup-row"><span className="k">source</span> <span>{popup.source || "—"}</span></div>}
+                    {popup.source && (
+                        <div className="lex-popup-row">
+                            <span className="k">source</span> <span>{popup.source}</span>
+                        </div>
+                    )}
+                    {popup.posMatch && (
+                        <div className="lex-popup-row">
+                            <span className="k">pos match</span> <span>{popup.posMatch}</span>
+                        </div>
+                    )}
                 </div>
             )}
         </div>
     );
 }
-

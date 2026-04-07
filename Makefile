@@ -140,7 +140,7 @@ endif
         docker-build docker-run docker-dev docker-bash docker-clean \
         ollama-serve ollama-pull ollama-list build-latin build-greek \
         smoke-latin smoke-greek ensure-ollama ensure-models health \
-        fe-install fe-dev fe-build fe-serve fe-clean fe-lint fe-lint-fix \
+        fe-install fe-dev fe-build fe-serve fe-clean fe-reset fe-lint fe-lint-fix \
         fe-format fe-format-check run-all \
         nb-bootstrap nb-sync nb-index \
         jlite-build jlite-serve jlite-clean \
@@ -167,6 +167,7 @@ help:
 	@printf "$(BLUE)  fe-build         Build production bundle$(RESET)\n"
 	@printf "$(BLUE)  fe-serve         Start production server$(RESET)\n"
 	@printf "$(BLUE)  fe-clean         Remove node_modules and .next$(RESET)\n"
+	@printf "$(BLUE)  fe-reset         Remove .next only (fixes missing chunk errors)$(RESET)\n"
 	@printf "$(BLUE)  run-all          Run Streamlit + FastAPI + Next.js dev servers together$(RESET)\n\n"
 	@printf "$(GREY)Docker / Ollama:$(RESET)\n"
 	@printf "$(GREY)  docker-build, docker-run, docker-dev, docker-bash, docker-clean$(RESET)\n"
@@ -348,6 +349,15 @@ fe-serve:
 fe-clean:
 	@echo "Cleaning frontend node_modules and .next..."
 	@rm -rf $(FRONTEND_DIR)/node_modules $(FRONTEND_DIR)/.next
+
+fe-reset:
+ifeq ($(DETECTED_OS),windows)
+	@echo "Resetting Next.js build output (.next) (Windows)..."
+	@powershell -NoProfile -Command "if (Test-Path -Path '$(FRONTEND_DIR)\\.next') { Remove-Item -Recurse -Force '$(FRONTEND_DIR)\\.next' }"
+else
+	@echo "Resetting Next.js build output (.next)..."
+	@rm -rf $(FRONTEND_DIR)/.next
+endif
 
 fe-lint:
 	cd $(FE_DIR) && ($(NPM) run -s lint || echo "skip: no 'lint' script")

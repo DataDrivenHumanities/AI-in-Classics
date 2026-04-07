@@ -21,6 +21,10 @@ class LexiconAnnotateBody(BaseModel):
     text: str = Field(..., description="Latin text to annotate")
     max_chars: int = Field(12000, ge=200, le=200000)
 
+class LexiconPriorsBody(BaseModel):
+    text: str = Field(..., description="Latin text for priors extraction")
+    max_chars: int = Field(6000, ge=200, le=200000)
+
 
 @router.post("/text/extract")
 async def text_extract(file: UploadFile = File(...)):
@@ -107,3 +111,42 @@ def latin_lexicon_annotate(body: LexiconAnnotateBody):
         }
     )
 
+
+@router.post("/latin/lexicon/priors")
+def latin_lexicon_priors(body: LexiconPriorsBody):
+    dsn = resolve_database_url()
+    if not dsn:
+        raise HTTPException(
+            status_code=400,
+            detail="Set DATABASE_URL to enable lexicon priors.",
+        )
+
+    text = (body.text or "").strip()
+    if not text:
+        return JSONResponse({"truncated": False, "priors": {}})
+
+    max_chars = int(body.max_chars or 6000)
+    truncated = False
+    clip = text
+    if len(clip) > max_chars:
+        clip = clip[:max_chars]
+        truncated = True
+
+    ann = None
+    try:
+        ann = make_latin_lexicon_annotator(dsn)
+        priors = ann.build_llm_payload(clip)
+        if not isinstance(priors, dict):
+            priors = {}
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Lexicon priors failed: {e}")
+    finally:
+        try:
+            if ann is not None:
+                ann.close()
+        except Exception:
+            pass
+
+    return JSONResponse({"truncated": truncated, "priors": priors})

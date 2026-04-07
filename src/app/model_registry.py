@@ -144,7 +144,7 @@ def _load_registry_from_path(path: Path) -> ModelRegistry:
     for entry in entry_iter:
         if not isinstance(entry, dict):
             continue
-            models.append(
+        models.append(
             ModelInfo(
                 model_id=entry.get("id", ""),
                 name=entry.get("name", ""),

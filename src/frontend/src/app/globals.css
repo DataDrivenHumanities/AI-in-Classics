@@ -84,6 +84,39 @@ body {
   max-width: 900px;
   text-align: center;
 }
+
+.bar-stack {
+  flex: 1 1 100%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bar-line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.bar-two-col {
+  flex-wrap: nowrap;
+}
+
+.bar-input-large {
+  flex: 1 1 0;
+  min-width: 0;
+  font-size: 16px;
+  padding: 10px 12px;
+}
+
+@media (max-width: 720px) {
+  .bar-two-col {
+    flex-wrap: wrap;
+  }
+}
 select,
 button {
   border-radius: 8px;
@@ -268,6 +301,7 @@ button:disabled {
   border: 1px solid rgba(250, 70, 22, 0.4);
   border-radius: 12px;
   padding: 14px;
+  width: 100%;
 }
 .workspace-row {
   display: flex;
@@ -276,11 +310,29 @@ button:disabled {
   align-items: center;
   margin-top: 10px;
 }
+
+.two-col-row {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+.two-col-row > * {
+  flex: 1 1 0;
+  min-width: 0;
+}
+@media (max-width: 720px) {
+  .two-col-row {
+    flex-wrap: wrap;
+  }
+  .two-col-row > * {
+    flex: 1 1 100%;
+  }
+}
 .workspace-textarea {
   display: block;
   width: 100%;
   max-width: 100%;
-  min-height: 220px;
+  min-height: 320px;
   resize: vertical;
   border-radius: 12px;
   border: 1px solid rgba(250, 70, 22, 0.35);
@@ -366,6 +418,30 @@ button:disabled {
 .lex-chip:focus {
   outline: 2px solid rgba(37, 99, 235, 0.55);
   outline-offset: 2px;
+}
+
+/* Neutral “definition-only” chips: visually blend with text, underline on hover */
+.lex-chip-neutral {
+  background: transparent !important;
+  border-color: transparent !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+.lex-chip-neutral:hover {
+  transform: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+.lex-chip-neutral:focus {
+  outline: none !important;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
 }
 .lex-chip-neutral:hover {
   text-decoration: underline;

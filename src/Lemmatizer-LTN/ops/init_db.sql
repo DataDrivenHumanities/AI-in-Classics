@@ -18,11 +18,15 @@ CREATE TABLE IF NOT EXISTS lemmas (
   pos         text,
   gender      text,
   page_url    text,
+  definition  text,
   created_at  timestamptz DEFAULT now(),
   UNIQUE (lemma_nod)
 );
 
 CREATE INDEX IF NOT EXISTS lemmas_trgm_idx ON lemmas USING gin (lemma_nod gin_trgm_ops);
+
+-- Backwards-compatible upgrade for existing DBs
+ALTER TABLE lemmas ADD COLUMN IF NOT EXISTS definition text;
 
 -- Forms
 CREATE TABLE IF NOT EXISTS forms (

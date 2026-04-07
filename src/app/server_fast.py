@@ -22,6 +22,7 @@ from .ollama_client import (
     generate_json_with_analysis,
     translate_en,
     resolve_available_model_tag,
+    generate_text,
 )
 
 _VALID_LABELS = {"positive", "negative", "neutral"}
@@ -62,6 +63,20 @@ class AnalyzeBody(BaseModel):
     format: Optional[str] = None
     provider: Optional[str] = None
     openrouter_model: Optional[str] = None
+
+
+class LlmAnalyzeBody(BaseModel):
+    text: str
+    language: Literal["latin", "greek"] = "latin"
+    mode: int = Field(..., ge=1, le=6)
+    period: str = ""
+    genre: str = ""
+    output_length: Literal["short", "medium", "long"] = "medium"
+    include_lexicon_priors: bool = True
+    provider: Optional[str] = None
+    model_id: Optional[str] = None
+    openrouter_model: Optional[str] = None
+    options: Optional[Dict[str, Any]] = None
 
 
 def resolve_model(model_id: Optional[str]):
@@ -152,6 +167,133 @@ def _safe_parse_json_text(s: str) -> Dict[str, Any]:
             pass
     return {}
 
+
+def _clip_text(text: str, *, max_chars: int = 6000) -> str:
+    t = (text or "").strip()
+    if len(t) <= max_chars:
+        return t
+    return t[:max_chars] + "\n\n[...truncated...]"
+
+
+def _analysis_task_for_mode(mode: int, *, language: str) -> str:
+    lang = "Latin" if language == "latin" else "Ancient Greek"
+    if mode == 1:
+        return (
+            f"Provide a faithful English translation of the {lang} text. "
+            "Then give 3–6 short translation notes for any tricky phrases."
+        )
+    if mode == 2:
+        return (
+            f"Give a word/lemma-focused sentiment analysis of the {lang} text. "
+            "List the key sentiment-bearing words/lemmas (5–15 items) with a brief explanation each, "
+            "and explain negation/intensifiers if present. Include a one-paragraph overall sentiment summary."
+        )
+    if mode == 3:
+        return (
+            "Give a document-level sentiment assessment: label (positive/negative/neutral/mixed), "
+            "confidence (0–1), and a concise rationale grounded in the text."
+        )
+    if mode == 4:
+        return (
+            "Do aspect-based sentiment: identify 3–6 aspects/entities/themes, and for each give sentiment + evidence. "
+            "Finish with a short comparison of aspects."
+        )
+    if mode == 5:
+        return (
+            "Do sentence/paragraph-level sentiment: pick 5–10 representative units (sentences or short segments), "
+            "translate each briefly, label sentiment, and summarize progression across the text."
+        )
+    if mode == 6:
+        return (
+            "Provide all analyses in this order with clear headings: "
+            "1) Translation  2) Word/Lemma Sentiment  3) Document-Level Sentiment  "
+            "4) Aspect-Based Sentiment  5) Sentence/Paragraph-Level Sentiment."
+        )
+    raise ValueError("mode must be an integer 1–6")
+
+
+def _num_predict_from_output_length(output_length: str) -> int:
+    low = (output_length or "medium").lower()
+    if low.startswith("short"):
+        return 320
+    if low.startswith("long"):
+        return 1200
+    return 700
+
+
+def _latin_lexicon_priors_json(text_clip: str, *, include: bool) -> str:
+    if not include:
+        return ""
+    try:
+        from .latin_lexicon import resolve_database_url, make_latin_lexicon_annotator
+
+        dsn = resolve_database_url()
+        if not dsn:
+            return ""
+        ann = make_latin_lexicon_annotator(dsn)
+        try:
+            priors = ann.build_llm_payload(text_clip)
+        finally:
+            try:
+                ann.close()
+            except Exception:
+                pass
+        if not isinstance(priors, dict):
+            return ""
+        return json.dumps(priors, ensure_ascii=False, separators=(",", ":")) + "\n\n"
+    except Exception:
+        return ""
+
+
+async def _complete_openrouter_prompt(
+    prompt: str,
+    *,
+    openrouter_model: str,
+    auth_header: str,
+    temperature: float,
+    max_tokens: Optional[int],
+) -> str:
+    endpoint = os.getenv(
+        "OPENROUTER_API_URL", "https://openrouter.ai/api/v1/chat/completions"
+    )
+    headers = {
+        "Authorization": auth_header,
+        "Content-Type": "application/json",
+    }
+    if os.getenv("OPENROUTER_REFERER"):
+        headers["HTTP-Referer"] = os.getenv("OPENROUTER_REFERER", "")
+    if os.getenv("OPENROUTER_TITLE"):
+        headers["X-Title"] = os.getenv("OPENROUTER_TITLE", "")
+
+    payload: Dict[str, Any] = {
+        "model": openrouter_model,
+        "messages": [{"role": "user", "content": prompt}],
+        "temperature": float(temperature),
+    }
+    if max_tokens is not None:
+        payload["max_tokens"] = int(max_tokens)
+
+    async with httpx.AsyncClient(timeout=75.0) as client:
+        try:
+            rr = await client.post(endpoint, headers=headers, json=payload)
+            rr.raise_for_status()
+            data = rr.json()
+        except httpx.HTTPStatusError as e:
+            detail = ""
+            try:
+                j = e.response.json()
+                detail = str(j.get("error") or j.get("message") or j)
+            except Exception:
+                detail = (e.response.text or "").strip()
+            raise HTTPException(
+                status_code=int(e.response.status_code),
+                detail=detail or f"OpenRouter request failed: {e.response.status_code}",
+            )
+    return str(
+        ((((data or {}).get("choices") or [{}])[0].get("message") or {}).get("content"))
+        or ""
+    )
+
 # ------------------------------------------------------------------------------
 #  -----------   Chat endpoint  -----------   -----------   -----------
 # ------------------------------------------------------------------------------
@@ -170,6 +312,8 @@ class ChatRequest(BaseModel):
     extra: Dict[str, Any] = Field(
         default_factory=dict, description="Additional provider kwargs"
     )
+    provider: Optional[str] = None
+    openrouter_model: Optional[str] = None
 
 
 class ChatResponse(BaseModel):
@@ -189,10 +333,67 @@ class AnalyzeRequest(BaseModel):
 
 
 @app.post("/api/chat", response_model=ChatResponse)
-def chat(req: ChatRequest):
+async def chat(req: ChatRequest, request: Request):
     try:
         if not req.messages:
             raise HTTPException(status_code=400, detail="messages must be non-empty")
+
+        provider = (req.provider or "").strip().lower()
+        if provider == "openrouter":
+            openrouter_model = (req.openrouter_model or req.model_id or "").strip()
+            if not openrouter_model:
+                raise HTTPException(status_code=400, detail="openrouter_model is required")
+            auth_header = request.headers.get("authorization") or ""
+            if not auth_header.lower().startswith("bearer "):
+                raise HTTPException(
+                    status_code=401,
+                    detail="Missing Authorization: Bearer <OPENROUTER_API_KEY>",
+                )
+
+            # Convert to OpenRouter chat-completions format.
+            endpoint = os.getenv(
+                "OPENROUTER_API_URL", "https://openrouter.ai/api/v1/chat/completions"
+            )
+            headers = {
+                "Authorization": auth_header,
+                "Content-Type": "application/json",
+            }
+            if os.getenv("OPENROUTER_REFERER"):
+                headers["HTTP-Referer"] = os.getenv("OPENROUTER_REFERER", "")
+            if os.getenv("OPENROUTER_TITLE"):
+                headers["X-Title"] = os.getenv("OPENROUTER_TITLE", "")
+
+            payload = {
+                "model": openrouter_model,
+                "messages": req.messages,
+                "temperature": float(req.temperature or 0.2),
+            }
+            if req.max_tokens is not None:
+                payload["max_tokens"] = int(req.max_tokens)
+
+            async with httpx.AsyncClient(timeout=75.0) as client:
+                try:
+                    rr = await client.post(endpoint, headers=headers, json=payload)
+                    rr.raise_for_status()
+                    data = rr.json()
+                except httpx.HTTPStatusError as e:
+                    detail = ""
+                    try:
+                        j = e.response.json()
+                        detail = str(j.get("error") or j.get("message") or j)
+                    except Exception:
+                        detail = (e.response.text or "").strip()
+                    raise HTTPException(
+                        status_code=int(e.response.status_code),
+                        detail=detail
+                        or f"OpenRouter request failed: {e.response.status_code}",
+                    )
+
+            content = (
+                (((data or {}).get("choices") or [{}])[0].get("message") or {}).get("content")
+                or ""
+            )
+            return ChatResponse(model_id=openrouter_model, content=str(content))
 
         if req.stream:
 
@@ -462,6 +663,94 @@ async def analyze(body: AnalyzeBody, request: Request):
         raise HTTPException(status_code=502, detail=f"Model backend error: {e}")
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Unhandled error: {e}")
+
+
+@app.post("/api/llm/analyze")
+async def llm_analyze(body: LlmAnalyzeBody, request: Request):
+    text = (body.text or "").strip()
+    if not text:
+        raise HTTPException(status_code=400, detail="text must be non-empty")
+
+    language = (body.language or "latin").lower()
+    if language not in {"latin", "greek"}:
+        raise HTTPException(status_code=400, detail="language must be latin|greek")
+
+    mode = int(body.mode)
+    task = _analysis_task_for_mode(mode, language=language)
+    clip = _clip_text(text, max_chars=6000)
+
+    priors_json = ""
+    if language == "latin":
+        priors_json = _latin_lexicon_priors_json(
+            clip, include=bool(body.include_lexicon_priors)
+        )
+
+    meta = []
+    if (body.period or "").strip():
+        meta.append(f"Period: {body.period.strip()}")
+    if (body.genre or "").strip():
+        meta.append(f"Genre/Context: {body.genre.strip()}")
+    meta_block = ("\n".join(meta) + "\n\n") if meta else ""
+
+    prompt = (
+        f"You are a {('Latin' if language == 'latin' else 'Ancient Greek')} text analysis assistant.\n"
+        "Answer using the provided text; do not ask the user to paste it.\n"
+        + ("If lexicon priors are included, treat them as weak evidence (coverage may be incomplete).\n\n" if language == "latin" else "\n")
+        + f"{priors_json}"
+        + f"{meta_block}"
+        + f"Task:\n{task}\n\n"
+        + f"{'Latin' if language == 'latin' else 'Greek'} text:\n{clip}\n"
+    )
+
+    provider = (body.provider or "ollama").lower()
+    options = body.options or {}
+    temperature = float(options.get("temperature", 0.2) or 0.2)
+    max_tokens = options.get("num_predict")
+    if max_tokens is None:
+        max_tokens = _num_predict_from_output_length(body.output_length)
+    try:
+        max_tokens = int(max_tokens)
+    except Exception:
+        max_tokens = _num_predict_from_output_length(body.output_length)
+
+    if provider == "openrouter":
+        openrouter_model = (body.openrouter_model or "").strip()
+        if not openrouter_model:
+            raise HTTPException(status_code=400, detail="openrouter_model is required")
+        auth_header = request.headers.get("authorization") or ""
+        if not auth_header.lower().startswith("bearer "):
+            raise HTTPException(
+                status_code=401,
+                detail="Missing Authorization: Bearer <OPENROUTER_API_KEY>",
+            )
+        content = await _complete_openrouter_prompt(
+            prompt,
+            openrouter_model=openrouter_model,
+            auth_header=auth_header,
+            temperature=temperature,
+            max_tokens=max_tokens,
+        )
+        return JSONResponse(
+            {
+                "provider": "openrouter",
+                "model_id": openrouter_model,
+                "content": content,
+            }
+        )
+
+    # Default: local Ollama
+    model_id = resolve_model(body.model_id)
+    runtime_model = resolve_available_model_tag(model_id)
+    content = await generate_text(
+        runtime_model, prompt, temperature=temperature, num_predict=max_tokens
+    )
+    return JSONResponse(
+        {
+            "provider": "ollama",
+            "model_id": runtime_model,
+            "content": content,
+        }
+    )
 
 
 @app.post("/api/analyze/upload")

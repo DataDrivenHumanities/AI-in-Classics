@@ -16,9 +16,11 @@ type AnalyzeResponse = any;
 type ModelEntry = {
     id: string;
     label?: string;
+    provider?: string;
 };
 
 export default function Analyzer() {
+    const [language, setLanguage] = useState<"latin" | "greek">("latin");
     const [model, setModel] = useState<string>("");
     const [modelsOpen, setModelsOpen] = useState<boolean>(false);
     const [settingsOpen, setSettingsOpen] = useState<boolean>(false);
@@ -33,6 +35,7 @@ export default function Analyzer() {
     );
     const [openrouterKey, setOpenrouterKey] = useState<string>("");
     const [openrouterModel, setOpenrouterModel] = useState<string>("");
+    const [rememberOpenrouterKey, setRememberOpenrouterKey] = useState<boolean>(false);
 
     const [activeText, setActiveText] = useState<string>("");
     const [pasteDraft, setPasteDraft] = useState<string>("");
@@ -63,6 +66,25 @@ export default function Analyzer() {
     const [lexAuto, setLexAuto] = useState<boolean>(true);
     const [lexRes, setLexRes] = useState<any | null>(null);
 
+    const [chatMessages, setChatMessages] = useState<Array<{role: "user" | "assistant"; content: string}>>([]);
+    const [chatDraft, setChatDraft] = useState<string>("");
+    const [chatLoading, setChatLoading] = useState<boolean>(false);
+    const [chatError, setChatError] = useState<string>("");
+    const [chatPeriod, setChatPeriod] = useState<string>("");
+    const [chatGenre, setChatGenre] = useState<string>("");
+    const [chatIncludePriors, setChatIncludePriors] = useState<boolean>(true);
+    const [chatPriorsWarning, setChatPriorsWarning] = useState<string>("");
+    const [llmTab, setLlmTab] = useState<"analysis" | "chat">("analysis");
+
+    const [llmMode, setLlmMode] = useState<number>(6);
+    const [llmPeriod, setLlmPeriod] = useState<string>("");
+    const [llmGenre, setLlmGenre] = useState<string>("");
+    const [llmOutputLength, setLlmOutputLength] = useState<"short" | "medium" | "long">("medium");
+    const [llmIncludePriors, setLlmIncludePriors] = useState<boolean>(true);
+    const [llmContent, setLlmContent] = useState<string>("");
+    const [llmLoading, setLlmLoading] = useState<boolean>(false);
+    const [llmError, setLlmError] = useState<string>("");
+
     const [modelOpts, setModelOpts] = useState<ModelOptions>({
         temperature: 0.0,
         top_p: 0.9,
@@ -88,19 +110,20 @@ export default function Analyzer() {
                 if (!rr.ok) throw new Error(`Failed to load model registry: ${rr.status}`);
                 const data: any = await rr.json();
                 let models: ModelEntry[] = [];
-                console.log(data)
                 if (Array.isArray(data)) {
                     models = data.map((m: any) =>
                         typeof m === "string" ? {id: m} : {
                             id: String(m.id ?? m.model_id ?? ""),
-                            label: m.label ?? m.name
+                            label: m.label ?? m.name ?? m.display_label,
+                            provider: m.provider ?? m.engine
                         }
                     );
                 } else if (Array.isArray(data?.models)) {
                     models = data.models.map((m: any) =>
                         typeof m === "string" ? {id: m} : {
                             id: String(m.id ?? m.model_id ?? ""),
-                            label: m.label ?? m.name
+                            label: m.label ?? m.name ?? m.display_label,
+                            provider: m.provider ?? m.engine
                         }
                     );
                 } else if (data && typeof data === "object") {
@@ -109,7 +132,8 @@ export default function Analyzer() {
                         models = Object.values(data.models).map((m: any) =>
                             typeof m === "string" ? {id: String(m)} : {
                                 id: String(m.id ?? m.model_id ?? m?.id ?? ""),
-                                label: (m as any)?.name ?? (m as any)?.label
+                                label: (m as any)?.name ?? (m as any)?.label ?? (m as any)?.display_label,
+                                provider: (m as any)?.provider ?? (m as any)?.engine
                             }
                         );
                     } else {
@@ -117,7 +141,7 @@ export default function Analyzer() {
                         models = Object.entries(data)
                             .map(([k, v]) =>
                                 typeof v === "object" && v !== null
-                                    ? {id: String((v as any).id ?? k), label: (v as any).name ?? (v as any).label}
+                                    ? {id: String((v as any).id ?? k), label: (v as any).name ?? (v as any).label, provider: (v as any).provider ?? (v as any).engine}
                                     : {id: String(v)}
                             );
                     }
@@ -125,7 +149,6 @@ export default function Analyzer() {
 
                 models = models.filter((m) => m.id);
                 if (models.length > 0) setAvailableModels(models);
-                console.log(models)
             } catch (e) {
                 // keep fallback list on error
             }
@@ -163,6 +186,20 @@ export default function Analyzer() {
         setIsHuggingFaceModel(engine === "hugging face");
     }, [engine])
 
+    useEffect(() => {
+        // Greek is supported for model calls, but lexicon highlight is Latin-only.
+        if (language !== "latin") {
+            setTextView("plain");
+            lexControllerRef.current?.abort();
+            setLexRes(null);
+            setLexError("");
+        }
+        if (language !== "latin") {
+            setChatIncludePriors(false);
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [language]);
+
     function commitActiveText(next: string) {
         setActiveText(next || "");
         setEditMode(false);
@@ -170,18 +207,40 @@ export default function Analyzer() {
         setLexRes(null);
         setLexError("");
         setExtractWarnings([]);
+        setLlmContent("");
+        setLlmError("");
+        setChatMessages([]);
+        setChatError("");
         if (resp || error) {
             setResp(null);
             setError("");
         }
     }
 
+    function selectedModelEntry() {
+        return availableModels.find((m) => m.id === model) || null;
+    }
+
+    function isRegistryLlmCapable() {
+        const m = selectedModelEntry();
+        const p = (m?.provider || "").toLowerCase();
+        if (!p) return true; // unknown -> allow and let backend error if needed
+        return p !== "hugging face";
+    }
+
     useEffect(() => {
         if (typeof window === "undefined") return;
         try {
-            const k = window.sessionStorage.getItem("openrouter_api_key") || "";
+            const kLocal = window.localStorage.getItem("openrouter_api_key") || "";
+            const kSession = window.sessionStorage.getItem("openrouter_api_key") || "";
             const m = window.sessionStorage.getItem("openrouter_model") || "";
-            if (k) setOpenrouterKey(k);
+            if (kLocal) {
+                setOpenrouterKey(kLocal);
+                setRememberOpenrouterKey(true);
+            } else if (kSession) {
+                setOpenrouterKey(kSession);
+                setRememberOpenrouterKey(false);
+            }
             if (m) setOpenrouterModel(m);
         } catch {
             // ignore
@@ -191,11 +250,39 @@ export default function Analyzer() {
     useEffect(() => {
         if (typeof window === "undefined") return;
         try {
-            if (openrouterKey) window.sessionStorage.setItem("openrouter_api_key", openrouterKey);
+            const key = openrouterKey || "";
+            if (rememberOpenrouterKey) {
+                if (key) window.localStorage.setItem("openrouter_api_key", key);
+                else window.localStorage.removeItem("openrouter_api_key");
+                window.sessionStorage.removeItem("openrouter_api_key");
+            } else {
+                if (key) window.sessionStorage.setItem("openrouter_api_key", key);
+                else window.sessionStorage.removeItem("openrouter_api_key");
+                window.localStorage.removeItem("openrouter_api_key");
+            }
         } catch {
             // ignore
         }
-    }, [openrouterKey]);
+    }, [openrouterKey, rememberOpenrouterKey]);
+
+    useEffect(() => {
+        if (typeof window === "undefined") return;
+        try {
+            // If the user toggles remember, migrate the key to the chosen storage.
+            const key = openrouterKey || "";
+            if (!key) return;
+            if (rememberOpenrouterKey) {
+                window.localStorage.setItem("openrouter_api_key", key);
+                window.sessionStorage.removeItem("openrouter_api_key");
+            } else {
+                window.sessionStorage.setItem("openrouter_api_key", key);
+                window.localStorage.removeItem("openrouter_api_key");
+            }
+        } catch {
+            // ignore
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [rememberOpenrouterKey]);
 
     useEffect(() => {
         if (typeof window === "undefined") return;
@@ -400,6 +487,11 @@ export default function Analyzer() {
     }
 
     async function ensureSamplesLoaded() {
+        if (language !== "latin") {
+            setSamples([]);
+            setSamplesLoaded(true);
+            return;
+        }
         if (samplesLoaded) return;
         try {
             const rr = await fetch(`${API_BASE}/samples/latin`);
@@ -444,6 +536,7 @@ export default function Analyzer() {
     }
 
     async function computeLexicon(text: string) {
+        if (language !== "latin") return;
         if (!text.trim()) return;
         lexControllerRef.current?.abort();
         lexControllerRef.current = new AbortController();
@@ -478,6 +571,7 @@ export default function Analyzer() {
     useEffect(() => {
         if (editMode) return;
         if (textView !== "lexicon") return;
+        if (language !== "latin") return;
         if (!lexAuto) return;
         if (!activeText.trim()) return;
         const id = setTimeout(() => {
@@ -485,7 +579,206 @@ export default function Analyzer() {
         }, 650);
         return () => clearTimeout(id);
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [activeText, lexAuto, textView, editMode]);
+    }, [activeText, lexAuto, textView, editMode, language]);
+
+    async function tryFetchLatinPriorsJson(): Promise<string> {
+        if (language !== "latin") return "";
+        if (!chatIncludePriors) return "";
+        try {
+            const rr = await fetch(`${API_BASE}/latin/lexicon/priors`, {
+                method: "POST",
+                headers: {"Content-Type": "application/json"},
+                body: JSON.stringify({text: activeText, max_chars: 6000}),
+            });
+            if (!rr.ok) {
+                let msg = `Priors unavailable (${rr.status})`;
+                try {
+                    const j = await rr.json();
+                    if (j?.detail) msg = String(j.detail);
+                } catch {
+                    // ignore
+                }
+                setChatPriorsWarning(msg);
+                return "";
+            }
+            const data: any = await rr.json();
+            const priors = data?.priors;
+            if (!priors || typeof priors !== "object") return "";
+            setChatPriorsWarning("");
+            return JSON.stringify(priors) + "\n\n";
+        } catch {
+            setChatPriorsWarning("Priors unavailable (network error)");
+            return "";
+        }
+    }
+
+    async function buildChatSystemPrompt() {
+        const clip = (activeText || "").slice(0, 6000);
+        const meta: string[] = [];
+        if ((chatPeriod || "").trim()) meta.push(`Period: ${chatPeriod.trim()}`);
+        if ((chatGenre || "").trim()) meta.push(`Genre/Context: ${chatGenre.trim()}`);
+        const metaBlock = meta.length ? meta.join("\n") + "\n\n" : "";
+
+        const priorsJson = await tryFetchLatinPriorsJson();
+
+        if (language === "greek") {
+            return (
+                "You are an Ancient Greek text analysis assistant.\n" +
+                "The user will ask questions about the provided Greek text.\n" +
+                "Do not ask the user to paste the text; it is included below.\n" +
+                "If the question cannot be answered from the text, say what is missing.\n\n" +
+                metaBlock +
+                `Greek text:\n${clip}\n`
+            );
+        }
+        return (
+            "You are a Latin text analysis assistant.\n" +
+            "The user will ask questions about the provided Latin text.\n" +
+            "Do not ask the user to paste the text; it is included below.\n" +
+            "If the question cannot be answered from the text, say what is missing.\n" +
+            (priorsJson ? "If lexicon priors are included, treat them as weak evidence.\n\n" : "\n") +
+            priorsJson +
+            metaBlock +
+            `Latin text:\n${clip}\n`
+        );
+    }
+
+    async function sendChatMessage() {
+        const q = (chatDraft || "").trim();
+        if (!q) return;
+        if (!(activeText || "").trim()) {
+            setChatError("Load text above first.");
+            return;
+        }
+        if (providerMode === "registry" && !model) {
+            setChatError("Select a model to chat.");
+            return;
+        }
+        if (providerMode === "registry" && !isRegistryLlmCapable()) {
+            setChatError("Selected registry model is not an LLM (Hugging Face). Pick a local Ollama model to chat.");
+            return;
+        }
+        if (providerMode === "openrouter" && (!openrouterKey.trim() || !openrouterModel.trim())) {
+            setChatError("Enter OpenRouter model id and API key to chat.");
+            return;
+        }
+
+        setChatError("");
+        setChatLoading(true);
+
+        const nextMessages = [...chatMessages, {role: "user" as const, content: q}];
+        setChatMessages(nextMessages);
+        setChatDraft("");
+
+        try {
+            const system = await buildChatSystemPrompt();
+            const history = nextMessages.slice(-12);
+            const payload: any = {
+                model_id: providerMode === "registry" ? model : openrouterModel,
+                provider: providerMode === "openrouter" ? "openrouter" : undefined,
+                openrouter_model: providerMode === "openrouter" ? openrouterModel : undefined,
+                messages: [{role: "system", content: system}, ...history],
+                temperature: modelOpts.temperature,
+                max_tokens: modelOpts.num_predict,
+                stream: false,
+                extra: {},
+            };
+            const headers: any = {"Content-Type": "application/json"};
+            if (providerMode === "openrouter") headers["Authorization"] = `Bearer ${openrouterKey}`;
+            const rr = await fetch(`${API_BASE}/chat`, {
+                method: "POST",
+                headers,
+                body: JSON.stringify(payload),
+            });
+            if (!rr.ok) {
+                let msg = `Chat failed: ${rr.status}`;
+                try {
+                    const j = await rr.json();
+                    if (j?.detail) msg = String(j.detail);
+                } catch {
+                    // ignore
+                }
+                throw new Error(msg);
+            }
+            const data: any = await rr.json();
+            const content = String(data?.content || "");
+            setChatMessages((prev) => [...prev, {role: "assistant", content}]);
+        } catch (e: any) {
+            setChatError(e?.message || "Chat failed");
+        } finally {
+            setChatLoading(false);
+        }
+    }
+
+    async function runLlmAnalysis() {
+        if (!(activeText || "").trim()) {
+            setLlmError("Load text above first.");
+            return;
+        }
+        if (providerMode === "registry" && !model) {
+            setLlmError("Select a local model to run analysis.");
+            return;
+        }
+        if (providerMode === "registry" && !isRegistryLlmCapable()) {
+            setLlmError("Selected registry model is not an LLM (Hugging Face). Pick a local Ollama model to run analysis.");
+            return;
+        }
+        if (providerMode === "openrouter") {
+            if (!openrouterModel.trim()) {
+                setLlmError("Enter an OpenRouter model id.");
+                return;
+            }
+            if (!openrouterKey.trim()) {
+                setLlmError("Enter an OpenRouter API key.");
+                return;
+            }
+        }
+
+        setLlmLoading(true);
+        setLlmError("");
+        setLlmContent("");
+        try {
+            const payload: any = {
+                text: activeText,
+                language,
+                mode: llmMode,
+                period: llmPeriod,
+                genre: llmGenre,
+                output_length: llmOutputLength,
+                include_lexicon_priors: language === "latin" ? !!llmIncludePriors : false,
+                provider: providerMode === "openrouter" ? "openrouter" : "ollama",
+                model_id: providerMode === "registry" ? model : undefined,
+                openrouter_model: providerMode === "openrouter" ? openrouterModel : undefined,
+                options: {
+                    temperature: modelOpts.temperature,
+                },
+            };
+            const headers: any = {"Content-Type": "application/json"};
+            if (providerMode === "openrouter") headers["Authorization"] = `Bearer ${openrouterKey}`;
+            const rr = await fetch(`${API_BASE}/llm/analyze`, {
+                method: "POST",
+                headers,
+                body: JSON.stringify(payload),
+            });
+            if (!rr.ok) {
+                let msg = `Run analysis failed: ${rr.status}`;
+                try {
+                    const j = await rr.json();
+                    if (j?.detail) msg = String(j.detail);
+                } catch {
+                    // ignore
+                }
+                throw new Error(msg);
+            }
+            const data: any = await rr.json();
+            setLlmContent(String(data?.content || ""));
+            setLlmTab("analysis");
+        } catch (e: any) {
+            setLlmError(e?.message || "Run analysis failed");
+        } finally {
+            setLlmLoading(false);
+        }
+    }
 
 // typescript
 // Insert this inside the Analyzer component (e.g. after renderValue) and replace the existing HF panel JSX with the usage shown below.
@@ -603,84 +896,136 @@ export default function Analyzer() {
 
             <div className="bar-row">
                 <form className="bar" onSubmit={handleSubmit}>
-                    <select
-                        value={providerMode}
-                        onChange={(e) => {
-                            setProviderMode((e.target.value as any) || "registry");
-                            setError("");
-                            setResp(null);
-                        }}
-                        title="Provider"
-                    >
-                        <option value="registry">From registry</option>
-                        <option value="openrouter">OpenRouter</option>
-                    </select>
+                    {providerMode === "openrouter" ? (
+                        <div className="bar-stack">
+                            <div className="bar-line">
+                                <select
+                                    value={language}
+                                    onChange={(e) => setLanguage((e.target.value as any) || "latin")}
+                                    title="Language"
+                                >
+                                    <option value="latin">Latin</option>
+                                    <option value="greek">Greek</option>
+                                </select>
 
-                    <select
-                        value={model}
-                        onChange={(e) => {
-                            setModel(e.target.value);
-                            if (resp || error) {
-                                setResp(null);
-                                setError("");
-                            }
-                        }}
-                        disabled={providerMode !== "registry"}
-                        title={
-                            providerMode === "registry"
-                                ? "Model"
-                                : "Model (disabled for OpenRouter)"
-                        }
-                    >
-                        <option value="">Select a model…</option>
-                        {availableModels.map((m) => (
-                            <option key={m.id} value={m.id}>
-                                {m.label ?? m.id}
-                            </option>
-                        ))}
-                    </select>
+                                <select
+                                    value={providerMode}
+                                    onChange={(e) => {
+                                        setProviderMode((e.target.value as any) || "registry");
+                                        setError("");
+                                        setResp(null);
+                                    }}
+                                    title="Provider"
+                                >
+                                    <option value="registry">Local Model</option>
+                                    <option value="openrouter">OpenRouter</option>
+                                </select>
 
-                    {providerMode === "openrouter" && (
+                            <button type="submit" disabled={loading}>
+                                    {loading ? "Analyzing…" : "Run sentiment"}
+                            </button>
+
+                                <button type="button" onClick={triggerUpload} disabled={loading}>
+                                    Upload
+                                </button>
+                            </div>
+
+                            <div className="bar-line bar-two-col">
+                                <input
+                                    className="bar-input-large"
+                                    type="text"
+                                    placeholder="OpenRouter model id…"
+                                    value={openrouterModel}
+                                    onChange={(e) => setOpenrouterModel(e.target.value)}
+                                />
+                                <input
+                                    className="bar-input-large"
+                                    type="password"
+                                    placeholder="OpenRouter API key…"
+                                    value={openrouterKey}
+                                    onChange={(e) => setOpenrouterKey(e.target.value)}
+                                />
+                            </div>
+
+                            <div className="bar-line" style={{justifyContent: "space-between"}}>
+                                <label style={{display: "flex", gap: 8, alignItems: "center"}}>
+                                    <input
+                                        type="checkbox"
+                                        checked={rememberOpenrouterKey}
+                                        onChange={(e) => setRememberOpenrouterKey(e.target.checked)}
+                                    />
+                                    Remember key on this device
+                                </label>
+                                <button
+                                    type="button"
+                                    onClick={() => {
+                                        setOpenrouterKey("");
+                                        try {
+                                            window.sessionStorage.removeItem("openrouter_api_key");
+                                            window.localStorage.removeItem("openrouter_api_key");
+                                        } catch {
+                                            // ignore
+                                        }
+                                    }}
+                                    disabled={!openrouterKey}
+                                    title="Clear stored key"
+                                >
+                                    Clear key
+                                </button>
+                            </div>
+                        </div>
+                    ) : (
                         <>
-                            <input
-                                type="password"
-                                placeholder="OpenRouter API key…"
-                                value={openrouterKey}
-                                onChange={(e) => setOpenrouterKey(e.target.value)}
-                                style={{minWidth: 220}}
-                            />
-                            <input
-                                type="text"
-                                placeholder="OpenRouter model id…"
-                                value={openrouterModel}
-                                onChange={(e) => setOpenrouterModel(e.target.value)}
-                                style={{minWidth: 220}}
-                            />
-                            <button
-                                type="button"
-                                onClick={() => {
-                                    setOpenrouterKey("");
-                                    try {
-                                        window.sessionStorage.removeItem("openrouter_api_key");
-                                    } catch {
-                                        // ignore
+                            <select
+                                value={language}
+                                onChange={(e) => setLanguage((e.target.value as any) || "latin")}
+                                title="Language"
+                            >
+                                <option value="latin">Latin</option>
+                                <option value="greek">Greek</option>
+                            </select>
+
+                            <select
+                                value={providerMode}
+                                onChange={(e) => {
+                                    setProviderMode((e.target.value as any) || "registry");
+                                    setError("");
+                                    setResp(null);
+                                }}
+                                title="Provider"
+                            >
+                                <option value="registry">Local Model</option>
+                                <option value="openrouter">OpenRouter</option>
+                            </select>
+
+                            <select
+                                value={model}
+                                onChange={(e) => {
+                                    setModel(e.target.value);
+                                    if (resp || error) {
+                                        setResp(null);
+                                        setError("");
                                     }
                                 }}
-                                disabled={!openrouterKey}
-                                title="Clear stored key"
+                                title="Model"
                             >
-                                Clear key
+                                <option value="">Select a model…</option>
+                            {availableModels.map((m) => (
+                                    <option key={m.id} value={m.id}>
+                                        {(m.label ?? m.id) + (m.provider ? ` (${m.provider})` : "")}
+                                    </option>
+                                ))}
+                            </select>
+
+                            <button type="submit" disabled={loading}>
+                                {loading ? "Analyzing…" : "Run sentiment"}
+                            </button>
+
+                            <button type="button" onClick={triggerUpload} disabled={loading}>
+                                Upload
                             </button>
                         </>
                     )}
-
-                    <button type="submit" disabled={loading}>
-                        {loading ? "Analyzing…" : "Submit"}
-                    </button>
-
-                    <button type="button" onClick={triggerUpload} disabled={loading}>
-                        Upload
-                    </button>
 
                     <input
                         ref={fileRef}
@@ -782,11 +1127,13 @@ export default function Analyzer() {
 
             <div className="workspace">
                 <div className="workspace-header">
-                    <h2 className="workspace-title">Latin Text</h2>
+                    <h2 className="workspace-title">
+                        {language === "latin" ? "Latin Text" : "Greek Text"}
+                    </h2>
                     <div
                         className="workspace-tabs"
                         role="tablist"
-                        aria-label="Latin text input modes"
+                        aria-label="Text input modes"
                     >
                         <button
                             type="button"
@@ -809,6 +1156,8 @@ export default function Analyzer() {
                                 setWorkspaceTab("sample");
                                 ensureSamplesLoaded();
                             }}
+                            disabled={language !== "latin"}
+                            title={language !== "latin" ? "Samples are currently Latin-only." : undefined}
                         >
                             Sample
                         </button>
@@ -820,7 +1169,7 @@ export default function Analyzer() {
                         <>
                             <textarea
                                 className="workspace-textarea"
-                                placeholder="Paste Latin text here…"
+                                placeholder={language === "latin" ? "Paste Latin text here…" : "Paste Greek text here…"}
                                 value={pasteDraft}
                                 onChange={(e) => setPasteDraft(e.target.value)}
                             />
@@ -850,33 +1199,39 @@ export default function Analyzer() {
 
                     {workspaceTab === "sample" && (
                         <>
-                            {samples.length === 0 ? (
+                            {language !== "latin" ? (
                                 <div className="workspace-meta">
-                                    <span className="pill">
-                                        No samples found in `src/sample_text/latin/`.
-                                    </span>
+                                    <span className="pill">Samples are currently available for Latin only.</span>
                                 </div>
                             ) : (
-                                <div className="workspace-row">
-                                    <select
-                                        value={pickedSampleId}
-                                        onChange={(e) => setPickedSampleId(e.target.value)}
-                                        style={{minWidth: 260}}
-                                    >
-                                        {samples.map((s) => (
-                                            <option key={s.id} value={s.id}>
-                                                {s.name} ({Math.round((s.bytes || 0) / 1024)} KB)
-                                            </option>
-                                        ))}
-                                    </select>
-                                    <button
-                                        type="button"
-                                        onClick={loadPickedSample}
-                                        disabled={!pickedSampleId || loading}
-                                    >
-                                        Load sample
-                                    </button>
-                                </div>
+                                samples.length === 0 ? (
+                                    <div className="workspace-meta">
+                                        <span className="pill">
+                                            No samples found in `src/sample_text/latin/`.
+                                        </span>
+                                    </div>
+                                ) : (
+                                    <div className="workspace-row">
+                                        <select
+                                            value={pickedSampleId}
+                                            onChange={(e) => setPickedSampleId(e.target.value)}
+                                            style={{minWidth: 260}}
+                                        >
+                                            {samples.map((s) => (
+                                                <option key={s.id} value={s.id}>
+                                                    {s.name} ({Math.round((s.bytes || 0) / 1024)} KB)
+                                                </option>
+                                            ))}
+                                        </select>
+                                        <button
+                                            type="button"
+                                            onClick={loadPickedSample}
+                                            disabled={!pickedSampleId || loading}
+                                        >
+                                            Load sample
+                                        </button>
+                                    </div>
+                                )
                             )}
                         </>
                     )}
@@ -920,7 +1275,8 @@ export default function Analyzer() {
                                 type="button"
                                 className={`tab-btn ${textView === "lexicon" ? "active" : ""}`}
                                 onClick={() => setTextView("lexicon")}
-                                disabled={editMode}
+                                disabled={editMode || language !== "latin"}
+                                title={language !== "latin" ? "Lexicon highlight is Latin-only." : undefined}
                             >
                                 Lexicon highlight
                             </button>
@@ -989,7 +1345,7 @@ export default function Analyzer() {
                             <div className="text-view">
                                 {!(activeText || "").trim() ? (
                                     <div style={{color: "rgba(255,255,255,0.85)"}}>
-                                        No Latin text loaded yet. Paste, upload, or pick a sample above.
+                                        No {language === "latin" ? "Latin" : "Greek"} text loaded yet. Paste, upload{language === "latin" ? ", or pick a sample" : ""} above.
                                     </div>
                                 ) : textView === "lexicon" && lexRes?.spans && Array.isArray(lexRes.spans) ? (
                                     <>
@@ -1010,6 +1366,194 @@ export default function Analyzer() {
                                         {(activeText || "").length > 12000 ? "\n\n[…truncated…]" : ""}
                                     </pre>
                                 )}
+                            </div>
+                        </>
+                    )}
+                </div>
+            </div>
+
+            <div className="panels" style={{marginTop: 18}}>
+                <div className="panel" style={{gridColumn: "1 / -1"}}>
+                    <div style={{display: "flex", justifyContent: "space-between", alignItems: "center", gap: 12}}>
+                        <h3 style={{margin: 0}}>Run Analysis / Chat</h3>
+                        <div className="workspace-tabs" aria-label="LLM tools" style={{justifyContent: "flex-end"}}>
+                            <button
+                                type="button"
+                                className={`tab-btn ${llmTab === "analysis" ? "active" : ""}`}
+                                onClick={() => setLlmTab("analysis")}
+                            >
+                                Run Analysis
+                            </button>
+                            <button
+                                type="button"
+                                className={`tab-btn ${llmTab === "chat" ? "active" : ""}`}
+                                onClick={() => setLlmTab("chat")}
+                            >
+                                Chat about this text
+                            </button>
+                        </div>
+                    </div>
+
+                    {llmTab === "analysis" ? (
+                        <>
+                            <div className="workspace-row" style={{marginTop: 12}}>
+                                <select
+                                    value={llmMode}
+                                    onChange={(e) => setLlmMode(parseInt(e.target.value, 10) || 1)}
+                                    title="Analysis mode"
+                                >
+                                    <option value={1}>1: Translation Only</option>
+                                    <option value={2}>2: Word/Lemma Sentiment</option>
+                                    <option value={3}>3: Document-Level Sentiment</option>
+                                    <option value={4}>4: Aspect-Based Sentiment</option>
+                                    <option value={5}>5: Sentence/Paragraph-Level</option>
+                                    <option value={6}>6: All</option>
+                                </select>
+
+                                <select
+                                    value={llmOutputLength}
+                                    onChange={(e) => setLlmOutputLength((e.target.value as any) || "medium")}
+                                    title="Output length"
+                                >
+                                    <option value="short">Short</option>
+                                    <option value="medium">Medium</option>
+                                    <option value="long">Long</option>
+                                </select>
+
+                                <label style={{display: "flex", gap: 8, alignItems: "center"}}>
+                                    <input
+                                        type="checkbox"
+                                        checked={llmIncludePriors}
+                                        onChange={(e) => setLlmIncludePriors(e.target.checked)}
+                                        disabled={language !== "latin"}
+                                    />
+                                    Include lexicon priors
+                                </label>
+
+                                <button type="button" onClick={runLlmAnalysis} disabled={llmLoading}>
+                                    {llmLoading ? "Running…" : "Run analysis"}
+                                </button>
+                            </div>
+
+                            <div className="two-col-row" style={{marginTop: 10}}>
+                                <input
+                                    className="bar-input-large"
+                                    type="text"
+                                    placeholder="Period (optional)"
+                                    value={llmPeriod}
+                                    onChange={(e) => setLlmPeriod(e.target.value)}
+                                />
+                                <input
+                                    className="bar-input-large"
+                                    type="text"
+                                    placeholder="Genre/Context (optional)"
+                                    value={llmGenre}
+                                    onChange={(e) => setLlmGenre(e.target.value)}
+                                />
+                            </div>
+
+                            {llmError && <div className="error" style={{marginTop: 10}}>{llmError}</div>}
+
+                            <div className="text-view" style={{minHeight: 320, maxHeight: 520}}>
+                                {!llmContent ? (
+                                    <div style={{color: "rgba(255,255,255,0.85)"}}>
+                                        Run a structured analysis (modes 1–6) on the loaded {language === "latin" ? "Latin" : "Greek"} text.
+                                    </div>
+                                ) : (
+                                    <div style={{whiteSpace: "pre-wrap", wordBreak: "break-word"}}>{llmContent}</div>
+                                )}
+                            </div>
+                        </>
+                    ) : (
+                        <>
+                            <div className="workspace-row" style={{marginTop: 12, justifyContent: "space-between"}}>
+                                <label style={{display: "flex", gap: 8, alignItems: "center"}}>
+                                    <input
+                                        type="checkbox"
+                                        checked={chatIncludePriors}
+                                        onChange={(e) => setChatIncludePriors(e.target.checked)}
+                                        disabled={language !== "latin"}
+                                    />
+                                    Include lexicon priors
+                                </label>
+                                <button
+                                    type="button"
+                                    onClick={() => {
+                                        setChatMessages([]);
+                                        setChatError("");
+                                        setChatPriorsWarning("");
+                                    }}
+                                    disabled={chatLoading}
+                                >
+                                    Reset chat
+                                </button>
+                            </div>
+
+                            <div className="two-col-row" style={{marginTop: 10}}>
+                                <input
+                                    className="bar-input-large"
+                                    type="text"
+                                    placeholder="Period (optional)"
+                                    value={chatPeriod}
+                                    onChange={(e) => setChatPeriod(e.target.value)}
+                                />
+                                <input
+                                    className="bar-input-large"
+                                    type="text"
+                                    placeholder="Genre/Context (optional)"
+                                    value={chatGenre}
+                                    onChange={(e) => setChatGenre(e.target.value)}
+                                />
+                            </div>
+
+                            {chatPriorsWarning && (
+                                <div style={{marginTop: 10, color: "rgba(255,255,255,0.75)", fontSize: 13}}>
+                                    {chatPriorsWarning}
+                                </div>
+                            )}
+
+                            {chatError && <div className="error" style={{marginTop: 10}}>{chatError}</div>}
+
+                            <div className="text-view" style={{minHeight: 260, maxHeight: 360}}>
+                                {chatMessages.length === 0 ? null : (
+                                    <div style={{display: "flex", flexDirection: "column", gap: 10}}>
+                                        {chatMessages.map((m, i) => (
+                                            <div key={i} style={{display: "flex", gap: 10}}>
+                                                <div style={{width: 90, color: "rgba(255,255,255,0.75)", fontSize: 13}}>
+                                                    {m.role === "user" ? "You" : "Assistant"}
+                                                </div>
+                                                <div style={{whiteSpace: "pre-wrap", wordBreak: "break-word"}}>{m.content}</div>
+                                            </div>
+                                        ))}
+                                    </div>
+                                )}
+                            </div>
+
+                            <div className="workspace-row" style={{marginTop: 12, alignItems: "flex-end"}}>
+                                <textarea
+                                    className="workspace-textarea"
+                                    style={{minHeight: 110}}
+                                    placeholder="Ask a question about the text…"
+                                    value={chatDraft}
+                                    onChange={(e) => setChatDraft(e.target.value)}
+                                    onKeyDown={(e) => {
+                                        if ((e.metaKey || e.ctrlKey) && e.key === "Enter") {
+                                            e.preventDefault();
+                                            if (!chatLoading) sendChatMessage();
+                                        }
+                                    }}
+                                />
+                                <button
+                                    type="button"
+                                    onClick={sendChatMessage}
+                                    disabled={chatLoading || !(chatDraft || "").trim()}
+                                    style={{height: 44}}
+                                >
+                                    {chatLoading ? "Sending…" : "Send"}
+                                </button>
+                            </div>
+                            <div style={{marginTop: 6, color: "rgba(255,255,255,0.7)", fontSize: 12}}>
+                                Tip: press Ctrl+Enter (or Cmd+Enter) to send.
                             </div>
                         </>
                     )}
