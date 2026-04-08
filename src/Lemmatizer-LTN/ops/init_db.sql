@@ -18,6 +18,7 @@ CREATE TABLE IF NOT EXISTS lemmas (
   pos         text,
   gender      text,
   page_url    text,
+  definition  text,
   created_at  timestamptz DEFAULT now(),
   UNIQUE (lemma_nod)
 );
