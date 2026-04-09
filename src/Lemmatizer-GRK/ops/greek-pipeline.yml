@@ -37,10 +37,10 @@ jobs:
       
       if ('${{ parameters.testing }}' -eq 'True') {
         Write-Host "MODE: TEST RUN (Pages 1 - 10)"
-        .\.venv\Scripts\python.exe src/Lemmatizer-GRK/tools/scrape_tables.py --start 1 --end 10 --lemma-concurrency 10 --delay 0.2
+        .\.venv\Scripts\python.exe src/Lemmatizer-GRK/tools/scrape_tables.py --start 1 --end 10 --lemma-concurrency 10 --delay 1.0
       } else {
         Write-Host "MODE: PRODUCTION RUN (Full Perseus Greek Library)"
-        .\.venv\Scripts\python.exe src/Lemmatizer-GRK/tools/scrape_tables.py --start 1 --end 6828 --lemma-concurrency 10 --delay 0.2
+        .\.venv\Scripts\python.exe src/Lemmatizer-GRK/tools/scrape_tables.py --start 1 --end 6828 --lemma-concurrency 10 --delay 1.0
       }
 
       Write-Host "Running Validation..."
