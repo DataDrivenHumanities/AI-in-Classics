@@ -265,6 +265,7 @@ def upsert_lemma(
     pos: str,
     gender_hint: str,
     page_url: str,
+    definition: str = "",
 ) -> int:
     """
     Insert or update a lemma row, returning lemmas.id.
@@ -274,14 +275,15 @@ def upsert_lemma(
 
     row = conn.execute(
         """
-        INSERT INTO lemmas (lemma_code, lemma_nod, lemma_diac, pos, gender, page_url)
-        VALUES (%s, norm(%s), %s, %s, %s, %s)
+        INSERT INTO lemmas (lemma_code, lemma_nod, lemma_diac, pos, gender, page_url, definition)
+        VALUES (%s, norm(%s), %s, %s, %s, %s, %s)
         ON CONFLICT (lemma_nod) DO UPDATE SET
-          lemma_code = EXCLUDED.lemma_code,
-          lemma_diac = EXCLUDED.lemma_diac,
-          pos        = EXCLUDED.pos,
-          gender     = EXCLUDED.gender,
-          page_url   = EXCLUDED.page_url
+          lemma_code  = EXCLUDED.lemma_code,
+          lemma_diac  = EXCLUDED.lemma_diac,
+          pos         = EXCLUDED.pos,
+          gender      = EXCLUDED.gender,
+          page_url    = EXCLUDED.page_url,
+          definition  = EXCLUDED.definition
         RETURNING id
         """,
         (
@@ -291,6 +293,7 @@ def upsert_lemma(
             pos or None,
             (gender_hint or None),
             page_url or None,
+            definition or None,
         ),
     ).fetchone()
     return row[0]
@@ -447,6 +450,7 @@ def main():
                 pos=head.get("pos", ""),
                 gender_hint=head_norm.get("gender", ""),
                 page_url=head.get("page_url", ""),
+                definition=head.get("definition", ""),
             )
 
             # ---- VOICE + GENDER HINTS --------------------------------------
