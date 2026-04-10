@@ -32,10 +32,29 @@ from cltk.lemmatize.latin.backoff import BackoffLatinLemmatizer as LatinBackoffL
 OPENROUTER_API_URL = "https://openrouter.ai/api/v1/chat/completions"
 # Set your desired OpenRouter models here
 MODELS = [
-    "google/gemini-2.5-pro",
-    "google/gemini-2.5-flash",
-    "openai/gpt-4o",
-    "openai/o3-mini"
+    # --- Highest Accuracy (Overall) ---
+    # "google/gemini-2.5-pro",
+    
+    # --- Highest Accuracy (3-Class POS/NEU/NEG) ---
+    # "meta-llama/llama-4-maverick",
+    
+    # --- Other Successful Benchmarks ---
+    # "anthropic/claude-sonnet-4.6",
+    # "google/gemini-3-flash-preview",
+    # "google/gemini-2.5-flash",
+    # "openai/o3-mini",
+    # "openai/gpt-4o",
+    
+    # --- Failed / Unavailable (400 Bad Request) ---
+    # "google/gemini-3.1-pro-preview",
+    # "openai/gpt-5.4",
+    # "openai/gpt-5.4-nano",
+    # "openai/gpt-5.3-chat",
+    # "openai/gpt-5.2-chat",
+    # "openai/gpt-5.2",
+    
+    # (Uncomment the model(s) you wish to run)
+    "google/gemma-4-31b-it"
 ]
 
 HERE = Path(__file__).resolve().parent
