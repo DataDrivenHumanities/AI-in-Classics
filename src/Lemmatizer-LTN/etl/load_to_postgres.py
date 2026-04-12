@@ -390,6 +390,19 @@ def main():
     )
     args = ap.parse_args()
 
+    # Load DATABASE_URL from .env if present (for local dev ergonomics).
+    try:
+        from dotenv import load_dotenv  # type: ignore
+
+        # Try CWD first, then repo root (two levels above `src/`)
+        candidates = [Path.cwd() / ".env", BASE.parents[1] / ".env"]
+        for env_path in candidates:
+            if env_path.exists():
+                load_dotenv(env_path)
+                break
+    except Exception:
+        pass
+
     dsn = os.getenv("DATABASE_URL")
     if not dsn:
         raise SystemExit("Set DATABASE_URL to your Neon Postgres URI (DATABASE_URL)")

@@ -10,6 +10,7 @@ Then (optionally) build the **Ollama** models for sentiment tests.
 ## Prerequisites
 
 - **Python 3.10+**
+  - If you want to use **Poetry**, this repo’s `pyproject.toml` currently requires **Python <3.12**.
 - **Make** (macOS/Linux preinstalled; Windows: download [here](https://sourceforge.net/projects/gnuwin32/files/make/3.81/make-3.81.exe/download?use_mirror=cytranet-dal&download) or `choco install make` or use WSL)
 - **Ollama** (for local LLM): <https://ollama.com/download>
 - **Docker** (optional): <https://docs.docker.com/get-docker/>
@@ -20,10 +21,8 @@ Then (optionally) build the **Ollama** models for sentiment tests.
 
 ```bash
 # from repo root
-make setup          # installs deps via Poetry (auto-detects)
-make web            # runs Streamlit app (src/app/app.py)
-# or
-make run            # runs python src/app/app.py
+make setup          # uses Poetry if compatible; otherwise falls back to venv + requirements.txt
+make web            # runs Streamlit app (default: src/app/server_streamlit.py)
 ```
 
 ### Tests, formatting
@@ -41,7 +40,7 @@ make fix            # black (format)
 If you don't use Poetry:
 
 ```bash
-make setup-venn     # creates .venv and installs requirements.txt (if present)
+make setup-venv     # creates .venv and installs requirements.txt (if present)
 make web            # runs Streamlit
 # or
 make run
@@ -102,7 +101,7 @@ models/
 > If your repo instead uses `models/latin_model/Modelfile` and `models/greek_model/Modelfile`, either rename to `latin/` and `greek/`, **or** update the Makefile paths accordingly.
 
 Build:
-
+(linux only req apt install jq -y)
 ```bash
 make build-latin
 make build-greek
@@ -152,8 +151,8 @@ make test-greek
 Core:
 - `make setup` — Prefer Poetry; otherwise uses `.venv`
 - `make setup-venv` — Create and populate a Python virtualenv (legacy)
-- `make run` — Runs `src/app/app.py`
-- `make web` — Runs Streamlit app (`src/app/app.py`)
+- `make run` — Runs `APP_ENTRY` (default `src/app/server_streamlit.py`)
+- `make web` — Runs Streamlit app (`STREAMLIT_APP`, default `src/app/server_streamlit.py`)
 - `make start` — Start local dev server with hot-reload (convenience task; may run `make web` or a watcher)
 - `make start-lite` — Lightweight start (no model build, minimal services) for quick dev/testing
 - `make test` — Run `pytest`
@@ -196,8 +195,8 @@ LATIN_TAG=latin_model:1.0.0
 GREEK_TAG=greek_model:1.0.0
 BASE_MODEL=llama3.1:8b
 PORT=8501
-APP_ENTRY=src/app/app.py
-STREAMLIT_APP=src/app/app.py
+APP_ENTRY=src/app/server_streamlit.py
+STREAMLIT_APP=src/app/server_streamlit.py
 ```
 
 ---

@@ -8,6 +8,7 @@ from typing import List, Optional  # <-- add this
 OLLAMA_URL = os.getenv("OLLAMA_URL", "http://localhost:11434")
 TIMEOUT_SEC = float(os.getenv("OLLAMA_TIMEOUT", "10"))
 SENTIMENT_RE = re.compile(r"\b(positive|negative|neutral)\b", re.IGNORECASE)
+_OLLAMA_OK = None
 
 
 def _get(path: str):
@@ -81,13 +82,25 @@ def generate_ollama(model: str, prompt: str) -> dict:
         return {"ok": False, "text": "", "raw": str(e), "sentiment": "neutral"}
 
 
-@pytest.fixture(scope="session", autouse=True)
-def _require_ollama():
-    if not ping_ollama():
-        pytest.skip(
-            f"Ollama not reachable at {OLLAMA_URL}. Start it with `ollama serve` and re-run.",
-            allow_module_level=True,
-        )
+def _ollama_ok() -> bool:
+    global _OLLAMA_OK
+    if _OLLAMA_OK is None:
+        _OLLAMA_OK = ping_ollama()
+    return bool(_OLLAMA_OK)
+
+
+@pytest.fixture(autouse=True)
+def _require_ollama(request):
+    """
+    Default test suite assumes Ollama is available.
+
+    Tests that don't need it can opt out with:
+      @pytest.mark.no_ollama
+    """
+    if request.node.get_closest_marker("no_ollama") is not None:
+        return
+    if not _ollama_ok():
+        pytest.skip(f"Ollama not reachable at {OLLAMA_URL}. Start it with `ollama serve` and re-run.")
 
 
 @pytest.fixture(scope="session")

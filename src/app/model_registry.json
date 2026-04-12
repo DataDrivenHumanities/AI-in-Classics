@@ -1,5 +1,5 @@
 {
-  "default": "latin_model:1.0.0",
+  "default": "latin_ollama_model:1.0.0",
   "models": {
     "latin_ollama_model:1.0.0": {
       "id": "latin_ollama_model:1.0.0",
