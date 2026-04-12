@@ -26,6 +26,7 @@ export default function Analyzer() {
     const [feedbackOpen, setFeedbackOpen] = useState<boolean>(false);
     const [shopOpen, setShopOpen] = useState(false);
     const [isHuggingFaceModel, setIsHuggingFaceModel] = useState(false);
+    const [docsOpen, setDocsOpen] = useState(false);
 
     const [text, setText] = useState<string>("");
     const [resp, setResp] = useState<AnalyzeResponse | null>(null);
@@ -548,6 +549,18 @@ export default function Analyzer() {
                                     </button>
                                 </div>
                                 <div className="tool-card">
+                                <div className="tool-title">User Docs</div>
+                                <button
+                                    className="tool-cta"
+                                    onClick={() => {
+                                        setDocsOpen(true);
+                                        setDrawerOpen(false);
+                                    }}
+                                >
+                                    Open
+                                </button>
+                            </div>
+                                <div className="tool-card">
                                     <div className="tool-title">Reset</div>
                                     <button
                                         className="tool-cta"
@@ -759,6 +772,50 @@ export default function Analyzer() {
                     </div>
                 )
             }
+            {docsOpen && (
+    <div className="modal" onClick={() => setDocsOpen(false)}>
+        <div className="modal-inner" onClick={(e) => e.stopPropagation()}>
+            <div className="modal-bar">
+                <div className="modal-title">User Documentation</div>
+                <div className="modal-actions">
+                    <button className="modal-close" onClick={() => setDocsOpen(false)}>
+                        Close
+                    </button>
+                </div>
+            </div>
+
+            <div style={{ padding: "20px", overflowY: "auto", maxHeight: "70vh" }}>
+                <h3>How to Use AI in Classics</h3>
+
+                <p><b>1. Select a Model</b></p>
+                <p>Choose a Latin or Greek model from the dropdown menu.</p>
+
+                <p><b>2. Enter Text</b></p>
+                <p>Paste or type text into the input field.</p>
+
+                <p><b>3. Submit</b></p>
+                <p>Click "Submit" to analyze the text.</p>
+
+                <p><b>4. Upload Files (Optional)</b></p>
+                <p>You can upload .txt, .pdf, .docx, and more.</p>
+
+                <p><b>5. View Results</b></p>
+                <ul>
+                    <li>Classification (label + confidence)</li>
+                    <li>Translation</li>
+                    <li>Detailed analysis</li>
+                </ul>
+
+                <p><b>6. Extra Tools</b></p>
+                <ul>
+                    <li>Export JSON</li>
+                    <li>Adjust model settings</li>
+                    <li>Open Jupyter notebook</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+)}
         </div>
     )
         ;
