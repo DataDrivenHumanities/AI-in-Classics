@@ -1,0 +1,5 @@
+idx,sentence,translation,expected_sentiment,expected_5,expected_3,lemmas,context_hits,prompt_chars,predicted_raw,predicted_5,predicted_3,is_correct_5,is_correct_3,latency_s
+19,Mater paterque suos pueros neglexerunt.,The mother and father neglected their children.,SOMEWHAT NEGATIVE (-0.5),SOMEWHAT NEGATIVE,NEGATIVE,. mater neglego paterqum puer suus,2,466,"NEUTRAL
+
+
+The final answer is: NEUT",NEUTRAL,NEUTRAL,False,False,4.037

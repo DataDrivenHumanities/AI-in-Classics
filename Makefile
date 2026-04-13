@@ -4,29 +4,30 @@ else
     DETECTED_OS := unix
 endif
 
-# ===== Kill-port helper =====
+
+# Makefile (replace the Windows KILL_PORT define)
 ifeq ($(DETECTED_OS),windows)
 define KILL_PORT
-@echo "Checking port $(1) on Windows..."
+@echo "🔍 Checking port $(1) on Windows..."
 @powershell -NoProfile -Command "try { \
   $$conns = Get-NetTCPConnection -LocalPort $(1) -State Listen -ErrorAction SilentlyContinue; \
   if ($$null -ne $$conns) { \
     foreach ($$c in $$conns) { Stop-Process -Id $$c.OwningProcess -Force -ErrorAction SilentlyContinue } ; \
-    Write-Output 'Port $(1) cleared (Windows)'; \
+    Write-Output '✅ Port $(1) cleared (Windows)'; \
   } else { \
-    Write-Output 'Port $(1) is free'; \
+    Write-Output '✅ Port $(1) is free'; \
   } \
-} catch { Write-Output 'Port check failed, continuing' }"
+} catch { Write-Output '⚠️  Port check failed, continuing' }"
 endef
 else
 define KILL_PORT
-@echo "Checking port $(1) on macOS/Linux..."
+@echo "🔍 Checking port $(1) on macOS/Linux..."
 @PID=$$(lsof -ti :$(1)); \
 if [ ! -z "$$PID" ]; then \
-  echo "Port $(1) in use, killing PID $$PID"; \
+  echo "⚠️  Port $(1) in use — killing PID $$PID"; \
   kill -9 $$PID || true; \
 else \
-  echo "Port $(1) is free"; \
+  echo "✅ Port $(1) is free"; \
 fi
 endef
 endif
@@ -34,71 +35,81 @@ endif
 # ===== Config =====
 PROJECT_NAME  := Trojan Parse
 VENV_DIR      := .venv
+PIP          ?= pip3
 PORT         ?= 8501
-STREAMLIT_APP ?= src/app/server_streamlit.py
-APP_ENTRY     ?= $(STREAMLIT_APP)
+APP_ENTRY    ?= src/app/server_streamlit.py
+STREAMLIT_APP?= src/app/server_streamlit.py
 
-# ===== Python / uv per OS =====
+# ---- Python / Poetry / venv per OS ----
 ifeq ($(DETECTED_OS),windows)
-    PYTHON      := python
-    VENV_PYTHON := $(VENV_DIR)\Scripts\python.exe
+    PYTHON       := python
+    PIP          := pip
+    VENV_PYTHON  := $(VENV_DIR)\Scripts\python.exe
+    POETRY_BIN   :=
+    RUNPY        := $(VENV_PYTHON)
+    RUN          := $(VENV_PYTHON) -m
+    PIP_RUN      := $(VENV_PYTHON) -m pip
 else
     PYTHON      ?= python3
-    VENV_PYTHON  := $(VENV_DIR)/bin/python
+    VENV_PYTHON := $(VENV_DIR)/bin/python
+    POETRY_BIN  := $(shell command -v poetry 2>/dev/null)
+    HAVE_VENV   := $(wildcard $(VENV_PYTHON))
+    RUNPY       := $(if $(HAVE_VENV),$(VENV_PYTHON),$(if $(POETRY_BIN),poetry run $(PYTHON),$(VENV_PYTHON)))
+    RUN         := $(if $(HAVE_VENV),$(VENV_PYTHON) -m,$(if $(POETRY_BIN),poetry run,$(VENV_PYTHON) -m))
+    PIP_RUN     := $(if $(HAVE_VENV),$(VENV_PYTHON) -m pip,$(if $(POETRY_BIN),poetry run $(PIP),$(VENV_PYTHON) -m pip))
 endif
 
-# These are identical on both platforms so they live outside the ifeq
-UV      := uv
-RUNPY   := $(VENV_PYTHON)
-RUN     := $(VENV_PYTHON) -m
-PIP_RUN := uv pip install --python $(VENV_PYTHON)
+# Ollama
+OLLAMA_HOST   ?= http://localhost:11434
+OLLAMA_GEN    := $(OLLAMA_HOST)/api/generate
+OLLAMA_TAGS   := $(OLLAMA_HOST)/api/tags
+LATIN_TAG     ?= latin_ollama_model:1.0.0
+GREEK_TAG     ?= greek_ollama_model:1.0.0
+BASE_MODEL    ?= llama3.1:8b
 
-# ===== Ollama =====
-OLLAMA_HOST ?= http://localhost:11434
-OLLAMA_GEN  := $(OLLAMA_HOST)/api/generate
-OLLAMA_TAGS := $(OLLAMA_HOST)/api/tags
-LATIN_TAG   ?= latin_ollama_model:1.0.0
-GREEK_TAG   ?= greek_ollama_model:1.0.0
-BASE_MODEL  ?= llama3.1:8b
-
-# ===== Frontend =====
+# ===== Frontend (React) =====
 FRONTEND_DIR  ?= src/frontend
 FRONTEND_PORT ?= 3000
 FE_DIR        ?= src/frontend/src
-FE_PM         ?= npm
-FE_PM_DEV     := $(FE_PM) run dev -- -p $(FRONTEND_PORT)
-FE_PM_BUILD   := $(FE_PM) run build
-FE_PM_PREVIEW := $(FE_PM) run start -- -p $(FRONTEND_PORT)
-FE_PM_INSTALL := $(FE_PM) install
+NPM           ?= npm
 
-# ===== Notebooks / JupyterLite =====
-NB_SRC_DIR       ?= notebooks
-JLITE_DIR        ?= src/frontend/public/jlite
-JLITE_NB_DIR     ?= $(JLITE_DIR)/files/notebooks
-JLITE_INDEX_JSON ?= $(JLITE_NB_DIR)/index.json
+# ===== Notebooks -> JupyterLite =====
+NB_SRC_DIR        ?= notebooks
+JLITE_DIR         ?= src/frontend/public/jlite
+JLITE_FILES_DIR   ?= $(JLITE_DIR)/files
+JLITE_NB_DIR      ?= $(JLITE_FILES_DIR)/notebooks
+JLITE_INDEX_JSON  ?= $(JLITE_NB_DIR)/index.json
 
-# ===== FastAPI =====
+# ===== FastAPI (Uvicorn) =====
 API_PORT ?= 5050
 API_APP  ?= app.server_fast:app
 
+# Detect frontend package manager
+FE_PM := npm
+
+
+
 # ===== Colors =====
 ifeq ($(NO_COLOR),)
-ESC    := \033
-RESET  := $(ESC)[0m
-GREEN  := $(ESC)[1;32m
-YELLOW := $(ESC)[1;33m
-BLUE   := $(ESC)[1;34m
-PURPLE := $(ESC)[1;35m
-GREY   := $(ESC)[90m
-WHITE  := $(ESC)[1;37m
+ESC      := \033
+RESET    := $(ESC)[0m
+BOLD     := $(ESC)[1m
+
+GREEN    := $(ESC)[1;32m
+YELLOW   := $(ESC)[1;33m
+BLUE     := $(ESC)[1;34m
+PURPLE   := $(ESC)[1;35m
+GREY     := $(ESC)[90m
+WHITE    := $(ESC)[1;37m
 else
-RESET  :=
-GREEN  :=
-YELLOW :=
-BLUE   :=
-PURPLE :=
-GREY   :=
-WHITE  :=
+RESET    :=
+BOLD     :=
+GREEN    :=
+YELLOW   :=
+BLUE     :=
+PURPLE   :=
+GREY     :=
+WHITE    :=
 endif
 
 
@@ -112,69 +123,108 @@ FE_PM_INSTALL := npm install
         docker-build docker-run docker-dev docker-bash docker-clean \
         ollama-serve ollama-pull ollama-list build-latin build-greek \
         smoke-latin smoke-greek ensure-ollama ensure-models health \
-        fe-install fe-dev fe-build fe-serve fe-clean fe-lint fe-lint-fix \
-        fe-format fe-format-check \
+        fe-install fe-dev fe-build fe-serve fe-clean fe-reset fe-lint fe-lint-fix \
+        fe-format fe-format-check run-all \
         nb-bootstrap nb-sync nb-index \
         jlite-build jlite-serve jlite-clean \
         api-deps api-run api-health \
         start start-lite
 
-# ===== Help =====
+# ===== Help screen =====
 help:
 	@echo "$(PROJECT_NAME) Makefile (OS = $(DETECTED_OS))"
 	@printf "Usage: make <target>\n\n"
-	@printf "$(GREEN)  start            Full install (venv, deps, npm, jlite) then launch all servers$(RESET)\n"
-	@printf "$(GREEN)  start-lite       Launch all servers without reinstalling$(RESET)\n\n"
-	@printf "$(YELLOW)  setup            Install all dependencies (venv, pip, npm, jlite)$(RESET)\n"
+	@printf "$(GREEN)Start Here: First time Deployment:$(RESET)\n"
+	@printf "$(GREEN)  start            Install backend dependencies, JupyterLite, and frontend dev$(RESET)\n\n"
+	@printf "$(GREEN)Start Lite: (without JupyterLite)$(RESET)\n"
+	@printf "$(GREEN)  start-lite       Install backend dependencies and start frontend + Streamlit$(RESET)\n\n"
+	@printf "$(YELLOW)Core:$(RESET)\n"
+	@printf "$(YELLOW)  setup            Install backend dependencies (Poetry or venv)$(RESET)\n"
 	@printf "$(YELLOW)  run              Run backend app ($(APP_ENTRY))$(RESET)\n"
 	@printf "$(YELLOW)  web              Run Streamlit UI ($(STREAMLIT_APP))$(RESET)\n"
 	@printf "$(YELLOW)  test             Run pytest tests$(RESET)\n"
-	@printf "$(YELLOW)  check / fix      Lint or format Python and frontend code$(RESET)\n\n"
-	@printf "$(BLUE)  fe-install       Install frontend dependencies$(RESET)\n"
+	@printf "$(YELLOW)  check / fix      Format or lint Python code$(RESET)\n\n"
+	@printf "$(BLUE)Frontend (Next.js):$(RESET)\n"
+	@printf "$(BLUE)  fe-install       Install frontend dependencies ($(FE_PM))$(RESET)\n"
 	@printf "$(BLUE)  fe-dev           Start Next.js dev server (port $(FRONTEND_PORT))$(RESET)\n"
 	@printf "$(BLUE)  fe-build         Build production bundle$(RESET)\n"
 	@printf "$(BLUE)  fe-serve         Start production server$(RESET)\n"
-	@printf "$(BLUE)  fe-clean         Remove node_modules and .next$(RESET)\n\n"
-	@printf "$(WHITE)  nb-bootstrap     Initialize notebook and JupyterLite folders$(RESET)\n"
-	@printf "$(WHITE)  nb-sync          Copy notebooks/ into the JupyterLite files area$(RESET)\n"
-	@printf "$(WHITE)  nb-index         Regenerate notebooks index.json$(RESET)\n"
-	@printf "$(WHITE)  jlite-build      Build JupyterLite bundle into frontend/public/jlite$(RESET)\n"
-	@printf "$(WHITE)  jlite-serve      Serve the built JupyterLite locally for testing$(RESET)\n"
-	@printf "$(WHITE)  jlite-clean      Remove the JupyterLite output directory$(RESET)\n\n"
-	@printf "$(PURPLE)  api-deps         Install FastAPI and Uvicorn$(RESET)\n"
-	@printf "$(PURPLE)  api-run          Run FastAPI backend$(RESET)\n"
-	@printf "$(PURPLE)  api-health       Check FastAPI health endpoint$(RESET)\n\n"
+	@printf "$(BLUE)  fe-clean         Remove node_modules and .next$(RESET)\n"
+	@printf "$(BLUE)  fe-reset         Remove .next only (fixes missing chunk errors)$(RESET)\n"
+	@printf "$(BLUE)  run-all          Run Streamlit + FastAPI + Next.js dev servers together$(RESET)\n\n"
+	@printf "$(GREY)Docker / Ollama:$(RESET)\n"
 	@printf "$(GREY)  docker-build, docker-run, docker-dev, docker-bash, docker-clean$(RESET)\n"
-	@printf "$(GREY)  ollama-serve, ollama-pull, build-latin, build-greek, smoke-latin, smoke-greek$(RESET)\n"
-	@printf "$(GREY)  PORT=$(PORT)  FRONTEND_PORT=$(FRONTEND_PORT)  API_PORT=$(API_PORT)$(RESET)\n\n"
+	@printf "$(GREY)  ollama-serve, ollama-pull, build-latin, build-greek, smoke-latin, smoke-greek$(RESET)\n\n"
+	@printf "$(GREY)Config:$(RESET)\n"
+	@printf "$(GREY)  PORT=$(PORT)  FRONTEND_PORT=$(FRONTEND_PORT)$(RESET)\n"
+	@printf "$(GREY)  FRONTEND_DIR=$(FRONTEND_DIR)  FE_PM=$(FE_PM)$(RESET)\n\n"
+	@printf "$(WHITE)Notebooks:$(RESET)\n"
+	@printf "$(WHITE)  nb-bootstrap      Initialize JupyterLite and notebook folders$(RESET)\n"
+	@printf "$(WHITE)  nb-sync           Copy notebooks/ → frontend/public/jlite/files/notebooks/$(RESET)\n"
+	@printf "$(WHITE)  nb-index          Regenerate notebooks index.json$(RESET)\n\n"
+	@printf "$(WHITE)JupyterLite:$(RESET)\n"
+	@printf "$(WHITE)  jlite-build       Build a local JupyterLite bundle into frontend/public/jlite$(RESET)\n"
+	@printf "$(WHITE)  jlite-serve       Serve the built JupyterLite locally for quick testing$(RESET)\n"
+	@printf "$(WHITE)  jlite-clean       Remove the JupyterLite output directory$(RESET)\n\n"
+	@printf "$(PURPLE)FastAPI Backend:$(RESET)\n"
+	@printf "$(PURPLE)  api-deps          Install FastAPI and Uvicorn dependencies$(RESET)\n"
+	@printf "$(PURPLE)  api-run           Run FastAPI backend server$(RESET)\n"
+	@printf "$(PURPLE)  api-health        Check FastAPI health endpoint$(RESET)\n\n"
 
 # ===== Setup =====
-# Creates the venv, installs Python deps, FastAPI, npm packages, and JupyterLite.
-# start calls this so you never need to run setup and start separately.
 setup:
-ifeq ($(DETECTED_OS),windows)
-	@echo "Creating venv with uv (Windows)..."
-	$(UV) venv $(VENV_DIR)
-	$(PIP_RUN) --upgrade pip
-	@if exist requirements.txt ( $(PIP_RUN) -r requirements.txt )
+ifeq ($(DETECTED_OS),unix)
+ifneq ($(POETRY_BIN),)
+	@if poetry run python -c "import sys" >/dev/null 2>&1; then \
+	  echo "Using Poetry..." ; \
+	  poetry install ; \
+	else \
+	  echo "Poetry detected but not usable (likely Python version mismatch). Using venv..." ; \
+	  $(PYTHON) -m venv $(VENV_DIR) ; \
+	  $(VENV_PYTHON) -m pip install --upgrade pip ; \
+	  if [ -f requirements.txt ]; then $(VENV_PYTHON) -m pip install -r requirements.txt ; fi ; \
+	fi
 else
-	@echo "Creating venv with uv..."
-	$(UV) venv $(VENV_DIR)
-	$(PIP_RUN) --upgrade pip
-	@if [ -f requirements.txt ]; then $(PIP_RUN) -r requirements.txt; fi
+	@echo "Using venv..."
+	$(PYTHON) -m venv $(VENV_DIR)
+	$(VENV_PYTHON) -m pip install --upgrade pip
+	@if [ -f requirements.txt ]; then $(VENV_PYTHON) -m pip install -r requirements.txt; fi
 endif
-	@$(MAKE) -s api-deps
-	@$(MAKE) -s fe-install
-	@$(MAKE) -s jlite-build
+else
+	@echo "Using venv (Windows)..."
+	$(PYTHON) -m venv $(VENV_DIR)
+	$(VENV_PYTHON) -m pip install --upgrade pip
+	@if exist requirements.txt ( "$(VENV_PYTHON)" -m pip install -r requirements.txt )
+endif
+
+	@$(MAKE) api-deps
+	@$(MAKE) nb-bootstrap
+
+setup-venv:
+ifeq ($(DETECTED_OS),unix)
+	@echo "Using venv..."
+	$(PYTHON) -m venv $(VENV_DIR)
+	$(VENV_PYTHON) -m pip install --upgrade pip
+	@if [ -f requirements.txt ]; then $(VENV_PYTHON) -m pip install -r requirements.txt; fi
+else
+	@echo "Using venv (Windows)..."
+	$(PYTHON) -m venv $(VENV_DIR)
+	$(VENV_PYTHON) -m pip install --upgrade pip
+	@if exist requirements.txt ( "$(VENV_PYTHON)" -m pip install -r requirements.txt )
+endif
+
+	@$(MAKE) api-deps
+	@$(MAKE) nb-bootstrap
 
 env:
-	@echo "DETECTED_OS = $(DETECTED_OS)"
-	@echo "VENV_PYTHON = $(VENV_PYTHON)"
-	@echo "UV          = $(UV)"
-	@echo "RUN         = $(RUN)"
-	@echo "PIP_RUN     = $(PIP_RUN)"
+	@echo "DETECTED_OS=$(DETECTED_OS)"
+	@echo "PYTHON=$(PYTHON)"
+	@echo "VENV_PYTHON=$(VENV_PYTHON)"
+	@echo "Poetry detected: $(if $(POETRY_BIN),yes,no)"
+	@echo "RUNPY=$(RUNPY)"
+	@echo "RUN=$(RUN)"
 
-# ===== Backend =====
+# ===== Backend Run & Tests =====
 run:
 	$(RUNPY) $(APP_ENTRY)
 
@@ -182,7 +232,13 @@ web:
 ifeq ($(DETECTED_OS),windows)
 	$(VENV_PYTHON) -m streamlit run $(STREAMLIT_APP)
 else
-	PYTHONPATH="$(CURDIR)" $(VENV_DIR)/bin/streamlit run $(STREAMLIT_APP)
+	@if [ -x "$(VENV_DIR)/bin/streamlit" ]; then \
+	  PYTHONPATH="$(CURDIR)" $(VENV_DIR)/bin/streamlit run $(STREAMLIT_APP); \
+	elif [ -n "$(POETRY_BIN)" ] && poetry run python -c "import sys" >/dev/null 2>&1; then \
+	  PYTHONPATH="$(CURDIR)" poetry run streamlit run $(STREAMLIT_APP); \
+	else \
+	  PYTHONPATH="$(CURDIR)" $(VENV_DIR)/bin/streamlit run $(STREAMLIT_APP); \
+	fi
 endif
 
 check:
@@ -254,65 +310,83 @@ ensure-models: ensure-ollama
 	echo "$$names" | grep -qx '$(GREEK_TAG)' || (echo "Missing model tag: $(GREEK_TAG)"; exit 1); \
 	echo "All required models present."
 
-# ===== Frontend =====
+# ===== Frontend Commands =====
 fe-install:
-	@echo "Installing frontend deps in $(FRONTEND_DIR)..."
-	cd $(FRONTEND_DIR) && $(FE_PM_INSTALL)
+	@echo "Installing frontend deps in $(FRONTEND_DIR) using $(FE_PM)"
+	@cd $(FRONTEND_DIR) && $(FE_PM_INSTALL)
 
 fe-dev:
 	@$(call KILL_PORT,$(FRONTEND_PORT))
 	@echo "Starting frontend dev server on port $(FRONTEND_PORT)..."
-	cd $(FRONTEND_DIR) && $(FE_PM_DEV)
+	@cd $(FRONTEND_DIR) && $(FE_PM_DEV)
 
 fe-build:
 	@echo "Building production frontend..."
-	cd $(FRONTEND_DIR) && $(FE_PM_BUILD)
+	@cd $(FRONTEND_DIR) && $(FE_PM_BUILD)
 
 fe-serve:
 	@$(call KILL_PORT,$(FRONTEND_PORT))
 	@echo "Starting production server on port $(FRONTEND_PORT)..."
-	cd $(FRONTEND_DIR) && $(FE_PM_PREVIEW)
+	@cd $(FRONTEND_DIR) && $(FE_PM_PREVIEW)
 
 fe-clean:
 	@echo "Cleaning frontend node_modules and .next..."
-	rm -rf $(FRONTEND_DIR)/node_modules $(FRONTEND_DIR)/.next
+	@rm -rf $(FRONTEND_DIR)/node_modules $(FRONTEND_DIR)/.next
+
+fe-reset:
+ifeq ($(DETECTED_OS),windows)
+	@echo "Resetting Next.js build output (.next) (Windows)..."
+	@powershell -NoProfile -Command "if (Test-Path -Path '$(FRONTEND_DIR)\\.next') { Remove-Item -Recurse -Force '$(FRONTEND_DIR)\\.next' }"
+else
+	@echo "Resetting Next.js build output (.next)..."
+	@rm -rf $(FRONTEND_DIR)/.next
+endif
 
 fe-lint:
-	cd $(FE_DIR) && ($(FE_PM) run -s lint || echo "skip: no 'lint' script")
+	cd $(FE_DIR) && ($(NPM) run -s lint || echo "skip: no 'lint' script")
 
 fe-lint-fix:
-	cd $(FE_DIR) && ($(FE_PM) run -s lint:fix || echo "skip: no 'lint:fix' script")
+	cd $(FE_DIR) && ($(NPM) run -s lint:fix || echo "skip: no 'lint:fix' script")
 
 fe-format:
-	cd $(FE_DIR) && ($(FE_PM) run -s format || echo "skip: no 'format' script")
+	cd $(FE_DIR) && ($(NPM) run -s format || echo "skip: no 'format' script")
 
 fe-format-check:
-	cd $(FE_DIR) && ($(FE_PM) run -s format:check || echo "skip: no 'format:check' script")
+	cd $(FE_DIR) && ($(NPM) run -s format:check || echo "skip: no 'format:check' script")
+
 
 # ===== Notebooks / JupyterLite =====
+# makefile
 nb-bootstrap:
 ifeq ($(DETECTED_OS),windows)
-	@powershell -Command "New-Item -ItemType Directory -Force -Path '$(NB_SRC_DIR)' >$$null"
-	@powershell -Command "New-Item -ItemType Directory -Force -Path '$(JLITE_NB_DIR)' >$$null"
-	@powershell -Command "if (Test-Path '$(JLITE_DIR)/lab/index.html') { Write-Output 'JupyterLite present at $(JLITE_DIR)' } else { Write-Output 'JupyterLite not found at $(JLITE_DIR). Run make jlite-build first.' }"
+	@powershell -Command "New-Item -ItemType Directory -Force -Path '$(NB_SRC_DIR)' >$null"
+	@powershell -Command "New-Item -ItemType Directory -Force -Path '$(JLITE_NB_DIR)' >$null"
+	@powershell -Command "if (Test-Path -Path '$(JLITE_DIR)/lab/index.html') { Write-Output '✅ JupyterLite present at $(JLITE_DIR)' } else { Write-Output '⚠️  JupyterLite not found at $(JLITE_DIR). Drop a Lite build there (lab/index.html).' }"
+	@echo "✅ Notebook environment initialized. Place .ipynb files in $(NB_SRC_DIR)/ and run 'make nb-sync'"
 else
-	@mkdir -p "$(NB_SRC_DIR)" "$(JLITE_NB_DIR)"
+	@mkdir -p "$(NB_SRC_DIR)"
+	@mkdir -p "$(JLITE_NB_DIR)"
 	@if [ ! -f "$(JLITE_DIR)/lab/index.html" ]; then \
-	  echo "JupyterLite not found at $(JLITE_DIR). Run make jlite-build first."; \
+		echo "⚠️  JupyterLite not found at $(JLITE_DIR). Drop a Lite build there (lab/index.html)."; \
 	else \
-	  echo "JupyterLite present at $(JLITE_DIR)"; \
-	fi
+		echo "✅ JupyterLite present at $(JLITE_DIR)"; \
+ 	fi
+	@echo "✅ Notebook environment initialized. Place .ipynb files in $(NB_SRC_DIR)/ and run 'make nb-sync'"
 endif
 
-# nb-bootstrap already creates JLITE_NB_DIR so no need to repeat it here
 nb-sync: nb-bootstrap
 ifeq ($(DETECTED_OS),windows)
+	@powershell -Command "New-Item -ItemType Directory -Force -Path '$(JLITE_NB_DIR)' >$$null"
 	@powershell -Command "Get-ChildItem -Path '$(NB_SRC_DIR)' -Filter '*.ipynb' -File | ForEach-Object { Copy-Item -Path $$_.FullName -Destination '$(JLITE_NB_DIR)' -Force }"
+	@$(MAKE) nb-index
+	@echo "✅ Synced notebooks to $(JLITE_NB_DIR)"
 else
+	@mkdir -p "$(JLITE_NB_DIR)"
 	@find "$(NB_SRC_DIR)" -maxdepth 1 -type f -name "*.ipynb" -print0 | xargs -0 -I{} cp "{}" "$(JLITE_NB_DIR)"/
+	@$(MAKE) nb-index
+	@echo "✅ Synced notebooks to $(JLITE_NB_DIR)"
 endif
-	@$(MAKE) -s nb-index
-	@echo "Synced notebooks to $(JLITE_NB_DIR)"
+
 
 nb-index:
 	@$(PYTHON) -c "import json, os; nb='$(JLITE_NB_DIR)'; idx='$(JLITE_INDEX_JSON)'; \
@@ -322,25 +396,28 @@ nb-index:
 	json.dump(data, open(idx,'w',encoding='utf8'), indent=2); \
 	print('Wrote', idx, 'with', len(files), 'notebooks')" || echo "nb-index failed"
 
+# JupyterLite build/serve
 jlite-build:
-	@echo "Installing JupyterLite..."
-	$(PIP_RUN) -U "jupyterlite[all]"
-	@echo "Building JupyterLite into $(JLITE_DIR)..."
+	@echo "🧱 Installing JupyterLite..."
+	$(PIP_RUN) install -U "jupyterlite[all]"
+	@echo "🏗️  Building JupyterLite into $(JLITE_DIR)..."
 	$(RUN) jupyter lite build --output-dir "$(JLITE_DIR)" --force
-	@$(MAKE) -s nb-sync
-	@echo "JupyterLite ready at $(JLITE_DIR)"
+	@echo "✅ JupyterLite built at $(JLITE_DIR)"
+	@echo "📁 Syncing notebooks into JupyterLite files area..."
+	@$(MAKE) nb-sync
+	@echo "✨ Done. You can now open notebooks via your app modal."
 
 jlite-serve:
-	@echo "Serving $(JLITE_DIR) at http://localhost:5174"
-	cd "$(JLITE_DIR)" && $(PYTHON) -m http.server 5174
+	@echo "🌐 Serving $(JLITE_DIR) at http://localhost:5174"
+	@cd "$(JLITE_DIR)" && $(PYTHON) -m http.server 5174
 
 jlite-clean:
-	@echo "Removing $(JLITE_DIR)"
-	rm -rf "$(JLITE_DIR)"
+	@echo "🧹 Removing $(JLITE_DIR)"
+	@rm -rf "$(JLITE_DIR)"
 
-# ===== FastAPI =====
+# ===== FastAPI backend =====
 api-deps:
-	$(PIP_RUN) "fastapi>=0.110" "uvicorn[standard]>=0.23" "pydantic>=2"
+	$(PIP_RUN) install "fastapi>=0.110" "uvicorn[standard]>=0.23" "pydantic>=2"
 
 api-run:
 	PYTHONPATH=$(PWD)/src $(RUN) uvicorn $(API_APP) \
@@ -349,37 +426,46 @@ api-run:
 api-health:
 	curl -s http://localhost:$(API_PORT)/api/health | jq .
 
-# ===== Start targets =====
-# start runs setup (which installs everything) then launches all three servers.
-# start-lite skips setup and launches servers directly, assuming setup was already run.
+# language: makefile
+# Replace the Windows branches of start and start-lite in `Makefile`.
 start:
-	@$(MAKE) -s setup
 ifeq ($(DETECTED_OS),windows)
-	@echo "Starting all servers (Windows)..."
+	@echo "🚀 Setting up Trojan Parse full stack (Windows)..."
+	@$(MAKE) setup
+	@$(MAKE) jlite-build
+	@echo "🌐 Starting FastAPI server on :$(API_PORT)..."
+	@echo "📘 Starting Streamlit on :$(PORT)..."
 	@$(call KILL_PORT,$(FRONTEND_PORT))
 	@powershell -NoProfile -Command "cd '$(CURDIR)'; \
 	  Start-Process -FilePath '$(VENV_PYTHON)' -ArgumentList '-m','uvicorn','$(API_APP)','--host','0.0.0.0','--port','$(API_PORT)','--reload','--app-dir','src' -WorkingDirectory '$(CURDIR)'; \
 	  Start-Process -FilePath '$(VENV_PYTHON)' -ArgumentList '-m','streamlit','run','$(STREAMLIT_APP)' -WorkingDirectory '$(CURDIR)'; \
 	  Start-Process -FilePath 'cmd.exe' -WorkingDirectory '$(CURDIR)\\$(FRONTEND_DIR)' -ArgumentList '/c','$(FE_PM_DEV)';"
 else
-	@echo "Starting all servers..."
-	@$(call KILL_PORT,$(FRONTEND_PORT))
+	@echo "🚀 Setting up Trojan Parse full stack..."
+	@$(MAKE) setup
+	@$(MAKE) jlite-build
+	@echo "🌐 Starting FastAPI server on :$(API_PORT)..."
 	( $(MAKE) -s api-run ) &
+	@echo "📘 Starting Streamlit on :$(PORT)..."
 	( $(MAKE) -s web ) &
+	@echo "⚛️  Starting React dev server on :$(FRONTEND_PORT)"
+	@$(call KILL_PORT,$(FRONTEND_PORT))
 	( cd $(FRONTEND_DIR) && $(FE_PM_DEV) ) &
 	wait
 endif
 
 start-lite:
 ifeq ($(DETECTED_OS),windows)
-	@echo "Quick start (Windows) -- FastAPI :$(API_PORT), Streamlit :$(PORT), React :$(FRONTEND_PORT)"
+	@echo "⚡ Quick start (no setup, no JupyterLite build)… (Windows)"
+	@echo "🌐 FastAPI → :$(API_PORT), 🏺 Streamlit → :$(PORT), ⚛️ React → :$(FRONTEND_PORT)"
 	@$(call KILL_PORT,$(FRONTEND_PORT))
 	@powershell -NoProfile -Command "cd '$(CURDIR)'; \
 	  Start-Process -FilePath '$(VENV_PYTHON)' -ArgumentList '-m','uvicorn','$(API_APP)','--host','0.0.0.0','--port','$(API_PORT)','--reload','--app-dir','src' -WorkingDirectory '$(CURDIR)'; \
 	  Start-Process -FilePath '$(VENV_PYTHON)' -ArgumentList '-m','streamlit','run','$(STREAMLIT_APP)' -WorkingDirectory '$(CURDIR)'; \
 	  Start-Process -FilePath 'cmd.exe' -WorkingDirectory '$(CURDIR)\\$(FRONTEND_DIR)' -ArgumentList '/c','$(FE_PM_DEV)'"
 else
-	@echo "Quick start -- FastAPI :$(API_PORT), Streamlit :$(PORT), React :$(FRONTEND_PORT)"
+	@echo "⚡ Quick start (no setup, no JupyterLite build)…"
+	@echo "🌐 FastAPI → :$(API_PORT), 🏺 Streamlit → :$(PORT), ⚛️ React → :$(FRONTEND_PORT)"
 	@$(call KILL_PORT,$(FRONTEND_PORT))
 	( $(MAKE) -s api-run ) &
 	( $(MAKE) -s web ) &

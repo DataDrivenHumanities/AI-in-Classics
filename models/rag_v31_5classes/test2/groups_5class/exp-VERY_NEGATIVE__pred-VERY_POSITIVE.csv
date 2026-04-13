@@ -1,0 +1,3 @@
+idx,sentence,translation,expected_sentiment,expected_5,expected_3,lemmas,context_hits,prompt_chars,predicted_raw,predicted_5,predicted_3,is_correct_5,is_correct_3,latency_s
+18,Imperator non curat de salute suae nationis.,The emperor does not care for the safety of his own people.,VERY NEGATIVE (-1),VERY NEGATIVE,NEGATIVE,. curo de imperator natio non salus suus,3,561,VERY POSITIVE,VERY POSITIVE,POSITIVE,False,False,2.917
+55,Quid est vita sine amore?,What is life without love?,VERY NEGATIVE (-1),VERY NEGATIVE,NEGATIVE,? amor quis sine sum vita,1,374,VERY POSITIVE,VERY POSITIVE,POSITIVE,False,False,3.184

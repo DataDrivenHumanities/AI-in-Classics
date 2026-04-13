@@ -21,13 +21,8 @@ endef
 else
 define KILL_PORT
 @echo "Checking port $(1) on macOS/Linux..."
-@PID=$$(lsof -ti :$(1)); \
-if [ ! -z "$$PID" ]; then \
-  echo "Port $(1) in use, killing PID $$PID"; \
-  kill -9 $$PID || true; \
-else \
-  echo "Port $(1) is free"; \
-fi
+@fuser -k $(1)/tcp 2>/dev/null && echo "Port $(1) cleared" || echo "Port $(1) is free"
+@sleep 0.5
 endef
 endif
 
@@ -101,8 +96,14 @@ GREY   :=
 WHITE  :=
 endif
 
-# ===== Phony targets =====
-.PHONY: help setup env run web check fix test \
+
+FE_PM_DEV     := npm run dev -- -p $(FRONTEND_PORT)
+FE_PM_BUILD   := npm run build
+FE_PM_PREVIEW := npm run start -- -p $(FRONTEND_PORT)
+FE_PM_INSTALL := npm install
+
+
+.PHONY: help setup setup-venv env run web check fix test \
         docker-build docker-run docker-dev docker-bash docker-clean \
         ollama-serve ollama-pull ollama-list build-latin build-greek \
         smoke-latin smoke-greek ensure-ollama ensure-models health \
@@ -143,30 +144,29 @@ help:
 	@printf "$(GREY)  PORT=$(PORT)  FRONTEND_PORT=$(FRONTEND_PORT)  API_PORT=$(API_PORT)$(RESET)\n\n"
 
 # ===== Setup =====
-# Creates the venv, installs Python deps, FastAPI, npm packages, and JupyterLite.
-# start calls this so you never need to run setup and start separately.
 setup:
 ifeq ($(DETECTED_OS),windows)
-	@echo "Creating venv with uv (Windows)..."
-	$(UV) venv $(VENV_DIR)
+	@if not exist $(VENV_DIR) ( \
+		echo "Creating venv (Windows)..." & \
+		$(UV) venv $(VENV_DIR) \
+	) else ( \
+		echo "Venv already exists at $(VENV_DIR), skipping creation." \
+	)
 	$(PIP_RUN) --upgrade pip
 	@if exist requirements.txt ( $(PIP_RUN) -r requirements.txt )
 else
-	@echo "Creating venv with uv..."
-	$(UV) venv $(VENV_DIR)
+	@if [ ! -d "$(VENV_DIR)" ]; then \
+		echo "Creating venv with uv..."; \
+		$(UV) venv $(VENV_DIR); \
+	else \
+		echo "Venv already exists at $(VENV_DIR), skipping creation."; \
+	fi
 	$(PIP_RUN) --upgrade pip
 	@if [ -f requirements.txt ]; then $(PIP_RUN) -r requirements.txt; fi
 endif
 	@$(MAKE) -s api-deps
 	@$(MAKE) -s fe-install
 	@$(MAKE) -s jlite-build
-
-env:
-	@echo "DETECTED_OS = $(DETECTED_OS)"
-	@echo "VENV_PYTHON = $(VENV_PYTHON)"
-	@echo "UV          = $(UV)"
-	@echo "RUN         = $(RUN)"
-	@echo "PIP_RUN     = $(PIP_RUN)"
 
 # ===== Backend =====
 run:
@@ -298,7 +298,6 @@ else
 	fi
 endif
 
-# nb-bootstrap already creates JLITE_NB_DIR so no need to repeat it here
 nb-sync: nb-bootstrap
 ifeq ($(DETECTED_OS),windows)
 	@powershell -Command "Get-ChildItem -Path '$(NB_SRC_DIR)' -Filter '*.ipynb' -File | ForEach-Object { Copy-Item -Path $$_.FullName -Destination '$(JLITE_NB_DIR)' -Force }"
@@ -337,6 +336,7 @@ api-deps:
 	$(PIP_RUN) "fastapi>=0.110" "uvicorn[standard]>=0.23" "pydantic>=2"
 
 api-run:
+	@$(call KILL_PORT,$(API_PORT))
 	PYTHONPATH=$(PWD)/src $(RUN) uvicorn $(API_APP) \
 		--host 0.0.0.0 --port $(API_PORT) --reload --app-dir src
 
@@ -344,19 +344,21 @@ api-health:
 	curl -s http://localhost:$(API_PORT)/api/health | jq .
 
 # ===== Start targets =====
-# start runs setup (which installs everything) then launches all three servers.
-# start-lite skips setup and launches servers directly, assuming setup was already run.
 start:
 	@$(MAKE) -s setup
 ifeq ($(DETECTED_OS),windows)
 	@echo "Starting all servers (Windows)..."
 	@$(call KILL_PORT,$(FRONTEND_PORT))
+	@$(call KILL_PORT,$(API_PORT))
+	@$(call KILL_PORT,$(PORT))
 	@powershell -NoProfile -Command "cd '$(CURDIR)'; \
 	  Start-Process -FilePath '$(VENV_PYTHON)' -ArgumentList '-m','uvicorn','$(API_APP)','--host','0.0.0.0','--port','$(API_PORT)','--reload','--app-dir','src' -WorkingDirectory '$(CURDIR)'; \
 	  Start-Process -FilePath '$(VENV_PYTHON)' -ArgumentList '-m','streamlit','run','$(STREAMLIT_APP)' -WorkingDirectory '$(CURDIR)'; \
 	  Start-Process -FilePath 'cmd.exe' -WorkingDirectory '$(CURDIR)\\$(FRONTEND_DIR)' -ArgumentList '/c','$(FE_PM_DEV)';"
 else
 	@echo "Starting all servers..."
+	@$(call KILL_PORT,$(API_PORT))
+	@$(call KILL_PORT,$(PORT))
 	@$(call KILL_PORT,$(FRONTEND_PORT))
 	( $(MAKE) -s api-run ) &
 	( $(MAKE) -s web ) &
@@ -368,12 +370,16 @@ start-lite:
 ifeq ($(DETECTED_OS),windows)
 	@echo "Quick start (Windows) -- FastAPI :$(API_PORT), Streamlit :$(PORT), React :$(FRONTEND_PORT)"
 	@$(call KILL_PORT,$(FRONTEND_PORT))
+	@$(call KILL_PORT,$(API_PORT))
+	@$(call KILL_PORT,$(PORT))
 	@powershell -NoProfile -Command "cd '$(CURDIR)'; \
 	  Start-Process -FilePath '$(VENV_PYTHON)' -ArgumentList '-m','uvicorn','$(API_APP)','--host','0.0.0.0','--port','$(API_PORT)','--reload','--app-dir','src' -WorkingDirectory '$(CURDIR)'; \
 	  Start-Process -FilePath '$(VENV_PYTHON)' -ArgumentList '-m','streamlit','run','$(STREAMLIT_APP)' -WorkingDirectory '$(CURDIR)'; \
 	  Start-Process -FilePath 'cmd.exe' -WorkingDirectory '$(CURDIR)\\$(FRONTEND_DIR)' -ArgumentList '/c','$(FE_PM_DEV)'"
 else
 	@echo "Quick start -- FastAPI :$(API_PORT), Streamlit :$(PORT), React :$(FRONTEND_PORT)"
+	@$(call KILL_PORT,$(API_PORT))
+	@$(call KILL_PORT,$(PORT))
 	@$(call KILL_PORT,$(FRONTEND_PORT))
 	( $(MAKE) -s api-run ) &
 	( $(MAKE) -s web ) &

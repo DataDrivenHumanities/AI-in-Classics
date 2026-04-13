@@ -140,7 +140,7 @@ dmypy.json
 .DS_Store
 **/.DS_Store
 
-# Custom
+# Custom ------------------
 OpenGreekAndLatin-First1KGreek/
 src/Lemmatizer-GRK/Dictionary_Dataframes/
 src/Lemmatizer-GRK/outputs/
@@ -151,7 +151,8 @@ src/pipelines/preprocessing/preprocess_root_query/needed_files/0-50kgreekv1.csv
 src/pipelines/preprocessing/preprocess_root_query/needed_files/dictionary_grk.pkl
 src/pipelines/preprocessing/preprocess_root_query/needed_files/greek_words.csv
 
-
+output/*
+models/bert_models/*
 
 .vscode/settings.json
 src/frontend/public/jlite/jupyterlite.doit.db

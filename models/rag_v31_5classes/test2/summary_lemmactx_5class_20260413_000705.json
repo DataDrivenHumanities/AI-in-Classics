@@ -1,0 +1,140 @@
+{
+  "model": "latin-sentiment-llama31-5class",
+  "ollama_api": "http://localhost:11434/api/generate",
+  "input_file": "/root/LINUXCODE/AI-in-Classics.worktrees/nstevens/models/rag_v31_5classes/test2/testdata5classes.json",
+  "results_csv": "/root/LINUXCODE/AI-in-Classics.worktrees/nstevens/models/rag_v31_5classes/test2/results_lemmactx_5class_20260413_000705.csv",
+  "context_csv": "/root/LINUXCODE/AI-in-Classics.worktrees/nstevens/models/rag_v31_5classes/test2/results_lemmactx_context_5class_20260413_000705.csv",
+  "total_tests": 70,
+  "context_mode": "POLAR_ONLY",
+  "max_context_items": 30,
+  "label_scheme": {
+    "-1": "VERY NEGATIVE",
+    "-0.5": "SOMEWHAT NEGATIVE",
+    "0": "NEUTRAL",
+    "0.5": "SOMEWHAT POSITIVE",
+    "1": "VERY POSITIVE"
+  },
+  "overall": {
+    "correct_5": 37,
+    "accuracy_5": 0.5285714285714286,
+    "unknown_5": 0,
+    "correct_3": 61,
+    "accuracy_3": 0.8714285714285714,
+    "unknown_3": 0
+  },
+  "per_label_5": {
+    "VERY POSITIVE": {
+      "correct": 5,
+      "total": 16,
+      "accuracy": 0.3125
+    },
+    "SOMEWHAT POSITIVE": {
+      "correct": 10,
+      "total": 16,
+      "accuracy": 0.625
+    },
+    "NEUTRAL": {
+      "correct": 4,
+      "total": 6,
+      "accuracy": 0.6666666666666666
+    },
+    "SOMEWHAT NEGATIVE": {
+      "correct": 1,
+      "total": 7,
+      "accuracy": 0.14285714285714285
+    },
+    "VERY NEGATIVE": {
+      "correct": 17,
+      "total": 25,
+      "accuracy": 0.68
+    }
+  },
+  "per_label_3": {
+    "POSITIVE": {
+      "correct": 30,
+      "total": 32,
+      "accuracy": 0.9375
+    },
+    "NEUTRAL": {
+      "correct": 4,
+      "total": 6,
+      "accuracy": 0.6666666666666666
+    },
+    "NEGATIVE": {
+      "correct": 27,
+      "total": 32,
+      "accuracy": 0.84375
+    }
+  },
+  "confusion_5": {
+    "matrix": {
+      "VERY POSITIVE": {
+        "VERY POSITIVE": 5,
+        "SOMEWHAT POSITIVE": 11,
+        "NEUTRAL": 0,
+        "SOMEWHAT NEGATIVE": 0,
+        "VERY NEGATIVE": 0
+      },
+      "SOMEWHAT POSITIVE": {
+        "VERY POSITIVE": 4,
+        "SOMEWHAT POSITIVE": 10,
+        "NEUTRAL": 1,
+        "SOMEWHAT NEGATIVE": 0,
+        "VERY NEGATIVE": 1
+      },
+      "NEUTRAL": {
+        "VERY POSITIVE": 0,
+        "SOMEWHAT POSITIVE": 2,
+        "NEUTRAL": 4,
+        "SOMEWHAT NEGATIVE": 0,
+        "VERY NEGATIVE": 0
+      },
+      "SOMEWHAT NEGATIVE": {
+        "VERY POSITIVE": 0,
+        "SOMEWHAT POSITIVE": 0,
+        "NEUTRAL": 0,
+        "SOMEWHAT NEGATIVE": 1,
+        "VERY NEGATIVE": 6
+      },
+      "VERY NEGATIVE": {
+        "VERY POSITIVE": 2,
+        "SOMEWHAT POSITIVE": 3,
+        "NEUTRAL": 0,
+        "SOMEWHAT NEGATIVE": 3,
+        "VERY NEGATIVE": 17
+      }
+    },
+    "unknown_by_expected": {
+      "VERY POSITIVE": 0,
+      "SOMEWHAT POSITIVE": 0,
+      "NEUTRAL": 0,
+      "SOMEWHAT NEGATIVE": 0,
+      "VERY NEGATIVE": 0
+    }
+  },
+  "confusion_3": {
+    "matrix": {
+      "POSITIVE": {
+        "POSITIVE": 30,
+        "NEUTRAL": 1,
+        "NEGATIVE": 1
+      },
+      "NEUTRAL": {
+        "POSITIVE": 2,
+        "NEUTRAL": 4,
+        "NEGATIVE": 0
+      },
+      "NEGATIVE": {
+        "POSITIVE": 5,
+        "NEUTRAL": 0,
+        "NEGATIVE": 27
+      }
+    },
+    "unknown_by_expected": {
+      "POSITIVE": 0,
+      "NEUTRAL": 0,
+      "NEGATIVE": 0
+    }
+  },
+  "elapsed_seconds": 113.0161665330088
+}
