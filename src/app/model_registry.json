@@ -3,8 +3,8 @@
   "models": {
     "latin_ollama_model:1.0.0": {
       "id": "latin_ollama_model:1.0.0",
-      "name": "Latin Ollama Model 1.0.0",
-      "description": "Baseline Latin corpus model served via Ollama.",
+      "name": "Latin Llama 3.1 Model 1.0.0 with RAG",
+      "description": "Baseline Latin corpus model served via Ollama with prompt integrating RAG.",
       "provider": "ollama",
       "hf_classifier_params": {},
       "available": true,
