@@ -35,3 +35,7 @@ evaluate
 gdown
 psycopg
 accelerate>=1.1.0
+fastapi>=0.110
+uvicorn[standard]>=0.23
+pydantic>=2
+jupyterlite[all]
