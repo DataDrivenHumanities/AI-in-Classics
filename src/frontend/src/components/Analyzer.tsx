@@ -6,6 +6,7 @@ import ModelSettingsModal, {ModelOptions} from "@/components/ModelSettingsModal"
 import FeedbackModal from "@/components/FeedbackModal";
 import ModelShopModal from "@/components/ModelShopModal";
 import LatinLexiconOverlay from "@/components/LatinLexiconOverlay";
+import MarkdownBlock from "@/components/MarkdownBlock";
 
 
 const API_BASE = process.env.NEXT_PUBLIC_API_BASE || "http://localhost:5050/api";
@@ -1480,7 +1481,7 @@ export default function Analyzer() {
                                         Run a structured analysis (modes 1–6) on the loaded {language === "latin" ? "Latin" : "Greek"} text.
                                     </div>
                                 ) : (
-                                    <div style={{whiteSpace: "pre-wrap", wordBreak: "break-word"}}>{llmContent}</div>
+                                    <MarkdownBlock content={llmContent} />
                                 )}
                             </div>
                         </>
@@ -1542,7 +1543,13 @@ export default function Analyzer() {
                                                 <div style={{width: 90, color: "rgba(255,255,255,0.75)", fontSize: 13}}>
                                                     {m.role === "user" ? "You" : "Assistant"}
                                                 </div>
-                                                <div style={{whiteSpace: "pre-wrap", wordBreak: "break-word"}}>{m.content}</div>
+                                                {m.role === "assistant" ? (
+                                                    <MarkdownBlock content={m.content} />
+                                                ) : (
+                                                    <div style={{whiteSpace: "pre-wrap", wordBreak: "break-word"}}>
+                                                        {m.content}
+                                                    </div>
+                                                )}
                                             </div>
                                         ))}
                                     </div>

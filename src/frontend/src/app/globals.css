@@ -388,6 +388,82 @@ button:disabled {
   color: rgba(255, 255, 255, 0.92);
 }
 
+/* Markdown rendering for LLM outputs */
+.markdown {
+  font-size: 14px;
+  line-height: 1.85;
+  color: rgba(255, 255, 255, 0.92);
+  word-break: break-word;
+}
+.markdown > :first-child {
+  margin-top: 0;
+}
+.markdown h1,
+.markdown h2,
+.markdown h3 {
+  margin: 14px 0 8px;
+  font-weight: 750;
+  line-height: 1.25;
+}
+.markdown h1 { font-size: 22px; }
+.markdown h2 { font-size: 18px; }
+.markdown h3 { font-size: 16px; }
+.markdown p {
+  margin: 10px 0;
+}
+.markdown ul,
+.markdown ol {
+  margin: 10px 0;
+  padding-left: 1.25rem;
+}
+.markdown li {
+  margin: 6px 0;
+}
+.markdown blockquote {
+  margin: 10px 0;
+  padding: 6px 10px;
+  border-left: 3px solid rgba(250, 70, 22, 0.55);
+  background: rgba(0, 0, 0, 0.14);
+  border-radius: 8px;
+  color: rgba(255, 255, 255, 0.88);
+}
+.markdown a {
+  color: rgba(250, 70, 22, 0.95);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.markdown hr {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+  margin: 12px 0;
+}
+.markdown code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.92em;
+  padding: 2px 6px;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+.markdown pre,
+.markdown .md-pre {
+  margin: 10px 0;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  overflow: auto;
+}
+.markdown pre code,
+.markdown .md-pre code {
+  display: block;
+  padding: 0;
+  border: none;
+  background: transparent;
+  font-size: 0.92em;
+  white-space: pre;
+}
+
 /* Latin lexicon overlay */
 .latin-overlay-wrap {
   position: relative;
