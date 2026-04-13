@@ -290,6 +290,26 @@ button:disabled {
   width: 100%;
   max-width: 900px;
 }
+
+/* Output area (tabs + content) */
+.output-wrap {
+  width: 100%;
+  max-width: 900px;
+  margin-top: 18px;
+}
+.output-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.output-title {
+  margin: 0;
+  color: var(--uf-orange);
+}
+.panels.tight {
+  margin-top: 12px;
+}
 .workspace-title {
   color: var(--uf-orange);
   font-weight: 700;
@@ -1127,7 +1147,7 @@ button:disabled {
 .analysis-grid {
   margin-top: 10px;
   display: grid;
-  grid-template-columns: 120px 1fr;  /* label | value */
+  grid-template-columns: minmax(180px, 260px) 1fr;  /* label | value */
   column-gap: 1.5rem;
   row-gap: 0.4rem;
 }
@@ -1135,6 +1155,8 @@ button:disabled {
 .analysis-label {
   text-align: left;
   font-weight: 500;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 /* Make sure long values (like JSON) wrap INSIDE the card */
@@ -1145,6 +1167,35 @@ button:disabled {
   white-space: normal;
   font-family: "JetBrains Mono", monospace;
   font-size: 0.9rem;
+}
+
+.output-loading {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 22px;
+}
+.loading-dots {
+  display: inline-flex;
+  gap: 6px;
+}
+.loading-dots > span {
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.75);
+  animation: dotPulse 1s infinite ease-in-out;
+}
+.loading-dots > span:nth-child(2) {
+  animation-delay: 0.15s;
+}
+.loading-dots > span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+@keyframes dotPulse {
+  0%, 80%, 100% { transform: translateY(0); opacity: 0.55; }
+  40% { transform: translateY(-3px); opacity: 1; }
 }
 
 /* Optional: ensure panels grow with content */

@@ -61,6 +61,7 @@ export default function Analyzer() {
     const fileRef = useRef<HTMLInputElement | null>(null);
     const controllerRef = useRef<AbortController | null>(null);
     const lexControllerRef = useRef<AbortController | null>(null);
+    const outputRef = useRef<HTMLDivElement | null>(null);
 
     const [lexLoading, setLexLoading] = useState(false);
     const [lexError, setLexError] = useState<string>("");
@@ -77,7 +78,9 @@ export default function Analyzer() {
     const [chatGenre, setChatGenre] = useState<string>("");
     const [chatIncludePriors, setChatIncludePriors] = useState<boolean>(true);
     const [chatPriorsWarning, setChatPriorsWarning] = useState<string>("");
-    const [llmTab, setLlmTab] = useState<"analysis" | "chat">("analysis");
+    const [outputTab, setOutputTab] = useState<"sentiment" | "llm" | "chat">(
+        "sentiment"
+    );
 
     const [llmMode, setLlmMode] = useState<number>(6);
     const [llmPeriod, setLlmPeriod] = useState<string>("");
@@ -87,6 +90,17 @@ export default function Analyzer() {
     const [llmContent, setLlmContent] = useState<string>("");
     const [llmLoading, setLlmLoading] = useState<boolean>(false);
     const [llmError, setLlmError] = useState<string>("");
+
+    function focusOutput(tab?: "sentiment" | "llm" | "chat") {
+        if (tab) setOutputTab(tab);
+        try {
+            window.setTimeout(() => {
+                outputRef.current?.scrollIntoView({behavior: "smooth", block: "start"});
+            }, 50);
+        } catch {
+            // ignore
+        }
+    }
 
     const [modelOpts, setModelOpts] = useState<ModelOptions>({
         temperature: 0.0,
@@ -352,6 +366,7 @@ export default function Analyzer() {
             console.log(data)
             setResp(data);
             setProgress(100);
+            focusOutput("sentiment");
         } catch (err: any) {
             if (err?.name !== "AbortError") setError(err?.message || "Request failed");
         } finally {
@@ -704,6 +719,7 @@ export default function Analyzer() {
             const data: any = await rr.json();
             const content = String(data?.content || "");
             setChatMessages((prev) => [...prev, {role: "assistant", content}]);
+            focusOutput("chat");
         } catch (e: any) {
             setChatError(e?.message || "Chat failed");
         } finally {
@@ -773,7 +789,7 @@ export default function Analyzer() {
             }
             const data: any = await rr.json();
             setLlmContent(String(data?.content || ""));
-            setLlmTab("analysis");
+            focusOutput("llm");
         } catch (e: any) {
             setLlmError(e?.message || "Run analysis failed");
         } finally {
@@ -1393,31 +1409,182 @@ export default function Analyzer() {
                 </div>
             </div>
 
-            <div className="panels" style={{marginTop: 18}}>
-                <div className="panel" style={{gridColumn: "1 / -1"}}>
-                    <div style={{display: "flex", justifyContent: "space-between", alignItems: "center", gap: 12}}>
-                        <h3 style={{margin: 0}}>Run Analysis / Chat</h3>
-                        <div className="workspace-tabs" aria-label="LLM tools" style={{justifyContent: "flex-end"}}>
-                            <button
-                                type="button"
-                                className={`tab-btn ${llmTab === "analysis" ? "active" : ""}`}
-                                onClick={() => setLlmTab("analysis")}
-                            >
-                                Run Analysis
-                            </button>
-                            <button
-                                type="button"
-                                className={`tab-btn ${llmTab === "chat" ? "active" : ""}`}
-                                onClick={() => setLlmTab("chat")}
-                            >
-                                Chat about this text
-                            </button>
-                        </div>
+            <div ref={outputRef} className="output-wrap">
+                <div className="output-header">
+                    <h3 className="output-title">Output</h3>
+                    <div className="workspace-tabs" aria-label="Output tabs" style={{justifyContent: "flex-end"}}>
+                        <button
+                            type="button"
+                            className={`tab-btn ${outputTab === "sentiment" ? "active" : ""}`}
+                            onClick={() => setOutputTab("sentiment")}
+                        >
+                            Sentiment
+                        </button>
+                        <button
+                            type="button"
+                            className={`tab-btn ${outputTab === "llm" ? "active" : ""}`}
+                            onClick={() => setOutputTab("llm")}
+                        >
+                            LLM Analysis
+                        </button>
+                        <button
+                            type="button"
+                            className={`tab-btn ${outputTab === "chat" ? "active" : ""}`}
+                            onClick={() => setOutputTab("chat")}
+                        >
+                            Chat
+                        </button>
                     </div>
+                </div>
 
-                    {llmTab === "analysis" ? (
-                        <>
-                            <div className="workspace-row" style={{marginTop: 12}}>
+                {loading && (
+                    <div className="output-loading" aria-live="polite" aria-busy="true">
+                        <span className="loading-dots" aria-label="Loading">
+                            <span />
+                            <span />
+                            <span />
+                        </span>
+                    </div>
+                )}
+
+                {outputTab === "sentiment" && (
+                    <>
+                        {!!error && <div className="error">{error}</div>}
+
+                        {hasResp ? (
+                            <>
+                                {isHuggingFaceModel ? renderHfTable(resp) : (
+                                    <div className="panels results-stack tight">
+                                        <div className="panel">
+                                            <div style={{display: "flex", justifyContent: "space-between", alignItems: "center"}}>
+                                                <h3 style={{margin: 0}}>Results</h3>
+                                                <div style={{display: "flex", gap: 8}}/>
+                                            </div>
+                                            <div className="results-two-col" style={{marginTop: 10}}>
+                                                <div className="model-settings-grid">
+                                                    <div className="model-settings-label">Engine</div>
+                                                    <div>{engine || "—"}</div>
+
+                                                    <div className="model-settings-label">Label</div>
+                                                    <div>{label ? String(label).toUpperCase() : "—"}</div>
+
+                                                    <div className="model-settings-label">Confidence</div>
+                                                    <div>{typeof confidence === "number" ? `${(confidence * 100).toFixed(1)}%` : "—"}</div>
+
+                                                    <div className="model-settings-label">RAG priors</div>
+                                                    <div>{(r as any)?.lexicon_priors_included ? "Included" : "Not included"}</div>
+                                                </div>
+
+                                                <div className="model-settings-grid">
+                                                    <div className="model-settings-label">Positive</div>
+                                                    <div>{scores && typeof scores === "object" ? `${(Number(scores.positive) * 100).toFixed(1)}%` : "—"}</div>
+
+                                                    <div className="model-settings-label">Neutral</div>
+                                                    <div>{scores && typeof scores === "object" ? `${(Number(scores.neutral) * 100).toFixed(1)}%` : "—"}</div>
+
+                                                    <div className="model-settings-label">Negative</div>
+                                                    <div>{scores && typeof scores === "object" ? `${(Number(scores.negative) * 100).toFixed(1)}%` : "—"}</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <>
+                                            <div className="panel">
+                                                <h3>Translation</h3>
+                                                <MarkdownBlock content={translation ? String(translation) : "—"} />
+                                            </div>
+                                            <div className="panel">
+                                                <h3>Analysis</h3>
+                                                {analysis && typeof analysis === "object" && Object.keys(analysis).length > 0 ? (
+                                                    <div className="analysis-grid">
+                                                        {Object.entries(analysis).map(([key, val]) => (
+                                                            <Fragment key={key}>
+                                                                <div className="analysis-label">{key}</div>
+                                                                <div className="analysis-value">{renderValue(val)}</div>
+                                                            </Fragment>
+                                                        ))}
+                                                    </div>
+                                                ) : (
+                                                    <div>—</div>
+                                                )}
+                                            </div>
+                                        </>
+                                    </div>
+                                )}
+                            </>
+                        ) : (
+                            <div className="panels debug-grid tight">
+                                <div className="panel debug-snippet">
+                                    <h3>Debug</h3>
+                                    <pre>{JSON.stringify(miniDebug, null, 2)}</pre>
+                                </div>
+
+                                <div className="panel model-settings">
+                                    <div className="model-settings-header">
+                                        <h3>Model Settings</h3>
+                                        <div className="model-preset-badge">Preset: {presetName}</div>
+                                    </div>
+
+                                    <div className="model-settings-grid">
+                                        <div className="model-settings-label">Format</div>
+                                        <div>{modelOpts.format.toUpperCase()}</div>
+
+                                        <div className="model-settings-label">Bypass Modelfile (raw)</div>
+                                        <div>{modelOpts.raw ? "Enabled" : "Disabled"}</div>
+
+                                        <div className="model-settings-label">Temperature</div>
+                                        <div>{modelOpts.temperature}</div>
+
+                                        <div className="model-settings-label">Top-p</div>
+                                        <div>{modelOpts.top_p}</div>
+
+                                        <div className="model-settings-label">Repeat Penalty</div>
+                                        <div>{modelOpts.repeat_penalty}</div>
+
+                                        <div className="model-settings-label">Max Tokens</div>
+                                        <div>{modelOpts.num_predict}</div>
+
+                                        <div className="model-settings-label" style={{alignSelf: "start"}}>
+                                            Stop Tokens
+                                        </div>
+                                        <div>
+                                            {modelOpts.stop.length === 0 ? (
+                                                <span className="model-stop-chip none">None</span>
+                                            ) : (
+                                                modelOpts.stop.map((s) => (
+                                                    <span key={s} className="model-stop-chip">{s}</span>
+                                                ))
+                                            )}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        )}
+
+                        {hasResp && (
+                            <div className="floating-actions">
+                                <button
+                                    className="ghost-btn"
+                                    onClick={() => setFeedbackOpen(true)}
+                                    disabled={!resp || !(activeText || "").trim()}
+                                >
+                                    Send Feedback
+                                </button>
+                                <button
+                                    className="ghost-btn"
+                                    onClick={exportJSON}
+                                    disabled={!resp}
+                                >
+                                    Export JSON
+                                </button>
+                            </div>
+                        )}
+                    </>
+                )}
+
+                {outputTab === "llm" && (
+                    <div className="panels tight">
+                        <div className="panel" style={{gridColumn: "1 / -1"}}>
+                            <div className="workspace-row" style={{marginTop: 0}}>
                                 <select
                                     value={llmMode}
                                     onChange={(e) => setLlmMode(parseInt(e.target.value, 10) || 1)}
@@ -1484,10 +1651,14 @@ export default function Analyzer() {
                                     <MarkdownBlock content={llmContent} />
                                 )}
                             </div>
-                        </>
-                    ) : (
-                        <>
-                            <div className="workspace-row" style={{marginTop: 12, justifyContent: "space-between"}}>
+                        </div>
+                    </div>
+                )}
+
+                {outputTab === "chat" && (
+                    <div className="panels tight">
+                        <div className="panel" style={{gridColumn: "1 / -1"}}>
+                            <div className="workspace-row" style={{marginTop: 0, justifyContent: "space-between"}}>
                                 <label style={{display: "flex", gap: 8, alignItems: "center"}}>
                                     <input
                                         type="checkbox"
@@ -1582,145 +1753,10 @@ export default function Analyzer() {
                             <div style={{marginTop: 6, color: "rgba(255,255,255,0.7)", fontSize: 12}}>
                                 Tip: press Ctrl+Enter (or Cmd+Enter) to send.
                             </div>
-                        </>
-                    )}
-                </div>
+                        </div>
+                    </div>
+                )}
             </div>
-
-            {loading && (
-                <div className="progress progress-mid">
-                    <div className="progress-bar" style={{width: `${progress}%`}}/>
-                </div>
-            )}
-
-            {!!error && <div className="error">{error}</div>}
-
-            {hasResp && (
-                <div className="floating-actions">
-                    <button
-                        className="ghost-btn"
-                        onClick={() => setFeedbackOpen(true)}
-                        disabled={!resp || !(activeText || "").trim()}
-                    >
-                        Send Feedback
-                    </button>
-                    <button
-                        className="ghost-btn"
-                        onClick={exportJSON}
-                        disabled={!resp}
-                    >
-                        Export JSON
-                    </button>
-                </div>
-            )}
-            {hasResp ? (
-                <>
-                    {isHuggingFaceModel ? renderHfTable(resp) :
-
-                        (<div className="panels results-stack">
-                            <div className="panel">
-                                <div style={{display: "flex", justifyContent: "space-between", alignItems: "center"}}>
-                                    <h3 style={{margin: 0}}>Results</h3>
-                                    <div style={{display: "flex", gap: 8}}/>
-                                </div>
-                                <div className="results-two-col" style={{marginTop: 10}}>
-                                    <div className="model-settings-grid">
-                                        <div className="model-settings-label">Engine</div>
-                                        <div>{engine || "—"}</div>
-
-                                        <div className="model-settings-label">Label</div>
-                                        <div>{label ? String(label).toUpperCase() : "—"}</div>
-
-                                        <div className="model-settings-label">Confidence</div>
-                                        <div>{typeof confidence === "number" ? `${(confidence * 100).toFixed(1)}%` : "—"}</div>
-
-                                        <div className="model-settings-label">RAG priors</div>
-                                        <div>{(r as any)?.lexicon_priors_included ? "Included" : "Not included"}</div>
-                                    </div>
-
-                                    <div className="model-settings-grid">
-                                        <div className="model-settings-label">Positive</div>
-                                        <div>{scores && typeof scores === "object" ? `${(Number(scores.positive) * 100).toFixed(1)}%` : "—"}</div>
-
-                                        <div className="model-settings-label">Neutral</div>
-                                        <div>{scores && typeof scores === "object" ? `${(Number(scores.neutral) * 100).toFixed(1)}%` : "—"}</div>
-
-                                        <div className="model-settings-label">Negative</div>
-                                        <div>{scores && typeof scores === "object" ? `${(Number(scores.negative) * 100).toFixed(1)}%` : "—"}</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <>
-                                <div className="panel">
-                                    <h3>Translation</h3>
-                                    <MarkdownBlock content={translation ? String(translation) : "—"} />
-                                </div>
-                                <div className="panel">
-                                    <h3>Analysis</h3>
-                                    {analysis && typeof analysis === "object" && Object.keys(analysis).length > 0 ? (
-                                        <div className="analysis-grid">
-                                            {Object.entries(analysis).map(([key, val]) => (
-                                                <Fragment key={key}>
-                                                    <div className="analysis-label">{key}</div>
-                                                    <div className="analysis-value">{renderValue(val)}</div>
-                                                </Fragment>
-                                            ))}
-                                        </div>
-                                    ) : (
-                                        <div>—</div>
-                                    )}
-                                </div>
-                            </>
-                        </div>)}
-                </>
-            ) : (
-                <div className="panels debug-grid">
-                    <div className="panel debug-snippet">
-                        <h3>Debug</h3>
-                        <pre>{JSON.stringify(miniDebug, null, 2)}</pre>
-                    </div>
-
-                    <div className="panel model-settings">
-                        <div className="model-settings-header">
-                            <h3>Model Settings</h3>
-                            <div className="model-preset-badge">Preset: {presetName}</div>
-                        </div>
-
-                        <div className="model-settings-grid">
-                            <div className="model-settings-label">Format</div>
-                            <div>{modelOpts.format.toUpperCase()}</div>
-
-                            <div className="model-settings-label">Bypass Modelfile (raw)</div>
-                            <div>{modelOpts.raw ? "Enabled" : "Disabled"}</div>
-
-                            <div className="model-settings-label">Temperature</div>
-                            <div>{modelOpts.temperature}</div>
-
-                            <div className="model-settings-label">Top-p</div>
-                            <div>{modelOpts.top_p}</div>
-
-                            <div className="model-settings-label">Repeat Penalty</div>
-                            <div>{modelOpts.repeat_penalty}</div>
-
-                            <div className="model-settings-label">Max Tokens</div>
-                            <div>{modelOpts.num_predict}</div>
-
-                            <div className="model-settings-label" style={{alignSelf: "start"}}>
-                                Stop Tokens
-                            </div>
-                            <div>
-                                {modelOpts.stop.length === 0 ? (
-                                    <span className="model-stop-chip none">None</span>
-                                ) : (
-                                    modelOpts.stop.map((s) => (
-                                        <span key={s} className="model-stop-chip">{s}</span>
-                                    ))
-                                )}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            )}
 
 
             <ModelModal open={modelsOpen} onClose={() => setModelsOpen(false)}/>
