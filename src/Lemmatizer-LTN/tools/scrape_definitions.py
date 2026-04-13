@@ -65,7 +65,7 @@ async def scrape(
     sem = asyncio.Semaphore(max(1, int(concurrency)))
     async with aiohttp.ClientSession() as session:
         tasks = [
-            asyncio.create_task(fetch_one(session, sem, int(lemma_id), str(url)))
+            asyncio.create_task(fetch_one(session, sem, int(lemma_id), str(url).replace("latin-dictionary-flexion.php", "latin-english-dictionary.php")))
             for (lemma_id, url) in rows
             if url
         ]
@@ -86,6 +86,8 @@ def main() -> None:
     dsn: Optional[str] = args.dsn
     if not dsn:
         import os
+        from dotenv import load_dotenv
+        load_dotenv()
 
         dsn = os.getenv("DATABASE_URL")
     if not dsn:
