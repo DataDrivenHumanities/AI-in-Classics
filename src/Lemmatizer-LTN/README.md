@@ -130,6 +130,7 @@ The ETL pipeline processes raw scraped data:
 
 The loader (`etl/load_aggregates_to_postgres.py`) efficiently bulk-loads data:
 
+* Add flag --recreate to load_aggregates_to_postgres to drop existing tables and regenerate completely.
 1. **Schema Initialization** (`ops/init_db.sql`):
 
    - Creates `lemmas` and `forms` tables with foreign key relationships

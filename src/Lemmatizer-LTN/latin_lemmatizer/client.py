@@ -83,7 +83,7 @@ class LatinLemmatizer:
             word: A Latin word (lemma or inflected form)
             
         Returns:
-            Dictionary with lemma information (id, lemma_code, lemma_nod, lemma_diac, pos, gender, page_url)
+            Dictionary with lemma information (id, lemma_code, lemma_nod, lemma_diac, pos, gender, page_url, definition)
             or None if not found.
             
         Example:

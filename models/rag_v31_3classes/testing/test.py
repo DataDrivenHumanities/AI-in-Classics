@@ -15,28 +15,23 @@ from dotenv import load_dotenv
 from cltk import NLP
 
 OLLAMA_API_URL = "http://localhost:11434/api/generate"
-OLLAMA_MODEL = "latin-sentiment-llama31-5class"
+OLLAMA_MODEL = "latin-sentiment-llama31-3class"
 
 HERE = Path(__file__).resolve().parent
-TEST_JSON = HERE / "testdata5classes.json"
+TEST_JSON = HERE / "testdata3classes.json"
 OUT_DIR = HERE
 
-LABELS_5 = [
-    "VERY POSITIVE",
-    "SOMEWHAT POSITIVE",
+LABELS_3 = [
+    "POSITIVE",
     "NEUTRAL",
-    "SOMEWHAT NEGATIVE",
-    "VERY NEGATIVE",
+    "NEGATIVE",
 ]
 
-LABELS_3 = ["POSITIVE", "NEUTRAL", "NEGATIVE"]
-
-LABEL_SET_5 = set(LABELS_5)
 LABEL_SET_3 = set(LABELS_3)
 
 WORD_RE = re.compile(r"[A-Za-z]+", re.UNICODE)
 
-CONTEXT_MODE = "POLAR_ONLY"  # "ALL" or "POLAR_ONLY"
+CONTEXT_MODE = "POLAR_ONLY"
 MAX_CONTEXT_ITEMS = 30
 SLEEP_S = 0.2
 
@@ -58,41 +53,35 @@ def tokenize_simple(text: str) -> List[str]:
     return [m.group(0).lower() for m in WORD_RE.finditer(text or "")]
 
 
-def score_to_label_5(score) -> str:
+def score_to_label_3(score) -> str:
     try:
         x = float(score)
     except Exception:
         return "UNKNOWN"
 
     if x == 1:
-        return "VERY POSITIVE"
-    if x == 0.5:
-        return "SOMEWHAT POSITIVE"
+        return "POSITIVE"
     if x == 0:
         return "NEUTRAL"
-    if x == -0.5:
-        return "SOMEWHAT NEGATIVE"
     if x == -1:
-        return "VERY NEGATIVE"
+        return "NEGATIVE"
     return "UNKNOWN"
 
 
-def expected_category_5(expected_sentiment) -> str:
+def expected_category_3(expected_sentiment) -> str:
     s = str(expected_sentiment or "").strip()
 
     try:
-        return score_to_label_5(float(s))
+        return score_to_label_3(float(s))
     except Exception:
         pass
 
     s = re.sub(r"\s*\([^)]+\)\s*$", "", s).strip().upper()
 
     allowed = {
-        "VERY POSITIVE",
-        "SOMEWHAT POSITIVE",
+        "POSITIVE",
         "NEUTRAL",
-        "SOMEWHAT NEGATIVE",
-        "VERY NEGATIVE",
+        "NEGATIVE",
     }
 
     if s in allowed:
@@ -101,29 +90,19 @@ def expected_category_5(expected_sentiment) -> str:
     return "UNKNOWN"
 
 
-def normalize_prediction_5(text: str) -> str:
+def normalize_prediction_3(text: str) -> str:
     s = (text or "").strip()
     up = s.upper()
 
-    for lab in LABELS_5:
+    for lab in LABELS_3:
         if lab in up:
             return lab
 
     if s:
         s = s.splitlines()[0].strip()
-        s = s.strip(" \t\r\n\"'`.,:;!")
-    return s.upper()
+        s = s.strip(" \t\r\n\"'`.,:;!").upper()
 
-
-def collapse_to_3(label_5: str) -> str:
-    up = (label_5 or "").upper()
-    if "POSITIVE" in up:
-        return "POSITIVE"
-    if "NEGATIVE" in up:
-        return "NEGATIVE"
-    if up == "NEUTRAL":
-        return "NEUTRAL"
-    return "UNKNOWN"
+    return s
 
 
 def ollama_generate(prompt: str, timeout_s: int = 180) -> str:
@@ -165,9 +144,8 @@ def fetch_lemma_context(conn: psycopg.Connection, lemmas: List[str]) -> List[Dic
             "provenance": provenance,
         }
 
-        if CONTEXT_MODE == "POLAR_ONLY":
-            if rec["polarity_score"] is None:
-                continue
+        if CONTEXT_MODE == "POLAR_ONLY" and rec["polarity_score"] is None:
+            continue
 
         out.append(rec)
 
@@ -194,11 +172,9 @@ def format_context_rows(rows: List[Dict[str, Any]]) -> str:
             header
             + "\n(no lemma matches found)\n\n"
             + "Return exactly one label from this set:\n"
-            "VERY POSITIVE\n"
-            "SOMEWHAT POSITIVE\n"
+            "POSITIVE\n"
             "NEUTRAL\n"
-            "SOMEWHAT NEGATIVE\n"
-            "VERY NEGATIVE\n"
+            "NEGATIVE\n"
         )
 
     lines = [header.rstrip(), "Lexicon entries:"]
@@ -212,11 +188,9 @@ def format_context_rows(rows: List[Dict[str, Any]]) -> str:
         [
             "",
             "Return exactly one label from this set:",
-            "VERY POSITIVE",
-            "SOMEWHAT POSITIVE",
+            "POSITIVE",
             "NEUTRAL",
-            "SOMEWHAT NEGATIVE",
-            "VERY NEGATIVE",
+            "NEGATIVE",
         ]
     )
     return "\n".join(lines) + "\n"
@@ -231,11 +205,15 @@ def build_prompt(sentence: str, context_rows: List[Dict[str, Any]]) -> str:
         "Output only one label and no explanation.\n"
     )
 
+
 def main():
     load_dotenv()
     db_url = os.environ.get("DATABASE_URL")
     if not db_url:
         raise SystemExit("DATABASE_URL not found. Put it in .env or set it in your shell.")
+
+    if not TEST_JSON.exists():
+        raise SystemExit(f"Test JSON not found: {TEST_JSON}")
 
     cases = load_test_cases(TEST_JSON)
     if not cases:
@@ -244,23 +222,16 @@ def main():
     lemmatizer = NLP("lat")
 
     ts = datetime.now().strftime("%Y%m%d_%H%M%S")
-    results_csv = OUT_DIR / f"results_lemmactx_5class_{ts}.csv"
-    context_csv = OUT_DIR / f"results_lemmactx_context_5class_{ts}.csv"
-    summary_path = OUT_DIR / f"summary_lemmactx_5class_{ts}.json"
+    results_csv = OUT_DIR / f"results_lemmactx_3class_{ts}.csv"
+    context_csv = OUT_DIR / f"results_lemmactx_context_3class_{ts}.csv"
+    summary_path = OUT_DIR / f"summary_lemmactx_3class_{ts}.json"
 
-    per5 = {lab: {"total": 0, "correct": 0} for lab in LABELS_5}
     per3 = {lab: {"total": 0, "correct": 0} for lab in LABELS_3}
-
-    conf5 = {e: {p: 0 for p in LABELS_5} for e in LABELS_5}
-    conf5_unknown = {e: 0 for e in LABELS_5}
-
     conf3 = {e: {p: 0 for p in LABELS_3} for e in LABELS_3}
     conf3_unknown = {e: 0 for e in LABELS_3}
 
     total = len(cases)
-    correct5 = 0
     correct3 = 0
-    unknown5 = 0
     unknown3 = 0
 
     t_suite0 = time.perf_counter()
@@ -276,7 +247,6 @@ def main():
                 "sentence",
                 "translation",
                 "expected_sentiment",
-                "expected_5",
                 "expected_3",
                 "lemmas",
                 "context_hits",
@@ -285,9 +255,7 @@ def main():
                 "context_debug",
                 "prompt_chars",
                 "predicted_raw",
-                "predicted_5",
                 "predicted_3",
-                "is_correct_5",
                 "is_correct_3",
                 "latency_s",
             ],
@@ -313,11 +281,8 @@ def main():
             sent = item.get("sentence", "") or ""
             trans = item.get("translation", item.get("expected_translation", "")) or ""
             exp_full = (item.get("expected_sentiment", item.get("sentiment", "")) or "").strip()
-            exp5 = expected_category_5(exp_full)
-            exp3 = collapse_to_3(exp5)
+            exp3 = expected_category_3(exp_full)
 
-            if exp5 in per5:
-                per5[exp5]["total"] += 1
             if exp3 in per3:
                 per3[exp3]["total"] += 1
 
@@ -334,7 +299,7 @@ def main():
                     lemma = getattr(w, "lemma", None)
                     if lemma:
                         lemmas.append(normalize_lemma(lemma))
-            
+                        
             context_rows = fetch_lemma_context(conn, lemmas)
 
             context_lemmas_used: List[str] = []
@@ -364,12 +329,7 @@ def main():
             context_debug_str = " || ".join(context_debug_parts)
 
             prompt_context_text = format_context_rows(context_rows)
-            prompt = (
-                f"{prompt_context_text}\n"
-                f"Latin text: {sent}\n\n"
-                "Classify the overall sentiment of the Latin text. "
-                "Output only one label and no explanation.\n"
-            )
+            prompt = build_prompt(sent, context_rows)
 
             t0 = time.perf_counter()
             try:
@@ -378,25 +338,8 @@ def main():
                 raw = f"__ERROR__: {type(e).__name__}: {e}"
             latency = time.perf_counter() - t0
 
-            pred5 = normalize_prediction_5(raw)
-            pred3 = collapse_to_3(pred5)
-
-            ok5 = (pred5 == exp5)
-            ok3 = (pred3 == exp3)
-
-            if ok5:
-                correct5 += 1
-                if exp5 in per5:
-                    per5[exp5]["correct"] += 1
-                if exp5 in LABEL_SET_5 and pred5 in LABEL_SET_5:
-                    conf5[exp5][pred5] += 1
-            else:
-                if pred5 in LABEL_SET_5 and exp5 in LABEL_SET_5:
-                    conf5[exp5][pred5] += 1
-                else:
-                    unknown5 += 1
-                    if exp5 in conf5_unknown:
-                        conf5_unknown[exp5] += 1
+            pred3 = normalize_prediction_3(raw)
+            ok3 = pred3 == exp3
 
             if exp3 in LABEL_SET_3:
                 if ok3:
@@ -417,7 +360,6 @@ def main():
                     "sentence": sent,
                     "translation": trans,
                     "expected_sentiment": exp_full,
-                    "expected_5": exp5,
                     "expected_3": exp3,
                     "lemmas": " ".join(sorted(set(lemmas))),
                     "context_hits": len(context_rows),
@@ -426,9 +368,7 @@ def main():
                     "context_debug": context_debug_str,
                     "prompt_chars": len(prompt),
                     "predicted_raw": raw,
-                    "predicted_5": pred5,
                     "predicted_3": pred3,
-                    "is_correct_5": ok5,
                     "is_correct_3": ok3,
                     "latency_s": f"{latency:.3f}",
                 }
@@ -464,27 +404,14 @@ def main():
         "context_mode": CONTEXT_MODE,
         "max_context_items": MAX_CONTEXT_ITEMS,
         "label_scheme": {
-            "-1": "VERY NEGATIVE",
-            "-0.5": "SOMEWHAT NEGATIVE",
+            "-1": "NEGATIVE",
             "0": "NEUTRAL",
-            "0.5": "SOMEWHAT POSITIVE",
-            "1": "VERY POSITIVE",
+            "1": "POSITIVE",
         },
         "overall": {
-            "correct_5": correct5,
-            "accuracy_5": acc(correct5, total),
-            "unknown_5": unknown5,
             "correct_3": correct3,
             "accuracy_3": acc(correct3, total),
             "unknown_3": unknown3,
-        },
-        "per_label_5": {
-            lab: {
-                "correct": per5[lab]["correct"],
-                "total": per5[lab]["total"],
-                "accuracy": acc(per5[lab]["correct"], per5[lab]["total"]),
-            }
-            for lab in LABELS_5
         },
         "per_label_3": {
             lab: {
@@ -494,14 +421,15 @@ def main():
             }
             for lab in LABELS_3
         },
-        "confusion_5": {"matrix": conf5, "unknown_by_expected": conf5_unknown},
-        "confusion_3": {"matrix": conf3, "unknown_by_expected": conf3_unknown},
+        "confusion_3": {
+            "matrix": conf3,
+            "unknown_by_expected": conf3_unknown,
+        },
         "elapsed_seconds": elapsed,
     }
 
     summary_path.write_text(json.dumps(summary, indent=2), encoding="utf-8")
 
-    print(f"5-class accuracy: {correct5}/{total} = {acc(correct5, total) * 100:.2f}%")
     print(f"3-class accuracy: {correct3}/{total} = {acc(correct3, total) * 100:.2f}%")
     print(f"Wrote: {results_csv}")
     print(f"Wrote: {context_csv}")

@@ -13,6 +13,7 @@ import random
 BASE = "https://www.online-latin-dictionary.com"
 INDEX_URL = BASE + "/latin-english-dictionary.php?typ=pg&pg={pg}"
 FLEXION_URL = BASE + "/latin-dictionary-flexion.php?lemma={lemma}"
+DEFINITION_URL = BASE + "/latin-english-dictionary.php?lemma={lemma}"
 
 HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; DDHBot/1.0)"}
 
@@ -274,6 +275,65 @@ def parse_flexion_tables(html_text: str, page_url: str):
 
     return lemma_text, rows
 
+def parse_definition(html_text: str) -> str:
+    """Extract numbered English definitions from the Latin-English dictionary page.
+
+    The page structure has numbered senses as <b>1</b> text <b>2</b> text ...
+    inside the #myth container.  Returns all senses joined with "; ".
+    """
+    soup = BeautifulSoup(html_text, "html.parser")
+    myth = soup.select_one("#myth")
+    if not myth:
+        return ""
+
+    # Collect <b> tags that contain a bare integer (the sense numbers)
+    senses = []
+    for b_tag in myth.find_all("b"):
+        num_text = b_tag.get_text(strip=True)
+        if not num_text.isdigit():
+            continue
+
+        # Gather all text siblings after this <b> until the next <b> or block element
+        parts = []
+        for sib in b_tag.next_siblings:
+            name = getattr(sib, "name", None)
+            if name == "b":
+                break
+            if name in ("div", "hr", "h2", "h3", "table", "a"):
+                break
+            text = sib.get_text(" ", strip=True) if name else str(sib)
+            text = _whitespace.sub(" ", text).strip()
+            if text:
+                parts.append(text)
+
+        definition = " ".join(parts).strip()
+        if definition:
+            senses.append(f"{num_text}. {definition}")
+
+    if senses:
+        return "; ".join(senses)
+
+    # Fallback for entries that have one unnumbered definition sentence.
+    # These pages usually place the gloss as plain text near the declension link.
+    text = myth.get_text(" ", strip=True)
+    text = _whitespace.sub(" ", text).strip()
+    if not text:
+        return ""
+
+    # Trim leading heading/metadata and trailing sections if present.
+    marker = "View the declension of this word"
+    if marker in text:
+        text = text.split(marker, 1)[1].strip()
+    for tail in ("permalink", "Locutions, idioms and examples", "Browse the dictionary"):
+        if tail in text:
+            text = text.split(tail, 1)[0].strip()
+
+    # Ignore degenerate cases where no actual gloss remains.
+    if not text or text.isdigit():
+        return ""
+    return text
+
+
 async def fetch_text(session: aiohttp.ClientSession, url: str, timeout: int = 20, retries: int = 4, delay: float = 0.2):
     for attempt in range(retries + 1):
         try:
@@ -315,6 +375,7 @@ async def discover_lemmas_dynamic(session, start: int, step: int, sem: asyncio.S
 
 async def fetch_and_write_lemma(session, code: str, outdir: Path, sem: asyncio.Semaphore, delay: float):
     url = FLEXION_URL.format(lemma=code)
+    def_url = DEFINITION_URL.format(lemma=code)
     async with sem:
         try:
             html = await fetch_text(session, url)
@@ -324,6 +385,15 @@ async def fetch_and_write_lemma(session, code: str, outdir: Path, sem: asyncio.S
         lemma_text, rows = parse_flexion_tables(html, url)
         if not rows:
             return 0
+
+        # Fetch English definition (best-effort; empty string on failure)
+        definition = ""
+        try:
+            def_html = await fetch_text(session, def_url)
+            definition = parse_definition(def_html)
+        except Exception as e:
+            print(f"[lemma {code}] def warn: {e}")
+
         outdir.mkdir(parents=True, exist_ok=True)
         name = slugify_lemma(lemma_text) + ".csv"
         path = outdir / name
@@ -332,11 +402,13 @@ async def fetch_and_write_lemma(session, code: str, outdir: Path, sem: asyncio.S
                 f,
                 fieldnames=[
                     "lemma_text","pos","context_1","context_2","context_3",
-                    "label","value","page_url","number_hint","gender_hint","voice_hint"
+                    "label","value","page_url","number_hint","gender_hint","voice_hint",
+                    "definition"
                 ],
             )
             w.writeheader()
             for r in rows:
+                r["definition"] = definition
                 w.writerow(r)
         if delay > 0:
             await asyncio.sleep(delay)
