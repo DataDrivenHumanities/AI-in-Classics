@@ -1,0 +1,139 @@
+{
+  "model": "latin-sentiment-5class",
+  "ollama_api": "http://localhost:11434/api/generate",
+  "input_file": "C:\\Users\\xiaog\\OneDrive\\Documents\\GitHub\\LukasKanopka\\AI-in-Classics\\models\\rag_finetuned_5classes\\testing\\testdata5classes.json",
+  "results_csv": "C:\\Users\\xiaog\\OneDrive\\Documents\\GitHub\\LukasKanopka\\AI-in-Classics\\models\\rag_finetuned_5classes\\testing\\results_lemmactx_5class_20260401_130320.csv",
+  "total_tests": 70,
+  "context_mode": "POLAR_ONLY",
+  "max_context_items": 30,
+  "label_scheme": {
+    "-1": "VERY NEGATIVE",
+    "-0.5": "SOMEWHAT NEGATIVE",
+    "0": "NEUTRAL",
+    "0.5": "SOMEWHAT POSITIVE",
+    "1": "VERY POSITIVE"
+  },
+  "overall": {
+    "correct_5": 6,
+    "accuracy_5": 0.08571428571428572,
+    "unknown_5": 42,
+    "correct_3": 46,
+    "accuracy_3": 0.6571428571428571,
+    "unknown_3": 0
+  },
+  "per_label_5": {
+    "VERY POSITIVE": {
+      "correct": 0,
+      "total": 16,
+      "accuracy": 0.0
+    },
+    "SOMEWHAT POSITIVE": {
+      "correct": 0,
+      "total": 16,
+      "accuracy": 0.0
+    },
+    "NEUTRAL": {
+      "correct": 6,
+      "total": 6,
+      "accuracy": 1.0
+    },
+    "SOMEWHAT NEGATIVE": {
+      "correct": 0,
+      "total": 7,
+      "accuracy": 0.0
+    },
+    "VERY NEGATIVE": {
+      "correct": 0,
+      "total": 25,
+      "accuracy": 0.0
+    }
+  },
+  "per_label_3": {
+    "POSITIVE": {
+      "correct": 12,
+      "total": 32,
+      "accuracy": 0.375
+    },
+    "NEUTRAL": {
+      "correct": 6,
+      "total": 6,
+      "accuracy": 1.0
+    },
+    "NEGATIVE": {
+      "correct": 28,
+      "total": 32,
+      "accuracy": 0.875
+    }
+  },
+  "confusion_5": {
+    "matrix": {
+      "VERY POSITIVE": {
+        "VERY POSITIVE": 0,
+        "SOMEWHAT POSITIVE": 0,
+        "NEUTRAL": 9,
+        "SOMEWHAT NEGATIVE": 0,
+        "VERY NEGATIVE": 0
+      },
+      "SOMEWHAT POSITIVE": {
+        "VERY POSITIVE": 0,
+        "SOMEWHAT POSITIVE": 0,
+        "NEUTRAL": 9,
+        "SOMEWHAT NEGATIVE": 0,
+        "VERY NEGATIVE": 0
+      },
+      "NEUTRAL": {
+        "VERY POSITIVE": 0,
+        "SOMEWHAT POSITIVE": 0,
+        "NEUTRAL": 6,
+        "SOMEWHAT NEGATIVE": 0,
+        "VERY NEGATIVE": 0
+      },
+      "SOMEWHAT NEGATIVE": {
+        "VERY POSITIVE": 0,
+        "SOMEWHAT POSITIVE": 0,
+        "NEUTRAL": 1,
+        "SOMEWHAT NEGATIVE": 0,
+        "VERY NEGATIVE": 0
+      },
+      "VERY NEGATIVE": {
+        "VERY POSITIVE": 0,
+        "SOMEWHAT POSITIVE": 0,
+        "NEUTRAL": 3,
+        "SOMEWHAT NEGATIVE": 0,
+        "VERY NEGATIVE": 0
+      }
+    },
+    "unknown_by_expected": {
+      "VERY POSITIVE": 7,
+      "SOMEWHAT POSITIVE": 7,
+      "NEUTRAL": 0,
+      "SOMEWHAT NEGATIVE": 6,
+      "VERY NEGATIVE": 22
+    }
+  },
+  "confusion_3": {
+    "matrix": {
+      "POSITIVE": {
+        "POSITIVE": 12,
+        "NEUTRAL": 18,
+        "NEGATIVE": 2
+      },
+      "NEUTRAL": {
+        "POSITIVE": 0,
+        "NEUTRAL": 6,
+        "NEGATIVE": 0
+      },
+      "NEGATIVE": {
+        "POSITIVE": 0,
+        "NEUTRAL": 4,
+        "NEGATIVE": 28
+      }
+    },
+    "unknown_by_expected": {
+      "POSITIVE": 0,
+      "NEUTRAL": 0,
+      "NEGATIVE": 0
+    }
+  },
+  "elapsed_seconds": 445.0107069000078
+}

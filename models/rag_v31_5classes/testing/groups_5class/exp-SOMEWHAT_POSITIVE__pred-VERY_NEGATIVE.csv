@@ -1,0 +1,3 @@
+idx,sentence,translation,expected_sentiment,expected_5,expected_3,lemmas,context_hits,prompt_chars,predicted_raw,predicted_5,predicted_3,is_correct_5,is_correct_3,latency_s
+10,Brutus te laudavit,Brutus praised you,SOMEWHAT POSITIVE (+0.5),SOMEWHAT POSITIVE,POSITIVE,brutus laudo tu,1,371,VERY NEGATIVE,VERY NEGATIVE,NEGATIVE,False,False,3.097
+66,Timor Domini initium sapientiae est.,The fear of the Lord is the beginning of wisdom.,SOMEWHAT POSITIVE (+0.5),SOMEWHAT POSITIVE,POSITIVE,. dominus initium sapientia sum timor,3,552,VERY NEGATIVE,VERY NEGATIVE,NEGATIVE,False,False,3.031

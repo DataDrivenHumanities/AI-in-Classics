@@ -1,0 +1,2 @@
+idx,sentence,translation,expected_sentiment,expected_5,expected_3,lemmas,context_hits,prompt_chars,predicted_raw,predicted_5,predicted_3,is_correct_5,is_correct_3,latency_s
+67,Ego felum in villa vidi.,I saw a cat in the villa.,NEUTRAL (0),NEUTRAL,NEUTRAL,. ego fero in video villa,0,427,Answer: SOMEWHAT POSITIVE (+0.5),SOMEWHAT POSITIVE,POSITIVE,False,False,4.216

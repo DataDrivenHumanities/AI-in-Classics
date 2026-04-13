@@ -16,6 +16,8 @@ from .routers import presets_router
 from .routers import feedback_router
 from .routers import train_router
 from .routers.latin_workspace_router import router as latin_workspace_router
+from .latin_llama31_rag import analyze_latin_sentiment_with_rag
+
 
 from .model_registry import get_registry, available_model_ids
 from .ollama_client import (
@@ -24,6 +26,10 @@ from .ollama_client import (
     resolve_available_model_tag,
     generate_text,
 )
+
+from dotenv import load_dotenv
+load_dotenv()
+print("DATABASE_URL loaded:", bool(os.getenv("DATABASE_URL")))
 
 _VALID_LABELS = {"positive", "negative", "neutral"}
 _VALID = {"positive", "negative", "neutral"}
@@ -610,9 +616,18 @@ async def _analyze_with_openrouter(
 @app.post("/api/analyze")
 async def analyze(body: AnalyzeBody, request: Request):
     text = body.text
+    print("API body.model_id =", body.model_id)
+    print("API env OLLAMA_RAG_MODEL =", os.getenv("OLLAMA_RAG_MODEL"))
+    print("API provider =", body.provider)
+    
     try:
         provider = (body.provider or resolve_engine(body.model_id) or "builtin").lower()
-        if provider in {"ollama", "hugging face"}:
+        if provider == "ollama":
+            # model_id = body.model_id or os.getenv("OLLAMA_RAG_MODEL") or "latin-sentiment-llama31-5class"
+            model_id = os.getenv("OLLAMA_RAG_MODEL") or "latin-sentiment-llama31-5class"
+            res = await analyze_latin_sentiment_with_rag(text, model_id)
+            return JSONResponse(res)
+        if provider == "hugging face":
             model_id = resolve_model(body.model_id)
             hf_classifier_params = resolve_hf_params(body.model_id)
             res = await _analyze_with_model(
@@ -662,6 +677,8 @@ async def analyze(body: AnalyzeBody, request: Request):
     except httpx.HTTPError as e:
         raise HTTPException(status_code=502, detail=f"Model backend error: {e}")
     except Exception as e:
+        import traceback
+        traceback.print_exc()
         raise HTTPException(status_code=500, detail=f"Unhandled error: {e}")
 
 

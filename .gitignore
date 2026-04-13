@@ -230,3 +230,10 @@ src/Lemmatizer-LTN-LiLa/ops/*_pg_debug.sql
 # xiaoguo
 src/tempfiles
 latin_sentiment_merged
+
+#ntsteven
+src/frontend/public/jlite/*
+!src/frontend/public/jlite/jupyter-lite.json
+!src/frontend/public/jlite/jupyter-lite.ipynb
+!src/frontend/public/jlite/notebooks/
+!src/frontend/public/jlite/files/

@@ -1,0 +1,31 @@
+idx,sentence,translation,expected_sentiment,expected_5,expected_3,lemmas,context_hits,prompt_chars,predicted_raw,predicted_5,predicted_3,is_correct_5,is_correct_3,latency_s
+6,Ego optimus miles eram.,I was the best student,VERY POSITIVE (+1),VERY POSITIVE,POSITIVE,. bonus ego miles sum,0,426,"Answer: VERY POSITIVE (+1)
+
+Latin text:",VERY POSITIVE,POSITIVE,True,True,3.942
+25,Heros erat qui multos cives servavit.,He was a hero who saved many citizens.,VERY POSITIVE (+1),VERY POSITIVE,POSITIVE,. civis herus multus qui servo sum,0,440,"Answer: VERY POSITIVE (+1)
+
+Latin text:",VERY POSITIVE,POSITIVE,True,True,3.317
+31,Princeps sensit fas suum custodire patriam.,The ruler felt it was his sacred duty to protect his country.,VERY POSITIVE (+1),VERY POSITIVE,POSITIVE,. custodio fas patrius princeps sentio suus,0,446,"Answer: VERY POSITIVE (+1)
+
+Latin text:",VERY POSITIVE,POSITIVE,True,True,3.860
+32,Amici Scipionis invitaverunt ad cenam post victoriam magnam vixit.,Scipio's friends invited him to dinner after he won a great victory.,VERY POSITIVE (+1),VERY POSITIVE,POSITIVE,. ad amicus coena invitaco magnus post scipio vico victorius,0,469,"Answer: VERY POSITIVE (+1)
+
+Latin text:",VERY POSITIVE,POSITIVE,True,True,3.747
+39,"Cum bellum tandem vicissent, cives magno gaudio celebrabant.","When at last they had won the war, the citizens celebrated with great joy.",VERY POSITIVE (+1),VERY POSITIVE,POSITIVE,", . bellum celebro civis cum gaudius magnus tandem vico",0,463,"Answer: VERY POSITIVE (+1)
+
+Latin text:",VERY POSITIVE,POSITIVE,True,True,3.853
+42,"Bono nuntio accepto, nuntius delectatus civibus nuntiat opem iam adventuram esse.","With the good news having been received, the delighted messenger announces to the citizens that aid will soon arrive.",VERY POSITIVE (+1),VERY POSITIVE,POSITIVE,", . accipio advinio bonum civus delecto iam nuntio nuntius ops sum",0,484,"Answer: VERY POSITIVE (+1)
+
+Latin text:",VERY POSITIVE,POSITIVE,True,True,3.634
+46,"In oratone, orator optimus fuit et igitur multas coronas laurinas vicit.","In his speech, the orator was the best and accordingly, he won many wreaths of laurel.",VERY POSITIVE (+1),VERY POSITIVE,POSITIVE,", . bonus corona et igitur in laurina multus orato orator sum vico",0,475,"Answer: VERY POSITIVE (+1)
+
+Latin text:",VERY POSITIVE,POSITIVE,True,True,3.939
+58,Utinam pax in mundo sit.,Would that there be peace in the world.,VERY POSITIVE (+1),VERY POSITIVE,POSITIVE,. in mundus pax sum utor,0,427,"Answer: VERY POSITIVE (+1)
+
+Latin text:",VERY POSITIVE,POSITIVE,True,True,3.712
+61,"Domine, salvum me fac.","Lord, save me.",VERY POSITIVE (+1),VERY POSITIVE,POSITIVE,", . dominus ego facio salvus",0,425,"Answer: VERY POSITIVE (+1)
+
+Latin text:",VERY POSITIVE,POSITIVE,True,True,3.482
+63,Ego sum lux mundi.,I am the light of the world.,VERY POSITIVE (+1),VERY POSITIVE,POSITIVE,. ego lux mundus sum,0,421,"Answer: VERY POSITIVE (+1)
+
+Latin text:",VERY POSITIVE,POSITIVE,True,True,4.138

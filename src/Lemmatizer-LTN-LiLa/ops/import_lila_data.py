@@ -29,12 +29,13 @@ LILA_SCHEMA = os.getenv("LILA_SCHEMA", "lila")
 
 def get_dsn():
     dsn = os.getenv("DATABASE_URL")
+    print(dsn)
     if not dsn:
         # Fallback for local dev if not set
         # Try to guess or just fail prompt
         print("DATABASE_URL not set.")
         # Attempt a default?
-        return "postgresql://postgres:postgres@localhost:5432/postgres" 
+        return "postgresql://postgres:password@127.0.0.1:5432/lemmatizer" 
     return dsn
 
 def clean_mariadb_dump(sql_content):

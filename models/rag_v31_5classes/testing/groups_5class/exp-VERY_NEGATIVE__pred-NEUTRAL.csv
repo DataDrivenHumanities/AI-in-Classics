@@ -1,0 +1,2 @@
+idx,sentence,translation,expected_sentiment,expected_5,expected_3,lemmas,context_hits,prompt_chars,predicted_raw,predicted_5,predicted_3,is_correct_5,is_correct_3,latency_s
+12,Domus ustus erat.,The home had been burned down.,VERY NEGATIVE (-1),VERY NEGATIVE,NEGATIVE,. domus sum ustus,1,366,NEUTRAL,NEUTRAL,NEUTRAL,False,False,2.790

@@ -1,0 +1,7 @@
+idx,sentence,translation,expected_sentiment,expected_5,expected_3,lemmas,context_hits,prompt_chars,predicted_raw,predicted_5,predicted_3,is_correct_5,is_correct_3,latency_s
+62,Scientia nova in libris invenitur.,New knowledge is found in books.,SOMEWHAT POSITIVE (+0.5),SOMEWHAT POSITIVE,POSITIVE,. in invenio liber novus scientia,0,437,"Answer: NEUTRAL (0)
+
+Latin text:",NEUTRAL,NEUTRAL,False,False,3.836
+69,"Cum philosophi in academia disputarent, discipuli eorum nova praecepta didicerunt.","While the philosophers debated in the academy, their students learned new teachings.",SOMEWHAT POSITIVE (+0.5),SOMEWHAT POSITIVE,POSITIVE,", . academia cum dido discipulus disputo in is novus philosophus praeceptum",0,485,"Answer: NEUTRAL (0)
+
+Latin text:",NEUTRAL,NEUTRAL,False,False,3.671

@@ -6,10 +6,10 @@ This folder contains local data files used to build the Latin LiLa/LEMLAT + Lati
 
 We use **one local Postgres database** (default: `lemlat_db`) with:
 
-- `public.*` tables = web-scraped morphology/dictionary layer (`public.lemmas`, `public.forms`)
+- `public.*` tables = web-scraped morphology/dictionary layer (`public.lemmas`, `public.forms`) + derived tables (`public.lemma_sentiment_map`, `public.word_lookup`)
 - `lila.*` tables = LiLa/LEMLAT backbone + sentiment (`lila.lemmario`, `lila.analysis`, `lila.sentiment`)
 
-High level: bootstrap schema → import LEMLAT dump + sentiment → (optionally) load scraped CSVs.
+High level: bootstrap schema → import LEMLAT dump + sentiment → (optionally) load scraped CSVs → build cross-schema lookup tables.
 
 ### 0) Prereqs
 
@@ -69,7 +69,26 @@ After scraping finishes and `src/Lemmatizer-LTN/out/` contains the per-lemma CSV
 
 Note: `--truncate` only wipes `public.forms`/`public.lemmas`. It does not touch `lila.*`.
 
-### 5) Quick verification
+### 5) Build `public.lemma_sentiment_map` + `public.word_lookup`
+
+Requires both `lila.sentiment` (step 3) and `public.lemmas`/`public.forms` (step 4).
+
+The single script creates two tables in order:
+
+1. **`lemma_sentiment_map`** – joins sentiment entries against the dictionary
+   tables so each sentiment lemma is mapped to its dictionary lemma ID
+   (via direct lemma match or inflected-form fallback).
+2. **`word_lookup`** – unified lookup of every known word-form: all rows from
+   `public.forms` plus unmatched sentiment lemmas (those with `match = FALSE`
+   in `lemma_sentiment_map`).
+
+```bash
+./.venv/bin/python3 src/Lemmatizer-LTN-LiLa/ops/load_lemma_sentiment_map.py
+```
+
+The script is idempotent -- re-running drops and recreates both tables.
+
+### 6) Quick verification
 
 ```bash
 psql -d lemlat_db -c "\\dt lila.*"
@@ -77,6 +96,8 @@ psql -d lemlat_db -c "select count(*) as lemlat_lemmas from lila.lemmario;"
 psql -d lemlat_db -c "select count(*) as affectus from lila.sentiment;"
 psql -d lemlat_db -c "select count(*) as scraped_lemmas from public.lemmas;"
 psql -d lemlat_db -c "select count(*) as scraped_forms from public.forms;"
+psql -d lemlat_db -c "select count(*) as sentiment_map from public.lemma_sentiment_map;"
+psql -d lemlat_db -c "select count(*) as word_lookup from public.word_lookup;"
 ```
 
 ### 6) Quick payload smoke-test (lexicon priors)

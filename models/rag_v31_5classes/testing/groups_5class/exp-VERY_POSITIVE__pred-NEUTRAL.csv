@@ -1,0 +1,5 @@
+idx,sentence,translation,expected_sentiment,expected_5,expected_3,lemmas,context_hits,prompt_chars,predicted_raw,predicted_5,predicted_3,is_correct_5,is_correct_3,latency_s
+25,Heros erat qui multos cives servavit.,He was a hero who saved many citizens.,VERY POSITIVE (+1),VERY POSITIVE,POSITIVE,. civis herus multus qui servo sum,2,465,"NEUTRAL
+
+
+The final answer is NEUTRAL",NEUTRAL,NEUTRAL,False,False,3.750

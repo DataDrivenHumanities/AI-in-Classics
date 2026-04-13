@@ -1,0 +1,19 @@
+idx,sentence,translation,expected_sentiment,expected_5,expected_3,lemmas,context_hits,prompt_chars,predicted_raw,predicted_5,predicted_3,is_correct_5,is_correct_3,latency_s
+2,Puer discipulus malus est.,The boy is a bad student.,SOMEWHAT NEGATIVE (-0.5),SOMEWHAT NEGATIVE,NEGATIVE,. discipulus malus puer sum,0,429,"Answer: VERY NEGATIVE (-1)
+
+Latin text:",VERY NEGATIVE,NEGATIVE,False,True,3.674
+8,Malum consilium est.,The plan is bad,SOMEWHAT NEGATIVE (-0.5),SOMEWHAT NEGATIVE,NEGATIVE,. consilium malum sum,0,423,"Answer: VERY NEGATIVE (-1)
+
+Latin text:",VERY NEGATIVE,NEGATIVE,False,True,4.127
+14,Vita eius erat nimis brevis.,Her life was too brief.,SOMEWHAT NEGATIVE (-0.5),SOMEWHAT NEGATIVE,NEGATIVE,. brevus is nimis sum vita,0,431,"Answer: VERY NEGATIVE (-1)
+
+Latin text:",VERY NEGATIVE,NEGATIVE,False,True,3.654
+19,Mater paterque suos pueros neglexerunt.,The mother and father neglected their children.,SOMEWHAT NEGATIVE (-0.5),SOMEWHAT NEGATIVE,NEGATIVE,. mater neglego paterqum puer suus,0,442,"Answer: VERY NEGATIVE (-1)
+
+Latin text:",VERY NEGATIVE,NEGATIVE,False,True,4.138
+47,"Stultitiast, mater, venatum ducere invitas canes","It is foolish, mother, to lead the unwilling dogs to the hunt",SOMEWHAT NEGATIVE (-0.5),SOMEWHAT NEGATIVE,NEGATIVE,", canis duco invo mater stultitia venatus",0,451,"Answer: VERY NEGATIVE (-1)
+
+Latin text:",VERY NEGATIVE,NEGATIVE,False,True,3.729
+60,Homunculus ille nihil scit.,That little man knows nothing.,SOMEWHAT NEGATIVE (-0.5),SOMEWHAT NEGATIVE,NEGATIVE,. homunculus ille nihil scio,0,430,"Answer: VERY NEGATIVE (-1)
+
+Latin text:",VERY NEGATIVE,NEGATIVE,False,True,3.999

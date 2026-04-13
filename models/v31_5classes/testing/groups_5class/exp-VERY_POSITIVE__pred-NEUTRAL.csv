@@ -1,0 +1,4 @@
+idx,sentence,translation,expected_sentiment,expected_5,expected_3,lemmas,context_hits,prompt_chars,predicted_raw,predicted_5,predicted_3,is_correct_5,is_correct_3,latency_s
+22,"Post redierunt Romam, nautae usi sunt otium.","After they returned to Rome, the sailors enjoyed leisure time.",VERY POSITIVE (+1),VERY POSITIVE,POSITIVE,", . nauta otium post redeo roma sum utor",0,447,"Answer: NEUTRAL (0)
+
+Latin text:",NEUTRAL,NEUTRAL,False,False,3.767

@@ -1,0 +1,2 @@
+idx,sentence,translation,expected_sentiment,expected_5,expected_3,lemmas,context_hits,prompt_chars,predicted_raw,predicted_5,predicted_3,is_correct_5,is_correct_3,latency_s
+5,Marcus Brutus tradidit suum amicum.,Marcus Brutus betrayed his friend.,VERY NEGATIVE (-1),VERY NEGATIVE,NEGATIVE,. amicus brutus marcus suus trado,0,438,Answer: SOMEWHAT POSITIVE (+0.5),SOMEWHAT POSITIVE,POSITIVE,False,False,3.781

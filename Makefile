@@ -65,7 +65,7 @@ OLLAMA_GEN    := $(OLLAMA_HOST)/api/generate
 OLLAMA_TAGS   := $(OLLAMA_HOST)/api/tags
 LATIN_TAG     ?= latin_ollama_model:1.0.0
 GREEK_TAG     ?= greek_ollama_model:1.0.0
-BASE_MODEL    ?= llama3.1:8b-instruct
+BASE_MODEL    ?= llama3.1:8b
 
 # ===== Frontend (React) =====
 FRONTEND_DIR  ?= src/frontend
@@ -85,16 +85,9 @@ API_PORT ?= 5050
 API_APP  ?= app.server_fast:app
 
 # Detect frontend package manager
-ifeq ($(DETECTED_OS), windows)
 FE_PM := npm
-else
-FE_PM := $(shell \
-  cd $(FRONTEND_DIR) 2>/dev/null && \
-  if command -v pnpm >/dev/null 2>&1 && [ -f pnpm-lock.yaml ]; then echo pnpm; \
-  elif command -v yarn >/dev/null 2>&1 && [ -f yarn.lock ]; then echo yarn; \
-  else echo npm; fi \
-)
-endif
+
+
 
 # ===== Colors =====
 ifeq ($(NO_COLOR),)
@@ -119,22 +112,12 @@ GREY     :=
 WHITE    :=
 endif
 
-ifeq ($(FE_PM),pnpm)
-FE_PM_DEV     := pnpm dev -p $(FRONTEND_PORT)
-FE_PM_BUILD   := pnpm build
-FE_PM_PREVIEW := pnpm start -p $(FRONTEND_PORT)
-FE_PM_INSTALL := pnpm install --frozen-lockfile
-else ifeq ($(FE_PM),yarn)
-FE_PM_DEV     := yarn dev -p $(FRONTEND_PORT)
-FE_PM_BUILD   := yarn build
-FE_PM_PREVIEW := yarn start -p $(FRONTEND_PORT)
-FE_PM_INSTALL := yarn install --frozen-lockfile
-else
+
 FE_PM_DEV     := npm run dev -- -p $(FRONTEND_PORT)
 FE_PM_BUILD   := npm run build
 FE_PM_PREVIEW := npm run start -- -p $(FRONTEND_PORT)
 FE_PM_INSTALL := npm install
-endif
+
 
 .PHONY: help setup setup-venv env run web check fix test \
         docker-build docker-run docker-dev docker-bash docker-clean \
