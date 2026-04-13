@@ -16,7 +16,6 @@ from .routers import presets_router
 from .routers import feedback_router
 from .routers import train_router
 from .routers.latin_workspace_router import router as latin_workspace_router
-from .latin_llama31_rag import analyze_latin_sentiment_with_rag
 
 
 from .model_registry import get_registry, available_model_ids
@@ -69,6 +68,7 @@ class AnalyzeBody(BaseModel):
     format: Optional[str] = None
     provider: Optional[str] = None
     openrouter_model: Optional[str] = None
+    include_lexicon_priors: bool = False
 
 
 class LlmAnalyzeBody(BaseModel):
@@ -448,7 +448,8 @@ async def _analyze_with_model(
     options: Optional[Dict[str, Any]] = None,
     raw: Optional[bool] = None,
     fmt: Optional[str] = None,
-    hf_classifier_params: Optional[Dict[str, Any]] | None = None
+    hf_classifier_params: Optional[Dict[str, Any]] | None = None,
+    include_lexicon_priors: bool = False,
 ) -> Dict[str, Any]:
 
     if engine == "hugging face":
@@ -458,8 +459,13 @@ async def _analyze_with_model(
             "labels and scores by sentence": res
         }
     from .ollama_client import generate_json_with_analysis
+    priors_json = _latin_lexicon_priors_json(
+        (text or "").strip()[:6000], include=bool(include_lexicon_priors)
+    )
     prompt = (
-        "Return ONLY a JSON object with these exact keys and types; no extra keys and no prose. "
+        ("If a JSON block named LEXICON_PRIORS is included, treat it as weak evidence (coverage may be incomplete).\n\n" if priors_json else "")
+        + priors_json
+        + "Return ONLY a JSON object with these exact keys and types; no extra keys and no prose. "
         'label: one of ["positive","negative","neutral"]; confidence: number in [0,1]; '
         'scores: {"positive":number,"negative":number,"neutral":number}; translation: string|null; analysis: object|null. '
         f"Text: {text}"
@@ -506,6 +512,7 @@ async def _analyze_with_model(
 
     return {
         "engine": "ollama",
+        "lexicon_priors_included": bool(priors_json),
         "label": label,
         "confidence": confidence,
         "scores": scores,
@@ -521,12 +528,18 @@ async def _analyze_with_openrouter(
     openrouter_model: str,
     auth_header: str,
     options: Optional[Dict[str, Any]] = None,
+    include_lexicon_priors: bool = False,
 ) -> Dict[str, Any]:
     endpoint = os.getenv(
         "OPENROUTER_API_URL", "https://openrouter.ai/api/v1/chat/completions"
     )
+    priors_json = _latin_lexicon_priors_json(
+        (text or "").strip()[:6000], include=bool(include_lexicon_priors)
+    )
     prompt = (
-        "Return ONLY a JSON object with these exact keys and types; no extra keys and no prose. "
+        ("If a JSON block named LEXICON_PRIORS is included, treat it as weak evidence (coverage may be incomplete).\n\n" if priors_json else "")
+        + priors_json
+        + "Return ONLY a JSON object with these exact keys and types; no extra keys and no prose. "
         'label: one of ["positive","negative","neutral"]; confidence: number in [0,1]; '
         'scores: {"positive":number,"negative":number,"neutral":number}; translation: string|null; analysis: object|null. '
         f"Text: {text}"
@@ -604,6 +617,7 @@ async def _analyze_with_openrouter(
 
     return {
         "engine": "openrouter",
+        "lexicon_priors_included": bool(priors_json),
         "label": label,
         "confidence": confidence,
         "scores": scores,
@@ -623,8 +637,25 @@ async def analyze(body: AnalyzeBody, request: Request):
     try:
         provider = (body.provider or resolve_engine(body.model_id) or "builtin").lower()
         if provider == "ollama":
-            # model_id = body.model_id or os.getenv("OLLAMA_RAG_MODEL") or "latin-sentiment-llama31-5class"
-            model_id = os.getenv("OLLAMA_RAG_MODEL") or "latin-sentiment-llama31-5class"
+            model_id = resolve_model(body.model_id)
+            res = await _analyze_with_model(
+                text,
+                model_id,
+                "ollama",
+                options=body.options,
+                raw=body.raw,
+                fmt=body.format,
+                include_lexicon_priors=bool(body.include_lexicon_priors),
+            )
+            return JSONResponse(res)
+        if provider in {"ollama-rag", "rag"}:
+            # Optional: RAG-enhanced classification. Kept behind an explicit provider to
+            # avoid breaking local Ollama setups that don't have DB/CLTK configured.
+            try:
+                from .latin_llama31_rag import analyze_latin_sentiment_with_rag  # type: ignore
+            except Exception as e:
+                raise HTTPException(status_code=500, detail=f"RAG sentiment unavailable: {e}")
+            model_id = body.model_id or os.getenv("OLLAMA_RAG_MODEL") or "latin_ollama_model:1.0.0"
             res = await analyze_latin_sentiment_with_rag(text, model_id)
             return JSONResponse(res)
         if provider == "hugging face":
@@ -657,6 +688,7 @@ async def analyze(body: AnalyzeBody, request: Request):
                 openrouter_model=openrouter_model,
                 auth_header=auth_header,
                 options=body.options,
+                include_lexicon_priors=bool(body.include_lexicon_priors),
             )
             return JSONResponse(res)
         return JSONResponse(

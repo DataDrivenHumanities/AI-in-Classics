@@ -186,6 +186,7 @@ src/frontend/.next/cache/webpack/**
 
 # General build caches
 node_modules
+*.tsbuildinfo
 
 # Logs
 logs

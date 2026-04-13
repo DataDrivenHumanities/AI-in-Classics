@@ -160,6 +160,8 @@ class LatinLexiconAnnotator:
             raise ValueError("Set DATABASE_URL or pass dsn=...")
 
         self._conn = psycopg.connect(self.dsn, row_factory=dict_row)
+        # Small optional caches (safe for dev/eval runs).
+        self._lemma_to_sentiment_cache: dict[str, list[dict[str, Any]]] = {}
 
     def close(self) -> None:
         try:
@@ -334,7 +336,7 @@ class LatinLexiconAnnotator:
             chosen_row = sorted(candidates, key=_score_key, reverse=True)[0]
             pos_match = bool(matching)
 
-            score = chosen.get("polarity_score")
+            score = chosen_row.get("polarity_score")
             # Keep sentiment-bearing entries OR definition-only lemmas for UI highlighting.
             try:
                 sc = float(score) if score is not None else None
@@ -570,22 +572,6 @@ class LatinLexiconAnnotator:
         if not lemma_ids:
             return {}
         with self._conn.cursor() as cur:
-            cur.execute(
-                """
-                SELECT id, lemma_nod::text AS lemma_nod, lemma_diac, pos
-                FROM public.lemmas
-                WHERE id = ANY(%s)
-                """,
-                (lemma_ids,),
-            )
-            rows = cur.fetchall()
-        return {int(r["id"]): dict(r) for r in rows}
-
-    def _fetch_sentiment_by_lemma_id(self, lemma_ids: list[int]) -> dict[int, list[dict[str, Any]]]:
-        """Sentiment rows from lemma_sentiment_map keyed by dictionary_lemma_id."""
-        if not lemma_ids:
-            return {}
-        with self._conn.cursor() as cur:
             try:
                 cur.execute(
                     """
@@ -612,6 +598,66 @@ class LatinLexiconAnnotator:
                 for r in rows:
                     r["definition"] = None
         return {int(r["id"]): dict(r) for r in rows}
+
+    def _fetch_sentiment_by_lemma_id(self, lemma_ids: list[int]) -> dict[int, list[dict[str, Any]]]:
+        """Sentiment rows from lemma_sentiment_map keyed by dictionary_lemma_id."""
+        if not lemma_ids:
+            return {}
+        with self._conn.cursor() as cur:
+            cur.execute(
+                """
+                SELECT dictionary_lemma_id, sentiment_lemma, pos,
+                       polarity_score, has_polarity, match_source
+                FROM public.lemma_sentiment_map
+                WHERE dictionary_lemma_id = ANY(%s) AND match = TRUE
+                """,
+                (lemma_ids,),
+            )
+            rows = cur.fetchall()
+        grouped: dict[int, list[dict[str, Any]]] = defaultdict(list)
+        for r in rows:
+            grouped[int(r["dictionary_lemma_id"])].append(
+                {
+                    "lemma_raw": r["sentiment_lemma"],
+                    "pos": r["pos"],
+                    "polarity_score": float(r["polarity_score"])
+                    if r["polarity_score"] is not None
+                    else None,
+                    "has_polarity": r["has_polarity"],
+                    "provenance": r["match_source"],
+                    "pos_bucket": _pos_bucket_from_affectus(r["pos"]),
+                }
+            )
+        return dict(grouped)
+
+    def _fetch_sentiment_by_sentiment_id(self, sentiment_ids: list[int]) -> dict[int, dict[str, Any]]:
+        """Sentiment rows from lemma_sentiment_map keyed by sentiment_id (unmatched entries)."""
+        if not sentiment_ids:
+            return {}
+        with self._conn.cursor() as cur:
+            cur.execute(
+                """
+                SELECT sentiment_id, sentiment_lemma, pos,
+                       polarity_score, has_polarity, match_source
+                FROM public.lemma_sentiment_map
+                WHERE sentiment_id = ANY(%s)
+                """,
+                (sentiment_ids,),
+            )
+            rows = cur.fetchall()
+        out: dict[int, dict[str, Any]] = {}
+        for r in rows:
+            out[int(r["sentiment_id"])] = {
+                "lemma_raw": r["sentiment_lemma"],
+                "pos": r["pos"],
+                "polarity_score": float(r["polarity_score"])
+                if r["polarity_score"] is not None
+                else None,
+                "has_polarity": r["has_polarity"],
+                "provenance": r["match_source"],
+                "pos_bucket": _pos_bucket_from_affectus(r["pos"]),
+            }
+        return out
 
     def _fetch_sentiment_rows(self, lemma_keys: list[str]) -> dict[str, list[dict[str, Any]]]:
         """

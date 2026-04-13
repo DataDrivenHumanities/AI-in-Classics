@@ -66,6 +66,8 @@ export default function Analyzer() {
     const [lexAuto, setLexAuto] = useState<boolean>(true);
     const [lexRes, setLexRes] = useState<any | null>(null);
 
+    const [analyzeIncludePriors, setAnalyzeIncludePriors] = useState<boolean>(true);
+
     const [chatMessages, setChatMessages] = useState<Array<{role: "user" | "assistant"; content: string}>>([]);
     const [chatDraft, setChatDraft] = useState<string>("");
     const [chatLoading, setChatLoading] = useState<boolean>(false);
@@ -233,7 +235,8 @@ export default function Analyzer() {
         try {
             const kLocal = window.localStorage.getItem("openrouter_api_key") || "";
             const kSession = window.sessionStorage.getItem("openrouter_api_key") || "";
-            const m = window.sessionStorage.getItem("openrouter_model") || "";
+            const mLocal = window.localStorage.getItem("openrouter_model") || "";
+            const mSession = window.sessionStorage.getItem("openrouter_model") || "";
             if (kLocal) {
                 setOpenrouterKey(kLocal);
                 setRememberOpenrouterKey(true);
@@ -241,6 +244,12 @@ export default function Analyzer() {
                 setOpenrouterKey(kSession);
                 setRememberOpenrouterKey(false);
             }
+            // If a model is remembered but no key is present, still restore the checkbox state.
+            if (!kLocal && !kSession) {
+                if (mLocal) setRememberOpenrouterKey(true);
+                else if (mSession) setRememberOpenrouterKey(false);
+            }
+            const m = mLocal || mSession;
             if (m) setOpenrouterModel(m);
         } catch {
             // ignore
@@ -268,30 +277,20 @@ export default function Analyzer() {
     useEffect(() => {
         if (typeof window === "undefined") return;
         try {
-            // If the user toggles remember, migrate the key to the chosen storage.
-            const key = openrouterKey || "";
-            if (!key) return;
+            const modelId = (openrouterModel || "").trim();
             if (rememberOpenrouterKey) {
-                window.localStorage.setItem("openrouter_api_key", key);
-                window.sessionStorage.removeItem("openrouter_api_key");
+                if (modelId) window.localStorage.setItem("openrouter_model", modelId);
+                else window.localStorage.removeItem("openrouter_model");
+                window.sessionStorage.removeItem("openrouter_model");
             } else {
-                window.sessionStorage.setItem("openrouter_api_key", key);
-                window.localStorage.removeItem("openrouter_api_key");
+                if (modelId) window.sessionStorage.setItem("openrouter_model", modelId);
+                else window.sessionStorage.removeItem("openrouter_model");
+                window.localStorage.removeItem("openrouter_model");
             }
         } catch {
             // ignore
         }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [rememberOpenrouterKey]);
-
-    useEffect(() => {
-        if (typeof window === "undefined") return;
-        try {
-            if (openrouterModel) window.sessionStorage.setItem("openrouter_model", openrouterModel);
-        } catch {
-            // ignore
-        }
-    }, [openrouterModel]);
+    }, [openrouterModel, rememberOpenrouterKey]);
 
     async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
@@ -328,6 +327,7 @@ export default function Analyzer() {
                 model_id: providerMode === "registry" ? model : undefined,
                 provider: providerMode === "openrouter" ? "openrouter" : undefined,
                 openrouter_model: providerMode === "openrouter" ? openrouterModel : undefined,
+                include_lexicon_priors: language === "latin" ? !!analyzeIncludePriors : false,
                 options: {
                     temperature: modelOpts.temperature,
                     top_p: modelOpts.top_p,
@@ -921,6 +921,16 @@ export default function Analyzer() {
                                     <option value="openrouter">OpenRouter</option>
                                 </select>
 
+                                <label style={{display: "flex", gap: 8, alignItems: "center"}}>
+                                    <input
+                                        type="checkbox"
+                                        checked={analyzeIncludePriors}
+                                        onChange={(e) => setAnalyzeIncludePriors(e.target.checked)}
+                                        disabled={language !== "latin"}
+                                    />
+                                    RAG priors
+                                </label>
+
                             <button type="submit" disabled={loading}>
                                     {loading ? "Analyzing…" : "Run sentiment"}
                             </button>
@@ -1016,6 +1026,16 @@ export default function Analyzer() {
                                     </option>
                                 ))}
                             </select>
+
+                            <label style={{display: "flex", gap: 8, alignItems: "center"}}>
+                                <input
+                                    type="checkbox"
+                                    checked={analyzeIncludePriors}
+                                    onChange={(e) => setAnalyzeIncludePriors(e.target.checked)}
+                                    disabled={language !== "latin"}
+                                />
+                                RAG priors
+                            </label>
 
                             <button type="submit" disabled={loading}>
                                 {loading ? "Analyzing…" : "Run sentiment"}
