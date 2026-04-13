@@ -244,6 +244,9 @@ button:disabled {
   max-width: 900px;
   margin-top: 30px;
 }
+.panels.results-stack {
+  grid-template-columns: 1fr;
+}
 .panel {
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(250, 70, 22, 0.4);
@@ -260,6 +263,17 @@ button:disabled {
   word-break: break-word;
   font-size: 13px;
   color: rgba(255, 255, 255, 0.9);
+}
+
+.results-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+@media (max-width: 700px) {
+  .results-two-col {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Workspace */

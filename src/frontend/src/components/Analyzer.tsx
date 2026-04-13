@@ -1617,40 +1617,43 @@ export default function Analyzer() {
                 <>
                     {isHuggingFaceModel ? renderHfTable(resp) :
 
-                        (<div className="panels">
+                        (<div className="panels results-stack">
                             <div className="panel">
                                 <div style={{display: "flex", justifyContent: "space-between", alignItems: "center"}}>
                                     <h3 style={{margin: 0}}>Results</h3>
                                     <div style={{display: "flex", gap: 8}}/>
                                 </div>
-                                <div className="model-settings-grid" style={{marginTop: 10}}>
-                                    <div className="model-settings-label">Engine</div>
-                                    <div>{engine || "—"}</div>
-                                    <>
+                                <div className="results-two-col" style={{marginTop: 10}}>
+                                    <div className="model-settings-grid">
+                                        <div className="model-settings-label">Engine</div>
+                                        <div>{engine || "—"}</div>
+
                                         <div className="model-settings-label">Label</div>
                                         <div>{label ? String(label).toUpperCase() : "—"}</div>
 
                                         <div className="model-settings-label">Confidence</div>
                                         <div>{typeof confidence === "number" ? `${(confidence * 100).toFixed(1)}%` : "—"}</div>
-                                    </>
-                                    {scores && typeof scores === "object" ? (
-                                        <>
-                                            <div className="model-settings-label">Positive</div>
-                                            <div>{(Number(scores.positive) * 100).toFixed(1)}%</div>
 
-                                            <div className="model-settings-label">Neutral</div>
-                                            <div>{(Number(scores.neutral) * 100).toFixed(1)}%</div>
+                                        <div className="model-settings-label">RAG priors</div>
+                                        <div>{(r as any)?.lexicon_priors_included ? "Included" : "Not included"}</div>
+                                    </div>
 
-                                            <div className="model-settings-label">Negative</div>
-                                            <div>{(Number(scores.negative) * 100).toFixed(1)}%</div>
-                                        </>
-                                    ) : null}
+                                    <div className="model-settings-grid">
+                                        <div className="model-settings-label">Positive</div>
+                                        <div>{scores && typeof scores === "object" ? `${(Number(scores.positive) * 100).toFixed(1)}%` : "—"}</div>
+
+                                        <div className="model-settings-label">Neutral</div>
+                                        <div>{scores && typeof scores === "object" ? `${(Number(scores.neutral) * 100).toFixed(1)}%` : "—"}</div>
+
+                                        <div className="model-settings-label">Negative</div>
+                                        <div>{scores && typeof scores === "object" ? `${(Number(scores.negative) * 100).toFixed(1)}%` : "—"}</div>
+                                    </div>
                                 </div>
                             </div>
                             <>
                                 <div className="panel">
                                     <h3>Translation</h3>
-                                    <pre>{translation ? String(translation) : "—"}</pre>
+                                    <MarkdownBlock content={translation ? String(translation) : "—"} />
                                 </div>
                                 <div className="panel">
                                     <h3>Analysis</h3>
