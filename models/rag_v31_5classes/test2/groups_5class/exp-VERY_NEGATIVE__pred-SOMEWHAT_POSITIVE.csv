@@ -1,0 +1,2 @@
+idx,sentence,translation,expected_sentiment,expected_5,expected_3,lemmas,context_hits,prompt_chars,predicted_raw,predicted_5,predicted_3,is_correct_5,is_correct_3,latency_s
+16,Post paucas horas Caesar Asiam cepit,"After a few hours, Caesar captured Asia.",VERY NEGATIVE (-1),VERY NEGATIVE,NEGATIVE,asia caesar cepio hora paucus post,3,546,SOMEWHAT POSITIVE,SOMEWHAT POSITIVE,POSITIVE,False,False,3.129

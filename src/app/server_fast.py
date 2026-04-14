@@ -27,6 +27,7 @@ from .ollama_client import (
 )
 
 from dotenv import load_dotenv
+
 load_dotenv()
 print("DATABASE_URL loaded:", bool(os.getenv("DATABASE_URL")))
 
@@ -34,9 +35,9 @@ _VALID_LABELS = {"positive", "negative", "neutral"}
 _VALID = {"positive", "negative", "neutral"}
 
 app = FastAPI(
-        title="Trojan Parse FastAPI Server",
-        version="1.0.0",
-        description="Unified chat and sentiment analysis endpoints",
+    title="Trojan Parse FastAPI Server",
+    version="1.0.0",
+    description="Unified chat and sentiment analysis endpoints",
 )
 
 app.add_middleware(
@@ -104,6 +105,7 @@ def resolve_model(model_id: Optional[str]):
                 pass
     return "latin_ollama_model:1.0.0"
 
+
 def resolve_engine(model_id: str) -> str:
     try:
         registry = get_registry()
@@ -113,6 +115,7 @@ def resolve_engine(model_id: str) -> str:
         print(f"Model with id {model_id} not found in registry: {e}")
         return ""
 
+
 def resolve_hf_params(model_id: str):
     try:
         registry = get_registry()
@@ -121,6 +124,7 @@ def resolve_hf_params(model_id: str):
     except Exception as e:
         print(f"Model with id {model_id} not found in registry: {e}")
         return {}
+
 
 def _hf_sentiment(text: str, hf_classifier_params: Optional[Dict[str, Any]] | None):
     """
@@ -300,6 +304,7 @@ async def _complete_openrouter_prompt(
         or ""
     )
 
+
 # ------------------------------------------------------------------------------
 #  -----------   Chat endpoint  -----------   -----------   -----------
 # ------------------------------------------------------------------------------
@@ -348,7 +353,9 @@ async def chat(req: ChatRequest, request: Request):
         if provider == "openrouter":
             openrouter_model = (req.openrouter_model or req.model_id or "").strip()
             if not openrouter_model:
-                raise HTTPException(status_code=400, detail="openrouter_model is required")
+                raise HTTPException(
+                    status_code=400, detail="openrouter_model is required"
+                )
             auth_header = request.headers.get("authorization") or ""
             if not auth_header.lower().startswith("bearer "):
                 raise HTTPException(
@@ -396,9 +403,8 @@ async def chat(req: ChatRequest, request: Request):
                     )
 
             content = (
-                (((data or {}).get("choices") or [{}])[0].get("message") or {}).get("content")
-                or ""
-            )
+                ((data or {}).get("choices") or [{}])[0].get("message") or {}
+            ).get("content") or ""
             return ChatResponse(model_id=openrouter_model, content=str(content))
 
         if req.stream:
@@ -454,10 +460,7 @@ async def _analyze_with_model(
 
     if engine == "hugging face":
         res = _hf_sentiment(text, hf_classifier_params)
-        return {
-            "engine": "hugging face",
-            "labels and scores by sentence": res
-        }
+        return {"engine": "hugging face", "labels and scores by sentence": res}
     from .ollama_client import generate_json_with_analysis
     priors_json = _latin_lexicon_priors_json(
         (text or "").strip()[:6000], include=bool(include_lexicon_priors)
@@ -497,8 +500,12 @@ async def _analyze_with_model(
     confidence = float(parsed.get("confidence") or 0.5)
     scores = parsed.get("scores") or {}
     scores = {
-        "positive": float(scores.get("positive") or (1.0 if label == "positive" else 0.0)),
-        "negative": float(scores.get("negative") or (1.0 if label == "negative" else 0.0)),
+        "positive": float(
+            scores.get("positive") or (1.0 if label == "positive" else 0.0)
+        ),
+        "negative": float(
+            scores.get("negative") or (1.0 if label == "negative" else 0.0)
+        ),
         "neutral": float(scores.get("neutral") or (1.0 if label == "neutral" else 0.0)),
     }
 
@@ -585,10 +592,9 @@ async def _analyze_with_openrouter(
                 detail=detail or f"OpenRouter request failed: {e.response.status_code}",
             )
 
-    raw_content = (
-        (((data or {}).get("choices") or [{}])[0].get("message") or {}).get("content")
-        or ""
-    )
+    raw_content = (((data or {}).get("choices") or [{}])[0].get("message") or {}).get(
+        "content"
+    ) or ""
     parsed = _safe_parse_json_text(str(raw_content))
 
     label = str(parsed.get("label") or "neutral").lower()
@@ -604,9 +610,15 @@ async def _analyze_with_openrouter(
     scores = parsed.get("scores") or {}
     try:
         scores = {
-            "positive": float(scores.get("positive") or (1.0 if label == "positive" else 0.0)),
-            "negative": float(scores.get("negative") or (1.0 if label == "negative" else 0.0)),
-            "neutral": float(scores.get("neutral") or (1.0 if label == "neutral" else 0.0)),
+            "positive": float(
+                scores.get("positive") or (1.0 if label == "positive" else 0.0)
+            ),
+            "negative": float(
+                scores.get("negative") or (1.0 if label == "negative" else 0.0)
+            ),
+            "neutral": float(
+                scores.get("neutral") or (1.0 if label == "neutral" else 0.0)
+            ),
         }
     except Exception:
         scores = {
@@ -633,7 +645,7 @@ async def analyze(body: AnalyzeBody, request: Request):
     print("API body.model_id =", body.model_id)
     print("API env OLLAMA_RAG_MODEL =", os.getenv("OLLAMA_RAG_MODEL"))
     print("API provider =", body.provider)
-    
+
     try:
         provider = (body.provider or resolve_engine(body.model_id) or "builtin").lower()
         if provider == "ollama":
@@ -658,6 +670,21 @@ async def analyze(body: AnalyzeBody, request: Request):
             model_id = body.model_id or os.getenv("OLLAMA_RAG_MODEL") or "latin_ollama_model:1.0.0"
             res = await analyze_latin_sentiment_with_rag(text, model_id)
             return JSONResponse(res)
+        if provider == "latin_bert":
+            # Run the locally-loaded Latin BERT model.
+            # Import is deferred so the heavy model load only happens on first request.
+            from latin_bert.bert_service import run_bert_sentiment  # type: ignore
+
+            try:
+                res = run_bert_sentiment(text)
+            except Exception as e:
+                import traceback
+
+                traceback.print_exc()
+                raise HTTPException(
+                    status_code=500, detail=f"BERT inference error: {e}"
+                )
+            return JSONResponse(res)
         if provider == "hugging face":
             model_id = resolve_model(body.model_id)
             hf_classifier_params = resolve_hf_params(body.model_id)
@@ -675,7 +702,8 @@ async def analyze(body: AnalyzeBody, request: Request):
             openrouter_model = (body.openrouter_model or "").strip()
             if not openrouter_model:
                 raise HTTPException(
-                    status_code=400, detail="openrouter_model is required for provider=openrouter"
+                    status_code=400,
+                    detail="openrouter_model is required for provider=openrouter",
                 )
             auth_header = request.headers.get("authorization") or ""
             if not auth_header.lower().startswith("bearer "):
@@ -710,6 +738,7 @@ async def analyze(body: AnalyzeBody, request: Request):
         raise HTTPException(status_code=502, detail=f"Model backend error: {e}")
     except Exception as e:
         import traceback
+
         traceback.print_exc()
         raise HTTPException(status_code=500, detail=f"Unhandled error: {e}")
 
@@ -744,7 +773,11 @@ async def llm_analyze(body: LlmAnalyzeBody, request: Request):
     prompt = (
         f"You are a {('Latin' if language == 'latin' else 'Ancient Greek')} text analysis assistant.\n"
         "Answer using the provided text; do not ask the user to paste it.\n"
-        + ("If lexicon priors are included, treat them as weak evidence (coverage may be incomplete).\n\n" if language == "latin" else "\n")
+        + (
+            "If lexicon priors are included, treat them as weak evidence (coverage may be incomplete).\n\n"
+            if language == "latin"
+            else "\n"
+        )
         + f"{priors_json}"
         + f"{meta_block}"
         + f"Task:\n{task}\n\n"
@@ -833,7 +866,18 @@ async def analyze_upload(
             )
             res["text"] = text
             return JSONResponse(res)
-        return JSONResponse({"engine": "builtin", "label": "neutral", "confidence": 0.5, "scores": {"positive": 0.25, "negative": 0.25, "neutral": 0.5}, "raw_model_output": "", "translation": None, "analysis": None, "text": text})
+        return JSONResponse(
+            {
+                "engine": "builtin",
+                "label": "neutral",
+                "confidence": 0.5,
+                "scores": {"positive": 0.25, "negative": 0.25, "neutral": 0.5},
+                "raw_model_output": "",
+                "translation": None,
+                "analysis": None,
+                "text": text,
+            }
+        )
     except HTTPException:
         raise
     except (httpx.ReadTimeout, httpx.ConnectTimeout):
@@ -852,6 +896,7 @@ async def analyze_upload(
 @app.get("/api/health")
 def api_health():
     return {"ok": True, "service": "trojan-parse-api"}
+
 
 @app.get("/api/model_registry")
 def api_model_registry():

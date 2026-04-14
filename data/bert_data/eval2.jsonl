@@ -1,0 +1,70 @@
+{"sentence": "Caelum pulchrum est.", "label": 1}
+{"sentence": "Puer discipulus malus est.", "label": 0}
+{"sentence": "Copiae amiserunt bellum.", "label": 0}
+{"sentence": "Pater laudabat filium.", "label": 1}
+{"sentence": "Marcus Brutus tradidit suum amicum.", "label": 0}
+{"sentence": "Ego optimus miles eram.", "label": 1}
+{"sentence": "Quae scelera videmus?", "label": 0}
+{"sentence": "Malum consilium est.", "label": 0}
+{"sentence": "Sum amicus eius", "label": 1}
+{"sentence": "Brutus te laudavit", "label": 1}
+{"sentence": "Patria delebatur", "label": 0}
+{"sentence": "Domus ustus erat.", "label": 0}
+{"sentence": "Gladiator praemium vicit.", "label": 1}
+{"sentence": "Vita eius erat nimis brevis.", "label": 0}
+{"sentence": "Panis fuit bonus.", "label": 1}
+{"sentence": "Post paucas horas Caesar Asiam cepit", "label": 0}
+{"sentence": "Mater beatum infantem bene curat.", "label": 1}
+{"sentence": "Imperator non curat de salute suae nationis.", "label": 0}
+{"sentence": "Mater paterque suos pueros neglexerunt.", "label": 0}
+{"sentence": "Puer miser ab animali saevo necatus erat.", "label": 0}
+{"sentence": "Venator ursam post longam pugnam necavit.", "label": 0}
+{"sentence": "Post redierunt Romam, nautae usi sunt otium.", "label": 1}
+{"sentence": "Puella est laeta videre suum fratrem minorem.", "label": 1}
+{"sentence": "Navis confractus est ab hostibus Romae.", "label": 0}
+{"sentence": "Heros erat qui multos cives servavit.", "label": 1}
+{"sentence": "Urbs ab hostibus malis victa deletaque est.", "label": 0}
+{"sentence": "Magna facta discipulorum eius magistro veteri placuerunt.", "label": 1}
+{"sentence": "Puellae iuveni curiosaeque libet in agros migrare.", "label": 1}
+{"sentence": "Sol ita lucet ut fruges celeriter crescant.", "label": 1}
+{"sentence": "Imperator iussit milites interficere sine misericordia.", "label": 0}
+{"sentence": "Princeps sensit fas suum custodire patriam.", "label": 1}
+{"sentence": "Amici Scipionis invitaverunt ad cenam post victoriam magnam vixit.", "label": 1}
+{"sentence": "Vir egit gratias Venerem uxori pulchrae et Iunonem liberis.", "label": 1}
+{"sentence": "Sceleratus vehemens expulsus erat sicut poena vitae vitiosae.", "label": 0}
+{"sentence": "Fabulae a patre eorum narratae sororem fratremque oblectaverunt.", "label": 1}
+{"sentence": "Cupiditate aeterna devotus, desidero aliquam quae non desiderat me.", "label": 0}
+{"sentence": "Cum peste adfecti essent, boves iam moriebantur.", "label": 0}
+{"sentence": "Puella puero nervoso dixit se reddere amorem eius.", "label": 1}
+{"sentence": "Cum bellum tandem vicissent, cives magno gaudio celebrabant.", "label": 1}
+{"sentence": "Umbra uxoris mortuae illum miserum ita persequitur ut otium numquam reperiat.", "label": 0}
+{"sentence": "Cum nemo audiat, poeta tristis queritur dominam eum relinquisse.", "label": 0}
+{"sentence": "Bono nuntio accepto, nuntius delectatus civibus nuntiat opem iam adventuram esse.", "label": 1}
+{"sentence": "Vulgus surrexerunt fores aedis, necatatum et consauciatum multos.", "label": 0}
+{"sentence": "Canes denique invenerunt aprum post diem longum et miserum ita venatores id potuerunt necare", "label": 0}
+{"sentence": "Quod ea voluerat fratrem tam diu, puella celebravit quando mater peperit iterum.", "label": 1}
+{"sentence": "In oratone, orator optimus fuit et igitur multas coronas laurinas vicit.", "label": 1}
+{"sentence": "Stultitiast, mater, venatum ducere invitas canes", "label": 0}
+{"sentence": "Si quis metuens vivet, liber mihi non erit umquam", "label": 0}
+{"sentence": "imperator promisit decem milia militum celerrime discessura esse, dummodo satis copiarum reciperent.", "label": 1}
+{"sentence": "Cum c\u016br\u0101 docet ut discipul\u012b bene discant", "label": 1}
+{"sentence": "Sol lucet in caelo.", "label": 2}
+{"sentence": "Urbs Roma in Italia est.", "label": 2}
+{"sentence": "Ego in villa ambulo.", "label": 2}
+{"sentence": "Annus habet duodecim menses.", "label": 2}
+{"sentence": "Quid est vita sine amore?", "label": 0}
+{"sentence": "O quam felix es, qui omnia perdidisti!", "label": 0}
+{"sentence": "Si Roma caderet, quid faceremus?", "label": 2}
+{"sentence": "Utinam pax in mundo sit.", "label": 1}
+{"sentence": "Puellula mea in villa cantat.", "label": 1}
+{"sentence": "Homunculus ille nihil scit.", "label": 0}
+{"sentence": "Domine, salvum me fac.", "label": 1}
+{"sentence": "Scientia nova in libris invenitur.", "label": 1}
+{"sentence": "Ego sum lux mundi.", "label": 1}
+{"sentence": "Respublica in periculis versatur.", "label": 0}
+{"sentence": "Deus meus, quare me dereliquisti?", "label": 0}
+{"sentence": "Timor Domini initium sapientiae est.", "label": 1}
+{"sentence": "Ego felum in villa vidi.", "label": 2}
+{"sentence": "Postquam milites in silvam intraverunt, ferae saevae eos insequebantur, et multi perierunt.", "label": 0}
+{"sentence": "Cum philosophi in academia disputarent, discipuli eorum nova praecepta didicerunt.", "label": 1}
+{"sentence": "Domus mea igne consumpta est.", "label": 0}

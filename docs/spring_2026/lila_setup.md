@@ -1,6 +1,6 @@
 ## LiLa / LEMLAT local data
 
-This folder contains local data files used to build the Latin LiLa/LEMLAT + LatinAffectus PostgreSQL database.
+data/lila/ contains local data files used to build the Latin LiLa/LEMLAT + LatinAffectus PostgreSQL database.
 
 ## Local DB setup (one Postgres DB, two schemas)
 
@@ -18,17 +18,26 @@ High level: bootstrap schema → import LEMLAT dump + sentiment → (optionally)
   - `psycopg2-binary` (used by `scripts/bootstrap_latin_db.py` and `src/Lemmatizer-LTN-LiLa/ops/import_lila_data.py`)
   - `psycopg` (used by `src/Lemmatizer-LTN/etl/load_to_postgres.py`)
   - `python-dotenv`, `pandas`
-
+  
+```bash
+./.venv/bin/python3 scripts/download_lemlat.py
+```
+```
+#setup user and password
+sudo -u postgres createuser --superuser root
+sudo -u postgres psql -c "\password root"
+```
 ### 1) Create DB + set `DATABASE_URL`
 
 ```bash
+#if root
 createdb lemlat_db
 ```
 
 Create a repo-root `.env` (not committed) with:
 
 ```bash
-DATABASE_URL=postgresql://127.0.0.1/lemlat_db
+DATABASE_URL=postgresql://root:yourpassword@127.0.0.1/lemlat_db
 ```
 
 ### 2) Bootstrap schema objects (tables/functions/extensions)

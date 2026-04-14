@@ -1,29 +1,53 @@
 # Development Guide
-
-Pick **one** setup path: **Poetry**, **plain Python (venv)**, or **Docker**.  
-Then (optionally) build the **Ollama** models for sentiment tests.
-
-> We recommend **Poetry** or **Docker** for the smoothest experience.
-
----
-
-## Prerequisites
-
-- **Python 3.10+**
-  - If you want to use **Poetry**, this repo’s `pyproject.toml` currently requires **Python <3.12**.
-- **Make** (macOS/Linux preinstalled; Windows: download [here](https://sourceforge.net/projects/gnuwin32/files/make/3.81/make-3.81.exe/download?use_mirror=cytranet-dal&download) or `choco install make` or use WSL)
-- **Ollama** (for local LLM): <https://ollama.com/download>
-- **Docker** (optional): <https://docs.docker.com/get-docker/>
-
----
 ## 1. Quick Start
-### 1a. Quick Start (Poetry)
+Installs Node.js and UV and Ollama
+## Windows
+```
+#Right click run as admin
+install.bat
+```
+
+## Linux
+```
+chmod +x install.sh
+./install.sh
+```
+---
 
 ```bash
 # from repo root
-make setup          # uses Poetry if compatible; otherwise falls back to venv + requirements.txt
-make web            # runs Streamlit app (default: src/app/server_streamlit.py)
+make setup          # uses uv
+
+make start         
+# runs Streamlit app (default: src/app/server_streamlit.py)
+# runs api
+# runs frontend next.js app
 ```
+---
+
+# MANUAL SETUP INSTRUCTIONS
+
+Install Node.js and UV and Ollama  
+Included a bat file for windows and an sh file for linux  
+You can also do it manually with plaform specific commands
+
+```
+uv venv --python 3.12
+uv pip install -r requirements.txt
+
+cd src/frontend/
+npm install
+
+ollama pull llama3.1:8b
+ollama pull gemma4:e4b
+
+ollama create latin_model:1.0.0 -f models/latin_model/Modelfile
+ollama create greek_model:1.0.0 -f models/greek_model/Modelfile
+
+ollama serve
+
+```
+
 
 ### Tests, formatting
 
@@ -31,38 +55,6 @@ make web            # runs Streamlit app (default: src/app/server_streamlit.py)
 make test           # pytest
 make check          # black --check
 make fix            # black (format)
-```
-
----
-
-### 1b. Quick Start (Python venv)
-
-If you don't use Poetry:
-
-```bash
-make setup-venv     # creates .venv and installs requirements.txt (if present)
-make web            # runs Streamlit
-# or
-make run
-```
-
-> If you don't have a `requirements.txt`, either generate one from Poetry (`poetry export -f requirements.txt --output requirements.txt`) or switch to the Poetry path.
-
----
-
-### 1c. Quick Start (Docker)
-
-```bash
-make docker-build
-make docker-dev     # mounts repo for live reload, exposes port (default 8501)
-# or
-make docker-run     # simple run of the built image
-```
-
-Common maintenance:
-
-```bash
-make docker-clean   # remove dangling containers/images
 ```
 
 ---
@@ -199,19 +191,7 @@ APP_ENTRY=src/app/server_streamlit.py
 STREAMLIT_APP=src/app/server_streamlit.py
 ```
 
----
 
-## (Optional) Legacy build script
-
-If you still want a local build script:
-
-```bash
-sh .build.sh
-cd src/app
-python3 app.py
-```
-
-> Note: the old docs had a typo (`.buld.sh`). Make sure your script is actually named `.build.sh`.
 
 ---
 
