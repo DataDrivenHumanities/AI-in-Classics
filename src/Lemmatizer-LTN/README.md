@@ -173,6 +173,8 @@ The loader (`etl/load_aggregates_to_postgres.py`) efficiently bulk-loads data:
 
 **Output**: Per-lemma CSV files in `out/` directory
 
+Note: older `out/*.csv` snapshots may predate definition scraping and will not include a `definition` column. Re-run `tools/scrape_tables.py` to regenerate outputs with definitions.
+
 ### ETL Pipeline
 
 **Files**:

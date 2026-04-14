@@ -517,20 +517,34 @@ button:disabled {
   margin: 0 2px;
   cursor: pointer;
   user-select: none;
-  transition: transform 0.05s ease, box-shadow 0.12s ease, outline-color 0.12s ease;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  transition: box-shadow 0.12s ease, outline-color 0.12s ease;
 }
 .lex-chip:hover {
-  transform: translateY(-1px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
-  outline: 2px solid rgba(37, 99, 235, 0.4);
-  outline-offset: 2px;
+  outline-color: rgba(255, 255, 255, 0.38);
 }
 .lex-chip:focus {
-  outline: 2px solid rgba(37, 99, 235, 0.55);
-  outline-offset: 2px;
+  outline-color: rgba(37, 99, 235, 0.55);
 }
 
-/* Neutral “definition-only” chips: visually blend with text, underline on hover */
+/* Definition hits: subtle underline always; stronger on hover/focus */
+.lex-chip.lex-has-def {
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: rgba(255, 255, 255, 0.38);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+.lex-chip.lex-has-def:hover,
+.lex-chip.lex-has-def:focus {
+  text-decoration-style: solid;
+  text-decoration-color: rgba(255, 255, 255, 0.88);
+  text-decoration-thickness: 2px;
+}
+
+/* Neutral “definition-only” chips: visually blend with text */
 .lex-chip-neutral {
   background: transparent !important;
   border-color: transparent !important;
@@ -543,27 +557,13 @@ button:disabled {
   transform: none !important;
   box-shadow: none !important;
   outline: none !important;
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 3px;
-}
-.lex-chip-neutral:focus {
-  outline: none !important;
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 3px;
-}
-.lex-chip-neutral:hover {
-  text-decoration: underline;
-  outline: none;
-  box-shadow: none;
 }
 .lex-popup {
-  position: fixed;
+  position: absolute;
   z-index: 9999;
   transform: translateX(-50%);
   min-width: 220px;
-  max-width: min(360px, 92vw);
+  max-width: min(360px, calc(100% - 24px));
   padding: 10px 12px;
   border-radius: 12px;
   background: rgba(17, 24, 39, 0.96);

@@ -88,7 +88,23 @@ The single script creates two tables in order:
 
 The script is idempotent -- re-running drops and recreates both tables.
 
-### 6) Quick verification
+### 6) Backfill English definitions (recommended for Lexicon Highlight popups)
+
+The Lexicon Highlight UI shows a definition popup when `public.lemmas.definition` is populated.
+
+Fast path (fills definitions for **sentiment-mapped** dictionary lemmas first):
+
+```bash
+./.venv/bin/python src/Lemmatizer-LTN/tools/scrape_definitions.py --only-sentiment --limit 6000
+```
+
+Broader backfill (all lemmas; slower):
+
+```bash
+./.venv/bin/python src/Lemmatizer-LTN/tools/scrape_definitions.py --limit 100000
+```
+
+### 7) Quick verification
 
 ```bash
 psql -d lemlat_db -c "\\dt lila.*"
@@ -100,7 +116,7 @@ psql -d lemlat_db -c "select count(*) as sentiment_map from public.lemma_sentime
 psql -d lemlat_db -c "select count(*) as word_lookup from public.word_lookup;"
 ```
 
-### 6) Quick payload smoke-test (lexicon priors)
+### 8) Quick payload smoke-test (lexicon priors)
 
 ```bash
 ./.venv/bin/python3 scripts/latin_lexicon_annotator_debug.py \
