@@ -80,8 +80,8 @@ def main():
             result = conn.execute("""
                 INSERT INTO lemmas (lemma_code, lemma_nod, lemma_diac, english_definition, pos, gender, page_url)
                 VALUES (%s, norm(%s), %s, %s, %s, %s, %s)
-                ON CONFLICT (lemma_nod) DO UPDATE SET
-                    lemma_code = EXCLUDED.lemma_code,
+                ON CONFLICT (lemma_code) DO UPDATE SET
+                    lemma_nod = EXCLUDED.lemma_nod,
                     lemma_diac = EXCLUDED.lemma_diac
                 RETURNING id;
             """, (l['lemma_code'], l['lemma_nod'], l['lemma_diac'], l['english_definition'], l['pos'], l['gender'], l['page_url']))

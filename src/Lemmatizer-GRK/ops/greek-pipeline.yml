@@ -37,10 +37,10 @@ jobs:
       
       if ('${{ parameters.testing }}' -eq 'True') {
         Write-Host "MODE: TEST RUN (Pages 1 - 10)"
-        .\.venv\Scripts\python.exe src/Lemmatizer-GRK/tools/scrape_tables.py --start 1 --end 10 --lemma-concurrency 10 --delay 1.0
+        .\.venv\Scripts\python.exe src/Lemmatizer-GRK/tools/scrape_tables.py --start 1 --end 10 --lemma-concurrency 10 --delay 0.2
       } else {
         Write-Host "MODE: PRODUCTION RUN (Full Perseus Greek Library)"
-        .\.venv\Scripts\python.exe src/Lemmatizer-GRK/tools/scrape_tables.py --start 1 --end 6828 --lemma-concurrency 10 --delay 1.0
+        .\.venv\Scripts\python.exe src/Lemmatizer-GRK/tools/scrape_tables.py --start 1 --end 6828 --lemma-concurrency 10 --delay 0.2
       }
 
       Write-Host "Running Validation..."
@@ -63,7 +63,7 @@ jobs:
 
       Write-Host "Uploading scraped CSVs to Google Drive..."
       $jsonPath = "$(googleAuth.secureFilePath)"
-      $folderId = "1vysIYLsUlikIM_IDj3N5YtG0dZgYF9d_" 
+      $folderId = "1a-uzs5boxrk2QeRLWQydKwUexLYKY9D-" 
       $outDir = "$(Build.SourcesDirectory)\src\Lemmatizer-GRK\out"
       
       # Force PowerShell and Python to use UTF-8 natively and unbuffer logs
@@ -76,13 +76,23 @@ jobs:
       .\.venv\Scripts\python.exe src/Lemmatizer-GRK/tools/upload_to_drive.py --service-account-json "$jsonPath" --folder-id "$folderId" --files "$outDir" --max-workers 1 2>&1
     displayName: 'Deliver Data to Google Drive'
 
-  # 3. Clean up local files to save hard drive space
+  # 3. Load Data into Local PostgreSQL Database
+  - powershell: |
+      Write-Host "Connecting to local PostgreSQL..."
+      .\.venv\Scripts\python.exe -m pip install psycopg
+    
+      Write-Host "Loading batched CSVs into database..."
+      .\.venv\Scripts\python.exe src/Lemmatizer-GRK/etl/load_greek_to_postgres.py
+    displayName: 'Load into PostgreSQL'
+
+  
+  # 4. Clean up local files to save hard drive space
   - powershell: |
       Write-Host "Cleaning up local CSV files..."
-      $outDir = "$(Build.SourcesDirectory)\src\Lemmatizer-GRK\out"
-      if (Test-Path $outDir) {
-        Remove-Item "$outDir\*.csv" -Force
-        Write-Host "Cleanup complete! Hard drive space saved."
-      }
+      $rawDir = "$(Build.SourcesDirectory)\src\Lemmatizer-GRK\out"
+      $batchDir = "$(Build.SourcesDirectory)\src\Lemmatizer-GRK\out_batched"
+      if (Test-Path $rawDir) { Remove-Item "$rawDir\*.csv" -Force }
+      if (Test-Path $batchDir) { Remove-Item "$batchDir\*.csv" -Force }
+      Write-Host "Cleanup complete! Hard drive space saved."
     displayName: 'Clean Up Local Files'
     condition: always()
