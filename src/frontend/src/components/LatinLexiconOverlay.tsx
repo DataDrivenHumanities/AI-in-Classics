@@ -1,6 +1,6 @@
 "use client";
 
-import React, {useEffect, useMemo, useRef, useState} from "react";
+import React, {useEffect, useLayoutEffect, useMemo, useRef, useState} from "react";
 
 type LexSpan = {
     start: number;
@@ -15,6 +15,32 @@ type LexSpan = {
 };
 
 type LemmaDetails = Record<string, any>;
+
+function splitNumberedDefinition(definition: string): string[] {
+    const s = String(definition || "").trim();
+    if (!s) return [];
+    const hasNumbered = /\b\d+\.\s*/.test(s);
+    if (!hasNumbered) return [s];
+
+    // Prefer splitting on `;` boundaries when they precede a numbered sense.
+    const semiParts = s
+        .split(/;\s*(?=\d+\.\s*)/g)
+        .map((p) => p.trim())
+        .filter(Boolean);
+    if (semiParts.length >= 2) return semiParts;
+
+    // Fallback: slice by numbered markers.
+    const matches = Array.from(s.matchAll(/\b\d+\.\s*/g));
+    if (matches.length <= 1) return [s];
+    const out: string[] = [];
+    for (let i = 0; i < matches.length; i++) {
+        const start = matches[i].index ?? 0;
+        const end = (i + 1) < matches.length ? (matches[i + 1].index ?? s.length) : s.length;
+        const chunk = s.slice(start, end).trim().replace(/;+\s*$/, "");
+        if (chunk) out.push(chunk);
+    }
+    return out.length ? out : [s];
+}
 
 function sentimentBg(score: number) {
     const s = Math.max(-1, Math.min(1, Number(score) || 0));
@@ -36,8 +62,10 @@ export default function LatinLexiconOverlay(props: {
 }) {
     const {text, spans, lemmaDetails = {}} = props;
     const rootRef = useRef<HTMLDivElement | null>(null);
+    const popupRef = useRef<HTMLDivElement | null>(null);
 
     const [popup, setPopup] = useState<null | {
+        hitKey: string;
         lemma: string;
         scoreText: string;
         scoreValue: number | null;
@@ -48,8 +76,30 @@ export default function LatinLexiconOverlay(props: {
         posMatch: string;
         x: number;
         y: number;
-        definition?: string;
+        definitions: string[];
     }>(null);
+
+    useLayoutEffect(() => {
+        const root = rootRef.current;
+        const pop = popupRef.current;
+        if (!popup || !root || !pop) return;
+
+        const pad = 10;
+        const rootW = root.clientWidth || 0;
+        const popW = pop.offsetWidth || 0;
+        if (rootW <= 0 || popW <= 0) return;
+
+        // Keep popup fully within the visible overlay bounds horizontally.
+        // (We use translateX(-50%), so `x` is the popup center.)
+        const maxCenterHalf = Math.max(pad, (rootW - 2 * pad) / 2);
+        const half = Math.min(popW / 2, maxCenterHalf);
+        const minX = pad + half;
+        const maxX = rootW - pad - half;
+        const newX = clamp(popup.x, minX, maxX);
+        if (Math.abs(newX - popup.x) > 0.5) {
+            setPopup((prev) => (prev ? {...prev, x: newX} : prev));
+        }
+    }, [popup]);
 
     const parts = useMemo(() => {
         if (!text) return [];
@@ -66,6 +116,7 @@ export default function LatinLexiconOverlay(props: {
             lemma: string;
             score: number;
             isNeutral: boolean;
+            hasDefinition: boolean;
         }
         > = [];
 
@@ -91,6 +142,7 @@ export default function LatinLexiconOverlay(props: {
                     lemma,
                     score: Number.isFinite(score) ? score : 0,
                     isNeutral: !(Number.isFinite(score) && score !== 0) && hasDefinition,
+                    hasDefinition,
                 });
             } else {
                 out.push({k: `s-${i}-${start}`, kind: "plain", text: surface});
@@ -118,9 +170,17 @@ export default function LatinLexiconOverlay(props: {
         };
     }, []);
 
-    function openPopup(lemma: string, score: number, anchor: HTMLElement) {
+    function openPopup(hitKey: string, lemma: string, score: number, anchor: HTMLElement) {
+        // Toggle off when clicking the same highlighted word again.
+        if (popup?.hitKey && popup.hitKey === hitKey) {
+            setPopup(null);
+            return;
+        }
+
         const det = lemmaDetails?.[lemma] || {};
         const rect = anchor.getBoundingClientRect();
+        const root = rootRef.current;
+        const rootRect = root?.getBoundingClientRect();
 
         const pos = String(det.scraped_pos_bucket ?? det.pos_bucket ?? "");
         const prov = String(det.provenance ?? "");
@@ -128,15 +188,42 @@ export default function LatinLexiconOverlay(props: {
         const cnt = det.count ?? "";
         const pm = det.pos_match;
         const pm_s = pm == null ? "" : pm ? "yes" : "no";
+        const definitions = splitNumberedDefinition(det.definition || "");
 
         const pad = 10;
-        const x = clamp(rect.left + rect.width / 2, pad, window.innerWidth - pad);
-        const y = clamp(rect.bottom + 8, pad, window.innerHeight - pad);
+        let x = rect.left + rect.width / 2;
+        let y = rect.bottom + 8;
+
+        // Prefer anchoring inside the overlay container so scrolling keeps the popup pinned to the word.
+        if (root && rootRect) {
+            x = x - rootRect.left;
+            y = y - rootRect.top;
+
+            // Best-effort: if we're near the bottom edge of the scroll viewport, open above the word.
+            // (The popup is scroll-pinned regardless; this just improves first render.)
+            const scroller = root.closest(".text-view") as HTMLElement | null;
+            const scRect = scroller?.getBoundingClientRect();
+            if (scRect) {
+                const approxPopupH = 240;
+                const belowBottom = rect.bottom + approxPopupH > scRect.bottom;
+                if (belowBottom) {
+                    y = (rect.top - rootRect.top) - 10; // above the word
+                }
+            }
+
+            x = clamp(x, pad, rootRect.width - pad);
+            y = Math.max(pad, y);
+        } else {
+            // Fallback (should be rare): keep within viewport.
+            x = clamp(x, pad, window.innerWidth - pad);
+            y = clamp(y, pad, window.innerHeight - pad);
+        }
 
         const scoreValue = Number.isFinite(score) && score !== 0 ? score : null;
         const scoreText = scoreValue == null ? "" : `${scoreValue >= 0 ? "+" : ""}${scoreValue.toFixed(2)}`;
 
         setPopup({
+            hitKey,
             lemma,
             scoreText,
             scoreValue,
@@ -147,7 +234,7 @@ export default function LatinLexiconOverlay(props: {
             posMatch: pm_s,
             x,
             y,
-            definition: det.definition || "",
+            definitions,
         });
     }
 
@@ -158,21 +245,26 @@ export default function LatinLexiconOverlay(props: {
                     if (p.kind === "plain") return <React.Fragment key={p.k}>{p.text}</React.Fragment>;
                     const bg = sentimentBg(p.score);
                     const isNeutral = p.isNeutral;
+                    const hasDef = p.hasDefinition;
                     return (
                         <span
                             key={p.k}
-                            className={`lex-chip ${isNeutral ? "lex-chip-neutral" : ""}`}
+                            className={`lex-chip ${isNeutral ? "lex-chip-neutral" : ""} ${hasDef ? "lex-has-def" : ""}`}
                             role="button"
                             tabIndex={0}
                             style={{background: bg, borderColor: isNeutral ? 'transparent' : bg}}
-                            onClick={(e) => openPopup(p.lemma, p.score, e.currentTarget)}
+                            onClick={(e) => openPopup(p.k, p.lemma, p.score, e.currentTarget)}
                             onKeyDown={(e) => {
                                 if (e.key === "Enter" || e.key === " ") {
                                     e.preventDefault();
-                                    openPopup(p.lemma, p.score, e.currentTarget as any);
+                                    openPopup(p.k, p.lemma, p.score, e.currentTarget as any);
                                 }
                             }}
-                            title={`${p.lemma}${p.score !== 0 ? ` ${p.score >= 0 ? "+" : ""}${p.score.toFixed(2)}` : ""}`}
+                            title={
+                                `${p.lemma}` +
+                                `${p.score !== 0 ? ` ${p.score >= 0 ? "+" : ""}${p.score.toFixed(2)}` : ""}` +
+                                `${hasDef ? " (click for definition)" : ""}`
+                            }
                         >
                             {p.text}
                         </span>
@@ -181,11 +273,15 @@ export default function LatinLexiconOverlay(props: {
             </div>
 
             {popup && (
-                <div className="lex-popup" style={{left: popup.x, top: popup.y}}>
+                <div ref={popupRef} className="lex-popup" style={{left: popup.x, top: popup.y}}>
                     <div className="lex-popup-title">{popup.lemma}</div>
-                    {popup.definition && (
-                        <div className="lex-popup-row" style={{marginBottom: "6px"}}>
-                            <span>{popup.definition}</span>
+                    {popup.definitions.length > 0 && (
+                        <div style={{marginBottom: "6px"}}>
+                            {popup.definitions.map((d, i) => (
+                                <div key={`${popup.lemma}-def-${i}`} className="lex-popup-row">
+                                    <span>{d}</span>
+                                </div>
+                            ))}
                         </div>
                     )}
                     {popup.scoreValue != null && (
