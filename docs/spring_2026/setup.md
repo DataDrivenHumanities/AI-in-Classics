@@ -1,41 +1,35 @@
 
-
-
-## LINUX REF
+## INSTALL BREW
+[Homebrew — The Missing Package Manager for macOS (or Linux)](https://brew.sh/)
 ```
-#CLEAR PORTS 
-fuser -k 5050/tcp; fuser -k 8501/tcp; fuser -k 3000/tcp
-
-#RAG SETUP
-rm -rf /root/stanza_resources
-ln -s /root/.cache/stanza/1.11.0/resources /root/stanza_resources
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
-## WINDOWS REF
-```
-# CLEAR PORTS
-@(5050, 8501, 3000) | ForEach-Object { Get-NetTCPConnection -LocalPort $_ -State Listen -ErrorAction SilentlyContinue | ForEach-Object { Stop-Process -Id $_.OwningProcess -Force -ErrorAction SilentlyContinue } }
-```
-
-# SETUP
 
 ## POSTGRES SETUP
 ```
+brew install postgresql@18
+```
+[postgre_setup](lila_setup)
 
+```
 #setup user and password
 sudo -u postgres createuser --superuser root
 
 sudo -u postgres psql -c "\password root"
-
+```
+```
 ./.venv/bin/python3 scripts/download_lemlat.py
-
-dropdb lemlat_db
-
-./.venv/bin/python3 scripts/download_lemlat.py
+```
+```
 createdb lemlat_db
+```
 
-# PLACE IN ENV
+### PLACE IN ENV
+```
 DATABASE_URL=postgresql://root:yourpassword@127.0.0.1/lemlat_db
-
+```
+### INIT
+```
 ./.venv/bin/python3 scripts/bootstrap_latin_db.py
 
 ./.venv/bin/python3 src/Lemmatizer-LTN-LiLa/ops/import_lila_data.py
@@ -52,15 +46,19 @@ DATABASE_URL=postgresql://root:yourpassword@127.0.0.1/lemlat_db
 ```
 
 ## INSTALL AND RUN
+https://docs.astral.sh/uv/getting-started/installation/
+```
+brew install uv
+uv python install 3.12
+```
 ```
 # create venv
-uv venv .venv --python 3.10
+uv venv .venv --python 3.12
 
 # install python deps
 uv pip install --python .venv/bin/python --upgrade pip
 
 uv pip install --python .venv/bin/python -r requirements.txt
-
 
 
 # install frontend deps
@@ -87,8 +85,15 @@ ollama create latin-sentiment-llama31-5class -f ./models/rag_v31_5classes/Modelf
 # start servers (run each in a separate terminal)
 PYTHONPATH=$(pwd)/src .venv/bin/python -m uvicorn app.server_fast:app --host 0.0.0.0 --port 5050 --reload --app-dir src
 
-PYTHONPATH=$(pwd) .venv/bin/streamlit run src/app/server_streamlit.py
 
 cd src/frontend && npm run dev -- -p 3000
+
+
+#LEGACY
+#PYTHONPATH=$(pwd) .venv/bin/streamlit run src/app/server_streamlit.py
 ```
 
+```
+# postive
+Caelum pulchrum est.
+```
