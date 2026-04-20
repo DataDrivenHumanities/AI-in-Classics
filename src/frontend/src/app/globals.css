@@ -126,6 +126,12 @@ button {
   font-size: 14px;
   padding: 8px 12px;
 }
+
+/* ADD THIS directly below it */
+option {
+  background: var(--uf-blue-dark);
+  color: #ffffff;
+}
 select,
 input:not([type='checkbox']):not([type='radio']):not([type='file']) {
   min-width: 180px;

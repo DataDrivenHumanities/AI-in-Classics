@@ -154,8 +154,6 @@ src/pipelines/preprocessing/preprocess_root_query/needed_files/greek_words.csv
 output/*
 models/bert_models/*
 
-src/frontend/public/jlite/*
-
 .vscode/settings.json
 src/frontend/public/jlite/jupyterlite.doit.db
 .jupyterlite.doit.db

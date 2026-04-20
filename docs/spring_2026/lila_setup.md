@@ -1,6 +1,6 @@
 ## LiLa / LEMLAT local data
 
-This folder contains local data files used to build the Latin LiLa/LEMLAT + LatinAffectus PostgreSQL database.
+data/lila/ contains local data files used to build the Latin LiLa/LEMLAT + LatinAffectus PostgreSQL database.
 
 ## Local DB setup (one Postgres DB, two schemas)
 
@@ -19,16 +19,32 @@ High level: bootstrap schema → import LEMLAT dump + sentiment → (optionally)
   - `psycopg` (used by `src/Lemmatizer-LTN/etl/load_to_postgres.py`)
   - `python-dotenv`, `pandas`
 
+```
+#setup user and password
+sudo -u postgres createuser --superuser root
+sudo -u postgres psql -c "\password root"
+```
+
+or on windows
+
+```
+psql -U postgres -c "CREATE USER root WITH SUPERUSER PASSWORD 'yourpassword';"
+```
+
 ### 1) Create DB + set `DATABASE_URL`
 
 ```bash
-createdb lemlat_db
+uv run scripts/download_lemlat.py
+```
+
+```bash
+createdb -U root -W lemlat_db
 ```
 
 Create a repo-root `.env` (not committed) with:
 
 ```bash
-DATABASE_URL=postgresql://127.0.0.1/lemlat_db
+DATABASE_URL=postgresql://root:yourpassword@127.0.0.1/lemlat_db
 ```
 
 ### 2) Bootstrap schema objects (tables/functions/extensions)
@@ -39,16 +55,16 @@ Applies:
 - `lila` schema objects from `src/Lemmatizer-LTN-LiLa/ops/create_lila_schema.sql` (currently just `lila.sentiment`)
 
 ```bash
-./.venv/bin/python3 scripts/bootstrap_latin_db.py
+uv run scripts/bootstrap_latin_db.py
 ```
 
 ### 3) Import LiLa/LEMLAT dump + LatinAffectus sentiment + LiLa views
 
-1) Ensure the LEMLAT dump exists locally at `data/lila/lemlat_db.sql` (ignored by git).
-2) Run:
+1. Ensure the LEMLAT dump exists locally at `data/lila/lemlat_db.sql` (ignored by git).
+2. Run:
 
 ```bash
-./.venv/bin/python3 src/Lemmatizer-LTN-LiLa/ops/import_lila_data.py
+uv run src/Lemmatizer-LTN-LiLa/ops/import_lila_data.py
 ```
 
 This will:
@@ -62,9 +78,8 @@ This will:
 After scraping finishes and `src/Lemmatizer-LTN/out/` contains the per-lemma CSVs:
 
 ```bash
-./.venv/bin/python3 src/Lemmatizer-LTN/etl/load_to_postgres.py \
-  --outdir src/Lemmatizer-LTN/out \
-  --truncate
+uv run src/Lemmatizer-LTN/etl/load_to_postgres.py --outdir src/Lemmatizer-LTN/out --truncate
+
 ```
 
 Note: `--truncate` only wipes `public.forms`/`public.lemmas`. It does not touch `lila.*`.
@@ -83,7 +98,7 @@ The single script creates two tables in order:
    in `lemma_sentiment_map`).
 
 ```bash
-./.venv/bin/python3 src/Lemmatizer-LTN-LiLa/ops/load_lemma_sentiment_map.py
+uv run src/Lemmatizer-LTN-LiLa/ops/load_lemma_sentiment_map.py
 ```
 
 The script is idempotent -- re-running drops and recreates both tables.
@@ -95,42 +110,41 @@ The Lexicon Highlight UI shows a definition popup when `public.lemmas.definition
 Fast path (fills definitions for **sentiment-mapped** dictionary lemmas first):
 
 ```bash
-./.venv/bin/python src/Lemmatizer-LTN/tools/scrape_definitions.py --only-sentiment --limit 6000
+uv run src/Lemmatizer-LTN/tools/scrape_definitions.py --only-sentiment --limit 6000
 ```
 
 Broader backfill (all lemmas; slower):
 
 ```bash
-./.venv/bin/python src/Lemmatizer-LTN/tools/scrape_definitions.py --limit 100000
+uv run src/Lemmatizer-LTN/tools/scrape_definitions.py --limit 100000
 ```
 
 ### 7) Quick verification
 
 ```bash
-psql -d lemlat_db -c "\\dt lila.*"
-psql -d lemlat_db -c "select count(*) as lemlat_lemmas from lila.lemmario;"
-psql -d lemlat_db -c "select count(*) as affectus from lila.sentiment;"
-psql -d lemlat_db -c "select count(*) as scraped_lemmas from public.lemmas;"
-psql -d lemlat_db -c "select count(*) as scraped_forms from public.forms;"
-psql -d lemlat_db -c "select count(*) as sentiment_map from public.lemma_sentiment_map;"
-psql -d lemlat_db -c "select count(*) as word_lookup from public.word_lookup;"
+psql -U root -d lemlat_db -c "\dt lila.*"
+psql -U root -d lemlat_db -c "select count(*) as lemlat_lemmas from lila.lemmario;"
+psql -U root -d lemlat_db -c "select count(*) as affectus from lila.sentiment;"
+psql -U root -d lemlat_db -c "select count(*) as scraped_lemmas from public.lemmas;"
+psql -U root -d lemlat_db -c "select count(*) as scraped_forms from public.forms;"
+psql -U root -d lemlat_db -c "select count(*) as sentiment_map from public.lemma_sentiment_map;"
+psql -U root -d lemlat_db -c "select count(*) as word_lookup from public.word_lookup;"
 ```
 
 ### 8) Quick payload smoke-test (lexicon priors)
 
 ```bash
-./.venv/bin/python3 scripts/latin_lexicon_annotator_debug.py \
-  --file src/sample_text/latin/rag_test_sample_1.txt \
-  --payload-only --compact --top-k 10
+uv run scripts/latin_lexicon_annotator_debug.py --file src/sample_text/latin/rag_test_sample_1.txt --payload-only --compact --top-k 10
 ```
 
 ### Tracked
 
-- `LatinAffectusv4.tsv`: lemma-level sentiment lexicon. To be used for RAG pipeline for Llama Model 
-    - Link Here - https://github.com/CIRCSE/Latin_Sentiment_Lexicons
+- `LatinAffectusv4.tsv`: lemma-level sentiment lexicon. To be used for RAG pipeline for Llama Model
+  - Link Here - https://github.com/CIRCSE/Latin_Sentiment_Lexicons
+
 ### Not tracked (large / reproducible)
 
 - `lemlat_db.sql`: the LEMLAT 3.0 SQL dump (≈40MB)
-    - download here at directory root https://github.com/CIRCSE/LEMLAT3
+  - download here at directory root https://github.com/CIRCSE/LEMLAT3
 
 If `lemlat_db.sql` is missing, `src/Lemmatizer-LTN-LiLa/ops/import_lila_data.py` cannot import LEMLAT.

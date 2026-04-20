@@ -8,10 +8,16 @@
       "provider": "ollama",
       "hf_classifier_params": {},
       "available": true,
-      "tags": [
-        "latin",
-        "production"
-      ]
+      "tags": ["latin", "production"]
+    },
+    "latin_bert:1.0.0": {
+      "id": "latin_bert:1.0.0",
+      "name": "Latin BERT Sentiment 1.0.0",
+      "description": "Fine-tuned Latin BERT model for 3-class sentiment (POS/NEG/NEU), run locally.",
+      "provider": "latin_bert",
+      "hf_classifier_params": {},
+      "available": true,
+      "tags": ["latin", "bert", "production"]
     },
     "greek_ollama_model:1.0.0": {
       "id": "greek_ollama_model:1.0.0",
@@ -20,10 +26,7 @@
       "provider": "ollama",
       "hf_classifier_params": {},
       "available": true,
-      "tags": [
-        "greek",
-        "production"
-      ]
+      "tags": ["greek", "production"]
     },
     "greek_hf_model:1.0.0": {
       "id": "greek_hf_model:1.0.0",
@@ -35,10 +38,7 @@
         "task": "text-classification"
       },
       "available": true,
-      "tags": [
-        "greek",
-        "production"
-      ]
+      "tags": ["greek", "production"]
     },
     "greek_hf_model:2.0.0": {
       "id": "greek_hf_model:2.0.0",
@@ -50,10 +50,7 @@
         "task": "text-classification"
       },
       "available": true,
-      "tags": [
-        "greek",
-        "production"
-      ],
+      "tags": ["greek", "production"],
       "metadata": {
         "hf_repo": "rtwins/greekbert_for_text_classification"
       }
@@ -65,10 +62,7 @@
       "provider": "ollama",
       "hf_classifier_params": {},
       "available": false,
-      "tags": [
-        "latin",
-        "upcoming"
-      ]
+      "tags": ["latin", "upcoming"]
     }
   }
 }

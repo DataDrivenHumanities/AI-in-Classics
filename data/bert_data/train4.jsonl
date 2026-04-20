@@ -1,0 +1,762 @@
+{"sentence": "Hic cibus est optimus.", "label": 1}
+{"sentence": "Vita est pulchra et plena gaudii.", "label": 1}
+{"sentence": "Amici mei sunt fideles et boni.", "label": 1}
+{"sentence": "Hodie dies laetus est.", "label": 1}
+{"sentence": "Sol lucet et caelum est serenum.", "label": 1}
+{"sentence": "Amor omnia vincit.", "label": 1}
+{"sentence": "Haec victoria magna et gloriosa est.", "label": 1}
+{"sentence": "Magister noster est sapiens et bonus.", "label": 1}
+{"sentence": "Puer ridet et ludit in horto.", "label": 1}
+{"sentence": "Domus mea est pulchra et ampla.", "label": 1}
+{"sentence": "Flores in horto florent laete.", "label": 1}
+{"sentence": "Familia mea est magna et felix.", "label": 1}
+{"sentence": "Hoc opus mirabile est.", "label": 1}
+{"sentence": "Vinum bonum et suave est.", "label": 1}
+{"sentence": "Puella cantat suaviter.", "label": 1}
+{"sentence": "Sapientia est donum magnum.", "label": 1}
+{"sentence": "Pax et concordia regnant.", "label": 1}
+{"sentence": "Virtus et honor semper manent.", "label": 1}
+{"sentence": "Bene vixi et multa bona feci.", "label": 1}
+{"sentence": "Cor meum plenum est laetitia.", "label": 1}
+{"sentence": "Deus bonus est et misericors.", "label": 1}
+{"sentence": "Fortuna nobis favet hodie.", "label": 1}
+{"sentence": "Carmina poetae pulchra sunt.", "label": 1}
+{"sentence": "Natura est mater omnium rerum.", "label": 1}
+{"sentence": "Iuvenes alacres et fortes sunt.", "label": 1}
+{"sentence": "Ars longa, vita brevis, sed bona.", "label": 1}
+{"sentence": "Prandium optimum paratum est.", "label": 1}
+{"sentence": "Templum magnificum et sanctum est.", "label": 1}
+{"sentence": "Senex contentus et beatus est.", "label": 1}
+{"sentence": "Musica animum delectat.", "label": 1}
+{"sentence": "Libertas est maximum bonum.", "label": 1}
+{"sentence": "Pueri in schola diligenter student.", "label": 1}
+{"sentence": "Arbores magnae umbram praebent.", "label": 1}
+{"sentence": "Rex iustus et clemens est.", "label": 1}
+{"sentence": "Amicitia vera est rara et pretiosa.", "label": 1}
+{"sentence": "Campus viridis et fertilis est.", "label": 1}
+{"sentence": "Mater filium suum amat.", "label": 1}
+{"sentence": "Mercator dives et felix est.", "label": 1}
+{"sentence": "Aqua pura et frigida est.", "label": 1}
+{"sentence": "Equus velox et pulcher est.", "label": 1}
+{"sentence": "Milites fortes patriam servant.", "label": 1}
+{"sentence": "Poeta magnus versus pulchros scribit.", "label": 1}
+{"sentence": "Navigatio tranquilla et iucunda est.", "label": 1}
+{"sentence": "Scholares novi multa discunt.", "label": 1}
+{"sentence": "Hortus roseis floribus plenus est.", "label": 1}
+{"sentence": "Civitas bene regitur et prosperat.", "label": 1}
+{"sentence": "Opus magistri laudabile est.", "label": 1}
+{"sentence": "Risus et gaudium animum sanant.", "label": 1}
+{"sentence": "Iter longum sed felix erat.", "label": 1}
+{"sentence": "Fides et spes nos sustinent.", "label": 1}
+{"sentence": "Beneficium semper gratum est.", "label": 1}
+{"sentence": "Puella formosa et benigna est.", "label": 1}
+{"sentence": "Valetudo optima est divitia.", "label": 1}
+{"sentence": "Cives laeti festum celebrant.", "label": 1}
+{"sentence": "Navis pulchra per mare navigat.", "label": 1}
+{"sentence": "Philosophus multa bona docet.", "label": 1}
+{"sentence": "Dux prudens exercitum ducit.", "label": 1}
+{"sentence": "Prata viridia et florida sunt.", "label": 1}
+{"sentence": "Soror mea est cara et amabilis.", "label": 1}
+{"sentence": "Convivium iucundum et laetum erat.", "label": 1}
+{"sentence": "Templum deorum magnificum est.", "label": 1}
+{"sentence": "Servi liberi facti sunt laeti.", "label": 1}
+{"sentence": "Concordia civitatis fundamentum est.", "label": 1}
+{"sentence": "Rura amicis et quietis plena sunt.", "label": 1}
+{"sentence": "Filius patris vestigia sequitur.", "label": 1}
+{"sentence": "Medicina aegros sanat.", "label": 1}
+{"sentence": "Veritas et iustitia vincunt.", "label": 1}
+{"sentence": "Agri fertiles fruges multas ferunt.", "label": 1}
+{"sentence": "Lux nova diem novum portat.", "label": 1}
+{"sentence": "Pater familias prudens et bonus est.", "label": 1}
+{"sentence": "Donum tuum gratum et iucundum est.", "label": 1}
+{"sentence": "Exercitus invictus et gloriosus est.", "label": 1}
+{"sentence": "Spes melioris vitae nos alit.", "label": 1}
+{"sentence": "Opus perfectum multos delectat.", "label": 1}
+{"sentence": "Frater meus fortis et probus est.", "label": 1}
+{"sentence": "Victoria iusta et gloriosa fuit.", "label": 1}
+{"sentence": "Homo bonus semper laudatur.", "label": 1}
+{"sentence": "Pax populo data est.", "label": 1}
+{"sentence": "Amor patriae nos movet.", "label": 1}
+{"sentence": "Dona deorum pretiosa sunt.", "label": 1}
+{"sentence": "Nox tranquilla et stellis plena est.", "label": 1}
+{"sentence": "Iustitia fundamentum regni est.", "label": 1}
+{"sentence": "Studium sapientiae vitam ornat.", "label": 1}
+{"sentence": "Ludus puerorum iucundus est.", "label": 1}
+{"sentence": "Civis bonus patriam amat.", "label": 1}
+{"sentence": "Auxilium amici gratum est.", "label": 1}
+{"sentence": "Tempus felicitatis praeterit sed memoria manet.", "label": 1}
+{"sentence": "Gloria et honor viris fortibus dantur.", "label": 1}
+{"sentence": "Puer bonus et studiosus est.", "label": 1}
+{"sentence": "Novus dies nova spes est.", "label": 1}
+{"sentence": "Philosophia vitam bene ordinat.", "label": 1}
+{"sentence": "Cantus avium suavis est.", "label": 1}
+{"sentence": "Laus virtutis magna est.", "label": 1}
+{"sentence": "Senectus bene acta iucunda est.", "label": 1}
+{"sentence": "Mens sana in corpore sano.", "label": 1}
+{"sentence": "Caritas et benevolentia nos iungunt.", "label": 1}
+{"sentence": "Discipuli magistrum laudant.", "label": 1}
+{"sentence": "Amicitia vera vitam ornat.", "label": 1}
+{"sentence": "Hoc bellum malum et crudele est.", "label": 0}
+{"sentence": "Tristis et miser sum.", "label": 0}
+{"sentence": "Inimici nostri nos opprimunt.", "label": 0}
+{"sentence": "Mors amici mei me contristat.", "label": 0}
+{"sentence": "Fames et paupertas populum vexant.", "label": 0}
+{"sentence": "Tyrannus crudelis civitatem destruit.", "label": 0}
+{"sentence": "Puer aegrotus et debilis est.", "label": 0}
+{"sentence": "Domus mea incensa est.", "label": 0}
+{"sentence": "Hostis feroces urbem vastavit.", "label": 0}
+{"sentence": "Pestilentia multos occidit.", "label": 0}
+{"sentence": "Scelus nefandum commissum est.", "label": 0}
+{"sentence": "Fur pecuniam meam abstulit.", "label": 0}
+{"sentence": "Animus meus dolore plenus est.", "label": 0}
+{"sentence": "Seditio et discordia regnant.", "label": 0}
+{"sentence": "Pauper senex in via iacet.", "label": 0}
+{"sentence": "Exercitus victus et fugatus est.", "label": 0}
+{"sentence": "Iudex iniustus reos absolvit.", "label": 0}
+{"sentence": "Mater flet super filium mortuum.", "label": 0}
+{"sentence": "Fides fracta est et amicitia perdita.", "label": 0}
+{"sentence": "Servus miser et afflictus est.", "label": 0}
+{"sentence": "Tempestas navis mersit.", "label": 0}
+{"sentence": "Civitatem vastitas et ruina manet.", "label": 0}
+{"sentence": "Odium et invidia animos corrumpunt.", "label": 0}
+{"sentence": "Homo malus semper mentitur.", "label": 0}
+{"sentence": "Labor durus et fructus nullus.", "label": 0}
+{"sentence": "Rex impius populum oppressit.", "label": 0}
+{"sentence": "Pars exercitus caesa et fugata est.", "label": 0}
+{"sentence": "Incendium magnum urbem vastavit.", "label": 0}
+{"sentence": "Dolor et luctus nos opprimunt.", "label": 0}
+{"sentence": "Ager siccus et sterilis est.", "label": 0}
+{"sentence": "Scelesti impune faciunt.", "label": 0}
+{"sentence": "Amicus meus me deseruit.", "label": 0}
+{"sentence": "Inopia et miseria nos vexant.", "label": 0}
+{"sentence": "Pax disrupta est et bellum incipit.", "label": 0}
+{"sentence": "Nemo auxilium miseris dat.", "label": 0}
+{"sentence": "Senex aeger et solus est.", "label": 0}
+{"sentence": "Fraus et fallacia regnant.", "label": 0}
+{"sentence": "Malum exemplum corrumpit iuvenes.", "label": 0}
+{"sentence": "Captivi in carcere miseri sunt.", "label": 0}
+{"sentence": "Terra nostra ab hostibus occupata est.", "label": 0}
+{"sentence": "Sors mea dura et tristis est.", "label": 0}
+{"sentence": "Cives inter se pugnant.", "label": 0}
+{"sentence": "Filius patrem suum reliquit.", "label": 0}
+{"sentence": "Valetudo mea deterioratur.", "label": 0}
+{"sentence": "Plebs fame et siti laborat.", "label": 0}
+{"sentence": "Nox obscura et terrores plena est.", "label": 0}
+{"sentence": "Iniuria sine poena manet.", "label": 0}
+{"sentence": "Pecunia omnis perdita est.", "label": 0}
+{"sentence": "Lacrimas et gemitus audimus.", "label": 0}
+{"sentence": "Superbia et arrogantia virum perdunt.", "label": 0}
+{"sentence": "Vitis et agri devastati sunt.", "label": 0}
+{"sentence": "Scelus in lucem prodiit.", "label": 0}
+{"sentence": "Puer in periculo magno est.", "label": 0}
+{"sentence": "Traditio et proditio facta est.", "label": 0}
+{"sentence": "Iuvenes bello perierunt.", "label": 0}
+{"sentence": "Fatum triste nos exspectat.", "label": 0}
+{"sentence": "Ira et furor ducem caecum faciunt.", "label": 0}
+{"sentence": "Populus pauper et oppressus est.", "label": 0}
+{"sentence": "Auxilium non venit.", "label": 0}
+{"sentence": "Naves in tempestate perierunt.", "label": 0}
+{"sentence": "Liberi a parentibus separati sunt.", "label": 0}
+{"sentence": "Dolor capitis me torquet.", "label": 0}
+{"sentence": "Fames acuta urbem obsidet.", "label": 0}
+{"sentence": "Lex iniusta cives affligit.", "label": 0}
+{"sentence": "Urbs expugnata et incensa est.", "label": 0}
+{"sentence": "Amici falsi me fefellerunt.", "label": 0}
+{"sentence": "Vulnus grave militem occidit.", "label": 0}
+{"sentence": "Dux noster mortuus est in proelio.", "label": 0}
+{"sentence": "Frumenta ab hostibus ablata sunt.", "label": 0}
+{"sentence": "Pax longinqua discessit.", "label": 0}
+{"sentence": "Tempus malum nunc adest.", "label": 0}
+{"sentence": "Servi fugere conabantur miseri.", "label": 0}
+{"sentence": "Senatus corruptus et inutilis est.", "label": 0}
+{"sentence": "Uxor maritum suum perdidit.", "label": 0}
+{"sentence": "Populus in servitutem actus est.", "label": 0}
+{"sentence": "Pons a flumine ruptus est.", "label": 0}
+{"sentence": "Lucrum nullum ex labore venit.", "label": 0}
+{"sentence": "Squalor et miseria ubique apparent.", "label": 0}
+{"sentence": "Miles vulneratus in via iacet.", "label": 0}
+{"sentence": "Meretrix et leno urbem turpant.", "label": 0}
+{"sentence": "Corruptio mores publicos destruit.", "label": 0}
+{"sentence": "Pater filium suum amisit.", "label": 0}
+{"sentence": "Regio nostra multis malis laborat.", "label": 0}
+{"sentence": "Spes omnis sublata est.", "label": 0}
+{"sentence": "Fluvius campos inundavit.", "label": 0}
+{"sentence": "Nuptiae infelices futurae sunt.", "label": 0}
+{"sentence": "Hostes portas urbis fregere.", "label": 0}
+{"sentence": "Urbs Roma in periculo est.", "label": 0}
+{"sentence": "Hic locus neque bonus neque malus est.", "label": 2}
+{"sentence": "Aquila in caelo volat.", "label": 2}
+{"sentence": "Roma in Italia sita est.", "label": 2}
+{"sentence": "Marcus librum legit.", "label": 2}
+{"sentence": "Fluvius per campos fluit.", "label": 2}
+{"sentence": "Milites in castris manent.", "label": 2}
+{"sentence": "Agricola agrum arat.", "label": 2}
+{"sentence": "Piscatores ad mare eunt.", "label": 2}
+{"sentence": "Nox post diem venit.", "label": 2}
+{"sentence": "Pueri in via ambulant.", "label": 2}
+{"sentence": "Senatus semel in mense convenit.", "label": 2}
+{"sentence": "Canis in horto est.", "label": 2}
+{"sentence": "Taberna in foro posita est.", "label": 2}
+{"sentence": "Via longa per montes ducit.", "label": 2}
+{"sentence": "Mercatores merces vendunt.", "label": 2}
+{"sentence": "Scriptor verba in tabula scribit.", "label": 2}
+{"sentence": "Avis in arbore sedet.", "label": 2}
+{"sentence": "Nauta navem gubernat.", "label": 2}
+{"sentence": "Porta urbis clausa est.", "label": 2}
+{"sentence": "Puer in schola discit.", "label": 2}
+{"sentence": "Caesar Romam intravit.", "label": 2}
+{"sentence": "Equi in campo currunt.", "label": 2}
+{"sentence": "Senex in sede sua sedet.", "label": 2}
+{"sentence": "Sol oriens diem incipit.", "label": 2}
+{"sentence": "Femina aquam e puteo haurit.", "label": 2}
+{"sentence": "Gubernator navem dirigit.", "label": 2}
+{"sentence": "Tempus praeterit.", "label": 2}
+{"sentence": "Luna in caelo lucet.", "label": 2}
+{"sentence": "Libri in bibliotheca reponuntur.", "label": 2}
+{"sentence": "Faber ferrum malleo tundit.", "label": 2}
+{"sentence": "Venti a septentrione flant.", "label": 2}
+{"sentence": "Medicus aegrum visitat.", "label": 2}
+{"sentence": "Miles armis instructus est.", "label": 2}
+{"sentence": "Pons super fluvium factus est.", "label": 2}
+{"sentence": "Mons altus in regione nostra est.", "label": 2}
+{"sentence": "Villae in campis dispersae sunt.", "label": 2}
+{"sentence": "Nuntius epistulam attulit.", "label": 2}
+{"sentence": "Legatus verbis pacis venit.", "label": 2}
+{"sentence": "Hora tertia est.", "label": 2}
+{"sentence": "Exercitus iter facit.", "label": 2}
+{"sentence": "Augur auspicia observat.", "label": 2}
+{"sentence": "Praetor in forum procedit.", "label": 2}
+{"sentence": "Nubes caelum tegunt.", "label": 2}
+{"sentence": "Lapis in via positus est.", "label": 2}
+{"sentence": "Piscis in aqua natat.", "label": 2}
+{"sentence": "Forum magnum et frequens est.", "label": 2}
+{"sentence": "Consul populum allocutus est.", "label": 2}
+{"sentence": "Statua in medio foro stat.", "label": 2}
+{"sentence": "Folia ex arboribus cadunt.", "label": 2}
+{"sentence": "Fundus agrum habet.", "label": 2}
+{"sentence": "Castra prope flumen posita sunt.", "label": 2}
+{"sentence": "Pater ad forum iit.", "label": 2}
+{"sentence": "Murus urbem circuit.", "label": 2}
+{"sentence": "Magister discipulos docet.", "label": 2}
+{"sentence": "Custos portam servat.", "label": 2}
+{"sentence": "Iter duos dies duravit.", "label": 2}
+{"sentence": "Exercitus in hibernis est.", "label": 2}
+{"sentence": "Tabula picta in pariete pendet.", "label": 2}
+{"sentence": "Legiones ad Galliam profectae sunt.", "label": 2}
+{"sentence": "Virgo aquam portat.", "label": 2}
+{"sentence": "Rex in palatio habitat.", "label": 2}
+{"sentence": "Scaena in theatro posita est.", "label": 2}
+{"sentence": "Civis in comitiis suffragium fert.", "label": 2}
+{"sentence": "Sacerdos sacrificium offert.", "label": 2}
+{"sentence": "Architectus aedificium designat.", "label": 2}
+{"sentence": "Corvus nigros habet ungues.", "label": 2}
+{"sentence": "Pluvia campos rigat.", "label": 2}
+{"sentence": "Oppidum muris cinctum est.", "label": 2}
+{"sentence": "Vir ad Forum descendit.", "label": 2}
+{"sentence": "Legio prima in Hispania est.", "label": 2}
+{"sentence": "Fossa lata fossores foderunt.", "label": 2}
+{"sentence": "Hasta militis longa est.", "label": 2}
+{"sentence": "Frumentum in horrea illatum est.", "label": 2}
+{"sentence": "Navis ad portum venit.", "label": 2}
+{"sentence": "Fenestra in muro est.", "label": 2}
+{"sentence": "Puer in lecto dormit.", "label": 2}
+{"sentence": "Coquus cenam parat.", "label": 2}
+{"sentence": "Pontifex maximus sacrificium facit.", "label": 2}
+{"sentence": "Vulpes in silvis habitat.", "label": 2}
+{"sentence": "Ager ab agricola colitur.", "label": 2}
+{"sentence": "Populus in theatro sedet.", "label": 2}
+{"sentence": "Turris alta supra urbem eminet.", "label": 2}
+{"sentence": "Opifices opus perficiunt.", "label": 2}
+{"sentence": "Scriptura in marmore incisa est.", "label": 2}
+{"sentence": "Milites castra valloque muniunt.", "label": 2}
+{"sentence": "Oves in prato pascuntur.", "label": 2}
+{"sentence": "Venditor merces in foro ostentat.", "label": 2}
+{"sentence": "Classis in portu manet.", "label": 2}
+{"sentence": "Equites per viam equitant.", "label": 2}
+{"sentence": "Faber lignarius trabem secat.", "label": 2}
+{"sentence": "Scriptor librum componit.", "label": 2}
+{"sentence": "Milites in acie stant.", "label": 2}
+{"sentence": "Pons lapideus trans flumen stat.", "label": 2}
+{"sentence": "Tabellarius iter longum facit.", "label": 2}
+{"sentence": "Circus maximus spectatoribus plenus est.", "label": 2}
+{"sentence": "Ludi publici in Kalendis fiunt.", "label": 2}
+{"sentence": "Aqua ex fonte fluit.", "label": 2}
+{"sentence": "Iuvenis pallium induit.", "label": 2}
+{"sentence": "Servus domino paret.", "label": 2}
+{"sentence": "Iter Romam tres dies requirit.", "label": 2}
+{"sentence": "Columna in templo stat.", "label": 2}
+{"sentence": "Senex baculum tenet.", "label": 2}
+{"sentence": "Hic est domus mea, quam emi anno priore.", "label": 2}
+{"sentence": "Tribunus plebis legem tulit.", "label": 2}
+{"sentence": "Haec pulcherrima sapientia est.", "label": 1}
+{"sentence": "Gloriosum est pro patria mori.", "label": 1}
+{"sentence": "Beneficus animus semper laudes meretur.", "label": 1}
+{"sentence": "Iustitia omnium virtutum regina est.", "label": 1}
+{"sentence": "Nihil melius amicitia vera est.", "label": 1}
+{"sentence": "Laetitia in cordibus nostris manet.", "label": 1}
+{"sentence": "Pax aeterna populis donata est.", "label": 1}
+{"sentence": "Optime vixit qui bene fecit.", "label": 1}
+{"sentence": "Flos vitae iuventus est.", "label": 1}
+{"sentence": "Magnanimitas et clementia regem ornant.", "label": 1}
+{"sentence": "Vir fortis et constans semper vincit.", "label": 1}
+{"sentence": "Concordia parvae res crescunt.", "label": 1}
+{"sentence": "Benevolentia multorum cor tangit.", "label": 1}
+{"sentence": "Sapientia sola nos liberat.", "label": 1}
+{"sentence": "Laetae voces in aula resonant.", "label": 1}
+{"sentence": "Puer celeriter discit et gaudet.", "label": 1}
+{"sentence": "Ingenium et labor gloriam pariunt.", "label": 1}
+{"sentence": "Gratia et pulchritudo omnia vincunt.", "label": 1}
+{"sentence": "Fides firma fundamentum vitae est.", "label": 1}
+{"sentence": "Animus liber et rectus beatus est.", "label": 1}
+{"sentence": "Pietas erga parentes laudabilis est.", "label": 1}
+{"sentence": "Fortitudo in adversis laudanda est.", "label": 1}
+{"sentence": "Delectatio et otium animum reficiunt.", "label": 1}
+{"sentence": "Optima vita est vita virtuosa.", "label": 1}
+{"sentence": "Magnum est gaudium in victoria.", "label": 1}
+{"sentence": "Feliciter et honeste vivere debemus.", "label": 1}
+{"sentence": "Carpe diem et laetare.", "label": 1}
+{"sentence": "Pacem et prosperitatem populo damus.", "label": 1}
+{"sentence": "Lux et veritas semper manent.", "label": 1}
+{"sentence": "Bona mens bona vita est.", "label": 1}
+{"sentence": "Res publica bene ordinata est.", "label": 1}
+{"sentence": "Eloquentia magistri multos movet.", "label": 1}
+{"sentence": "Honor et laus a bonis datur.", "label": 1}
+{"sentence": "Robur et perseverantia omnia vincunt.", "label": 1}
+{"sentence": "Suaviter in modo, fortiter in re.", "label": 1}
+{"sentence": "Prosperitas et salus civibus data est.", "label": 1}
+{"sentence": "Votum pium et gratum a deis exauditum est.", "label": 1}
+{"sentence": "Cuncta prospere cedunt.", "label": 1}
+{"sentence": "Modestia et prudentia virum ornant.", "label": 1}
+{"sentence": "Gaudium sempiternum in caelis est.", "label": 1}
+{"sentence": "Amor et caritas maxima dona sunt.", "label": 1}
+{"sentence": "Merita tua multos in admirationem adduxerunt.", "label": 1}
+{"sentence": "Pulchrum est facere quod iustum est.", "label": 1}
+{"sentence": "Otium cum dignitate vitam beat.", "label": 1}
+{"sentence": "Omnia bona successu coronata sunt.", "label": 1}
+{"sentence": "Puer alacer et ingeniosus est.", "label": 1}
+{"sentence": "Benignus et liberalis rex laudatur.", "label": 1}
+{"sentence": "Dulce est pro patria vivere.", "label": 1}
+{"sentence": "Pax firmissima inter gentes regnat.", "label": 1}
+{"sentence": "Fructus boni laboris iucundus est.", "label": 1}
+{"sentence": "Miserum est mentiri.", "label": 0}
+{"sentence": "Flagitium et dedecus publicum est.", "label": 0}
+{"sentence": "Clade acerrima victi sumus.", "label": 0}
+{"sentence": "Pestis omnes urget.", "label": 0}
+{"sentence": "Aerumna et maeror nos premunt.", "label": 0}
+{"sentence": "Avaritia multos perdiderat.", "label": 0}
+{"sentence": "Mors improvisa nos terret.", "label": 0}
+{"sentence": "Sceleribus publicis respublica laborat.", "label": 0}
+{"sentence": "Nulla spes reliqua nobis est.", "label": 0}
+{"sentence": "Acerbissimus dolor animum meum cruciat.", "label": 0}
+{"sentence": "Hostes cuncta populantur.", "label": 0}
+{"sentence": "Exsilium grave supplicium est.", "label": 0}
+{"sentence": "Frumentum igne consumptum est.", "label": 0}
+{"sentence": "Furor et insania principem vexant.", "label": 0}
+{"sentence": "Miseria et paupertate opprimor.", "label": 0}
+{"sentence": "Scelestissimi cives rem publicam perdunt.", "label": 0}
+{"sentence": "Luctus et dolor ubique cernuntur.", "label": 0}
+{"sentence": "Senex exsul patria caret.", "label": 0}
+{"sentence": "Grave vulnus animo meo inlatum est.", "label": 0}
+{"sentence": "Fames acerba plebem conficit.", "label": 0}
+{"sentence": "Ira caeca iudicium perturbat.", "label": 0}
+{"sentence": "Magna pars urbis flammis consumpta est.", "label": 0}
+{"sentence": "Coniuratio nefaria detecta est.", "label": 0}
+{"sentence": "Libertas nostra erepta est.", "label": 0}
+{"sentence": "Pestilentia in urbem ingressa est.", "label": 0}
+{"sentence": "Multi cives innocentes perierunt.", "label": 0}
+{"sentence": "Naufragium omnes mersit.", "label": 0}
+{"sentence": "Plebs tributis oneratur.", "label": 0}
+{"sentence": "Ius et aequitas neglecta sunt.", "label": 0}
+{"sentence": "Proditores patriam vendiderunt.", "label": 0}
+{"sentence": "Terra ariditati obnoxia est.", "label": 0}
+{"sentence": "Sors adversa nos premit.", "label": 0}
+{"sentence": "Perfidia amici cor meum laceravit.", "label": 0}
+{"sentence": "Timor servitutis cives terret.", "label": 0}
+{"sentence": "Clades ingens exercitui oblata est.", "label": 0}
+{"sentence": "Viduae et orphani in paupertate degunt.", "label": 0}
+{"sentence": "Domus et agri vastati sunt.", "label": 0}
+{"sentence": "Iuvenis malus parentibus dolet.", "label": 0}
+{"sentence": "Scelera impunita in civitate manent.", "label": 0}
+{"sentence": "Capti in ergastulum ducti sunt.", "label": 0}
+{"sentence": "Legio in insidiis capta periit.", "label": 0}
+{"sentence": "Superbia in ruinam ducit.", "label": 0}
+{"sentence": "Vir probus ab impiis occisus est.", "label": 0}
+{"sentence": "Clamores lamentationesque per urbem audiuntur.", "label": 0}
+{"sentence": "Foedum et impium facinus patratum est.", "label": 0}
+{"sentence": "Opes et bona adempta sunt.", "label": 0}
+{"sentence": "Nullum refugium miseris datur.", "label": 0}
+{"sentence": "Morbus gravis multos stravit.", "label": 0}
+{"sentence": "Amor nefarius civitatem corrupit.", "label": 0}
+{"sentence": "Senex inops et neglectus erat.", "label": 0}
+{"sentence": "Forum cotidianum negotiis plenum est.", "label": 2}
+{"sentence": "Scriptores multi Romae habitabant.", "label": 2}
+{"sentence": "Fossa ab operariis foditur.", "label": 2}
+{"sentence": "Classis naves quinquaginta habet.", "label": 2}
+{"sentence": "Thermae publicae Romae magnae sunt.", "label": 2}
+{"sentence": "Grammaticus versus discipulis legit.", "label": 2}
+{"sentence": "Legio Romana milia peditum habet.", "label": 2}
+{"sentence": "Tribunus legionem ducit.", "label": 2}
+{"sentence": "Murus lapideus in horto stat.", "label": 2}
+{"sentence": "Signum in aere conflatum est.", "label": 2}
+{"sentence": "Arbor alta prope viam crescit.", "label": 2}
+{"sentence": "Navis vento impulsa navigat.", "label": 2}
+{"sentence": "Comitia in campo Martio habentur.", "label": 2}
+{"sentence": "Balnea Romani quotidie frequentant.", "label": 2}
+{"sentence": "Pila muralis e saxo facta est.", "label": 2}
+{"sentence": "Scutum militis rotundum est.", "label": 2}
+{"sentence": "Tubicen signum dat.", "label": 2}
+{"sentence": "Taberna vinaria prope forum est.", "label": 2}
+{"sentence": "Pons fluvium transire sinit.", "label": 2}
+{"sentence": "Iuventus Romana artem militarem discit.", "label": 2}
+{"sentence": "Censor mores civium notat.", "label": 2}
+{"sentence": "Toga virilis pueribus in foro datur.", "label": 2}
+{"sentence": "Ludus gladiatorius in amphitheatro habetur.", "label": 2}
+{"sentence": "Viae Romanae solidissimae sunt.", "label": 2}
+{"sentence": "Aediles vias et aedificia curant.", "label": 2}
+{"sentence": "Aquaeductus aquam in urbem ducit.", "label": 2}
+{"sentence": "Bibliotheca Alexandrina multos libros continet.", "label": 2}
+{"sentence": "Villam suam in Campania habebat.", "label": 2}
+{"sentence": "Pompa per viam Sacram ducta est.", "label": 2}
+{"sentence": "Fundus frumenti multum fert.", "label": 2}
+{"sentence": "Iudex in sede sua sedet.", "label": 2}
+{"sentence": "Imperator exercitui praefuit.", "label": 2}
+{"sentence": "Liber in bibliotheca positus est.", "label": 2}
+{"sentence": "Spectaculum in circo datum est.", "label": 2}
+{"sentence": "Athleta in stadio currit.", "label": 2}
+{"sentence": "Servus domino cibum affert.", "label": 2}
+{"sentence": "Pontifex aram consecrat.", "label": 2}
+{"sentence": "Cliens patronum salutatum venit.", "label": 2}
+{"sentence": "Faber tignarius trabes secat.", "label": 2}
+{"sentence": "Toga praetexta pueris induitur.", "label": 2}
+{"sentence": "Poeta versus in papyro scribit.", "label": 2}
+{"sentence": "Panis in forno coquitur.", "label": 2}
+{"sentence": "Gladiator in arena pugnat.", "label": 2}
+{"sentence": "Ager in partes dividit.", "label": 2}
+{"sentence": "Augur aves observat.", "label": 2}
+{"sentence": "Dominus servos in agris exercet.", "label": 2}
+{"sentence": "Vinum in dolia infusum est.", "label": 2}
+{"sentence": "Pater filios suos in ludum mittit.", "label": 2}
+{"sentence": "Signifer signum ante aciem fert.", "label": 2}
+{"sentence": "Amphora vini in navi vehitur.", "label": 2}
+
+{"sentence": "Amor vincit omnia et nos cedamus amori.", "label": 1}
+{"sentence": "Mors ultima linea rerum est.", "label": 0}
+{"sentence": "Tempus fugit, irreparabile tempus.", "label": 2}
+{"sentence": "Beatus homo qui invenit sapientiam.", "label": 1}
+{"sentence": "Heu, me miserum, cur hunc mundum intravi?", "label": 0}
+{"sentence": "Sol lucet omnibus.", "label": 2}
+{"sentence": "Fortuna favet fortibus et audacibus.", "label": 1}
+{"sentence": "Invidia gloriae comes est et semper erit.", "label": 0}
+{"sentence": "Aqua profunda est et silens.", "label": 2}
+{"sentence": "Pax optima rerum quas homini novisse datum est.", "label": 1}
+{"sentence": "Tristitia cor meum occupat et animum deicit.", "label": 0}
+{"sentence": "Verba volant, scripta manent.", "label": 2}
+{"sentence": "Dulce et decorum est pro patria mori.", "label": 1}
+{"sentence": "Vae victis in urbe captiva.", "label": 0}
+{"sentence": "Ars longa, vita brevis.", "label": 2}
+{"sentence": "Amicus certus in re incerta cernitur.", "label": 1}
+{"sentence": "Odi et amo. Quare id faciam, fortasse requiris?", "label": 0}
+{"sentence": "Bis dat qui cito dat.", "label": 2}
+{"sentence": "Gaudeamus igitur, iuvenes dum sumus.", "label": 1}
+{"sentence": "Calamitas virtutis occasio est.", "label": 0}
+{"sentence": "Tabula rasa in mente apparet.", "label": 2}
+{"sentence": "Vita beata in virtute posita est.", "label": 1}
+{"sentence": "Crudelis est ille qui lacrimas non fundit.", "label": 0}
+{"sentence": "Ignorantia legis neminem excusat.", "label": 2}
+{"sentence": "Magnas inter opes inops.", "label": 0}
+{"sentence": "Finis coronat opus bene confectum.", "label": 1}
+{"sentence": "Silentium est aurum in consilio.", "label": 2}
+{"sentence": "Ira furor brevis est et animum vastat.", "label": 0}
+{"sentence": "Sapiens dominabitur astris.", "label": 1}
+{"sentence": "Canis sine dentibus frustra latrat.", "label": 2}
+{"sentence": "Audentes fortuna iuvat.", "label": 1}
+{"sentence": "Dolor hic tibi proderit olim.", "label": 0}
+{"sentence": "Gutta cavat lapidem, non vi sed saepe cadendo.", "label": 2}
+{"sentence": "Dum spiro, spero.", "label": 1}
+{"sentence": "Perfer et obdura; dolor hic tibi proderit olim.", "label": 0}
+{"sentence": "Caveat emptor in foro.", "label": 2}
+{"sentence": "Non nobis solum nati sumus.", "label": 1}
+{"sentence": "Ubi solitudinem faciunt, pacem appellant.", "label": 0}
+{"sentence": "Labor omnia vincit improbus.", "label": 2}
+{"sentence": "Vivere est vincere.", "label": 1}
+{"sentence": "Fama volat per urbem.", "label": 2}
+{"sentence": "Abyssus abyssum invocat.", "label": 0}
+{"sentence": "Carpe diem, quam minimum credula postero.", "label": 1}
+{"sentence": "Post tenebras lux.", "label": 1}
+{"sentence": "In vino veritas est.", "label": 2}
+{"sentence": "Corruptio optimi pessima.", "label": 0}
+{"sentence": "Virtus per se ipsa laudabilis est.", "label": 1}
+{"sentence": "Aura popularis mutabilis est.", "label": 2}
+{"sentence": "Sunt lacrimae rerum et mentem mortalia tangunt.", "label": 0}
+{"sentence": "Mens sana in corpore sano.", "label": 1}
+
+{"sentence": "Fructus boni laboris iucundus est.", "label": 1}
+{"sentence": "Miserum est mentiri.", "label": 0}
+{"sentence": "Caelum hodie serenum est.", "label": 2}
+{"sentence": "Amici veri semper adiuvant.", "label": 1}
+{"sentence": "Dolor animi saepe acerbus est.", "label": 0}
+{"sentence": "Forum plena est hominibus.", "label": 2}
+{"sentence": "Vita laeta multos laetitias dat.", "label": 1}
+{"sentence": "Tempestas mala navem fregit.", "label": 0}
+{"sentence": "Librum novi legis legi.", "label": 2}
+{"sentence": "Amor vincit omnia.", "label": 1}
+{"sentence": "Invidia saepe miseriae causa est.", "label": 0}
+{"sentence": "Urbs multos habitantes habet.", "label": 2}
+{"sentence": "Victorias exercitus celebravit.", "label": 1}
+{"sentence": "Fames terribilis est.", "label": 0}
+{"sentence": "Flumen lente fluens pulchrum est.", "label": 2}
+{"sentence": "Puellae ridere saepe volunt.", "label": 1}
+{"sentence": "Hostes oppidum vastaverunt.", "label": 0}
+{"sentence": "Equus in campo currit.", "label": 2}
+{"sentence": "Gaudium in corde meo habitat.", "label": 1}
+{"sentence": "Nox tenebrosa timorem parit.", "label": 0}
+{"sentence": "Mens sana in corpore sano.", "label": 2}
+{"sentence": "Amicitia vera pretiosa est.", "label": 1}
+{"sentence": "Ignorantia saepe calamitatem adfert.", "label": 0}
+{"sentence": "Domus alta et ampla est.", "label": 2}
+{"sentence": "Poeta carmina pulchra scribit.", "label": 1}
+{"sentence": "Bellum multos homines peremit.", "label": 0}
+{"sentence": "Silva viridis multum umbrae praebet.", "label": 2}
+{"sentence": "Sperantia animi fovet.", "label": 1}
+{"sentence": "Caedes injusta tristitiam adfert.", "label": 0}
+{"sentence": "Via longa ad oppidum ducit.", "label": 2}
+{"sentence": "Felix est qui pacem invenit.", "label": 1}
+{"sentence": "Poena severa injusta est.", "label": 0}
+{"sentence": "Mensa plena ciborum est.", "label": 2}
+{"sentence": "Musica dulcis auribus placet.", "label": 1}
+{"sentence": "Furtem patefactum puniunt.", "label": 0}
+{"sentence": "Stellae in caelo micant.", "label": 2}
+{"sentence": "Animus optimus semper laetificat.", "label": 1}
+{"sentence": "Venenum mortiferum est.", "label": 0}
+{"sentence": "Porta urbis latissima est.", "label": 2}
+{"sentence": "Puellae flores colligunt.", "label": 1}
+{"sentence": "Ignis domum corrumpit.", "label": 0}
+{"sentence": "Avis in arbore sedet.", "label": 2}
+{"sentence": "Virtus et honos semper laudantur.", "label": 1}
+{"sentence": "Tempestas marina periculosam navem facit.", "label": 0}
+{"sentence": "Campus viridis est et pulcher.", "label": 2}
+{"sentence": "Risus infantium corda tangit.", "label": 1}
+{"sentence": "Mors improvida tristitiam inducit.", "label": 0}
+{"sentence": "Cibus in mensa paratus est.", "label": 2}
+{"sentence": "Fortuna favet audaci.", "label": 1}
+{"sentence": "Ruina oppidi ingens est.", "label": 0}
+{"sentence": "Puer in horto ludere vult.", "label": 2}
+{"sentence": "Lux solis corda illuminat.", "label": 1}
+
+{"sentence": "Librum novi legis legi.", "label": 2}
+{"sentence": "Fortuna favet audaci.", "label": 1}
+{"sentence": "Tempestas mala navem fregit.", "label": 0}
+{"sentence": "Lux solis corda illuminat.", "label": 1}
+{"sentence": "Amor vincit omnia.", "label": 1}
+{"sentence": "Animus optimus semper laetificat.", "label": 1}
+{"sentence": "Poena severa injusta est.", "label": 0}
+{"sentence": "Ignis domum corrumpit. Fortasse.", "label": 0}
+{"sentence": "Amor vincit omnia.", "label": 1}
+{"sentence": "Tempestas marina periculosam navem facit.", "label": 0}
+{"sentence": "Librum novi legis legi.", "label": 2}
+{"sentence": "Mensa plena ciborum est. Sic est.", "label": 2}
+{"sentence": "Lux solis corda illuminat. Sic est.", "label": 1}
+{"sentence": "Fames terribilis est. Fortasse.", "label": 0}
+{"sentence": "Invidia saepe miseriae causa est.", "label": 0}
+{"sentence": "Nox tenebrosa timorem parit.", "label": 0}
+{"sentence": "Fructus boni laboris iucundus est.", "label": 1}
+{"sentence": "Animus optimus semper laetificat.", "label": 1}
+{"sentence": "Via longa ad oppidum ducit.", "label": 2}
+{"sentence": "Sperantia animi fovet.", "label": 1}
+{"sentence": "Stellae in caelo micant.", "label": 2}
+{"sentence": "Dolor animi saepe acerbus est.", "label": 0}
+{"sentence": "Campus viridis est et pulcher. Sic est.", "label": 2}
+{"sentence": "Nox tenebrosa timorem parit.", "label": 0}
+{"sentence": "Poena severa injusta est.", "label": 0}
+{"sentence": "Equus in campo currit. Sic est.", "label": 2}
+{"sentence": "Silva viridis multum umbrae praebet.", "label": 2}
+{"sentence": "Librum novi legis legi.", "label": 2}
+{"sentence": "Hostes oppidum vastaverunt.", "label": 0}
+{"sentence": "Musica dulcis auribus placet.", "label": 1}
+{"sentence": "Lux solis corda illuminat.", "label": 1}
+{"sentence": "Silva viridis multum umbrae praebet.", "label": 2}
+{"sentence": "Ignorantia saepe calamitatem adfert.", "label": 0}
+{"sentence": "Lux solis corda illuminat. Et vero.", "label": 1}
+{"sentence": "Amicitia vera pretiosa est.", "label": 1}
+{"sentence": "Bellum multos homines peremit.", "label": 0}
+{"sentence": "Equus in campo currit.", "label": 2}
+{"sentence": "Fructus boni laboris iucundus est. Sic est.", "label": 1}
+{"sentence": "Hostes oppidum vastaverunt. Fortasse.", "label": 0}
+{"sentence": "Via longa ad oppidum ducit.", "label": 2}
+{"sentence": "Animus optimus semper laetificat. Bene!", "label": 1}
+{"sentence": "Dolor animi saepe acerbus est.", "label": 0}
+{"sentence": "Campus viridis est et pulcher.", "label": 2}
+{"sentence": "Fortuna favet audaci.", "label": 1}
+{"sentence": "Nox tenebrosa timorem parit.", "label": 0}
+{"sentence": "Stellae in caelo micant.", "label": 2}
+{"sentence": "Poeta carmina pulchra scribit.", "label": 1}
+{"sentence": "Fames terribilis est.", "label": 0}
+{"sentence": "Mensa plena ciborum est.", "label": 2}
+{"sentence": "Risus infantium corda tangit.", "label": 1}
+{"sentence": "Ignis domum corrumpit.", "label": 0}
+{"sentence": "Puer in horto ludere vult.", "label": 2}
+{"sentence": "Lux solis corda illuminat.", "label": 1}
+{"sentence": "Tempestas mala navem fregit.", "label": 0}
+
+{"sentence": "Sapientia, quam multi neglegunt, sola animum ab angore liberat.", "label": 1}
+{"sentence": "Virtus vera non in verbis sed in factis cernitur.", "label": 1}
+{"sentence": "Amici fideles, quos raro invenimus, vitam iucundiorem reddunt.", "label": 1}
+{"sentence": "Pax, quam tot bella consumpserunt, tandem in terras rediit.", "label": 1}
+{"sentence": "Ille magister, a quo multa didicimus, numquam laudem quaesivit.", "label": 1}
+{"sentence": "Non opes sed animus rectus hominem beatum facit.", "label": 1}
+{"sentence": "Quamquam via longa et aspera erat, iter absolvimus laeti.", "label": 1}
+{"sentence": "Carmina poetae, quae per saecula manserunt, adhuc animos movent.", "label": 1}
+{"sentence": "Nemo qui veritatem amat umquam sine spe vivit.", "label": 1}
+{"sentence": "Amor parentum, quo nihil dulcius est, liberos nutrit et format.", "label": 1}
+{"sentence": "Civitas bene ordinata, ubi ius viget, cives tutOS servat.", "label": 1}
+{"sentence": "Quod seminavimus cum cura, nunc cum gaudio metimus.", "label": 1}
+{"sentence": "Mens sana, quam exercitatione et lectione colimus, corpus quoque iuvat.", "label": 1}
+{"sentence": "Hic vir, qui nunquam ab officio recessit, ab omnibus honoratur.", "label": 1}
+{"sentence": "Libertas, quam maiores nostri sanguine pepererunt, maxime amanda est.", "label": 1}
+{"sentence": "Quia nihil sine labore paratur, industria semper laudanda est.", "label": 1}
+{"sentence": "Fides et iustitia, sine quibus nulla societas stare potest, colendae sunt.", "label": 1}
+{"sentence": "Quamvis pauperes simus, animo divites esse possumus.", "label": 1}
+{"sentence": "Sol, qui post longas nubes tandem emersit, agros calefecit.", "label": 1}
+{"sentence": "Non timor sed amor optimus custos virtutis est.", "label": 1}
+{"sentence": "Bellum horribile, quod multos annos duravit, innumerabiles cives occidit.", "label": 0}
+{"sentence": "Tyrannus crudelis, quem nemo amare poterat, populum oppressit.", "label": 0}
+{"sentence": "Pestilentia dira per urbes et agros serpens multas familias delevit.", "label": 0}
+{"sentence": "Hoc scelus nefarium, quod tota civitas detestat, non oblivioni tradetur.", "label": 0}
+{"sentence": "Fraus et mendacium, quibus ille usus est, tandem detecta sunt.", "label": 0}
+{"sentence": "Nusquam in hac terra miseria maior quam in bello geritur.", "label": 0}
+{"sentence": "Amici falsi, qui in rebus prosperis aderant, in adversis fugerunt.", "label": 0}
+{"sentence": "Iniuria tam gravis, quam passus est, nulla compensatione sanari potest.", "label": 0}
+{"sentence": "Calamitatem, quam neglegentia ducis attulit, milites miserrimi pertulerunt.", "label": 0}
+{"sentence": "Nihil tam triste est quam senecta solitaria ab omnibus derelicta.", "label": 0}
+{"sentence": "Ira, quae rationem vincit, multa bona amicitiarum destruit.", "label": 0}
+{"sentence": "Arx incensa et templum dirutum cives in luctum magnum impulerunt.", "label": 0}
+{"sentence": "Corruptio, quae in omnes magistratus penetravit, civitatem perdidit.", "label": 0}
+{"sentence": "Inopia et fames, quibus populus vexatus est, ex malitia principum ortae sunt.", "label": 0}
+{"sentence": "Quamquam multa promisit, nihil umquam praestitit qui nos fefellit.", "label": 0}
+{"sentence": "Mors repentina iuvenis, quem omnes diligebant, urbem in maerorem mersit.", "label": 0}
+{"sentence": "Servi miseri, qui nunquam libertatem cognoverant, in perpetuis tenebris vixerunt.", "label": 0}
+{"sentence": "Pater, cuius mens morbo gravissimo vexabatur, filios agnovit non amplius.", "label": 0}
+{"sentence": "Societas, quae iustitiam non colit, in discordiam et ruinam ruit.", "label": 0}
+{"sentence": "Non gloria sed ignominia ex proditione oritur.", "label": 0}
+{"sentence": "Rex Romanus, de cuius origine antiqui scriptores disceptant, Romulum fuisse traditur.", "label": 2}
+{"sentence": "Lingua Latina, quae per tot saecula viguit, in multis linguis hodiernis vestigia reliquit.", "label": 2}
+{"sentence": "Flumen, quod trans vallem fluit, duos montes inter se dividit.", "label": 2}
+{"sentence": "Philosophi veteres de natura animae et corporis multas sententias proposuerunt.", "label": 2}
+{"sentence": "Leges, quas consules in senatu tulerunt, post tres dies in vulgus promulgatae sunt.", "label": 2}
+{"sentence": "Terra, quam incolimus, circum solem semel in anno revolvitur.", "label": 2}
+{"sentence": "Milites, qui ex oriente reversi erant, multas gentium consuetudines narraverunt.", "label": 2}
+{"sentence": "Mercatores per maria et terras merces portantes inter gentes commercia alebant.", "label": 2}
+{"sentence": "Libri, quos bibliothecae continent, memoriam generationum praeteritarum servant.", "label": 2}
+{"sentence": "Mos funeris apud Romanos, ut Cicero describit, ab Graecis multum differebat.", "label": 2}
+{"sentence": "Quae in tabulis aeneis incisa erant, legibus perpetuis vim dabant.", "label": 2}
+{"sentence": "Aestus maris bis quotidie crescit minuitque, ut nautae observaverunt.", "label": 2}
+{"sentence": "Consul, priusquam exercitum in aciem duxit, auspicia more maiorum cepit.", "label": 2}
+{"sentence": "Verba, quae semel prolata sunt, retractari non possunt.", "label": 2}
+{"sentence": "Urbs antiqua, quam diversi populi condiderunt, plures linguas et ritus habuit.", "label": 2}
+{"sentence": "Cometes, quem astronomus per multas noctes observavit, post mensem evanuit.", "label": 2}
+{"sentence": "Senatus, quamvis multas sententias audivisset, rem in diem posterum distulit.", "label": 2}
+{"sentence": "Agri, qui non arantur nec seruntur, paulatim in silvam redeunt.", "label": 2}
+{"sentence": "Nummi, quos fodientes invenerunt, ad tempora Hadriani imperatoris pertinere videntur.", "label": 2}
+{"sentence": "Grammatica, sine qua nec poesis nec oratio recte intellegi potest, primum discenda est.", "label": 2}
+{"sentence": "Quod non intellegis, ne iudices; quod intellegis, aequo animo perpende.", "label": 2}
+{"sentence": "Non semper qui multa loquuntur plurimum sciunt, nec tacentes stulti sunt.", "label": 2}
+{"sentence": "Tempora, quae mutantur, mores quoque hominum sensim immutant.", "label": 2}
+{"sentence": "Nec virtus nec vitium in diem unum natum est sed longa consuetudine formatur.", "label": 2}
+
+{"sentence": "Cum hostes urbem obsiderent, tamen cives, qui neque arma neque virtutem habebant, non se dediderunt.", "label": 1}
+{"sentence": "Nihil est miserius quam homo sine amicitia, quae vitam non ornat sed sustentat.", "label": 0}
+{"sentence": "Si quis pecuniam amat, numquam animi pacem inveniet, quia avaritia omnia bona consumit.", "label": 0}
+{"sentence": "Non solum sapientia hominem beatum facit, sed etiam temperantia et iustitia, sine quibus vita nulla est.", "label": 1}
+{"sentence": "Quamvis pluvia continue caderet, tamen agricolae, qui nullam spem frugum habebant, non cessabant laborare.", "label": 2}
+{"sentence": "Nemo tam stultus est ut semper irascatur, nam ira brevis furor est, ut ait Horatius.", "label": 2}
+{"sentence": "Cum Roma magna esset, non tamen omnes cives laeti erant, quia pauperes divitias numquam adepti sunt.", "label": 0}
+{"sentence": "Neque Caesar neque Pompeius bello civili victoriam sine magna clade reportavit.", "label": 0}
+{"sentence": "Si omnes homines fratre amarent, nulla bella essent, sed hodie videmus contrarium.", "label": 1}
+{"sentence": "Non enim vivere solum bonum est, sed bene vivere, quod virtute et constantia efficitur.", "label": 1}
+{"sentence": "Quod scripsi, scripsi; sed neque illud probo neque hoc improbo, quia veritas media est.", "label": 2}
+{"sentence": "Nihil aliud est felicitas quam pura conscientia et animus nullius culpae conscius.", "label": 1}
+{"sentence": "Cum senex esset, tamen numquam desiit discere, quia sapientia non senescit sed crescit.", "label": 1}
+{"sentence": "Ne legiones quidem, quae in Germania fortissimae habebantur, hostium impetum sustinere potuerunt.", "label": 0}
+{"sentence": "Non omnia possumus omnes, sed qui non conatur, nihil umquam assequitur.", "label": 2}
+{"sentence": "Tametsi plerique divitias laudant, tamen verae divitiae non in auro sed in amicitia constant.", "label": 1}
+{"sentence": "Quis ignorat stultum esse eum qui pecuniam servat sed tempus perdit?", "label": 0}
+{"sentence": "Cum ver non venisset, agricolae nec semen iecerunt nec messem speraverunt.", "label": 0}
+{"sentence": "Nihil est tam horribile quam tyrannus qui leges non timet et populum opprimit.", "label": 0}
+{"sentence": "Si vitam hominum respexeris, nullus dies sine lacrimis praeterit, et tamen vivere pulchrum est.", "label": 2}
+{"sentence": "Neque solum oratores sed etiam philosophi negant umquam iram utilem fuisse.", "label": 1}
+{"sentence": "Cum hostes fugerent, milites non sequebantur, quia imperator eis dixerat: 'Manete in castris.'", "label": 2}
+{"sentence": "Nulla res magis prodest homini quam vera amicitia, quae neque fallit neque decipit.", "label": 1}
+{"sentence": "Non quia difficilia sunt non audemus, sed quia non audemus difficilia sunt.", "label": 1}
+{"sentence": "Si quis hoc facinus fecit, non est liber, sed servus cupiditatum suarum.", "label": 0}
+{"sentence": "Cum puer essem, putabam stellas numquam cadere; nunc scio eas assidue ruere.", "label": 2}
+{"sentence": "Neque Cicero neque Catilina rem publicam salvam facere potuit, quia uterque peccavit.", "label": 0}
+{"sentence": "Nihil dulcius est quam domum redire post longum iter, sed multi hoc numquam experientur.", "label": 1}
+{"sentence": "Quamvis multa legeris, tamen sine iudicio nihil scies; nam memoria non est sapientia.", "label": 2}
+{"sentence": "Non solum pugnare sed etiam vincere sine crudelitate potest vir fortis et iustus.", "label": 1}
+{"sentence": "Cum urbs capta esset, nullus civis se servavit, quia omnes in foro trucidati sunt.", "label": 0}
+{"sentence": "Neque umquam speravi neque umquam desperavi, quia mediam viam tenui.", "label": 2}
+{"sentence": "Si tempus non amittas, nihil difficile erit; sed homines saepe differunt.", "label": 1}
+{"sentence": "Nemo natus est sine vitiis, et qui se putat perfectum, stultissimus est.", "label": 2}
+{"sentence": "Cum luna luceret, tamen viator iter non fecit, quia viam non cognoverat.", "label": 2}
+{"sentence": "Non omnes qui errant hostes sunt; aliqui sunt amici qui male consulunt.", "label": 1}
+{"sentence": "Nihil tam difficile est quin quaerendo investigari possit, sed multi quaerere nolunt.", "label": 1}
+{"sentence": "Quod natura dat, non potest auferri; quod fortuna dedit, cito perit.", "label": 2}
+{"sentence": "Si consul populum non audiret, leges iniustae ferrentur, et nemo eas mutaret.", "label": 0}
+{"sentence": "Neque aqua neque ignis utilius est homini quam silentium in tempore opportuno.", "label": 1}
+{"sentence": "Cum canis latraret, fur non timuit, quia dominus domi non erat.", "label": 2}
+{"sentence": "Non est beatus qui multa possidet, sed qui parvis contentus est et nihil cupit.", "label": 1}
+{"sentence": "Nemo umquam tantum profecit quin aliquid restet quod ignoret; et hoc pulchrum est.", "label": 1}
+{"sentence": "Si hostes pacem petiverint, non negandam esse censeo, sed cavendum est ne fallant.", "label": 2}
+{"sentence": "Neque gladius neque ignis tam nocet quam lingua malitiosa et cor perfidum.", "label": 0}
+{"sentence": "Cum Socrates venenum bibisset, non clamavit neque lacrimavit, sed placide mortem accepit.", "label": 1}
+{"sentence": "Non omnia credenda sunt amicis, nec omnia dicenda, quia fides modum habet.", "label": 2}
+{"sentence": "Quis potest esse tam ferreus ut mortem non timeat? Sed sapiens timorem vincit.", "label": 2}
+{"sentence": "Si pecuniam amiseris, nihil amisisti; si tempus amiseris, aliquid amisisti; si famam, multum; si virtutem, omnia.", "label": 1}
+{"sentence": "Nihil est turpius quam vir qui promissa non servat et amicos prodit.", "label": 0}
+{"sentence": "Cum puella flores legeret, non vidit serpentem in herba latentem, sed tamen evasit incolumis.", "label": 2}
+{"sentence": "Neque Caesar neque Alexander sine felicitate tantum facere potuerunt; sed felicitas non semper favet.", "label": 2}
+{"sentence": "Non qui incipit sed qui perseverat laudandus est, quia initia facilia sunt, fines difficiles.", "label": 1}
+{"sentence": "Si quis totam vitam in otio consumat, non vivit sed tantum existit.", "label": 0}
+{"sentence": "Nemo tam dives est ut nullo eg eat; et nemo tam pauper ut nihil donare possit.", "label": 1}
+{"sentence": "Cum ventus magnus flaret, nautae non solverunt, quia portum tutum non reliquerunt.", "label": 2}
+{"sentence": "Neque amicus est qui te semper laudat, neque inimicus qui te interdum verberat.", "label": 2}
+{"sentence": "Non est virtus non irasci, sed irasci modeste et propter iustam causam.", "label": 2}
+{"sentence": "Si Catullus Lesbiam amavit, numquam gaudium verum invenit, quia amor non reciprocus est.", "label": 0}
+{"sentence": "Nihil potest esse tam pulchrum quam sol oriens, sed multi hoc umquam non vident, quia dormiunt.", "label": 1}
+{"sentence": "Cum senatores inter se pugnarent, populus Romanus non interfuit, sed passus est utrique.", "label": 0}
+{"sentence": "Neque mihi neque tibi credendum est sine probatione, quia uterque falli potest.", "label": 2}
+{"sentence": "Non quia pluit domi manemus, sed quia foris nihil boni facere possumus.", "label": 2}
+{"sentence": "Si homines animalia non timerent, tamen a natura ipsa saepe periclitatum est.", "label": 2}
+{"sentence": "Nemo est tam felix quin aliquem habeat dolorem, et nemo tam miser quin aliquam spem.", "label": 2}
+{"sentence": "Cum gladiator cecidisset, populus non clamavit, quia spectaculum iam taedebat.", "label": 0}
+{"sentence": "Neque philosophus neque poeta umquam dixit se omnia scire; soli stulti hoc faciunt.", "label": 1}
+{"sentence": "Non est amare si non dolere; sed dolor non semper vitandus est, quia crescit per aspera.", "label": 1}
+{"sentence": "Si filius patrem non audiat, poenas dabit; sed pater saepe non audit filium.", "label": 0}
+{"sentence": "Nihil tam cito crescit quam cura, et nihil tam lente exit quam spes falsa.", "label": 0}
+{"sentence": "Cum magistratus corrumperentur, cives non iam crediderunt ulli legi, et respublica cecidit.", "label": 0}
+{"sentence": "Neque ignis neque ferrum tam efficax est quam tempus, quod omnia mutat nec revertitur.", "label": 2}
+{"sentence": "Non quod difficile est timemus, sed quod timemus difficile fit.", "label": 1}
+{"sentence": "Si discipulus saepe errat, non puniendus est sed docendus, quia error humanus est.", "label": 1}
+{"sentence": "Nemo umquam tantum amavit quantum Didonem Aeneas, sed ille non remansit.", "label": 0}
+{"sentence": "Cum nox appropinquaret, viator nullum hospitium invenit et in silva solus mansit.", "label": 0}
+{"sentence": "Neque vox neque silentium semper utile est; sed utrumque suo tempore adhibendum.", "label": 2}
+{"sentence": "Non qui vincit sed qui pro patria moritur gloriam veram consequitur.", "label": 1}
+{"sentence": "Si omnes cives suffragium ferrent, tamen non omnes aequales essent, quia natura dispar est.", "label": 2}
+{"sentence": "Nihil est tam incertum quam vita hominum, nihil tam certum quam mors.", "label": 2}
+{"sentence": "Cum poeta carmen scriberet, non cogitavit de gloria, sed de pulchritudine verborum.", "label": 1}
+{"sentence": "Neque aqua pura neque aer salubris superest in hac urbe, quia omnia polluta sunt.", "label": 0}
+{"sentence": "Non quia multa sapit senex sed quia multa vidit, ideo sapiens habetur.", "label": 1}
+{"sentence": "Si iuvenes libros non legant, numquam intelligent se nihil scire.", "label": 0}
+{"sentence": "Nemo est tam stultus ut se ipsum odiat, sed multi se ipsos neglegunt.", "label": 2}
+{"sentence": "Cum Hercules labores confecisset, non quievit sed alios adiuvit, quia virtus non cessat.", "label": 1}
+{"sentence": "Neque dona magna neque promissa sonora amicum verum faciunt, sed fides et constantia.", "label": 1}
+{"sentence": "Non omnes qui vagantur errant, aliqui quaerunt veritatem, quae numquam facilis est.", "label": 2}
+{"sentence": "Si pecuniam perdideris, recuperare potes; si tempus, numquam.", "label": 0}
+{"sentence": "Nihil tam delectat quam animus purae conscientiae, qui neque timet neque cupit.", "label": 1}
+{"sentence": "Cum ludi Romani celebrarentur, tamen pauperes non participaverunt, quia nummos non habebant.", "label": 0}
+{"sentence": "Neque Caesar neque Brutus sine controversia bonus fuit, quia uterque aliquid mali fecit.", "label": 2}
+{"sentence": "Non est sapientia semper loqui, sed scire quando tacendum est.", "label": 1}
+{"sentence": "Si femina virum amat, non sequitur ut vir eam amet; sed hoc iniustum est.", "label": 0}
+{"sentence": "Nemo umquam tantum profecit ut non plus profecturus sit, si studuerit.", "label": 1}
+{"sentence": "Cum liber scriptus esset, auctor non contentus fuit, quia semper meliora desiderabat.", "label": 2}
+{"sentence": "Neque fortuna neque potentia beatum faciunt, sed virtus sola, quae numquam deperit.", "label": 1}
