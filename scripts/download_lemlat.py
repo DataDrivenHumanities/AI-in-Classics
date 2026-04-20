@@ -1,8 +1,8 @@
 import gdown
 
+url = "https://drive.google.com/drive/folders/1fH6gv1Ph8CrlZ0NDInZh2cyEK2L4h-QV"
 gdown.download_folder(
-    id="1fH6gv1Ph8CrlZ0NDInZh2cyEK2L4h-QV",
-    output="./data/",
+    url=url,
+    output="./data/lila",
     quiet=False,
-    remaining_ok=True,
 )
