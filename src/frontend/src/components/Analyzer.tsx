@@ -241,8 +241,8 @@ export default function Analyzer() {
     function isRegistryLlmCapable() {
         const m = selectedModelEntry();
         const p = (m?.provider || "").toLowerCase();
-        if (!p) return true; // unknown -> allow and let backend error if needed
-        return p !== "hugging face";
+        // LLM tabs use /api/chat and /api/llm/analyze, which are Ollama/OpenRouter-only.
+        return p === "ollama" || p === "ollama-rag" || p === "rag";
     }
 
     useEffect(() => {
@@ -671,7 +671,7 @@ export default function Analyzer() {
             return;
         }
         if (providerMode === "registry" && !isRegistryLlmCapable()) {
-            setChatError("Selected registry model is not an LLM (Hugging Face). Pick a local Ollama model to chat.");
+            setChatError("Selected registry model does not support Chat. Pick a local Ollama model.");
             return;
         }
         if (providerMode === "openrouter" && (!openrouterKey.trim() || !openrouterModel.trim())) {
@@ -737,7 +737,7 @@ export default function Analyzer() {
             return;
         }
         if (providerMode === "registry" && !isRegistryLlmCapable()) {
-            setLlmError("Selected registry model is not an LLM (Hugging Face). Pick a local Ollama model to run analysis.");
+            setLlmError("Selected registry model does not support LLM analysis. Pick a local Ollama model.");
             return;
         }
         if (providerMode === "openrouter") {

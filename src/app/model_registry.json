@@ -63,6 +63,15 @@
       "hf_classifier_params": {},
       "available": false,
       "tags": ["latin", "upcoming"]
+    },
+    "latin-sentiment-llama31-5class": {
+      "id": "latin-sentiment-llama31-5class",
+      "name": "Latin Sentiment Llama 3.1 5-Class",
+      "description": "Local Ollama 5-class Latin sentiment model.",
+      "provider": "ollama",
+      "hf_classifier_params": {},
+      "available": true,
+      "tags": ["latin", "ollama", "5class"]
     }
   }
 }
