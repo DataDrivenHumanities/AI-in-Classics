@@ -790,9 +790,16 @@ async def llm_analyze(body: LlmAnalyzeBody, request: Request):
     # Default: local Ollama
     model_id = resolve_model(body.model_id)
     runtime_model = resolve_available_model_tag(model_id)
-    content = await generate_text(
-        runtime_model, prompt, temperature=temperature, num_predict=max_tokens
-    )
+    try:
+        content = await generate_text(
+            runtime_model, prompt, temperature=temperature, num_predict=max_tokens
+        )
+    except (httpx.ReadTimeout, httpx.ConnectTimeout):
+        raise HTTPException(status_code=504, detail="Model backend timeout")
+    except httpx.HTTPError as e:
+        raise HTTPException(status_code=502, detail=f"Model backend error: {e}")
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"LLM analysis error: {e}")
     return JSONResponse(
         {
             "provider": "ollama",
@@ -857,3 +864,5 @@ def api_health():
 def api_model_registry():
     registry = get_registry()
     return registry.available_models()
+
+

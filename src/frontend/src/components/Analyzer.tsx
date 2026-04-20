@@ -108,7 +108,7 @@ export default function Analyzer() {
         repeat_penalty: 1.0,
         num_predict: 1024,
         stop: [],
-        raw: true,
+        raw: false,
         format: "json",
     });
 

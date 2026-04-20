@@ -376,6 +376,7 @@ async def generate_text(
     *,
     temperature: float = 0.0,
     num_predict: int = 16,
+    timeout_s: float = 600,
 ) -> str:
     payload = {
         "model": model,
@@ -391,7 +392,7 @@ async def generate_text(
             "repeat_penalty": 1.0,
         },
     }
-    async with httpx.AsyncClient(timeout=60) as client:
+    async with httpx.AsyncClient(timeout=timeout_s) as client:
         r = await client.post(f"{OLLAMA_HOST}/api/generate", json=payload)
         r.raise_for_status()
         data = r.json()
