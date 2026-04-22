@@ -73,7 +73,11 @@ This will:
 - (re)load sentiment from `data/lila/LatinAffectusv4.tsv` into `lila.sentiment`
 - create convenience views from `src/Lemmatizer-LTN-LiLa/ops/create_lila_views.sql` (e.g. `lila.analysis_with_lemma`)
 
-### 4) (Optional) Load the web-scraped CSV outputs into `public.*`
+### 4a) Avoid lengthy web-scraping by downloading lemmas and forms from Google drive
+
+The [Google drive](https://drive.google.com/drive/u/2/folders/0AJy9HYtuVuQNUk9PVA) contains folders with scraped lemmas and forms from onlinelatindictionary.com, updated with english definitions. They are available [here](https://drive.google.com/drive/u/2/folders/1jkPc7DOr2QSSrX53UBNv5n8FBNV3Polk) as lemmas.csv and forms.csv. Add these files to the `out/` directory and then run `load_aggregated_to_postgres.py` to populate `public.lemmas`/`public.forms`. Skip part 4b.
+
+### 4b) (Optional) Load the web-scraped CSV outputs into `public.*`
 
 After scraping finishes and `src/Lemmatizer-LTN/out/` contains the per-lemma CSVs:
 
