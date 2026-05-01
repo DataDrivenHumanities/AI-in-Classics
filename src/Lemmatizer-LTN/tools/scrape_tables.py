@@ -6,9 +6,16 @@ from urllib.parse import urlparse, parse_qs, urljoin
 from pathlib import Path
 import csv
 import re
+import sys
 import unicodedata
 import argparse
 import random
+
+# Allow importing from the etl/ directory
+_SCRIPT_DIR = Path(__file__).resolve().parent
+_ETL_DIR = _SCRIPT_DIR.parent / "etl"
+if str(_ETL_DIR) not in sys.path:
+    sys.path.insert(0, str(_ETL_DIR))
 
 BASE = "https://www.online-latin-dictionary.com"
 INDEX_URL = BASE + "/latin-english-dictionary.php?typ=pg&pg={pg}"
@@ -168,26 +175,26 @@ def flatten_ff_value(cell):
                 
                 forms.append(combined)
         
-        # Return comma-separated forms
-        return ", ".join(forms)
+        # Return comma-separated forms, stripping stray U+FFFD from source HTML
+        return ", ".join(forms).replace("\ufffd", "").strip()
     
     # Fallback: if no radice+desinenza pattern, just concatenate everything
     if desinenze:
-        # We have endings but no radice - return them as-is (they'll be combined later)
         result = ", ".join(desinenze)
         if all_suffix:
             result = f"{result}, {all_suffix}" if result else all_suffix
-        return result
+        return result.replace("\ufffd", "").strip()
     
     if radice:
-        # We have a radice but no desinenze - return it with any suffix
         result = radice
         if all_suffix:
             result = f"{result} {all_suffix}"
-        return result
+        return result.replace("\ufffd", "").strip()
     
     # No radice or desinenza - just return other content
-    return all_suffix if all_suffix else ""
+    result = all_suffix if all_suffix else ""
+    # Strip stray U+FFFD replacement characters from source HTML
+    return result.replace("\ufffd", "").strip()
 
 def parse_flexion_tables(html_text: str, page_url: str):
     soup = BeautifulSoup(html_text, "html.parser")
@@ -223,8 +230,9 @@ def parse_flexion_tables(html_text: str, page_url: str):
 
     rows = []
     for cont in soup.select(".conjugation-container .ff_tbl_container"):
-        # up to 3 hierarchical titles (e.g., diathesis/mood/tense)
-        titles = [t.get_text(" ", strip=True) for t in cont.find_all_previous("div", class_="ff_tbl_title", limit=3)]
+        # up to 10 hierarchical titles to capture mood even for deeply nested sections
+        # (e.g., INDICATIVE has 7 subsection titles before FUTURE PERFECT)
+        titles = [t.get_text(" ", strip=True) for t in cont.find_all_previous("div", class_="ff_tbl_title", limit=10)]
         titles = list(reversed(titles))
         # Use lemma-level voice hint if available, otherwise check table titles
         v_hint = lemma_voice_hint or voice_hint_from_titles(titles)
@@ -239,7 +247,23 @@ def parse_flexion_tables(html_text: str, page_url: str):
             label = cols[0].get_text(" ", strip=True)
             values = [flatten_ff_value(c) for c in cols[1:]]
             nvals = len(values)
+
             if nvals == 0:
+                # Single-column rows: the "label" IS the form value.
+                # This happens for infinitives, participles, supine, etc.
+                form_val = flatten_ff_value(cols[0])
+                if form_val and form_val not in {"-", "–", "—"}:
+                    rows.append({
+                        "lemma_text": lemma_text,
+                        "pos": pos_text,
+                        "context_titles": "|".join(titles),
+                        "label": "",
+                        "value": form_val,
+                        "page_url": page_url,
+                        "number_hint": "",
+                        "gender_hint": "",
+                        "voice_hint": v_hint,
+                    })
                 continue
 
             # Heuristics for per-column hints (number/gender) when headers are not easily detectable
@@ -247,6 +271,11 @@ def parse_flexion_tables(html_text: str, page_url: str):
 
             if "noun" in pos_lc and nvals == 2:
                 # Nouns commonly have [singular | plural]
+                per_col_hints[0]["number_hint"] = "singular"
+                per_col_hints[1]["number_hint"] = "plural"
+
+            elif "adjective" in pos_lc and nvals == 2:
+                # Some adjectives have [singular | plural] layout
                 per_col_hints[0]["number_hint"] = "singular"
                 per_col_hints[1]["number_hint"] = "plural"
 
@@ -261,9 +290,7 @@ def parse_flexion_tables(html_text: str, page_url: str):
                 rows.append({
                     "lemma_text": lemma_text,
                     "pos": pos_text,
-                    "context_1": titles[0] if len(titles) > 0 else "",
-                    "context_2": titles[1] if len(titles) > 1 else "",
-                    "context_3": titles[2] if len(titles) > 2 else "",
+                    "context_titles": "|".join(titles),
                     "label": label,
                     "value": val,
                     "page_url": page_url,
@@ -272,12 +299,29 @@ def parse_flexion_tables(html_text: str, page_url: str):
                     "voice_hint": v_hint,
                 })
 
-    return lemma_text, rows
+    # Detect active<->passive partner link
+    # e.g. "View the passive form of this verb" -> AMOR100
+    paired_code = None
+    for a in soup.select("a[href*='latin-dictionary-flexion.php?lemma=']"):
+        link_text = a.get_text(strip=True).lower()
+        if "view the passive form" in link_text or "view the active form" in link_text:
+            href = a.get("href", "")
+            q = parse_qs(urlparse(urljoin(BASE, href)).query)
+            paired_code = q.get("lemma", [None])[0]
+            break
 
-async def fetch_text(session: aiohttp.ClientSession, url: str, timeout: int = 20, retries: int = 4, delay: float = 0.2):
+    return lemma_text, rows, paired_code
+
+async def fetch_text(session: aiohttp.ClientSession, url: str, timeout: int = 20, retries: int = 4, delay: float = 0.5):
     for attempt in range(retries + 1):
         try:
             async with session.get(url, timeout=timeout) as resp:
+                if resp.status == 429:
+                    # Rate limited — wait longer before retrying
+                    backoff = 5.0 * (2 ** attempt) + random.uniform(1, 3)
+                    print(f"[429] rate limited, waiting {backoff:.1f}s ({url.split('=')[-1]})")
+                    await asyncio.sleep(backoff)
+                    continue
                 resp.raise_for_status()
                 return await resp.text()
         except (ClientResponseError, ClientConnectorError, asyncio.TimeoutError):
@@ -313,7 +357,13 @@ async def discover_lemmas_dynamic(session, start: int, step: int, sem: asyncio.S
         pg += step
     return sorted(all_codes)
 
-async def fetch_and_write_lemma(session, code: str, outdir: Path, sem: asyncio.Semaphore, delay: float):
+async def fetch_and_aggregate_lemma(session, code: str, sem: asyncio.Semaphore, delay: float,
+                                    lemmas: dict, forms: list, process_fn):
+    """Fetch a lemma page, parse it, aggregate in-memory (no per-lemma CSV).
+    
+    If the page links to an active/passive counterpart, also fetches that page
+    and merges forms so both lemma entries contain the full conjugation.
+    """
     url = FLEXION_URL.format(lemma=code)
     async with sem:
         try:
@@ -321,23 +371,42 @@ async def fetch_and_write_lemma(session, code: str, outdir: Path, sem: asyncio.S
         except Exception as e:
             print(f"[lemma {code}] warn: {e}")
             return 0
-        lemma_text, rows = parse_flexion_tables(html, url)
-        if not rows:
-            return 0
-        outdir.mkdir(parents=True, exist_ok=True)
-        name = slugify_lemma(lemma_text) + ".csv"
-        path = outdir / name
-        with path.open("w", newline="", encoding="utf-8") as f:
-            w = csv.DictWriter(
-                f,
-                fieldnames=[
-                    "lemma_text","pos","context_1","context_2","context_3",
-                    "label","value","page_url","number_hint","gender_hint","voice_hint"
-                ],
-            )
-            w.writeheader()
-            for r in rows:
-                w.writerow(r)
+        lemma_text, rows, paired_code = parse_flexion_tables(html, url)
+
+        # If there's a paired active/passive page, fetch it and merge rows
+        if paired_code:
+            paired_url = FLEXION_URL.format(lemma=paired_code)
+            try:
+                paired_html = await fetch_text(session, paired_url)
+                _, paired_rows, _ = parse_flexion_tables(paired_html, paired_url)
+                # Override lemma_text in paired rows to match the current lemma
+                for r in paired_rows:
+                    r["lemma_text"] = lemma_text
+                rows.extend(paired_rows)
+            except Exception as e:
+                print(f"[lemma {code}] warn: paired fetch {paired_code}: {e}")
+
+        if rows:
+            lemma_tuple, form_tuples = process_fn(rows)
+            if lemma_tuple:
+                lemmas.setdefault(lemma_tuple[1], lemma_tuple)
+            forms.extend(form_tuples)
+        elif lemma_text:
+            # Invariable words (et, semper, etc.) have no flexion tables
+            # but should still be recorded as lemmas with zero forms.
+            from aggregate_out_to_csvs import norm, lemma_code_from_url
+            soup = BeautifulSoup(html, "html.parser")
+            pos_el = soup.select_one("#myth .grammatica")
+            pos_text = pos_el.get_text(" ", strip=True) if pos_el else ""
+            lnod = norm(lemma_text)
+            lcode = lemma_code_from_url(url)
+            gender = ""
+            pl = pos_text.lower()
+            if "masculine" in pl: gender = "masculine"
+            elif "feminine" in pl: gender = "feminine"
+            elif "neuter" in pl: gender = "neuter"
+            lemmas.setdefault(lnod, (lcode, lnod, lemma_text, pos_text, gender, url))
+
         if delay > 0:
             await asyncio.sleep(delay)
         return len(rows)
@@ -349,14 +418,21 @@ async def main():
     ap.add_argument("--step", type=int, default=50)
     ap.add_argument("--end", type=int, default=None)
     ap.add_argument("--dynamic", action="store_true")
-    ap.add_argument("--index-concurrency", type=int, default=8)
-    ap.add_argument("--lemma-concurrency", type=int, default=16)
+    ap.add_argument("--index-concurrency", type=int, default=4)
+    ap.add_argument("--lemma-concurrency", type=int, default=8)
     ap.add_argument("--timeout", type=int, default=20)
     ap.add_argument("--retries", type=int, default=4)
     ap.add_argument("--delay", type=float, default=0.2)
     args = ap.parse_args()
 
     outdir = Path(args.outdir); outdir.mkdir(parents=True, exist_ok=True)
+
+    # Import the aggregation logic from the ETL module
+    from aggregate_out_to_csvs import process_lemma_rows, write_aggregates
+
+    # In-memory aggregation containers
+    lemmas = {}
+    forms = []
 
     connector = aiohttp.TCPConnector(limit=args.index_concurrency + args.lemma_concurrency, ssl=False)
     timeout = aiohttp.ClientTimeout(total=None, sock_connect=args.timeout, sock_read=args.timeout)
@@ -367,7 +443,6 @@ async def main():
             lemma_codes = await discover_lemmas_dynamic(session, args.start, args.step, index_sem, args.delay)
         else:
             print(f"[index] fetching range {args.start}..{args.end} step {args.step}")
-            # simple range gather
             tasks = []
             for pg in range(args.start, args.end + 1, args.step):
                 async with index_sem:
@@ -377,18 +452,34 @@ async def main():
         print(f"[index] unique lemmas: {len(lemma_codes)}")
 
         lemma_sem = asyncio.Semaphore(args.lemma_concurrency)
-        tasks = [asyncio.create_task(fetch_and_write_lemma(session, code, outdir, lemma_sem, args.delay))
+        tasks = [asyncio.create_task(
+            fetch_and_aggregate_lemma(session, code, lemma_sem, args.delay,
+                                     lemmas, forms, process_lemma_rows))
                  for code in lemma_codes]
-        done = 0; rows_total = 0
+        done = 0; forms_total = 0
         for t in asyncio.as_completed(tasks):
             try:
-                n = await t; rows_total += n
+                n = await t; forms_total += n
             except Exception as e:
                 print(f"[lemma] warn: {e}")
             done += 1
             if done % 50 == 0 or done == len(tasks):
-                print(f"[lemma] progress: {done}/{len(tasks)} CSVs")
-        print(f"[lemma] finished. rows written: {rows_total}")
+                print(f"[scrape] progress: {done}/{len(tasks)} lemmas")
+
+    # Write final aggregate CSVs
+    lemma_csv = outdir / "lemmas.csv"
+    form_csv = outdir / "forms.csv"
+    write_aggregates(lemmas, forms, lemma_csv, form_csv)
+
+    # Split forms into letter-based CSVs (a.csv, b.csv, ...)
+    from aggregate_by_letter import aggregate_by_letter
+    letter_dir = outdir / "by_letter"
+    aggregate_by_letter(form_csv, letter_dir)
+
+    print(f"[complete] {len(lemmas)} lemmas, {forms_total} forms written to:")
+    print(f"  - {lemma_csv}")
+    print(f"  - {form_csv}")
+    print(f"  - {letter_dir}/")
 
 if __name__ == "__main__":
     asyncio.run(main())

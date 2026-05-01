@@ -41,9 +41,9 @@ NUM_SG = re.compile(r"\b(sg|sing|singular|sing\.)\b", re.I)
 NUM_PL = re.compile(r"\b(pl|plur|plural|pl\.)\b", re.I)
 
 MOODS  = ["indicative","subjunctive","imperative"]
-VERB_FORMS = ["infinitive","participle","gerund","gerundive","supine"]
+VERB_FORMS = ["infinitive","participle","participio","gerund","gerundio","gerundive","supine","supin"]
 VOICES = ["active","passive"]
-TENSES = ["present","imperfect","future","perfect","pluperfect","future perfect","futureperfect"]
+TENSES = ["present","imperfect","future","futuro","perfect","pluperfect","future perfect","futureperfect"]
 
 def detect_case(text: str) -> str:
     t = text or ""
@@ -53,23 +53,47 @@ def detect_case(text: str) -> str:
     return ""
 
 def detect_number(*xs) -> str:
-    j = " ".join(filter(None, xs))
-    if NUM_SG.search(j): return "singular"
-    if NUM_PL.search(j): return "plural"
+    """Detect number from context fields.
+    Checks each field individually from LAST to FIRST (most-specific title first),
+    so that the closest heading (e.g. 'PLURAL') wins over a farther ancestor ('SINGULAR')."""
+    # Check fields in reverse order (most specific context first)
+    for fld in reversed(list(filter(None, xs))):
+        has_sg = bool(NUM_SG.search(fld))
+        has_pl = bool(NUM_PL.search(fld))
+        if has_pl and not has_sg:
+            return "plural"
+        if has_sg and not has_pl:
+            return "singular"
+        # If a single field has both, skip it (ambiguous) and check the next
+        if has_pl and has_sg:
+            continue
     return ""
 
 def detect_mood(*xs) -> str:
-    """Detect mood from context fields and label."""
-    j = " ".join(filter(None, xs)).lower()
-    for m in MOODS:
-        if m in j: return m
+    """Detect mood from context fields and label.
+    Checks from most-specific field (last) to least-specific (first)."""
+    for fld in reversed(list(filter(None, xs))):
+        fl = fld.lower()
+        for m in MOODS:
+            if m in fl:
+                return m
     return ""
 
+_VERB_FORM_NORMALIZE = {
+    "participio": "participle",
+    "gerundio": "gerund",
+    "supin": "supine",
+}
+
 def detect_verb_form(*xs) -> str:
-    """Detect verb form (infinitive, participle, gerund, gerundive, supine) from context fields and label."""
-    j = " ".join(filter(None, xs)).lower()
-    for vf in VERB_FORMS:
-        if vf in j: return vf
+    """Detect verb form (infinitive, participle, gerund, gerundive, supine) from context fields and label.
+    Also handles Italian headings: PARTICIPIO, GERUNDIO, SUPIN.
+    Checks from most-specific field (last) to least-specific (first) so the closest heading wins."""
+    for fld in reversed(list(filter(None, xs))):
+        fl = fld.lower()
+        for vf in VERB_FORMS:
+            if vf in fl:
+                return _VERB_FORM_NORMALIZE.get(vf, vf)
     return ""
 
 def detect_voice(*xs) -> str:
@@ -123,12 +147,23 @@ def infer_voice_from_form(form_text: str, pos_text: str = "") -> str:
     
     return ""
 
+_TENSE_NORMALIZE = {
+    "futuro": "future",
+    "futureperfect": "future perfect",
+}
+
 def detect_tense(*xs) -> str:
-    """Detect tense from context fields and label."""
-    j = " ".join(filter(None, xs)).lower()
-    if "future perfect" in j or "futureperfect" in j: return "future perfect"
-    for t in TENSES:
-        if t in j: return t
+    """Detect tense from context fields and label.
+    Also handles Italian heading FUTURO -> future.
+    Checks from most-specific field (last) to least-specific (first)."""
+    for fld in reversed(list(filter(None, xs))):
+        fl = fld.lower()
+        # Check compound tenses first
+        if "future perfect" in fl or "futureperfect" in fl:
+            return "future perfect"
+        for t in TENSES:
+            if t in fl:
+                return _TENSE_NORMALIZE.get(t, t)
     return ""
 
 def person_num_from_label(lbl: str):
@@ -248,15 +283,158 @@ def split_forms(val):
     """Split form values, expanding ending-only entries by combining with previous full forms."""
     return split_forms_with_context(val, None)
 
+def process_lemma_rows(rows):
+    """Process raw scraper rows for a single lemma and return aggregated data.
+    
+    Args:
+        rows: list of dicts with keys: lemma_text, pos, context_titles,
+              label, value, page_url, number_hint, gender_hint, voice_hint
+    
+    Returns:
+        (lemma_tuple, form_tuples) where:
+        - lemma_tuple = (lemma_code, lemma_nod, lemma_diac, pos, gender, page_url) or None
+        - form_tuples = list of (lemma_nod, form_nod, form_diac, label,
+                                 mood, tense, voice, person, number, gender, case, degree, verb_form, page_url)
+    """
+    if not rows:
+        return None, []
+
+    r0 = rows[0]
+    lemma_text = clean_lemma_text(clean(r0.get("lemma_text","")))
+    pos_text   = clean(r0.get("pos",""))
+    page_url   = clean(r0.get("page_url",""))
+    lnod       = norm(lemma_text)
+    lcode      = lemma_code_from_url(page_url)
+
+    gender_from_pos = ""
+    pl = pos_text.lower()
+    if   "masculine" in pl: gender_from_pos = "masculine"
+    elif "feminine"  in pl: gender_from_pos = "feminine"
+    elif "neuter"    in pl: gender_from_pos = "neuter"
+
+    lemma_tuple = (lcode, lnod, lemma_text, pos_text, gender_from_pos, page_url)
+    is_verb = "verb" in pl
+
+    form_tuples = []
+    last_full_form_by_context = {}
+
+    for rr in rows:
+        ctx_titles_raw = clean(rr.get("context_titles", ""))
+        if ctx_titles_raw:
+            ctx_parts = [t.strip() for t in ctx_titles_raw.split("|") if t.strip()]
+        else:
+            ctx_parts = [clean(rr.get(f"context_{i}","")) for i in range(1,7)]
+            ctx_parts = [c for c in ctx_parts if c]
+        
+        label = clean(rr.get("label",""))
+        value = clean(rr.get("value",""))
+        if not value or value in {"-","–","—"}:
+            continue
+        
+        all_ctx = tuple(ctx_parts) + (label,)
+        context_key = (tuple(ctx_parts[:3]), label)
+        base_for_context = last_full_form_by_context.get(context_key)
+        
+        forms_from_value, new_base = split_forms_with_context(value, base_for_context)
+        
+        if new_base:
+            last_full_form_by_context[context_key] = new_base
+
+        for form in forms_from_value:
+            stripped_form = form.strip()
+            if stripped_form.startswith(("-", "–", "—")):
+                if base_for_context:
+                    form = combine_ending_with_base(base_for_context, stripped_form)
+                else:
+                    continue
+            
+            form_diac = form
+            form_nod  = norm(form_diac)
+            if not form_nod:
+                continue
+
+            number_hint = (rr.get("number_hint") or "").lower()
+            gender_hint = (rr.get("gender_hint") or "").lower()
+            voice_hint  = (rr.get("voice_hint")  or "").lower()
+
+            mood=tense=voice=person=number=case=degree=verb_form=""
+
+            if is_verb:
+                voice = voice_hint
+                if not voice:
+                    raw_lemma = clean(rr.get("lemma_text", ""))
+                    if "active diathesis" in raw_lemma.lower():
+                        voice = "active"
+                    elif "passive diathesis" in raw_lemma.lower():
+                        voice = "passive"
+                if not voice:
+                    voice = detect_voice(*all_ctx)
+                if not voice:
+                    voice = infer_voice_from_form(form_diac, pos_text)
+
+                verb_form = detect_verb_form(*all_ctx)
+                tense = detect_tense(*all_ctx)
+
+                if verb_form:
+                    mood = ""
+                else:
+                    mood = detect_mood(*all_ctx)
+
+                p_lbl, n_lbl = person_num_from_label(label)
+                person = p_lbl
+                number = n_lbl or number_hint or detect_number(*all_ctx)
+
+            else:
+                case   = detect_case(label)
+                number = number_hint or detect_number(label, *all_ctx)
+
+            gender = gender_hint or gender_from_pos
+
+            form_tuples.append((lnod, form_nod, form_diac, label,
+                          mood, tense, voice, person, number, gender, case, degree, verb_form, page_url))
+
+    return lemma_tuple, form_tuples
+
+
+def write_aggregates(lemmas, forms, lemma_csv=None, form_csv=None):
+    """Write lemmas dict and forms list to CSV files."""
+    lemma_csv = lemma_csv or LEMMA_CSV
+    form_csv = form_csv or FORM_CSV
+
+    with open(lemma_csv, "w", newline="", encoding="utf-8") as f:
+        w = csv.writer(f)
+        w.writerow(["lemma_code","lemma_nod","lemma_diac","pos","gender","page_url"])
+        for v in lemmas.values():
+            w.writerow(v)
+
+    with open(form_csv, "w", newline="", encoding="utf-8") as f:
+        w = csv.writer(f)
+        w.writerow(["lemma_nod","form_nod","form_diac","label",
+                    "mood","tense","voice","person","number","gender","case","degree","verb_form","page_url"])
+        w.writerows(forms)
+
+    print(f"Wrote {len(lemmas)} lemmas -> {lemma_csv}")
+    print(f"Wrote {len(forms)} forms  -> {form_csv}")
+
+
 def aggregate():
+    """Aggregate per-lemma CSVs into lemmas.csv and forms.csv (legacy path).
+    
+    NOTE: The scraper now aggregates in-memory and writes these CSVs directly.
+    This function is only needed if per-lemma CSVs exist from an older workflow.
+    It will NOT overwrite existing aggregates if no per-lemma CSVs are found.
+    """
     OUT_DIR.mkdir(parents=True, exist_ok=True)
 
-    # discover all per-lemma csvs (ignore previous aggregates)
     paths = [p for p in glob.glob(str(OUT_DIR / "*.csv"))
              if Path(p).name not in ("lemmas.csv","forms.csv")]
 
-    lemmas = {}   # lemma_nod -> (lemma_code, lemma_nod, lemma_diac, pos, gender, page_url)
-    forms  = []   # (lemma_nod, form_nod, form_diac, label, mood, tense, voice, person, number, gender, case, degree, verb_form, page_url)
+    if not paths:
+        print("No per-lemma CSV files found to aggregate")
+        return
+
+    lemmas = {}
+    forms  = []
 
     for p in paths:
         with open(p, newline="", encoding="utf-8") as f:
@@ -264,120 +442,13 @@ def aggregate():
         if not rows: 
             continue
 
-        r0 = rows[0]
-        lemma_text = clean_lemma_text(clean(r0.get("lemma_text","")))
-        pos_text   = clean(r0.get("pos",""))
-        page_url   = clean(r0.get("page_url",""))
-        lnod       = norm(lemma_text)
-        lcode      = lemma_code_from_url(page_url)
+        lemma_tuple, form_tuples = process_lemma_rows(rows)
+        if lemma_tuple:
+            lnod = lemma_tuple[1]
+            lemmas.setdefault(lnod, lemma_tuple)
+        forms.extend(form_tuples)
 
-        gender_from_pos = ""
-        pl = pos_text.lower()
-        if   "masculine" in pl: gender_from_pos = "masculine"
-        elif "feminine"  in pl: gender_from_pos = "feminine"
-        elif "neuter"    in pl: gender_from_pos = "neuter"
-
-        # store lemma once
-        lemmas.setdefault(lnod, (lcode, lnod, lemma_text, pos_text, gender_from_pos, page_url))
-        is_verb = "verb" in pl
-
-        # Track last full form per context (to handle ending forms across rows)
-        last_full_form_by_context = {}
-
-        for rr in rows:
-            ctx1, ctx2, ctx3 = clean(rr.get("context_1","")), clean(rr.get("context_2","")), clean(rr.get("context_3",""))
-            label = clean(rr.get("label",""))
-            value = clean(rr.get("value",""))
-            if not value or value in {"-","–","—"}:
-                continue
-            
-            # Create context key for tracking last full form
-            context_key = (ctx1, ctx2, ctx3, label)
-            base_for_context = last_full_form_by_context.get(context_key)
-            
-            # Get forms, passing in last full form for this context
-            forms_from_value, new_base = split_forms_with_context(value, base_for_context)
-            
-            # Update last full form for this context (only updated by original full forms, not ending-derived)
-            if new_base:
-                last_full_form_by_context[context_key] = new_base
-
-            for form in forms_from_value:
-                stripped_form = form.strip()
-                # If split logic missed an ending-only entry, try to combine it now
-                if stripped_form.startswith(("-", "–", "—")):
-                    if base_for_context:
-                        form = combine_ending_with_base(base_for_context, stripped_form)
-                    else:
-                        continue
-                
-                form_diac = form
-                form_nod  = norm(form_diac)
-                if not form_nod:
-                    continue
-
-                # Hints from scraper (if present)
-                number_hint = (rr.get("number_hint") or "").lower()
-                gender_hint = (rr.get("gender_hint") or "").lower()
-                voice_hint  = (rr.get("voice_hint")  or "").lower()
-
-                # defaults
-                mood=tense=voice=person=number=case=degree=verb_form=""
-
-                if is_verb:
-                    # voice: prefer explicit hint from scraper (extracted from lemma heading)
-                    # The scraper extracts this from "lemma – Active/Passive diathesis" in the raw heading
-                    voice = voice_hint
-                    # Fallback: check lemma_text (before cleaning, it might still have diathesis info)
-                    if not voice:
-                        # Check if lemma_text contains diathesis (sometimes it's not fully cleaned)
-                        raw_lemma = clean(rr.get("lemma_text", ""))
-                        if "active diathesis" in raw_lemma.lower():
-                            voice = "active"
-                        elif "passive diathesis" in raw_lemma.lower():
-                            voice = "passive"
-                    # Fallback: detect from context fields
-                    if not voice:
-                        voice = detect_voice(ctx1,ctx2,ctx3,label)
-                    # Final fallback: try to infer from form pattern
-                    if not voice:
-                        voice = infer_voice_from_form(form_diac, pos_text)
-
-                    # mood/tense/verb_form from titles
-                    mood  = detect_mood(ctx1,ctx2,ctx3,label)
-                    tense = detect_tense(ctx1,ctx2,ctx3,label)
-                    verb_form = detect_verb_form(ctx1,ctx2,ctx3,label)
-
-                    # person/number from label (e.g., "3rd sg.")
-                    p_lbl, n_lbl = person_num_from_label(label)
-                    person = p_lbl
-                    number = n_lbl or number_hint or detect_number(ctx1,ctx2,ctx3,label)
-
-                else:
-                    # nouns/adjectives: case from label, number from hint or tokens
-                    case   = detect_case(label)
-                    number = number_hint or detect_number(label, ctx1, ctx2, ctx3)
-
-                gender = gender_hint or gender_from_pos
-
-                forms.append((lnod, form_nod, form_diac, label,
-                              mood, tense, voice, person, number, gender, case, degree, verb_form, page_url))
-
-    # write aggregates
-    with open(LEMMA_CSV, "w", newline="", encoding="utf-8") as f:
-        w = csv.writer(f)
-        w.writerow(["lemma_code","lemma_nod","lemma_diac","pos","gender","page_url"])
-        for v in lemmas.values():
-            w.writerow(v)
-
-    with open(FORM_CSV, "w", newline="", encoding="utf-8") as f:
-        w = csv.writer(f)
-        w.writerow(["lemma_nod","form_nod","form_diac","label",
-                    "mood","tense","voice","person","number","gender","case","degree","verb_form","page_url"])
-        w.writerows(forms)
-
-    print(f"Wrote {len(lemmas)} lemmas -> {LEMMA_CSV}")
-    print(f"Wrote {len(forms)} forms  -> {FORM_CSV}")
+    write_aggregates(lemmas, forms)
 
 if __name__ == "__main__":
     aggregate()
