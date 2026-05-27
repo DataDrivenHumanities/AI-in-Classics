@@ -1,0 +1,20 @@
+number,number,singular,singular,singular,dual,dual,plural,plural,plural,Unnamed: 10_level_0,Unnamed: 11_level_0,Unnamed: 12_level_0,Unnamed: 13_level_0
+Unnamed: 0_level_1,Unnamed: 1_level_1,first,second,third,second,third,first,second,third,Unnamed: 10_level_1,Unnamed: 11_level_1,Unnamed: 12_level_1,Unnamed: 13_level_1
+active,indicative,ἠγάπησᾰ,ἠγάπησᾰς,ἠγάπησε,ἠγαπήσᾰτον,ἠγαπησᾰ́την,ἠγαπήσᾰμεν,ἠγαπήσᾰτε,ἠγάπησᾰν,,,,
+active,subjunctive,ἀγαπήσω,ἀγαπήσῃς,ἀγαπήσῃ,ἀγαπήσητον,ἀγαπήσητον,ἀγαπήσωμεν,ἀγαπήσητε,ἀγαπήσωσῐ,,,,
+active,optative,ἀγαπήσαιμῐ,ἀγαπήσειᾰς,ἀγαπήσειε,ἀγαπήσαιτον,ἀγαπησαίτην,ἀγαπήσαιμεν,ἀγαπήσαιτε,ἀγαπήσειᾰν,,,,
+active,imperative,,ἀγάπησον,ἀγαπησᾰ́τω,ἀγαπήσᾰτον,ἀγαπησᾰ́των,,ἀγαπήσᾰτε,ἀγαπησᾰ́ντων,,,,
+middle,indicative,ἠγαπησᾰ́μην,ἠγαπήσω,ἠγαπήσᾰτο,ἠγαπήσᾰσθον,ἠγαπησᾰ́σθην,ἠγαπησᾰ́μεθᾰ,ἠγαπήσᾰσθε,ἠγαπήσᾰντο,,,,
+middle,subjunctive,ἀγαπήσωμαι,ἀγαπήσῃ,ἀγαπήσηται,ἀγαπήσησθον,ἀγαπήσησθον,ἀγαπησώμεθᾰ,ἀγαπήσησθε,ἀγαπήσωνται,,,,
+middle,optative,ἀγαπησαίμην,ἀγαπήσαιο,ἀγαπήσαιτο,ἀγαπήσαισθον,ἀγαπησαίσθην,ἀγαπησαίμεθᾰ,ἀγαπήσαισθε,ἀγαπήσαιντο,,,,
+middle,imperative,,ἀγάπησαι,ἀγαπησᾰ́σθω,ἀγαπήσᾰσθον,ἀγαπησᾰ́σθων,,ἀγαπήσᾰσθε,ἀγαπησᾰ́σθων,,,,
+passive,indicative,ἠγαπήθην,ἠγαπήθης,ἠγαπήθη,ἠγαπήθητον,ἠγαπηθήτην,ἠγαπήθημεν,ἠγαπήθητε,ἠγαπήθησᾰν,,,,
+passive,subjunctive,ἀγαπηθῶ,ἀγαπηθῇς,ἀγαπηθῇ,ἀγαπηθῆτον,ἀγαπηθῆτον,ἀγαπηθῶμεν,ἀγαπηθῆτε,ἀγαπηθῶσῐ,,,,
+passive,optative,ἀγαπηθείην,ἀγαπηθείης,ἀγαπηθείη,ἀγαπηθεῖτον,ἀγαπηθείτην,ἀγαπηθεῖμεν,ἀγαπηθεῖτε,ἀγαπηθεῖεν,,,,
+passive,imperative,,ἀγαπήθητῐ,ἀγαπηθήτω,ἀγαπήθητον,ἀγαπηθήτων,,ἀγαπήθητε,ἀγαπηθέντων,,,,
+,,active,active,active,middle,middle,passive,passive,passive,,,,
+infinitive,infinitive,ἀγαπῆσαι,ἀγαπῆσαι,ἀγαπῆσαι,ἀγαπήσᾰσθαι,ἀγαπήσᾰσθαι,ἀγαπηθῆναι,ἀγαπηθῆναι,ἀγαπηθῆναι,,,,
+participle,m,ἀγαπήσᾱς,ἀγαπήσᾱς,ἀγαπήσᾱς,ἀγαπησᾰ́μενος,ἀγαπησᾰ́μενος,ἀγαπηθείς,ἀγαπηθείς,ἀγαπηθείς,,,,
+participle,f,ἀγαπήσᾱσᾰ,ἀγαπήσᾱσᾰ,ἀγαπήσᾱσᾰ,ἀγαπησᾰμένη,ἀγαπησᾰμένη,ἀγαπηθεῖσᾰ,ἀγαπηθεῖσᾰ,ἀγαπηθεῖσᾰ,,,,
+participle,n,ἀγαπῆσᾰν,ἀγαπῆσᾰν,ἀγαπῆσᾰν,ἀγαπησᾰ́μενον,ἀγαπησᾰ́μενον,ἀγαπηθέν,ἀγαπηθέν,ἀγαπηθέν,,,,
+notes:,this table gives attic inflectional endings. for conjugation in dialects other than attic,this table gives attic inflectional endings. for conjugation in dialects other than attic,this table gives attic inflectional endings. for conjugation in dialects other than attic,this table gives attic inflectional endings. for conjugation in dialects other than attic,this table gives attic inflectional endings. for conjugation in dialects other than attic,this table gives attic inflectional endings. for conjugation in dialects other than attic,this table gives attic inflectional endings. for conjugation in dialects other than attic,this table gives attic inflectional endings. for conjugation in dialects other than attic,this table gives attic inflectional endings. for conjugation in dialects other than attic,this table gives attic inflectional endings. for conjugation in dialects other than attic,this table gives attic inflectional endings. for conjugation in dialects other than attic,this table gives attic inflectional endings. for conjugation in dialects other than attic,this table gives attic inflectional endings. for conjugation in dialects other than attic

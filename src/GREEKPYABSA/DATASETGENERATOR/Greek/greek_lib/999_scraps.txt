@@ -1,0 +1,204 @@
+
+#SCRAPS RANDOM STUFF pieces of code and such
+#part of speech
+# we could also do a hybrid approach use a ml for part of speech tagging then search the databasd for that in the opposite direction
+
+''' LEGACY FUNCTIONS
+def get_present_singular_verbs(dflist):
+    # returns a list of pandas dataframes
+    dflist2=[]
+    for df in dflist:#
+
+       indices =get_indices(df,"present")
+       df2 =df.iloc[:,indices[1]]
+       indices2 =get_indices(df,"sg")
+
+       df2 =df.iloc[indices2[0]]
+       dflist2.append(df2)
+       #dflist2.append(df[filt])
+       #dflist2.append(df[filt])
+    return dflist2
+def get_rows(dflist,word):
+    # it calls get indeices which returns a tuple
+    # word can be string or array
+    dflist2=[]
+    for df in dflist:
+        indices =get_indices(df,word)
+        df2 =df.iloc[indices[0]]
+        dflist2.append(df2)
+    return dflist2
+
+    #
+def get_accustive_nouns(dflist):
+#takes in a df list of nouns outputs a df list of accusative nouns
+    dflist2=[]
+    for df in dflist:
+       filt= df.iloc[:,0].str.lower() == 'accusative'
+       #dflist2.append(df[filt])
+       dflist2.append(df[filt])
+    return dflist2
+def return_rows_that_contain(word,dflist):
+#takes in a df list of nouns outputs a df list of accusative nouns
+# make check a list of words
+    dflist2=[]
+    for df in dflist:
+       filt= df.iloc[:,0].isin(word)
+       #dflist2.append(df[filt])
+       dflist2.append(df[filt])
+    return dflist2
+
+
+def get_item(dflist,rowslist,columnlist):
+    # returns a list of pandas dataframes
+    dflist2=[]
+    for df in dflist:#
+       df2 =df.iloc[:,rowslist]
+       indices2 =get_indices(df,"sg")
+
+       df2 =df.iloc[columnlist]
+       dflist2.append(df2)
+       #dflist2.append(df[filt])
+       #dflist2.append(df[filt])
+    return dflist2
+#if array is null dont append, if
+'''
+
+'''
+def get_matches(sentence,word):
+    for match in re.finditer(word, sentence):
+        print (match.start(), match.end())
+
+def match_variations(partofspeech, sentence):
+    def checkformatch(word):
+        get_matches(sentence,word)
+
+    for_each_variation(partofspeech, checkformatch)
+
+def for_each_variation(partofspeech,callback):
+    def for_every_cell(f):
+        df = pd.read_csv(f)
+        columns = df.columns.tolist()
+        for _, i in df.iterrows():
+            for c in columns:
+                callback(i[c])
+                #print(i[c])
+                #print("############")
+
+    for_each_file(partofspeech, for_every_cell)
+    '''
+
+    #SEARCH FOR ROW
+#PRING ROW AND COLUMNS
+
+# outputs the start and end indexes of all occurences
+
+# ____________________________________________
+
+    # input scentence is a string
+    #go into noun folder
+    # for each item in each csv check if present in
+    #go into each word folder
+    # read each csv item
+    # if it finds a match return index span of string row and column
+
+def search_left():
+    pass
+def search_right():
+    pass
+def search_verbs():
+    pass
+
+def rule_based_sentiment():
+    #SEARCH FOR NOUN RETURN SPAN
+
+
+    #SERACH LEFT FOR VERB ACCUSITIVE
+    #POSSIBLE DETECT WHICH WAY TO SERACH BASED ON THE INFLECTION OF THE NOUN WHICH COLUMN IT BELONG TOO
+    #POSSIBLY OPTIMIZE BY SEARCHING FOR SPECIFIC COLUMNS
+    #HANDLE NEGATIONS
+
+    #SERCH RIGHT FOR INFINITIVE TO BE YOU ARE BAD
+    #SERACH FOR NEGATIVE VERB OR NEGATIVE NOUN OR NEGATIVE ADJECTIVE
+    #HANDLE NEGATIONS
+
+    #EDGECASES FUNCTION
+    #CAN AN ACCUSITIVE VERB SEARCH
+
+    #SEARCH DATIVE CASE
+    #I WOULD DIE FOR THE ROMANS positive
+    #ROMANS SHOULD ALL DIE
+    # I WOULD KILL ALL THE ROMANS IF I COULD
+    # there is nothing worse than being a roman
+
+    pass
+
+
+
+#for_each_file("Noun",display)
+#for_each_variation("Noun",display)
+#get_matches("μισώ τους Ρωμαίους","τους Ρωμαίους")
+
+#match_variations("Noun","μισώ τους Ρωμαίους")
+
+#READ COULMN TWO OF VERB
+#READ COLUMN TWO OF NOUN
+
+# TEMPLATE
+#μου αρέσουν οι Ρωμαίοι i like romans
+
+#αγαπώ τους Ρωμαίους i love romans
+#μισώ τους Ρωμαίους i hate romans
+#περιφρονώ τους Ρωμαίους
+#σιχαίνομαι τους Ρωμαίους
+
+#σκοτώνω Ρωμαίους i kil romans
+
+#Θέλω να σκοτώσω Ρωμαίους i want to kill romans
+#Θέλω να πληγώσω τους Ρωμαίους i want to hurt romans
+
+
+
+
+
+
+# THESE ARE THE MAIN TYPES OF SNETIMENT EXPRESSIONS THAT I CAN THINK OF
+#Accusitive(plural),opinion(singular) - I hate romans -         μισώ τους Ρωμαίους
+#Nomitive(plural),opinion(plural)-      romans hate us -        οι Ρωμαίοι μας μισούν
+#Nomitive,adjective -                   romans are evil -       οι Ρωμαίοι είναι κακοί
+#Nomitive,simile-                       romans are like sheep - οι Ρωμαίοι είναι σαν πρόβατα
+#Nomitive,metaphore-                    romans are snakes -     οι Ρωμαίοι είναι φίδια
+#(NEGATION)Accusitive,opinion -         I dont hate romans -    δεν μισώ τους Ρωμαίους
+#(NEGATION)Nomitive,adjective           romans are not evil -   οι Ρωμαίοι δεν είναι κακοί
+#complex
+#i like how well mannerd the greeks are  -postive
+# i dislike the fact that romans are so nice  neutral
+
+# will short scentences be enought for longer scentences like thes maybe idk
+# we could do a semi procedural approach with templates and masking
+#we only come up with a few thousand sentment scentences then
+#TWO STAGE APSECT FIRST ner identify the aspects of the scentence
+#aspect expects aspects as input it does not identify the aspects we need both
+
+
+def test():
+    #PRESENT TEST VERB SINGULAR + ACCUSITIVE NOUN
+
+    #verb +
+    pass
+
+#bad
+#hate
+def accusitive_opinion_generator():
+    #VERB + ACCUSITIVE NOUN
+    pass
+def nomitive_opinion_generator():
+    #NOMITIVE NOUN + #VERB
+    #METAPHORES
+    pass
+def nomitive_simile_generator():
+    pass
+
+def nomitive_negation_generator():
+    pass
+def accusitive_negation_generator():
+    pass
