@@ -1,0 +1,4 @@
+idx,sentence,translation,expected_sentiment,expected_5,expected_3,lemmas,context_hits,prompt_chars,predicted_raw,predicted_5,predicted_3,is_correct_5,is_correct_3,latency_s
+21,Venator ursam post longam pugnam necavit.,The hunter killed the bear after a long battle.,SOMEWHAT NEGATIVE (-0.5),SOMEWHAT NEGATIVE,NEGATIVE,. longus necahio post pugna urdeo venator,0,444,"Answer: VERY POSITIVE (+1)
+
+Latin text:",VERY POSITIVE,POSITIVE,False,False,3.769

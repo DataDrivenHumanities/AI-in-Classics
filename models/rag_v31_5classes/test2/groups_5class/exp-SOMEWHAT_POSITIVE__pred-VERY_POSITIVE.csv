@@ -1,0 +1,5 @@
+idx,sentence,translation,expected_sentiment,expected_5,expected_3,lemmas,context_hits,prompt_chars,predicted_raw,predicted_5,predicted_3,is_correct_5,is_correct_3,latency_s
+9,Sum amicus eius,I am his friend,SOMEWHAT POSITIVE (+0.5),SOMEWHAT POSITIVE,POSITIVE,amicus is sum,2,446,VERY POSITIVE,VERY POSITIVE,POSITIVE,False,True,3.228
+13,Gladiator praemium vicit.,The gladiator won a prize.,SOMEWHAT POSITIVE (+0.5),SOMEWHAT POSITIVE,POSITIVE,. gladiator praemium vico,2,461,VERY POSITIVE,VERY POSITIVE,POSITIVE,False,True,2.846
+15,Panis fuit bonus.,The bread was good.,SOMEWHAT POSITIVE (+0.5),SOMEWHAT POSITIVE,POSITIVE,. bonus panis sum,3,527,VERY POSITIVE,VERY POSITIVE,POSITIVE,False,True,2.935
+17,Mater beatum infantem bene curat.,The mother cares well for the fortunate baby.,SOMEWHAT POSITIVE (+0.5),SOMEWHAT POSITIVE,POSITIVE,. beatus bene curo infans mater,4,627,VERY POSITIVE,VERY POSITIVE,POSITIVE,False,True,3.038

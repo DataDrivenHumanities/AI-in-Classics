@@ -130,6 +130,7 @@ The ETL pipeline processes raw scraped data:
 
 The loader (`etl/load_aggregates_to_postgres.py`) efficiently bulk-loads data:
 
+* Add flag --recreate to load_aggregates_to_postgres to drop existing tables and regenerate completely.
 1. **Schema Initialization** (`ops/init_db.sql`):
 
    - Creates `lemmas` and `forms` tables with foreign key relationships
@@ -171,6 +172,8 @@ The loader (`etl/load_aggregates_to_postgres.py`) efficiently bulk-loads data:
 - `main()`: Orchestrates async scraping with configurable concurrency
 
 **Output**: Per-lemma CSV files in `out/` directory
+
+Note: older `out/*.csv` snapshots may predate definition scraping and will not include a `definition` column. Re-run `tools/scrape_tables.py` to regenerate outputs with definitions.
 
 ### ETL Pipeline
 
@@ -444,25 +447,39 @@ Lemmatizer-LTN/
 
 ### Running Locally
 
-**Scraping:**
+This pipeline expects a Postgres database with the schema in `ops/init_db.sql`.
+
+1) Set `DATABASE_URL` (recommended: repo-root `.env`, not committed):
 
 ```bash
-python tools/scrape_tables.py --outdir out/ --max-workers 10
+DATABASE_URL=postgresql://127.0.0.1/lemlat_db
 ```
 
-**Aggregation:**
+2) Get the scrape outputs (recommended: download from Drive)
+
+- Download `out.zip` from the shared Google Drive.
+- Unzip it into `src/Lemmatizer-LTN/` so you end up with `src/Lemmatizer-LTN/out/*.csv`
+
+Example:
 
 ```bash
-python etl/aggregate_out_to_csvs.py
+unzip out.zip -d src/Lemmatizer-LTN
 ```
 
-**Database Loading:**
+3) Load into Postgres:
 
 ```bash
-python etl/load_aggregates_to_postgres.py \
-  --dsn "postgresql://user:pass@host/db" \
-  --lemmas out/lemmas.csv \
-  --forms out/forms.csv
+./.venv/bin/python3 src/Lemmatizer-LTN/etl/load_to_postgres.py \
+  --outdir src/Lemmatizer-LTN/out \
+  --truncate
+```
+
+Optional: scrape yourself instead of using Drive (slower; produces the same raw CSV shape):
+
+```bash
+./.venv/bin/python3 src/Lemmatizer-LTN/tools/scrape_tables.py \
+  --outdir src/Lemmatizer-LTN/out \
+  --dynamic
 ```
 
 **Query Client:**

@@ -1,0 +1,2 @@
+idx,sentence,translation,expected_sentiment,expected_5,expected_3,lemmas,context_hits,prompt_chars,predicted_raw,predicted_5,predicted_3,is_correct_5,is_correct_3,latency_s
+38,Puella puero nervoso dixit se reddere amorem eius.,The girl told the nervous boy that she returned his love.,VERY POSITIVE (+1),VERY POSITIVE,POSITIVE,. amor dico is nervosus puella puer reddo sui,0,453,Answer: SOMEWHAT NEGATIVE (-0.5),SOMEWHAT NEGATIVE,NEGATIVE,False,False,4.064

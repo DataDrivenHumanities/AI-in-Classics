@@ -76,7 +76,9 @@ To run this project, you will need to add the following environment variables to
 
 ## Run Locally
 
-to run this project locally See `dev.md` for setting up your workspace or click here [setup](docs/dev.md#setting-up-local-development)
+to run this project locally See `docs/spring_2026/setup.md` for setting up your workspace or click here [setup](docs/spring_2026/setup.md)
+
+legacy instructions available here: [setup](docs/dev.md#setting-up-local-development)
 
 ## Acknowledgements
 

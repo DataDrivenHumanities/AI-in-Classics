@@ -53,9 +53,10 @@ else
     PYTHON      ?= python3
     VENV_PYTHON := $(VENV_DIR)/bin/python
     POETRY_BIN  := $(shell command -v poetry 2>/dev/null)
-    RUNPY       := $(if $(POETRY_BIN),poetry run $(PYTHON),$(VENV_PYTHON))
-    RUN         := $(if $(POETRY_BIN),poetry run,$(VENV_PYTHON) -m)
-    PIP_RUN     := $(if $(POETRY_BIN),poetry run $(PIP),$(VENV_PYTHON) -m pip)
+    HAVE_VENV   := $(wildcard $(VENV_PYTHON))
+    RUNPY       := $(if $(HAVE_VENV),$(VENV_PYTHON),$(if $(POETRY_BIN),poetry run $(PYTHON),$(VENV_PYTHON)))
+    RUN         := $(if $(HAVE_VENV),$(VENV_PYTHON) -m,$(if $(POETRY_BIN),poetry run,$(VENV_PYTHON) -m))
+    PIP_RUN     := $(if $(HAVE_VENV),$(VENV_PYTHON) -m pip,$(if $(POETRY_BIN),poetry run $(PIP),$(VENV_PYTHON) -m pip))
 endif
 
 # Ollama
@@ -84,16 +85,9 @@ API_PORT ?= 5050
 API_APP  ?= app.server_fast:app
 
 # Detect frontend package manager
-ifeq ($(DETECTED_OS), windows)
 FE_PM := npm
-else
-FE_PM := $(shell \
-  cd $(FRONTEND_DIR) 2>/dev/null && \
-  if command -v pnpm >/dev/null 2>&1 && [ -f pnpm-lock.yaml ]; then echo pnpm; \
-  elif command -v yarn >/dev/null 2>&1 && [ -f yarn.lock ]; then echo yarn; \
-  else echo npm; fi \
-)
-endif
+
+
 
 # ===== Colors =====
 ifeq ($(NO_COLOR),)
@@ -118,28 +112,18 @@ GREY     :=
 WHITE    :=
 endif
 
-ifeq ($(FE_PM),pnpm)
-FE_PM_DEV     := pnpm dev -p $(FRONTEND_PORT)
-FE_PM_BUILD   := pnpm build
-FE_PM_PREVIEW := pnpm start -p $(FRONTEND_PORT)
-FE_PM_INSTALL := pnpm install --frozen-lockfile
-else ifeq ($(FE_PM),yarn)
-FE_PM_DEV     := yarn dev -p $(FRONTEND_PORT)
-FE_PM_BUILD   := yarn build
-FE_PM_PREVIEW := yarn start -p $(FRONTEND_PORT)
-FE_PM_INSTALL := yarn install --frozen-lockfile
-else
+
 FE_PM_DEV     := npm run dev -- -p $(FRONTEND_PORT)
 FE_PM_BUILD   := npm run build
 FE_PM_PREVIEW := npm run start -- -p $(FRONTEND_PORT)
 FE_PM_INSTALL := npm install
-endif
 
-.PHONY: help setup env run web check fix test \
+
+.PHONY: help setup setup-venv env run web check fix test \
         docker-build docker-run docker-dev docker-bash docker-clean \
         ollama-serve ollama-pull ollama-list build-latin build-greek \
         smoke-latin smoke-greek ensure-ollama ensure-models health \
-        fe-install fe-dev fe-build fe-serve fe-clean fe-lint fe-lint-fix \
+        fe-install fe-dev fe-build fe-serve fe-clean fe-reset fe-lint fe-lint-fix \
         fe-format fe-format-check run-all \
         nb-bootstrap nb-sync nb-index \
         jlite-build jlite-serve jlite-clean \
@@ -166,6 +150,7 @@ help:
 	@printf "$(BLUE)  fe-build         Build production bundle$(RESET)\n"
 	@printf "$(BLUE)  fe-serve         Start production server$(RESET)\n"
 	@printf "$(BLUE)  fe-clean         Remove node_modules and .next$(RESET)\n"
+	@printf "$(BLUE)  fe-reset         Remove .next only (fixes missing chunk errors)$(RESET)\n"
 	@printf "$(BLUE)  run-all          Run Streamlit + FastAPI + Next.js dev servers together$(RESET)\n\n"
 	@printf "$(GREY)Docker / Ollama:$(RESET)\n"
 	@printf "$(GREY)  docker-build, docker-run, docker-dev, docker-bash, docker-clean$(RESET)\n"
@@ -190,14 +175,37 @@ help:
 setup:
 ifeq ($(DETECTED_OS),unix)
 ifneq ($(POETRY_BIN),)
-	@echo "Using Poetry..."
-	poetry install
+	@if poetry run python -c "import sys" >/dev/null 2>&1; then \
+	  echo "Using Poetry..." ; \
+	  poetry install ; \
+	else \
+	  echo "Poetry detected but not usable (likely Python version mismatch). Using venv..." ; \
+	  $(PYTHON) -m venv $(VENV_DIR) ; \
+	  $(VENV_PYTHON) -m pip install --upgrade pip ; \
+	  if [ -f requirements.txt ]; then $(VENV_PYTHON) -m pip install -r requirements.txt ; fi ; \
+	fi
 else
 	@echo "Using venv..."
 	$(PYTHON) -m venv $(VENV_DIR)
 	$(VENV_PYTHON) -m pip install --upgrade pip
 	@if [ -f requirements.txt ]; then $(VENV_PYTHON) -m pip install -r requirements.txt; fi
 endif
+else
+	@echo "Using venv (Windows)..."
+	$(PYTHON) -m venv $(VENV_DIR)
+	$(VENV_PYTHON) -m pip install --upgrade pip
+	@if exist requirements.txt ( "$(VENV_PYTHON)" -m pip install -r requirements.txt )
+endif
+
+	@$(MAKE) api-deps
+	@$(MAKE) nb-bootstrap
+
+setup-venv:
+ifeq ($(DETECTED_OS),unix)
+	@echo "Using venv..."
+	$(PYTHON) -m venv $(VENV_DIR)
+	$(VENV_PYTHON) -m pip install --upgrade pip
+	@if [ -f requirements.txt ]; then $(VENV_PYTHON) -m pip install -r requirements.txt; fi
 else
 	@echo "Using venv (Windows)..."
 	$(PYTHON) -m venv $(VENV_DIR)
@@ -224,7 +232,13 @@ web:
 ifeq ($(DETECTED_OS),windows)
 	$(VENV_PYTHON) -m streamlit run $(STREAMLIT_APP)
 else
-	$(if $(POETRY_BIN),poetry run streamlit run $(STREAMLIT_APP), $(VENV_DIR)/bin/streamlit run $(STREAMLIT_APP))
+	@if [ -x "$(VENV_DIR)/bin/streamlit" ]; then \
+	  PYTHONPATH="$(CURDIR)" $(VENV_DIR)/bin/streamlit run $(STREAMLIT_APP); \
+	elif [ -n "$(POETRY_BIN)" ] && poetry run python -c "import sys" >/dev/null 2>&1; then \
+	  PYTHONPATH="$(CURDIR)" poetry run streamlit run $(STREAMLIT_APP); \
+	else \
+	  PYTHONPATH="$(CURDIR)" $(VENV_DIR)/bin/streamlit run $(STREAMLIT_APP); \
+	fi
 endif
 
 check:
@@ -318,6 +332,15 @@ fe-serve:
 fe-clean:
 	@echo "Cleaning frontend node_modules and .next..."
 	@rm -rf $(FRONTEND_DIR)/node_modules $(FRONTEND_DIR)/.next
+
+fe-reset:
+ifeq ($(DETECTED_OS),windows)
+	@echo "Resetting Next.js build output (.next) (Windows)..."
+	@powershell -NoProfile -Command "if (Test-Path -Path '$(FRONTEND_DIR)\\.next') { Remove-Item -Recurse -Force '$(FRONTEND_DIR)\\.next' }"
+else
+	@echo "Resetting Next.js build output (.next)..."
+	@rm -rf $(FRONTEND_DIR)/.next
+endif
 
 fe-lint:
 	cd $(FE_DIR) && ($(NPM) run -s lint || echo "skip: no 'lint' script")
@@ -449,8 +472,3 @@ else
 	( cd $(FRONTEND_DIR) && $(FE_PM_DEV) ) &
 	wait
 endif
-
-
-
-
-

@@ -1,8 +1,10 @@
 from __future__ import annotations
 import base64
+import html as _html
 import mimetypes
 from pathlib import Path
 import textwrap
+from urllib.parse import quote as _urlquote
 import streamlit as st
 
 # ==============================
@@ -294,6 +296,361 @@ def vspace(rem: float = 0.6):
 
 def divider():
     st.markdown('<div class="webui-divider"></div>', unsafe_allow_html=True)
+
+
+# ==============================
+# Latin sentiment overlay
+# ==============================
+
+
+def use_lexicon_overlay_css() -> None:
+    key = "_WEBUI_LEXICON_OVERLAY_CSS"
+    if st.session_state.get(key):
+        return
+    st.session_state[key] = True
+    inject_css(
+        """
+        .latin-overlay {
+            line-height: 2.05;
+            font-size: 1.04rem;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        a.lex-hit {
+            color: inherit !important;
+            text-decoration: none !important;
+            border-radius: 6px;
+            padding: 0.05rem 0.18rem;
+            margin: 0 0.02rem;
+            transition: outline-color .08s ease;
+        }
+        a.lex-hit:hover { outline: 2px solid rgba(37, 99, 235, 0.45); }
+        a.lex-hit.lex-selected { outline: 2px solid rgba(37, 99, 235, 0.85); }
+        """
+    )
+
+
+def _sentiment_bg(score: float) -> str:
+    """
+    Map a polarity score to a readable background color.
+    Zero -> grey, negative -> red, positive -> teal/blue, intensity by abs(score).
+    """
+    try:
+        s = float(score)
+    except Exception:
+        s = 0.0
+    if s == 0.0:
+        return "rgba(156,163,175,0.35)"  # grey-400 at fixed opacity
+    s = max(-1.0, min(1.0, s))
+    t = min(1.0, abs(s))
+    # Base colors (Tailwind-ish): red-500, teal-500
+    r, g, b = (239, 68, 68) if s < 0 else (20, 184, 166)
+    a = 0.14 + 0.28 * t
+    return f"rgba({r},{g},{b},{a:.3f})"
+
+
+def latin_sentiment_overlay_html(
+    text: str,
+    spans: list[dict],
+    *,
+    selected_lemma: str | None = None,
+) -> str:
+    """
+    Render the original text with sentiment-bearing lemmas highlighted.
+
+    `spans` is expected to be in the shape returned by
+    `LatinLexiconAnnotator.annotate_spans()`.
+    """
+    if not text:
+        return ""
+    if not spans:
+        return f'<div class="latin-overlay">{_html.escape(text)}</div>'
+
+    parts: list[str] = []
+    last = 0
+    for sp in spans:
+        try:
+            start = int(sp.get("start", 0))
+            end = int(sp.get("end", 0))
+        except Exception:
+            continue
+        start = max(0, min(len(text), start))
+        end = max(0, min(len(text), end))
+        if end < start:
+            continue
+
+        parts.append(_html.escape(text[last:start]))
+        surface = _html.escape(text[start:end])
+
+        lemma = sp.get("lemma_key")
+        score = sp.get("polarity_score")
+        try:
+            sc = float(score) if score is not None else None
+        except Exception:
+            sc = None
+
+        if lemma and sc is not None:
+            lemma_s = str(lemma)
+            pos = sp.get("pos_bucket") or ""
+            prov = sp.get("provenance") or ""
+            title = f"lemma={lemma_s} score={sc:+.2f} pos={pos} src={prov}"
+            bg = _sentiment_bg(sc)
+            cls = "lex-hit" + (" lex-selected" if selected_lemma == lemma_s else "")
+            href = f"?lemma={_urlquote(lemma_s)}"
+            parts.append(
+                f'<a class="{cls}" href="{href}" title="{_html.escape(title)}" '
+                f'style="background:{bg}">{surface}</a>'
+            )
+        else:
+            parts.append(surface)
+
+        last = end
+    parts.append(_html.escape(text[last:]))
+    return '<div class="latin-overlay">' + "".join(parts) + "</div>"
+
+
+def latin_sentiment_overlay_popup_html(
+    text: str,
+    spans: list[dict],
+    lemma_details: dict[str, dict] | None = None,
+) -> str:
+    """
+    Render the text as clickable "chips" (rounded rectangles) for sentiment hits.
+    Clicking a chip opens a small in-place popup (no query params / no navigation).
+
+    Intended for `streamlit.components.v1.html(...)`.
+    """
+    lemma_details = lemma_details or {}
+    if not text:
+        return "<div></div>"
+
+    parts: list[str] = []
+    last = 0
+    for sp in spans or []:
+        try:
+            start = int(sp.get("start", 0))
+            end = int(sp.get("end", 0))
+        except Exception:
+            continue
+        start = max(0, min(len(text), start))
+        end = max(0, min(len(text), end))
+        if end < start:
+            continue
+
+        parts.append(_html.escape(text[last:start]))
+        surface = _html.escape(text[start:end])
+
+        lemma = sp.get("lemma_key")
+        score = sp.get("polarity_score")
+        try:
+            sc = float(score) if score is not None else None
+        except Exception:
+            sc = None
+
+        if lemma and sc is not None:
+            lemma_s = str(lemma)
+            det = lemma_details.get(lemma_s) or {}
+            pos = det.get("scraped_pos_bucket") or sp.get("pos_bucket") or ""
+            prov = det.get("provenance") or sp.get("provenance") or ""
+            pol = det.get("has_polarity") or sp.get("has_polarity") or ""
+            cnt = det.get("count") or ""
+            pm = det.get("pos_match")
+            pm_s = "" if pm is None else ("yes" if pm else "no")
+
+            bg = _sentiment_bg(sc)
+            parts.append(
+                "<span "
+                'class="lex-chip" role="button" tabindex="0" '
+                f'data-lemma="{_html.escape(lemma_s)}" '
+                f'data-score="{sc:+.2f}" '
+                f'data-label="{_html.escape(str(pol))}" '
+                f'data-pos="{_html.escape(str(pos))}" '
+                f'data-source="{_html.escape(str(prov))}" '
+                f'data-count="{_html.escape(str(cnt))}" '
+                f'data-posmatch="{_html.escape(str(pm_s))}" '
+                f'style="background:{bg}; border-color:{bg};"'
+                f">{surface}</span>"
+            )
+        else:
+            parts.append(surface)
+
+        last = end
+    parts.append(_html.escape(text[last:]))
+
+    body = "".join(parts)
+
+    # Inline HTML with minimal CSS + JS (runs inside the component iframe).
+    return f"""
+    <div class="latin-overlay-wrap">
+      <div id="latinText" class="latin-overlay">{body}</div>
+      <div id="lexPopup" class="lex-popup" style="display:none;">
+        <div class="lex-popup-title" id="lexTitle"></div>
+        <div class="lex-popup-row"><span class="k">score</span> <span id="lexScore"></span></div>
+        <div class="lex-popup-row"><span class="k">label</span> <span id="lexLabel"></span></div>
+        <div class="lex-popup-row"><span class="k">pos</span> <span id="lexPos"></span></div>
+        <div class="lex-popup-row"><span class="k">count</span> <span id="lexCount"></span></div>
+        <div class="lex-popup-row"><span class="k">source</span> <span id="lexSource"></span></div>
+        <div class="lex-popup-row"><span class="k">pos match</span> <span id="lexPosMatch"></span></div>
+      </div>
+    </div>
+
+    <style>
+      :root {{
+        --chip-radius: 10px;
+        --chip-pad-y: 2px;
+        --chip-pad-x: 8px;
+        --popup-bg: rgba(17, 24, 39, 0.96);
+        --popup-fg: #F9FAFB;
+        --popup-muted: rgba(249,250,251,0.75);
+        --popup-border: rgba(255,255,255,0.16);
+      }}
+
+      body {{ margin: 0; padding: 0; }}
+
+      .latin-overlay-wrap {{
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+        color: inherit;
+      }}
+
+      .latin-overlay {{
+        line-height: 2.15;
+        font-size: 1.05rem;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        padding: 0.25rem 0.1rem;
+      }}
+
+      .lex-chip {{
+        display: inline-block;
+        border: 1px solid transparent;
+        border-radius: var(--chip-radius);
+        padding: var(--chip-pad-y) var(--chip-pad-x);
+        margin: 0 2px;
+        cursor: pointer;
+        user-select: none;
+        box-shadow: 0 0 0 0 rgba(0,0,0,0);
+        transition: transform .05s ease, box-shadow .12s ease, outline-color .12s ease;
+      }}
+      .lex-chip:hover {{
+        transform: translateY(-1px);
+        box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+        outline: 2px solid rgba(37, 99, 235, 0.40);
+        outline-offset: 2px;
+      }}
+      .lex-chip:focus {{
+        outline: 2px solid rgba(37, 99, 235, 0.55);
+        outline-offset: 2px;
+      }}
+
+      .lex-popup {{
+        position: fixed;
+        z-index: 9999;
+        min-width: 220px;
+        max-width: 320px;
+        padding: 10px 12px;
+        border-radius: 12px;
+        background: var(--popup-bg);
+        color: var(--popup-fg);
+        border: 1px solid var(--popup-border);
+        box-shadow: 0 16px 40px rgba(0,0,0,0.22);
+        backdrop-filter: blur(8px);
+      }}
+      .lex-popup-title {{
+        font-weight: 700;
+        margin-bottom: 6px;
+      }}
+      .lex-popup-row {{
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        font-size: 0.92rem;
+        padding: 2px 0;
+      }}
+      .lex-popup-row .k {{
+        color: var(--popup-muted);
+        white-space: nowrap;
+      }}
+    </style>
+
+    <script>
+      (function () {{
+        const popup = document.getElementById('lexPopup');
+        const titleEl = document.getElementById('lexTitle');
+        const scoreEl = document.getElementById('lexScore');
+        const labelEl = document.getElementById('lexLabel');
+        const posEl = document.getElementById('lexPos');
+        const countEl = document.getElementById('lexCount');
+        const sourceEl = document.getElementById('lexSource');
+        const posMatchEl = document.getElementById('lexPosMatch');
+
+        function hide() {{
+          popup.style.display = 'none';
+        }}
+
+        function clamp(v, lo, hi) {{
+          return Math.max(lo, Math.min(hi, v));
+        }}
+
+        function showForChip(chip) {{
+          const lemma = chip.dataset.lemma || '';
+          const score = chip.dataset.score || '';
+          const label = chip.dataset.label || '';
+          const pos = chip.dataset.pos || '';
+          const source = chip.dataset.source || '';
+          const count = chip.dataset.count || '';
+          const posmatch = chip.dataset.posmatch || '';
+
+          titleEl.textContent = lemma;
+          scoreEl.textContent = score;
+          labelEl.textContent = label || '—';
+          posEl.textContent = pos || '—';
+          countEl.textContent = (count !== '' ? count : '—');
+          sourceEl.textContent = source || '—';
+          posMatchEl.textContent = posmatch || '—';
+
+          popup.style.display = 'block';
+
+          const r = chip.getBoundingClientRect();
+          const margin = 10;
+          const pw = popup.offsetWidth;
+          const ph = popup.offsetHeight;
+
+          // Prefer above the chip; fallback below if needed.
+          let top = r.top - ph - 10;
+          if (top < margin) top = r.bottom + 10;
+          let left = r.left + (r.width / 2) - (pw / 2);
+          left = clamp(left, margin, window.innerWidth - pw - margin);
+          top = clamp(top, margin, window.innerHeight - ph - margin);
+
+          popup.style.left = left + 'px';
+          popup.style.top = top + 'px';
+        }}
+
+        document.addEventListener('click', (e) => {{
+          const chip = e.target && e.target.closest ? e.target.closest('.lex-chip') : null;
+          if (chip) {{
+            e.preventDefault();
+            e.stopPropagation();
+            showForChip(chip);
+            return;
+          }}
+          // click outside -> hide
+          hide();
+        }});
+
+        document.addEventListener('keydown', (e) => {{
+          if (e.key === 'Escape') hide();
+          if ((e.key === 'Enter' || e.key === ' ') && document.activeElement && document.activeElement.classList && document.activeElement.classList.contains('lex-chip')) {{
+            e.preventDefault();
+            showForChip(document.activeElement);
+          }}
+        }});
+
+        window.addEventListener('resize', hide);
+        window.addEventListener('scroll', hide, true);
+      }})();
+    </script>
+    """
 
 
 def section(title: str, body_md: str):

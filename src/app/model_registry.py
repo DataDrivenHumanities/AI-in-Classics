@@ -150,6 +150,7 @@ def _load_registry_from_path(path: Path) -> ModelRegistry:
                 name=entry.get("name", ""),
                 description=entry.get("description", ""),
                 provider=entry.get("provider", ""),
+                hf_classifier_params=entry.get("hf_classifier_params", {}) or {},
                 available=bool(entry.get("available", True)),
                 tags=entry.get("tags", ()),
                 metadata=entry.get("metadata", {}),
@@ -201,7 +202,7 @@ def available_model_ids() -> Iterable[str]:
 
 def resolve_model(preferred: Optional[str]):
     data = json.loads(_REG_PATH.read_text(encoding="utf-8"))
-    default_id = data.get("default") or "latin_model:1.0.0"
+    default_id = data.get("default") or "latin_ollama_model:1.0.0"
     raw_models = data.get("models", [])
     if isinstance(raw_models, dict):
         entry_iter = list(raw_models.values())

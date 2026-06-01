@@ -84,12 +84,12 @@ class OllamaProvider(ChatProvider):
         max_tokens: Optional[int] = None,
         **kwargs,
     ) -> Iterable[str]:
+        model = kwargs.pop("model", self.model_id)
+        kwargs.pop("max_tokens", None)
         yield from self._chat_stream(
             messages,
-            model=self.model_id,
+            model=model,
             temperature=temperature,
-            max_tokens=max_tokens,
-            **kwargs,
         )
 
 

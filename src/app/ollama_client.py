@@ -31,7 +31,7 @@ def _determine_default_model() -> str:
             return model_cfg.get_registry().default_model_id
         except getattr(model_cfg, "ModelRegistryError", Exception):
             pass
-    return "latin_model:1.0.0"
+    return "latin_ollama_model:1.0.0"
 
 
 DEFAULT_MODEL = _determine_default_model()
@@ -214,6 +214,7 @@ def chat_once(
     system: Optional[str] = None,
     temperature: Optional[float] = None,
 ) -> str:
+    model = resolve_available_model_tag(model)
     messages: List[Dict[str, str]] = []
     if system:
         messages.append({"role": "system", "content": system})
@@ -239,6 +240,7 @@ def chat_stream(
     model: str = DEFAULT_MODEL,
     temperature: Optional[float] = None,
 ) -> Iterable[str]:
+    model = resolve_available_model_tag(model)
     kwargs = {"model": model, "messages": messages, "stream": True}
     if temperature is not None:
         kwargs["options"] = {"temperature": temperature}
@@ -267,6 +269,7 @@ async def generate_json(
     raw: bool = True,
     out_format: str = "json",
 ) -> Tuple[Dict[str, Any], str]:
+    model = resolve_available_model_tag(model)
     base_payload: Dict[str, Any] = {
         "model": model,
         "prompt": prompt,
@@ -294,9 +297,7 @@ async def generate_json(
                 if attempt > 0:
                     shrink = 0.5 ** attempt
                     payload["options"]["num_predict"] = max(256, int(num_predict * shrink))
-                print(payload)
                 r = await client.post(f"{OLLAMA_HOST}/api/generate", json=payload)
-                print(r)
                 r.raise_for_status()
                 data = r.json()
                 raw_text = data.get("response") or ""
@@ -375,6 +376,7 @@ async def generate_text(
     *,
     temperature: float = 0.0,
     num_predict: int = 16,
+    timeout_s: float = 600,
 ) -> str:
     payload = {
         "model": model,
@@ -390,7 +392,7 @@ async def generate_text(
             "repeat_penalty": 1.0,
         },
     }
-    async with httpx.AsyncClient(timeout=60) as client:
+    async with httpx.AsyncClient(timeout=timeout_s) as client:
         r = await client.post(f"{OLLAMA_HOST}/api/generate", json=payload)
         r.raise_for_status()
         data = r.json()

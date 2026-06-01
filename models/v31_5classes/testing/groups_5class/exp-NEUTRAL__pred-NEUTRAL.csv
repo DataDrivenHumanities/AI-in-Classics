@@ -1,0 +1,13 @@
+idx,sentence,translation,expected_sentiment,expected_5,expected_3,lemmas,context_hits,prompt_chars,predicted_raw,predicted_5,predicted_3,is_correct_5,is_correct_3,latency_s
+52,Urbs Roma in Italia est.,The city of Rome is in Italy.,NEUTRAL (0),NEUTRAL,NEUTRAL,. in italis roma sum urbs,0,427,"Answer: NEUTRAL (0)
+
+Latin text:",NEUTRAL,NEUTRAL,True,True,3.950
+53,Ego in villa ambulo.,I walk in the villa.,NEUTRAL (0),NEUTRAL,NEUTRAL,. ambulo ego in villa,0,423,"Answer: NEUTRAL (0)
+
+Latin text:",NEUTRAL,NEUTRAL,True,True,3.764
+54,Annus habet duodecim menses.,The year has twelve months.,NEUTRAL (0),NEUTRAL,NEUTRAL,. annus duodecim habeo menses,0,431,"Answer: NEUTRAL (0)
+
+Latin text:",NEUTRAL,NEUTRAL,True,True,3.603
+57,"Si Roma caderet, quid faceremus?","If Rome were to fall, what would we do?",NEUTRAL (0),NEUTRAL,NEUTRAL,", ? cado facio quis roma si",0,435,"Answer: NEUTRAL (0)
+
+Latin text:",NEUTRAL,NEUTRAL,True,True,3.344

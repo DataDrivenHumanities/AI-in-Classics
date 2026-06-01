@@ -1,0 +1,61 @@
+idx,sentence,translation,expected_sentiment,expected_5,expected_3,lemmas,context_hits,prompt_chars,predicted_raw,predicted_5,predicted_3,is_correct_5,is_correct_3,latency_s
+3,Copiae amiserunt bellum.,The troops lost the war.,VERY NEGATIVE (-1),VERY NEGATIVE,NEGATIVE,. amitto bellum copia,0,427,"Answer: VERY NEGATIVE (-1)
+
+Latin text:",VERY NEGATIVE,NEGATIVE,True,True,3.883
+7,Quae scelera videmus?,What evil deed do we see?,VERY NEGATIVE (-1),VERY NEGATIVE,NEGATIVE,? qui scelus video,0,424,"Answer: VERY NEGATIVE (-1)
+
+Latin text:",VERY NEGATIVE,NEGATIVE,True,True,3.668
+11,Patria delebatur,The country was being destroyed,VERY NEGATIVE (-1),VERY NEGATIVE,NEGATIVE,deleo patrius,0,419,"Answer: VERY NEGATIVE (-1)
+
+Latin text:",VERY NEGATIVE,NEGATIVE,True,True,4.146
+18,Imperator non curat de salute suae nationis.,The emperor does not care for the safety of his own people.,VERY NEGATIVE (-1),VERY NEGATIVE,NEGATIVE,. curo de imperator natio non salus suus,0,447,"Answer: VERY NEGATIVE (-1)
+
+Latin text:",VERY NEGATIVE,NEGATIVE,True,True,3.741
+20,Puer miser ab animali saevo necatus erat.,The poor boy had been killed by a savage animal.,VERY NEGATIVE (-1),VERY NEGATIVE,NEGATIVE,. ab animal miser neco puer saevo sum,0,444,"Answer: VERY NEGATIVE (-1)
+
+Latin text:",VERY NEGATIVE,NEGATIVE,True,True,3.745
+24,Navis confractus est ab hostibus Romae.,The ship was broken by the enemies of Rome,VERY NEGATIVE (-1),VERY NEGATIVE,NEGATIVE,. ab confraho hostus nav roma sum,0,442,"Answer: VERY NEGATIVE (-1)
+
+Latin text:",VERY NEGATIVE,NEGATIVE,True,True,3.681
+26,Urbs ab hostibus malis victa deletaque est.,The city was conquered and destroyed by the wicked enemy.,VERY NEGATIVE (-1),VERY NEGATIVE,NEGATIVE,. ab deleo hostus malus sum urbs vico,0,446,"Answer: VERY NEGATIVE (-1)
+
+Latin text:",VERY NEGATIVE,NEGATIVE,True,True,3.576
+30,Imperator iussit milites interficere sine misericordia.,The emperor ordered the soldiers to kill without mercy.,VERY NEGATIVE (-1),VERY NEGATIVE,NEGATIVE,. imperator interficio iusso miles misericordia sine,0,458,"Answer: VERY NEGATIVE (-1)
+
+Latin text:",VERY NEGATIVE,NEGATIVE,True,True,4.377
+34,Sceleratus vehemens expulsus erat sicut poena vitae vitiosae.,The violent criminal was exiled as punishment for a life full of vice.,VERY NEGATIVE (-1),VERY NEGATIVE,NEGATIVE,. expullo poena scelero sicut sum vehemens vita vitiosus,0,464,"Answer: VERY NEGATIVE (-1)
+
+Latin text:",VERY NEGATIVE,NEGATIVE,True,True,3.766
+36,"Cupiditate aeterna devotus, desidero aliquam quae non desiderat me.","Accursed by eternal longing, I long for someone who does not long for me.",VERY NEGATIVE (-1),VERY NEGATIVE,NEGATIVE,", . aeternus aliqui cupiditas desidero devotus ego non qui",0,470,"Answer: VERY NEGATIVE (-1)
+
+Latin text:",VERY NEGATIVE,NEGATIVE,True,True,3.749
+37,"Cum peste adfecti essent, boves iam moriebantur.","Since they had been afflicted by the plague, the cows soon died.",VERY NEGATIVE (-1),VERY NEGATIVE,NEGATIVE,", . adficio bos cum iam morior pestis sum",0,451,"Answer: VERY NEGATIVE (-1)
+
+Latin text:",VERY NEGATIVE,NEGATIVE,True,True,3.731
+40,Umbra uxoris mortuae illum miserum ita persequitur ut otium numquam reperiat.,The ghost of his dead wife haunts that wretched man so that he will never find peace.,VERY NEGATIVE (-1),VERY NEGATIVE,NEGATIVE,. ille ita miser morior numquam otium persequor reperio umbrum ut uxor,0,480,"Answer: VERY NEGATIVE (-1)
+
+Latin text:",VERY NEGATIVE,NEGATIVE,True,True,3.750
+41,"Cum nemo audiat, poeta tristis queritur dominam eum relinquisse.","Although no one is listening, the sad poet laments that his mistress has abandoned him.",VERY NEGATIVE (-1),VERY NEGATIVE,NEGATIVE,", . audio cum domina is nemo poeta querio relinquo tristis",0,467,"Answer: VERY NEGATIVE (-1)
+
+Latin text:",VERY NEGATIVE,NEGATIVE,True,True,4.046
+43,"Vulgus surrexerunt fores aedis, necatatum et consauciatum multos.","The mob surged the gates of the temple, killing and injuring many.",VERY NEGATIVE (-1),VERY NEGATIVE,NEGATIVE,", . aedus consaucio et for multus necato surro vulgus",0,468,"Answer: VERY NEGATIVE (-1)
+
+Latin text:",VERY NEGATIVE,NEGATIVE,True,True,3.760
+44,Canes denique invenerunt aprum post diem longum et miserum ita venatores id potuerunt necare,"The dogs finally found the boar after a long, miserable day outside so the hunters could kill it.",VERY NEGATIVE (-1),VERY NEGATIVE,NEGATIVE,aper canis denique dies et invenio is ita longus miser neco possum post venator,0,495,"Answer: VERY NEGATIVE (-1)
+
+Latin text:",VERY NEGATIVE,NEGATIVE,True,True,4.044
+48,"Si quis metuens vivet, liber mihi non erit umquam","If anyone lives in fear, he will not ever be free - in my opinion",VERY NEGATIVE (-1),VERY NEGATIVE,NEGATIVE,", ego liber metuo non quis si sum umquam viveo",0,452,"Answer: VERY NEGATIVE (-1)
+
+Latin text:",VERY NEGATIVE,NEGATIVE,True,True,3.791
+56,"O quam felix es, qui omnia perdidisti!","O how fortunate you are, who have lost everything!",VERY NEGATIVE (-1),VERY NEGATIVE,NEGATIVE,", felix o omnis perdido quam qui sum",0,441,"Answer: VERY NEGATIVE (-1)
+
+Latin text:",VERY NEGATIVE,NEGATIVE,True,True,3.849
+65,"Deus meus, quare me dereliquisti?","My God, why have you forsaken me?",VERY NEGATIVE (-1),VERY NEGATIVE,NEGATIVE,", ? derelinquo deus ego meus quare",0,436,"Answer: VERY NEGATIVE (-1)
+
+Latin text:",VERY NEGATIVE,NEGATIVE,True,True,3.524
+68,"Postquam milites in silvam intraverunt, ferae saevae eos insequebantur, et multi perierunt.","After the soldiers entered the forest, savage beasts pursued them, and many perished.",VERY NEGATIVE (-1),VERY NEGATIVE,NEGATIVE,", . et fera in insequor intravo is miles multus pereo postquam saeva silva",0,494,"Answer: VERY NEGATIVE (-1)
+
+Latin text:",VERY NEGATIVE,NEGATIVE,True,True,3.369
+70,Domus mea igne consumpta est.,My house was consumed by fire.,VERY NEGATIVE (-1),VERY NEGATIVE,NEGATIVE,. consumo domus ignis meus sum,0,432,"Answer: VERY NEGATIVE (-1)
+
+Latin text:",VERY NEGATIVE,NEGATIVE,True,True,3.167

@@ -1,0 +1,62 @@
+{
+  "model": "latin-sentiment-llama31-3class",
+  "ollama_api": "http://localhost:11434/api/generate",
+  "input_file": "C:\\Users\\xiaog\\OneDrive\\Documents\\GitHub\\LukasKanopka\\AI-in-Classics\\models\\rag_v31_3classes\\testing\\testdata3classes.json",
+  "results_csv": "C:\\Users\\xiaog\\OneDrive\\Documents\\GitHub\\LukasKanopka\\AI-in-Classics\\models\\rag_v31_3classes\\testing\\results_lemmactx_3class_20260412_014416.csv",
+  "context_csv": "C:\\Users\\xiaog\\OneDrive\\Documents\\GitHub\\LukasKanopka\\AI-in-Classics\\models\\rag_v31_3classes\\testing\\results_lemmactx_context_3class_20260412_014416.csv",
+  "total_tests": 70,
+  "context_mode": "POLAR_ONLY",
+  "max_context_items": 30,
+  "label_scheme": {
+    "-1": "NEGATIVE",
+    "0": "NEUTRAL",
+    "1": "POSITIVE"
+  },
+  "overall": {
+    "correct_3": 62,
+    "accuracy_3": 0.8857142857142857,
+    "unknown_3": 1
+  },
+  "per_label_3": {
+    "POSITIVE": {
+      "correct": 28,
+      "total": 32,
+      "accuracy": 0.875
+    },
+    "NEUTRAL": {
+      "correct": 5,
+      "total": 6,
+      "accuracy": 0.8333333333333334
+    },
+    "NEGATIVE": {
+      "correct": 29,
+      "total": 32,
+      "accuracy": 0.90625
+    }
+  },
+  "confusion_3": {
+    "matrix": {
+      "POSITIVE": {
+        "POSITIVE": 28,
+        "NEUTRAL": 1,
+        "NEGATIVE": 2
+      },
+      "NEUTRAL": {
+        "POSITIVE": 1,
+        "NEUTRAL": 5,
+        "NEGATIVE": 0
+      },
+      "NEGATIVE": {
+        "POSITIVE": 3,
+        "NEUTRAL": 0,
+        "NEGATIVE": 29
+      }
+    },
+    "unknown_by_expected": {
+      "POSITIVE": 1,
+      "NEUTRAL": 0,
+      "NEGATIVE": 0
+    }
+  },
+  "elapsed_seconds": 297.1818724999903
+}

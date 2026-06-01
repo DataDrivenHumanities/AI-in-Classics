@@ -1,3 +1,4 @@
+# etl/load_tables.py
 #!/usr/bin/env python3
 import os
 import csv
@@ -16,6 +17,7 @@ try:
 except Exception:
     # When run from elsewhere: add this directory to sys.path
     import importlib, sys
+
     sys.path.append(str(Path(__file__).parent))
     _ln = importlib.import_module("latin_norm")
     clean_lemma_text = _ln.clean_lemma_text
@@ -29,16 +31,40 @@ OUT_DIR = BASE / "out"
 # A small set of common Latin endings so we can rebuild forms from
 # patterns like stems + endings (e.g. "abalienatur" + "os", "as", "a").
 LATIN_ENDINGS = [
-    "ibus", "arum", "orum", "ium",
-    "ntur", "mini", "mur",
-    "beris", "bitur", "bor",
-    "ior", "ius",
-    "ans", "ens",
+    "ibus",
+    "arum",
+    "orum",
+    "ium",
+    "ntur",
+    "mini",
+    "mur",
+    "beris",
+    "bitur",
+    "bor",
+    "ior",
     "ius",
-    "orum", "arum", "ium",
+    "ans",
+    "ens",
+    "ius",
+    "orum",
+    "arum",
+    "ium",
     "nt",
-    "us", "um", "os", "is", "ae", "am", "as", "es", "im", "em",
-    "is", "e", "o", "u", "i",
+    "us",
+    "um",
+    "os",
+    "is",
+    "ae",
+    "am",
+    "as",
+    "es",
+    "im",
+    "em",
+    "is",
+    "e",
+    "o",
+    "u",
+    "i",
 ]
 LATIN_ENDINGS = sorted(set(LATIN_ENDINGS), key=len, reverse=True)
 
@@ -82,7 +108,7 @@ def split_tail_esse(s: str) -> tuple[str, str]:
     s = (s or "").strip()
     m = re.search(r"\s+esse\b.*$", s)
     if m:
-        return s[:m.start()].rstrip(), s[m.start():]
+        return s[: m.start()].rstrip(), s[m.start() :]
     return s, ""
 
 
@@ -95,19 +121,19 @@ def stem_from_base(base_head: str) -> tuple[str, str]:
     lower = head.lower()
     for cand in LATIN_ENDINGS:
         if lower.endswith(cand):
-            return head[:-len(cand)], head[-len(cand):]
+            return head[: -len(cand)], head[-len(cand) :]
     return head, ""
 
 
 def _is_suffix_row(s: str) -> bool:
     """
-    True if the string is a hyphen-suffix row like '-as esse', '–auros esse', etc.
-    We treat '-', '–', '—' as equivalent and ignore leading whitespace.
+    True if the string is a hyphen-suffix row like '-as esse', '-auros esse', etc.
+    Treats '-', '-', '-' as equivalent and ignores leading whitespace.
     """
     if not s:
         return False
     s = s.lstrip()
-    return bool(s) and s[0] in "-–—"
+    return bool(s) and s[0] in "-\u2013\u2014"
 
 
 def expand_suffix_row(raw: str, base_full: str) -> list[str]:
@@ -129,7 +155,7 @@ def expand_suffix_row(raw: str, base_full: str) -> list[str]:
 
     # Split suffix-row into head (like '-as') and tail (' esse')
     head2, tail2 = split_tail_esse(s)
-    suf = head2.lstrip(" -–—").strip()
+    suf = head2.lstrip(" -\u2013\u2014").strip()
     if not suf:
         return []
 
@@ -149,7 +175,9 @@ def expand_suffix_row(raw: str, base_full: str) -> list[str]:
     return [new_form]
 
 
-def expand_value_to_forms(raw: str, base_hint: str | None) -> tuple[list[str], str | None]:
+def expand_value_to_forms(
+    raw: str, base_hint: str | None
+) -> tuple[list[str], str | None]:
     """
     Expand a CSV 'value' into one or more surface forms, with optional
     base_hint from the previous row (for rows that start with '-').
@@ -179,7 +207,7 @@ def expand_value_to_forms(raw: str, base_hint: str | None) -> tuple[list[str], s
             forms = expand_suffix_row(s, base_hint)
             return forms, base_hint
         # No base: treat as standalone (strip leading dash)
-        stripped = s.lstrip(" -–—").strip()
+        stripped = s.lstrip(" -\u2013\u2014").strip()
         if not stripped:
             return [], base_hint
         return [dedupe_tail(stripped)], base_hint
@@ -205,7 +233,7 @@ def expand_value_to_forms(raw: str, base_hint: str | None) -> tuple[list[str], s
     for part in parts[1:]:
         part = part.strip()
         if _is_suffix_row(part):
-            suf = part.lstrip(" -–—").strip()
+            suf = part.lstrip(" -\u2013\u2014").strip()
             if not suf:
                 continue
             if stem:
@@ -234,12 +262,12 @@ def detect_lemma_voice_from_heading(row: dict) -> str:
     and nearby text. Handles 'Active diathesis' / 'Passive diathesis' from
     the lemma heading if voice_hint is missing.
     """
-    lemma_text = (row.get("lemma_text") or "")
-    pos = (row.get("pos") or "")
-    c1 = (row.get("context_1") or "")
-    c2 = (row.get("context_2") or "")
-    c3 = (row.get("context_3") or "")
-    label = (row.get("label") or "")
+    lemma_text = row.get("lemma_text") or ""
+    pos = row.get("pos") or ""
+    c1 = row.get("context_1") or ""
+    c2 = row.get("context_2") or ""
+    c3 = row.get("context_3") or ""
+    label = row.get("label") or ""
 
     combined = " ".join(x for x in [lemma_text, pos, c1, c2, c3, label] if x)
     up = combined.upper()
@@ -265,6 +293,7 @@ def upsert_lemma(
     pos: str,
     gender_hint: str,
     page_url: str,
+    definition: str = "",
 ) -> int:
     """
     Insert or update a lemma row, returning lemmas.id.
@@ -274,14 +303,15 @@ def upsert_lemma(
 
     row = conn.execute(
         """
-        INSERT INTO lemmas (lemma_code, lemma_nod, lemma_diac, pos, gender, page_url)
-        VALUES (%s, norm(%s), %s, %s, %s, %s)
+        INSERT INTO lemmas (lemma_code, lemma_nod, lemma_diac, pos, gender, page_url, definition)
+        VALUES (%s, norm(%s), %s, %s, %s, %s, %s)
         ON CONFLICT (lemma_nod) DO UPDATE SET
-          lemma_code = EXCLUDED.lemma_code,
-          lemma_diac = EXCLUDED.lemma_diac,
-          pos        = EXCLUDED.pos,
-          gender     = EXCLUDED.gender,
-          page_url   = EXCLUDED.page_url
+          lemma_code  = EXCLUDED.lemma_code,
+          lemma_diac  = EXCLUDED.lemma_diac,
+          pos         = EXCLUDED.pos,
+          gender      = EXCLUDED.gender,
+          page_url    = EXCLUDED.page_url,
+          definition  = EXCLUDED.definition
         RETURNING id
         """,
         (
@@ -291,6 +321,7 @@ def upsert_lemma(
             pos or None,
             (gender_hint or None),
             page_url or None,
+            definition or None,
         ),
     ).fetchone()
     return row[0]
@@ -331,7 +362,7 @@ def insert_form(
 
     forms, new_base_hint = expand_value_to_forms(raw_val, base_hint)
 
-    page_url = (r.get("page_url") or None)
+    page_url = r.get("page_url") or None
     updated_base_hint = new_base_hint
 
     for form_diac in forms:
@@ -390,13 +421,29 @@ def main():
     )
     args = ap.parse_args()
 
+    # Load DATABASE_URL from .env if present (for local dev ergonomics).
+    try:
+        from dotenv import load_dotenv  # type: ignore
+
+        # Try CWD first, then repo root (two levels above src/)
+        candidates = [Path.cwd() / ".env", BASE.parents[1] / ".env"]
+        for env_path in candidates:
+            if env_path.exists():
+                load_dotenv(env_path)
+                break
+    except Exception:
+        pass
+
     dsn = os.getenv("DATABASE_URL")
     if not dsn:
         raise SystemExit("Set DATABASE_URL to your Neon Postgres URI (DATABASE_URL)")
 
     outdir = Path(args.outdir)
+
+    # Create the output directory if it does not already exist.
     if not outdir.exists():
-        raise SystemExit(f"Out dir not found: {outdir}")
+        outdir.mkdir(parents=True, exist_ok=True)
+        print(f"[info] Created output directory: {outdir}")
 
     with psycopg.connect(dsn, autocommit=True) as conn:
         conn.execute("SET application_name = 'latin-etl';")
@@ -413,9 +460,7 @@ def main():
 
         # Load all per-lemma CSVs (skip aggregate lemmas/forms CSVs if present)
         csv_files = [
-            p
-            for p in outdir.glob("*.csv")
-            if p.name not in ("lemmas.csv", "forms.csv")
+            p for p in outdir.glob("*.csv") if p.name not in ("lemmas.csv", "forms.csv")
         ]
 
         for p in sorted(csv_files):
@@ -434,6 +479,7 @@ def main():
                 pos=head.get("pos", ""),
                 gender_hint=head_norm.get("gender", ""),
                 page_url=head.get("page_url", ""),
+                definition=head.get("definition", ""),
             )
 
             # ---- VOICE + GENDER HINTS --------------------------------------

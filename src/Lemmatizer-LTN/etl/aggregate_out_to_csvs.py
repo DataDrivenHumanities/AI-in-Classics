@@ -255,7 +255,7 @@ def aggregate():
     paths = [p for p in glob.glob(str(OUT_DIR / "*.csv"))
              if Path(p).name not in ("lemmas.csv","forms.csv")]
 
-    lemmas = {}   # lemma_nod -> (lemma_code, lemma_nod, lemma_diac, pos, gender, page_url)
+    lemmas = {}   # lemma_nod -> (lemma_code, lemma_nod, lemma_diac, pos, gender, page_url, definition)
     forms  = []   # (lemma_nod, form_nod, form_diac, label, mood, tense, voice, person, number, gender, case, degree, verb_form, page_url)
 
     for p in paths:
@@ -271,6 +271,8 @@ def aggregate():
         lnod       = norm(lemma_text)
         lcode      = lemma_code_from_url(page_url)
 
+        definition = clean(r0.get("definition", ""))
+
         gender_from_pos = ""
         pl = pos_text.lower()
         if   "masculine" in pl: gender_from_pos = "masculine"
@@ -278,7 +280,7 @@ def aggregate():
         elif "neuter"    in pl: gender_from_pos = "neuter"
 
         # store lemma once
-        lemmas.setdefault(lnod, (lcode, lnod, lemma_text, pos_text, gender_from_pos, page_url))
+        lemmas.setdefault(lnod, (lcode, lnod, lemma_text, pos_text, gender_from_pos, page_url, definition))
         is_verb = "verb" in pl
 
         # Track last full form per context (to handle ending forms across rows)
@@ -366,7 +368,7 @@ def aggregate():
     # write aggregates
     with open(LEMMA_CSV, "w", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
-        w.writerow(["lemma_code","lemma_nod","lemma_diac","pos","gender","page_url"])
+        w.writerow(["lemma_code","lemma_nod","lemma_diac","pos","gender","page_url","definition"])
         for v in lemmas.values():
             w.writerow(v)
 
